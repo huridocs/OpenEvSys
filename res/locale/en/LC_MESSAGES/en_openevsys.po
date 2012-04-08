@@ -1,0 +1,1845 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "Controler not found."
+#: ----
+msgid "_DAY_S__"
+msgstr "Day(s):"
+#: ----
+msgid "_MONTH_S__"
+msgstr "Month(s):"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "1st Level"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "2nd Level"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "3rd Level"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "404 Error : Page Not Found"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "4th Level"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "5th Level"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "6th Level"
+#: ----
+msgid "ACL_MODE"
+msgstr "ACL Mode"
+#: ----
+msgid "ACT"
+msgstr "Act"
+#: ----
+msgid "ACT_"
+msgstr "Act"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "Act details"
+#: ----
+msgid "ACT_S_"
+msgstr "Act(s)"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "Act Search Form"
+#: ----
+msgid "ACTION"
+msgstr "Action"
+#: ----
+msgid "ACTIONS"
+msgstr "Actions"
+#: ----
+msgid "ACTIVATED"
+msgstr "Activated"
+#: ----
+msgid "ACTS"
+msgstr "Acts"
+#: ----
+msgid "ADD_ACT"
+msgstr "Add Act"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "Add Additional Details"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "Add Additional Details for"
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "Add Address"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "Add Biographic Details"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "Add Chain of Events"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "Add Event Information"
+#: ----
+msgid "ADD_FIELD"
+msgstr "Add field"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "Add field to"
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "Add fields to search results"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "Add Information"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "Add Intervening Party"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "Add Intervention"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "Add Interventions"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "Add Involvement"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "Add language"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "Add More Perpetrators"
+#: ----
+msgid "ADD_NEW"
+msgstr "Add new"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "Add New Document"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "Add new Event"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "Add new field"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "Add New Person"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "Add New User"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "Add Perpetrator"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "Add Perpetrator(s)"
+#: ----
+msgid "ADD_ROLE"
+msgstr "Add Role"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "Add Source"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "Add Supporting Document(s)"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "Add Victim"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "Add Victims and Perpetrators to this Event"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "Adding Address..."
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "Adding Event Information"
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "Adding Person Address ..."
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "Adding Person information ..."
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "Additional Detail Type"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "Additional Details"
+#: ----
+msgid "ADDRESS"
+msgstr "Address"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "Address of a person."
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "Address Type"
+#: ----
+msgid "ADMIN"
+msgstr "Admin"
+#: ----
+msgid "ADVANCED"
+msgstr "Advanced"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "Advanced search"
+#: ----
+msgid "AGAINST"
+msgstr "against"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "All columns have been reset to their original values."
+#: ----
+msgid "ANALYSIS"
+msgstr "Analysis"
+#: ----
+msgid "AND"
+msgstr "AND"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "Apply changes permanently"
+#: ----
+msgid "ARREST"
+msgstr "Arrest"
+#: ----
+msgid "AT"
+msgstr "at"
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "at or before"
+#: ----
+msgid "AUDIT"
+msgstr "Audit"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "Audit log"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "Audit log details are not available for this Event"
+#: ----
+msgid "BACK"
+msgstr "Back"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "Back to Event view"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "Back to Person view"
+#: ----
+msgid "BASIC"
+msgstr "Basic"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "Basic search"
+#: ----
+msgid "BEFORE"
+msgstr "before"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "Biographic Detail(s)"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "Biographic Details"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "Biographic details ."
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "Biography Detail(s)"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "Browse Documents"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "Browse Event"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "Browse Events"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "Browse Persons"
+#: ----
+msgid "BY_WHOM"
+msgstr "By whom"
+#: ----
+msgid "CANCEL"
+msgstr "Cancel"
+#: ----
+msgid "CELLULAR"
+msgstr "Cellular"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "Chain of Event"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "Chain of Event(s)"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "Chain of Events"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "Chain of Events does not exist"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "Chain of Events"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "Chain of Events"
+#: ----
+msgid "CHANGE"
+msgstr "Change"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "Change Additional Detail type"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "Change password"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "Change View :"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "Choose an action"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "Choose File Upload"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "Chose starting point"
+#: ----
+msgid "CLARIFY"
+msgstr "Clarify"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "Clarifying Note"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "Clarifying Notes"
+#: ----
+msgid "CLEAR"
+msgstr "Clear"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "Click to download Events XML file of all records in this OpenEvSys."
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "Click to select an option"
+#: ----
+msgid "CLOSE"
+msgstr "Close"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "Column reset back to original values."
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "Combined search forms"
+#: ----
+msgid "COMPILE"
+msgstr "Compile"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "Config Variable"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "Confirm New Password"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "Confirm password"
+#: ----
+msgid "CONTAINS"
+msgstr "contains"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "Contextual Information"
+#: ----
+msgid "CONTINUE"
+msgstr "Continue"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "Continue editing the details of this Document"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "Continue editing this Chain of Events record"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "Continue editing this Event record"
+#: ----
+msgid "COUNT"
+msgstr "Count"
+#: ----
+msgid "COUNTRY"
+msgstr "Country"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "Create report from these results"
+#: ----
+msgid "CREATED_BY"
+msgstr "Created by"
+#: ----
+msgid "CREATED_DATE"
+msgstr "Created date"
+#: ----
+msgid "CREATOR"
+msgstr "Creator"
+#: ----
+msgid "CSV"
+msgstr "CSV"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "Current Password"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "Current setting"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "Current Value"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "Data exchange"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "Database Error"
+#: ----
+msgid "DATE"
+msgstr "Date"
+#: ----
+msgid "DATE_CREATED"
+msgstr "Date Created"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "Date field"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "Date of Intervention"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "Date of Source Material"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "Date required, Invalid Date"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "Date Submitted"
+#: ----
+msgid "DEFINITION"
+msgstr "Definition"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "Degree of Involvement"
+#: ----
+msgid "DELETE"
+msgstr "Delete"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "Delete Additional Details"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "Delete Document"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "Delete this Event"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "Delete this Person"
+#: ----
+msgid "DESCRIPTION"
+msgstr "Description"
+#: ----
+msgid "DESIGNATION"
+msgstr "Designation"
+#: ----
+msgid "DESTRUCTION"
+msgstr "Destruction"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "Disable Help"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "Disable interactive translation"
+#: ----
+msgid "DISABLED"
+msgstr "Disabled"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "Do you want to delete Additional details ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "Do you want to delete the selected address(es)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "Do you want to delete the selected Biographic Details?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "Do you want to delete the selected Chain of Events(s)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "Do you want to delete the selected Information(s)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "Do you want to delete the selected Intervention(s)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "Do you want to delete the selected Micro-thesaurus term(s) ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "Do you want to delete the selected Queries ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "Do you want to delete the selected record(s) ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "Do you want to delete the selected user(s) ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "Do you want to delete this Document?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "Do you want to delete this event?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "Do you want to delete this Person?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "Do you want to remove the existing file attachment for this Document?"
+#: ----
+msgid "DOCUMENT"
+msgstr "Document"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "Document Details"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "Document does not exist."
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "Document Search Form"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "Document Title"
+#: ----
+msgid "DOCUMENTS"
+msgstr "Documents"
+#: ----
+msgid "DOWNLOAD"
+msgstr "Download"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "Download Document"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "Download Error report"
+#: ----
+msgid "E_MAIL"
+msgstr "E Mail"
+#: ----
+msgid "EDIT"
+msgstr "Edit"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "Edit Additional Details"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "Edit Biographic Details"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "Edit details"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "Edit Event Summary"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "Edit profile"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "Edit this Act"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "Edit this Address"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "Edit this Biographic Details"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "Edit this Chain of Event"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "Edit this Event"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "Edit this Information"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "Edit this Intervening Party"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "Edit this Intervention"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "Edit this Involvement"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "Edit this Perpetrator"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "Edit this Person"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "Edit this Victim"
+#: ----
+msgid "EDIT_USER"
+msgstr "Edit user"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "Edit the Person's address ..."
+#: ----
+msgid "EMAIL"
+msgstr "Email"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "Email address required, Invalid Email"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "Enable Help"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "Enable interactive translation"
+#: ----
+msgid "END_DATE"
+msgstr "End Date"
+#: ----
+msgid "ENTITY"
+msgstr "Entity"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "Entity permissions"
+#: ----
+msgid "ENTRY"
+msgstr "Entry"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "Error occurred while updating server."
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "Error occurred while creating huriterm."
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "Error on file save. Unable to save file."
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "Error while creating field."
+#: ----
+msgid "EVENT"
+msgstr "Event"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "Event Description"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "Event does not exist."
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "Event Search Form"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "Event Standard Format XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "Event Title"
+#: ----
+msgid "EVENTS"
+msgstr "Events"
+#: ----
+msgid "EXAMPLE"
+msgstr "Example"
+#: ----
+msgid "EXAMPLES"
+msgstr "Examples"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "Existing fields"
+#: ----
+msgid "EXPORT"
+msgstr "Export"
+#: ----
+msgid "EXPORT__"
+msgstr "Export :"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "Export Date"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "Export Events"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "Export Instance"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "Export this table to a spreadsheet"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "Export Time"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "Failed to write file to disk."
+#: ----
+msgid "FALSE"
+msgstr "false"
+#: ----
+msgid "FAX"
+msgstr "Fax"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "Field created successfully."
+#: ----
+msgid "FIELD_LABEL"
+msgstr "Field Label"
+#: ----
+msgid "FIELD_NAME"
+msgstr "Field name"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "Field name , field number and field label cannot be empty. Please enter some values"
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "Field name already exists. Please give it another name"
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "Field number"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "Field number already exists. Please choose a different number"
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "Field numbers ending with 60 to 80 are reserved for management fields. Please use a number which do not falls in this range."
+#: ----
+msgid "FIELD_RESET"
+msgstr "Field Reset"
+#: ----
+msgid "FIELD_S_"
+msgstr "Field(s)"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "Field type"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "File is not writable."
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "File upload stopped by extension."
+#: ----
+msgid "FILTER"
+msgstr "Filter"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "filter options and results"
+#: ----
+msgid "FINAL_DATE"
+msgstr "Final Date"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "Find documents which have been uploaded to OpenEvsys, and see how they have been linked in support of other formats"
+#: ----
+msgid "FINISH"
+msgstr "Finish"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "Finished! You can do the following"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "Finished! You can do the following:"
+#: ----
+msgid "FIRST_NAME"
+msgstr "First Name"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "Folder already exists! Give it a different name."
+#: ----
+msgid "FOLDER_NAME"
+msgstr "Folder name"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "Following fields can not be empty"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "Following huriterm already exist."
+#: ----
+msgid "FORCE_DELETE"
+msgstr "Force Delete"
+#: ----
+msgid "FORM"
+msgstr "Form"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "Form customization"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "Further Information"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "Go to parent level"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "Group by Day"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "Group by monthly"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "Group by yearly"
+#: ----
+msgid "GUIDELINES"
+msgstr "Guidelines"
+#: ----
+msgid "HELP_TEXT"
+msgstr "Help Text"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "Hide Address form"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "Hide search form"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "Hide Supporting Document(s)"
+#: ----
+msgid "HOW_WAS_"
+msgstr "How was"
+#: ----
+msgid "HURICODE"
+msgstr "Huricode"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huriterm can not be empty."
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "If an Event/Person is Confidential ?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "If you reach this page it means you do not have access to any of the modules in OpenEvsys. Please contact the system administrator for more details."
+#: ----
+msgid "IMPACT"
+msgstr "Impact"
+#: ----
+msgid "IMPORT"
+msgstr "Import"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "Import Date"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "Import Events"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "Import log"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "Import log details are not available"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "Import Time"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "in between"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "In search results"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "Incident Table"
+#: ----
+msgid "INFORMATION"
+msgstr "Information"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "Information about"
+#: ----
+msgid "INFORMATION_S_"
+msgstr "Information(s)"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "Information Search Form"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "Initial date"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "Intervening Parties"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "Intervening Party"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "Intervening Party Search Form"
+#: ----
+msgid "INTERVENTION"
+msgstr "Intervention"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "Intervention(s)"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "Intervention Search Form"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "Interventions"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "Invalid Email"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "Invalid email address"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "Invalid Huricode, it should be a 12 digit number."
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Invalid user id or password, please try again."
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Invalid username or password! Please try again."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "involved in"
+#: ----
+msgid "INVOLVEMENT"
+msgstr "Involvement"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "Involvement details"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "Involvement(s)"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "Involvement Search Form"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "Involvements"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "is a sub element of"
+#: ----
+msgid "IS_EMPTY"
+msgstr "is empty"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "Is required"
+#: ----
+msgid "KILLING"
+msgstr "Killing"
+#: ----
+msgid "LABEL"
+msgstr "Label"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "Label cannot be empty. Enter a value."
+#: ----
+msgid "LABEL_IN_"
+msgstr "Label in"
+#: ----
+msgid "LABEL_S_"
+msgstr "Label(s)"
+#: ----
+msgid "LABELS"
+msgstr "Labels"
+#: ----
+msgid "LANGUAGE"
+msgstr "Language"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "Language directory is not writable."
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "Language removed"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "Language was created successfully."
+#: ----
+msgid "LAST_NAME"
+msgstr "Last Name"
+#: ----
+msgid "LIKE"
+msgstr "like"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "Linked when"
+#: ----
+msgid "LINKS"
+msgstr "Links"
+#: ----
+msgid "LOCALIZATION"
+msgstr "Localization"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "Log details unavailable for this Person"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "Manage languages"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "Messages saved successfully."
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "Micro-thesauri"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "Micro-thesauri customization"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "Micro-thesauri terms"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "Missing a temporary folder."
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "Modified Value"
+#: ----
+msgid "MODULE"
+msgstr "Module"
+#: ----
+msgid "MODULES"
+msgstr "Modules"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "Monitoring Status"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "More about this Event"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "More about this Person"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "My Preferences"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "Mysql data type"
+#: ----
+msgid "NAME"
+msgstr "Name"
+#: ----
+msgid "NEW"
+msgstr "New"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "New Document"
+#: ----
+msgid "NEW_EVENT"
+msgstr "New Event"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "New Password"
+#: ----
+msgid "NEW_PERSON"
+msgstr "New Person"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "New Role Name"
+#: ----
+msgid "NEXT"
+msgstr "Next"
+#: ----
+msgid "NO"
+msgstr "No"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "No queries saved yet."
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "No records were found."
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "No records were selected."
+#: ----
+msgid "NOT_="
+msgstr "not ="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "Not a valid field type. Try again"
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "not contains"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "not in between"
+#: ----
+msgid "NOT_LIKE"
+msgstr "not like"
+#: ----
+msgid "NOT_ON"
+msgstr "not on"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "Number required, Invalid Number"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys has successfully imported the data."
+#: ----
+msgid "OR"
+msgstr "OR"
+#: ----
+msgid "ORDER"
+msgstr "Order"
+#: ----
+msgid "ORGANIZATION"
+msgstr "Organization"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "Original Search Results"
+#: ----
+msgid "PAGE__"
+msgstr "Page :"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "Paginate results"
+#: ----
+msgid "PASSWORD"
+msgstr "Password"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "Password invalid"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "Password mismatch"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "Password Required"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "Permission Denied"
+#: ----
+msgid "PERMISSIONS"
+msgstr "Permissions"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "Permissions of"
+#: ----
+msgid "PERMISSONS"
+msgstr "Permissions"
+#: ----
+msgid "PERPETRATOR"
+msgstr "Perpetrator"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "Perpetrator name(s)"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "Perpetrator Search Form"
+#: ----
+msgid "PERPETRATORS"
+msgstr "Perpetrators"
+#: ----
+msgid "PERSON"
+msgstr "Person"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "Person Address(es)"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "Person Detail(s)"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "Person does not exist."
+#: ----
+msgid "PERSON_NAME"
+msgstr "Person Name"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "Person record(s)"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "Person records(s)"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "Person's date of birth is not entered"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "Person Search Form"
+#: ----
+msgid "PERSONS"
+msgstr "Persons"
+#: ----
+msgid "PHONE"
+msgstr "Phone"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "Phone number required, invalid phone number"
+#: ----
+msgid "PICTURE"
+msgstr "Picture"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "Please add a condition before search."
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "Please add a condition inside the count box to count."
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "Please select a user to delete"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "Please select a valid user."
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "Please upload a valid OpenEvSys XML file."
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "Please use My Preference option at top right corner to edit your details."
+#: ----
+msgid "PREVIOUS"
+msgstr "Previous"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "Print this Event"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "Print this page"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "Print this Person"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "Printable view"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "Queries deleted successfully."
+#: ----
+msgid "QUERY_ID"
+msgstr "Query ID"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "Query was saved successfully."
+#: ----
+msgid "REC_NO"
+msgstr "Rec-No"
+#: ----
+msgid "RECORD_NO"
+msgstr "Record No"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "Record number"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "Record type"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "Records per page"
+#: ----
+msgid "REGEX"
+msgstr "regex"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "Related Event"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "Related Event title"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "Related Person"
+#: ----
+msgid "REMARKS"
+msgstr "Remarks"
+#: ----
+msgid "REMOVE"
+msgstr "Remove"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "Remove Clarify"
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "Remove Condition"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "Remove language"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "Remove Selection"
+#: ----
+msgid "REPORT"
+msgstr "Report"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "Requested Act record does not exist."
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "Requested Information does not exist"
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "Requested Intervention does not exist"
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "Requested Involvement does not exist"
+#: ----
+msgid "RESET"
+msgstr "Reset"
+#: ----
+msgid "RESET_ALL"
+msgstr "Reset All"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "Restrict for the role"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "Restrict for the user"
+#: ----
+msgid "ROLE"
+msgstr "Role"
+#: ----
+msgid "ROLE_LIST"
+msgstr "Role list"
+#: ----
+msgid "ROLES"
+msgstr "Roles"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "Roles / Module Access Control"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "Roles &amp; Module Access Control"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Roles with permission to access this Event"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Roles with permission to access this Person"
+#: ----
+msgid "SAVE"
+msgstr "Save"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "Save Address"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "Save Document"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "Save Help Text"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "Save new fields"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "Save query"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "Save this query"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "Save this query with this shuffle"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "Saved queries"
+#: ----
+msgid "SEARCH"
+msgstr "Search"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "Search additional information relevant to specific types of acts."
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "Search Conditions"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "Search form"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "Search in database"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "Search information about Events."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "Search information about Persons who have been Perpetrators of Acts against Victims."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "Search information about Persons who have intervened in Events in some way."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "Search information about Persons who have provided information."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "Search information on Persons, whether they are individuals, groups or organisations."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "Search information on Persons who have been Victims."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "Search information on the Acts committed against Victims."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "Search information on the data provided by Sources."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "Search information on the ways in which Perpetrators have been involved in specific Acts."
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "Search records about how Persons have intervened in Events or on behalf of Victims."
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "Search report"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "Search results"
+#: ----
+msgid "SEARCHABLE"
+msgstr "Searchable"
+#: ----
+msgid "SECTION"
+msgstr "Section"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "See full size image"
+#: ----
+msgid "SELECT"
+msgstr "Select"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "Select a format"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "Select a Micro-thesaurus"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "Select Entity"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "Select Field"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Select fields from"
+#: ----
+msgid "SELECT_ROLE"
+msgstr "Select role"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "Select secondary entity"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "Select Tree Option"
+#: ----
+msgid "SET"
+msgstr "Set"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "Set ACL mode"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "Set language"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "Set system language"
+#: ----
+msgid "SHARE"
+msgstr "Share"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "Show Address form"
+#: ----
+msgid "SHOW_ALL"
+msgstr "Show all"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "Show search form"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "Show Supporting Document(s)"
+#: ----
+msgid "SIGN_IN"
+msgstr "Sign in"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "Sign in to OpenEvSys"
+#: ----
+msgid "SIGN_OUT"
+msgstr "Sign out"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "Some errors occurred while importing data:"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "sound like"
+#: ----
+msgid "SOURCE"
+msgstr "Source"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "Source name"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "Source Search Form"
+#: ----
+msgid "SOURCES"
+msgstr "Sources"
+#: ----
+msgid "SPREADSHEET"
+msgstr "Spreadsheet"
+#: ----
+msgid "START_DATE"
+msgstr "Start Date"
+#: ----
+msgid "STATUS"
+msgstr "Status"
+#: ----
+msgid "SUBMIT"
+msgstr "Submit"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "Supporting Documents"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "System configuration"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "System Error"
+#: ----
+msgid "TERM_IN"
+msgstr "Term in"
+#: ----
+msgid "TERM_IN_"
+msgstr "Term in"
+#: ----
+msgid "TEXT"
+msgstr "Text"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "Text field with a 200 character limit"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "Text area with unlimited text"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "The document uploaded was not a valid xml document."
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "The event is linked"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "The old file attachment was updated with the new file attachment."
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "The Person does not yet have any roles!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "The two passwords are different"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "The uploaded file was only partially uploaded."
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There are no Documents yet. You should add some!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There are no supporting documents about Events yet. You should add some!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no address added to this Person yet. You should add some!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no biographic Details about this Person yet. You should add some!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "There is no Event information yet. You should add some!. Click the \"Add new Event\" button to add a new Event."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no information about Chain of Events yet. You should add some!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no information about Intervening Party and Intervention yet. You should add some!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no information about Source and Information yet. You should add some."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "There is no information about Victims and Perpetrators yet. You should add some"
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "There is no Person information yet. You should add some!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "Timestamp"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "To view a Document you have to first select a Document from the Document list."
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "To view a Person you have to first select a Person from the Person list."
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "To view an Event you have to first select an Event from the Event list."
+#: ----
+msgid "TORTURE"
+msgstr "Torture"
+#: ----
+msgid "TRANSLATE"
+msgstr "Translate"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "Translation not updated! Please give directory and file permission to res/locale folder."
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "Translation updated successfully."
+#: ----
+msgid "TRUE"
+msgstr "true"
+#: ----
+msgid "TYPE"
+msgstr "Type"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Type Date of birth in digits only!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Type Month of birth in digits only!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "Type of Act"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "Type of Chain of Events"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "Type of Intervention"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "Type of Relationship"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Type the userid in the text box and click share to make this event accessible to a desired user."
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Type the userid in the text box and click share to make this person accessible to a desired user."
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Type Year of birth in digits only!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "Type Year of birth in full!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "Unable to remove some Micro-thesaurus terms because they are already used in records."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "Unable to reset field."
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "Unable to reset fields."
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "Unknown upload error."
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "Untitled Query"
+#: ----
+msgid "UPDATE"
+msgstr "Update"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "Update Access Control List"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "Update Form"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "Update permissions"
+#: ----
+msgid "UPLOAD"
+msgstr "Upload"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "Upload file"
+#: ----
+msgid "USER"
+msgstr "User"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "User management"
+#: ----
+msgid "USER_NAME"
+msgstr "User Name"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "User not found! Invalid username or password! Please try again."
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "Userid does not exists."
+#: ----
+msgid "USERNAME"
+msgstr "Username"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "Username already exists, Use a different username"
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "Username cannot be empty"
+#: ----
+msgid "USERS"
+msgstr "Users"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Users with permission to access this Event"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Users with permission to access this Person"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "Users with permissions"
+#: ----
+msgid "VALIDATION"
+msgstr "Validation"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "Validation type"
+#: ----
+msgid "VERSION"
+msgstr "Version"
+#: ----
+msgid "VICTIM"
+msgstr "Victim"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "Victim name"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "Victim Search Form"
+#: ----
+msgid "VICTIMS"
+msgstr "Victims"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "Victims and Perpetrators"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "View Act record"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "View Address"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "View Biographic Details"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "View Chain of Events record"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "View Document"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "View Event"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "View Event record"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "View Information record"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "View Intervention Party record"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "View Intervention record"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "View Involvement record"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "View Perpetrator record"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "View Person"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "View Related Person"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "View Source record"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "View Victim record"
+#: ----
+msgid "VISIBILITY"
+msgstr "Visibility"
+#: ----
+msgid "VISIBLE"
+msgstr "Visible"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "Visible in browse"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "Visible in form"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "Visible in view"
+#: ----
+msgid "WEB"
+msgstr "Web"
+#: ----
+msgid "WEBSITE"
+msgstr "Website"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "What happened to"
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "What is the intervention?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "Who is responsible for the"
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "Who is the intervening party?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "Who is the source?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "Who is the victim ?"
+#: ----
+msgid "YEAR_S__"
+msgstr "Year(s):"
+#: ----
+msgid "YES"
+msgstr "Yes"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "You are about to delete an Event. This means you will delete the records listed below. Do you want to continue?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "You cannot change the administrator permissions."
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "You cannot delete other admin users."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "You cannot delete the administrator account."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "You cannot delete the default language"
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "You cannot delete yourself from the list of users."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "You do not have permission to edit other admin users details."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "You have also selected some parent term(s), if you proceed the children's of those terms will also be deleted."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "You must fill in this field"
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "You need to select an entity before counting"
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "Your browser's cookie functionality is turned off! Please turn it on"
+#: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"

@@ -1,0 +1,3 @@
+<?php
+    $breadcrumbs->renderBreadcrumbs();    
+?>

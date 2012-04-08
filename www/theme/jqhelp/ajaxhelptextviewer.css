@@ -1,0 +1,12 @@
+#ajax_help_text_viewer_div{overflow: auto; height: 150px; position: fixed; background-color: #584430; color: #FFF;	border: 4px solid #DDDD93; -moz-border-radius: 8px; -webkit-border-radius: 8px; width: 200px; opacity: 0.75; filter: alpha(opacity = 75); min-height: 50px; right:10px;  bottom:10px; display: none;	padding: 5px 5px 5px 10px; font-size: 11px; z-index: 10;}
+#ajax_help_text_viewer_div div.close_help { font-size: 10px; float: right; margin: 2px 4px 10px 0; clear: both;}
+	
+#ajax_help_text_viewer_div #ajax_help_text_viewer_div_controllers{ font-size: 13px; margin-bottom: 10px; margin-top: 5px;}
+#ajax_help_text_viewer_div #ajax_help_text_viewer_div_controllers table tr td{ width: 45px;}
+#ajax_help_text_viewer_div #ajax_help_text_viewer_div_controllers a{ text-decoration:none; color: #A2A2A2;}		
+#ajax_help_text_viewer_div #ajax_help_text_viewer_div_controllers a:hover{ cursor: pointer; color: #FFF; background-color: #584430;}
+#ajax_help_text_viewer_div #ajax_help_text_viewer_div_controllers ul li{ padding-left: 0px;}		
+	
+#wysiwyg_container{ background-color:#EEE ; position: absolute; top: 150px; left:400px; padding: 10px; border: 2px solid #AAA; -moz-border-radius: 8px; -webkit-border-radius: 8px; opacity: 0.95; filter: alpha(opacity = 95); display: none;}
+#wysiwyg_container form input{ float: right; margin: 3px; width: 70px;}
+#ajax_help_text_viewer_div table img {float:left}

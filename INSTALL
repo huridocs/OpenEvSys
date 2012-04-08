@@ -1,0 +1,95 @@
+CONTENTS OF THIS FILE
+---------------------
+
+ * Requirements
+ * Optional requirements
+ * Installation
+ * Openevsys administration
+ * More Information
+
+
+REQUIREMENTS
+------------
+
+- Apache2 or PHP5 compatible web server.
+- PHP 5 or latest
+- MySQL 5 or latest
+- PHP5-mysql driver
+
+
+OPTIONAL REQUIREMENTS
+--------------
+
+- Adodb module for PHP will boost the performance of the application.
+
+
+INSTALLATION
+------------
+
+
+0. SETUP WEB SERVER & MYSQL DATABASE SERVER
+
+   Openevsys is a web based system which require php5 enabled web-server. If you
+do not have a web server already setup-ed in your system you need to do so. We
+would recommend to to use Apache2 which you can download from following url
+http://httpd.apache.org/ . You would also need PHP5 installed on your web server
+which you can download from http://www.php.net/ site. Like wise you need to have
+MYSQL 5 database server running on your system which you can download from
+http://www.mysql.com/.
+
+LINUX   : If you are a linux user please use the local package manager of your
+          system to install the above software.
+
+WINDOWS : If you are a windows user we would recommend to use XAMPP instead of
+          installing the above software separately.
+
+
+
+1. EXTRACT APPLICATION
+
+   Extract the application to a directory of your preference and create a link to
+"www" folder from document root of the web server. For security reasons you should
+only expose the "www" to the web and keep the rest of the directories out of the
+document root.
+
+
+
+2. GRANT DIRECTORY PERMISSIONS
+
+   You need to provide write access to the following directories.
+
+APPROOT/media - This is where the uploaded documents will get saved.
+
+APPROOT/conf  - The web installer needs write access to this directory to create the
+                configuration file.
+
+APPROOT/res/locale  - You need to give permission to this directory if you are using
+                      the application features to translate and manage languages.
+
+
+
+3. RUN THE WEB INSTALLER
+
+   Access the www directory using a web browser and run the web installer.
+
+
+4. CHANGE PERMISSION OF SYSCONF
+
+   Once the application is installed through web installer please change the permission
+of sysconf.php file in conf directory to read only. This will make sure the configuration
+file cannot be change by accessing through web server.
+
+
+
+OPENEVSYS ADMINISTRATION
+---------------------
+
+
+
+MORE INFORMATION
+----------------
+
+- For additional documentation, see the online Openevsys wiki
+  http://openevsys.org
+
+

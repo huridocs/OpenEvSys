@@ -1,0 +1,135 @@
+#!/bin/bash
+echo "Usage : install USER PASS DATABASE HOST PORT";
+echo "";
+if [ -f ../conf/sysconf.php ]
+then
+echo "Please remove the sysconf.php file before install";
+exit 1;
+fi
+
+#rm ../conf/sysconf.php
+TEMPLATE="../conf/sysconf.tpl.php"
+
+USER='openevsys'
+PASS='openevsyspwd'
+REPASS='';
+HOST='localhost'
+DATABASE='openevsys'
+VAR_PORT='3306'
+
+if [ $# -eq 5 ] 
+then
+    USER=$1
+    PASS=$2
+    DATABASE=$3
+    HOST=$4
+    VAR_PORT=$5
+else       
+
+    ISTRUE='TRUE'
+    echo "Enter Hostname (default = localhost):"
+    read HOST
+    if [ "$HOST" = '' ]; then
+        HOST='localhost'
+    fi
+    echo ""
+
+    echo "Enter Database (default = openevsys):"
+    read DATABASE
+    if [ "$DATABASE" = '' ]; then
+        DATABASE='openevsys'
+    fi
+    echo ""
+
+    echo "Enter user with access to the Database $DATABASE (default = root):"
+    read USER
+    if [ "$USER" = '' ]; then
+        USER='root'
+    fi
+    echo ""
+
+    echo "Enter u password (default = <null>): "
+    read -s PASS
+    if [ "$PASS" == '' ]; then
+    {
+        PASS=''
+    }
+    fi
+    echo ""
+
+cat<<end333
+You Entered:
+  Hostname: $HOST
+  Database: $DATABASE
+  Username: $USER
+  Password: 
+
+Continue (y/n)?:
+end333
+
+    read -s -n 1 ANS
+
+    if [ "$ANS" = 'n' ]; then
+        exit 0
+    fi
+
+
+fi
+
+cat  $TEMPLATE | sed -e s/VAR_HOSTNAME/$HOST/g \
+                      -e s/VAR_PORT/$VAR_PORT/g \
+                      -e s/VAR_DATABASE/$DATABASE/g \
+                      -e s/VAR_USER/$USER/g \
+                      -e s/VAR_PASSWORD/$PASS/g \
+                | tee ../conf/sysconf.php > ../conf/sysconf.php
+
+function loadsql() {
+    echo "Loading SQL script $1"
+    if [ "$PASS" = '' ]; then
+        mysql $DATABASE -h $HOST -u $USER < $1
+    else
+        mysql $DATABASE -h $HOST -u $USER -p$PASS < $1
+    fi
+}
+
+
+if  [ $# -ne 5 ] 
+then
+    #skip database create
+    echo "Creating database $DATABASE"
+    if [ "$PASS" = '' ]; then
+        mysql -h $HOST -u $USER -e "DROP DATABASE $DATABASE"
+        mysql -h $HOST -u $USER -e "CREATE DATABASE IF NOT EXISTS $DATABASE DEFAULT CHARACTER SET utf8"
+    else
+        mysql -h $HOST -u $USER -p$PASS -e "DROP DATABASE $DATABASE"
+        mysql -h $HOST -u $USER -p$PASS -e "CREATE DATABASE IF NOT EXISTS $DATABASE DEFAULT CHARACTER SET utf8"
+    fi
+fi
+
+loadsql ../schema/mysql-dbcreate.sql;
+
+loadsql ../schema/mysql-dbcreate-system.sql;
+
+loadsql ../schema/mysql-dbpopulate-datadict.sql;
+
+loadsql ../schema/mysql-dbpopulate-mt.sql;
+
+loadsql ../schema/mysql-dbpopulate-help.sql;
+
+loadsql ../schema/mysql-dbcreate-gacl.sql;
+
+loadsql ../schema/mysql-dbpopulate-gacl.sql;
+
+for l in ../res/locale/*
+do
+    echo "Loading $l :"
+    loadsql $l/data_dict_l10n.sql;
+    loadsql $l/mt_vocab_l10n.sql;
+    loadsql $l/help_l10n.sql;
+done
+
+php install.gacl.php;
+
+echo '';
+
+exit 0
