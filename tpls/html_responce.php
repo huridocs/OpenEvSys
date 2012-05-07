@@ -39,7 +39,7 @@
     <script type="text/javascript" src="res/jquery/jquery-treeview/lib/jquery.cookie.js"></script>
     <script type="text/javascript" src="res/jquery/jquery-treeview/jquery.treeview.js"></script>
     <script type="text/javascript" src="res/jquery/jquery-treeview/jquery.treeview.async.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery.json-2.2.js"></script>
+    <script type="text/javascript" src="res/jquery/jquery.json-2.3.js"></script>
 
     <script type="text/javascript" src="res/jquery/jquery.jqGrid.js"></script> 
 	<script type="text/javascript" src="res/js/jqgrid/js/jqModal.js"></script> 
