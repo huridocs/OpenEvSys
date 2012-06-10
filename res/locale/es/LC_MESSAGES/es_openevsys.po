@@ -185,6 +185,9 @@ msgstr "Avanzado"
 msgid "ADVANCED_SEARCH"
 msgstr "Búsqueda avanzada"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "en contra de"
 #: ----
@@ -205,6 +208,9 @@ msgstr "Arresto, detención o proceso judicial"
 #: ----
 msgid "AT"
 msgstr "a"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "a o antes de"
@@ -803,6 +809,9 @@ msgstr "Ocultar el formulario de búsqueda"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Ocultar los documentos de apoyo"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "¿cómo se"
 #: ----
@@ -925,6 +934,9 @@ msgstr "es vacío"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "Es obligatorio"
+#: ----
+msgid "KEY"
+msgstr "ES"
 #: ----
 msgid "KILLING"
 msgstr "Muertes y asesinatos"
@@ -1841,5 +1853,5 @@ msgstr "Tienes que seleccionar una entidad antes del recuento"
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "¡La funcionalidad de las cookies está desactivada en su navegador! Por favor, actívela"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"

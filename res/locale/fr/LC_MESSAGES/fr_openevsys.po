@@ -153,7 +153,7 @@ msgid "ADDING_ADDRESS___"
 msgstr "Ajouter une adresse..."
 #: ----
 msgid "ADDING_EVENT_INFORMATION"
-msgstr "Ajoutant de d'information à cet Evénement"
+msgstr "Ajouter de l'information à cet Evénement"
 #: ----
 msgid "ADDING_PERSON_ADDRESS____"
 msgstr "Ajouter une adresse d'une personne..."
@@ -185,6 +185,9 @@ msgstr "Avancé"
 msgid "ADVANCED_SEARCH"
 msgstr "Recherche avancée"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "contre"
 #: ----
@@ -205,6 +208,9 @@ msgstr "Arrestation"
 #: ----
 msgid "AT"
 msgstr "au"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "au ou avant"
@@ -803,6 +809,9 @@ msgstr "Cacher le formulaire de recherches"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Cacher les Documents de support"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "Comment était"
 #: ----
@@ -925,6 +934,9 @@ msgstr "est vide"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "Obligatoire"
+#: ----
+msgid "KEY"
+msgstr "FR"
 #: ----
 msgid "KILLING"
 msgstr "Assassinat"
@@ -1841,5 +1853,5 @@ msgstr "Vous devez sélectionner une entité avant de compter."
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "La fonctionnalité des cookies est désactivé! Veuillez l'activer"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"

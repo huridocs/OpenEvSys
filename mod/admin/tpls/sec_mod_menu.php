@@ -43,6 +43,12 @@
         </li>
         -->
         <li><a href="<?php get_url('admin','System_configuration')?>"><?php echo _t('SYSTEM_CONFIGURATION')?></a></li>
+        <?php 
+        	global $conf;
+        	if(isset($conf['extension'])){ 
+        ?>
+        <li><a href="<?php get_url('admin','Extensions')?>"><?php echo _t('EXTENSIONS')?></a></li>
+        <?php } ?>
     </ul>
     </div>
 </div>

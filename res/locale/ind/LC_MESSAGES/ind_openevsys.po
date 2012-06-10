@@ -185,6 +185,9 @@ msgstr "Mutakhir"
 msgid "ADVANCED_SEARCH"
 msgstr "Pencarian sederhana"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "terhadap"
 #: ----
@@ -205,6 +208,9 @@ msgstr "Penangkapan"
 #: ----
 msgid "AT"
 msgstr "Tanggal"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "at or before"
@@ -803,6 +809,9 @@ msgstr "Sembunyikan form pencarian"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Sembunyikan Dokumen-Dokumen Pendukung"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "Bagaimana"
 #: ----
@@ -925,6 +934,9 @@ msgstr "is empty"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "Wajib"
+#: ----
+msgid "KEY"
+msgstr "IND"
 #: ----
 msgid "KILLING"
 msgstr "Pembunuhan"
@@ -1841,5 +1853,5 @@ msgstr "Anda perlu memilih entitas sebelum menghitung"
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "Fungsi cookie browser anda tidak aktif. Silahkan aktifkan"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"

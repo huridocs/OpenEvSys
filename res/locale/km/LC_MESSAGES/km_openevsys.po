@@ -185,6 +185,9 @@ msgstr "កាន់តែ​លំអិត​(Advanced)"
 msgid "ADVANCED_SEARCH"
 msgstr "ការ​ស្វែង​រក​លំអិត"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "ប្រឆាំង​នឹង"
 #: ----
@@ -205,6 +208,9 @@ msgstr "ការ​ចាប់​ខ្លួន"
 #: ----
 msgid "AT"
 msgstr "នៅ"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "នៅ​ចំ​ឬ​ពីមុន"
@@ -803,6 +809,9 @@ msgstr "លាក់​ទំរង់​ស្វែង​រក"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "លាក់​ឯកសារ​យោង"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "How was"
 #: ----
@@ -925,6 +934,9 @@ msgstr "ទទេអត់មាន"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "ចាំ​បាច់​ត្រូវ​មាន"
+#: ----
+msgid "KEY"
+msgstr "KM"
 #: ----
 msgid "KILLING"
 msgstr "ការ​សំលាប់"
@@ -1841,5 +1853,5 @@ msgstr "អ្នក​ត្រូវ​ជ្រើស​រើស​ផ្ន
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "តួនាទីគ្រប់​គ្រង​ប្រតិប័ត្រការ​កុំ​ព្យូទ័រមិន​ដំណើរ​ការ​ទេ។ សូម​បើក​ឧបករណ៍​នេះ"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"

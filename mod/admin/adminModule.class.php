@@ -942,6 +942,14 @@ class adminModule extends shnModule
 		}
   	}
   }
+  
+  public function act_Extensions(){
+  	global $conf;
+  	
+  	if(isset($conf['extension'])){
+  		$ext_url = $conf['extension'];
+  	}  	
+  }
 
 }
 

@@ -566,7 +566,7 @@ function shn_form_mt_tree_mlt($label,$name,$extra_opts)
         <li>
             <input type="hidden" name="<?php echo $name?>[]" id="<?php echo $name ?>" value="<?php echo $val ?>" />
             <span><?php echo get_mt_term($val) ?></span>
-            <a onclick="$(this).parent().remove();"><?php echo _('REMOVE') ?></a>
+            <a onclick="$(this).parent().remove();"><?php echo _gettext('REMOVE') ?></a>
             <?php
             $ctid = $name.'_'.$val;
             if($extra_opts['clari'])

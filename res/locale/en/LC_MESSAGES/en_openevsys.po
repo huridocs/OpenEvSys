@@ -185,6 +185,9 @@ msgstr "Advanced"
 msgid "ADVANCED_SEARCH"
 msgstr "Advanced search"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "against"
 #: ----
@@ -205,6 +208,9 @@ msgstr "Arrest"
 #: ----
 msgid "AT"
 msgstr "at"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "at or before"
@@ -803,6 +809,9 @@ msgstr "Hide search form"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Hide Supporting Document(s)"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "How was"
 #: ----
@@ -925,6 +934,9 @@ msgstr "is empty"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "Is required"
+#: ----
+msgid "KEY"
+msgstr "EN"
 #: ----
 msgid "KILLING"
 msgstr "Killing"
@@ -1841,5 +1853,5 @@ msgstr "You need to select an entity before counting"
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "Your browser's cookie functionality is turned off! Please turn it on"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"

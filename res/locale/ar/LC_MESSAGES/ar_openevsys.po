@@ -48,7 +48,7 @@ msgid "ACT_SEARCH_FORM"
 msgstr "نموذج البحث في الأفعال"
 #: ----
 msgid "ACTION"
-msgstr "التصرف  "
+msgstr "التصرف"
 #: ----
 msgid "ACTIONS"
 msgstr "التصرفات"
@@ -90,7 +90,7 @@ msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
 msgstr "إضافة خانات إلى نتائج البحث"
 #: ----
 msgid "ADD_INFORMATION"
-msgstr "إضافة معلومات  "
+msgstr "إضافة معلومات"
 #: ----
 msgid "ADD_INTERVENING_PARTY"
 msgstr "إضافة طرف متدخل"
@@ -185,6 +185,9 @@ msgstr "متقدم"
 msgid "ADVANCED_SEARCH"
 msgstr "بحث متقدم"
 #: ----
+msgid "AFTER"
+msgstr "after"
+#: ----
 msgid "AGAINST"
 msgstr "ضد"
 #: ----
@@ -204,7 +207,10 @@ msgid "ARREST"
 msgstr "اعتقال"
 #: ----
 msgid "AT"
-msgstr "في "
+msgstr "في"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "at or after"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "في أو قبل"
@@ -630,7 +636,7 @@ msgid "ERROR_WHILE_CREATING_FIELD_"
 msgstr "خطأ أثناء إنشاء الخانة"
 #: ----
 msgid "EVENT"
-msgstr "حدث  "
+msgstr "حدث"
 #: ----
 msgid "EVENT_DESCRIPTION"
 msgstr "بيان الحدث"
@@ -803,6 +809,9 @@ msgstr "إخفاء نموذج البحث"
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "إخفاء الوثيقة (الوثائق) الثبوتية"
 #: ----
+msgid "HIDE_TREE"
+msgstr "Hide Tree"
+#: ----
 msgid "HOW_WAS_"
 msgstr "كيف كان"
 #: ----
@@ -816,7 +825,7 @@ msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
 msgstr "هل الحدث/الشخص سري؟"
 #: ----
 msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
-msgstr "إذا وصلت إلى هذه الصفحة، فإن ذلك يعني أنه لا يمكنك الوصول إلى أية وحدات برمجية في  OpenEvsys. يرجى الاتصال بمسؤول النظام لمزيد من التفاصيل. "
+msgstr "إذا وصلت إلى هذه الصفحة، فإن ذلك يعني أنه لا يمكنك الوصول إلى أية وحدات برمجية في  OpenEvsys. يرجى الاتصال بمسؤول النظام لمزيد من التفاصيل."
 #: ----
 msgid "IMPACT"
 msgstr "الأثر"
@@ -903,7 +912,7 @@ msgid "INVOLVED_IN"
 msgstr "مشارك في"
 #: ----
 msgid "INVOLVEMENT"
-msgstr "مشاركة "
+msgstr "مشاركة"
 #: ----
 msgid "INVOLVEMENT_DETAILS"
 msgstr "تفاصيل المشاركة"
@@ -926,11 +935,14 @@ msgstr "فارغ"
 msgid "IS_REQUIRED"
 msgstr "مطلوب"
 #: ----
+msgid "KEY"
+msgstr "AR"
+#: ----
 msgid "KILLING"
 msgstr "قتل"
 #: ----
 msgid "LABEL"
-msgstr "علامة  "
+msgstr "علامة"
 #: ----
 msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
 msgstr "لا يجوز أن تكون العلامة فارغة. أدخل قيمة"
@@ -1017,7 +1029,7 @@ msgid "MYSQL_DATA_TYPE"
 msgstr "نوع بيانات Mysql"
 #: ----
 msgid "NAME"
-msgstr "الاسم "
+msgstr "الاسم"
 #: ----
 msgid "NEW"
 msgstr "جديد"
@@ -1095,7 +1107,7 @@ msgid "PAGINATE_RESULTS"
 msgstr "نتائج  أرقام الصفحات"
 #: ----
 msgid "PASSWORD"
-msgstr "كلمة المرور   "
+msgstr "كلمة المرور"
 #: ----
 msgid "PASSWORD_INVALID"
 msgstr "كلمة المرور غير صحيحة"
@@ -1116,7 +1128,7 @@ msgid "PERMISSIONS_OF_"
 msgstr "التصريحات الخاصة بـ"
 #: ----
 msgid "PERMISSONS"
-msgstr "تصريحات  "
+msgstr "تصريحات"
 #: ----
 msgid "PERPETRATOR"
 msgstr "الجاني"
@@ -1161,7 +1173,7 @@ msgid "PERSONS"
 msgstr "الأشخاص"
 #: ----
 msgid "PHONE"
-msgstr "رقم الهاتف   "
+msgstr "رقم الهاتف"
 #: ----
 msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
 msgstr "رقم الهاتف مطلوب، رقم الهاتف غير صحيح"
@@ -1272,7 +1284,7 @@ msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
 msgstr "المشاركة المطلوبة غير موجودة"
 #: ----
 msgid "RESET"
-msgstr "إعادة ضبط "
+msgstr "إعادة ضبط"
 #: ----
 msgid "RESET_ALL"
 msgstr "إعادة ضبط الجميع"
@@ -1380,7 +1392,7 @@ msgid "SEARCH_REPORT"
 msgstr "تقرير البحث"
 #: ----
 msgid "SEARCH_RESULTS"
-msgstr "نتائج البحث  "
+msgstr "نتائج البحث"
 #: ----
 msgid "SEARCHABLE"
 msgstr "قابل للبحث"
@@ -1392,7 +1404,7 @@ msgid "SEE_FULL_SIZE_IMAGE"
 msgstr "انظر الحجم الكامل للصورة"
 #: ----
 msgid "SELECT"
-msgstr "اختيار  "
+msgstr "اختيار"
 #: ----
 msgid "SELECT_A_FORMAT"
 msgstr "اختر صيغة"
@@ -1431,7 +1443,7 @@ msgid "SET_SYSTEM_LANGUAGE"
 msgstr "ضبط لغة النظام"
 #: ----
 msgid "SHARE"
-msgstr "مشاركة   "
+msgstr "مشاركة"
 #: ----
 msgid "SHOW_ADDRESS_FORM"
 msgstr "إظهار العنوان من"
@@ -1449,7 +1461,7 @@ msgid "SIGN_IN"
 msgstr "تسجيل الدخول"
 #: ----
 msgid "SIGN_IN_TO_OPENEVSYS"
-msgstr "تسجيل الدخول في "
+msgstr "تسجيل الدخول في"
 #: ----
 msgid "SIGN_OUT"
 msgstr "تسجيل الخروج"
@@ -1841,5 +1853,5 @@ msgstr "يجب عليك اختيار كائن قبل العد"
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "وظيفة الكوكيز للمتصفح غير مفعلة! قم بتفعيلها"
 #: ----
-msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgid "EXTENSIONS"
+msgstr "Extensions"
