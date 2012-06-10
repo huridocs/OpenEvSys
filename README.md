@@ -1,5 +1,4 @@
-[OpenEvSys](http://www.openevsys.org/): 
-a web application for documenting human rights violations 
+[OpenEvSys](http://www.openevsys.org/): a web application for documenting human rights violations 
 =================
  
 Copyright, licence and disclaimer
