@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `data_dict_original` (
 CREATE TABLE IF NOT EXISTS `data_dict_l10n` (
    `msgid` VARCHAR( 60 ) NOT NULL ,
    `locale` VARCHAR( 20 ) NOT NULL ,
-   `msgstr` VARCHAR( 100 ) NOT NULL ,
+   `msgstr` TEXT CHARACTER SET utf8 NOT NULL,
    PRIMARY KEY (`msgid`,`locale`),
    FOREIGN KEY (`msgid`)  REFERENCES data_dict(field_number)
 ) ENGINE = InnoDB ;

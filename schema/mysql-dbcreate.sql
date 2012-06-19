@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS  `mt_vocab` (
 CREATE TABLE IF NOT EXISTS `mt_vocab_l10n` (
    `msgid` VARCHAR( 60 ) NOT NULL ,
    `locale` VARCHAR( 20 ) NOT NULL ,
-   `msgstr` TEXT NOT NULL ,
+   `msgstr` TEXT CHARACTER SET utf8 NOT NULL,
    PRIMARY KEY (`msgid`,`locale`)
 ) ENGINE = InnoDB;
 

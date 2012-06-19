@@ -562,11 +562,11 @@ class adminModule extends shnModule
         include_once(APPROOT.'3rd/phpgacl/gacl_api.class.php');
         $gacl = new gacl_api(array('db'=>$global['db'] , 'db_table_prefix'=>'gacl_'));
 
-        $parent_id =  $gacl->get_group_id('openevsys_user', 'OpenEvsysUser', 'ARO');
+        $parent_id =  $gacl->get_group_id('users', 'Users', 'ARO');
         if(isset($_POST['add_role'])&&isset($_POST['role_name']))
         {
             $value = str_ireplace(" ", "_", $_POST['role_name']);
-            $gacl->add_group($value, $_POST['role_name'], 15 , 'ARO');
+            $gacl->add_group($value, $_POST['role_name'], $parent_id , 'ARO');
         }
         
         $this->modules = array('admin'=>'Admin','analysis'=>'Analysis',

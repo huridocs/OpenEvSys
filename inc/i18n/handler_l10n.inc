@@ -25,5 +25,17 @@ T_textdomain($domain);
 
 function _t($string)
 {
+	/*
+	 * individual strings customisation
+	 * like when someone want's "biographic details" will be "case details"
+	 * 
+	 */
+	global $conf;
+	if(isset($conf['string-'.$string])){
+		return $conf['string-'.$string];
+	}
+	/*
+	 * standard translation
+	 */
     return T_($string);
 }
