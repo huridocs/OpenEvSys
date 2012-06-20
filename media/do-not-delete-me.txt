@@ -1,0 +1,1 @@
+This file just to preserve media folder during zip extracion
