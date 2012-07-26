@@ -1,4 +1,5 @@
-#: ----
+
+#:----
 msgid "_CONTROLER_NOT_FOUND_"
 msgstr "Controler not found."
 #: ----
@@ -426,7 +427,7 @@ msgid "DATE_REQUIRED__INVALID_DATE"
 msgstr "Date required, Invalid Date"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Date Submitted"
+msgstr "Date of Entry"
 #: ----
 msgid "DEFINITION"
 msgstr "Definition"

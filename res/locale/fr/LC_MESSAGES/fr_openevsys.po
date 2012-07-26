@@ -426,7 +426,7 @@ msgid "DATE_REQUIRED__INVALID_DATE"
 msgstr "Date nécessaire, date non valide"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Date de soumission"
+msgstr "Date de saisie"
 #: ----
 msgid "DEFINITION"
 msgstr "Définition"

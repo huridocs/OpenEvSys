@@ -426,7 +426,7 @@ msgid "DATE_REQUIRED__INVALID_DATE"
 msgstr "Es necesario que ingrese la fecha. Fecha no válida"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Fecha de presentación"
+msgstr "Fecha de registro"
 #: ----
 msgid "DEFINITION"
 msgstr "Definición"
@@ -1854,4 +1854,4 @@ msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "¡La funcionalidad de las cookies está desactivada en su navegador! Por favor, actívela"
 #: ----
 msgid "EXTENSIONS"
-msgstr "Extensions"
+msgstr "Extensiones"

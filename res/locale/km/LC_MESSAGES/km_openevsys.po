@@ -426,7 +426,7 @@ msgid "DATE_REQUIRED__INVALID_DATE"
 msgstr "ចាំបាច់​ត្រូវ​មាន​កាលបរិច្ឆេទ​ កាល​បរិច្ឆេទ​មិន​ត្រឹម​ត្រូវ"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Date Submitted"
+msgstr "Date of entry"
 #: ----
 msgid "DEFINITION"
 msgstr "និយម​ន័យ"

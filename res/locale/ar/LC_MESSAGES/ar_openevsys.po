@@ -1854,4 +1854,4 @@ msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
 msgstr "وظيفة الكوكيز للمتصفح غير مفعلة! قم بتفعيلها"
 #: ----
 msgid "EXTENSIONS"
-msgstr "Extensions"
+msgstr "ملحقات"
