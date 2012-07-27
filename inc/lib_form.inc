@@ -122,8 +122,9 @@ function shn_form_submit($label, $name , $extra_opts = null)
 {
     global $shn_tabindex;
     $class = (isset($extra_opts['class']))?"class={$extra_opts['class']}":'';
+    $optjs = (isset($extra_opts['optjs']))?"{$extra_opts['optjs']}":'';
     ?>
-    <input type="submit" value="<?php echo $label?>" name="<?php echo $name ?>" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $class ?> />
+    <input type="submit" value="<?php echo $label?>" name="<?php echo $name ?>" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $class ?> <?php echo $optjs ?> />
     <?php
 }
 

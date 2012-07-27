@@ -79,20 +79,25 @@ class adminModule extends shnModule
             }
 
             //if update is sent save data
-            if($_POST['update']){
-                form_customization_process_entity_form($this->entity_select);
+            //OES-28. By pressing enter forms submited. if there no reset nor update - entered data will be lost.
+            //so better to save changes. update by default
+            //if($_POST['update']){
+            if('POST'==$_SERVER['REQUEST_METHOD']){
+            	form_customization_process_entity_form($this->entity_select);
             }
 
             if(isset($_POST['reset']) ){
                 form_customization_reset_all($this->entity_select);
             }
 
+            // OES-28
             $reset_fields = form_customization_get_reset_fields();
             foreach( $reset_fields as $post_value=>$table_field ){
                 if(isset($_POST[$post_value])){
                     form_customization_reset_field($this->entity_select , $table_field );
                 }
             }
+            
           
             //include field form
             include_once APPROOT.'mod/admin/entity_form.inc';
