@@ -413,7 +413,7 @@ function is_locale_changed()
 
 function is_management_field($formField){
 
-	if($formField['type'] == 'document'){
+	if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
 		return false;
 	}
 	$field_number = $formField['field_number'] %100;

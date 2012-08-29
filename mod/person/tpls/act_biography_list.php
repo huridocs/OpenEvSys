@@ -16,6 +16,7 @@
     <thead>
         <tr>
 			<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
+			<td class="title"><?php echo _t('VIEW_BIOGRAPHIC_DETAILS')?></td>  
 			<td class="title"><?php echo _t('TYPE_OF_RELATIONSHIP')?></td>           
             <td class="title"><?php echo _t('RELATED_PERSON')?></td>
             <td class="title"><?php echo _t('INITIAL_DATE')?></td>
@@ -28,6 +29,7 @@
 ?>
 			<tr class='<?php if($i++%2==1)echo "odd ";if($_GET['biography_id']==$bio['biographic_details_record_number'])echo 'active'; ?>' >
 			<td><input name="biographics[]" type='checkbox' value='<?php echo $bio['biographic_details_record_number'] ?>' class='delete'/></td>
+			<td><a href="<?php echo get_url('person','biography_list',null,array('biography_id'=>$bio['biographic_details_record_number'], 'type'=>'bd')); ?>"><?php echo $bio['biographic_details_record_number']; ?></a></td>
             <td><a href="<?php echo get_url('person','biography_list',null,array('biography_id'=>$bio['biographic_details_record_number'], 'type'=>'bd')); ?>"><?php echo $bio['relationship_type']; ?></a></td>
 			<td><a href="<?php echo get_url('person','biography_list',null,array('biography_id'=>$bio['biographic_details_record_number'], 'type'=>'rp')); ?>"><?php echo $bio['person_name']; ?></a></td>
 			<td><?php echo $bio['initial_date']; ?></td>

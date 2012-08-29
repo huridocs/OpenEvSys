@@ -990,7 +990,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     	if($dataArray['search_type'] != null){    		
 			switch($dataArray['search_type']){
 				case 'person':
-					$sqlArray['where'][] = " person_record_number <> '{$dataArray['pid']}'";					
+					if($sqlArray['from']=='person'){
+						$sqlArray['where'][] = " person_record_number <> '{$dataArray['pid']}'";					
+					}
 					break;
 				case 'event':
 					$sqlArray['where'][] = " event_record_number <> '{$dataArray['eid']}'";					

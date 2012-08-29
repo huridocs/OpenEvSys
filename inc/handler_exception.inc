@@ -23,7 +23,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @auther  H J P Fonseka <jo@respere.com>
+ * @author  H J P Fonseka <jo@respere.com>
  * @package Framework
  * 
  */
@@ -53,6 +53,14 @@ function exception_handler($e)
         $controller = shnFrontController::getController();
         $controller->setAction('db_error');
         $controller->sendResponce();
+        error_log("----------------------------",0);
+        error_log("                            ",0);
+        error_log("MSG:".$e->getMessage(), 0);
+        error_log("SQL:".$e->sql, 0);
+        error_log("                            ",0);
+        error_log("----------------------------",0);
+       
+        
     }
     else{
         $controller = shnFrontController::getController();
