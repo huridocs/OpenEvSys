@@ -53,7 +53,7 @@ class ChainOfEvents extends DomainEntity{
     public $updated_by ;
     public $monitoring_status;
     
-    protected $mt =  array( );
+    //protected $mt =  array( );
     
     protected $managementFields = array( 'date_received', 'date_of_entry',
 'entered_by' , 'project_title', 'comments', 'record_grouping',

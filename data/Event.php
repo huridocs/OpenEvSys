@@ -71,8 +71,7 @@ class Event extends DomainEntity{
     
     public $supporting_documents;
     
-    protected $mt =  array('geographical_term' , 'local_geographical_area' ,
-    						'violation_index','rights_affected','huridocs_index_terms' , 'local_index' , 'other_thesaurus' );
+    //protected $mt =  array('geographical_term' , 'local_geographical_area' , 'violation_index','rights_affected','huridocs_index_terms' , 'local_index' , 'other_thesaurus' );
     
     protected $managementFields = array( 'date_received',  'project_title', 'comments', 'record_grouping',
  'monitoring_status' ,'entered_by' , 'date_of_entry','updated_by' , 'date_updated' );
@@ -85,8 +84,8 @@ class Event extends DomainEntity{
     public function __construct($table = false, $pkeyarr=false, $db=false, $options=array()){
         parent::__construct('event', $pkey ,$db , $options); 
         $table = 'event';
-
         
+
         //$this->belongsTo( 'user_profile' , 'username' , 'username' ) ;
         //$this->hasMany( 'mlt_event_geographical_term' , 'record_number' ) ;  
         

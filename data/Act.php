@@ -74,8 +74,7 @@ class Act extends DomainEntity{
 'entered_by' , 'project_title', 'comments', 'record_grouping',
 'date_updated' , 'updated_by' , 'monitoring_status');
     
-    protected $mt =  array('national_legislation' , 'method_of_violence' , 'attribution' , 
-                            'victim_characteristics','international_instruments');
+    //protected $mt =  array('national_legislation' , 'method_of_violence' , 'attribution' ,  'victim_characteristics','international_instruments');
     
     protected $supporting_doc = true;
     

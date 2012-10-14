@@ -56,7 +56,7 @@ class Involvement extends DomainEntity{
     public $updated_by ;
     public $monitoring_status;
     
-    protected $mt =  array('type_of_perpetrator' );
+    //protected $mt =  array('type_of_perpetrator' );
     
     
     protected $managementFields = array( 'date_received', 'date_of_entry',

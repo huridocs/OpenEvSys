@@ -93,10 +93,13 @@ class Person extends DomainEntity{
 'date_updated' , 'updated_by' , 'monitoring_status');
     
     
+/*
     protected $mt =  array('occupation' , 'local_term_for_occupation' ,
                             'physical_description','citizenship','ethnic_background' , 'other_background' , 'general_characteristics',
                             'language' , 'local_language','national_origin'
                              );
+ */
+  
                                 
     protected $supporting_doc = true;
     protected $isAddress = true;

@@ -63,7 +63,7 @@ class BiographicDetail extends DomainEntity{
     public $updated_by ;
     public $monitoring_status;
     
-    protected $mt =  array( );
+    //protected $mt =  array( );
     
     protected $managementFields = array( 'date_received',  'project_title', 'comments', 'record_grouping',
  'monitoring_status' , 'date_of_entry', 'entered_by' , 'date_updated' , 'updated_by' );

@@ -36,7 +36,7 @@ class Killing extends DomainEntity{
     
     
     
-    protected $mt =  array( );
+    //protected $mt =  array( );
     
     protected $managementFields = array(  );
     

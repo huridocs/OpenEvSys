@@ -60,7 +60,7 @@ public $priority;
     public $updated_by ;
     public $monitoring_status;
     
-    protected $mt =  array('type_of_intervention' );
+    //protected $mt =  array('type_of_intervention' );
     
     
     protected $managementFields = array( 'date_received', 'date_of_entry',

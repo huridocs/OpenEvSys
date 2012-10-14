@@ -59,8 +59,8 @@ class Information extends DomainEntity{
     public $updated_by ;
     public $monitoring_status;
     
-    protected $mt =  array('language_of_source_material' , 'local_language_of_source_material' ,
-                            'type_of_source_material' );
+    
+    //protected $mt =  array('language_of_source_material' , 'local_language_of_source_material' , 'type_of_source_material' );
     
     
     protected $managementFields = array( 'date_received', 'date_of_entry',

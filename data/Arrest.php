@@ -49,7 +49,7 @@ class Arrest extends DomainEntity{
     
     
     
-    protected $mt =  array( 'whereabouts','legal_counsel','type_of_court'  );
+   // protected $mt =  array( 'whereabouts','legal_counsel','type_of_court'  );
     
     protected $managementFields = array(  );
     

@@ -570,7 +570,7 @@ class Browse implements BrowseStrategy
                     IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n' 
                 FROM data_dict d
                 LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' ) 
-                WHERE entity = '$entity' ORDER BY CAST(label_number as UNSIGNED)";
+                WHERE entity = '$entity' ORDER BY field_number";
         $res = $browse->ExecuteQuery($sql);
         return $res;
     }

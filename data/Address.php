@@ -47,7 +47,7 @@ class Address extends DomainEntity{
     public $start_date;
     public $end_date;
     
-    protected $mt =  array( );
+    //protected $mt =  array( );
     
     protected $managementFields = array( );
     

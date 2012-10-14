@@ -39,7 +39,7 @@ class Torture extends DomainEntity{
 
     
     
-    protected $mt =  array( 'intent' , 'medical_attention' , 'statements_signed' );
+    //protected $mt =  array( 'intent' , 'medical_attention' , 'statements_signed' );
     
     protected $managementFields = array(  );
     

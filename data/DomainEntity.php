@@ -50,7 +50,8 @@ class DomainEntity extends ADODB_Active_Record{
  'monitoring_status' ,'entered_by' , 'date_of_entry','updated_by' , 'date_updated' );
     
     
-
+    protected $mt =  array( );
+    
     private $entity;
     private $keyName;
     
@@ -60,9 +61,23 @@ class DomainEntity extends ADODB_Active_Record{
         parent::__construct($table, $pkey ,$db , $options); 
         $this->entity = $table;
         $this->keyName = $this->entity . '_record_number';
+        $this->loadMTNames();
+        
+        
     }
     
 
+    private function loadMTNames(){
+    	$entityFields = Browse::getEntityFields($this->getEntityType());
+    	foreach ( $entityFields as $entityField ){
+    		$mlt = ( (trim($entityField['is_repeat']) == 'Y'  || trim($entityField['is_repeat']) == 'y' )?true :false);
+    		if($mlt){
+    			$this->mt[]=$entityField['field_name'];
+    		}
+    	}
+    	$this->mt=array_unique($this->mt);
+    }
+    
     public function getEntityType()
     {
         return $this->entity;

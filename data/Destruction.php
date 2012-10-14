@@ -39,7 +39,6 @@ class Destruction extends DomainEntity{
     
     
     
-    protected $mt =  array( );
     
     protected $managementFields = array(  );
     
