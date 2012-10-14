@@ -281,7 +281,7 @@ class personModule extends shnModule
 		//iterate through the search fields, checking input values
 		foreach($entity_type_form_results as $field_name => $x){   
 			// Generates the view's Label list
-			$htmlFields[$field_name] = $entity_fields_html[$field_name]	;		
+			$htmlFields[$field_name] = $entity_fields_html[$field_name];		
 		}
 		$this->result_pager = Browse::getExecuteSql($sqlStatement);			
         $this->columnValues = $this->result_pager->get_page_data();

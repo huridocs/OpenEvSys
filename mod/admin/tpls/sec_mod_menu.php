@@ -1,6 +1,10 @@
 <div id='admin_menu'>
     <div id='admin_menu_wrap'>
     <ul>
+        <?php 
+        	global $conf;
+        	if(!isset($conf['extension'])){ 
+        ?>
         <li><a href='<?php get_url('admin','field_customization' ) ?>'><?php echo _t('FORM_CUSTOMIZATION')?></a>
         <ul>
         		<li><a href="<?php get_url('admin','field_customization')?>"><?php echo _t('EXISTING_FIELDS')?></a></li>
@@ -10,7 +14,9 @@
             --></ul>
         
         </li>
+        
         <li><a href="<?php get_url('admin','mt_customization')?>"><?php echo _t('MICRO_THESAURI')?></a></li>
+		<?php } ?>
 		<li>
 		    <a href="<?php get_url('admin','user_management')?>"><?php echo _t('USER_MANAGEMENT')?></a>
             <ul>

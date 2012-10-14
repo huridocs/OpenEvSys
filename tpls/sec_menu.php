@@ -44,11 +44,11 @@
                 <?php 
                     if('admin' == $module ){ 
                         $active = 'class="active"';
-                        $breadcrumbs->pushCrumb(array('name'=>_t('ADMIN'),'mod'=>'admin','act'=>'field_customization'),0);        
+                        $breadcrumbs->pushCrumb(array('name'=>_t('ADMIN'),'mod'=>'admin','act'=>'user_management'),0);        
                     }
                     else $active = '';  
                 ?>
-                <li <?php echo $active ?>><a href="<?php get_url('admin','field_customization') ?>"><?php echo _t('ADMIN') ?></a></li>
+                <li <?php echo $active ?>><a href="<?php get_url('admin','user_management') ?>"><?php echo _t('ADMIN') ?></a></li>
                 <?php } ?>
 			</ul>
 			<div style="clear:both"></div>	

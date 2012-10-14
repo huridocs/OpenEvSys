@@ -56,6 +56,17 @@ function exception_handler($e)
         error_log("----------------------------",0);
         error_log("                            ",0);
         error_log("MSG:".$e->getMessage(), 0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("TRC:".$e->getTraceAsString(), 0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("                            ",0);
         error_log("SQL:".$e->sql, 0);
         error_log("                            ",0);
         error_log("----------------------------",0);
