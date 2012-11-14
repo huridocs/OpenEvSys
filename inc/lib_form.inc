@@ -1095,3 +1095,57 @@ function shn_form_address($label,$name,$extra_opts)
 <?php
 	}
 }
+
+
+function shn_form_location($label,$name,$extra_opts)
+{
+    //var_dump($extra_opts);exit;
+    
+    $value = (isset($_POST[$name])? $_POST[$name] : $extra_opts['value']);
+    //to prevent warnings set $options to array() if it is null
+    $options=($options==null)?array():$options;
+
+    if(isset($label)){
+    ?>
+    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <?php } ?>
+    <div class="locationFieldsConatiner">
+        <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
+    <input type="hidden" name="country_name" id="country_name" value="Armenia" />
+    <input type="hidden" name="incident_zoom" id="incident_zoom" value="" />
+		
+    <div id="mapContainer"></div>
+    <div class="findLocation">
+        <div id="editContainer" class="olControlEditingToolbar"></div>
+            <div class="locationButtons" >
+                    <ul >
+                            <li><a href="#" class="locationButtonsLast" onclick="return false;">DELETE LAST</a></li>
+                            <li><a href="#" class="locationButtonsDelete" onclick="return false;">DELETE SELECTED</a></li>
+                            <li><a href="#" class="locationButtonsClear" onclick="return false;">CLEAR MAP</a></li>
+                    </ul>
+            </div>
+            <div style="clear:both;"></div>
+            <input type="text" id="locationFind" name="location_find" value=""  title="City, State and/or Country" class="findtext" />						
+            <div style="float:left;margin:9px 0 0 5px;">
+                    <input type="button" name="button" id="button" value="Find Location" class="buttonFind" />
+            </div>
+            <div id="findLoading" class="findLoading"></div>
+            <div style="clear:both;" id="find_text">* Search for your location using a location name OR latitude,longitude coordinates (format: 38.19, 85.61), OR click on the map to pinpoint the correct location..</div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+initEditMap();
+    });
+</script>
+    <?php
+    if($extra_opts['clari']){
+        if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
+            $clari_value = array_pop($extra_opts['clari_value']);
+        shn_form_clari($name,$clari_value);
+    }
+
+    shn_form_extra_opts($extra_opts);
+  
+}

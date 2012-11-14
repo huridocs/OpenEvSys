@@ -50,7 +50,9 @@
 	
 	<script type="text/javascript" src="res/js/jwysiwyg/jquery.wysiwyg.js"></script>
 	<script type="text/javascript" src="res/jquery/jquery.ajaxhelptextviewer.js"></script>
-
+ <script type="text/javascript" src="res/openlayers/OpenLayers.js"></script>
+  <script type="text/javascript" src="res/openlayers/map.js"></script>
+   <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.7&amp;sensor=false"></script>
 </head>
 <body>
 <div id="container">

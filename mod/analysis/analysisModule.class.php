@@ -1319,8 +1319,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     	global $global;
     	include_once 'searchSql.php';
     	
-    	$page = $_GET['page'];
-    	$limit = $_GET['rows']; 
+    	$page = (int)$_GET['page'];
+    	$limit = (int)$_GET['rows']; 
     	$sidx = $_GET['sidx']; 
     	$sord = $_GET['sord'];
 
@@ -1353,14 +1353,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 	    $searchSql = new SearchResultGenerator();
 	    $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-    	//var_dump($sqlArray);
+    	//var_dump($sqlArray);exit;
     	//$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
     	
         try{
 		$res_count = $global['db']->Execute($count_query);
 		}catch( Exception $e){
-		    $response->error = $e->getMessage();
+		    $response->error = "error";//$e->getMessage();
 		    $res_count = null;
 		}
     	
@@ -1393,7 +1393,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 		try{
 		$res = $global['db']->Execute($sql);
 		}catch( Exception $e){
-		    $response->error = $e->getMessage();
+		    $response->error = "error";//$e->getMessage();
 		}
 
 		$response->page = $page; // current page
