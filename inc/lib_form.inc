@@ -1110,8 +1110,8 @@ function shn_form_location($label,$name,$extra_opts)
     <label for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="locationFieldsConatiner">
-        <input type="hidden" name="latitude" id="latitude" value="">
-    <input type="hidden" name="longitude" id="longitude" value="">
+        <input type="hidden" name="latitude" id="latitude" value="<?php if($value['latitude'])echo $value['latitude']?>">
+    <input type="hidden" name="longitude" id="longitude" value="<?php if($value['longitude'])echo $value['latitude']?>">
     <input type="hidden" name="country_name" id="country_name" value="Armenia" />
     <input type="hidden" name="incident_zoom" id="incident_zoom" value="" />
 		
@@ -1136,7 +1136,7 @@ function shn_form_location($label,$name,$extra_opts)
     </div>
     <script type="text/javascript">
         jQuery(window).load(function() {
-initEditMap();
+initEditMap(<?php if($value)echo json_encode($value)?>);
     });
 </script>
     <?php

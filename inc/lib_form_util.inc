@@ -190,6 +190,30 @@ function generate_formarray($entity , $viewType = 'new' , $allVisible = false){
 	                            'map'=>array('entity'=>$entity,'field'=>$entityField['field_name'] , 'mt'=>$entityField['list_code'] , 'mlt'=>$mlt , 'link_table'=>$link_table , 'link_field'=>$link_field ),
 	                            'extra_opts' => array('clari'=>$clari , 'validation'=>$validation , 'required'=>$required , 'help'=>$entityField['field_number']   )    
 				);
+                                if($type == "location" && ($viewType == "new" || $viewType == "edit")){
+                                   $formArray[  "latitude" ]    = array('type'=>"hidden",
+                                       'label'=>"",
+                                       'field_number' => $field_number ,
+	                            'map'=>array('entity'=>$entity,
+                                        'field'=>"latitude" ,
+                                        'mt'=>$entityField['list_code'] ,
+                                        'mlt'=>$mlt ,
+                                        'link_table'=>$link_table ,
+                                        'link_field'=>$link_field ),
+	                            'extra_opts' => array(   )    
+                                    ); 
+                                   $formArray[  "longitude" ]    = array('type'=>"hidden",
+                                       'label'=>"",
+                                       'field_number' => $field_number ,
+	                            'map'=>array('entity'=>$entity,
+                                        'field'=>"longitude" ,
+                                        'mt'=>$entityField['list_code'] ,
+                                        'mlt'=>$mlt ,
+                                        'link_table'=>$link_table ,
+                                        'link_field'=>$link_field ),
+	                            'extra_opts' => array(   )    
+                                    ); 
+                                }
 			}
 		}
 		//var_dump($formArray);
@@ -204,7 +228,6 @@ function label_to_field($label){
 }
 
 function popuate_formArray(&$formArray,$entity){
-	//var_dump($entity);
 
 	if($formArray != null && $entity!=null){  // The function cannot continue unless the variables have been passed
 		foreach($formArray as &$formField){   // iterate throught the elements in the form array
@@ -234,6 +257,17 @@ function popuate_formArray(&$formArray,$entity){
 			else if($formField['map']['field'] == 'picture'){
 				$formField['extra_opts']['value'] = $entity->$formField['map']['field'];
 			}
+                        
+                        if($formField['type'] == "location"){
+                            if(isset($entity->latitude) && isset($entity->longitude)){
+                                $geoval = array('latitude'=>$entity->latitude,
+                                    'longitude'=>$entity->longitude);
+                                if ( $entity->geometries){
+                                   $geoval['geometries'] = $entity->geometries;
+                                }	
+                                $formField['extra_opts']['value'] = $geoval;
+                            }
+                        }
 			//var_dump($formField['map']['field']);
 			//var_dump($formField['extra_opts']);
 		}

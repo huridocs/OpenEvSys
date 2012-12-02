@@ -173,19 +173,30 @@ function initEditMap(settings){
                         
     // Insert Saved Geometries
     wkt = new OpenLayers.Format.WKT();
-    // Default Point
-    point = new OpenLayers.Geometry.Point(45.03818899999999, 40.069099);
-    OpenLayers.Projection.transform(point, proj_4326, map.getProjectionObject());
-    var origFeature = new OpenLayers.Feature.Vector(point);
-    vlayer.addFeatures(origFeature);
-							
+    
+    if(settings.geometries){
+        for(i in settings.geometries){
+            wktFeature = wkt.read(settings.geometries[i]);
+            wktFeature.geometry.transform(proj_4326,proj_900913);
+            vlayer.addFeatures(wktFeature);
+	}       			
+    }else{
+        // Default Point
+            point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
+            OpenLayers.Projection.transform(point, proj_4326, map.getProjectionObject());
+            var origFeature = new OpenLayers.Feature.Vector(point);
+            vlayer.addFeatures(origFeature);
+				
+    }						
 			
     // Create a lat/lon object
-    var startPoint = new OpenLayers.LonLat(45.03818899999999, 40.069099);
+    var startPoint = new OpenLayers.LonLat(settings.longitude, settings.latitude);
     startPoint.transform(proj_4326, map.getProjectionObject());
 			
     // Display the map centered on a latitude and longitude (Google zoom levels)
     map.setCenter(startPoint, 8);
+   					
+
 			
     // Create the Editing Toolbar
     var container = document.getElementById(settings.editContainer);
@@ -226,8 +237,8 @@ function initEditMap(settings){
     jQuery('.locationButtonsClear').on('click', function () {
         vlayer.removeFeatures(vlayer.features);
         jQuery('input[name="geometry[]"]').remove();
-        jQuery("#latitude").val("");
-        jQuery("#longitude").val("");
+        jQuery('input[name="latitude"]').val("");
+        jQuery('input[name="longitude"]').val("");
         /*jQuery('#geometry_label').val("");
 				jQuery('#geometry_comment').val("");
 				jQuery('#geometry_color').val("");
@@ -254,8 +265,8 @@ function initEditMap(settings){
 			
     // Event on Latitude/Longitude Typing Change
     jQuery('#latitude, #longitude').bind("focusout keyup", function() {
-        var newlat = jQuery("#latitude").val();
-        var newlon = jQuery("#longitude").val();
+        var newlat = jQuery('input[name="latitude"]').val();
+        var newlon = jQuery('input[name="longitude"]').val();
         if (!isNaN(newlat) && !isNaN(newlon))
         {
             // Clear the map first
@@ -283,11 +294,158 @@ function initEditMap(settings){
     });
 }
 
+function initViewMap(settings){
+    
+    var defaultSettings = {
+        mapContainer:"mapContainer"
+        
+    };
+    settings = jQuery.extend(defaultSettings, settings);		
+    
+    
+    var options = {
+        units: "dd",
+        numZoomLevels: 18, 
+        controls:[],
+        theme: false,
+        projection: proj_900913,
+        'displayProjection': proj_4326,
+        /* eventListeners: {
+            "zoomend": incidentZoom
+        },*/
+        maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
+        maxResolution: 156543.0339
+    };
+   
+    // Now initialise the map
+    map = new OpenLayers.Map(settings.mapContainer, options);
+			
+    var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", { 
+        type: google.maps.MapTypeId.SATELLITE,
+        animationEnabled: true,
+        sphericalMercator: true,
+        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
+    });
+
+    var google_hybrid = new OpenLayers.Layer.Google("Google Maps Hybrid", { 
+        type: google.maps.MapTypeId.HYBRID,
+        animationEnabled: true,
+        sphericalMercator: true,
+        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
+    });
+
+    var google_normal = new OpenLayers.Layer.Google("Google Maps Normal", { 
+        animationEnabled: true,
+        sphericalMercator: true,
+        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
+    });
+
+    var google_physical = new OpenLayers.Layer.Google("Google Maps Physical", { 
+        type: google.maps.MapTypeId.TERRAIN,
+        animationEnabled: true,
+        sphericalMercator: true,
+        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
+    });
+
+    map.addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
+    map.addControl(new OpenLayers.Control.Navigation());
+    map.addControl(new OpenLayers.Control.Zoom());
+    map.addControl(new OpenLayers.Control.MousePosition());
+    map.addControl(new OpenLayers.Control.ScaleLine());
+    map.addControl(new OpenLayers.Control.Scale('mapScale'));
+    map.addControl(new OpenLayers.Control.LayerSwitcher());
+    
+    // Vector/Drawing Layer Styles
+    style1 = new OpenLayers.Style({
+        pointRadius: "8",
+        fillColor: "#ffcc66",
+        fillOpacity: "0.7",
+        strokeColor: "#CC0000",
+        strokeWidth: 2.5,
+        graphicZIndex: 1,
+        externalGraphic: "res/openlayers/img/marker.png",
+        graphicOpacity: 1,
+        graphicWidth: 21,
+        graphicHeight: 25,
+        graphicXOffset: -14,
+        graphicYOffset: -27
+    });
+    style2 = new OpenLayers.Style({
+        pointRadius: "8",
+        fillColor: "#30E900",
+        fillOpacity: "0.7",
+        strokeColor: "#197700",
+        strokeWidth: 2.5,
+        graphicZIndex: 1,
+        externalGraphic: "res/openlayers/img/marker-green.png",
+        graphicOpacity: 1,
+        graphicWidth: 21,
+        graphicHeight: 25,
+        graphicXOffset: -14,
+        graphicYOffset: -27
+    });
+    style3 = new OpenLayers.Style({
+        pointRadius: "8",
+        fillColor: "#30E900",
+        fillOpacity: "0.7",
+        strokeColor: "#197700",
+        strokeWidth: 2.5,
+        graphicZIndex: 1
+    });
+			
+    var vlayerStyles = new OpenLayers.StyleMap({
+        "default": style1,
+        "select": style2,
+        "temporary": style3
+    });
+                        
+    vlayer = new OpenLayers.Layer.Vector( "Editable", {
+        styleMap: vlayerStyles,
+        rendererOptions: {
+            zIndexing: true
+        }
+    });
+    map.addLayer(vlayer);
+			
+	
+			
+    			
+                        
+    // Insert Saved Geometries
+    wkt = new OpenLayers.Format.WKT();
+    if(settings.geometries){
+        for(i in settings.geometries){
+             wktFeature = wkt.read(settings.geometries[i]);
+            wktFeature.geometry.transform(proj_4326,proj_900913);
+            vlayer.addFeatures(wktFeature);
+	}       			
+    }else{
+        // Default Point
+            point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
+            OpenLayers.Projection.transform(point, proj_4326, map.getProjectionObject());
+            var origFeature = new OpenLayers.Feature.Vector(point);
+            vlayer.addFeatures(origFeature);
+				
+    }                 							
+			
+    // Create a lat/lon object
+    var startPoint = new OpenLayers.LonLat(settings.longitude, settings.latitude);
+    startPoint.transform(proj_4326, map.getProjectionObject());
+			
+    // Display the map centered on a latitude and longitude (Google zoom levels)
+    map.setCenter(startPoint, 8);
+			
+    // Create the Editing Toolbar
+    var container = document.getElementById(settings.editContainer);
+    refreshFeatures();
+    
+}
+
 function geoCode()
 {
     jQuery('#findLoading').html('<img src="res/openlayers/img/loading_g.gif">');
     address = jQuery("#locationFind").val();
-    jQuery.post("http://localhost/huridocs/openevsys/ushahidi/reports/geocode/", {
+    jQuery.post("index.php?mod=events&act=geocode", {
         address: address
     },
     function(data){
@@ -311,8 +469,8 @@ function geoCode()
 												
             // Update form values
             jQuery("#country_name").val(data.country);
-            jQuery("#latitude").val(data.latitude);
-            jQuery("#longitude").val(data.longitude);
+            jQuery('input[name="latitude"]').val(data.latitude);
+            jQuery('input[name="longitude"]').val(data.longitude);
             jQuery("#location_name").val(data.location_name);
         } else {
             // Alert message to be displayed
@@ -413,8 +571,8 @@ function endDrag(feature, pixel) {
     refreshFeatures();
 			
     // Fetching Lat Lon Values
-    var latitude = parseFloat(jQuery("#latitude").val());
-    var longitude = parseFloat(jQuery("#longitude").val());
+    var latitude = parseFloat(jQuery('input[name="latitude"]').val());
+    var longitude = parseFloat(jQuery('input[name="longitude"]').val());
 			
     // Looking up country name using reverse geocoding
     reverseGeocode(latitude, longitude);
@@ -467,14 +625,14 @@ function refreshFeatures(event) {
                 color: color, 
                 strokewidth: strokewidth
             });
-            jQuery('#reportForm').append(jQuery('<input></input>').attr('name','geometry[]').attr('type','hidden').attr('value',geometryAttributes));
+            jQuery('form').append(jQuery('<input></input>').attr('name','geometry[]').attr('type','hidden').attr('value',geometryAttributes));
         }
     }
     // Centroid of location will constitute the Location
     // if its not a point
     centroid = geoCollection.getCentroid(true);
-    jQuery("#latitude").val(centroid.y);
-    jQuery("#longitude").val(centroid.x);
+    jQuery('input[name="latitude"]').val(centroid.y);
+    jQuery('input[name="longitude"]').val(centroid.x);
 }
 			
                         
