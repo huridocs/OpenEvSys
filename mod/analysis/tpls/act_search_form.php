@@ -5,7 +5,7 @@
 <br />
 <div class="panel">
 <div class="form-container">
-<form action='<?php echo get_url('analysis','search_result')?>' method='get'>
+<form class="form-horizontal"  action='<?php echo get_url('analysis','search_result')?>' method='get'>
     <input type="hidden" value="analysis" name="mod" />
     <input type="hidden" value="search_result" name="act" />
 	<?php 
@@ -22,7 +22,7 @@
 		
 		
 	?>
-	<a class="but" href="<?php echo get_url('analysis','search',null,null) ?>"><?php echo _('BACK'); ?></a>
+	<a class="btn" href="<?php echo get_url('analysis','search',null,null) ?>"><?php echo _('BACK'); ?></a>
 	<?php echo $fields['search'];?>
 </form>
 </div>

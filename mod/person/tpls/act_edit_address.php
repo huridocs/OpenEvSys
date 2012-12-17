@@ -7,13 +7,13 @@
 <div class="panel">
     <h3><?php echo _t('EDITING_PERSON_ADDRESS____') ?></h3>
     <div class="form-container"> 
-    <form action='<?php echo get_url('person','edit_address')?>' name="person_form" id="person_address" method='post' enctype='multipart/form-data'>    	
+    <form class="form-horizontal"  action='<?php echo get_url('person','edit_address')?>' name="person_form" id="person_address" method='post' enctype='multipart/form-data'>    	
         <?php        		
 		$fields = shn_form_get_html_fields($address_form);		
 		$fields = place_form_elements($address_form,$fields);
 		?>
         <center>        
-        <a class='but' href='<?php get_url('person','address_list') ?>' ><?php echo _t('CANCEL') ?></a>
+        <a class='btn' href='<?php get_url('person','address_list') ?>' ><?php echo _t('CANCEL') ?></a>
         <?php echo $fields['update'];?>
         </center>
     </form>

@@ -1,4 +1,4 @@
-<?php include_once('tabs.php'); ?>
+<?php  ?>
 <br />
 <center class='phide'>
     <?php echo _t('PRINTABLE_VIEW') ?>
@@ -22,7 +22,7 @@ if(isset($vp_list)){
     echo '<h2>'._t('VICTIMS_AND_PERPETRATORS').'</h2>';
     ?>
     <br />
-     <form action="<?php get_url('events','delete_act')?>" method="post">
+     <form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
     <table class='print'>
         <thead>
             <tr>

@@ -3,13 +3,13 @@
 <?php 
 if($delete){
 ?>
-    <form action="<?php get_url('analysis','delete_query') ?>" method='post'>
+    <form class="form-horizontal"  action="<?php get_url('analysis','delete_query') ?>" method='post'>
         <div class='dialog confirm'>
             <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__')?></h3>
             <br />
             <center>
-            <input type='submit' name='delete_yes' value='<? echo _t('DELETE') ?>' />
-            <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+            <input type='submit' class='btn' name='delete_yes' value='<? echo _t('DELETE') ?>' />
+            <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
             </center>
         </div>   
     <?php
@@ -21,7 +21,7 @@ if($delete){
 <?php
 }
 ?>
-<form action="<?php get_url('analysis','search_query') ?>" method='get' >
+<form class="form-horizontal"  action="<?php get_url('analysis','search_query') ?>" method='get' >
 <input type='hidden' name='mod' value='analysis' />
 <input type='hidden' name='act' value='search_query' />
 <?php		
@@ -29,11 +29,11 @@ if($query_list != null && $query_list->RecordCount()){
 	$query_result_pager->render_pages();
     $types = array(''=>'','advanced'=>_t('ADVANCED'), 'basic'=>_t('BASIC'));
 ?>
-	<table class="browse">
+	<table class="table table-bordered table-striped table-hover">
 	<thead>
         <tr class='top_but'>
             <td colspan='7'>
-                <input type='submit' name="filter" value='Filter' /><span>&nbsp;</span>
+                <input type='submit' class='btn' name="filter" value='Filter' /><span>&nbsp;</span>
                 <a href="<?php get_url('analysis','search_query') ?>" ><?php echo _t('RESET')?></a>
             </td>
         <tr>
@@ -86,7 +86,7 @@ if($query_list != null && $query_list->RecordCount()){
 ?>
         <tr class='actions' style='background:#EEEAD4'>
             <td></td>
-            <td colspan='6'><input type="submit" value="<?php echo _t('DELETE') ?>" name='delete' /></td>
+            <td colspan='6'><input type="submit" class="btn" value="<?php echo _t('DELETE') ?>" name='delete' /></td>
         </tr>
 	</tbody>
 	</table>

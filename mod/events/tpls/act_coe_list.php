@@ -1,33 +1,31 @@
 <?php 
-	include_once('tabs.php');
+	
 	include_once('event_title.php');
-    include_once('card_list.php');
-
-    draw_card_list('coe',$event_id);
+  
 ?>
 <div class="panel">
-    <a class="but" href="<?php echo get_url('events','add_coe') ?>"><?php echo _t('ADD_CHAIN_OF_EVENTS')?></a><span>&nbsp;&nbsp;</span>
+    <a class="btn" href="<?php echo get_url('events','add_coe') ?>"><?php echo _t('ADD_CHAIN_OF_EVENTS')?></a><span>&nbsp;&nbsp;</span>
     <br />
     <br />
     <?php
 	if ($related_events==NULL){
     ?>
-    <div class="notice">
+    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_') ?>
-    </div>
+    </div><br/>
     <?php
     }
     else
     {    
     ?>
-    <form action="<?php get_url('events','delete_coe')?>" method="post">
-    <table class="view">
+    <form class="form-horizontal"  action="<?php get_url('events','delete_coe')?>" method="post">
+    <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
-				<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
-                <td><?php echo _t('INITIAL_DATE') ?></td>
-                <td><?php echo _t('RELATED_EVENT_TITLE') ?></td>
-                <td><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></td>
+				<th width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></th>
+                <th><?php echo _t('INITIAL_DATE') ?></th>
+                <th><?php echo _t('RELATED_EVENT_TITLE') ?></th>
+                <th><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></th>
             </tr>
         </thead>
         <tbody>		
@@ -41,7 +39,7 @@
 
         <?php }?>
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>				
     </tbody>
     </table>
@@ -55,7 +53,7 @@
             case 'coe':
                 echo "<h3>"._t('VIEW_EVENT_RECORD')."</h3>&nbsp;";
                 echo "<br />";
-                ?><a class="but" href="<?php echo get_url('events','get_event',null,array('eid'=>$_GET['related_event'])) ?>"><?php echo _t('MORE_ABOUT_THIS_EVENT')?></a><?php
+                ?><a class="btn" href="<?php echo get_url('events','get_event',null,array('eid'=>$_GET['related_event'])) ?>"><?php echo _t('MORE_ABOUT_THIS_EVENT')?></a><?php
                 echo "<br />";
                 echo "<br />";
                 $event_form = event_form('view');
@@ -65,7 +63,7 @@
             case 'coe_view':
                 echo "<h3>"._t('VIEW_CHAIN_OF_EVENTS_RECORD')."</h3>&nbsp;";
                 echo "<br />";
-                ?><a class="but" href="<?php echo get_url('events','edit_coe',null,array('coeid'=>$_GET['coe_id'])) ?>"><?php echo _t('EDIT_THIS_CHAIN_OF_EVENT')?></a><?php
+                ?><a class="btn" href="<?php echo get_url('events','edit_coe',null,array('coeid'=>$_GET['coe_id'])) ?>"><?php echo _t('EDIT_THIS_CHAIN_OF_EVENT')?></a><?php
                 echo "<br />";
                 echo "<br />";	
                 $chain_of_events_form = chain_of_events_form('view');

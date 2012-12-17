@@ -5,13 +5,12 @@ include_once('event_title.php');
 	<div class="panel">
 	<?php
 	if($del_confirm){ ?>
-    <div class='dialog confirm'>
-    <h3><?php echo _t('YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_')?></h3>
-    <form action="<?php get_url('events','delete_event')?>" method="post">
-        <br />
-        <center>
-        <input type='submit' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
-        <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+    <div class="alert alert-block" style="text-align:center">
+<h4><?php echo _t('YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_')?></h4>
+    <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post" >
+        <br/><center>
+        <input type='submit' class='btn' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
         </center>        
     </form>
     </div>
@@ -22,13 +21,13 @@ include_once('event_title.php');
     	echo "<h4>" . _t('CHAIN_OF_EVENT_S_') . "</h4>"; 
     	$i = 0;
     ?>
-    <table class='view'>
+    <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <td><?php echo _t('REC_NO')?></td>
-                <td><?php echo _t('EVENT_TITLE')?></td>
-                <td width='80px'><?php echo _t('INITIAL_DATE')?></td>
-                <td width='80px'><?php echo _t('FINAL_DATE')?></td>         
+                <th><?php echo _t('REC_NO')?></th>
+                <th><?php echo _t('EVENT_TITLE')?></th>
+                <th width='80px'><?php echo _t('INITIAL_DATE')?></th>
+                <th width='80px'><?php echo _t('FINAL_DATE')?></th>         
             </tr>
         </thead>
         <tbody>
@@ -52,13 +51,13 @@ include_once('event_title.php');
     	echo "<h4>" . _t('ACT_S_') . "</h4>";
     	$i = 0;
     ?>
-    <table class="view">
+    <table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>			
-            <td><?php echo _t('REC_NO') ?></td>
-            <td><?php echo _t('TYPE_OF_ACT') ?></td>            
-            <td><?php echo _t('INITIAL_DATE') ?></td>            			
-            <td><?php echo _t('FINAL_DATE') ?></td>            
+            <th><?php echo _t('REC_NO') ?></th>
+            <th><?php echo _t('TYPE_OF_ACT') ?></th>            
+            <th><?php echo _t('INITIAL_DATE') ?></th>            			
+            <th><?php echo _t('FINAL_DATE') ?></th>            
         </tr>
     </thead>
     <tbody>	
@@ -84,13 +83,13 @@ include_once('event_title.php');
     	echo "<h4>" . _t('INVOLVEMENT_S_') . "</h4>";
     	$i = 0;
     ?>
-    <table class='view'>
+    <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>			
-            <td class="title"><?php echo _t('REC_NO')?></td>
-            <td class="title"><?php echo _t('DEGREE_OF_INVOLVEMENT')?></td>
-            <td class="title"><?php echo _t('STATUS')?></td>
-            <td class="title"><?php echo _t('REMARKS')?></td>
+            <th class="title"><?php echo _t('REC_NO')?></th>
+            <th class="title"><?php echo _t('DEGREE_OF_INVOLVEMENT')?></th>
+            <th class="title"><?php echo _t('STATUS')?></th>
+            <th class="title"><?php echo _t('REMARKS')?></th>
         </tr>
     </thead>
     <tbody>		
@@ -118,13 +117,13 @@ include_once('event_title.php');
     	echo "<h4>" . _t('INFORMATION_S_') . "</h4>";
     	$i = 0;
     ?>
-    <table class='view'>
+    <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>			
-            <td><?php echo _t('REC_NO') ?></td>
-            <td><?php echo _t('INFORMATION') ?></td>
-            <td><?php echo _t('DATE_OF_SOURCE_MATERIAL') ?></td>
-            <td><?php echo _t('REMARKS') ?></td>
+            <th><?php echo _t('REC_NO') ?></th>
+            <th><?php echo _t('INFORMATION') ?></th>
+            <th><?php echo _t('DATE_OF_SOURCE_MATERIAL') ?></th>
+            <th><?php echo _t('REMARKS') ?></th>
         </tr>
     </thead>
     <tbody>		
@@ -149,13 +148,13 @@ include_once('event_title.php');
     	echo "<h4>" . _t('INTERVENTION_S_') . "</h4>";
     	$i = 0;
     ?>
-    <table class='view'>
+    <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td><?php echo _t('REC_NO') ?></td>
-            <td><?php echo _t('IMPACT') ?></td>
-            <td><?php echo _t('DATE_OF_INTERVENTION') ?></td>
-            <td><?php echo _t('REMARKS') ?></td>
+            <th><?php echo _t('REC_NO') ?></th>
+            <th><?php echo _t('IMPACT') ?></th>
+            <th><?php echo _t('DATE_OF_INTERVENTION') ?></th>
+            <th><?php echo _t('REMARKS') ?></th>
         </tr>
     </thead>
     <tbody>		
@@ -181,11 +180,11 @@ include_once('event_title.php');
 ?>
 	<div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_EVENT_')?></h3>
-    <form action="<?php get_url('events','delete_event')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('DELETE') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
         </center>        
     </form>
     </div>

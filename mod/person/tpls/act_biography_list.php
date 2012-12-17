@@ -5,22 +5,22 @@
     draw_card_list('bd',$pid);	
 ?>
 <div class="panel">
-<a class="but" href="<?php echo get_url('person','new_biography',null,array('pid'=>$pid, 'search_type'=>'person')) ?>"><?php echo _t('ADD_BIOGRAPHIC_DETAILS')?></a>
+<a class="btn" href="<?php echo get_url('person','new_biography',null,array('pid'=>$pid, 'search_type'=>'person')) ?>"><?php echo _t('ADD_BIOGRAPHIC_DETAILS')?></a>
 <br />
 <br />
 <?php
 	if(is_array($biographics) && count($biographics) !=0 ){
 ?>
-<form action="<?php get_url('person','delete_biographic')?>" method="post">
-<table class='view'>
+<form class="form-horizontal"  action="<?php get_url('person','delete_biographic')?>" method="post">
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
-			<td class="title"><?php echo _t('VIEW_BIOGRAPHIC_DETAILS')?></td>  
-			<td class="title"><?php echo _t('TYPE_OF_RELATIONSHIP')?></td>           
-            <td class="title"><?php echo _t('RELATED_PERSON')?></td>
-            <td class="title"><?php echo _t('INITIAL_DATE')?></td>
-            <td class="title"><?php echo _t('FINAL_DATE')?></td>
+			<th width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></th>
+			<th class="title"><?php echo _t('VIEW_BIOGRAPHIC_DETAILS')?></th>  
+			<th class="title"><?php echo _t('TYPE_OF_RELATIONSHIP')?></th>           
+            <th class="title"><?php echo _t('RELATED_PERSON')?></th>
+            <th class="title"><?php echo _t('INITIAL_DATE')?></th>
+            <th class="title"><?php echo _t('FINAL_DATE')?></th>
         </tr>
     </thead>
     <tbody>		
@@ -39,7 +39,7 @@
 			}		
 ?>   
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>
 	</tbody>
 </table>
@@ -47,13 +47,13 @@
 <?php
 	}	
 	else{
-		echo "<div class='notice'>";
+		echo '<div class="alert alert-info spanauto"><button type="button" class="close" data-dismiss="alert">×</button>';
     	echo _t('THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_');
-    	echo "</div>";
+    	echo "</div><br/>";
 	}
 ?>
 <div class="form-container">
-<form action='<?php echo get_url('person','biography_list')?>' method='post' enctype='multipart/form-data'>
+<form class="form-horizontal"  action='<?php echo get_url('person','biography_list')?>' method='post' enctype='multipart/form-data'>
 <?php
 	if($_GET['type']=='bd'){
 ?>
@@ -63,7 +63,7 @@
 	echo "<h3>" ._t('VIEW_BIOGRAPHIC_DETAILS') . "</h3>";
 	echo "<br />";
 ?>
-	<a class="but" href="<?php echo get_url('person','edit_biography',null,array('biography_id'=>$_GET['biography_id'])) ?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/gtk-edit.png','image/png') ?>"> <?php echo _t('EDIT_THIS_BIOGRAPHIC_DETAILS')?></a>
+	<a class="btn" href="<?php echo get_url('person','edit_biography',null,array('biography_id'=>$_GET['biography_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_BIOGRAPHIC_DETAILS')?></a>
 	<br />
     <br />
 <?php
@@ -80,7 +80,7 @@
 	echo "<h3>" ._t('VIEW_RELATED_PERSON') . "</h3>";
 ?>
 	<br />
-	<a class="but" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->related_person)) ?>"><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
+	<a class="btn" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->related_person)) ?>"><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
 	<br />
 <?php
 	echo "<br />";		

@@ -1,16 +1,16 @@
 <?php global $conf; ?>
 <div id="browse">
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td width="100px"><?php echo(_t('FIELD_NUMBER')); ?></td>
-            <td width="200px"><?php echo(_t('FIELD_NAME')); ?></td>
-            <td width="100px"><?php echo(_t('FIELD_TYPE')); ?></td>
-            <td><?php echo(_t('LABEL')); ?></td>
+            <th width="100px"><?php echo(_t('FIELD_NUMBER')); ?></th>
+            <th width="200px"><?php echo(_t('FIELD_NAME')); ?></th>
+            <th width="100px"><?php echo(_t('FIELD_TYPE')); ?></th>
+            <th><?php echo(_t('LABEL')); ?></th>
 <?php
             if(isset($locale)){
 ?>
-            <td><?php echo(_t('LABEL_IN_')).$locale; ?></td>
+            <th><?php echo(_t('LABEL_IN_')).$locale; ?></th>
 <?php
             }
 ?>

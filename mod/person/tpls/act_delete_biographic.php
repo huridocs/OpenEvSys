@@ -2,11 +2,11 @@
 <?php if($del_confirm){ ?>
     <div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_')?></h3>
-    <form action="<?php get_url('person','delete_biographic')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('person','delete_biographic')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php foreach($_POST['biographics'] as $val){ ?>
         <input type='hidden' name='biographics[]' value='<?php echo $val ?>' />
@@ -15,10 +15,10 @@
     </div>
 <?php } ?>
 <div id="browse">
-    <form action="<?php get_url('person','browse')?>" method="get">
+    <form class="form-horizontal"  action="<?php get_url('person','browse')?>" method="get">
     <input type="hidden" name="mod" value="person" />
     <input type="hidden" name="act" value="browse" />
-    <table class='view'>
+    <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
 			<td class="title"><?php echo _t('TYPE_OF_RELATIONSHIP')?></td>           
@@ -44,6 +44,6 @@
 </table>
     </form>
 <br />
-	<a class="but" href="<?php echo get_url('person','biography_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
+	<a class="btn" href="<?php echo get_url('person','biography_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
 <br />
 </div>

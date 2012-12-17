@@ -2,20 +2,20 @@
 <br/>
 
 <?php if(!isset($values) || sizeof($values) == 0 ){ ?>
-        <div class="notice">
+        <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE') ?>
-        </div>
+        </div><br/>
     <?php }else{?>
     <?php $errorlist->render_pages(); ?>
-    <table class='browse'>
+    <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <td class="title"><?php echo _t('IMPORT_DATE')?> </td>
-                <td class="title"><?php echo _t('IMPORT_TIME')?> </td>
-                <td class="title"><?php echo _t('STATUS')?></td>
-                <td class="title"><?php echo _t('EXPORT_INSTANCE')?></td>
-                <td class="title"><?php echo _t('EXPORT_DATE')?></td>
-                <td class="title"><?php echo _t('EXPORT_TIME')?></td>
+                <th class="title"><?php echo _t('IMPORT_DATE')?> </th>
+                <th class="title"><?php echo _t('IMPORT_TIME')?> </th>
+                <th class="title"><?php echo _t('STATUS')?></th>
+                <th class="title"><?php echo _t('EXPORT_INSTANCE')?></th>
+                <th class="title"><?php echo _t('EXPORT_DATE')?></th>
+                <th class="title"><?php echo _t('EXPORT_TIME')?></th>
             </tr>
         </thead>
         <tbody>

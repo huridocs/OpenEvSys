@@ -1,21 +1,18 @@
 <?php 
-	include('tabs.php');
 	include_once('event_title.php');
-    include_once('card_list.php');
     
-	draw_card_list('vp',$event_id);
 ?>
 <div class="panel">
 <?php
 	if(is_array($vp_list) && count($vp_list) != 0){ 
 	if($del_confirm){ ?>
-    <div class='dialog confirm'>
-    <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___')?></h3>
-    <form action="<?php get_url('events','delete_act')?>" method="post">
+    <div class="alert alert-block" style="text-align:center">
+    <h4><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___')?></h4>
+    <form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php
 			if(isset($_POST['acts'])){
@@ -36,14 +33,14 @@
 <?php
 	//if(is_array($vp_list) && count($vp_list) != 0){
 ?>
-<table class="view">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>			
-            <td><?php echo _t('INITIAL_DATE') ?></td>
-            <td><?php echo _t('VICTIM_NAME') ?></td>
-            <td><?php echo _t('TYPE_OF_ACT') ?></td>
-            <td><?php echo _t('PERPETRATOR_NAME_S_') ?></td>
-            <td><?php echo _t('INVOLVEMENT') ?></td>
+            <th><?php echo _t('INITIAL_DATE') ?></th>
+            <th><?php echo _t('VICTIM_NAME') ?></th>
+            <th><?php echo _t('TYPE_OF_ACT') ?></th>
+            <th><?php echo _t('PERPETRATOR_NAME_S_') ?></th>
+            <th><?php echo _t('INVOLVEMENT') ?></th>
         </tr>
     </thead>
     <tbody>	
@@ -67,7 +64,7 @@
 	}		
 ?>
 <center>
-	<a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
+	<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
 </center>
 <br />
 </div>

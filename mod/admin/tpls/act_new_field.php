@@ -1,7 +1,7 @@
 <?php global $conf; ?>
 <h2><?php echo _t('ADD_NEW_FIELD')?></h2>
 <div class="form-container">
-<form action='<?php echo get_url('admin','new_field')?>' method='post'>
+<form class="form-horizontal"  action='<?php echo get_url('admin','new_field')?>' method='post'>
 <fieldset style="margin:10px"> 
 <?php $fields = shn_form_get_html_fields($customization_form,false);  ?>
         <?php echo $fields['entity_select'] ?>
@@ -13,7 +13,7 @@
 <?php if(isset($entity_select)){ ?>
 <h3><?php echo _t('ADD_FIELD_TO')." [ {$entity_select} ] "._t('FORM'); ?></h3>
 <div class="form-container">
-<form action='<?php echo get_url('admin','new_field',null)?>' method='post'>
+<form class="form-horizontal"  action='<?php echo get_url('admin','new_field',null)?>' method='post'>
 <fieldset style="margin:10px">
 <?php $fields = shn_form_get_html_fields($new_field_form); ?>
 <?php place_form_elements($new_field_form , $fields); ?>

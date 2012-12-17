@@ -8,12 +8,12 @@
 
 <div class="panel">
     <div class="form-container"> 
-    <a class="but" href="<?php echo get_url('docu','edit_document',null,array('doc_id'=>$_GET['doc_id'])) ?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/gtk-edit.png','image/png') ?>"> <?php echo _t('EDIT_DETAILS')?></a>
-    <a class="but" href="<?php echo get_url('docu', 'delete_document', null, array('doc_id'=>$_GET['doc_id']))?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/edit-delete.png','image/png') ?>"> <?php echo _t('DELETE_DOCUMENT');?></a>
+    <a class="btn" href="<?php echo get_url('docu','edit_document',null,array('doc_id'=>$_GET['doc_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_DETAILS')?></a>
+    <a class="btn" href="<?php echo get_url('docu', 'delete_document', null, array('doc_id'=>$_GET['doc_id']))?>"><i class="icon-trash"></i>  <?php echo _t('DELETE_DOCUMENT');?></a>
 <?php
 	if($supporting_docs->uri != null){
 ?>
-		 <a class="but" href="<?php echo get_url('docu','download',null,array('doc_id'=>$_GET['doc_id'])) ?>"><?php echo _t('DOWNLOAD_DOCUMENT'); ?></a>
+		 <a class="btn" href="<?php echo get_url('docu','download',null,array('doc_id'=>$_GET['doc_id'])) ?>"><i class="icon-download-alt"></i> <?php echo _t('DOWNLOAD_DOCUMENT'); ?></a>
 <?php		
 	}
 	else{

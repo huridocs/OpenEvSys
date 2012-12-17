@@ -1,19 +1,16 @@
 <?php 
-	include('tabs.php');
 	include_once('event_title.php');
-    include_once('card_list.php');
     
-	draw_card_list('coe',$event_id);
 ?>
 <div class="panel">
 <?php if($del_confirm){ ?>
-    <div class='dialog confirm'>
-    <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__')?></h3>
-    <form action="<?php get_url('events','delete_coe')?>" method="post">
+    <div class="alert alert-block" style="text-align:center">
+    <h4><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__')?></h4>
+    <form class="form-horizontal"  action="<?php get_url('events','delete_coe')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php			
 			foreach($_POST['coes'] as $val){ ?>
@@ -24,12 +21,12 @@
     </form>
     </div>
 
-<table class="view">
+<table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
-                <td><?php echo _t('INITIAL_DATE') ?></td>
-                <td><?php echo _t('RELATED_EVENT_TITLE') ?></td>
-                <td><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></td>
+                <th><?php echo _t('INITIAL_DATE') ?></th>
+                <th><?php echo _t('RELATED_EVENT_TITLE') ?></th>
+                <th><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -46,7 +43,7 @@
 	}		
 ?>
 <center>
-	<a class="but" href="<?php echo get_url('events','coe_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
+	<a class="btn" href="<?php echo get_url('events','coe_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
 </center>
 <br />
 </div>

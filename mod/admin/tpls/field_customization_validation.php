@@ -1,13 +1,13 @@
 <div id="browse">
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td><?php echo(_t('FIELD_NUMBER')); ?></td>
-            <td><?php echo(_t('FIELD_NAME')); ?></td>
-            <td><?php echo(_t('FIELD_TYPE')); ?></td>
-            <td><?php echo(_t('LABEL')); ?></td>
-            <td><?php echo(_t('IS_REQUIRED')); ?></td>
-            <td><?php echo(_t('VALIDATION_TYPE')); ?></td>
+            <th><?php echo(_t('FIELD_NUMBER')); ?></th>
+            <th><?php echo(_t('FIELD_NAME')); ?></th>
+            <th><?php echo(_t('FIELD_TYPE')); ?></th>
+            <th><?php echo(_t('LABEL')); ?></th>
+            <th><?php echo(_t('IS_REQUIRED')); ?></th>
+            <th><?php echo(_t('VALIDATION_TYPE')); ?></th>
             
         </tr>
     </thead>

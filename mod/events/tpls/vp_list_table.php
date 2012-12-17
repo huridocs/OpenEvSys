@@ -1,24 +1,23 @@
 <?php if( acl_vp_entity_add_is_allowed() ){?>
-<a class="but" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_VICTIM')?></a>
+<a class="btn" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_VICTIM')?></a>
 <?php } ?>
-<br />
-<br />
+
 <?php if(!isset($vp_list)){ ?>
-    <div class="notice">
+    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME') ?>
-    </div>
+    </div><br/>
 <?php }else{ ?>
-<form action="<?php get_url('events','delete_act')?>" method="post">
-<table class="view">
+<form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete_act").attr("checked",this.checked)' /></td>
-            <td><?php echo _t('INITIAL_DATE') ?></td>
-            <td><?php echo _t('VICTIM_NAME') ?></td>
-            <td><?php echo _t('TYPE_OF_ACT') ?></td>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete_inv").attr("checked",this.checked)' /></td>
-            <td><?php echo _t('PERPETRATOR_NAME_S_') ?></td>
-            <td><?php echo _t('INVOLVEMENT') ?></td>
+			<th width='16px'><input type='checkbox' onchange='$("input.delete_act").attr("checked",this.checked)' /></th>
+            <th><?php echo _t('INITIAL_DATE') ?></th>
+            <th><?php echo _t('VICTIM_NAME') ?></th>
+            <th><?php echo _t('TYPE_OF_ACT') ?></th>
+			<th width='16px'><input type='checkbox' onchange='$("input.delete_inv").attr("checked",this.checked)' /></th>
+            <th><?php echo _t('PERPETRATOR_NAME_S_') ?></th>
+            <th><?php echo _t('INVOLVEMENT') ?></th>
         </tr>
     </thead>
     <tbody>	
@@ -58,7 +57,7 @@
         </tr>
     <?php } ?>
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>		
     </tbody>
 </table>

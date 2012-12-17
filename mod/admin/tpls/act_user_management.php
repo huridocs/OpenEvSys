@@ -1,26 +1,24 @@
 <?php global $conf; ?>
 <h2><?php echo _t('USERS')?></h2>
 <br />
- <a class="but" href="<?php get_url('admin','add_user'   ) ?> " ><img src="<?php echo data_uri(APPROOT.'www/res/img/list-add.png','image/png') ?>"> <?php echo _t('ADD_NEW_USER') ?></a>
-<br />
-<br />
+
 <?php $user_pager->render_pages(); ?>
 
-<form action='<?php echo get_url('admin','delete_user')?>' method='post'>
-<table class='view'>
+<form class="form-horizontal"  action='<?php echo get_url('admin','delete_user')?>' method='post'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>        
-            <td><?php echo(_t('USER_NAME')); ?></td>
-<!--            <td><?php echo(_t('FIRST_NAME')); ?></td> -->
-<!--            <td><?php echo(_t('LAST_NAME')); ?></td> -->
-<!--            <td><?php echo(_t('ORGANIZATION')); ?></td> -->
-<!--            <td><?php echo(_t('DESIGNATION')); ?></td> -->
-            <td><?php echo(_t('EMAIL')); ?></td>
-<!--            <td><?php echo(_t('ADDRESS')); ?></td> --> 
-            <td><?php echo(_t('ROLE')); ?></td>
-            <td><?php echo(_t('STATUS')); ?></td>
-            <td><?php echo(_t('ACTION')); ?></td>
+            <th width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></th>        
+            <th><?php echo(_t('USER_NAME')); ?></th>
+<!--            <th><?php echo(_t('FIRST_NAME')); ?></th> -->
+<!--            <th><?php echo(_t('LAST_NAME')); ?></th> -->
+<!--            <th><?php echo(_t('ORGANIZATION')); ?></th> -->
+<!--            <th><?php echo(_t('DESIGNATION')); ?></th> -->
+            <th><?php echo(_t('EMAIL')); ?></th>
+<!--            <th><?php echo(_t('ADDRESS')); ?></th> --> 
+            <th><?php echo(_t('ROLE')); ?></th>
+            <th><?php echo(_t('STATUS')); ?></th>
+            <th><?php echo(_t('ACTION')); ?></th>
             
             
         </tr>
@@ -47,7 +45,7 @@
 
     <?php } ?>
             <tr class='actions'>
-            <td colspan='11'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='11'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>
     </tbody>
 </table>

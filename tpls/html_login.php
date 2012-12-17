@@ -6,9 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css"  href="theme/<?php echo $conf['theme'] ?>/screen.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" >
+  
     <script src="theme/default/theme.js" type="text/javascript"></script>
-    <script type="text/javascript" src="res/jquery/jquery.js"></script>
-	<script type="text/javascript">
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+       
+         <script src="res/bootstrap/bootstrap.min.js"></script>
+       	<script type="text/javascript">
       	$(document).ready(function(){
    			$('#username').focus();
  		});

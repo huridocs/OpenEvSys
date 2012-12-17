@@ -1,8 +1,6 @@
 <?php
-    include_once('tabs.php');
+    
     include_once('event_title.php');
-    include_once('card_list.php');
-    draw_card_list('int',$event_id);
 ?>
 <div class="panel">
 <div class='flow'>
@@ -15,7 +13,7 @@
 <br />
 
 <div class="form-container">
-<form action='<?php echo get_url('events','add_intv_party','search_intv_party',array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
+<form class="form-horizontal"  action='<?php echo get_url('events','add_intv_party','search_intv_party',array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
 <?php
 	shn_form_person_search('events','add_intv_party',null,array('cancel'=>'intv_list'));		
 ?>

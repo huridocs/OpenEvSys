@@ -23,8 +23,8 @@ class AddAddress {
 			echo "<input type='hidden' name='$validate_field_name' value='$validate_field_value'/>";
 		}		
 ?>		
-		<input type="submit" name="save_address" value="<?php echo _t('SAVE_ADDRESS')?>" onclick="listAddress(); return false;" />
-		<a class="but" id="close_address_frm" href="#address_field"><?php echo _t('CLOSE');?></a>
+		<input type="submit" class="btn" name="save_address" value="<?php echo _t('SAVE_ADDRESS')?>" onclick="listAddress(); return false;" />
+		<a class="btn" id="close_address_frm" href="#address_field"><?php echo _t('CLOSE');?></a>
 <?php
 		echo "<br />";		
 	}

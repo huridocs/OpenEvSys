@@ -1,7 +1,7 @@
 <?php echo "<h2>".  _t($search_header) . "</h2>"; ?>
 <br />
 <div class="form-container">
-<form action='<?php echo get_url('analysis','search_result')?>' method='get'>
+<form class="form-horizontal"  action='<?php echo get_url('analysis','search_result')?>' method='get'>
     <input type="hidden" value="analysis" name="mod" />
     <input type="hidden" value="search_result" name="act" />
 <?php  shn_form_hidden('Main Entity','main_entity',array('value'=>$main_entity));	?>
@@ -29,7 +29,7 @@
 
 <fieldset style="border:0px;margin:0px;" >
     <legend><?php echo _t('ACTIONS')?></legend>
-	<a class="but" href="<?php echo get_url('analysis','search_form',null,array('main_entity'=>$main_entity)) ?>"><?php echo _t('BACK'); ?></a>&nbsp;&nbsp;&nbsp;	
+	<a class="btn" href="<?php echo get_url('analysis','search_form',null,array('main_entity'=>$main_entity)) ?>"><?php echo _t('BACK'); ?></a>&nbsp;&nbsp;&nbsp;	
 	<?php 
 	echo _t('CHANGE_VIEW__');
 	

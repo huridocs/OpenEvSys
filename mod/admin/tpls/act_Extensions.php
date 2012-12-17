@@ -2,7 +2,7 @@
 	<?php echo _t('EXTENSIONS')?>
 </h2>
 <br>
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
 	<thead>
 		<tr>
 			<th><?php echo _t('EXTENSIONS'); ?></th>

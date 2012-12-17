@@ -1,14 +1,14 @@
 <h2><?php echo _t('SYSTEM_CONFIGURATION')?></h2>
 <br>
-<form action='<?php 
+<form class="form-horizontal"  action='<?php 
 echo get_url('admin','System_configuration')
  ?>' method='post'>
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
 <thead>
 <tr>
-<td><?php echo _t("CONFIG_VARIABLE")?></td>
-<td><?php echo _t("CURRENT_VALUE")?></td>
-<td><?php echo _t("MODIFIED_VALUE")?></td>
+<th><?php echo _t("CONFIG_VARIABLE")?></th>
+<th><?php echo _t("CURRENT_VALUE")?></th>
+<th><?php echo _t("MODIFIED_VALUE")?></th>
 </tr>
 </thead>
 <tbody>
@@ -65,6 +65,6 @@ echo get_url('admin','System_configuration')
 </table>
 <center>
 <br />
-<input type="submit" name='submit' value="<?php echo _t('SAVE') ?>" />
+<input type="submit" class="btn" name='submit' value="<?php echo _t('SAVE') ?>" />
 </center>
 </form>

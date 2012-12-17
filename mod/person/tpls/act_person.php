@@ -5,12 +5,12 @@
 ?>
 <div class="panel">
         <?php if( acl_is_entity_allowed_boolean('person' , 'update')){?>
-			<a class="but" href="<?php echo get_url('person','edit_person',null) ?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/gtk-edit.png','image/png') ?>"> <?php echo _t('EDIT_THIS_PERSON')?></a>
+			<a class="btn" href="<?php echo get_url('person','edit_person',null) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_PERSON')?></a>
 	    <?php } ?>
 	    <?php if( acl_is_entity_allowed_boolean('person' , 'delete')){?>
-		<a class="but" href="<?php echo get_url('person','delete_person',null) ?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/edit-delete.png','image/png') ?>"> <?php echo _t('DELETE_THIS_PERSON')?></a>
+		<a class="btn" href="<?php echo get_url('person','delete_person',null) ?>"><i class="icon-trash"></i>  <?php echo _t('DELETE_THIS_PERSON')?></a>
 		<?php } ?>
-		<a class="but" href="<?php echo get_url('person','print',null) ?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/document-print.png','image/png') ?>"> <?php echo _t('PRINT_THIS_PERSON')?></a>
+		<a class="btn" href="<?php echo get_url('person','print',null) ?>"><i class="icon-print"></i>  <?php echo _t('PRINT_THIS_PERSON')?></a>
 <br />
 <br />
 <?php
@@ -24,10 +24,10 @@
 	<br />
 	<br />	
 	
-	<table class="browse">	
+	<table class="table table-bordered table-striped table-hover">	
 	<thead>
 		<tr>
-			<td><?php echo _t('CONTEXTUAL_INFORMATION')?></td>			
+			<th><?php echo _t('CONTEXTUAL_INFORMATION')?></th>			
 		</tr>
 	</thead>
 	<tbody>		

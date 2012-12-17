@@ -2,11 +2,11 @@
 <?php if($del_confirm){ ?>
     <div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__')?></h3>
-    <form action="<?php get_url('person','delete_address')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('person','delete_address')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php foreach($_POST['addresses'] as $val){ ?>
         <input type='hidden' name='addresses[]' value='<?php echo $val ?>' />
@@ -18,19 +18,19 @@
 <?php	
 	if((is_array($addresses) && count($addresses) != 0)){
 ?>		<div id="browse">		
-		<table class="view">
+		<table class="table table-bordered table-striped table-hover">
 		<thead>
 			<tr>				
-				<td><?php echo _t('ADDRESS_TYPE')?></td>
-				<td><?php echo _t('ADDRESS')?></td>
-				<td><?php echo _t('COUNTRY')?></td>
-				<td><?php echo _t('PHONE')?></td>
-				<td><?php echo _t('CELLULAR')?></td>
-				<td><?php echo _t('FAX')?></td>
-				<td><?php echo _t('EMAIL')?></td>
-				<td><?php echo _t('WEBSITE')?></td>
-				<td><?php echo _t('START_DATE')?></td>
-				<td><?php echo _t('END_DATE')?></td>				
+				<th><?php echo _t('ADDRESS_TYPE')?></th>
+				<th><?php echo _t('ADDRESS')?></th>
+				<th><?php echo _t('COUNTRY')?></th>
+				<th><?php echo _t('PHONE')?></th>
+				<th><?php echo _t('CELLULAR')?></th>
+				<th><?php echo _t('FAX')?></th>
+				<th><?php echo _t('EMAIL')?></th>
+				<th><?php echo _t('WEBSITE')?></th>
+				<th><?php echo _t('START_DATE')?></th>
+				<th><?php echo _t('END_DATE')?></th>				
 			</tr>
 		</thead>
 		<tbody>

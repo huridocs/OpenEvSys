@@ -11,17 +11,18 @@ class shnMessageQueue
         foreach($_SESSION['messages'] as $type=>$messages){
             if(count($type) < 1)
                 continue;
-            echo "<div class='message_wrap'>";
-            echo "<div class='message $type'>";
-            echo "<strong><span>".ucfirst($type)."</span></strong>";
-            echo "<ul>";
+            if($type == "error" ){
+                echo "<div class='alert alert-error spanauto'>";
+            }else{
+                echo "<div class='alert alert-info spanauto'>";
+            }
+            echo "<strong>".ucfirst($type)."</strong>";
+            echo '<button type="button" class="close" data-dismiss="alert">×</button><ul>';
             foreach($messages as $message){
                 echo "<li>".htmlspecialchars($message/*,ENT_COMPAT,'UTF-8',false*/)."</li>";
             }
-            echo "</ul>";
             echo "</div>";
-            echo "</div>";
-            echo "<br />";
+            echo "<br class='clearfix'/>";
             //once a message is printed out remove from the queue
             unset($_SESSION['messages'][$type]);
         }

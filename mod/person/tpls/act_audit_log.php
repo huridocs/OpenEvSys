@@ -7,19 +7,19 @@
 <div class="panel">
 <br />    
     <?php if(!isset($logs) || sizeof($logs) == 0 ){ ?>
-        <div class="notice">
+        <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON') ?>
-        </div>
+        </div><br/>
     <?php }else{?>
-    <table class='browse'>
+    <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <td class="title"><?php echo _t('TIMESTAMP');?></td>
-                <td class="title"><?php echo _t('ACTION')?> </td>
-                <td class="title"><?php echo _t('MODULE')?> </td>
-                <td class="title"><?php echo _t('ENTITY')?></td>
-                <td class="title"><?php echo _t('RECORD_NO')?></td>
-                <td class="title"><?php echo _t('USER')?></td>
+                <th class="title"><?php echo _t('TIMESTAMP');?></th>
+                <th class="title"><?php echo _t('ACTION')?> </th>
+                <th class="title"><?php echo _t('MODULE')?> </th>
+                <th class="title"><?php echo _t('ENTITY')?></th>
+                <th class="title"><?php echo _t('RECORD_NO')?></th>
+                <th class="title"><?php echo _t('USER')?></th>
             </tr>
         </thead>
         <tbody>

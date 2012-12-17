@@ -7,7 +7,7 @@
 
 <div class="form-container"> 
 
-<form action='<?php echo get_url('admin','add_user')?>' method='post'>
+<form class="form-horizontal"  action='<?php echo get_url('admin','add_user')?>' method='post'>
 
 <fieldset>
     <legend>Login Information</legend>
@@ -32,7 +32,7 @@
  
   </fieldset>          
         <?php  echo $fields['save']  ?>
-        <a class="but" href="<?php get_url('admin','user_management' ) ?> " ><?php echo _t('CANCEL') ?></a>
+        <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><?php echo _t('CANCEL') ?></a>
 
 </form>
 </div>

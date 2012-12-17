@@ -1,9 +1,7 @@
-<?php include_once('tabs.php') ?>
+
 <?php include_once('event_title.php'); ?>
 <?php
-    include_once('card_list.php');
-    draw_card_list('vp',$event_id);
-    set_url_args('act_id',$act->act_record_number);
+     set_url_args('act_id',$act->act_record_number);
 ?>
 <div class="panel">
     <div class='flow'>
@@ -17,14 +15,14 @@
     <h2><?php echo _t('ADD_ADDITIONAL_DETAILS_FOR').' "'.$act_name.'" '._t('ACT').'.' ?></h2>
     <br />
     <div class="form-container"> 
-        <form id="additional" name="additional" action='<?php echo get_url('events','add_ad',null,array('act_id'=>$act->act_record_number))?>' method='post' enctype='multipart/form-data'>
+        <form class="form-horizontal"  id="additional" name="additional" action='<?php echo get_url('events','add_ad',null,array('act_id'=>$act->act_record_number))?>' method='post' enctype='multipart/form-data'>
         <?php
             if(!isset($type)){
                 shn_form_radio(_t('ADDITIONAL_DETAIL_TYPE'),'type',array('options'=>$types));
         ?>
                 <center>
-                <a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-                <input type="submit" name='set_type' value="<?php echo _t('CONTINUE') ?>" />
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+                <input type="submit" class="btn" name='set_type' value="<?php echo _t('CONTINUE') ?>" />
                 </center>
         <?php
             }
@@ -37,9 +35,9 @@
                 <input type="hidden" name="type" value='<?php echo $type ?>' />
 
                 <center>
-                <a class="but" href="<?php echo get_url('events','add_ad',null,array('eid'=>$event_id)) ?>"><?php echo _t('CHANGE_ADDITIONAL_DETAIL_TYPE')?></a><span>&nbsp;&nbsp;</span>
-                <a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-                <input type="submit" name='save' value="<?php echo _t('CONTINUE') ?>" />
+                <a class="btn" href="<?php echo get_url('events','add_ad',null,array('eid'=>$event_id)) ?>"><?php echo _t('CHANGE_ADDITIONAL_DETAIL_TYPE')?></a><span>&nbsp;&nbsp;</span>
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+                <input type="submit" class="btn" name='save' value="<?php echo _t('CONTINUE') ?>" />
                 </center>
         <?php 
             }

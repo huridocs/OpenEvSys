@@ -8,7 +8,7 @@
     <h3><?php echo _t('ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON') ?></h3>
     <br />
     <div class="form-container">
-    <form action='<?php echo get_url('person','permissions')?>' method='post' enctype='multipart/form-data'>
+    <form class="form-horizontal"  action='<?php echo get_url('person','permissions')?>' method='post' enctype='multipart/form-data'>
     <div class="field">
     <label for="<?php echo $name?>"></label>
     <ul class='role_list controler_list'>
@@ -22,7 +22,7 @@
     }
 ?>
     </ul>
-    <input type="submit" name='update' value="<?php echo _t('UPDATE') ?>" />
+    <input type="submit" class="btn" name='update' value="<?php echo _t('UPDATE') ?>" />
     </div>
     <div style='clear:both' />
     <br />
@@ -30,13 +30,13 @@
     <h3><?php echo _t('USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON') ?></h3>
     <br />
     <input type="text" value='' name='add_user' />
-    <input type="submit" value="<?php echo _t('SHARE') ?>" />
+    <input type="submit" class="btn" value="<?php echo _t('SHARE') ?>" />
     <span>&nbsp;<?php echo _t('TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_') ?></span>
     <br />
     <br />
-    <table class="browse">
+    <table class="table table-bordered table-striped table-hover">
     <thead>
-        <tr><td class="title" colspan="4" ><?php echo _t('USERS_WITH_PERMISSIONS') ?></td></tr>
+        <tr><th class="title" colspan="4" ><?php echo _t('USERS_WITH_PERMISSIONS') ?></th></tr>
     </thead>
     <tbody>
     <?php for($j = 0 ; $j< count($users);$j=$j+4){?>
@@ -53,7 +53,7 @@
     </table>
     </div>
     <br />
-    <!-- <a class="but" href="<?php echo get_url('person','get_event') ?>"><?php echo _t('CANCEL')?></a> -->
+    <!-- <a class="btn" href="<?php echo get_url('person','get_event') ?>"><?php echo _t('CANCEL')?></a> -->
     </form>
     </div>
 </div>

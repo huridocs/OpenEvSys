@@ -1,8 +1,7 @@
 <?php 
-    include_once('tabs.php');
+    
     include_once('event_title.php'); 
-    include_once('card_list.php');
-    draw_card_list('vp',$event_id);
+   
 ?>
 <div class="panel">
     <br />
@@ -17,15 +16,15 @@
     ?>  
     <br /> 
     <div class="form-container"> 
-        <form id="additional" name="additional" action='<?php echo get_url('events','edit_ad',null,array('act_id'=>$act->act_record_number))?>' method='post' enctype='multipart/form-data'>
+        <form class="form-horizontal"  id="additional" name="additional" action='<?php echo get_url('events','edit_ad',null,array('act_id'=>$act->act_record_number))?>' method='post' enctype='multipart/form-data'>
         <?php
             echo "<h3>"._t('EDIT_ADDITIONAL_DETAILS')."</h3>&nbsp;";
             if(!isset($ad_type)){
                 ?>
                 <div>
                 <?php shn_form_radio(_t('ADDITIONAL_DETAIL_TYPE'),'ad_type',array('options'=>$ad_types)); ?>
-                <a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
-                <input type='submit' value='<?php echo _t('CONTINUE') ?>' />
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+                <input type='submit' class='btn' value='<?php echo _t('CONTINUE') ?>' />
                 </div>
                 <br />
                 <br />
@@ -42,8 +41,8 @@
                 <br />
                 <br />
                 <center>
-                <input type='submit' value='<?php echo _t('UPDATE') ?>' name="update" />
-                <a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+                <input type='submit' class='btn' value='<?php echo _t('UPDATE') ?>' name="update" />
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
                 </center>
                 <?php 
             }

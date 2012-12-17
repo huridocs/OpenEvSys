@@ -1,19 +1,19 @@
 <?php if( acl_i3_entity_add_is_allowed('information') ){ ?> 
-<a class="but" href="<?php echo get_url('events','add_source',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_SOURCE')?></a>
+<a class="btn" href="<?php echo get_url('events','add_source',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_SOURCE')?></a>
 <?php } ?>
 <br />
 <br />
 <?php
 	if(is_array($sources) && count($sources) !=0 ){
 ?>
-<form action="<?php get_url('events','delete_information')?>" method="post">
-<table class='view'>
+<form class="form-horizontal"  action="<?php get_url('events','delete_information')?>" method="post">
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
-            <td class="title"><?php echo _t('DATE_OF_SOURCE_MATERIAL')?></td>
-            <td class="title"><?php echo _t('SOURCE_NAME')?></td>
-            <td class="title"><?php echo _t('INFORMATION')?></td>
+			<th width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></th>
+            <th class="title"><?php echo _t('DATE_OF_SOURCE_MATERIAL')?></th>
+            <th class="title"><?php echo _t('SOURCE_NAME')?></th>
+            <th class="title"><?php echo _t('INFORMATION')?></th>
         </tr>
     </thead>
     <tbody>		
@@ -30,7 +30,7 @@
 			}		
 ?>   
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>        
 	</tbody>
 </table>
@@ -38,8 +38,8 @@
 <?php
 	}
 	else{
-		echo "<div class='notice'>";
+		echo '<div class="alert alert-info spanauto"><button type="button" class="close" data-dismiss="alert">×</button>';
     	echo _t('THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_');
-    	echo "</div>";
+    	echo "</div><br/>";
 	}
 ?>
