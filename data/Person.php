@@ -165,7 +165,8 @@ class Person extends DomainEntity{
     }
     
 	public function SavePicture(){
-    	if($this->picture_doc == true){
+            
+    	if($this->picture_doc == true && is_uploaded_file($_FILES['picture']['tmp_name'])){
             $type = null;
             $uri = shn_files_store('picture',null,&$type);
             
