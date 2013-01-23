@@ -413,15 +413,18 @@ function is_locale_changed()
 
 function is_management_field($formField){
 
-	if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
-		return false;
-	}
-	$field_number = $formField['field_number'] %100;
-	if( $field_number >=  60 && $field_number< 80 && !($field_number == 67 || $field_number == 66 )){
-		return true;
-	}else{
-		return false;
-	}
+    if($formField['field_number'] == "0172"){
+        return true;
+    }
+    if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
+            return false;
+    }
+    $field_number = $formField['field_number'] %100;
+    if( $field_number >=  60 && $field_number< 80 && !($field_number == 67 || $field_number == 66 )){
+            return true;
+    }else{
+            return false;
+    }
 }
 
 
