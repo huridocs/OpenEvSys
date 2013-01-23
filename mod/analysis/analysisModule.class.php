@@ -497,7 +497,16 @@ class analysisModule extends shnModule {
                     $key = substr($key, 1);
 
                     if (in_array($key, $fields_array)) {
-                        echo '"' . get_mt_term(trim($record)) . '"' . ',';
+                        $list = explode(',', $record);
+                        $string = "";
+                        foreach ($list as $term) {
+                            $term_val = get_mt_term(trim($term));
+                            if($term_val){
+                                $string .= ", " .$term_val ;
+                            }
+                        }
+                        
+                        echo '"' . ltrim($string, ',') . '"' . ',';
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
                             echo '"' . _t('YES') . '"' . ',';
@@ -585,7 +594,16 @@ class analysisModule extends shnModule {
 
                     if (in_array($key, $fields_array)) {
                         //echo '"' . get_mt_term(trim($record)) . '"' . ',';
-                        $data = get_mt_term(trim($record));
+                        $list = explode(',', $record);
+                        $string = "";
+                        foreach ($list as $term) {
+                            $term_val = get_mt_term(trim($term));
+                            if($term_val){
+                                $string .= ", " .$term_val ;
+                            }
+                        }
+                        
+                        $data = ltrim($string, ',');
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
                            // echo '"' . _t('YES') . '"' . ',';
@@ -662,7 +680,16 @@ class analysisModule extends shnModule {
                     $key = substr($key, 1);
 
                     if (in_array($key, $fields_array)) {
-                        $this->columnValues[$rkey][$key] = get_mt_term(trim($record));
+                        $list = explode(',', $record);
+                        $string = "";
+                        foreach ($list as $term) {
+                            $term_val = get_mt_term(trim($term));
+                            if($term_val){
+                                $string .= ", " .$term_val ;
+                            }
+                        }
+                        
+                        $this->columnValues[$rkey][$key] = ltrim($string, ',');
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
                             $this->columnValues[$rkey][$key] = _t('YES');
