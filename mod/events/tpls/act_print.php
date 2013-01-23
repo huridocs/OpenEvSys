@@ -171,7 +171,13 @@ if(isset($intv_list)){
                 <td><?php echo ++$key ?></td>
                 <td><?php echo $record['date_of_intervention'] ?></td>
                 <td><?php echo $record['person_name']?></td>
-                <td><?php echo get_mt_term($record['type_of_intervention'])?></td>
+                <td><?php 
+                
+                $types = Browse::getIntvTypes($record['intervention_record_number']);
+		        foreach($types as $type){
+		            echo get_mt_term($type['type_of_intervention'])."<br/>";
+		        }
+                        ?></td>
                 
             </tr>
         <?php } ?>
