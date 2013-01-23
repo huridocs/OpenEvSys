@@ -484,9 +484,13 @@ class analysisModule extends shnModule
 			$query = json_decode($_GET['query']);
 	    	$fields_array = array();        
 
+                $entities = analysis_get_search_entities();
+    	
 	    	if($query->select !=NULL){
 	    		foreach($query->select as $field){
-	                $mt = is_mt_field($field->entity, $field->field);	                
+                            $entity = (isset($entities[$field->entity]['ac_type']))?$entities[$field->entity]['ac_type']:$field->entity;
+                
+	                $mt = is_mt_field($entity, $field->field);	                
 	                if($mt){
 	                	$fields_array[] = $field->field;
 	                }    		    
@@ -562,12 +566,16 @@ class analysisModule extends shnModule
 	    	$query = json_decode($_GET['query']);
 	    	$fields_array = array();        
 
+                $entities = analysis_get_search_entities();
+    	
 	    	if($query->select !=NULL){
 	    		foreach($query->select as $field){
-	                $mt = is_mt_field($field->entity, $field->field);	                
-	                if($mt){
-	                	$fields_array[] = $field->field;
-	                }    		    
+                            $entity = (isset($entities[$field->entity]['ac_type']))?$entities[$field->entity]['ac_type']:$field->entity;
+                
+                            $mt = is_mt_field($entity, $field->field);	                
+                            if($mt){
+                                    $fields_array[] = $field->field;
+                            }    		    
 	            }
 	    	}
 			
@@ -639,16 +647,21 @@ class analysisModule extends shnModule
 			$query = json_decode($_GET['query']);
 	    	$fields_array = array();        
 
+                $entities = analysis_get_search_entities();
+    	
 	    	if($query->select !=NULL){
 	    		foreach($query->select as $field){
-	                $mt = is_mt_field($field->entity, $field->field);	                
+                        $entity = (isset($entities[$field->entity]['ac_type']))?$entities[$field->entity]['ac_type']:$field->entity;
+                
+	                $mt = is_mt_field($entity, $field->field);
+                        
 	                if($mt){
 	                	$fields_array[] = $field->field;
 	                }    		    
 	            }
 	    	}
-
-        	$count = 1;
+                
+                $count = 1;
         	foreach($recordsets as $records){        		
         		foreach($records as $key=>$record){        			
         			if($count == 1){
