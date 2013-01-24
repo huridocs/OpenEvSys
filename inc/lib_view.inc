@@ -272,7 +272,10 @@ function shn_view_radio($label,$value,$extra_opts)
 ?>
     <tr <?php echo $class ?>>
         <td class='title' align='right'><?php echo $label ?></td>
-        <td class='text'> <?php  echo (strtolower( $value ) == 'y' ? 'Yes' : 'No');  ?></td>
+        <td class='text'> <?php  if(strtolower( $value ) == 'y'){
+            echo  'Yes' ;
+        }elseif(strtolower( $value ) == 'n'){
+            echo 'No'; } ?></td>
     </tr>		
 
 <?php
