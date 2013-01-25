@@ -6,13 +6,13 @@ function _shn_get_incident_records()
     $person = new Person();
 
 ?>
-    <table class="browse">
+    <table class="table table-bordered table-striped table-hover">
     <thead>
-    <tr><td><?php echo _t('INCIDENT_TABLE')?></td></tr>
+    <tr><th><?php echo _t('INCIDENT_TABLE')?></th></tr>
     <tr>
-    <td><?php echo _t('VICTIM')?></td>
-    <td><?php echo _t('ACT')?></td>
-    <td><?php echo _t('PERPETRATOR')?></td>
+    <th><?php echo _t('VICTIM')?></th>
+    <th><?php echo _t('ACT')?></th>
+    <th><?php echo _t('PERPETRATOR')?></th>
     </tr>
     </thead>
     <tbody>
@@ -38,13 +38,13 @@ function _shn_get_victim_records()
     $res = Browse::getSourceRecords($_GET['eid']);
     $person = new Person();
     ?>
-    <table class="browse">
+    <table class="table table-bordered table-striped table-hover">
     <thead>
-    <tr><td><?php echo _t('VICTIM')?></td></tr>
+    <tr><th><?php echo _t('VICTIM')?></th></tr>
     <tr>
-    <td><?php echo _t('SOURCE')?></td>
-    <td><?php echo _t('INTERVENTION')?></td>
-    <td><?php echo _t('DATE')?></td>
+    <th><?php echo _t('SOURCE')?></th>
+    <th><?php echo _t('INTERVENTION')?></th>
+    <th><?php echo _t('DATE')?></th>
     </tr>
     </thead>
     <tbody>
@@ -74,10 +74,10 @@ function _shn_get_coe_records($eid)
     if(count($res)!= 0){
     
     ?>    
-    <table class="browse">
+    <table class="table table-bordered table-striped table-hover">
     <thead>    
     <tr>
-    <td><?php echo _t('THE_EVENT_IS_LINKED')?></td>
+    <th><?php echo _t('THE_EVENT_IS_LINKED')?></th>
    
     </tr>
     </thead>

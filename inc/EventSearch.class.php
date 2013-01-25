@@ -53,7 +53,7 @@ class EventSearch {
 		
 		shn_form_submit(_t('SEARCH'),'search');
 		?>
-		<a class="but" href="#" id="related_event_search_close"><?php echo _t('CLOSE')?></a>
+		<a class="btn" href="#" id="related_event_search_close"><?php echo _t('CLOSE')?></a>
 		<?php
 		echo "<br/><br />";	
     }

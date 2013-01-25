@@ -1,9 +1,6 @@
-<?php include('tabs.php') ?>
+
 <?php include_once('event_title.php'); ?>
-<?php
-    include_once('card_list.php');
-    draw_card_list('vp',$event_id);
-?>
+
 <div class="panel">
 <div class='flow'>
     <span class="over first"><?php echo _t('ADD_VICTIM')?></span>
@@ -24,11 +21,11 @@ if(isset($perpetrator)){
 }
 ?>
 <br />
-<a class="but" href="<?php echo get_url('events','add_perpetrator','new_perpetrator',array('eid'=>$event_id)) ?>"><?php echo _t('ADD_NEW')?></a><span>&nbsp;&nbsp;</span>
-<a class="but" href="<?php echo get_url('events','add_perpetrator','search_perpetrator',array('eid'=>$event_id)) ?>"><?php echo _t('SEARCH_IN_DATABASE')?></a><span>&nbsp;&nbsp;</span>
-<a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_perpetrator','new_perpetrator',array('eid'=>$event_id)) ?>"><?php echo _t('ADD_NEW')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_perpetrator','search_perpetrator',array('eid'=>$event_id)) ?>"><?php echo _t('SEARCH_IN_DATABASE')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
 <?php if(isset($perpetrator)){ ?>
-<a class="but" href="<?php echo get_url('events','add_involvement',null,array('eid'=>$event_id, 'perpetrator'=>$perpetrator->person_record_number)) ?>"><?php echo _t('CONTINUE')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_involvement',null,array('eid'=>$event_id, 'perpetrator'=>$perpetrator->person_record_number)) ?>"><?php echo _t('CONTINUE')?></a><span>&nbsp;&nbsp;</span>
 <?php } ?>
 <br />
 <br />

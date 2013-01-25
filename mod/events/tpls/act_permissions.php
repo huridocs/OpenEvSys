@@ -1,14 +1,13 @@
 <?php 
-include_once('tabs.php');
+
 include_once('event_title.php');
-include_once('card_list.php');
-draw_card_list('pe',$event_id);
+
 ?>
 <div class="panel permission_panel">
     <h3><?php echo _t('ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT') ?></h3>
     <br />
     <div class="form-container">
-    <form action='<?php echo get_url('events','permissions')?>' method='post' enctype='multipart/form-data'>
+    <form class="form-horizontal"  action='<?php echo get_url('events','permissions')?>' method='post' enctype='multipart/form-data'>
     <div class="field">
     <label for="<?php echo $name?>"></label>
     <ul class='role_list controler_list'>
@@ -22,7 +21,7 @@ draw_card_list('pe',$event_id);
     }
 ?>
     </ul>
-    <input type="submit" name='update' value="<?php echo _t('UPDATE') ?>" />
+    <input type="submit" class="btn" name='update' value="<?php echo _t('UPDATE') ?>" />
     </div>
     <div style='clear:both' />
     <br />
@@ -30,13 +29,13 @@ draw_card_list('pe',$event_id);
     <h3><?php echo _t('USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT') ?></h3>
     <br />
     <input type="text" value='' name='add_user' />
-    <input type="submit" value="<?php echo _t('SHARE') ?>" />
+    <input type="submit" class="btn" value="<?php echo _t('SHARE') ?>" />
     <span>&nbsp;<?php echo _t('TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_') ?></span>
     <br />
     <br />
-    <table class="browse">
+    <table class="table table-bordered table-striped table-hover">
     <thead>
-        <tr><td class="title" colspan="4" ><?php echo _t('USERS_WITH_PERMISSIONS') ?></td></tr>
+        <tr><th class="title" colspan="4" ><?php echo _t('USERS_WITH_PERMISSIONS') ?></th></tr>
     </thead>
     <tbody>
     <?php for($j = 0 ; $j< count($users);$j=$j+4){?>
@@ -53,7 +52,7 @@ draw_card_list('pe',$event_id);
     </table>
     </div>
     <br />
-    <!-- <a class="but" href="<?php echo get_url('events','get_event') ?>"><?php echo _t('CANCEL')?></a> -->
+    <!-- <a class="btn" href="<?php echo get_url('events','get_event') ?>"><?php echo _t('CANCEL')?></a> -->
     </form>
     </div>
 </div>

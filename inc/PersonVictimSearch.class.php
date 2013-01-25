@@ -69,8 +69,8 @@ class PersonVictimSearch {
 		}
 		
 		?>		
-		<input type="submit" name="search" value="<?php echo _t('SEARCH')?>"/>
-		<a class="but" href="#" id="related_victim_search_close"><?php echo _t('CLOSE')?></a>
+		<input type="submit" class="btn" name="search" value="<?php echo _t('SEARCH')?>"/>
+		<a class="btn" href="#" id="related_victim_search_close"><?php echo _t('CLOSE')?></a>
 		<br/><br/>
 		<?php
     }

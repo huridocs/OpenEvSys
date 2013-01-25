@@ -89,8 +89,8 @@ class RelatedPersonSearch {
 		echo ($this->cancel != null) ? "<input type='hidden' name='cancel' value='{$this->cancel}'/>" : '';
 		
 	?>			
-       <a class="but" href="<?php echo get_url($this->mod,$this->act,null,null) ?>"><?php echo _t('PREVIOUS')?></a>
-       <a class="but" href="<?php echo get_url($this->mod,$this->cancel,null,null) ?>"><?php echo _t('CANCEL')?></a>
+       <a class="btn" href="<?php echo get_url($this->mod,$this->act,null,null) ?>"><?php echo _t('PREVIOUS')?></a>
+       <a class="btn" href="<?php echo get_url($this->mod,$this->cancel,null,null) ?>"><?php echo _t('CANCEL')?></a>
        <?php echo $fields['search'];?>
        <br /><br />
     <?php     

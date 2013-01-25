@@ -1,19 +1,17 @@
 <?php 
-	include_once('tabs.php');
+	
 	include_once('event_title.php');
-    include_once('card_list.php');
-
-    draw_card_list('int',$event_id);
+   
 ?>
 <div class="panel">
 <?php if($del_confirm){ ?>
-    <div class='dialog confirm'>
-    <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__')?></h3>
-    <form action="<?php get_url('events','delete_intervention')?>" method="post">
+    <div class="alert alert-block" style="text-align:center">
+    <h4><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__')?></h4>
+    <form class="form-horizontal"  action="<?php get_url('events','delete_intervention')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php			
 			foreach($_POST['interventions'] as $val){ ?>
@@ -24,12 +22,12 @@
     </form>
     </div>
 <br />
-<table class="view">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-            <td><?php echo _t('DATE_OF_INTERVENTION') ?></td>
-            <td><?php echo _t('INTERVENING_PARTY') ?></td>
-            <td><?php echo _t('TYPE_OF_INTERVENTION') ?></td>
+            <th><?php echo _t('DATE_OF_INTERVENTION') ?></th>
+            <th><?php echo _t('INTERVENING_PARTY') ?></th>
+            <th><?php echo _t('TYPE_OF_INTERVENTION') ?></th>
 
         </tr>
     </thead>
@@ -47,7 +45,7 @@
 	}		
 ?>
 <center>
-	<a class="but" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
+	<a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
 </center>
 <br />
 </div>

@@ -2,10 +2,10 @@
 	global $conf;
 ?>
 <div id="browse">
-	<table class='browse'>
+	<table class='table table-bordered table-striped table-hover'>
 		<thead>
 		<tr>
-			<td colspan="2"><?php echo _t('CHOSE_STARTING_POINT'); ?></td>
+			<th colspan="2"><?php echo _t('CHOSE_STARTING_POINT'); ?></th>
 		</tr>
 		</thead>
 		<tbody>

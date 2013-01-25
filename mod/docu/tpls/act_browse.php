@@ -1,5 +1,4 @@
-<a class='but' href="<?php get_url('docu','new_document',null,null)?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/list-add.png','image/png') ?>"> <?php echo _t('ADD_NEW_DOCUMENT') ?></a>
-<br />
+
 <?php
 	if(isset($_GET['filter']) || count($columnValues) ){
 ?>

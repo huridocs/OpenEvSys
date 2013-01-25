@@ -3,7 +3,7 @@ var hurimap = new Object();
 
 $(document).ready(function() {
 
-	var  input = $("#filter_text").find('td').find('div').find('input');	
+	/*var  input = $("#filter_text").find('td').find('div').find('input');	
 	var  span = $("#filter_text").find('td').find('span');
 
 	$(span).parent().click(function()
@@ -15,11 +15,11 @@ $(document).ready(function() {
         $("#"+element_id).show();
         $("#"+element_id).focus();
         
-	});
+	});*/
 
 
 				    
-	$(input).blur(function()
+	/*$(input).blur(function()
 	{
 		if($(this).val().length == 0){
 			var title = $(this).attr("title");
@@ -28,7 +28,7 @@ $(document).ready(function() {
 		}
 	});
 					    
-	$(input).blur();
+	$(input).blur();*/
 	
 	var  select = $("#filter_text").find('td').find('select');
 						    
@@ -432,7 +432,10 @@ window.onload = function(){
 	$('#frm_saved_query').hide();
 	$('#address_frm').hide();
 	$('#hide_address_frm').hide();	
-	$('#addressArrayList').hide();	
+	$('#addressArrayList').hide();
+        
+        $(".datepicker").datepicker({format:'yyyy-mm-dd' });	
+        $("select").chosen();
 /*	
 	if(readCookie("helpstatus") != "on" && readCookie("helpstatus") != "off"){
 		createCookie("helpstatus","on",0);
@@ -445,10 +448,7 @@ window.onload = function(){
         else
 		    aObj.innerHTML = _("ENABLE_HELP");
     }	*/
-	$("input[type=submit]").each(function(){
-		$(this).addClass("but");
-		$(this).css("height",24);
-	});
+	
 }
 
 $(document).ready(function(){
@@ -1000,7 +1000,19 @@ $(document).ready(function(){
     $('.single_tree').singletree();
     $('.multi_tree').multitree();
     $('.clarify').clarify();
-    $('.help').help({args:'stream=text'});
+    
+    
+     $('.help').bind('click',function(){
+                         
+      var e=$(this);
+     // e.popover({content: '<div>Loading....</div>', html : true }).popover('show');
+      $.get($(this).attr('href')+"&stream=text",function(d){
+          //e.popover('hide');
+          e.popover({content: d, html : true }).popover('show');
+      });
+      return false;
+    });
+    //$('.help').help({args:'stream=text'});
 
     //reload page when logout
     $(document).ajaxComplete( function(event, xhr, ajaxOptions){

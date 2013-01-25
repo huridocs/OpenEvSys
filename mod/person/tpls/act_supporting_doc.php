@@ -8,7 +8,7 @@
 <br/>
 
 <div class="form-container">
-<form action='<?php echo get_url('person','supporting_doc',null,array('pid'=>$pid))?>' method='post' enctype='multipart/form-data'>
+<form class="form-horizontal"  action='<?php echo get_url('person','supporting_doc',null,array('pid'=>$pid))?>' method='post' enctype='multipart/form-data'>
 <?php
 	echo "<h3>" ._t('ADD_SUPPORTING_DOCUMENT_S_') . "</h3>";
 	echo "<br />";

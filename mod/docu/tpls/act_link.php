@@ -7,13 +7,13 @@
     draw_card_list('lk');  
 ?>
 <div class="panel">
-<table class='view'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td><?php echo _t('RECORD_TYPE')?></td>
-            <td><?php echo _t('RECORD_NUMBER')?></td>
-            <td><?php echo _t('BY_WHOM')?></td>
-            <td><?php echo _t('LINKED_WHEN')?></td>
+            <th><?php echo _t('RECORD_TYPE')?></th>
+            <th><?php echo _t('RECORD_NUMBER')?></th>
+            <th><?php echo _t('BY_WHOM')?></th>
+            <th><?php echo _t('LINKED_WHEN')?></th>
         </tr>
     </thead>
     <tbody>

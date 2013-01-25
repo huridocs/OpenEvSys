@@ -7,7 +7,7 @@
         <?php }else{ ?>
         <strong id="query-name"><?php echo _t('UNTITLED_QUERY') ?></strong>
         <?php }?>
-        <form onsubmit="return false">
+        <form class="form-horizontal"  onsubmit="return false">
             <fieldset id="qb-group-by" style="display:none">
                 <legend><?php echo _t('COUNT') ?></legend>
                 <ol id="qb-group-list"></ol>
@@ -17,8 +17,8 @@
                 <ol id="query_builder"></ol>
             </fieldset>
             <div class="clearfix" ></div>
-            <input type="button" value="<?php echo _t('SEARCH')?>"  id="qb-search-but" class="qb-but but" />
-            <input type="button" value="<?php echo _t('CLEAR')?>"   id="qb-clear-but" class="qb-but but" />
+            <input type="button" value="<?php echo _t('SEARCH')?>"  id="qb-search-but" class="qb-but btn" />
+            <input type="button" value="<?php echo _t('CLEAR')?>"   id="qb-clear-but" class="qb-but btn" />
         </form>
     </div>
 </div>
@@ -49,14 +49,14 @@
 	<div id="pager1" class="scroll" style="text-align:center;"></div> 
 </div>
 <div style="display:none">
-    <form id="qb-save-query" action="<?php echo get_url('analysis','save_query',null)?>" onsubmit="return false;">
+    <form class="form-horizontal"  id="qb-save-query" action="<?php echo get_url('analysis','save_query',null)?>" onsubmit="return false;">
     <h3><?php echo _t('SAVE_QUERY') ?></h3><br />
     <label><?php echo _t('NAME') ?></label> 
     <input type="text"  id="query_name"  name="query_name" /><br />
     <label><?php echo _t('DESCRIPTION') ?></label> 
     <textarea type="text" name="query_desc" id="query_desc" rows="4" cols="30" ></textarea><br />
-    <input id="qb-qs-save" type="button" value="Save"  class="but"/>
-    <input id="qb-qs-cancle" type="button" value="Cancel" class="but" />
+    <input id="qb-qs-save" type="button" value="Save"  class="btn"/>
+    <input id="qb-qs-cancle" type="button" value="Cancel" class="btn" />
 </form>
 </div>
 <script language="javascript">

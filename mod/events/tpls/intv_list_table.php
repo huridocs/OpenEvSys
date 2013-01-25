@@ -1,21 +1,21 @@
 <?php if( acl_i3_entity_add_is_allowed('intervention') ){ ?>
-<a class="but" href="<?php echo get_url('events','add_intv_party',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_INTERVENTION')?></a>
+<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_INTERVENTION')?></a>
 <?php } ?>
 <br />
 <br />
 <?php if(!isset($intv_list)){ ?>
-    <div class="notice">
+    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_') ?>
-    </div>
+    </div><br/>
 <?php }else{ ?>
-<form action="<?php get_url('events','delete_intervention')?>" method="post">
-<table class="view">
+<form class="form-horizontal"  action="<?php get_url('events','delete_intervention')?>" method="post">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
-            <td><?php echo _t('DATE_OF_INTERVENTION') ?></td>
-            <td><?php echo _t('INTERVENING_PARTY') ?></td>
-            <td><?php echo _t('TYPE_OF_INTERVENTION') ?></td>
+			<th width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></th>
+            <th><?php echo _t('DATE_OF_INTERVENTION') ?></th>
+            <th><?php echo _t('INTERVENING_PARTY') ?></th>
+            <th><?php echo _t('TYPE_OF_INTERVENTION') ?></th>
 
         </tr>
     </thead>
@@ -43,7 +43,7 @@
         </tr>
     <?php } ?>
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
         </tr>        
     </tbody>
 </table>

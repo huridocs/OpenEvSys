@@ -1,6 +1,4 @@
-<?php if( acl_is_entity_allowed_boolean('person' , 'create')){?>
-	<a class='but' href="<?php get_url('person','new_person',null,array('pid'=>null))?>"><img src="<?php echo data_uri(APPROOT.'www/res/img/list-add.png','image/png') ?>"> <?php echo _t('ADD_NEW_PERSON') ?></a>
-<?php } ?>
+
 <?php
 	if(isset($_GET['filter']) || count($columnValues)){
 ?>

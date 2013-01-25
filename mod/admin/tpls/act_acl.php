@@ -1,22 +1,22 @@
 <?php global $conf; ?>
 <h2><?php echo _t('ROLES__AMP__MODULE_ACCESS_CONTROL')?></h2>
 <br />
-<form action="<?php get_url('admin','acl'); ?>" method="post">
+<form class="form-horizontal"  action="<?php get_url('admin','acl'); ?>" method="post">
 <center>
 <label><?php echo _t('NEW_ROLE_NAME') ?></label>
 <input type="text" name="role_name" /> 
-<input type="submit" value="<?php echo _t('ADD_ROLE') ?>" name='add_role' />
+<input type="submit" class="btn" value="<?php echo _t('ADD_ROLE') ?>" name='add_role' />
 </center>
-<table class='view'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td><?php echo '';?></td>
-            <td colspan='<?php echo count($roles); ?>' align='center'><?php echo _t('ROLES') ?></td>
+            <th><?php echo '';?></th>
+            <th colspan='<?php echo count($roles); ?>' align='center'><?php echo _t('ROLES') ?></th>
         </tr>
         <tr>
-            <td align='center'><?php echo _('MODULES');?></td>
+            <th align='center'><?php echo _('MODULES');?></th>
             <?php foreach($roles as $role){ ?>
-            <td align='center'><?php echo $role;?></td>
+            <th align='center'><?php echo $role;?></th>
             <?php } ?>
         </tr>
     </thead>
@@ -33,6 +33,6 @@
     </tbody>
 </table>
 <center>
-<input type="submit" value="<?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?>" name='submit' />
+<input type="submit" class="btn" value="<?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?>" name='submit' />
 </center>
 </form>

@@ -5,7 +5,7 @@ if($field_help_text){
 ?>
 <div id="browse">
 <input type='hidden' name='field_number' value='<?php echo $field_help_text['field_number'] ?>' />
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
             <td width='100px'><?php echo(_t('SECTION')); ?></td>
@@ -62,8 +62,8 @@ if($field_help_text){
 </table>
 <br />
     <center>
-    <input type='submit' value="<?php echo _t('SAVE_HELP_TEXT') ?>" name='save_help' />
-    <input type='submit' value="<?php echo _t('CANCEL') ?>" />
+    <input type='submit' class='btn' value="<?php echo _t('SAVE_HELP_TEXT') ?>" name='save_help' />
+    <input type='submit' class='btn' value="<?php echo _t('CANCEL') ?>" />
     </center>
 </div>
 <?php
@@ -72,7 +72,7 @@ else{
 ?>
 <div id="browse">
 <?php $help_text_pager->render_pages(); ?>
-<table class='browse'>
+<table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
             <td width='100px'><?php echo(_t('FIELD_LABEL')); ?></td>

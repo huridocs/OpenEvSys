@@ -49,8 +49,8 @@ class DocumentSearch
 		$fields = shn_form_get_html_fields($document_form);
 		$fields = place_form_elements($document_form,$fields);
 		?>
-		<input type="submit" name="save_doc" value="<?php echo _t('SAVE_DOCUMENT') ?>" onclick="add_anchor(this.form,'document_field');"/>	
-		<a class="but" href="#document_field" id='close_doc_add_form'><?php echo _t('CLOSE');?></a>
+		<input type="submit" class="btn" name="save_doc" value="<?php echo _t('SAVE_DOCUMENT') ?>" onclick="add_anchor(this.form,'document_field');"/>	
+		<a class="btn" href="#document_field" id='close_doc_add_form'><?php echo _t('CLOSE');?></a>
 		<?php
     }
 
@@ -72,9 +72,9 @@ class DocumentSearch
 		$fields = place_form_elements($document_form,$fields);
 				
 		?>		
-		<input type="submit" name="new_doc" value="<?php echo _t('NEW')?>" onclick="add_anchor(this.form,'document_field');"/>
-		<input type="submit" name="search" value="<?php echo _t('SEARCH')?>" onclick="add_anchor(this.form,'document_field');"/>		
-		<a class="but" href="#document_field" id='close_doc_search_form'><?php echo _t('CLOSE');?></a>
+		<input type="submit" class="btn" name="new_doc" value="<?php echo _t('NEW')?>" onclick="add_anchor(this.form,'document_field');"/>
+		<input type="submit" class="btn" name="search" value="<?php echo _t('SEARCH')?>" onclick="add_anchor(this.form,'document_field');"/>		
+		<a class="btn" href="#document_field" id='close_doc_search_form'><?php echo _t('CLOSE');?></a>
 		<br /><br />
 		<?php			
     }

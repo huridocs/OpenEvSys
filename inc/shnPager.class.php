@@ -123,44 +123,63 @@ class shnPager implements BrowseStrategy
         unset($args['mod']);
         unset($args['act']);
 ?>
-        <div class="pages <?php echo $id ?>">
+<div class="row" style="margin-left:0px;">
         <?php if($this->show_all){ ?>
-            <a href="<?php $args['request_page'] = 1 ; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('PAGINATE_RESULTS') ?></a>
-        <?php }else{ ?>
+     <div class="pages pagination <?php echo $id ?>" style="margin:0px;padding-top: 0px;width:auto">
+            <ul>
+       
+                <li><a href="<?php $args['request_page'] = 1 ; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('PAGINATE_RESULTS') ?></a></li>
+        </ul>
+        </div>
+            <?php }else{ ?>
+    <div class="pages pagination span <?php echo $id ?>" style="margin:0px;padding-top: 0px;width:auto">
+            <ul>
+     
             <?php if($this->request_page != 1){ ?>
-                <a href="<?php $args['request_page'] = $this->request_page - 1;  get_url($request->module, $request->action , $request->tpl , $args)?>" ><?php echo _t('PREVIOUS') ?></a>
+                <li><a href="<?php $args['request_page'] = $this->request_page - 1;  get_url($request->module, $request->action , $request->tpl , $args)?>" ><?php echo _t('PREVIOUS') ?></a></li>
             <?php } ?>
             <?php
+            
                 //paging logic
                 $start = $this->request_page - 5;
                 $end   = $this->request_page + 5;
+                
                 if($this->request_page < 6){ $end = 5 - $this->request_page + $end; $start = 1;}
                 if($this->last_page < $end){ $start = $start - ($end - $this->last_page) ;$end = $this->last_page;}
                 if($start < 1) $start = 1;
             ?>
             <?php if($start > 1){ ?>
-                <a href="<?php $args['request_page'] = $start - 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo '&lt;&lt;' ?></a>
-            <?php } ?>&nbsp;
+                <li><a href="<?php $args['request_page'] = $start - 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo '&lt;&lt;' ?></a></li>
+            <?php } ?>
             <?php for($i = $start; $i<=$end; $i++ ){ ?>
                 <?php if($i == $this->request_page){ ?> 
-                    <span class="active"><?php echo $i ?></span><span>&nbsp;</span>
+                     <li class="active"><a href="#"><?php echo $i ?></a></li>
                 <?php     continue;
                       } ?>
-                <a href="<?php $args['request_page'] = $i ; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo $i ?></a><span>&nbsp;</span>
+                <li><a href="<?php $args['request_page'] = $i ; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo $i ?></a>
             <?php } ?>
             <?php if($end < $this->last_page){ ?>
-                <a href="<?php $args['request_page'] = $end + 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo '&gt;&gt;' ?></a>
-            <?php } ?>&nbsp;
+               <li> <a href="<?php $args['request_page'] = $end + 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo '&gt;&gt;' ?></a></li>
+            <?php } ?>
             <?php if($this->request_page != $this->last_page){ ?>
-                <a href="<?php $args['request_page'] = $this->request_page + 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('NEXT') ?></a>
-            <?php } ?>&nbsp;
-                <a href="<?php $args['request_page'] = 'all'; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('SHOW_ALL') ?></a>
-
-                <span>&nbsp;<?php echo _t('RECORDS_PER_PAGE') ?></span>
-                <input type='text' id="rpp" name="rpp" size='3' value="<?php echo $this->rpp ?>" onchange="window.location.replace($('#rpp_set').attr('href')+ '&rpp=' + $(this).attr('value'));"/>
-                <a id="rpp_set" href="<?php $args['request_page'] = 1; get_url($request->module, $request->action , $request->tpl , $args )?>" onclick="$(this).attr('href', $(this).attr('href')+ '&rpp=' + $('#rpp').attr('value'))" ><?php echo _t('SET') ?></a>
-                <span>&nbsp;<?php echo ' | '._t('PAGE__').$this->request_page.'/'.$this->last_page ?></span>
+                <li><a href="<?php $args['request_page'] = $this->request_page + 1; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('NEXT') ?></a></li>
+            <?php } ?>
+                <li><a href="<?php $args['request_page'] = 'all'; get_url($request->module, $request->action , $request->tpl , $args )?>" ><?php echo _t('SHOW_ALL') ?></a></li>
+                </ul>
+        </div>
+                <div class="input-prepend input-append span" style="width:auto">
+                    <span class="add-on"><?php echo _t('RECORDS_PER_PAGE') ?></span>
+                
+                <input style="width:22px;" type='text' id="rpp" name="rpp" size='3' value="<?php echo $this->rpp ?>" onchange="window.location.replace($('#rpp_set').attr('href')+ '&rpp=' + $(this).attr('value'));"/>
+                <span class="add-on"><a id="rpp_set" href="<?php $args['request_page'] = 1; get_url($request->module, $request->action , $request->tpl , $args )?>" onclick="$(this).attr('href', $(this).attr('href')+ '&rpp=' + $('#rpp').attr('value'))" ><?php echo _t('SET') ?></a>
+                </span>
+                </div>
+    <div class="span well well-small" style="padding: 4px;width:auto">
+               <?php echo _t('PAGE__')." ".$this->request_page.' / '.$this->last_page ?>
+                
+    </div>
         <?php } ?>
+            
         </div>
 <?php
     }

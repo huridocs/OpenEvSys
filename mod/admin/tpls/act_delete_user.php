@@ -3,11 +3,11 @@
 <?php if($del_confirm){ ?>
     <div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___')?></h3>
-    <form action="<?php get_url('admin','delete_user')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('admin','delete_user')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' name='no' value='<? echo _t('NO') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
         </center>
         <?php foreach($_POST['users'] as $val){ ?>
         <input type='hidden' name='users[]' value='<?php echo $val ?>' />
@@ -16,19 +16,19 @@
     </div>
 <?php } ?>
     <div id="browse">
-    <table class='browse'>
+    <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-            <td><?php echo(_t('USERNAME')); ?></td>
-            <td><?php echo(_t('FIRST_NAME')); ?></td>
-            <td><?php echo(_t('LAST_NAME')); ?></td>
-            <td><?php echo(_t('ORGANIZATION')); ?></td>
-            <td><?php echo(_t('DESIGNATION')); ?></td>
-            <td><?php echo(_t('EMAIL')); ?></td>
-            <td><?php echo(_t('ADDRESS')); ?></td>
-            <td><?php echo(_t('ROLE')); ?></td>
-            <td><?php echo(_t('STATUS')); ?></td>
-            <td><?php echo(_t('ACTION')); ?></td>
+            <th><?php echo(_t('USERNAME')); ?></th>
+            <th><?php echo(_t('FIRST_NAME')); ?></th>
+            <th><?php echo(_t('LAST_NAME')); ?></th>
+            <th><?php echo(_t('ORGANIZATION')); ?></th>
+            <th><?php echo(_t('DESIGNATION')); ?></th>
+            <th><?php echo(_t('EMAIL')); ?></th>
+            <th><?php echo(_t('ADDRESS')); ?></th>
+            <th><?php echo(_t('ROLE')); ?></th>
+            <th><?php echo(_t('STATUS')); ?></th>
+            <th><?php echo(_t('ACTION')); ?></th>
             </tr>
         </thead>
         <tbody>

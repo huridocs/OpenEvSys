@@ -1,9 +1,6 @@
-<?php include('tabs.php') ?>
+
 <?php include_once('event_title.php')?>
-<?php
-    include_once('card_list.php');
-    draw_card_list('vp',$event_id);
-?>
+
 <div class="panel">
 <div class='flow'>
     <strong class='first'><?php echo _t('ADD_VICTIM')?></strong>
@@ -24,14 +21,14 @@ if(isset($victim)){
 ?>
 <br />
 <?php if( acl_is_entity_allowed_boolean('person','create' ) ){// if create is ever changed for this please update acl_person_entity_is_allowed() ?> 
-<a class="but" href="<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id)) ?>"><?php echo _t('ADD_NEW')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id)) ?>"><?php echo _t('ADD_NEW')?></a><span>&nbsp;&nbsp;</span>
 <?php  } ?>
 <?php if( acl_is_entity_allowed_boolean('person','read' ) ){  // if read is ever changed for this please update acl_person_entity_is_allowed()?>
-<a class="but" href="<?php echo get_url('events','add_victim','search_victim',array('seq'=>'search','eid'=>$event_id)) ?>"><?php echo _t('SEARCH_IN_DATABASE')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_victim','search_victim',array('seq'=>'search','eid'=>$event_id)) ?>"><?php echo _t('SEARCH_IN_DATABASE')?></a><span>&nbsp;&nbsp;</span>
 <?php } ?>
-<a class="but" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
 <?php if(isset($victim)){ ?>
-<a class="but" href="<?php echo get_url('events','add_act',null,array('eid'=>$event_id, 'victim'=>$victim->person_record_number)) ?>"><?php echo  _t('CONTINUE')?></a><span>&nbsp;&nbsp;</span>
+<a class="btn" href="<?php echo get_url('events','add_act',null,array('eid'=>$event_id, 'victim'=>$victim->person_record_number)) ?>"><?php echo  _t('CONTINUE')?></a><span>&nbsp;&nbsp;</span>
 <?php } ?> 
 <br />
 <br />

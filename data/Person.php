@@ -104,6 +104,7 @@ class Person extends DomainEntity{
     protected $supporting_doc = true;
     protected $isAddress = true;
     protected $picture_doc = true;
+    protected $supporting_geometry = true;
 
     private $pkey = array('person_record_number');
     

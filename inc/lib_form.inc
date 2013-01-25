@@ -29,27 +29,32 @@ global $shn_clarify_id;
 
 function shn_form_extra_opts($extra_opts)
 {
+    ?>
+<div class="help-inline"><?php
     global $shn_help_id;
     // output a required flag
-    $required = ($extra_opts['required'])?'<span class="required">required</span>':'';
+    $required = ($extra_opts['required'])?'<span class="label label-important">required</span>':'';
     echo $required;
 
     if(isset($extra_opts['help'])){
     	$id=$extra_opts['help'];
-        echo "<a href='".get_url('help','help_popup',null,array('id'=>$id),null,true)."' class='help' target='_blank'><span>&nbsp;&nbsp;?&nbsp;&nbsp;</span></a>";
+        echo "<a href='".get_url('help','help_popup',null,array('id'=>$id),null,true)."' class='help' target='_blank' title='".$extra_opts['label']."'><i class='icon-question-sign'></i></a>";
     }
 
     if (isset($extra_opts['error'])){
         foreach($extra_opts['error'] as $error)
             echo "<p class=\"note error\">{$error}</p>";
     }
+    ?>
+</div>
+<?php
 }
 
 
 function shn_form_link($mod, $act, $tpl, $label, $extra_opts)
 {	
 ?>
-	<a class="but" href="<?php echo get_url($mod,$act,$tpl,$extra_opts) ?>" ><?php echo _($label); ?></a>
+	<a class="btn" href="<?php echo get_url($mod,$act,$tpl,$extra_opts) ?>" ><?php echo _($label); ?></a>
 <?php
 }
 
@@ -79,10 +84,10 @@ function shn_form_text($label,$name,$extra_opts)
     	$text_options .= " onclick='{$extra_opts['onclick']}' ";
     }
     
-    if(isset($extra_opts['size']))
+    /*if(isset($extra_opts['size']))
         $text_options .= " size='{$extra_opts['size']}' ";
     else
-        $text_options .= " size='40'";
+        $text_options .= " size='40'";*/
 
     if(isset($extra_opts['class']))
         $class .= $extra_opts['class'];
@@ -100,18 +105,22 @@ function shn_form_text($label,$name,$extra_opts)
     $value = stripslashes($value);
     if($extra_opts['no_label']!==true && isset($label)){
     ?>	
-        <label for="<?php echo $name?>"><?php echo $label?></label>
+        <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php
     }
     ?>	
+        <div class="controls">
     <input title="<?php echo $name?>" type="text" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $readonly?> value="<?php echo $value?>" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $text_options ?>  />
-    <?php
+         <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
             $clari_value = array_pop($extra_opts['clari_value']);
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+    ?>
+    </div>
+        <?php
 }
 
 
@@ -121,7 +130,11 @@ function shn_form_text($label,$name,$extra_opts)
 function shn_form_submit($label, $name , $extra_opts = null)
 {
     global $shn_tabindex;
-    $class = (isset($extra_opts['class']))?"class={$extra_opts['class']}":'';
+    $class="btn";
+    if(isset($extra_opts['class'])){
+        $class .= " ".$extra_opts['class'];
+    }
+    $class = "class='$class'";
     $optjs = (isset($extra_opts['optjs']))?"{$extra_opts['optjs']}":'';
     ?>
     <input type="submit" value="<?php echo $label?>" name="<?php echo $name ?>" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $class ?> <?php echo $optjs ?> />
@@ -145,11 +158,16 @@ function shn_form_upload($label, $name, $extra_opts = null)
 {
     global $shn_tabindex;    
 ?>
-	<label><?php echo $label?></label>
+	<label  class="control-label" ><?php echo $label?></label>
+        <div class="controls">
 	<input type="file" name="<?php echo $name?>" tabindex="<?php echo ++$shn_tabindex?>" />
 	<input type="hidden" name="<?php echo $name."_id"?>" value="<?php echo $extra_opts['value'];?>"/>
+        
 <?php	
     shn_form_extra_opts($extra_opts);
+    ?>
+        </div>
+        <?php
 }
 
 
@@ -160,7 +178,7 @@ function shn_form_date($label,$name,$extra_opts)
     $value = ($_POST[$name])? $_POST[$name] : $extra_opts['value'];
     $value = ($value=='0000-00-00')?'':$value;
 
-    $class = 'date';
+    $class = 'input-medium datepicker';
     if(isset($extra_opts['error']) && count($extra_opts['error'])>0)
         $class .= ' error ';
 
@@ -168,10 +186,11 @@ function shn_form_date($label,$name,$extra_opts)
 
     if(isset($label)){
     ?>
-        <label><?php echo $label?></label>
+        <label  class="control-label" ><?php echo $label?></label>
     <?php } ?>
+        <div class="controls">
     <input title="<?php echo $name?>" type="text" name="<?php echo $name?>" value="<?php echo $value?>" id="<?php echo $name?>" size="10" maxlength="10" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $text_opts ?>/>
-    <script language='javascript'>
+    <!--<script language='javascript'>
         $(document).ready(function(){
             $('#<?php echo $name ?>').DatePicker({
                 format:'Y-m-d',
@@ -187,7 +206,8 @@ function shn_form_date($label,$name,$extra_opts)
                 }
             });
         });
-    </script>
+    </script>-->
+        
     <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
@@ -196,6 +216,9 @@ function shn_form_date($label,$name,$extra_opts)
     }
 
     shn_form_extra_opts($extra_opts);
+    ?>
+    </div>
+        <?php
 }
 
 function shn_form_textarea($label,$name,$extra_opts)
@@ -215,13 +238,15 @@ function shn_form_textarea($label,$name,$extra_opts)
 
     if($extra_opts['no_label']!==true){
     ?>
-<label for="<?php echo $name?>"><?php echo $label?></label>
+<label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php 
     }
     ?>
+<div class="controls">
 <textarea name="<?php echo $name?>" id="<?php echo $name?>"
     cols="<?php echo $cols?>" rows="<?php echo $rows?>"
     <?php echo $text_opts?> tabindex="<?php echo ++$shn_tabindex?>"><?php echo $value?></textarea>
+
     <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
@@ -229,6 +254,9 @@ function shn_form_textarea($label,$name,$extra_opts)
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_select($label,$name,$extra_opts)
@@ -247,8 +275,9 @@ function shn_form_select($label,$name,$extra_opts)
    
     if(isset($label)){
     ?>
-    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
+    <div class="controls">
     <select title="<?php echo $name?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
@@ -263,6 +292,7 @@ function shn_form_select($label,$name,$extra_opts)
     }
     ?>
     </select>
+    
     <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
@@ -270,6 +300,9 @@ function shn_form_select($label,$name,$extra_opts)
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_mt_select($label,$name,$extra_opts)
@@ -295,8 +328,9 @@ function shn_form_mt_select($label,$name,$extra_opts)
 
     if(isset($label)){
     ?>
-    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
+    <div class="controls">
     <select title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
@@ -319,6 +353,9 @@ function shn_form_mt_select($label,$name,$extra_opts)
     }
 
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 
@@ -376,8 +413,9 @@ function shn_form_mt_select_mlt($label,$name,$extra_opts)
 
     if(isset($label)){
     ?>
-    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
+    <div class="controls">
     <select name="<?php echo $name?>[]" id="<?php echo $name?>" multiple="multiple" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>" title="<?php echo _t('SELECT').' '.$label ?>">
     <?php
     foreach ($options as $opt_value => $desc )
@@ -392,6 +430,7 @@ function shn_form_mt_select_mlt($label,$name,$extra_opts)
     }
     ?>
     </select>
+    
 <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])){
@@ -404,17 +443,14 @@ function shn_form_mt_select_mlt($label,$name,$extra_opts)
         }
     }
 ?>
-    <script language="javascript">
-        $("#<?php echo $name ?>").asmSelect({
-            addItemTarget: 'top',
-            field_name: '<?php echo $name ?>'
-            <?php echo $clari ?>
-        });
-    </script>
+    
     <?php
 
 
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 
@@ -435,9 +471,13 @@ function shn_form_radio($label,$name,$extra_opts)
     //if the label is set print the lable
     if(isset($label)){
         ?>
-        <label for="<?php echo $name?>"><?php echo $label?></label>
+        <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
         <?php
     }
+    ?>
+        <div class="controls">
+            <?php
+    //
     //if options is not set default to yes/no
     $options = (isset($extra_opts['options']))?$extra_opts['options']:array('y'=>'Yes','n'=>'No');
     //print the option buttons
@@ -447,12 +487,15 @@ function shn_form_radio($label,$name,$extra_opts)
         <input type="radio" value="<?php echo $val ?>" name="<?php echo $name ?>" tabindex="<?php echo $shn_tabindex++; ?>" <?php echo $selected ?> /><span>&nbsp;<?php echo $option ?></span>
         <?php
     }
-    if($extra_opts['clari']){
+     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
             $clari_value = array_pop($extra_opts['clari_value']);
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 
@@ -469,23 +512,29 @@ function shn_form_mt_tree($label,$name,$extra_opts)
     //to prevent warnings set $options to array() if it is null
     if(isset($label)){
     ?>
-    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php
     }
     //print out the tree
-?>
+?><div class="controls">
     <script language="javascript">
         hurimap.code<?php echo $value ?> = '<?php echo get_mt_term($value) ?>';
     </script>
     <input type="hidden" name="<?php echo $name?>" id="<?php echo $name ?>" value="<?php echo $value ?>" class='single_tree' />
     <?php
     _shn_form_print_mt_tree($extra_opts['mt'],$name);
+    ?>
+
+    <?php
     if($extra_opts['clari']){
         if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
             $clari_value = array_pop($extra_opts['clari_value']);
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 
@@ -555,10 +604,12 @@ function shn_form_mt_tree_mlt($label,$name,$extra_opts)
     //to prevent warnings set $options to array() if it is null
     if(isset($label)){
     ?>
-    <label for="<?php echo $name?>"><?php echo $label?></label>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php
     }
-
+?>
+    <div class="controls">
+        <?php
     //print values if exists
     echo "<ol id='{$name}_ol' class='multi_tree' field_id='$name'>";	
     if(is_array($value))
@@ -584,9 +635,13 @@ function shn_form_mt_tree_mlt($label,$name,$extra_opts)
            // clarify:<?php echo ($extra_opts['clarify'])?'true':'false'; ?>
         });*/
     </script>
+   
 <?php
 
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 /**
@@ -605,11 +660,12 @@ function shn_form_checkbox($label,$name,$extra_opts)
     $value = (isset($_POST[$name]))?$_POST[$name]:$extra_opts['value'];    
     if(isset($label)){
         ?>
-        <label for="<?php echo $name?>"><?php echo $label?></label>
+        <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
         <?php
     }
 	$selected = ($value=='y' || $value=='1' || $value=='on')?'checked="true"':'';
     ?>
+        <div class="controls">
     <input type="checkbox" name="<?php echo $name ?>" tabindex="<?php echo $shn_tabindex++; ?>" <?php echo $selected ?> />
     <?php    
     if($extra_opts['clari']){
@@ -618,6 +674,9 @@ function shn_form_checkbox($label,$name,$extra_opts)
         shn_form_clari($name,$clari_value);
     }
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_checkarray($label,$name,$extra_opts)
@@ -625,7 +684,8 @@ function shn_form_checkarray($label,$name,$extra_opts)
     global $shn_tabindex;
 	$value = ($_POST[$name])? $_POST[$name] : $extra_opts['value'];
 	?>
-<label for="<?php echo $name?>"><?php echo $label?></label>
+<label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
+<div class="controls">
 <ul class='controler_list'>
 <?php 
     foreach($extra_opts['options'] as $key=>$item_name){
@@ -638,6 +698,9 @@ function shn_form_checkarray($label,$name,$extra_opts)
 </ul>
 <?php
 	shn_form_extra_opts($extra_opts);
+         ?>
+    </div>
+        <?php
 }
 
 
@@ -661,8 +724,8 @@ function shn_form_related_person($label,$name,$extra_opts)
     
     ?>
     	
-    <label for="<?php echo $name?>"><?php echo $label?></label>
-    
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
+    <div class="controls">
 	<input type="text" readonly="readonly" value="<?php echo $related_person_name;?>"/>
     <input type="hidden" name="<?php echo $name?>" id="<?php echo $name?>" readonly="true" value="<?php echo $value ?>"/>
     <?php
@@ -698,9 +761,11 @@ function shn_form_related_person($label,$name,$extra_opts)
 		$personSearch->render();
 		echo "</fieldset>";
     }
-   
-	$extra_opts['help'] = null;
+   	$extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_related_victim($label,$name,$extra_opts)
@@ -722,10 +787,11 @@ function shn_form_related_victim($label,$name,$extra_opts)
     $value = stripslashes($value);
     if($extra_opts['no_label']!==true && isset($label)){
     ?>	
-        <label for="<?php echo $name?>"><?php echo $label?></label>
+        <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php
     }
     ?>    
+        <div class="controls">
 	<input type="text" readonly="readonly" value="<?php echo $person_name?>"/>
     <input type="hidden" name="<?php echo $name?>" id="<?php echo $name?>" readonly="true" value="<?php echo $value ?>"/>
     <?php
@@ -759,9 +825,11 @@ function shn_form_related_victim($label,$name,$extra_opts)
 		$personSearch->render();
 		echo "</fieldset>";
     }	
-    
-	$extra_opts['help'] = null;
+   	$extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_related_event($label,$name,$extra_opts)
@@ -782,7 +850,8 @@ function shn_form_related_event($label,$name,$extra_opts)
     	$value = stripslashes($value);
     }    
     ?>	
-    <label for="<?php echo $name?>"><?php echo $label?></label>    	
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>  
+<div class="controls">    
 	<input type="text" readonly="readonly" value="<?php echo $event_name?>"/>
     <input type="hidden" name="<?php echo $name?>" id="<?php echo $name?>" readonly="true" value="<?php echo $value ?>"/>
     	
@@ -821,9 +890,13 @@ function shn_form_related_event($label,$name,$extra_opts)
 		$eventSearch->render($data);	
 		echo "</fieldset>";
     }
+   
    	
 	$extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 
@@ -855,13 +928,17 @@ function shn_form_password($label,$name,$extra_opts)
 
     if($extra_opts['no_label']!==true && isset($label)){
     ?>	
-        <label for="<?php echo $name?>"><?php echo $label?></label>
+        <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php
     }
     ?>	
+        <div class="controls">
     <input type="password" name="<?php echo $name?>" id="<?php echo $name?>" tabindex="<?php echo ++$shn_tabindex?>" <?php echo $text_options ?>  />
-    <?php
+         <?php
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_document($label,$name,$extra_opts)
@@ -920,7 +997,8 @@ function shn_form_document($label,$name,$extra_opts)
 	
 ?>	
 	<a name='document_field'></a>
-    <label for="<?php echo $name?>"><?php echo $label?></label>	
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>	
+    <div class="controls">
     <?php
      if(isset($_POST['search']) || $_GET['request_page'] != null || isset($_POST['new_doc'])){
     	?>
@@ -970,15 +1048,19 @@ function shn_form_document($label,$name,$extra_opts)
 		echo "</fieldset>";		
 	}
 	unset($doclistarray);
-	$extra_opts['help'] = null;
+       $extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
+     ?>
+    </div>
+        <?php
 }
 
 function shn_form_address($label,$name,$extra_opts)
 {
 ?>
 	<a name='address_field'></a>	
-    <label for="<?php echo $name?>"><?php echo $label?></label>	
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>	
+    <div class="controls">
 	<a id="show_address_frm" href="#address_field"><?php echo _t('SHOW_ADDRESS_FORM');?></a>
 	<a id="hide_address_frm" href="#address_field"><?php echo _t('HIDE_ADDRESS_FORM');?></a>
 	<br />
@@ -995,20 +1077,20 @@ function shn_form_address($label,$name,$extra_opts)
 	if((is_array($extra_opts['value']) && count($extra_opts['value']) != 0) || (isset($_POST['person_address']))){
 ?>
 	<fieldset>
-	<table id="addressTable" class="browse">
+	<table id="addressTable" class="table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
-				<td><?php echo _t('ADDRESS_TYPE')?></td>
-				<td><?php echo _t('ADDRESS')?></td>
-				<td><?php echo _t('COUNTRY')?></td>
-				<td><?php echo _t('PHONE')?></td>
-				<td><?php echo _t('CELLULAR')?></td>
-				<td><?php echo _t('FAX')?></td>
-				<td><?php echo _t('EMAIL')?></td>
-				<td><?php echo _t('WEBSITE')?></td>
-				<td><?php echo _t('START_DATE')?></td>
-				<td><?php echo _t('END_DATE')?></td>
-				<td><?php echo _t('ACTION')?></td>				
+				<th><?php echo _t('ADDRESS_TYPE')?></th>
+				<th><?php echo _t('ADDRESS')?></th>
+				<th><?php echo _t('COUNTRY')?></th>
+				<th><?php echo _t('PHONE')?></th>
+				<th><?php echo _t('CELLULAR')?></th>
+				<th><?php echo _t('FAX')?></th>
+				<th><?php echo _t('EMAIL')?></th>
+				<th><?php echo _t('WEBSITE')?></th>
+				<th><?php echo _t('START_DATE')?></th>
+				<th><?php echo _t('END_DATE')?></th>
+				<th><?php echo _t('ACTION')?></th>				
 			</tr>
 		</thead>
 		<tbody>
@@ -1072,20 +1154,20 @@ function shn_form_address($label,$name,$extra_opts)
 	else {
 ?>
 	<fieldset id="addressArrayList">
-	<table id="addressTable" name="addressTable" style="display:none;" class="browse">
+	<table id="addressTable" name="addressTable" style="display:none;" class="table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
-				<td><?php echo _t('ADDRESS_TYPE')?></td>
-				<td><?php echo _t('ADDRESS')?></td>
-				<td><?php echo _t('COUNTRY')?></td>
-				<td><?php echo _t('PHONE')?></td>
-				<td><?php echo _t('CELLULAR')?></td>
-				<td><?php echo _t('FAX')?></td>
-				<td><?php echo _t('E_MAIL')?></td>
-				<td><?php echo _t('WEB')?></td>
-				<td><?php echo _t('START_DATE')?></td>
-				<td><?php echo _t('END_DATE')?></td>
-				<td><?php echo _t('ACTION')?></td>				
+				<th><?php echo _t('ADDRESS_TYPE')?></th>
+				<th><?php echo _t('ADDRESS')?></th>
+				<th><?php echo _t('COUNTRY')?></th>
+				<th><?php echo _t('PHONE')?></th>
+				<th><?php echo _t('CELLULAR')?></th>
+				<th><?php echo _t('FAX')?></th>
+				<th><?php echo _t('E_MAIL')?></th>
+				<th><?php echo _t('WEB')?></th>
+				<th><?php echo _t('START_DATE')?></th>
+				<th><?php echo _t('END_DATE')?></th>
+				<th><?php echo _t('ACTION')?></th>				
 			</tr>
 		</thead>
 		<tbody>
@@ -1094,4 +1176,64 @@ function shn_form_address($label,$name,$extra_opts)
 	</fieldset>
 <?php
 	}
+        ?>
+    </div>
+        <?php
+}
+
+
+function shn_form_location($label,$name,$extra_opts)
+{
+    //var_dump($extra_opts);exit;
+    
+    $value = (isset($_POST[$name])? $_POST[$name] : $extra_opts['value']);
+    //to prevent warnings set $options to array() if it is null
+    $options=($options==null)?array():$options;
+
+    if(isset($label)){
+    ?>
+    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
+    <?php } ?>
+    <div class="controls">
+    <div class="locationFieldsConatiner">
+        <input type="hidden" name="latitude" id="latitude" value="<?php if($value['latitude'])echo $value['latitude']?>">
+    <input type="hidden" name="longitude" id="longitude" value="<?php if($value['longitude'])echo $value['latitude']?>">
+    <input type="hidden" name="country_name" id="country_name" value="Armenia" />
+    <input type="hidden" name="incident_zoom" id="incident_zoom" value="" />
+		
+    <div id="mapContainer"></div>
+    <div class="findLocation">
+        <div id="editContainer" class="olControlEditingToolbar"></div>
+            <div class="locationButtons" >
+                    <ul >
+                            <li><a href="#" class="locationButtonsLast" onclick="return false;">DELETE LAST</a></li>
+                            <li><a href="#" class="locationButtonsDelete" onclick="return false;">DELETE SELECTED</a></li>
+                            <li><a href="#" class="locationButtonsClear" onclick="return false;">CLEAR MAP</a></li>
+                    </ul>
+            </div>
+            <div style="clear:both;"></div>
+            <input type="text" id="locationFind" name="location_find" value=""  title="City, State and/or Country" class="findtext" />						
+            <div style="float:left;margin:9px 0 0 5px;">
+                    <input type="button" name="button" id="button" value="Find Location" class="buttonFind" />
+            </div>
+            <div id="findLoading" class="findLoading"></div>
+            <div style="clear:both;" id="find_text">* Search for your location using a location name OR latitude,longitude coordinates (format: 38.19, 85.61), OR click on the map to pinpoint the correct location..</div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+initEditMap(<?php if($value)echo json_encode($value)?>);
+    });
+</script>
+    <?php
+    if($extra_opts['clari']){
+        if(is_array($extra_opts['clari_value'])&&count($extra_opts['clari_value']) > 0)
+            $clari_value = array_pop($extra_opts['clari_value']);
+        shn_form_clari($name,$clari_value);
+    }
+
+    shn_form_extra_opts($extra_opts);
+   ?>
+    </div>
+        <?php
 }

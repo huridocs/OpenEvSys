@@ -1,7 +1,4 @@
-<?php if( acl_is_entity_allowed_boolean('event' , 'create')){?>
-<a class='but' href="<?php get_url('events','new_event',null,array('eid'=>null))?>" ><img src="<?php echo data_uri(APPROOT.'www/res/img/list-add.png','image/png') ?>"> <?php echo _t('ADD_NEW_EVENT') ?></a>
-<?php }?>
-<br />
+
 <?php
 	if(isset($_GET['filter']) || count($columnValues) ){
 ?>

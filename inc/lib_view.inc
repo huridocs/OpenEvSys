@@ -295,3 +295,47 @@ function shn_view_checkbox($label,$value,$extra_opts)
     </tr>	
 <?php
 }
+
+function shn_view_location($label,$value,$extra_opts)
+{
+    $class = "class='{$extra_opts['class']}'";
+    if(is_array($extra_opts['clari_value']))
+    $clari = array_pop($extra_opts['clari_value']);
+    //var_dump($value);exit;
+?>
+    <tr <?php echo $class ?>>
+        <td class='title' align='right'><?php echo $label ?></td>
+        <td class='text'> 
+           
+<?php
+
+    //var_dump($extra_opts);exit;
+    $value = (isset($_POST[$name])? $_POST[$name] : $extra_opts['value']);
+    //to prevent warnings set $options to array() if it is null
+    $options=($options==null)?array():$options;
+
+     ?>
+    <div class="locationFieldsConatiner">
+     		
+    <div id="mapContainer"></div>
+  
+    </div>
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+            
+        <?php if(isset($value)){
+            ?>
+                    initViewMap(<?php echo json_encode($value)?>);
+        <?php
+        }
+        ?>
+    });
+</script>
+   <?php if(isset($clari)){ ?>
+            <p class='clarify_note'><em><?php echo _t('CLARIFYING_NOTE')?><span><?php echo ' : '.$clari  ?></span></em><p>
+            <?php } ?>
+        </td>
+    </tr>
+<?php
+  
+}

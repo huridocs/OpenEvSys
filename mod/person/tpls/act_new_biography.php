@@ -6,7 +6,7 @@
 ?>
 <div class="panel">
 <div class="form-container">
-<form id="biographic_form" action='<?php echo get_url('person','new_biography',null,array('search_type'=>'person'))?>' method='post' enctype='multipart/form-data'>
+<form class="form-horizontal"  id="biographic_form" action='<?php echo get_url('person','new_biography',null,array('search_type'=>'person'))?>' method='post' enctype='multipart/form-data'>
 		
 <?php
 		echo "<h3>" ._t('ADD_BIOGRAPHIC_DETAILS') . "</h3>";
@@ -15,7 +15,7 @@
         $fields = place_form_elements($biography_form,$fields);
 ?>
 	<center>
-	<a class="but" href="<?php echo get_url('person','person'); ?>"><?php echo _t('CANCEL'); ?></a>
+	<a class="btn" href="<?php echo get_url('person','person'); ?>"><?php echo _t('CANCEL'); ?></a>
 	<?php echo $fields['save'];?>
 	</center>
 </form>

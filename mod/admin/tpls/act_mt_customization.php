@@ -1,7 +1,7 @@
 <?php global $conf; ?>
 <h2><?php echo _t('MICRO_THESAURI_CUSTOMIZATION')?></h2>
 <div class="form-container"> 
-<form action="<?php  get_url('admin','mt_customization')?>" method='get'>
+<form class="form-horizontal"  action="<?php  get_url('admin','mt_customization')?>" method='get'>
 <fieldset style="margin:10px;">
 	<input type="hidden" name="mod" value="admin" />
     <input type="hidden" name="act" value="mt_customization" />
@@ -26,7 +26,7 @@ if($_GET['parent']!=''){
 <?php }
  } ?>
 <div id="browse">
-<form action='<?php get_url('admin','mt_customization',null, 
+<form class="form-horizontal"  action='<?php get_url('admin','mt_customization',null, 
 								array('mt_select'=> $_GET['mt_select'] ,'request_page'=> $_GET['request_page'],'parent'=>$_GET['parent']  ) ) ?>' method='post'>
 <?php ?>
 <?php if($delete){ ?>
@@ -37,21 +37,21 @@ if($_GET['parent']!=''){
         <?php } ?>
      	<br />
         <center>
-        <input type='submit' name='delete_yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+        <input type='submit' class='btn' name='delete_yes' value='<? echo _t('DELETE') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
         </center>
     </div>       
 <?php } ?>
 
 <?php $l = (isset($locale))? 1 : 0;?>
 <?php $mt_cust_pager->render_pages(); ?>
-<table class='browse' id='mt_cus'>
+<table class='table table-bordered table-striped table-hover' id='mt_cus'>
     <thead>
     	<tr>
     		<td colspan='<?php echo 4+$l ?>'>
-                <input type='submit' name='filter' value='<?php echo _t('FILTER')?>' />
+                <input type='submit' class='btn' name='filter' value='<?php echo _t('FILTER')?>' />
                 <span>&nbsp;</span>
-                <input type='submit' name='reset' value='<?php echo _t('RESET')?>' /> 
+                <input type='submit' class='btn' name='reset' value='<?php echo _t('RESET')?>' /> 
             </td>
     	</tr>
         <tr class="filter">
@@ -115,16 +115,16 @@ if($_GET['parent']!=''){
 		<tr class='actions' style='background:#EEEAD4'>
 		
             <td class='no_edit'>
-            	<input type='submit' name='visible' value='<?php echo _t('SET') ?>' style="margin:0;"/>            
+            	<input type='submit' class='btn' name='visible' value='<?php echo _t('SET') ?>' style="margin:0;"/>            
             </td>
             
             <td colspan='2' class='no_edit'>
-                <input type='submit' name='delete' value='<?php echo _t('DELETE') ?>' />
+                <input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' />
                 <input type='button' name='' value='<?php echo _t('ADD_NEW') ?>' onclick="add_new_mt(this);$('#save_new_terms').show()" />
                 
             </td>
             <td class='no_edit'>
-            	<input type='submit' name='save_new_terms' id='save_new_terms' value='<?php echo _t('SAVE_NEW_FIELDS') ?>' style="display:none" />
+            	<input type='submit' class='btn' name='save_new_terms' id='save_new_terms' value='<?php echo _t('SAVE_NEW_FIELDS') ?>' style="display:none" />
             </td>
 <?php
             if(isset($locale)){

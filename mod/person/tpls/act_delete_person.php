@@ -10,22 +10,22 @@
 ?>
 	<div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_PERSON_')?></h3>
-    <form action="<?php get_url('person','delete_person')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('person','delete_person')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
-        <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
         </center>        
     </form>
     </div>
-	<table class='browse'>
+	<table class='table table-bordered table-striped table-hover'>
         <thead>		                     
             <tr>                
-                <td><?php echo _t('ROLE')?></td>
-                <td width="120px"><?php echo _t('EVENT_TITLE')?></td>
-                <td><?php echo _t('FURTHER_INFORMATION')?></td>                
-                <td width='80px'><?php echo _t('INITIAL_DATE')?></td>
-                <td width="100px"><?php echo _t('FINAL_DATE')?></td>                          
+                <th><?php echo _t('ROLE')?></th>
+                <th width="120px"><?php echo _t('EVENT_TITLE')?></th>
+                <th><?php echo _t('FURTHER_INFORMATION')?></th>                
+                <th width='80px'><?php echo _t('INITIAL_DATE')?></th>
+                <th width="100px"><?php echo _t('FINAL_DATE')?></th>                          
             </tr>           
         </thead>
 		<tbody> 
@@ -48,11 +48,11 @@
 ?>
 	<div class='dialog confirm'>
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_PERSON_')?></h3>
-    <form action="<?php get_url('person','delete_person')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('person','delete_person')?>" method="post">
         <br />
         <center>
-        <input type='submit' name='yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' name='no' value='<? echo _t('CANCEL') ?>' />
+        <input type='submit' class='btn' name='yes' value='<? echo _t('DELETE') ?>' />
+        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
         </center>        
     </form>
     </div>

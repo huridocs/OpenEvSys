@@ -8,14 +8,14 @@
 <?php
 	if($victim_records->RecordCount() || $perpetrator_records->RecordCount() || $source_records->RecordCount() || $intervening_party_records->RecordCount()){
 ?>
-	<table class='browse'>
+	<table class='table table-bordered table-striped table-hover'>
         <thead>		                     
             <tr>                
-                <td><?php echo _t('ROLE')?></td>
-                <td width="120px"><?php echo _t('EVENT_TITLE')?></td>
-                <td><?php echo _t('FURTHER_INFORMATION')?></td>                
-                <td width='80px'><?php echo _t('INITIAL_DATE')?></td>
-                <td width="100px"><?php echo _t('FINAL_DATE')?></td>                          
+                <th><?php echo _t('ROLE')?></th>
+                <th width="120px"><?php echo _t('EVENT_TITLE')?></th>
+                <th><?php echo _t('FURTHER_INFORMATION')?></th>                
+                <th width='80px'><?php echo _t('INITIAL_DATE')?></th>
+                <th width="100px"><?php echo _t('FINAL_DATE')?></th>                          
             </tr>           
         </thead>
 		<tbody> 
@@ -33,11 +33,13 @@
 	}
 	else{
 ?>
-		<div class='notice'>
+		<div class='alert alert-info spanauto'>
+<button type="button" class="close" data-dismiss="alert">×</button>
+
     	<?php echo _t('THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_'); ?>
 		<br />		
 		<br />
-    	</div>
+    	</div><br/>
 <?php
 	}
 ?>
