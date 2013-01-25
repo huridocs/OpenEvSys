@@ -108,7 +108,11 @@ class eventsModule extends shnModule {
             $coe = new ChainOfEvents();
             $coe->LoadFromRecordNumber($_GET['coe_id']);
             $coe->LoadRelationships();
+            if($_GET['reverse']){
+                $coe->reverse();
+            }
             $_GET['eid'] = $coe->event;
+            
         }
     }
 
@@ -283,6 +287,7 @@ class eventsModule extends shnModule {
         }
 
         $this->events = Browse::getChainOfEvents($this->event->event_record_number);
+        $this->events_reverse = Browse::getChainOfEventsReverse($this->event->event_record_number);
         $this->acts = Browse::getActsOfEvents($this->event->event_record_number);
         $this->involvements = Browse::getInvolvementsOfEvents($this->event->event_record_number);
         $this->informations = Browse::getInformationsOfEvents($this->event->event_record_number);
@@ -1002,12 +1007,17 @@ class eventsModule extends shnModule {
 
     public function act_coe_list() {
         $this->related_events = Browse::getChainOfEvents($this->event->event_record_number);
-
+        $this->related_events_reverse = Browse::getChainOfEventsReverse($this->event->event_record_number);
+            
         if (isset($_GET['coe_id'])) {
             global $messages;
             $coe = new ChainOfEvents();
             $coe->LoadFromRecordNumber($_GET['coe_id']);
+            if($_GET['reverse']){
+                $coe->reverse();
+            }
             $coe->LoadRelationships();
+            
             if ($coe->chain_of_events_record_number != $_GET['coe_id'] || $coe->chain_of_events_record_number == '') {
                 shnMessageQueue::addError($messages['coe_not_found']);
                 unset($_GET['type']);
@@ -1253,6 +1263,7 @@ class eventsModule extends shnModule {
         $this->sources = Browse::getSourceListforEvent($this->event->event_record_number);
         $this->intv_list = Browse::getIntvList($this->event->event_record_number);
         $this->related_events = Browse::getChainOfEvents($this->event->event_record_number);
+        $this->related_events_reverse = Browse::getChainOfEventsReverse($this->event->event_record_number);
     }
 
     public function findexts($filename) {

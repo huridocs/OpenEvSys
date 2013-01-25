@@ -26,7 +26,6 @@
  * 
  */
 
-
 //generate the base location of the system
 define('APPROOT',realpath(dirname(__FILE__).'/../').'/');
 

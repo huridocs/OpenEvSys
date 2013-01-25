@@ -1190,6 +1190,11 @@ function shn_form_location($label,$name,$extra_opts)
     //to prevent warnings set $options to array() if it is null
     $options=($options==null)?array():$options;
 
+    if(!isset($value['latitude']) && !isset($value['longitude'])){
+                            
+        $value['latitude'] = 46.1983922;
+        $value['longitude'] = 6.1422961;
+    }
     if(isset($label)){
     ?>
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>

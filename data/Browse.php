@@ -614,6 +614,27 @@ class Browse implements BrowseStrategy
         return $res;
 
     }
+    public static function getChainOfEventsReverse($eid)
+    {
+		$sql = "SELECT  coe.chain_of_events_record_number as coe_id,
+						coe.related_event,
+                                                coe.event,
+						coe.type_of_chain_of_events,
+						e.initial_date, 
+						e.event_title	
+				FROM chain_of_events as coe
+				INNER JOIN event as e ON e.event_record_number = coe.event";	
+        
+		$where = " WHERE coe.related_event = '$eid'";
+
+		$sql .= $where; 
+
+		$browse = new Browse();
+        $res = $browse->ExecuteQuery($sql);
+		
+        return $res;
+
+    }
     
 	public static function getActsOfEvents($eid)
     {
@@ -773,12 +794,12 @@ class Browse implements BrowseStrategy
     
     public static function getAuditLogForEvent($event_record_number){
         $browse = new Browse();        
-        $sql = "SELECT audit_log.* FROM audit_log WHERE module='events' AND module_record_number='$event_record_number' 
+        $sql = "select * from (SELECT audit_log.* FROM audit_log WHERE module='events' AND module_record_number='$event_record_number'  
 		UNION 
 		SELECT audit_log.* FROM audit_log
         inner JOIN (SELECT distinct(`record_number`) FROM audit_log WHERE module='events' AND module_record_number='$event_record_number' and `entity`='person') as p 
-        ON p.record_number = audit_log.record_number
-		ORDER BY timestamp ASC" ;
+        ON p.record_number = audit_log.record_number) t
+		ORDER BY timestamp desc" ;
 
         $pager = new shnPager($sql);
         return $pager;
@@ -786,9 +807,10 @@ class Browse implements BrowseStrategy
     
     public static function getAuditLogForPerson($person_record_number){
         $browse = new Browse();        
-        $res = $browse->ExecuteQuery("SELECT * FROM audit_log WHERE module='person' AND module_record_number='$person_record_number'
+        $res = $browse->ExecuteQuery("select * from(SELECT * FROM audit_log WHERE module='person' AND module_record_number='$person_record_number'
         UNION
-		SELECT * FROM audit_log WHERE entity='person' AND module = 'events' AND record_number='$person_record_number' ORDER BY timestamp
+		SELECT * FROM audit_log WHERE entity='person' AND module = 'events' AND record_number='$person_record_number')
+                    t ORDER BY timestamp desc
         ");        
         return $res;
     }
@@ -796,10 +818,10 @@ class Browse implements BrowseStrategy
 	public static function getAuditLogForDocument($document_record_number){
         $browse = new Browse();
               
-        $sql = "SELECT * FROM audit_log WHERE module='docu' AND module_record_number='$document_record_number' 
+        $sql = "select * from (SELECT * FROM audit_log WHERE module='docu' AND module_record_number='$document_record_number' 
 		UNION 
-		SELECT * FROM audit_log WHERE (entity LIKE '%_doc' OR entity ='supporting_docs_meta') AND record_number='$document_record_number' 
-        ORDER BY timestamp "; 
+		SELECT * FROM audit_log WHERE (entity LIKE '%_doc' OR entity ='supporting_docs_meta') AND record_number='$document_record_number' )
+                    t ORDER BY timestamp desc"; 
         $res = $browse->ExecuteQuery($sql);        
         return $res;
     }

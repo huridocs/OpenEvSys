@@ -65,9 +65,10 @@ class shnPager implements BrowseStrategy
     {
         $this->rpp = (isset($_REQUEST['rpp'])&& (int)$_REQUEST['rpp']>0)? (int)$_REQUEST['rpp']:$this->rpp;
         $_SESSION['rpp'] = $this->rpp;
-        if($_REQUEST['request_page']=='all'){
+        if($_REQUEST['request_page'] =='all' || $_GET['show_all']){
             $this->show_all = true;
         }
+        
         $this->request_page = (int) $_REQUEST['request_page'];
         $current_page = (int) $_REQUEST['current_page'];
         if(isset($_REQUEST['next_page']))

@@ -782,6 +782,8 @@ CREATE  TABLE IF NOT EXISTS  `event` (
   `files` TEXT NULL DEFAULT NULL ,
   `record_grouping` VARCHAR(500) NULL DEFAULT NULL ,
   -- `monitoring_status` VARCHAR(60) NULL DEFAULT NULL ,
+  `latitude` double NOT NULL DEFAULT '0',
+  `longitude` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`event_record_number`) ,
   -- INDEX  (`initial_date_type` ASC) ,
   -- INDEX final_date_type_fk (`final_date_type` ASC) ,
@@ -852,7 +854,8 @@ CREATE  TABLE IF NOT EXISTS  `person` (
   `reliability_as_source` VARCHAR(14)  ,    -- 42: Reliability.
   `reliability_as_intervening_party` VARCHAR(14)  , -- 42: Reliability.
   `files` TEXT,
-
+  `latitude` double NOT NULL DEFAULT '0',
+  `longitude` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`person_record_number`),
   FOREIGN KEY (`counting_unit`) REFERENCES mt_7_counting_units (vocab_number) , -- 07: Counting Units
 
@@ -962,6 +965,8 @@ CREATE  TABLE IF NOT EXISTS  `act` (
   -- `06_*_international_instruments` VARCHAR(60) NULL DEFAULT NULL , -- 06 international instruments
   
    -- `supporting_documents` VARCHAR(60) NULL DEFAULT NULL ,
+  `latitude` double NOT NULL DEFAULT '0',
+  `longitude` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`act_record_number`, `event`) ,
   -- INDEX fk_Act_Event (`Event_event_record_number` ASC) ,
   -- INDEX fk_Act_Person (`victim_person_record_number` ASC) ,
@@ -1196,7 +1201,8 @@ CREATE  TABLE IF NOT EXISTS  `intervention` (
   remarks TEXT,
   `intervention_status` VARCHAR(14) NULL DEFAULT NULL ,      -- 45: Intervention Status 
   `priority` VARCHAR(14) NULL DEFAULT NULL ,                 -- 46: Priority,
-
+  `latitude` double NOT NULL DEFAULT '0',
+  `longitude` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`intervention_record_number`) ,  
     FOREIGN KEY (`event` ) REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE

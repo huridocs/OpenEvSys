@@ -77,7 +77,7 @@ class Act extends DomainEntity{
     //protected $mt =  array('national_legislation' , 'method_of_violence' , 'attribution' ,  'victim_characteristics','international_instruments');
     
     protected $supporting_doc = true;
-    
+    protected $supporting_geometry = true;
 
     private $pkey = array('act_record_number');
     

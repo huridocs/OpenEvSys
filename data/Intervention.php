@@ -68,7 +68,7 @@ public $priority;
 'date_updated' , 'updated_by' , 'monitoring_status');
     
     protected $supporting_doc = true;
-    
+    protected $supporting_geometry = true;
     
     private $pkey = array('intervention_record_number');
     

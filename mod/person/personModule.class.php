@@ -519,6 +519,7 @@ class personModule extends shnModule
 
 	function act_role_list()
 	{
+                $_GET['show_all'] = true;
 		$this->person_victim = "Victim";
 		$this->person_victim_type = 'victim';
 		$this->person_victim_pager = Browse::getPersonVictimRoleList($this->pid);
