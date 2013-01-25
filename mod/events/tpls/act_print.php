@@ -208,7 +208,7 @@ if(isset($intv_list)){
 
 
 //print out chane of events
-if(isset($related_events)){
+if(isset($related_events) || isset($related_events_reverse)){
     echo '<h2>'._t('CHANE_OF_EVENTS').'</h2>';
 ?>
     <table class="print">
@@ -221,12 +221,23 @@ if(isset($related_events)){
             </tr>
         </thead>
         <tbody>
-            <?php foreach($related_events as $key=>$record){ ?>
+            <?php
+            $i = 0;
+            foreach($related_events as $key=>$record){ ?>
             <tr <?php if($i++%2==1)echo "class='odd'" ?>>
                 <td><?php echo ++$key?></td>
                 <td><?php echo $record['initial_date']; ?></td>
                 <td><?php echo $record['event_title'];?></td>
                 <td><?php echo get_mt_term($record['type_of_chain_of_events']); ?></td>            
+            </tr>	
+
+            <?php }
+            foreach($related_events_reverse as $key=>$record){ ?>
+            <tr <?php if($i++%2==1)echo "class='odd'" ?>>
+                <td><?php echo ++$key?></td>
+                <td><?php echo $record['initial_date']; ?></td>
+                <td><?php echo $record['event_title'];?></td>
+                <td><?php echo get_mt_term(get_chaintype_reverse($record['type_of_chain_of_events'])); ?></td>            
             </tr>	
 
             <?php }?>

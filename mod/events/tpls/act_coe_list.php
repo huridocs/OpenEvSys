@@ -10,7 +10,7 @@
     <br />
     <br />
     <?php
-	if ($related_events==NULL){
+	if ($related_events==NULL && $related_events_reverse == NULL){
     ?>
     <div class="notice">
         <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_') ?>
@@ -31,12 +31,23 @@
             </tr>
         </thead>
         <tbody>		
-        <?php foreach($related_events as $record){ ?>
+        <?php
+        $i = 0;
+        foreach($related_events as $record){ ?>
         <tr class='<?php if($i++%2==1) echo "odd "; if($coe->chain_of_events_record_number==$record['coe_id'])echo " active" ?>'>
 			<td><input name="coes[]" type='checkbox' value='<?php echo $record['coe_id'] ?>' class='delete'/></td>
             <td><?php echo $record['initial_date']; ?></td>
             <td><a href="<?php get_url('events','coe_list',null,array('type'=>'coe','coe_id'=>$record['coe_id'],'related_event'=>$record['related_event']))  ?>"><?php echo $record['event_title'];?></a></td>
 			<td><a href="<?php get_url('events', 'coe_list', null, array('type'=>'coe_view', 'coe_id'=> $record['coe_id']))?>"><?php echo get_mt_term($record['type_of_chain_of_events']); ?></a></td>            
+        </tr>	
+
+        <?php }
+        foreach($related_events_reverse as $record){ ?>
+        <tr class='<?php if($i++%2==1) echo "odd "; if($coe->chain_of_events_record_number==$record['coe_id'])echo " active" ?>'>
+			<td><input name="coes[]" type='checkbox' value='<?php echo $record['coe_id'] ?>' class='delete'/></td>
+            <td><?php echo $record['initial_date']; ?></td>
+            <td><a href="<?php get_url('events','coe_list',null,array('type'=>'coe','coe_id'=>$record['coe_id'],'related_event'=>$record['event'],'reverse'=>1))  ?>"><?php echo $record['event_title'];?></a></td>
+			<td><a href="<?php get_url('events', 'coe_list', null, array('type'=>'coe_view', 'coe_id'=> $record['coe_id']))?>"><?php echo get_mt_term(get_chaintype_reverse($record['type_of_chain_of_events'])); ?></a></td>            
         </tr>	
 
         <?php }?>

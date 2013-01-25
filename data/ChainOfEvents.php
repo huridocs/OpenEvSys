@@ -71,6 +71,17 @@ class ChainOfEvents extends DomainEntity{
         //$this->hasMany( 'mlt_event_geographical_term' , 'record_number' ) ;  
         
     }
+    
+    public function reverse(){
+        $event = $this->event;
+        $related_event = $this->related_event;
+        $type_of_chain_of_events = $this->type_of_chain_of_events;
+        
+        $this->event = $related_event;
+        $this->related_event = $event;
+        $this->type_of_chain_of_events = get_chaintype_reverse($type_of_chain_of_events);
+        
+    }
 /*    
     public function SaveAll(){
 

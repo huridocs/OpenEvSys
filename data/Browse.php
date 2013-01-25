@@ -614,6 +614,27 @@ class Browse implements BrowseStrategy
         return $res;
 
     }
+    public static function getChainOfEventsReverse($eid)
+    {
+		$sql = "SELECT  coe.chain_of_events_record_number as coe_id,
+						coe.related_event,
+                                                coe.event,
+						coe.type_of_chain_of_events,
+						e.initial_date, 
+						e.event_title	
+				FROM chain_of_events as coe
+				INNER JOIN event as e ON e.event_record_number = coe.event";	
+        
+		$where = " WHERE coe.related_event = '$eid'";
+
+		$sql .= $where; 
+
+		$browse = new Browse();
+        $res = $browse->ExecuteQuery($sql);
+		
+        return $res;
+
+    }
     
 	public static function getActsOfEvents($eid)
     {

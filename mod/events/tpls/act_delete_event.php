@@ -1,6 +1,7 @@
 <?php 
 include_once('event_title.php');
-	if(count($events) != null || count($acts) != null || count($involvements) != null || count($informations) != null || count($interventions) != null){
+
+	if(count($events) != null || count($events_reverse) != null || count($acts) != null || count($involvements) != null || count($informations) != null || count($interventions) != null){
 	?>
 	<div class="panel">
 	<?php
@@ -18,7 +19,7 @@ include_once('event_title.php');
 <?php } ?>
     <div class='view'>
     <?php
-    if(count($events) != null){
+    if(count($events) != null || count($events_reverse) != null){
     	echo "<h4>" . _t('CHAIN_OF_EVENT_S_') . "</h4>"; 
     	$i = 0;
     ?>
@@ -36,6 +37,14 @@ include_once('event_title.php');
            foreach($events as $event){ ?>
             <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
                 <td><?php echo $event['related_event']?></td>
+                <td><?php echo $event['event_title'] ?></td>
+                <td><?php echo $event['initial_date'] ?> </td>
+                <td><?php echo $event['final_date'] ?></td>
+            </tr>
+    <?php }
+    foreach($events_reverse as $event){ ?>
+            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
+                <td><?php echo $event['event']?></td>
                 <td><?php echo $event['event_title'] ?></td>
                 <td><?php echo $event['initial_date'] ?> </td>
                 <td><?php echo $event['final_date'] ?></td>
