@@ -5,7 +5,7 @@
 <center>
 <label><?php echo _t('NEW_ROLE_NAME') ?></label>
 <input type="text" name="role_name" /> 
-<input type="submit" class="btn" value="<?php echo _t('ADD_ROLE') ?>" name='add_role' />
+<button  type="submit" class="btn btn-primary"  name='add_role' ><i class="icon-plus icon-white"></i><?php echo _t('ADD_ROLE') ?></button>
 </center>
 <table class='table table-bordered table-striped table-hover'>
     <thead>
@@ -33,6 +33,6 @@
     </tbody>
 </table>
 <center>
-<input type="submit" class="btn" value="<?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?>" name='submit' />
+<button type="submit" class="btn"  name='submit' ><i class="icon-ok"></i> <?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?></button>
 </center>
 </form>

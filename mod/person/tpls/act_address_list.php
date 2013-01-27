@@ -5,7 +5,7 @@
     draw_card_list('pa',$pid);	
 ?>
 <div class="panel">
-<a class="btn" href="<?php echo get_url('person','new_address',null, null) ?>"><?php echo _t('ADD_ADDRESS')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('person','new_address',null, null) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD_ADDRESS')?></a>
 <br />
 <br />    
 <?php	
@@ -53,7 +53,9 @@
 		}
 		?>
 			<tr class='actions'>
-            <td colspan='11'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='11'><button type='submit' class='btn btn-danger' name='delete' >
+<i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+            </td>
         	</tr>
 		</tbody>
 		</table>
@@ -74,7 +76,7 @@
 			echo "<h3>" ._t('VIEW_ADDRESS') . "</h3>";
 			echo "<br />";
 		?>
-		<a class="btn" href="<?php echo get_url('person','edit_address',null,array('address_id'=>$_GET['address_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_ADDRESS')?></a>
+		<a class="btn btn-info" href="<?php echo get_url('person','edit_address',null,array('address_id'=>$_GET['address_id'])) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT_THIS_ADDRESS')?></a>
 		<br />
 	    <br />
 	    <form class="form-horizontal"  action='<?php echo get_url('person','edit_address')?>' method='post' enctype='multipart/form-data'>

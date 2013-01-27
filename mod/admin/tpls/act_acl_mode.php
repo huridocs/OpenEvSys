@@ -7,7 +7,7 @@
 <?php
     shn_form_select(_t('SET_ACL_MODE'),'acl_mode',array('options'=>$modes, 'value'=>$current_acl_mode));
 ?>
-<input type="submit" class="btn" name='update_acl_mode' value="<?php echo _t('SAVE') ?>" />
+    <button type="submit" class="btn" name='update_acl_mode' ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
 </fieldset>
 </form>
 </div>

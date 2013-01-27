@@ -1,4 +1,4 @@
-<ul class="nav nav-list"> 
+<ul class="nav nav-tabs"> 
     <?php
     $action = $_GET['act'];
     $breadcrumbs = shnBreadcrumbs::getBreadcrumbs();

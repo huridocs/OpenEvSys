@@ -5,24 +5,25 @@
         <title>OpenEvSys 1.1</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
- <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" >
-       
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/screen.css"/>
-        <link rel="stylesheet" type="text/css" media="print"  href="theme/<?php echo $conf['theme'] ?>/print.css"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/jquery-treeview/jquery.treeview.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap-responsive.min.css" >
 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/jqgrid/coffee/grid.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/jqgrid/jqModal.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/fg.menu.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/theme/ui.all.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/style.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/pnotify/jquery.pnotify.default.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/screen.css"/>
+            <link rel="stylesheet" type="text/css" media="print"  href="theme/<?php echo $conf['theme'] ?>/print.css"/>
+            <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/jquery-treeview/jquery.treeview.css" />
 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/jqhelp/ajaxhelptextviewer.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="res/js/jwysiwyg/jquery.wysiwyg.css" />
-        
-        <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/chosen.css" />
-        
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/jqgrid/coffee/grid.css" /> 
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/jqgrid/jqModal.css" /> 
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/fg.menu.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/theme/ui.all.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/style.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/pnotify/jquery.pnotify.default.css" />
+
+            <link rel="stylesheet" type="text/css" media="screen" href="theme/jqhelp/ajaxhelptextviewer.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="res/js/jwysiwyg/jquery.wysiwyg.css" />
+
+            <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/chosen.css" />
+
             <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/datepicker.css" >
 
 
@@ -32,12 +33,12 @@
 
                 <script src="res/bootstrap/bootstrap.min.js"></script>
                 <script src="res/bootstrap/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="res/jquery/chosen.jquery.min.js"></script>
+                <script type="text/javascript" src="res/jquery/chosen.jquery.min.js"></script>
 
                 <script type="text/javascript" src="res/jquery/jquery.gettext.js"></script>
 
                 <script type="text/javascript" src="res/jquery/jquery.pop.js"></script>		
-                <script type="text/javascript" src="res/jquery/jquery.hotkeys.js"></script>
+              <!--  <script type="text/javascript" src="res/jquery/jquery.hotkeys.js"></script>-->
                 <script type="text/javascript" src="res/jquery/jquery.pnotify.js"></script>
                 <script type="text/javascript" src="res/js/main.js"></script>
                 <script type="text/javascript" src="res/js/adv-search.js"></script>
@@ -64,57 +65,56 @@
                 </head>
                 <body>
                     <?php include_section('menu'); ?>
+                    <?php include_section('top_menu'); ?>
+                    
                     <div id="container" class="container-fluid">
+                       <?php include_section('breadcrumb') ?>
+                        
                         <div class="row-fluid">
-
-<div class="span2">
-      <div class="member-box round-all"> 
-        <span>
-           
-            <strong><?php echo htmlspecialchars($_SESSION['username']) ?></strong><br/> 
-            <span class="member-box-links"><a href="<?php get_url('home', 'edit_user') ?>"><?php echo _t('MY_PREFERENCES') ?></a> | <a href="?act=logout"><?php echo _t('SIGN_OUT') ?></a></span>
-        </span>
-      </div>          
-      <div class="sidebar-nav">
-      	<div class="well" style="padding: 8px 0;">
-     
+                           <?php include_section('mod_sidebar') ?>
+                             
                             <?php include_section('mod_menu') ?>
-        </div></div></div>
-          <!-- <?php include_section('modwrap_open') // these are put in to fotmat admin section ?>
-                           -->
-                           <div class="span10">
-                                <?php include_section('breadcrumb') ?>
-                                <div class="row-fluid">
+                                      
+                            
+                                        
+                            <!-- <?php include_section('modwrap_open') // these are put in to fotmat admin section   ?>
+                            -->
+                            <?php if ($_GET['mod'] == "admin") {?>
+                            <div class="span10" >
+                            <?php }else {?>
+                              <div class="span12" style="margin-left:0px" >
+                            <?php }?>
+                                         <div class="row-fluid">
 
                                     <div class="span12">
 
-                                        <?php echo $content; ?>
+<?php echo $content; ?>
                                     </div>
                                 </div>
                             </div>
-                           <!-- <?php include_section('modwrap_close') ?>
--->
-                         
+                            <!-- <?php include_section('modwrap_close') ?>
+                            -->
+
                         </div>
                         <footer>
-                           <div id="footer">
+                            <div id="footer">
                                 <span>About</span>
                                 <a href="http://openevsys.org" target='blank'>OpenEvSys</a><span>&nbsp;|&nbsp;</span>
                                 <span>&copy;</span>
                                 <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
                                 <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
                                 <span class='version'><?php
-                            echo _t('VERSION');
-                            echo " : ";
-                            echo file_get_contents(APPROOT . '/VERSION');
-                            ?></span>
+echo _t('VERSION');
+echo " : ";
+echo file_get_contents(APPROOT . '/VERSION');
+?></span>
                             </div>
                         </footer>
-                            <?php if ($_SESSION['translator']) { ?>
-                                <div id='translate'>
-                                    <a class='but' href="<?php get_url('admin', 'translate', null, array('disable_translator' => 'true')) ?>" ><?php echo _t('DISABLE_INTERACTIVE_TRANSLATION') ?></a> 
-                                    <a class='but' href="<?php get_url('admin', 'translate', null, array('compile' => 'true')) ?>" ><?php echo _t('APPLY_CHANGES_PERMANENTLY') ?></a> 
-                                </div>
-                            <?php } ?>
+                        <?php if ($_SESSION['translator']) { ?>
+                            <div id='translate'>
+                                <a class='but' href="<?php get_url('admin', 'translate', null, array('disable_translator' => 'true')) ?>" ><?php echo _t('DISABLE_INTERACTIVE_TRANSLATION') ?></a> 
+                                <a class='but' href="<?php get_url('admin', 'translate', null, array('compile' => 'true')) ?>" ><?php echo _t('APPLY_CHANGES_PERMANENTLY') ?></a> 
+                            </div>
+<?php } ?>
                 </body>
                 </html>

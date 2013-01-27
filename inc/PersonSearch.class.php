@@ -68,8 +68,8 @@ class PersonSearch {
 		}		
 		
 	?>
-		<input type="submit" class="btn" name="search" value="<?php echo _t('SEARCH')?>" onclick="add_anchor(this.form,'related_person_field');" />
-		<a class="btn" href="#" id="related_person_search_close"><?php echo _t('CLOSE')?></a>
+<button type="submit" class="btn" name="search"  onclick="add_anchor(this.form,'related_person_field');"><i class="icon-search"></i><?php echo _t('SEARCH')?></button>
+		<a class="btn" href="#" id="related_person_search_close"><i class="icon-remove"></i><?php echo _t('CLOSE')?></a>
 		<br/><br/>
 	<?php
 			

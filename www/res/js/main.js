@@ -604,7 +604,7 @@ function field_set_to_tab(id)
 }
 
 //====================== key board short cuts ============================================
-
+/*
 jQuery(document).bind('keydown', 'Alt+Shift+e',function (evt){ keyEvent('events','browse');return false;});
 
 jQuery(document).bind('keydown', 'Alt+Shift+p',function (evt){ keyEvent('person','browse');return false;});
@@ -620,8 +620,9 @@ jQuery(document).bind('keydown', 'Alt+Shift+b',function (evt){ testMod("browse")
 jQuery(document).bind('keydown', 'Alt+Shift+v',function (evt){ testMod("view");return false;});
 
 jQuery(document).bind('keydown', 'Alt+Shift+n',function (evt){ testMod("new");return false;});
-
+*/
 function keyEvent(mod,act){
+    
     tMod=mod;
     tAct=act;
     var serverurl = window.location.href;

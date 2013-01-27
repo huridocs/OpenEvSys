@@ -5,7 +5,8 @@
 <?php
     shn_form_select('Select language','locale',array('options'=>$locales, 'value'=>$current_locale));
 ?>
-<input type="submit" class="btn" name='update_locale' value="<?php echo _t('SAVE') ?>" />
+
+<button type="submit" class="btn" name="update_locale" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
 </fieldset>
 </form>
 </div>

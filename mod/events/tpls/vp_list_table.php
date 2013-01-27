@@ -1,5 +1,5 @@
 <?php if( acl_vp_entity_add_is_allowed() ){?>
-<a class="btn" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><?php echo _t('ADD_VICTIM')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_VICTIM')?></a>
 <?php } ?>
 
 <?php if(!isset($vp_list)){ ?>
@@ -57,7 +57,9 @@
         </tr>
     <?php } ?>
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'>                
+                <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+            </td>
         </tr>		
     </tbody>
 </table>

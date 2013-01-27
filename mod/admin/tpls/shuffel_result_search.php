@@ -37,6 +37,6 @@
 <br />
 <?php } ?>
 <center>
-<input type="submit" class="btn" name="save" value="<?php echo _t('SAVE') ?>"/>
+<button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
 </center>
 </div>

@@ -45,7 +45,9 @@
 
     <?php } ?>
             <tr class='actions'>
-            <td colspan='11'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='11'><button type='submit' class='btn btn-danger' name='delete' >
+<i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -4,7 +4,7 @@
   
 ?>
 <div class="panel">
-    <a class="btn" href="<?php echo get_url('events','add_coe') ?>"><?php echo _t('ADD_CHAIN_OF_EVENTS')?></a><span>&nbsp;&nbsp;</span>
+    <a class="btn btn-primary" href="<?php echo get_url('events','add_coe') ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_CHAIN_OF_EVENTS')?></a><span>&nbsp;&nbsp;</span>
     <br />
     <br />
     <?php
@@ -50,7 +50,9 @@
 
         <?php }?>
 		<tr class='actions'>
-            <td colspan='8'><input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' /></td>
+            <td colspan='8'>
+                     <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+            </td>
         </tr>				
     </tbody>
     </table>
@@ -64,7 +66,7 @@
             case 'coe':
                 echo "<h3>"._t('VIEW_EVENT_RECORD')."</h3>&nbsp;";
                 echo "<br />";
-                ?><a class="btn" href="<?php echo get_url('events','get_event',null,array('eid'=>$_GET['related_event'])) ?>"><?php echo _t('MORE_ABOUT_THIS_EVENT')?></a><?php
+                ?><a class="btn btn-success" href="<?php echo get_url('events','get_event',null,array('eid'=>$_GET['related_event'])) ?>"><i class="icon-zoom-in icon-white"></i> <?php echo _t('MORE_ABOUT_THIS_EVENT')?></a><?php
                 echo "<br />";
                 echo "<br />";
                 $event_form = event_form('view');
@@ -74,7 +76,7 @@
             case 'coe_view':
                 echo "<h3>"._t('VIEW_CHAIN_OF_EVENTS_RECORD')."</h3>&nbsp;";
                 echo "<br />";
-                ?><a class="btn" href="<?php echo get_url('events','edit_coe',null,array('coeid'=>$_GET['coe_id'])) ?>"><?php echo _t('EDIT_THIS_CHAIN_OF_EVENT')?></a><?php
+                ?><a class="btn btn-info" href="<?php echo get_url('events','edit_coe',null,array('coeid'=>$_GET['coe_id'])) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT_THIS_CHAIN_OF_EVENT')?></a><?php
                 echo "<br />";
                 echo "<br />";	
                 $chain_of_events_form = chain_of_events_form('view');

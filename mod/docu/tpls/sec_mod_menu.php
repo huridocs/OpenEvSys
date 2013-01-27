@@ -1,4 +1,4 @@
-<ul class="nav nav-list"> 
+<ul class="nav nav-tabs"> 
     <?php
     $action = $_GET['act'];
     $breadcrumbs = shnBreadcrumbs::getBreadcrumbs();
@@ -36,9 +36,9 @@
                 ?>
 
           
-            <li class="subnav <?php if ($action == "link") echo "active" ?>"><a href="<?php get_url('docu', 'link') ?>" ><?php echo _t('LINKS') ?></a>
+            <li class="<?php if ($action == "link") echo "active" ?>"><a href="<?php get_url('docu', 'link') ?>" ><?php echo _t('LINKS') ?></a>
             </li>
-            <li  class="subnav <?php if ($action == "audit") echo "active" ?>"><a href="<?php get_url('docu', 'audit') ?>"><?php echo _t('AUDIT_LOG') ?></a>    
+            <li  class="<?php if ($action == "audit") echo "active" ?>"><a href="<?php get_url('docu', 'audit') ?>"><?php echo _t('AUDIT_LOG') ?></a>    
             </li> 
 
         <?php }

@@ -41,6 +41,8 @@
 </table>
 <br />
 <?php if($role!='admin'){ ?>
-<input type="submit" class="btn" name='change_permissions' value="<?php echo _t('UPDATE_PERMISSIONS') ?>" />
+
+<button type="submit" class="btn" name="change_permissions" ><i class="icon-ok"></i> <?php echo _t('UPDATE_PERMISSIONS') ?></button>
+
 <?php }?>
 </form>
