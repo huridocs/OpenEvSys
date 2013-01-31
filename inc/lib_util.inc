@@ -484,6 +484,29 @@ function is_management_field($formField) {
     if($formField['field_number'] == "0172"){
         return true;
     }
+	if($formField['type'] == 'text' || $formField['type'] == 'date'){
+		$fld_name = $formField['map']['field'];
+		if(
+				$fld_name=='entity_type' ||
+				$fld_name=='entity_id' ||
+				$fld_name=='date_received' ||
+				$fld_name=='date_of_entry' ||
+				$fld_name=='entered_by' ||
+				$fld_name=='project_title' ||
+				/*$fld_name=='comments' ||*/
+				$fld_name=='record_grouping' ||
+				$fld_name=='date_updated' ||
+				$fld_name=='updated_by' ||
+				$fld_name=='monitoring_status'
+				
+				){
+			return true;
+		}
+	}
+
+	
+	return false;
+	/*
     if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
             return false;
     }
@@ -492,7 +515,7 @@ function is_management_field($formField) {
             return true;
     }else{
             return false;
-    }
+    }*/
 }
 
 function is_mt_field($entity, $field) {
