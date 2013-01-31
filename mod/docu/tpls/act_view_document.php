@@ -1,11 +1,3 @@
-<?php global $conf; 
-    include_once('docu_title.php');    
-?>
-<?php
-    include_once('view_card_list.php');
-    draw_card_list('dc');  
-?>
-
 <div class="panel">
     <div class="form-container"> 
         <a class="btn btn-info" href="<?php echo get_url('docu','edit_document',null,array('doc_id'=>$_GET['doc_id'])) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT_DETAILS')?></a>

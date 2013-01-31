@@ -6,13 +6,14 @@ include_once('event_title.php');
 	<div class="panel">
 	<?php
 	if($del_confirm){ ?>
-    <div class="alert alert-block" style="text-align:center">
-<h4><?php echo _t('YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_')?></h4>
+    <div class="alert alert-error" >
+<h3><?php echo _t('YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_')?></h3>
     <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post" >
-        <br/><center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
-        </center>        
+        <div class="control-group">
+                <div class="controls"> 
+              <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+     </div></div>        
     </form>
     </div>
 <?php } ?>
@@ -187,13 +188,15 @@ include_once('event_title.php');
 	}
 	else{
 ?>
-	<div class='dialog confirm'>
+	<div class="alert alert-error">
+     
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_EVENT_')?></h3>
     <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post">
         <br />
         <center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
+             <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+       
         </center>        
     </form>
     </div>

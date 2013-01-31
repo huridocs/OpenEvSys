@@ -1,12 +1,14 @@
-<?php include_once('person_name.php')?>
+<div class="panel">
 <?php if($del_confirm){ ?>
-    <div class='dialog confirm'>
+    <div class="alert alert-error">
+     
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_')?></h3>
     <form class="form-horizontal"  action="<?php get_url('person','delete_biographic')?>" method="post">
         <br />
         <center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
+             <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+       
         </center>
         <?php foreach($_POST['biographics'] as $val){ ?>
         <input type='hidden' name='biographics[]' value='<?php echo $val ?>' />
@@ -14,7 +16,7 @@
     </form>
     </div>
 <?php } ?>
-<div id="browse">
+
     <form class="form-horizontal"  action="<?php get_url('person','browse')?>" method="get">
     <input type="hidden" name="mod" value="person" />
     <input type="hidden" name="act" value="browse" />

@@ -47,9 +47,13 @@
             <td>  </td> 
             <td>  </td>
             <td>  </td>
-            <!--<td> <?php echo $fields1['reset_visible_search'] ?></td>
+            <!--<td>
+            <button type="submit" name="reset_visible_search" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
+            </td>
             -->
-            <td> <?php echo $fields1['reset_visible_search_display'] ?></td>  
+            <td>
+            <button type="submit" name="reset_visible_search_display" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
+            </td>  
         </tr>
     </tbody>
 </table>

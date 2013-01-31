@@ -6,11 +6,11 @@ $username = $user->getUserName();
 <br />
 <?php $fields = shn_form_get_html_fields($change_password_form); ?>
 <div>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs tabnav">
 
         <li><a href="<?php get_url('admin', 'edit_user', null, array('uid' => $username)); ?> " ><?php echo _t('EDIT_PROFILE') ?></a>
         </li>
-        <li><a class="active" href="<?php get_url('admin', 'edit_password', null, array('uid' => $username)); ?> " ><?php echo _t('CHANGE_PASSWORD') ?></a>
+        <li class="active"><a  href="<?php get_url('admin', 'edit_password', null, array('uid' => $username)); ?> " ><?php echo _t('CHANGE_PASSWORD') ?></a>
         </li>
     </ul></div> 
 <div class='panel'>
@@ -18,10 +18,15 @@ $username = $user->getUserName();
         <form class="form-horizontal"  action='<?php echo get_url('admin', 'edit_password', null, array('uid' => $username)) ?>' method='post'>
             <?php echo $fields['password1'] ?>
             <?php echo $fields['password2'] ?>
-            <br />
-<?php echo $fields['save'] ?>
-            <a class="btn" href="<?php get_url('admin', 'edit_user', null, array('uid' => $username)) ?> " ><?php echo _t('CANCEL') ?></a>
+           
+            <div class="control-group">
+            <div class="controls">
 
+                <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+
+            <a class="btn" href="<?php get_url('admin', 'edit_user', null, array('uid' => $username)) ?> " ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
+            </div></div>
+          
         </form>
     </div>
 </div>

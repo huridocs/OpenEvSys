@@ -171,8 +171,9 @@ function set_redirect_header($module = 'home', $action = 'default', $view = null
 
 function array_to_list($array) {
     if (is_array($array)) {
-        foreach ($array as $item)
-            echo "$item , ";
+        echo implode(" , ",$array);
+       /* foreach ($array as $item)
+            echo "$item , ";*/
     }
     else
         echo $array;
@@ -524,4 +525,11 @@ function get_chaintype_reverse($type){
         return $types[$type];
     }
     return $type;
+}
+
+function get_module(){
+    return $_GET['mod'];
+}
+function get_action(){
+    return $_GET['act'];
 }

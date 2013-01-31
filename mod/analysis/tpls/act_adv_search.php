@@ -17,8 +17,8 @@
                 <ol id="query_builder"></ol>
             </fieldset>
             <div class="clearfix" ></div>
-            <input type="button" value="<?php echo _t('SEARCH')?>"  id="qb-search-but" class="qb-but btn" />
-            <input type="button" value="<?php echo _t('CLEAR')?>"   id="qb-clear-but" class="qb-but btn" />
+            <button    id="qb-search-but" class="qb-but btn" ><i class="icon-ok"></i> <?php echo _t('SEARCH')?></button>
+            <button   id="qb-clear-but" class="qb-but btn" ><i class="icon-remove"></i> <?php echo _t('CLEAR')?></button> 
         </form>
     </div>
 </div>
@@ -55,9 +55,9 @@
     <input type="text"  id="query_name"  name="query_name" /><br />
     <label><?php echo _t('DESCRIPTION') ?></label> 
     <textarea type="text" name="query_desc" id="query_desc" rows="4" cols="30" ></textarea><br />
-    <input id="qb-qs-save" type="button" value="Save"  class="btn"/>
-    <input id="qb-qs-cancle" type="button" value="Cancel" class="btn" />
-</form>
+    <button id="qb-qs-save" type="button"   class="btn"><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+    <button id="qb-qs-cancle" type="button" class="btn" ><i class="icon-stop"></i> <?php echo _t('CANCEL'); ?></button>
+     
 </div>
 <script language="javascript">
     var as = new advSearch();

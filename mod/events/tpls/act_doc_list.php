@@ -25,9 +25,9 @@
 		}
 		else{
 	        ?>
-    		<div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+    		<div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         		<?php echo _t('THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_') ?>
-    		</div><br/>
+    		</div>
     		<?php
 		}
 	?>

@@ -90,7 +90,7 @@ class RelatedPersonSearch {
 		
 	?>			
        <a class="btn" href="<?php echo get_url($this->mod,$this->act,null,null) ?>"><?php echo _t('PREVIOUS')?></a>
-       <a class="btn" href="<?php echo get_url($this->mod,$this->cancel,null,null) ?>"><?php echo _t('CANCEL')?></a>
+       <a class="btn" href="<?php echo get_url($this->mod,$this->cancel,null,null) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a>
        <?php echo $fields['search'];?>
        <br /><br />
     <?php     

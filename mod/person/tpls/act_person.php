@@ -10,7 +10,7 @@
 	    <?php if( acl_is_entity_allowed_boolean('person' , 'delete')){?>
 		<a class="btn btn-danger" href="<?php echo get_url('person','delete_person',null) ?>"><i class="icon-trash icon-white"></i>  <?php echo _t('DELETE_THIS_PERSON')?></a>
 		<?php } ?>
-		<a class="btn" href="<?php echo get_url('person','print',null) ?>"><i class="icon-print"></i>  <?php echo _t('PRINT_THIS_PERSON')?></a>
+		<a class="btn" href="<?php echo get_url('person','print',null) ?>"><i class="icon-print"></i> <?php echo _t('PRINT_THIS_PERSON')?></a>
 <br />
 <br />
 <?php

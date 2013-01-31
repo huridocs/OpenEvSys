@@ -23,7 +23,7 @@
                 ?>
                 <div>
                 <?php shn_form_radio(_t('ADDITIONAL_DETAIL_TYPE'),'ad_type',array('options'=>$ad_types)); ?>
-                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> 
                 <button type='submit' class='btn' ><?php echo _t('CONTINUE') ?></button>
                 </div>
                 <br />
@@ -42,7 +42,7 @@
                 <br />
                 <center>
                     <button  type='submit' class='btn' name="update" ><i class="icon-ok"></i><?php echo _t('UPDATE') ?></button>
-                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> 
                 </center>
                 <?php 
             }

@@ -5,14 +5,14 @@
 ?>
 <div class="panel">
 <?php if($del_confirm){ ?>
-    <div class="alert alert-block" style="text-align:center">
-    <h4><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__')?></h4>
+    <div class="alert alert-error" >
+    <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__')?></h3>
     <form class="form-horizontal"  action="<?php get_url('events','delete_intervention')?>" method="post">
         <br />
         <center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('YES') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('NO') ?>' />
-        </center>
+              <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+     </center>
         <?php			
 			foreach($_POST['interventions'] as $val){ ?>
         		<input type='hidden' name='interventions[]' value='<?php echo $val ?>' />

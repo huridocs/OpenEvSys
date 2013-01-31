@@ -13,10 +13,14 @@
 	$fields = shn_form_get_html_fields($involvement_form);
 	place_form_elements($involvement_form , $fields);  
 ?>
-	<center>
-	<?php echo $fields['update'] ?>
-	<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'inv_id'=>$_GET['inv_id'],'row'=>$_GET['row'],'type'=>'inv')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
-    </center>
+    <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'inv_id'=>$_GET['inv_id'],'row'=>$_GET['row'],'type'=>'inv')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+     </div>
+            </div>
+	
 </form>
 </div>
 </div>

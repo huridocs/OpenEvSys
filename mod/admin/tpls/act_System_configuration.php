@@ -50,7 +50,7 @@ echo get_url('admin','System_configuration')
 					echo $checked;
 					?> 
 			<?php }else{ ?> 
-				type="text" style="border: medium none ;" name="<?php echo $value?>" id="<?php echo $value?>" <?php echo $readonly?> value="<?php echo $conf[$value]?>"
+				type="text"   name="<?php echo $value?>" id="<?php echo $value?>" <?php echo $readonly?> value="<?php echo $conf[$value]?>"
 			<?php } ?>
 			/>
 			<?php  

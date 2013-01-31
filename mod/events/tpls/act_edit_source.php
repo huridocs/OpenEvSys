@@ -10,11 +10,16 @@
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events','edit_source',null,array('information_id'=>$_GET['information_id'],'eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
         <?php			
 			place_form_elements($person_form,$fields);			
-		?>              
-		<center>
-		<?php echo $fields['update']; ?>
-        <a class="btn" href="<?php echo get_url('events','src_list',null,array('eid'=>$event_id,'information_id'=>$_GET['information_id'],'type'=>'person')) ?>"><?php echo _t('CANCEL')?></a>
-        </center>        
+		?>   
+             <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+                   <a class="btn" href="<?php echo get_url('events','src_list',null,array('eid'=>$event_id,'information_id'=>$_GET['information_id'],'type'=>'person')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a>
+       </div>
+            </div>
+
+		       
         </form>
     </div>
 </div>

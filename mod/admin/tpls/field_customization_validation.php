@@ -26,7 +26,7 @@
             <td style="padding:0px;">
                 <?php $name = 'validation_'.$record['field_number'];?>
 
-                <select style='border:1px solid #777;' name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> >
+                <select class="select" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> >
                     <?php
                     
                     $value = split(',' , $record['validation']);
@@ -54,8 +54,10 @@
             <td>  </td>
             <td>  </td>
             
-            <td><?php echo $fields1['reset_required'] ?></td>
-            <td><?php echo $fields1['reset_validation'] ?></td>
+            <td>
+            <button type="submit" name="reset_required" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
+            <td>
+            <button type="submit" name="reset_validation" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
             
         </tr>
     </tbody>

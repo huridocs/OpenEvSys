@@ -30,10 +30,16 @@
         <?php  echo $fields['status']  ?>      
               
  
-  </fieldset>          
-        <?php  echo $fields['save']  ?>
-        <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><?php echo _t('CANCEL') ?></a>
+  </fieldset>  
+         <div class="control-group">
+            <div class="controls">
 
+                <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+
+            <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
+            </div></div>
+    
+       
 </form>
 </div>
 

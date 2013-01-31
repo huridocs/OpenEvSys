@@ -519,33 +519,6 @@ function queryBuilder(){
     }
 
     this.addNewCondition = function(){
-        var options = openevsysDomain.getInstance().getRelatedEntities(this.getSelectedEntities());
-        
-        var select = $("<select id=\"\" name=\"\" class=\"entselect\" />");
-        for(var option in options){
-            $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
-           
-            /*li.bind('click',this,function(e){
-                if($(e.originalTarget).hasClass('qb-multi-check'))return;
-                e.data.value = $(this).find('a').attr('data-value');
-                e.data.element.text($(this).text());
-                e.data.element.attr('data-value',e.data.value);
-                var oc = jQuery.Event("onchange");
-                e.data.element.trigger(oc);
-            });
-            ul.append(li);*/
-        }
-        var div = $("<div class='row'></div>");
-        div.append(select);
-        $('#query_builder').append(div);
-        select.select2({width: 'resolve',placeholder: _('SELECT_ENTITY')});
-        select.on("change", function() { 
-            //alert($(this).val());
-            qb = queryBuilder.getInstance(null);
-            qb.addFieldSelect($(this));
-            groupBy.getInstance().update();
-        });
-        return;
         var con = $('<li class="qb-condition qb-new" data-status="new"></li>');
         var a   = $('<a class="qb-entity">'+_('SELECT_ENTITY')+'</a>');
         con.append(a);
@@ -586,40 +559,7 @@ function queryBuilder(){
         groupBy.getInstance().update();
     }
 
-    this.addFieldSelect = function(entselect){
-        /*var a = $(e.currentTarget);
-        var options = openevsysDomain.getInstance().getEntityFields(a.attr('data-value'));*/
-        //var a = $(e.currentTarget);
-        var options = openevsysDomain.getInstance().getEntityFields(entselect.val());
-       
-        var select = $("<select id=\"\" name=\""+entselect.val()+"\" class=\"fieldselect\" />");
-        for(var option in options){
-            $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
-           
-            /*li.bind('click',this,function(e){
-                if($(e.originalTarget).hasClass('qb-multi-check'))return;
-                e.data.value = $(this).find('a').attr('data-value');
-                e.data.element.text($(this).text());
-                e.data.element.attr('data-value',e.data.value);
-                var oc = jQuery.Event("onchange");
-                e.data.element.trigger(oc);
-            });
-            ul.append(li);*/
-        }
-        var div = $(entselect).closest("div");
-        div.append(select);
-        //$('#query_builder').append(div);
-        $(".entselect").select2("disable");
-        select.select2({width: 'resolve',placeholder: _('SELECT_FIELD')});
-        select.on("change", function() { 
-            //alert($(this).val());
-            qb = queryBuilder.getInstance(null);
-            qb.addField($(this));
-        });
-        this.addAndOperater(div);
-        
-        return;
-        
+    this.addFieldSelect = function(e){
         //if there is a previous condition operater to it
         var a = $(e.currentTarget);
         a.parent().removeClass('qb-new');
@@ -638,11 +578,7 @@ function queryBuilder(){
 		var hlpObj = new $.Helptextviewer('field_select');	
     }
 
-    this.addField = function(fieldselect){
-        this.addController(fieldselect);
-        this.addNewCondition();
-        return;
-        
+    this.addField = function(e){
         var a = $(e.currentTarget);
         a.unbind('click');
         a.addClass('qb-selected');
@@ -652,32 +588,7 @@ function queryBuilder(){
         this.addNewCondition();
     }
 
-    this.addController = function(fieldselect){
-        var div = $(fieldselect).closest("div");
-        //var entity = div.find(".entselect");
-        var entity_name = fieldselect.attr("name");
-        
-        var field_name = fieldselect.val();
-        
-        var od = openevsysDomain.getInstance();
-        var field_type = od.getFieldType(field_name, entity_name);
-        
-        var options = openevsysDomain.getInstance().getOperator(field_type);
-        
-       
-        var select = $("<select id=\"\" name=\"\" class=\"operatorselect\" />");
-        for(var option in options){
-            $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
-        }
-       
-        div.append(select);
-        //$('#query_builder').append(div);
-        $(".fieldselect").select2("disable");
-        select.select2({width: 'resolve',placeholder: _('SELECT_FIELD')});
-        
-        return;
-        
-        
+    this.addController = function(e){
         var entity = e.parent().find('.qb-entity:first');
         var entity_name = entity.attr('data-value');
         var field_name = e.attr('data-value');
@@ -744,23 +655,7 @@ function queryBuilder(){
         });
     }
 
-    this.addAndOperater = function(div , value){
-        var options = [
-                    {'value':'and','label':_('AND')},
-                    {'value':'or' ,'label':_('OR')}
-                 ];
-        var select = $("<select id=\"\" name=\"\" class=\"operselect\" />");
-        for(var option in options){
-            $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
-           
-        }
-        //var div = $(sel).closest("div");
-        div.append(select);
-        //$('#query_builder').append(div);
-        select.select2({width: 'resolve'});
-        return;
-        
-        
+    this.addAndOperater = function(condition , value){
         if(condition == null || condition.children('.qb-link').length != 0)return;
         var op = [
                     {'value':'and','label':_('AND')},
@@ -786,11 +681,10 @@ function queryBuilder(){
     }
 
     this.getSelectedEntities = function(){
-        var arr = $('#query_builder').find('.entselect');
+        var arr = $('#query_builder').find('.qb-entity');
         var entities = new Array();
         $.each(arr ,function(){
-            var v = $(this).val();
-            //var v = $(this).attr('data-value');
+            var v = $(this).attr('data-value');
             if(v != null && $.inArray(v , entities) == -1)
             entities.push(v);
         });

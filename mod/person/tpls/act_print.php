@@ -4,9 +4,9 @@
 <center class='phide'>
     <?php echo _t('PRINTABLE_VIEW') ?> 
     :: 
-    <a href='JavaScript:window.print();' ><?php echo _t('PRINT_THIS_PAGE')?></a>
+    <a href='JavaScript:window.print();' class="btn" ><i class="icon-print"></i> <?php echo _t('PRINT_THIS_PAGE')?></a>
     :: 
-    <a href='<?php get_url('person','person',null,array('pid'=>$_GET['pid'])) ?>'><?php echo _t('BACK_TO_PERSON_VIEW') ?></a>
+    <a href='<?php get_url('person','person',null,array('pid'=>$_GET['pid'])) ?>' class="btn"><?php echo _t('BACK_TO_PERSON_VIEW') ?></a>
 </center>
 <?php     
     include_once('person_name.php');

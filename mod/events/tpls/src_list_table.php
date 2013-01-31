@@ -39,8 +39,8 @@
 <?php
 	}
 	else{
-		echo '<div class="alert alert-info spanauto"><button type="button" class="close" data-dismiss="alert">×</button>';
+		echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
     	echo _t('THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_');
-    	echo "</div><br/>";
+    	echo "</div>";
 	}
 ?>

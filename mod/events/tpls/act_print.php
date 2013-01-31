@@ -3,9 +3,9 @@
 <center class='phide'>
     <?php echo _t('PRINTABLE_VIEW') ?>
     ::
-    <a href='JavaScript:window.print();' ><?php echo _t('PRINT_THIS_PAGE')?></a>
+    <a href='JavaScript:window.print();' class="btn" ><i class="icon-print"></i> <?php echo _t('PRINT_THIS_PAGE')?></a>
     ::
-    <a href='<?php get_url('events','get_event') ?>'><?php echo _t('BACK_TO_EVENT_VIEW') ?></a>
+    <a href='<?php get_url('events','get_event') ?>' class="btn"><?php echo _t('BACK_TO_EVENT_VIEW') ?></a>
 </center>
 <?php include_once('event_title.php');?>
 

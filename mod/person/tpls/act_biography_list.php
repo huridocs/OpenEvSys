@@ -5,7 +5,7 @@
     draw_card_list('bd',$pid);	
 ?>
 <div class="panel">
-<a class="btn btn-primary" href="<?php echo get_url('person','new_biography',null,array('pid'=>$pid, 'search_type'=>'person')) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD_BIOGRAPHIC_DETAILS')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('person','new_biography',null,array('pid'=>$pid, 'search_type'=>'person')) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_BIOGRAPHIC_DETAILS')?></a>
 <br />
 <br />
 <?php
@@ -49,9 +49,9 @@
 <?php
 	}	
 	else{
-		echo '<div class="alert alert-info spanauto"><button type="button" class="close" data-dismiss="alert">×</button>';
+		echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
     	echo _t('THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_');
-    	echo "</div><br/>";
+    	echo "</div>";
 	}
 ?>
 <div class="form-container">

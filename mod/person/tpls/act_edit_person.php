@@ -13,10 +13,14 @@
 	$fields = place_form_elements($person_form,$fields);
 	  
 ?>
-	<center>
-	<a class="btn" href="<?php echo get_url('person','person'); ?>"><?php echo _t('CANCEL'); ?></a>
-	<?php echo $fields['update']; ?>
-	</center>
+     <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+                   <a class="btn" href="<?php echo get_url('person','person'); ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL'); ?></a>
+	  </div>
+            </div>
+	
 </form>
 </div>
 </div>

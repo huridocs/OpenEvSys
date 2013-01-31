@@ -26,7 +26,6 @@
         </tr>
 
     <?php } ?>
-    		<tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>> <td colspan='13'> &nbsp;</td> </tr>
     		
             <tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>>
             <td> <?php /*echo $fields1['reset']*/ ?>      </td>
@@ -34,7 +33,9 @@
             <td>  </td>
             <td>  </td>
 
-            <td><?php echo $fields1['reset_clari'] ?></td>
+            <td>
+            <button type="submit" name="reset_clari" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
+            </td>
             
         </tr>
     </tbody>

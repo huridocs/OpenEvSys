@@ -2,13 +2,19 @@
 <?php include_once('event_title.php')?>
 
 <div class="panel">
-    <div class='flow'>
-        <strong class='first'><?php echo _t('ADD_VICTIM')?></strong>
-        <span><?php echo _t('ADD_ACT')?></span>
-        <span><?php echo _t('ADD_PERPETRATOR')?></span>
-        <span><?php echo _t('ADD_INVOLVEMENT')?></span>
-        <span><?php echo _t('FINISH')?></span>
+     <div class="fuelux">
+        <div id="myWizard" class="wizard">
+            <ul class="steps">
+                <li class="active"><span class="badge badge-info">1</span><?php echo _t('ADD_VICTIM') ?><span class="chevron"></span></li>
+                <li class=""><span class="badge ">2</span><?php echo _t('ADD_ACT') ?><span class="chevron"></span></li>
+                <li><span class="badge ">3</span><?php echo _t('ADD_PERPETRATOR') ?><span class="chevron"></span></li>
+                <li><span class="badge">4</span><?php echo _t('ADD_INVOLVEMENT') ?><span class="chevron"></span></li>
+                <li><span class="badge">5</span><?php echo _t('FINISH') ?><span class="chevron"></span></li>
+            </ul>
+           
+        </div>
     </div>
+   
     <br />
     <h2><?php echo _t('WHO_IS_THE_VICTIM__') ?></h2>
     <div class="form-container">
@@ -16,12 +22,11 @@
             <?php $person_form = person_form('new');?>
             <?php $fields = shn_form_get_html_fields($person_form);  ?>
             <?php $fields = place_form_elements($person_form,$fields); ?>  
-            <center>   
-            <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('CANCEL')?></a>      
-            <input type="submit" class="btn" value="<?php echo _t('CONTINUE') ?>" name='save'/>
-			<span>&nbsp;&nbsp;</span>
-			
-			</center>
+            <div class="control-group">
+            <div class="controls"><a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('CANCEL')?></a>      
+            <button type="submit" class="btn"  name='save'><?php echo _t('CONTINUE') ?></button>
+            </div>
+            </div>
         </form>
     </div>
 </div>

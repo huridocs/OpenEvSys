@@ -2,12 +2,14 @@
 <h2><?php echo _t('MICRO_THESAURI_CUSTOMIZATION')?></h2>
 <div class="form-container"> 
 <form class="form-horizontal"  action="<?php  get_url('admin','mt_customization')?>" method='get'>
-<fieldset style="margin:10px;">
+<fieldset>
 	<input type="hidden" name="mod" value="admin" />
     <input type="hidden" name="act" value="mt_customization" />
 <?php $fields = shn_form_get_html_fields($customization_form,false);  ?>
-        <?php echo $fields['mt_select'] ?>
-        <?php echo $fields['change_mt'] ?>
+       <div class='control-group'><?php echo $fields['mt_select'] ?></div>
+        <div class="control-group">
+            <div class="controls"><button type="submit"  name="change_mt"  class="btn" ><?php echo _t('SELECT') ?></button>
+            </div></div>
 </fieldset>
 </form>
 </div>
@@ -30,15 +32,15 @@ if($_GET['parent']!=''){
 								array('mt_select'=> $_GET['mt_select'] ,'request_page'=> $_GET['request_page'],'parent'=>$_GET['parent']  ) ) ?>' method='post'>
 <?php ?>
 <?php if($delete){ ?>
-     <div class='dialog confirm'>
+     <div class="alert alert-error">
      	<h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___')?></h3>
         <?php if($has_children){ ?>
-     	<span class="red"><?php echo _t("YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_") ?></span>
+     	<?php echo _t("YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_") ?>
         <?php } ?>
-     	<br />
-        <center>
-        <input type='submit' class='btn' name='delete_yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
+        <br/>
+     	<center>
+        <button type='submit' class='btn btn-danger' name='delete_yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
         </center>
     </div>       
 <?php } ?>
@@ -49,26 +51,25 @@ if($_GET['parent']!=''){
     <thead>
     	<tr>
     		<td colspan='<?php echo 4+$l ?>'>
-                <input type='submit' class='btn' name='filter' value='<?php echo _t('FILTER')?>' />
-                <span>&nbsp;</span>
-                <input type='submit' class='btn' name='reset' value='<?php echo _t('RESET')?>' /> 
+                <button type='submit' class='btn' name='filter' ><i class="icon-filter"></i> <?php echo _t('FILTER')?></button>
+                <button type='submit' class='btn' name='reset' ><i class="icon-remove"></i> <?php echo _t('RESET')?></button>
             </td>
     	</tr>
         <tr class="filter">
-        	<td style="background:#EEEAD4"><?php echo _t('VISIBLE')?></td>
-        	<td style="background:#EEEAD4"><?php echo _t('DELETE')?></td>
+        	<th><?php echo _t('VISIBLE')?></th>
+        	<th><?php echo _t('DELETE')?></th>
         	<td><div class='field'> <input type='text' name='huricode_filter' value='<?php echo $_POST['huricode_filter'] ?>' size='15'/> </div> </td>
         	<td><div class='field'> <input type='text' name='mt_term_filter' value='<?php echo $_POST['mt_term_filter'] ?>' size='40' /> </div> </td>        
         </tr>
         <tr>
-        	<td width='16px'><input type='checkbox' onchange='$("input.visible").attr("checked",this.checked)' /></td>
-			<td width='16px'><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
-            <td width="150px"><?php echo _t('HURICODE'); ?></td>
+        	<td><input type='checkbox' onchange='$("input.visible").attr("checked",this.checked)' /></td>
+			<td><input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' /></td>
+            <td><?php echo _t('HURICODE'); ?></td>
             <td ><?php echo _t('TERM_IN')." ".$conf['fb_locale']; ?></td>
 <?php 
             if(isset($locale)){
 ?>
-            <td width="40%"><?php echo _t('TERM_IN_')." ".$locale; ?></td>
+            <td><?php echo _t('TERM_IN_')." ".$locale; ?></td>
 <?php
             }
 ?>
@@ -112,19 +113,19 @@ if($_GET['parent']!=''){
 ?>
 		</tr>
     <?php } ?>
-		<tr class='actions' style='background:#EEEAD4'>
+		<tr class='actions' >
 		
             <td class='no_edit'>
-            	<input type='submit' class='btn' name='visible' value='<?php echo _t('SET') ?>' style="margin:0;"/>            
+            	<input type='submit' class='btn' name='visible' value='<?php echo _t('SET') ?>' />            
             </td>
             
             <td colspan='2' class='no_edit'>
-                <input type='submit' class='btn' name='delete' value='<?php echo _t('DELETE') ?>' />
-                <input type='button' name='' value='<?php echo _t('ADD_NEW') ?>' onclick="add_new_mt(this);$('#save_new_terms').show()" />
+                <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                <button  name='' class="btn btn-primary" onclick="add_new_mt(this);$('#save_new_terms').show();return false;" ><i class="icon-plus icon-white"></i> <?php echo _t('ADD_NEW') ?></button>
                 
             </td>
             <td class='no_edit'>
-            	<input type='submit' class='btn' name='save_new_terms' id='save_new_terms' value='<?php echo _t('SAVE_NEW_FIELDS') ?>' style="display:none" />
+            	<button type='submit' class='btn' name='save_new_terms' id='save_new_terms'  style="display:none" ><i class="icon-ok"></i> <?php echo _t('SAVE_NEW_FIELDS') ?></button>
             </td>
 <?php
             if(isset($locale)){
@@ -144,15 +145,14 @@ if($_GET['parent']!=''){
     var mt_row_class ='odd';
     function add_new_mt(button)
     {
-        var style = "style='width:100%;border:1px solid #777'"
         $('#mt_cus > tbody').append(
             "<tr class='"+mt_row_class+"'><td></td><td></td>"+
-            "<td><input type='text' name='new_huricode[]' "+style+"  /></td>"+
-            "<td><input type='text' name='new_term[]' "+style+" /></td>"+
+            "<td><input type='text' name='new_huricode[]'   /></td>"+
+            "<td><input type='text' name='new_term[]'  /></td>"+
 <?php
             if(isset($locale)){
 ?>
-            "<td><input type='text' name='new_term_l10n[]'  "+style+" /></td>"+
+            "<td><input type='text' name='new_term_l10n[]'   /></td>"+
 <?php
             }
 ?>

@@ -47,8 +47,8 @@ class shnView_HTML extends shnView
         }
         
         //append messages to content
-        $messages = shnMessageQueue::renderMessages();
-        $content = $messages . $content;
+        //$messages = shnMessageQueue::renderMessages();
+        //$content = $messages . $content;
 
         include_once APPROOT.'tpls/html_responce.php';
     }

@@ -2,9 +2,9 @@
 <br/>
 
 <?php if(!isset($values) || sizeof($values) == 0 ){ ?>
-        <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+        <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE') ?>
-        </div><br/>
+        </div>
     <?php }else{?>
     <?php $errorlist->render_pages(); ?>
     <table class='table table-bordered table-striped table-hover'>

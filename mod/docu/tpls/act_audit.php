@@ -9,9 +9,9 @@
 <div class="panel">
 <br />    
     <?php if(!isset($logs) || sizeof($logs) == 0 ){ ?>
-        <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+        <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON') ?>
-        </div><br/>
+        </div>
     <?php }else{?>
     <table class='table table-bordered table-striped table-hover'>
         <thead>

@@ -3,9 +3,9 @@
 <?php } ?>
 
 <?php if(!isset($vp_list)){ ?>
-    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+    <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME') ?>
-    </div><br/>
+    </div>
 <?php }else{ ?>
 <form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
 <table class="table table-bordered table-striped table-hover">

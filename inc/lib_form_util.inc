@@ -544,12 +544,17 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
 
         $columnId = get_column_sort_id($field);
 
-        echo '<th > <a href="' . $url . '">' . $value;
+        
         if ($columnId == "column_desc") {
-            echo ' <i class="icon-arrow-down"></i>';
+            echo '<th class=" header headerSortDown">';
+            //echo ' <i class="icon-arrow-down"></i>';
         } elseif ($columnId == "column_asc") {
-            echo ' <i class="icon-arrow-up"></i>';
+            echo '<th class="header headerSortUp">';
+            //echo ' <i class="icon-arrow-up"></i>';
+        }else{
+            echo '<th >';
         }
+        echo '<a href="' . $url . '">' . $value;
         echo "</a></th>";
     }
     echo "</tr>";
@@ -617,12 +622,18 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
 
                                     $columnId = get_column_sort_id($field);
 
-                                    echo '<th > <a href="' . $url . '">' . $value;
                                     if ($columnId == "column_desc") {
-                                        echo ' <i class="icon-arrow-down"></i>';
+                                        echo '<th class=" header headerSortDown">';
+                                        //echo ' <i class="icon-arrow-down"></i>';
                                     } elseif ($columnId == "column_asc") {
-                                        echo ' <i class="icon-arrow-up"></i>';
+                                        echo '<th class="header headerSortUp">';
+                                        //echo ' <i class="icon-arrow-up"></i>';
+                                    }else{
+                                        echo '<th >';
                                     }
+                                    echo '<a href="' . $url . '">' . $value;
+        
+                                   
                                     echo "</a></th>";
                                 }
                                 ?>
@@ -848,8 +859,7 @@ function shn_form_get_html_doc_search_ctrl($columnNames = null, $columnValues = 
     ?>
     </tbody>
     <tr>
-        <td colspan="<?php echo $no_of_column; ?>" align="right"><input
-                type="submit" class="btn" value="select" id="selected_doc" name="selected_doc"
+        <td colspan="<?php echo $no_of_column; ?>" align="right"><input type="submit" class="btn" value="select" id="selected_doc" name="selected_doc"
                 onclick="selected_doclist(this.form,'document_field'); return false;" />
         </td>
     </tr>

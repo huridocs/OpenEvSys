@@ -10,13 +10,13 @@
     shn_form_text(_t('FOLDER_NAME'),'locale_folder',array('req'=>true));
     echo "</div>";
 ?>
-<input type="submit" class="btn" name='add_locale' value="<?php echo _t('ADD_NEW') ?>" />
+<button type="submit" class="btn btn-primary" name='add_locale'  ><i class="icon-plus icon-white"></i> <?php echo _t('ADD_NEW') ?></button>
 </fieldset>
 <fieldset><legend><?php echo _t('REMOVE_LANGUAGE')?></legend>
 <?php
     shn_form_select('Select language','select_locale',array('options'=>$locales, 'value'=>$current_locale));
 ?>
-<input type="submit" class="btn" name='remove_locale' value="<?php echo _t('REMOVE') ?>" />
+<button type="submit" class="btn btn-danger" name='remove_locale'  ><i class="icon-trash icon-white"></i> <?php echo _t('REMOVE') ?></button>
 </fieldset>
 </form>
 </div>

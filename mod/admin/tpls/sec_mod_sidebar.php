@@ -7,47 +7,7 @@
                 <?php
                 global $conf;
                 $action = $_GET['act'];
-                $breadcrumbs = shnBreadcrumbs::getBreadcrumbs();
-                switch ($action) {
-                    case 'field_customization':
-                        $breadcrumbs->pushCrumb(array('name' => _t('EXISTING_FIELDS'), 'mod' => 'admin', 'act' => 'field_customization'), 1);
-                        break;
-                    case 'new_field':
-                        $breadcrumbs->pushCrumb(array('name' => _t('ADD_NEW_FIELD'), 'mod' => 'admin', 'act' => 'new_field'), 1);
-                        break;
-                    case 'mt_customization':
-                        $breadcrumbs->pushCrumb(array('name' => _t('MICRO_THESAURI'), 'mod' => 'admin', 'act' => 'mt_customization'), 1);
-                        break;
-                    case 'user_management':
-                        $breadcrumbs->pushCrumb(array('name' => _t('USER_MANAGEMENT'), 'mod' => 'admin', 'act' => 'user_management'), 1);
-                        break;
-                    case 'add_user':
-                        $breadcrumbs->pushCrumb(array('name' => _t('USER_MANAGEMENT'), 'mod' => 'admin', 'act' => 'user_management'), 1);
-                        $breadcrumbs->pushCrumb(array('name' => _t('ADD_NEW_USER'), 'mod' => 'admin', 'act' => 'add_user'), 2);
-                        break;
-                    case 'acl':
-                        $breadcrumbs->pushCrumb(array('name' => _t('USER_MANAGEMENT'), 'mod' => 'admin', 'act' => 'user_management'), 1);
-                        $breadcrumbs->pushCrumb(array('name' => _t('ROLES___MODULE_ACCESS_CONTROL'), 'mod' => 'admin', 'act' => 'acl'), 2);
-                        break;
-                    case 'permissions':
-                        $breadcrumbs->pushCrumb(array('name' => _t('USER_MANAGEMENT'), 'mod' => 'admin', 'act' => 'user_management'), 1);
-                        $breadcrumbs->pushCrumb(array('name' => _t('PERMISSIONS'), 'mod' => 'admin', 'act' => 'permissions'), 2);
-                        break;
-                    case 'set_locale':
-                        $breadcrumbs->pushCrumb(array('name' => _t('LOCALIZATION'), 'mod' => 'admin', 'act' => 'set_locale'), 1);
-                        break;
-                    case 'System_configuration':
-                        $breadcrumbs->pushCrumb(array('name' => _t('SYSTEM_CONFIGURATION'), 'mod' => 'admin', 'act' => 'System_configuration'), 1);
-                        break;
-                    case 'Extensions':
-                        $breadcrumbs->pushCrumb(array('name' => _t('EXTENSIONS'), 'mod' => 'admin', 'act' => 'Extensions'), 1);
-                        break;
-
-                    default:
-                        //$breadcrumbs->pushCrumb(array('name' => _t('BROWSE_DOCUMENT'), 'mod' => 'admin', 'act' => 'browse'), 1);
-                        break;
-                }
-
+                
 
                 if (!isset($conf['extension'])) {
                     ?>

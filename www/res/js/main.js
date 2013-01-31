@@ -425,6 +425,23 @@ function addControler(name)
     .before('<input type="text" name="'+name+'[]" />');
 }
 
+function format_mt_tree(state) {
+    
+    if (!state.id) return state.text; // 
+    var originalOption = state.element;
+    var sel_val = "";
+    var level = $(originalOption).data('level');
+    level = parseInt(level)
+    if(level){
+        var marginpx = 15;
+        sel_val += "<div style='margin-left:"+level*marginpx+"px'>"+state.text+"</div>"
+    }else{
+        sel_val += state.text
+    }
+    
+    return sel_val ;
+    
+}
 window.onload = function(){ 
 	$('#hidefrm').hide();
 	$('#hideQueryfrm').hide();
@@ -435,7 +452,12 @@ window.onload = function(){
 	$('#addressArrayList').hide();
         
         $(".datepicker").datepicker({format:'yyyy-mm-dd' });	
-        $("select").chosen();
+        $(".select").select2({width: 'resolve',allowClear: true,placeholder: "Select"});
+        $(".mt_select").select2({width: 'resolve',allowClear: true,placeholder: "Select"});
+        $(".mt_select_mlt").select2({width: 'resolve',allowClear: true,placeholder: "Select",closeOnSelect:false});
+        $(".mt-tree").select2({width: 'resolve',allowClear: true,placeholder: "Select",closeOnSelect:false,formatResult: format_mt_tree,
+            formatSelection: format_mt_tree});
+        
 /*	
 	if(readCookie("helpstatus") != "on" && readCookie("helpstatus") != "off"){
 		createCookie("helpstatus","on",0);

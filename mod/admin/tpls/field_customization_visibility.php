@@ -50,10 +50,16 @@
             <td> </td>
             <td>  </td>
             <td>  </td>
-            <td><?php echo $fields1['reset_visible_new'] ?></td>
-            <td><?php echo $fields1['reset_visible_view'] ?></td>
+            <td>
+            <button type="submit" name="reset_visible_new" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button>
+             </td>
+            <td>
+            <button type="submit" name="reset_visible_view" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button>
+            </td>
             <?php if($browse_needed){?>     
-            <td><?php echo $fields1['reset_visible_browse'] ?> </td>
+            <td>
+            <button type="submit" name="reset_visible_browse" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button>
+            </td>
             <?php } ?>     
         </tr>
     </tbody>

@@ -12,9 +12,9 @@ class shnMessageQueue
             if(count($type) < 1)
                 continue;
             if($type == "error" ){
-                echo "<div class='alert alert-error spanauto'>";
+                echo "<div class='alert alert-error'>";
             }else{
-                echo "<div class='alert alert-info spanauto'>";
+                echo "<div class='alert alert-info'>";
             }
             echo "<strong>".ucfirst($type)."</strong>";
             echo '<button type="button" class="close" data-dismiss="alert">×</button><ul>';

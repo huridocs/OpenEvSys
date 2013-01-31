@@ -3,9 +3,9 @@
 
 <div class="panel">
     <?php if(!isset($logs) || sizeof($logs) == 0 ){ ?>
-        <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+        <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT') ?>
-        </div><br/>
+        </div>
     <?php }else{?>
     <?php $pager->render_pages(); ?>
     <table class='table table-bordered table-striped table-hover'>

@@ -69,8 +69,8 @@ class PersonVictimSearch {
 		}
 		
 		?>		
-<button type="submit" class="btn" name="search" ><i class="icon-search"></i><?php echo _t('SEARCH')?></button>
-		<a class="btn" href="#" id="related_victim_search_close"><i class="icon-remove"></i><?php echo _t('CLOSE')?></a>
+<button type="submit" class="btn" name="search" ><i class="icon-search"></i> <?php echo _t('SEARCH')?></button>
+		<a class="btn" href="#" id="related_victim_search_close"><i class="icon-remove"></i> <?php echo _t('CLOSE')?></a>
 		<br/><br/>
 		<?php
     }

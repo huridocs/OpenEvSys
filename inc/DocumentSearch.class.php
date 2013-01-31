@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class for search,add new document and link the document(s) to event or person.
  *
@@ -25,110 +26,107 @@
  * @package Framework
  * 
  */
+class DocumentSearch {
 
-class DocumentSearch 
-{        
-    public function render()
-	{
-		if(isset($_POST['new_doc'])){
-			$this->showDocumentAddForm();
-		}
-		else{
-			$this->showSearchForm();
-        	$this->searchResult();	
-		}		
-    }	
-    
-	protected function showDocumentAddForm()
-	{
-        include_once APPROOT.'inc/lib_form_util.inc';        
-		
-		echo "<h4>" ._t('ADD_SUPPORTING_DOCUMENT_S_') . "</h4>";			
-			
-		$document_form = document_form('new');
-		$fields = shn_form_get_html_fields($document_form);
-		$fields = place_form_elements($document_form,$fields);
-		?>
-		<input type="submit" class="btn" name="save_doc" value="<?php echo _t('SAVE_DOCUMENT') ?>" onclick="add_anchor(this.form,'document_field');"/>	
-		<a class="btn" href="#document_field" id='close_doc_add_form'><?php echo _t('CLOSE');?></a>
-		<?php
+    public function render() {
+        if (isset($_POST['new_doc'])) {
+            $this->showDocumentAddForm();
+        } else {
+            $this->showSearchForm();
+            $this->searchResult();
+        }
     }
 
-    protected function showSearchForm()
-	{
-        include_once APPROOT.'inc/lib_form_util.inc';
-        include_once APPROOT.'inc/lib_form.inc';		
-		
+    protected function showDocumentAddForm() {
+        include_once APPROOT . 'inc/lib_form_util.inc';
+
+        echo "<h4>" . _t('ADD_SUPPORTING_DOCUMENT_S_') . "</h4>";
+
+        $document_form = document_form('new');
+        $fields = shn_form_get_html_fields($document_form);
+        $fields = place_form_elements($document_form, $fields);
+        ?>
+        <div class="control-group">
+            <div class="controls"> 
+                <button type="submit" class="btn" name="save_doc"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-ok"></i> <?php echo _t('SAVE_DOCUMENT') ?></button>	
+                <a class="btn" href="#document_field" id='close_doc_add_form'><i class="icon-remove"></i> <?php echo _t('CLOSE'); ?></a>
+            </div></div>
+        <?php
+    }
+
+    protected function showSearchForm() {
+        include_once APPROOT . 'inc/lib_form_util.inc';
+        include_once APPROOT . 'inc/lib_form.inc';
+
         $document_form = document_form('search');
         formArrayRefine($document_form);
-		
-        foreach($person_form as $key=>&$element) {
-			if($_GET[$key] != null){
-				$element['extra_opts']['value'] = $_GET[$key];
-			}
-		}
-										
-		$fields = shn_form_get_html_fields($document_form);
-		$fields = place_form_elements($document_form,$fields);
-				
-		?>		
-		<input type="submit" class="btn" name="new_doc" value="<?php echo _t('NEW')?>" onclick="add_anchor(this.form,'document_field');"/>
-		<input type="submit" class="btn" name="search" value="<?php echo _t('SEARCH')?>" onclick="add_anchor(this.form,'document_field');"/>		
-		<a class="btn" href="#document_field" id='close_doc_search_form'><?php echo _t('CLOSE');?></a>
-		<br /><br />
-		<?php			
+
+        foreach ($person_form as $key => &$element) {
+            if ($_GET[$key] != null) {
+                $element['extra_opts']['value'] = $_GET[$key];
+            }
+        }
+
+        $fields = shn_form_get_html_fields($document_form);
+        $fields = place_form_elements($document_form, $fields);
+        ?>
+        <div class="control-group">
+            <div class="controls"> 
+                <button type="submit" class="btn btn-primary" name="new_doc"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-plus icon-white"></i> <?php echo _t('NEW') ?></button>
+                <button type="submit" class="btn" name="search"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-search"></i> <?php echo _t('SEARCH') ?></button>	
+                <a class="btn" href="#document_field" id='close_doc_search_form'><i class="icon-remove"></i> <?php echo _t('CLOSE'); ?></a>
+            </div></div>
+        <?php
     }
-    
-    protected function searchResult()
-    {
-    	include_once APPROOT.'inc/lib_form.inc';
 
-        require_once(APPROOT.'mod/analysis/analysisModule.class.php');
-    	$analysisModule = new analysisModule();
-    	$sqlStatement = $analysisModule->generateSqlforEntity('supporting_docs_meta',null,$_POST, 'search');
- 		$entity_type_form_results = generate_formarray('supporting_docs_meta' ,'browse');	
- 		$entity_type_form_results['doc_id']['type'] = 'text';
- 		$field_list = array();
-		foreach($entity_type_form_results as $field_name => $field){
-			$field_list[  $field['map']['field']  ] = $field[ 'label' ];
-		}
- 		
-		foreach($entity_type_form_results as $fieldName => &$field){
-			$field['extra_opts']['help'] = null;
-			$field['label'] = null;
-			$field['extra_opts']['clari'] = null;
-			$field['extra_opts']['value'] = $_GET[$fieldName];	
-		    $field['extra_opts']['required'] = null;
-		}
+    protected function searchResult() {
+        include_once APPROOT . 'inc/lib_form.inc';
 
-		$entity_fields_html = shn_form_get_html_fields($entity_type_form_results);		
-		
-		$htmlFields = array();
-		//iterate through the search fields, checking input values
-		foreach($entity_type_form_results as $field_name => $x){   
-			// Generates the view's Label list
-			$htmlFields[$field_name] = $entity_fields_html[$field_name]	;		
-		}
-		$result_pager = Browse::getExecuteSql($sqlStatement);			
+        require_once(APPROOT . 'mod/analysis/analysisModule.class.php');
+        $analysisModule = new analysisModule();
+        $sqlStatement = $analysisModule->generateSqlforEntity('supporting_docs_meta', null, $_POST, 'search');
+        $entity_type_form_results = generate_formarray('supporting_docs_meta', 'browse');
+        $entity_type_form_results['doc_id']['type'] = 'text';
+        $field_list = array();
+        foreach ($entity_type_form_results as $field_name => $field) {
+            $field_list[$field['map']['field']] = $field['label'];
+        }
+
+        foreach ($entity_type_form_results as $fieldName => &$field) {
+            $field['extra_opts']['help'] = null;
+            $field['label'] = null;
+            $field['extra_opts']['clari'] = null;
+            $field['extra_opts']['value'] = $_GET[$fieldName];
+            $field['extra_opts']['required'] = null;
+        }
+
+        $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);
+
+        $htmlFields = array();
+        //iterate through the search fields, checking input values
+        foreach ($entity_type_form_results as $field_name => $x) {
+            // Generates the view's Label list
+            $htmlFields[$field_name] = $entity_fields_html[$field_name];
+        }
+        $result_pager = Browse::getExecuteSql($sqlStatement);
         $columnValues = $result_pager->get_page_data();
-        $columnValues = set_links_in_recordset( $columnValues , 'supporting_docs_meta' );
+        $columnValues = set_links_in_recordset($columnValues, 'supporting_docs_meta');
 
-        set_huriterms_in_record_array( $entity_type_form_results , $columnValues );
-        
-		//rendering the view
-		$columnNames = $field_list;	
-    	$this->htmlFields = $htmlFields;
+        set_huriterms_in_record_array($entity_type_form_results, $columnValues);
 
-	    if($columnValues != null && count($columnValues) ){
-			$result_pager->render_post_pages();		
-			shn_form_get_html_doc_search_ctrl($columnNames, $columnValues, $htmlFields);	
-			$result_pager->render_post_pages();		
-		}
-		else{
-			shnMessageQueue::addInformation(_t('NO_RECORDS_WERE_FOUND_'));
-	        echo shnMessageQueue::renderMessages();
-		}
-    			
+        //rendering the view
+        $columnNames = $field_list;
+        $this->htmlFields = $htmlFields;
+
+        if ($columnValues != null && count($columnValues)) {
+            $result_pager->render_post_pages();
+            shn_form_get_html_doc_search_ctrl($columnNames, $columnValues, $htmlFields);
+            $result_pager->render_post_pages();
+        } else {
+            shnMessageQueue::addInformation(_t('NO_RECORDS_WERE_FOUND_'));
+            echo shnMessageQueue::renderMessages();
+        }
     }
+
 }
 ?>

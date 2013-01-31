@@ -10,27 +10,30 @@
     <div class="form-container">
     <form class="form-horizontal"  action='<?php echo get_url('person','permissions')?>' method='post' enctype='multipart/form-data'>
     <div class="field">
+         <fieldset>
     <label for="<?php echo $name?>"></label>
-    <ul class='role_list controler_list'>
+    
 <?php 
     foreach($roles as $role=>$item_name){
         $disable = ($role=='admin')?' disabled="disabled" ':'';
         $checked = (is_array($value)&&array_key_exists($role,$value))?"checked='checked'":'';
 ?>
-     <li><input type="checkbox" name="roles[]" value="<?php echo $role?>" <?php echo $checked.$disable ?> /><span><?php echo $item_name ?></span></li>
+        <label class="checkbox">
+            <input type="checkbox" name="roles[]" value="<?php echo $role?>" <?php echo $checked.$disable ?> /><span><?php echo $item_name ?></span>
+        </label>
 	<?php
     }
 ?>
-    </ul>
-    <input type="submit" class="btn" name='update' value="<?php echo _t('UPDATE') ?>" />
-    </div>
+  </fieldset>
+    <button class="btn" name='update' type="submit"  ><i class="icon-ok"></i> <?php echo _t('UPDATE') ?></button>
+      </div>
     <div style='clear:both' />
     <br />
     <br />
     <h3><?php echo _t('USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON') ?></h3>
     <br />
     <input type="text" value='' name='add_user' />
-    <input type="submit" class="btn" value="<?php echo _t('SHARE') ?>" />
+    <button type="submit" class="btn"  ><i class="icon-share"></i> <?php echo _t('SHARE') ?></button>
     <span>&nbsp;<?php echo _t('TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_') ?></span>
     <br />
     <br />
@@ -53,7 +56,7 @@
     </table>
     </div>
     <br />
-    <!-- <a class="btn" href="<?php echo get_url('person','get_event') ?>"><?php echo _t('CANCEL')?></a> -->
+    <!-- <a class="btn" href="<?php echo get_url('person','get_event') ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> -->
     </form>
     </div>
 </div>

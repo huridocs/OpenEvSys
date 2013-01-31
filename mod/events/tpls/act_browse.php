@@ -2,7 +2,7 @@
 <?php
 	if(isset($_GET['filter']) || count($columnValues) ){
 ?>
-<div id="browse">
+<div id="browse" >
 <?php 
 	if($columnValues != null && count($columnValues) ){
 		$result_pager->render_pages();

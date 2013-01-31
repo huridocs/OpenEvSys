@@ -178,7 +178,13 @@ function shn_form_date($label,$name,$extra_opts)
     $value = ($_POST[$name])? $_POST[$name] : $extra_opts['value'];
     $value = ($value=='0000-00-00')?'':$value;
 
-    $class = 'input-medium datepicker';
+    $class = 'datepicker ';
+    if(isset($extra_opts['class'])){
+        $class .= $extra_opts['class'];
+    }else{
+        $class .= "input-medium";
+    }
+
     if(isset($extra_opts['error']) && count($extra_opts['error'])>0)
         $class .= ' error ';
 
@@ -278,7 +284,7 @@ function shn_form_select($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select title="<?php echo $name?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <select class="select" title="<?php echo $name?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -331,7 +337,7 @@ function shn_form_mt_select($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <select class="mt_select" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -416,7 +422,7 @@ function shn_form_mt_select_mlt($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select name="<?php echo $name?>[]" id="<?php echo $name?>" multiple="multiple" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>" title="<?php echo _t('SELECT').' '.$label ?>">
+    <select class="mt_select_mlt" name="<?php echo $name?>[]" id="<?php echo $name?>" multiple="multiple" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>" title="<?php echo _t('SELECT').' '.$label ?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -502,6 +508,13 @@ function shn_form_radio($label,$name,$extra_opts)
 
 function shn_form_mt_tree($label,$name,$extra_opts)
 {
+    _shn_form_mt_tree($label,$name,$extra_opts);
+    
+}
+
+
+function _shn_form_mt_tree($label,$name,$extra_opts,$multiple = false)
+{
 
     global $global;
     global $shn_tabindex;
@@ -517,13 +530,78 @@ function shn_form_mt_tree($label,$name,$extra_opts)
     }
     //print out the tree
 ?><div class="controls">
-    <script language="javascript">
-        hurimap.code<?php echo $value ?> = '<?php echo get_mt_term($value) ?>';
-    </script>
-    <input type="hidden" name="<?php echo $name?>" id="<?php echo $name ?>" value="<?php echo $value ?>" class='single_tree' />
-    <?php
-    _shn_form_print_mt_tree($extra_opts['mt'],$name);
+   <?php
+   
+   
+    $mt = $extra_opts['mt'];
+    $data_array = MtFieldWrapper::getMTList($mt);
+    $count = count($data_array);
+   if(!function_exists(strlen2)){
+    function strlen2($val){
+        return strlen($val["label"]);
+    }
+   }
+    $lengths = array_map('strlen2', $data_array);
+    $letterlength = 8;
+    
+    $width = max($lengths)*$letterlength;
+    if($width<220){
+        $width = "";
+    }elseif($width > 400){
+        $width = 400;
+    }
+    
     ?>
+    <select class="mt-tree" title="<?php echo $name?>" <?php if($width)echo 'style="width:'.$width.'px"';?> 
+            onchange="<?php echo $extra_opts['onchange']?>" 
+            name="<?php echo $name?>" id="<?php echo $name?>"
+ <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>"
+ <?php if($multiple)echo ' multiple="multiple"';?> >
+    <?php
+    $level = 0;
+     for($i=0; $i<$count; )
+        {
+            $element1 = $data_array[$i];
+            $element2 = $data_array[++$i];
+
+            $h1 = strlen(rtrim($element1['huri_code'],'0'));
+            $h2 = strlen(rtrim($element2['huri_code'],'0'));
+
+            if($h1%2 == 1)$h1++;
+            if($h2%2 == 1)$h2++;
+
+             if(is_array($value)){
+            $sel = ( in_array($element1['vocab_number'] , $value) ) ? 'selected="selected"' : null ;
+             }else{
+            $sel = ( $element1['vocab_number'] == $value ) ? 'selected="selected"' : null ;
+             }
+              ?>
+                <option value="<?php echo $element1['vocab_number'] ?>" <?php echo $sel?> data-level="<?php echo $level?>"><?php echo $element1['label']?></option>
+            
+                <?php
+           if($h1 < $h2){
+               $level++;
+                //echo "\n<ul>\n";
+                $h2 = $h2 - 2;
+                while($h1 < $h2){   
+                    $level++;
+                    //echo "\n<li><span>--</span><ul>\n";
+                    $h2 = $h2 - 2;
+                }
+            }
+            if($h2 < $h1 && isset($element2)){
+                while($h2 < $h1){   
+                    $level--;
+                    //echo "\n</ul></li>\n";
+                    $h1 = $h1 - 2;
+                }
+            }
+          
+        }
+    
+    ?>
+    </select>
+  
 
     <?php
     if($extra_opts['clari']){
@@ -537,12 +615,54 @@ function shn_form_mt_tree($label,$name,$extra_opts)
         <?php
 }
 
-
-
 function _shn_form_print_mt_tree($mt,$name)
 {	
     $data_array = MtFieldWrapper::getMTList($mt);
     $count = count($data_array);
+   
+    ?>
+    <select class="mt-tree" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <?php
+    $level = 0;
+     for($i=0; $i<$count; )
+        {
+            $element1 = $data_array[$i];
+            $element2 = $data_array[++$i];
+
+            $h1 = strlen(rtrim($element1['huri_code'],'0'));
+            $h2 = strlen(rtrim($element2['huri_code'],'0'));
+
+            if($h1%2 == 1)$h1++;
+            if($h2%2 == 1)$h2++;
+
+              ?>
+                <option value="<?php echo $element1['vocab_number'] ?>" data-level="<?php echo $level?>"><?php echo $element1['label']?></option>
+            
+                <?php
+           if($h1 < $h2){
+               $level++;
+                //echo "\n<ul>\n";
+                $h2 = $h2 - 2;
+                while($h1 < $h2){   
+                    $level++;
+                    //echo "\n<li><span>--</span><ul>\n";
+                    $h2 = $h2 - 2;
+                }
+            }
+            if($h2 < $h1 && isset($element2)){
+                while($h2 < $h1){   
+                    $level--;
+                    //echo "\n</ul></li>\n";
+                    $h1 = $h1 - 2;
+                }
+            }
+          
+        }
+    
+    ?>
+    </select>
+    <?php
+    return;
     if($count > 100){
         ?><ul class="mt-tree" id="<?php echo $name?>_ul" field_id="<?php echo $name ?>" mt_url="<?php get_url('home','mt_tree',null,array('list_code'=>$mt),'text') ?>"><?php 
     }
@@ -594,7 +714,9 @@ function _shn_form_print_mt_tree($mt,$name)
 
 function shn_form_mt_tree_mlt($label,$name,$extra_opts)
 {
-
+ _shn_form_mt_tree($label,$name,$extra_opts,true);
+ 
+ return;
     global $global;
     global $shn_tabindex;
     
@@ -743,23 +865,37 @@ function shn_form_related_person($label,$name,$extra_opts)
 	    	<?php    		
     	}
     	
-    	
-   		echo "<fieldset id='person_search_form'>";	
+    	?>
+                        
+
+<fieldset id='person_search_form'>
+    <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('PERSONS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content"><?php	
 		include_once APPROOT.'inc/PersonSearch.class.php';		
 		$personSearch = New PersonSearch();	
 		$personSearch->render();
-		echo "</fieldset>";
+		?>
+</div></div></div></fieldset>
+                    <?php
     }
     else{
     	?>
     	<a class="show_search_form" href="#" id="show_related_person" style="display;"><?php echo _t('SHOW_SEARCH_FORM');?></a>
 		<a class="hide_search_form" href="#" id="hide_related_person" style="display:none;"><?php echo _t('HIDE_SEARCH_FORM');?></a>
-    	<?php
-    	echo "<fieldset id='person_search_form' style='display:none;'>";	
+    	<fieldset id='person_search_form' style='display:none;'>
+                         <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('PERSONS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
+            <?php
 		include_once APPROOT.'inc/PersonSearch.class.php';		
 		$personSearch = New PersonSearch();	
 		$personSearch->render();
-		echo "</fieldset>";
+		?>
+                </div></div></div></fieldset>
+                <?php
     }
    	$extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
@@ -808,22 +944,31 @@ function shn_form_related_victim($label,$name,$extra_opts)
 			<a class="hide_search_form" href="#" id="hide_related_victim" style="display:none;"><?php echo _t('HIDE_SEARCH_FORM');?></a>
 	    	<?php
     	}
-   		echo "<fieldset id='related_victim_search'>";	
+   		?>
+                        <fieldset id='related_victim_search'>
+                            <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('PERSONS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content"><?php
 		include_once APPROOT.'inc/PersonVictimSearch.class.php';		
 		$personSearch = New PersonVictimSearch();	
 		$personSearch->render();
-		echo "</fieldset>";
+		?></div></div></div></fieldset><?php
     }
     else{
     	?>
     	<a class="show_search_form" href="#" id="show_related_victim" style="display;"><?php echo _t('SHOW_SEARCH_FORM');?></a>
 		<a class="hide_search_form" href="#" id="hide_related_victim" style="display:none;"><?php echo _t('HIDE_SEARCH_FORM');?></a>
-    	<?php
-    	echo "<fieldset id='related_victim_search' style='display:none;'>";	
+    	<fieldset id='related_victim_search' style='display:none;'>
+            <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('PERSONS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
+                    <?php
 		include_once APPROOT.'inc/PersonVictimSearch.class.php';		
 		$personSearch = New PersonVictimSearch();	
 		$personSearch->render();
-		echo "</fieldset>";
+		?></div></div></div></fieldset><?php
     }	
    	$extra_opts['help'] = null;
     shn_form_extra_opts($extra_opts);
@@ -871,24 +1016,33 @@ function shn_form_related_event($label,$name,$extra_opts)
 	    	<?php	
     	}
     	
-   		echo "<fieldset id='related_event_search'>";	
+   		?><fieldset id='related_event_search'>
+                    <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('EVENTS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
+                    <?php
 		include_once APPROOT.'inc/EventSearch.class.php';
 		$data['event_id'] = $_GET['eid'];
 		$eventSearch = New EventSearch();	
 		$eventSearch->render($data);	
-		echo "</fieldset>";
+		?></div></div></div></fieldset>
+                        <?php
     }
     else{
     	?>
     	<a class="show_search_form" href="#" id="show_related_event" style="display;"><?php echo _t('SHOW_SEARCH_FORM');?></a>
 		<a class="hide_search_form" href="#" id="hide_related_event" style="display:none;"><?php echo _t('HIDE_SEARCH_FORM');?></a>
-    	<?php
-    	echo "<fieldset id='related_event_search' style='display:none;'>";	
+    	<fieldset id='related_event_search' style='display:none;'>
+              <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('EVENTS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content"><?php	
 		include_once APPROOT.'inc/EventSearch.class.php';
 		$data['event_id'] = $_GET['eid'];
 		$eventSearch = New EventSearch();	
 		$eventSearch->render($data);	
-		echo "</fieldset>";
+		?></div></div></div></fieldset><?php
     }
    
    	
@@ -1034,18 +1188,25 @@ function shn_form_document($label,$name,$extra_opts)
 
 	<?php
 	if(isset($_POST['search']) || $_GET['request_page'] != null || isset($_POST['new_doc'])){
-		echo "<fieldset id = document_search>";	
+		?><fieldset id = document_search> <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('DOCUMENTS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content"><?php	
 		include_once APPROOT.'inc/DocumentSearch.class.php';
 		$documentSearch = New DocumentSearch();	
 		$documentSearch->render();	
-		echo "</fieldset>";
+		?></div></div></div></fieldset><?php
 	}	
 	else{
-		echo "<fieldset id='document_search' style='display:none;'>";	
+		?><fieldset id='document_search' style='display:none;'>
+                    <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('DOCUMENTS')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content"><?php
 		include_once APPROOT.'inc/DocumentSearch.class.php';
 		$documentSearch = New DocumentSearch();	
 		$documentSearch->render();	
-		echo "</fieldset>";		
+		?></div></div></div></fieldset><?php	
 	}
 	unset($doclistarray);
        $extra_opts['help'] = null;
@@ -1066,17 +1227,24 @@ function shn_form_address($label,$name,$extra_opts)
 	<br />
 	<br />	
 	<fieldset id='address_frm' >
+            <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('Address')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
 <?php		
 	include_once APPROOT.'inc/AddAddress.class.php';
 	$addAddress = New AddAddress();	
 	$addAddress->render();
 	
 ?>
-	</fieldset>
+	</div></div></div></fieldset>
 <?php	
 	if((is_array($extra_opts['value']) && count($extra_opts['value']) != 0) || (isset($_POST['person_address']))){
 ?>
-	<fieldset>
+	<fieldset> <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('Address')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
 	<table id="addressTable" class="table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
@@ -1148,12 +1316,16 @@ function shn_form_address($label,$name,$extra_opts)
 ?>		
 		</tbody>
 	</table>
-	</fieldset>
+	</div></div></div></fieldset>
 <?php
 	}
 	else {
 ?>
 	<fieldset id="addressArrayList">
+            <div class="box" style="margin-top:10px">
+                              <h4 class="box-header round-top"><?php echo  _t('Address')?> </h4>
+            <div class="box-container-toggle">
+                <div class="box-content">
 	<table id="addressTable" name="addressTable" style="display:none;" class="table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
@@ -1173,7 +1345,7 @@ function shn_form_address($label,$name,$extra_opts)
 		<tbody>
 		</tbody>
 	</table>
-	</fieldset>
+	</div></div></div></fieldset>
 <?php
 	}
         ?>

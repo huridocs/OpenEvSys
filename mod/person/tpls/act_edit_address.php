@@ -12,10 +12,15 @@
 		$fields = shn_form_get_html_fields($address_form);		
 		$fields = place_form_elements($address_form,$fields);
 		?>
-        <center>        
-        <a class='btn' href='<?php get_url('person','address_list') ?>' ><?php echo _t('CANCEL') ?></a>
-        <?php echo $fields['update'];?>
-        </center>
+           <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+
+                 <a class='btn' href='<?php get_url('person','address_list') ?>' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
+          </div>
+      </div>
+      
     </form>
     </div>
 </div>

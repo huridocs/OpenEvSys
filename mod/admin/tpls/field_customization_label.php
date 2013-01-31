@@ -25,23 +25,23 @@
             <td><?php echo $record['field_number']; ?></td>
             <td><?php echo $record['field_name']; ?></td>
             <td><?php echo $record['field_type']; ?></td>
-            <td style="padding:0px;background:#FFF;border:1px solid #666;">
+            <td>
                 <?php $name = 'label_'. $record['field_number']; //echo $record['field_label']; ?>
-                <input style='width:100%;border:none;' type="text" name="<?php echo $name;?>" id="<?php echo $name;?>"  value="<?php echo $record['field_label'];?>"></input>
+                <input  type="text" name="<?php echo $name;?>" id="<?php echo $name;?>"  value="<?php echo $record['field_label'];?>"></input>
             </td>
 <?php
             if(isset($locale)){
 ?>
-            <td style="padding:0px;background:#FFF;border:1px solid #666;">
+            <td>
                 <?php $name = 'label_l10n_'. $record['field_number']; //echo $record['field_label']; ?>
-                <input style='width:100%;border:none;' type="text" name="<?php echo $name;?>" id="<?php echo $name;?>"  value="<?php echo $record['field_label_l10n'];?>"></input>
+                <input type="text" name="<?php echo $name;?>" id="<?php echo $name;?>"  value="<?php echo $record['field_label_l10n'];?>"></input>
             </td>
 <?php
             }
 ?>
         </tr>
 <?php   } ?>
-        <tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>>
+       <!-- <tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>>
             <td>  </td>
             <td>  </td>
             <td>  </td>
@@ -55,7 +55,7 @@
 <?php
             }
 ?>
-        </tr>
+        </tr>-->
     </tbody>
 </table>
 </div>

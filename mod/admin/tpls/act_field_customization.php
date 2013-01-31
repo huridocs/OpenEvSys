@@ -4,11 +4,15 @@
     <form class="form-horizontal"  action='<?php echo get_url('admin', 'field_customization') ?>' method='get'>
         <input type='hidden' name='mod' value='admin' />
         <input type='hidden' name='act' value='field_customization' />
-        <fieldset style="margin:10px"> 
-            <?php $fields = shn_form_get_html_fields($customization_form, false); ?>
-            <?php echo $fields['entity_select'] ?>
-            <?php echo $fields['change_entity'] ?>
-        </fieldset>
+
+        <?php $fields = shn_form_get_html_fields($customization_form, false); ?>
+        <div class='control-group'><?php echo $fields['entity_select'] ?></div>
+        <div class="control-group">
+            <div class="controls"><button type="submit"  name="change_entity"  class="btn" ><?php echo _t('SELECT') ?></button>
+            </div></div>
+
+
+
     </form>
 </div>
 
@@ -30,21 +34,21 @@
     ?>
     <br />
     <div>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs tabnav">
             <li <?php print_tab_attr('label', "li"); ?> >
                 <a <?php print_tab_attr('label'); ?> ><?php echo _t('LABELS') ?></a>
             </li>
-            <li <?php print_tab_attr('visibility',"li"); ?>><a <?php print_tab_attr('visibility'); ?> ><?php echo _t('VISIBILITY') ?></a>
+            <li <?php print_tab_attr('visibility', "li"); ?>><a <?php print_tab_attr('visibility'); ?> ><?php echo _t('VISIBILITY') ?></a>
             </li>
-            <li <?php print_tab_attr('validation',"li"); ?>><a <?php print_tab_attr('validation'); ?> ><?php echo _t('VALIDATION') ?></a>
+            <li <?php print_tab_attr('validation', "li"); ?>><a <?php print_tab_attr('validation'); ?> ><?php echo _t('VALIDATION') ?></a>
             </li>
-            <li <?php print_tab_attr('search',"li"); ?>><a <?php print_tab_attr('search'); ?> ><?php echo _t('SEARCH') ?></a>
+            <li <?php print_tab_attr('search', "li"); ?>><a <?php print_tab_attr('search'); ?> ><?php echo _t('SEARCH') ?></a>
             </li>
-            <li <?php print_tab_attr('order',"li"); ?>><a <?php print_tab_attr('order'); ?> ><?php echo _t('ORDER') ?></a>
+            <li <?php print_tab_attr('order', "li"); ?>><a <?php print_tab_attr('order'); ?> ><?php echo _t('ORDER') ?></a>
             </li>
-            <li <?php print_tab_attr('cnotes',"li"); ?>><a <?php print_tab_attr('cnotes'); ?> ><?php echo _t('CLARIFYING_NOTES') ?></a>
+            <li <?php print_tab_attr('cnotes', "li"); ?>><a <?php print_tab_attr('cnotes'); ?> ><?php echo _t('CLARIFYING_NOTES') ?></a>
             </li>
-            <li <?php print_tab_attr('help',"li"); ?>><a <?php print_tab_attr('help'); ?> ><?php echo _t('HELP_TEXT') ?></a>
+            <li <?php print_tab_attr('help', "li"); ?>><a <?php print_tab_attr('help'); ?> ><?php echo _t('HELP_TEXT') ?></a>
             </li>   </ul>
     </div>
     <div class="panel">
@@ -59,8 +63,15 @@
                 throw new shn404Exception();
             ?>
             <center>
-                <?php echo $fields1['update'] ?>
-                <?php echo $fields1['reset'] ?>
+                <?php
+                if(!$field_help_text){
+                    ?>
+                
+                <button type="submit" name="update" class='btn'  ><i class="icon-ok"></i> <?php echo _t('UPDATE_FORM') ?></button>
+                <button type="submit" name="reset" class='btn' onclick="return confirm('Are you sure?')" ><i class="icon-remove"></i> <?php echo _t('RESET_ALL') ?></button>
+             <?php
+                }
+                ?>
             </center>
             <?php echo $fields1['entity_select'] ?>    
         </form>

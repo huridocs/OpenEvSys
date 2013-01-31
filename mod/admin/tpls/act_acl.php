@@ -3,9 +3,9 @@
 <br />
 <form class="form-horizontal"  action="<?php get_url('admin','acl'); ?>" method="post">
 <center>
-<label><?php echo _t('NEW_ROLE_NAME') ?></label>
+<h3><?php echo _t('NEW_ROLE_NAME') ?></h3>
 <input type="text" name="role_name" /> 
-<button  type="submit" class="btn btn-primary"  name='add_role' ><i class="icon-plus icon-white"></i><?php echo _t('ADD_ROLE') ?></button>
+<button  type="submit" class="btn btn-primary"  name='add_role' ><i class="icon-plus icon-white"></i> <?php echo _t('ADD_ROLE') ?></button>
 </center>
 <table class='table table-bordered table-striped table-hover'>
     <thead>

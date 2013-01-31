@@ -1143,6 +1143,7 @@ class eventsModule extends shnModule {
             $field['extra_opts']['clari'] = null;
             $field['extra_opts']['value'] = $_GET[$fieldName];
             $field['extra_opts']['required'] = null;
+            $field['extra_opts']['class'] = "input-block-level";
         }
 
         $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);

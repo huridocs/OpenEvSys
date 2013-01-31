@@ -2,11 +2,20 @@
 <?php include_once('event_title.php'); ?>
 
 <div class="panel">
-    <div class='flow'>
-        <span class="over first"><?php echo _t('ADD_SOURCE')?></span>
-        <strong><?php echo _t('ADD_INFORMATION')?></strong>
-        <span><?php echo _t('FINISH')?></span>
-    </div>    
+    <div class="fuelux">
+        <div id="myWizard" class="wizard">
+            <ul class="steps">
+                <li class="complete">
+                        <span class="badge badge-success">1</span><?php echo _t('ADD_SOURCE') ?><span class="chevron"></span>
+                   
+                
+                <li  class="active"><span class="badge  badge-info ">2</span><?php echo _t('ADD_INFORMATION') ?><span class="chevron"></span></li>
+                 <li><span class="badge">3</span><?php echo _t('FINISH') ?><span class="chevron"></span></li>
+            </ul>
+           
+        </div>
+    </div>
+      
     <br />
     <h3><?php echo _t('INFORMATION_ABOUT'). "[". $event->event_title ."]"; ?></h3>
     <br />
@@ -19,7 +28,7 @@
         <br />
         <center>
         <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><?php echo _t('PREVIOUS')?></a><span>&nbsp;&nbsp;</span>
-           <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+           <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
            <?php echo $fields['finish'];?>
         </center>
         </form>

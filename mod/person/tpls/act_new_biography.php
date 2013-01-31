@@ -14,10 +14,15 @@
 		$fields = shn_form_get_html_fields($biography_form);
         $fields = place_form_elements($biography_form,$fields);
 ?>
-	<center>
-	<a class="btn" href="<?php echo get_url('person','person'); ?>"><?php echo _t('CANCEL'); ?></a>
-	<?php echo $fields['save'];?>
-	</center>
+      <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+
+       <a class="btn" href="<?php echo get_url('person','person'); ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL'); ?></a>
+	</div>
+      </div>
+	
 </form>
 </div>
 <br style="clear:both" />

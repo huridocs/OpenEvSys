@@ -8,53 +8,53 @@ if($field_help_text){
 <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td width='100px'><?php echo(_t('SECTION')); ?></td>
-            <td><?php echo $conf['fb_locale'] ?></td>
-            <?php if(isset($locale)){?><td width='40%'><?php echo $locale?></td><?php } ?>
+            <th><?php echo(_t('SECTION')); ?></th>
+            <th><?php echo $conf['fb_locale'] ?></th>
+            <?php if(isset($locale)){?><th><?php echo $locale?></th><?php } ?>
         </tr>
     </thead>
     <tbody>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> style="border-top:1px solid #C2C2A7">
+        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> >
             <td><?php echo(_t('DEFINITION')); ?></td>
             <td>
-                <textarea style='width:100%;height:100px;border:none' name='definition'><?php echo $field_help_text['definition']; ?></textarea>
+                <textarea  name='definition'><?php echo $field_help_text['definition']; ?></textarea>
             </td>
             <?php if(isset($locale)){?>
             <td><?php echo $record['l10n_definition']?>
-                <textarea style='width:100%;height:100px;border:none' name='l10n_definition'><?php echo $field_help_text['l10n_definition']; ?></textarea>
+                <textarea  name='l10n_definition'><?php echo $field_help_text['l10n_definition']; ?></textarea>
             </td>
             <?php } ?>
         </tr>
         <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
             <td><?php echo(_t('GUIDELINES')); ?></td>
             <td>
-                <textarea style='width:100%;height:100px;border:none' name='guidelines'><?php echo $field_help_text['guidelines']; ?></textarea>
+                <textarea  name='guidelines'><?php echo $field_help_text['guidelines']; ?></textarea>
             </td>
             <?php if(isset($locale)){?>
             <td><?php echo $record['l10n_definition']?>
-                <textarea style='width:100%;height:100px;border:none' name='l10n_guidelines'><?php echo $field_help_text['l10n_guidelines']; ?></textarea>
+                <textarea  name='l10n_guidelines'><?php echo $field_help_text['l10n_guidelines']; ?></textarea>
             </td>
             <?php } ?>
         </tr>
         <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
             <td><?php echo(_t('ENTRY')); ?></td>
             <td>
-                <textarea  style='width:100%;height:100px;border:none'name='entry'><?php echo $field_help_text['entry']; ?></textarea>
+                <textarea  name='entry'><?php echo $field_help_text['entry']; ?></textarea>
             </td>
             <?php if(isset($locale)){?>
             <td><?php echo $record['l10n_definition']?>
-                <textarea style='width:100%;height:100px;border:none' name='l10n_entry'><?php echo $field_help_text['l10n_entry']; ?></textarea>
+                <textarea  name='l10n_entry'><?php echo $field_help_text['l10n_entry']; ?></textarea>
             </td>
             <?php } ?>
         </tr>
         <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
             <td><?php echo(_t('EXAMPLE')); ?></td>
             <td>
-                <textarea style='width:100%;height:100px;border:none' name='examples'><?php echo $field_help_text['examples']; ?></textarea>
+                <textarea  name='examples'><?php echo $field_help_text['examples']; ?></textarea>
             </td>
             <?php if(isset($locale)){?>
             <td><?php echo $record['l10n_definition']?>
-                <textarea style='width:100%;height:100px;border:none' name='l10n_examples'><?php echo $field_help_text['l10n_examples']; ?></textarea>
+                <textarea  name='l10n_examples'><?php echo $field_help_text['l10n_examples']; ?></textarea>
             </td>
             <?php } ?>
         </tr>
@@ -62,8 +62,8 @@ if($field_help_text){
 </table>
 <br />
     <center>
-    <button type='submit' class='btn' name='save_help' ><?php echo _t('SAVE_HELP_TEXT') ?><i class="icon-ok"></i></button>
-    <input type='submit' class='btn' value="<?php echo _t('CANCEL') ?>" />
+    <button type='submit' class='btn' name='save_help' ><i class="icon-ok"></i> <?php echo _t('SAVE_HELP_TEXT') ?></button>
+    <button type='submit' class='btn' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
     </center>
 </div>
 <?php
@@ -75,10 +75,10 @@ else{
 <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
-            <td width='100px'><?php echo(_t('FIELD_LABEL')); ?></td>
-            <td><?php echo _t('SECTION') ?></td>
-            <td><?php echo $conf['fb_locale'] ?></td>
-            <?php if(isset($locale)){?><td width='40%'><?php echo $locale?></td><?php } ?>
+            <th><?php echo(_t('FIELD_LABEL')); ?></th>
+            <th><?php echo _t('SECTION') ?></th>
+            <th><?php echo $conf['fb_locale'] ?></th>
+            <?php if(isset($locale)){?><td><?php echo $locale?></td><?php } ?>
         </tr>
     </thead>
     <tbody>
@@ -86,26 +86,26 @@ else{
         $res = $help_text_pager->get_page_data();
         foreach($res as $record){  
 ?>
-            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> style="border-top:1px solid #C2C2A7">
+            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> >
                 <td rowspan='4'>
                     <a href="<?php get_url('admin','field_customization',null,array('entity_select'=>$entity_select,'sub_act'=>'help','fno'=>$record['field_number'])) ?>"><?php echo $record['field_label']; ?></a></td>
                 <td><?php echo(_t('DEFINITION')); ?></td>
-                <td  style='padding:5px;'><?php echo $record['definition']; ?></td>
+                <td><?php echo $record['definition']; ?></td>
                 <?php if(isset($locale)){?><td><?php echo $record['l10n_definition']?></td><?php } ?>
             </tr>
             <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
                 <td><?php echo(_t('GUIDELINES')); ?></td>
-                <td  style='padding:5px;'><?php echo $record['guidelines']; ?></td>
+                <td><?php echo $record['guidelines']; ?></td>
                 <?php if(isset($locale)){?><td><?php echo $record['l10n_guidelines']?></td><?php } ?>
             </tr>
             <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
                 <td><?php echo(_t('ENTRY')); ?></td>
-                <td  style='padding:5px;'><?php echo $record['entry']; ?></td>
+                <td><?php echo $record['entry']; ?></td>
                 <?php if(isset($locale)){?><td><?php echo $record['l10n_entry']?></td><?php } ?>
             </tr>
             <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
                 <td><?php echo(_t('EXAMPLE')); ?></td>
-                <td  style='padding:5px;'><?php echo $record['examples']; ?></td>
+                <td><?php echo $record['examples']; ?></td>
                 <?php if(isset($locale)){?><td><?php echo $record['l10n_examples']?></td><?php } ?>
             </tr>
 <?php   } ?>

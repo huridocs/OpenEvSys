@@ -20,10 +20,13 @@
         popuate_formArray($act_form,$act);
         $fields = shn_form_get_html_fields($act_form); 
         place_form_elements($act_form,$fields); ?>
-        <center>        
-        <?php echo $fields['update'] ?>
-    	<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
-    	</center>
+        <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id,'act_id'=>$_GET['act_id'],'row'=>$_GET['row'],'type'=>'act')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> <span>&nbsp;</span>
+    	</div>
+            </div>
         <br />
     </form>
     </div>

@@ -10,9 +10,9 @@
     <?php
 	if ($related_events==NULL && $related_events_reverse == NULL){
     ?>
-    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+    <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_') ?>
-    </div><br/>
+    </div>
     <?php
     }
     else

@@ -2,17 +2,24 @@
     include_once('event_title.php');
 ?>
 <div class="panel">
-    <div class='flow'>
-        <span class='first' ><?php echo _t('ADD_EVENT_INFORMATION')?></span>
-        <strong class='active'><?php echo _t('FINISH')?></strong>
-    </div>
+    <div class="fuelux">
+         <div id="myWizard" class="wizard">
+            <ul class="steps">
+                <li class="complete">
+                        <span class="badge  badge-success">1</span><?php echo _t('ADD_EVENT_INFORMATION') ?><span class="chevron"></span>
+                   
+                 <li class="active"><span class="badge  badge-info">2</span><?php echo _t('FINISH') ?><span class="chevron"></span></li>
+            </ul>
+           
+        </div></div>
+  
     <br />
-    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+    <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <strong><?php echo _t('FINISHED__YOU_CAN_DO_THE_FOLLOWING_')?></strong><br />
-        <a href="<?php get_url('events','edit_event',null)?>" ><?php echo _t('CONTINUE_EDITING_THIS_EVENT_RECORD')?></a><br />
-        <a href="<?php get_url('events','vp_list',null)?>"><?php echo _t('ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT')?></a>
+        <a href="<?php get_url('events','edit_event',null)?>" class="btn"><?php echo _t('CONTINUE_EDITING_THIS_EVENT_RECORD')?></a><br />
+        <a href="<?php get_url('events','vp_list',null)?>" class="btn btn-primary"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT')?></a>
     </div>
-    <br />
+    
 <?php
     $event_form = event_form('view');
     popuate_formArray($event_form , $event);

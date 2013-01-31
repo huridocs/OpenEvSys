@@ -33,13 +33,12 @@
 	}
 	else{
 ?>
-		<div class='alert alert-info spanauto'>
+		<div class='alert alert-info'>
 <button type="button" class="close" data-dismiss="alert">×</button>
 
     	<?php echo _t('THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_'); ?>
-		<br />		
-		<br />
-    	</div><br/>
+		
+    	</div>
 <?php
 	}
 ?>

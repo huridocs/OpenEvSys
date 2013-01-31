@@ -13,10 +13,15 @@
         place_form_elements($person_form,$fields); 
 		
 	?>
-		<center>
-		<?php echo $fields['update']; ?>
-        <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-        </center>
+            <div class="control-group">
+                <div class="controls">
+
+                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+                  <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
+         </div>
+            </div>
+
+	
         </form>
     </div>
 </div>

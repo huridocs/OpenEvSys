@@ -8,14 +8,15 @@
 <?php
 	if($victim_records->RecordCount() || $perpetrator_records->RecordCount() || $source_records->RecordCount() || $intervening_party_records->RecordCount()){ 
 ?>
-	<div class='dialog confirm'>
+	<div class="alert alert-error">
+     
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_PERSON_')?></h3>
     <form class="form-horizontal"  action="<?php get_url('person','delete_person')?>" method="post">
         <br />
         <center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('FORCE_DELETE') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
-        </center>        
+             <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+      </center>        
     </form>
     </div>
 	<table class='table table-bordered table-striped table-hover'>
@@ -46,13 +47,15 @@
 	}
 	else{
 ?>
-	<div class='dialog confirm'>
+	<div class="alert alert-error">
+     
     <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THIS_PERSON_')?></h3>
     <form class="form-horizontal"  action="<?php get_url('person','delete_person')?>" method="post">
         <br />
         <center>
-        <input type='submit' class='btn' name='yes' value='<? echo _t('DELETE') ?>' />
-        <input type='submit' class='btn' name='no' value='<? echo _t('CANCEL') ?>' />
+             <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+       
         </center>        
     </form>
     </div>

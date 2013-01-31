@@ -4,9 +4,9 @@
 <br />
 <br />
 <?php if(!isset($intv_list)){ ?>
-    <div class='alert alert-info spanauto'> <button type="button" class="close" data-dismiss="alert">×</button> 
+    <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_') ?>
-    </div><br/>
+    </div>
 <?php }else{ ?>
 <form class="form-horizontal"  action="<?php get_url('events','delete_intervention')?>" method="post">
 <table class="table table-bordered table-striped table-hover">
