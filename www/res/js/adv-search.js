@@ -129,6 +129,15 @@ function openevsysDomain()
         }catch(e){}
         return this.data[entity_name].fields[field_name].list_code;
     }
+    this.getMtSelectOptions = function(options) {
+        var defaults = {
+            url: "index.php?mod=home&act=mt_select&stream=text",
+            selected : null
+        };
+        var options = $.extend(defaults, options);
+
+        return $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+    }
 
     this.getSelectFields = function(entity){
         try{
@@ -522,6 +531,8 @@ function queryBuilder(){
         var options = openevsysDomain.getInstance().getRelatedEntities(this.getSelectedEntities());
         
         var select = $("<select id=\"\" name=\"\" class=\"entselect\" />");
+        $("<option />", {value:  "", text: ""}).appendTo(select);
+          
         for(var option in options){
             $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
            
@@ -535,10 +546,10 @@ function queryBuilder(){
             });
             ul.append(li);*/
         }
-        var div = $("<div class='row'></div>");
+        var div = $("<div class='row-fluid show-grid'></div>");
         div.append(select);
         $('#query_builder').append(div);
-        select.select2({width: 'resolve',placeholder: _('SELECT_ENTITY')});
+        select.select2({width: 'resolve',placeholder: _('SELECT_ENTITY'),allowClear:false});
         select.on("change", function() { 
             //alert($(this).val());
             qb = queryBuilder.getInstance(null);
@@ -546,6 +557,7 @@ function queryBuilder(){
             groupBy.getInstance().update();
         });
         return;
+        
         var con = $('<li class="qb-condition qb-new" data-status="new"></li>');
         var a   = $('<a class="qb-entity">'+_('SELECT_ENTITY')+'</a>');
         con.append(a);
@@ -593,6 +605,8 @@ function queryBuilder(){
         var options = openevsysDomain.getInstance().getEntityFields(entselect.val());
        
         var select = $("<select id=\"\" name=\""+entselect.val()+"\" class=\"fieldselect\" />");
+        $("<option />", {value:  "", text: ""}).appendTo(select);
+        
         for(var option in options){
             $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
            
@@ -608,7 +622,7 @@ function queryBuilder(){
         }
         var div = $(entselect).closest("div");
         div.append(select);
-        //$('#query_builder').append(div);
+        
         $(".entselect").select2("disable");
         select.select2({width: 'resolve',placeholder: _('SELECT_FIELD')});
         select.on("change", function() { 
@@ -639,6 +653,7 @@ function queryBuilder(){
     }
 
     this.addField = function(fieldselect){
+        $(".fieldselect").select2("disable");
         this.addController(fieldselect);
         this.addNewCondition();
         return;
@@ -663,19 +678,83 @@ function queryBuilder(){
         var field_type = od.getFieldType(field_name, entity_name);
         
         var options = openevsysDomain.getInstance().getOperator(field_type);
-        
-       
+               
         var select = $("<select id=\"\" name=\"\" class=\"operatorselect\" />");
+        
         for(var option in options){
             $("<option />", {value:  options[option].value, text: options[option].label}).appendTo(select);
         }
        
         div.append(select);
-        //$('#query_builder').append(div);
-        $(".fieldselect").select2("disable");
-        select.select2({width: 'resolve',placeholder: _('SELECT_FIELD')});
-        
+        select.select2({width: 'resolve'});
+        if(field_type == 'date'){
+            select.on("change", function() { 
+                var ov = $(this).val();
+                if( ov == 'between' || ov == 'not_between'){
+                    var o = $('<input type="text" value="" class="daterangepicker" />');
+                    div.append(o);
+                    o.daterangepicker();
+                    //queryBuilder.createDate($(e.currentTarget).parent().find('.qb-con:first'), "range");
+                }
+                else{
+                    var o = $('<input type="text" value="" class="datepicker" />');
+                    div.append(o);
+                    o.datepicker({format:'yyyy-mm-dd' });
+                    /*queryBuilder.createDate($(e.currentTarget).parent().find('.qb-con:first'), null);
+                    var val = $(e.currentTarget).parent().find('.qb-con:first').attr('value');
+                    $(e.currentTarget).parent().find('.qb-con:first').attr('value',val.substring(0,10));*/
+                }
+            });
+        }
+        switch(field_type){
+            case "date": 
+                var o = $('<input type="text" value="" class="datepicker qb-con" />');
+                div.append(o);
+                o.datepicker({format:'yyyy-mm-dd' });
+               
+                /*var o = $('<input type="text" value="" class="qb-con" />').click(function(){
+                    registerDate = $(this);
+                });
+                o.attr('readonly',true);
+                div.append(o);
+                queryBuilder.createDate(o,null);*/
+                break;
+            case "mt_select":
+                var mt_select = $("<select id=\"\" name=\"\" class=\"qb-con\" />");
+                //$("<option />", {value:  "", text: ""}).appendTo(select);
+                mt_select.qb_mt_select({mt: od.getListCode(field_name, entity_name) });
+                div.append(mt_select);
+                mt_select.select2({width: 'resolve'});
+               
+                /*var o = $('<select class="qb-con"  class="qb-con"><option value="" selected="selected"></option></select>');
+                e.after(o);
+                o.qb_mt_select({mt: od.getListCode(field_name, entity_name) });*/
+                break;
+            case "mt_tree":
+                var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
+                mt_tree.qb_mt_tree({mt: od.getListCode(field_name, entity_name) });
+                div.append(mt_tree);
+                mt_tree.select2({width: 'resolve',formatResult: format_mt_tree,formatSelection: format_mt_tree});
+                
+                /*var o = $('<a class="qb-mt-tree">'+_('SELECT_TREE_OPTION')+'</a>');
+                e.after(o);
+                o.qb_mt_tree({mt: od.getListCode(field_name, entity_name) });*/
+                break;
+            case "radio":
+                var name = genName();
+                var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
+                div.append(o);
+                break;
+            case "checkbox":
+                var o = $('<label class="checkbox inline"><input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/></label>');
+                div.append(o);
+                break;
+            default:
+                var o = $('<input type="text" value="" class="qb-con" />');
+                div.append(o);
+        }
         return;
+  
         
         
         var entity = e.parent().find('.qb-entity:first');
@@ -791,7 +870,7 @@ function queryBuilder(){
         $.each(arr ,function(){
             var v = $(this).val();
             //var v = $(this).attr('data-value');
-            if(v != null && $.inArray(v , entities) == -1)
+            if(v != null && v != "" && $.inArray(v , entities) == -1)
             entities.push(v);
         });
         return entities;
@@ -800,13 +879,14 @@ function queryBuilder(){
     this.getQuery = function(){
         //create condition array
         var conditions = new Array();
-        var arr = $('#query_builder').find('.qb-condition');
+        var arr = $('#query_builder').find('.row-fluid');
         $.each(arr ,function(){
             if($(this).attr('data-status')=='new')return true;
             var c = new Object();
-            c.entity = $(this).find('.qb-entity:first').attr('data-value');
-            c.field = $(this).find('.qb-field:first').attr('data-value');
-            c.operator = $(this).find('.qb-operator:first').attr('data-value');
+            
+            c.entity = $(this).find('select.entselect:first').val();
+            c.field = $(this).find('select.fieldselectd:first').val();
+            c.operator = $(this).find('select.operatorselect:first').val();
             c.value = $(this).find('.qb-con:first').attr('value');
             //handle checkboxes
             if($(this).find('.qb-checkbox').length > 0 ){
@@ -831,6 +911,7 @@ function queryBuilder(){
         //display select variables
         var select = new Array();
         var entities = this.getSelectedEntities();
+        
         for(var i in entities){
             var fields = openevsysDomain.getInstance().getSelectFields(entities[i]);
             for(var f in fields){
@@ -866,13 +947,27 @@ function advSearch(){
 
     this.Search = function(){
         this.query = this.query_builder.getQuery();
+        
         if(this.query.conditions < 1 ){
             $.pnotify({ pnotify_title: 'Error', pnotify_text: _('PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_'), pnotify_type: 'error' });
             return;
         }
-    	this.search_result = searchResults.getInstance();
+        
+        $("#list123").dataTable( {
+		/*"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+		"sPaginationType": "bootstrap",
+		"oLanguage": {
+			"sLengthMenu": "_MENU_ records per page"
+		},*/
+                "bProcessing": true,
+                "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query))
+	} );
+        var result_panel = $('.resultPanel');
+        result_panel.show();
+        
+    	/*this.search_result = searchResults.getInstance();
     	this.search_result.setQuery(this.query);
-        this.search_result.fetchResultsAndDisplay();
+        this.search_result.fetchResultsAndDisplay();*/
     }
 
     this.Count = function(){
@@ -1046,17 +1141,24 @@ function treePop(element){
     $.fn.qb_mt_tree = function(options) {
         var defaults = {
             options: ['Empty...'],
-            multi  : false
+            multi  : false,
+            url:'index.php?mod=home&act=mt_tree&stream=text',
+            selected: null
         };
         var options = $.extend(defaults, options);
 
         return this.each(function()
         {
+            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+        });
+        
+        /*return this.each(function()
+        {
             var obj = $(this);
             var mp = new treePop(obj);
             mp.createPopup(options);
             obj.click(function(){return mp.showPopup();});
-        });
+        });*/
 
         function debug($obj) {
             if (window.console && window.console.log) {

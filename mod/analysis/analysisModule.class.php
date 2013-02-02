@@ -250,7 +250,7 @@ class analysisModule extends shnModule {
         //var_dump('names' , $this->columnNames); 
     }
 
-/* }}} */
+    /* }}} */
 
     /* {{{ Query Functions */
 
@@ -501,11 +501,11 @@ class analysisModule extends shnModule {
                         $string = "";
                         foreach ($list as $term) {
                             $term_val = get_mt_term(trim($term));
-                            if($term_val){
-                                $string .= ", " .$term_val ;
+                            if ($term_val) {
+                                $string .= ", " . $term_val;
                             }
                         }
-                        
+
                         echo '"' . ltrim($string, ',') . '"' . ',';
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
@@ -580,7 +580,7 @@ class analysisModule extends shnModule {
                         //echo '"' . ucwords(str_replace('_', ' ', $key)) . '"' . ',';
                         $data = ucwords(str_replace('_', ' ', $key));
                         cleanData($data);
-                        echo $data."\t";
+                        echo $data . "\t";
                     }
                 }
                 $count++;
@@ -598,15 +598,15 @@ class analysisModule extends shnModule {
                         $string = "";
                         foreach ($list as $term) {
                             $term_val = get_mt_term(trim($term));
-                            if($term_val){
-                                $string .= ", " .$term_val ;
+                            if ($term_val) {
+                                $string .= ", " . $term_val;
                             }
                         }
-                        
+
                         $data = ltrim($string, ',');
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
-                           // echo '"' . _t('YES') . '"' . ',';
+                            // echo '"' . _t('YES') . '"' . ',';
                             $data = _t('YES');
                         } else {
                             $data = _t('NO');
@@ -621,13 +621,14 @@ class analysisModule extends shnModule {
                             $data = _t('NO');
                         }
                     } else {
-                       // echo '"' . $record . '"' . ',';
+                        // echo '"' . $record . '"' . ',';
                         $data = $record;
                     }
                     cleanData($data);
-                    echo $data."\t";
+                    echo $data . "\t";
                 }
-                echo "\r\n";;
+                echo "\r\n";
+                ;
             }
             exit();
         }
@@ -684,11 +685,11 @@ class analysisModule extends shnModule {
                         $string = "";
                         foreach ($list as $term) {
                             $term_val = get_mt_term(trim($term));
-                            if($term_val){
-                                $string .= ", " .$term_val ;
+                            if ($term_val) {
+                                $string .= ", " . $term_val;
                             }
                         }
-                        
+
                         $this->columnValues[$rkey][$key] = ltrim($string, ',');
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
@@ -1163,7 +1164,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         return $joinSql;
     }
 
-/* }}} */
+    /* }}} */
 
     private function getSelectFieldName($formField, &$sqlArray) {
         //var_dump($formField);
@@ -1308,6 +1309,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         //convert json query to an object 
         $query = json_decode($_GET['query']);
+
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
@@ -1472,6 +1474,54 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         echo json_encode($response);
 
         exit(0);
+    }
+
+    public function act_facetsearch() {
+        
+    }
+
+    public function act_facetsearchresults() {
+        $resp = array("response" => array("start" => 47, "found" => 57));
+
+        $records = array();
+        $rand = rand(5, 50);
+
+        function rand_string($length) {
+            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
+            $str = "";
+            $size = strlen($chars);
+            for ($i = 0; $i < $length; $i++) {
+                $str .= $chars[rand(0, $size - 1)];
+            }
+
+            return $str;
+        }
+
+        for ($i = 1; $i <= $rand; $i++) {
+            $records[] = rand_string(50);
+        }
+        $resp["response"]["records"] = $records;
+
+        $resp["facets"] = array("year" =>
+            array("terms" => array(array('term' => 'asd ads', 'count' => rand(1, 10)),
+                    array('term' => 'dfds', 'count' => rand(1, 10)),
+                    array('term' => 'rtert', 'count' => rand(1, 10)),
+                    array('term' => 'trt', 'count' => rand(1, 10)))),
+            "publisher" =>
+            array("terms" => array(array('term' => 'asdfa', 'count' => rand(1, 10)),
+                    array('term' => 'lll', 'count' => rand(1, 10)),
+                    array('term' => 'pq', 'count' => rand(1, 10)),
+                    array('term' => 'kj', 'count' => rand(1, 10)))));
+
+
+        $markers = array();
+        for ($i = 1; $i <= $rand; $i++) {
+            $markers[] = array("latitude" => rand(0, 80), "longitude" => rand(0, 100), "title" => "bl asdasd" . rand(0, 360), "content" => "<h1>asasd</h1><br/>bl bla bla" . rand(0, 360));
+        }
+        $resp["markers"] = $markers;
+
+        echo json_encode($resp);
+        exit;
     }
 
 }

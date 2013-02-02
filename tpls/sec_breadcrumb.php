@@ -125,7 +125,9 @@ if ($module == "events") {
        case 'search_query':
             $breadcrumbs->pushCrumb(array('name' => _t('SAVED_QUERIES'), 'mod' => 'analysis', 'act' => 'search_query'), 1);
             break;
-      
+       case 'facetsearch':
+            $breadcrumbs->pushCrumb(array('name' => _t('Faceted search'), 'mod' => 'analysis', 'act' => 'facetsearch'), 1);
+            break;
       default:
             //$breadcrumbs->pushCrumb(array('name' => _t('BROWSE_DOCUMENT'), 'mod' => 'analysis', 'act' => 'browse'), 1);
             break;

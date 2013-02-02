@@ -338,13 +338,54 @@ class homeModule extends shnModule
 
     function act_mt_tree()
     {        
-        $micro_thesauri = new MicroThesauri($_GET['list_code']);
+        $data_array = MtFieldWrapper::getMTList($_GET['list_code']);
+        $count = count($data_array);
+    $level = 0;
+     for($i=0; $i<$count; )
+        {
+            $element1 = $data_array[$i];
+            $element2 = $data_array[++$i];
+
+            $h1 = strlen(rtrim($element1['huri_code'],'0'));
+            $h2 = strlen(rtrim($element2['huri_code'],'0'));
+
+            if($h1%2 == 1)$h1++;
+            if($h2%2 == 1)$h2++;
+
+             if(is_array($value)){
+            $sel = ( in_array($element1['vocab_number'] , $value) ) ? 'selected="selected"' : null ;
+             }else{
+            $sel = ( $element1['vocab_number'] == $value ) ? 'selected="selected"' : null ;
+             }
+              ?>
+                <option value="<?php echo $element1['vocab_number'] ?>" <?php echo $sel?> data-level="<?php echo $level?>"><?php echo $element1['label']?></option>
+            
+                <?php
+           if($h1 < $h2){
+               $level++;
+                $h2 = $h2 - 2;
+                while($h1 < $h2){   
+                    $level++;
+                    $h2 = $h2 - 2;
+                }
+            }
+            if($h2 < $h1 && isset($element2)){
+                while($h2 < $h1){   
+                    $level--;
+                    $h1 = $h1 - 2;
+                }
+            }
+          
+        }
+        exit;
+   
+        /*$micro_thesauri = new MicroThesauri($_GET['list_code']);
         if ($_REQUEST['root'] == "source"){
             $this->terms = $micro_thesauri->getRootTerms();
         }
         else{ 
             $this->terms = $micro_thesauri->getChildren($_REQUEST['root']);
-        }
+        }*/
     }
 
     function act_mt_select()

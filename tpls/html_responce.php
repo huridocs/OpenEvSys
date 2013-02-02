@@ -25,6 +25,7 @@
                 <link rel="stylesheet" type="text/css" media="screen" href="res/select2/select2.css" />
 
                 <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/datepicker.css" >
+<link rel="stylesheet" type="text/css" media="screen" href="res/bootstrap/bootstrap-daterangepicker/daterangepicker.css" >
 
 
                     <link href="res/locale/<?php echo $conf['locale'] ?>.json" lang="<?php echo $conf['locale'] ?>" rel="gettext"/>
@@ -33,8 +34,14 @@
 
                     <script src="res/bootstrap/bootstrap.min.js"></script>
                     <script src="res/bootstrap/bootstrap-datepicker.js"></script>
+                    <script src="res/bootstrap/bootstrap-daterangepicker/date.js"></script>
+                    <script src="res/bootstrap/bootstrap-daterangepicker/daterangepicker.js"></script>
+                    
                     <script type="text/javascript" src="res/select2/select2.min.js"></script>
+<script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
 
+                    
+                    
                     <script type="text/javascript" src="res/jquery/jquery.gettext.js"></script>
 
                     <script type="text/javascript" src="res/jquery/jquery.pop.js"></script>		

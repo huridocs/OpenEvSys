@@ -160,6 +160,10 @@ $menus["analysis"]["search_query"] = array(
     "title" => _t('SAVED_QUERIES'),
     "url" => get_url('analysis', 'search_query', null, null, null, true));
 
+$menus["analysis"]["facetsearch"] = array(
+    "title" => _t('Faceted search'),
+    "url" => get_url('analysis', 'facetsearch', null, null, null, true));
+
 
 //Home
 $menus["home"]["edit_user"] = array(

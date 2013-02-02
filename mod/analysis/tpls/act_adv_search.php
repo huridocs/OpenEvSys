@@ -14,7 +14,7 @@
             </fieldset>
             <fieldset id="qb-conditions" >
               <!--  <legend><?php echo _t('SEARCH_CONDITIONS') ?></legend> -->
-                <ol id="query_builder"></ol>
+                <div id="query_builder"></div>
             </fieldset>
             <div class="clearfix" ></div>
             <button    id="qb-search-but" class="qb-but btn" ><i class="icon-ok"></i> <?php echo _t('SEARCH')?></button>
