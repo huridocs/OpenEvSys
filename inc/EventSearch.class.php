@@ -51,8 +51,9 @@ class EventSearch {
 		$fields = shn_form_get_html_fields($event_form);	
 		$fields = place_form_elements($event_form,$fields);
 		
-		shn_form_submit(_t('SEARCH'),'search');
 		?>
+<button type="submit" class="btn" name="search"  ><i class="icon-search"></i> <?php echo _t('SEARCH') ?></button>
+        
 		<a class="btn" href="#" id="related_event_search_close"><i class="icon-remove"></i> <?php echo _t('CLOSE')?></a>
 		<?php
 		echo "<br/><br />";	

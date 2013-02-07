@@ -521,7 +521,8 @@ function shn_form_get_html_fields($form, $field_div = true) {
             ob_start();
             $controler($options['label'], $field_id, $options['extra_opts']);
             $html = ob_get_clean();
-            if ($options['type'] != 'submit' && $field_div)
+            
+            if ($options['type'] != 'submit' && $options['type'] != 'hidden' && $field_div)
                 $html = "<div class='control-group'>$html</div>";
 
             $fields[$field_id] = $html;
@@ -638,6 +639,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
                                 }
                                 ?>
                                 <th><?php echo _t('Actions') ?></th>
+                                
                             </tr>
                             <tr class="filter" id="filter_text">
                                 <?php
@@ -648,10 +650,10 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
                                 }
                                 ?>
                                 <td class="table_actions" >
-                                        <button type="submit" name="filter" class="btn btn-small">
+                                        <button type="submit" name="filter" class="btn btn-mini">
   <i class="icon-filter"></i><?php echo _t('FILTER') ?>
 </button>
-                                       <a class="btn btn-small" href="<?php get_url($mod, $action, null, array('reset' => 'true')); ?>">
+                                       <a class="btn btn-mini" href="<?php get_url($mod, $action, null, array('reset' => 'true')); ?>">
                                         <i class="icon-remove"></i>  
                                             <?php echo _t('RESET') ?></a>
                                 </td>
@@ -666,10 +668,12 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
                             foreach ($columnValues as $columnvalue) {
                                 ?>
                                 <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
+                                   
                                     <?php
                                     $tdIndex = 1;
 
                                     foreach ($columnNames as $field => $value) {
+                                        
                                         if ($tdIndex == 1) {
                                             if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
                                                 $columnvalue[$field] = " . . . ";
@@ -688,16 +692,16 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
                                         $tdIndex++;
                                     }
                                     ?>
-                                    <td>
-                                        <a class="btn btn-success btn-small" href="<?php echo $columnvalue['record_url']?>" rel="tooltip" title="View">
+                                     <td>
+                                        <a class="btn btn-success btn-mini" href="<?php echo $columnvalue['record_url']?>" rel="tooltip" title="View">
                                             <i class="icon-zoom-in icon-white"></i>  
                                             <?php echo _t('View') ?>                       
                                         </a>
-                                        <a class="btn btn-info btn-small" href="<?php echo $columnvalue['record_edit_url']?>" rel="tooltip" title="Edit">
+                                        <a class="btn btn-info btn-mini" href="<?php echo $columnvalue['record_edit_url']?>" rel="tooltip" title="Edit">
                                             <i class="icon-edit icon-white"></i>  
                                             <?php echo _t('Edit') ?>                                          
                                         </a>
-                                        <a class="btn btn-danger btn-small" href="<?php echo $columnvalue['record_delete_url']?>" rel="tooltip" title="Delete">
+                                        <a class="btn btn-danger btn-mini" href="<?php echo $columnvalue['record_delete_url']?>" rel="tooltip" title="Delete">
                                             <i class="icon-trash icon-white"></i> 
                                             <?php echo _t('Delete') ?>
                                         </a>
@@ -859,7 +863,7 @@ function shn_form_get_html_doc_search_ctrl($columnNames = null, $columnValues = 
     ?>
     </tbody>
     <tr>
-        <td colspan="<?php echo $no_of_column; ?>" align="right"><input type="submit" class="btn" value="select" id="selected_doc" name="selected_doc"
+        <td colspan="<?php echo $no_of_column; ?>" align="right"><input type="submit" class="btn " value="select" id="selected_doc" name="selected_doc"
                 onclick="selected_doclist(this.form,'document_field'); return false;" />
         </td>
     </tr>

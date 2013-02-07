@@ -22,7 +22,7 @@ include_once('event_title.php');
                     ?>
                 
                 </fieldset>
-                <button class="btn" name='update' type="submit"  ><i class="icon-ok"></i> <?php echo _t('UPDATE') ?></button>
+                <button class="btn" name='update' type="submit"  ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
             </div>
             <div style='clear:both' />
             <br />

@@ -55,9 +55,9 @@
     <input type="text"  id="query_name"  name="query_name" /><br />
     <label><?php echo _t('DESCRIPTION') ?></label> 
     <textarea type="text" name="query_desc" id="query_desc" rows="4" cols="30" ></textarea><br />
-    <button id="qb-qs-save" type="button"   class="btn"><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-    <button id="qb-qs-cancle" type="button" class="btn" ><i class="icon-stop"></i> <?php echo _t('CANCEL'); ?></button>
-     
+    <button id="qb-qs-cancle" type="button" class="btn" ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></button>
+     <button id="qb-qs-save" type="button"   class="btn"><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+    
 </div>
 <script language="javascript">
     var as = new advSearch();

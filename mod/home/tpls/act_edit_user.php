@@ -16,10 +16,10 @@
       <div class="control-group">
                 <div class="controls">
 
-                    <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-
-                    <a class="btn" href="<?php get_url('home' ) ?> " ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
-                </div></div>
+                    
+                    <a class="btn" href="<?php get_url('home' ) ?> " ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+          <button type="submit" class="btn  btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+      </div></div>
 
 </form>
 </div>

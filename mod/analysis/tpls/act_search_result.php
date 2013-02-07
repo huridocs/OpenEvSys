@@ -29,7 +29,7 @@
 
 <fieldset style="border:0px;margin:0px;" >
     <legend><?php echo _t('ACTIONS')?></legend>
-	<a class="btn" href="<?php echo get_url('analysis','search_form',null,array('main_entity'=>$main_entity)) ?>"><?php echo _t('BACK'); ?></a>&nbsp;&nbsp;&nbsp;	
+	<a class="btn" href="<?php echo get_url('analysis','search_form',null,array('main_entity'=>$main_entity)) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK'); ?></a>&nbsp;&nbsp;&nbsp;	
 	<?php 
 	echo _t('CHANGE_VIEW__');
 	

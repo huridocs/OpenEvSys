@@ -1477,7 +1477,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     public function act_facetsearch() {
-        
+        $entities = array('event', 'act' ,'victim' ,'involvement' ,'perpetrator','information',
+                'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
+            'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
+            'destruction');
+        $this->entities = $entities;
     }
 
     public function act_facetsearchresults() {

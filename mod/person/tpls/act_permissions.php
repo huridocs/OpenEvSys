@@ -25,7 +25,7 @@
     }
 ?>
   </fieldset>
-    <button class="btn" name='update' type="submit"  ><i class="icon-ok"></i> <?php echo _t('UPDATE') ?></button>
+    <button class="btn btn-primary" name='update' type="submit"  ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
       </div>
     <div style='clear:both' />
     <br />
@@ -56,7 +56,7 @@
     </table>
     </div>
     <br />
-    <!-- <a class="btn" href="<?php echo get_url('person','get_event') ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a> -->
+    <!-- <a class="btn" href="<?php echo get_url('person','get_event') ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a> -->
     </form>
     </div>
 </div>

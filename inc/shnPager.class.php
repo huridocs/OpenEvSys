@@ -137,7 +137,7 @@ class shnPager implements BrowseStrategy
             <ul>
      
             <?php if($this->request_page != 1){ ?>
-                <li><a href="<?php $args['request_page'] = $this->request_page - 1;  get_url($request->module, $request->action , $request->tpl , $args)?>" ><?php echo _t('PREVIOUS') ?></a></li>
+                <li><a href="<?php $args['request_page'] = $this->request_page - 1;  get_url($request->module, $request->action , $request->tpl , $args)?>" ><?php echo _t('BACK') ?></a></li>
             <?php } ?>
             <?php
             

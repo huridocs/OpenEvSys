@@ -13,6 +13,6 @@
             'choose_file_upload' => array('type'=>'upload', 'label'=>_t('CHOOSE_FILE_UPLOAD'), 'map'=>array('entity'=>'document', 'field'=>'choose_file_upload')),
             'cancel' => array('type'=>'submit', 'label'=>_t('CANCEL')),
             'save' => array('type'=>'submit', 'label'=>_t('SAVE')),
-            'update' => array('type'=>'submit', 'label'=>_t('UPDATE'))
+            'update' => array('type'=>'submit', 'label'=>_t('SAVE'))
 );
 ?>

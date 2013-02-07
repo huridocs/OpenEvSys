@@ -1,7 +1,7 @@
 <?php if( acl_vp_entity_add_is_allowed() ){?>
 <a class="btn btn-primary" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_VICTIM')?></a>
 <?php } ?>
-
+<br/><br/>
 <?php if(!isset($vp_list)){ ?>
     <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME') ?>

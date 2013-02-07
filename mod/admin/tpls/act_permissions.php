@@ -5,7 +5,7 @@
 shn_form_select(_t('SELECT_ROLE'), 'role', array('options' => $roles));
 ?></div>
         <div class="control-group">
-            <div class="controls"><button type="submit"  name="change_role"  class="btn" ><?php echo _t('SELECT') ?></button>
+            <div class="controls"><button type="submit"  name="change_role"  class="btn" ><i class="icon-ok"></i> <?php echo _t('SELECT') ?></button>
             </div></div>
 
     </form>
@@ -42,7 +42,7 @@ shn_form_select(_t('SELECT_ROLE'), 'role', array('options' => $roles));
     <br />
     <?php if ($role != 'admin') { ?>
 
-        <button type="submit" class="btn" name="change_permissions" ><i class="icon-ok"></i> <?php echo _t('UPDATE_PERMISSIONS') ?></button>
+        <button type="submit" class="btn btn-primary" name="change_permissions" ><i class="icon-ok icon-white"></i> <?php echo _t('UPDATE_PERMISSIONS') ?></button>
 
     <?php } ?>
 </form>

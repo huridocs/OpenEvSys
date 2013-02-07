@@ -21,17 +21,28 @@
 <br />
 <div class="form-container"> 
 <form class="form-horizontal"  id="intervention" name="intervention" action='<?php echo get_url('events','add_intv',null,array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
-<?php	
+<div class="control-group">
+                <div class="controls">
+	<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('person_id'=> $_SESSION['intv']['intv_party'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
+    <?php /* <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('ADD_INTERVENTIONS')?></button>*/ ?>
+    
+    <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+  <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 
+        
+</div></div><?php	
     $fields = shn_form_get_html_fields($intervention_form);
     place_form_elements($intervention_form,$fields);
 ?>
 <br />
-<center>
-	<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('person_id'=> $_SESSION['intv']['intv_party'])) ?>"><?php echo _t('PREVIOUS')?></a><span>&nbsp;&nbsp;</span>
-    <?php // echo $fields['more'];?>    
-    <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id)) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-	<?php echo $fields['finish'];?>
-</center>
+ <div class="control-group">
+                <div class="controls">
+	<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('person_id'=> $_SESSION['intv']['intv_party'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
+    <?php /* <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('ADD_INTERVENTIONS')?></button>*/ ?>
+    
+    <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+  <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 
+        
+</div></div>
 </form>
 </div>
 <br style="clear:both" />

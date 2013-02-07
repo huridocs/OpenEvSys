@@ -62,8 +62,8 @@ if($field_help_text){
 </table>
 <br />
     <center>
-    <button type='submit' class='btn' name='save_help' ><i class="icon-ok"></i> <?php echo _t('SAVE_HELP_TEXT') ?></button>
-    <button type='submit' class='btn' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+    <button type='submit' class='btn' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
+    <button type='submit' class='btn btn-primary' name='save_help' ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE_HELP_TEXT') ?></button>
     </center>
 </div>
 <?php

@@ -33,6 +33,6 @@
     </tbody>
 </table>
 <center>
-<button type="submit" class="btn"  name='submit' ><i class="icon-ok"></i> <?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?></button>
+<button type="submit" class=" btn-primary"  name='submit' ><i class="icon-ok icon-white"></i> <?php echo _t('UPDATE_ACCESS_CONTROL_LIST') ?></button>
 </center>
 </form>

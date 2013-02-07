@@ -1,10 +1,15 @@
 <?php global $conf; ?>
 <h2><?php echo _t('USERS')?></h2>
 <br />
-
+  <?php if (acl_is_mod_allowed('admin')) { ?>
+                        <a  href="<?php get_url('admin', 'add_user', null,  null) ?>" class="btn btn-primary">
+                                  <i class="icon-plus icon-white"></i>  <?php echo _t('ADD_NEW_USER') ?></a>
+<br/><br/>
+                        <?php } ?>
 <?php $user_pager->render_pages(); ?>
 
 <form class="form-horizontal"  action='<?php echo get_url('admin','delete_user')?>' method='post'>
+  
 <table class='table table-bordered table-striped table-hover'>
     <thead>
         <tr>
@@ -38,7 +43,7 @@
             <td> <?php  array_to_list(acl_get_user_roles( $user['username'] )) ?>  </td>
             <td> <?php  echo $user['status'];  ?>  </td>
             <td>     
-                <a href="<?php get_url('admin','edit_user',null, array('uid'=>$user['username'] ) );?> " class="btn btn-info"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT') ?></a>
+                <a href="<?php get_url('admin','edit_user',null, array('uid'=>$user['username'] ) );?> " class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT') ?></a>
             </td>
             
             

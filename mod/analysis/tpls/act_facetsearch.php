@@ -8,7 +8,13 @@
 <script type="text/javascript" src="res/js/jquery.facetsearch.js"></script>
 	
 <div class="panel">
-	
+	<ul class="nav nav-tabs tabnav"> 
+         <li class="<?php if ($active) echo "active" ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
+            </li>
+        
+
+    </ul>
+    <div class="panel"></div>
     <div class="facetsearchcontainer"></div>
 
 </div>

@@ -20,8 +20,8 @@
 ?>
 <br />
     <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
-        <strong><?php echo _t('FINISHED__YOU_CAN_DO_THE_FOLLOWING')?></strong><br />
-        <a href="<?php get_url('events','edit_coe',null,array('eid'=>$event_id,'coeid'=>$coeid))?>" class="btn btn-primary"><i class="icon-plus icon-white"></i> <?php echo _t('CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD')?></a><br />        
+        <strong><?php echo _t('FINISHED__YOU_CAN_DO_THE_FOLLOWING')?></strong><br /><br />
+        <a href="<?php get_url('events','edit_coe',null,array('eid'=>$event_id,'coeid'=>$coeid))?>" class="btn"><i class="icon-edit"></i> <?php echo _t('CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD')?></a><br />        
     </div>
     
 </div>

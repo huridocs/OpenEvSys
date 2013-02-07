@@ -76,7 +76,7 @@
 			echo "<h3>" ._t('VIEW_ADDRESS') . "</h3>";
 			echo "<br />";
 		?>
-		<a class="btn btn-info" href="<?php echo get_url('person','edit_address',null,array('address_id'=>$_GET['address_id'])) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT_THIS_ADDRESS')?></a>
+		<a class="btn" href="<?php echo get_url('person','edit_address',null,array('address_id'=>$_GET['address_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_ADDRESS')?></a>
 		<br />
 	    <br />
 	    <form class="form-horizontal"  action='<?php echo get_url('person','edit_address')?>' method='post' enctype='multipart/form-data'>

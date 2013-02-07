@@ -8,7 +8,7 @@
         <?php $fields = shn_form_get_html_fields($customization_form, false); ?>
         <div class='control-group'><?php echo $fields['entity_select'] ?></div>
         <div class="control-group">
-            <div class="controls"><button type="submit"  name="change_entity"  class="btn" ><?php echo _t('SELECT') ?></button>
+            <div class="controls"><button type="submit"  name="change_entity"  class="btn" ><i class="icon-ok"></i>  <?php echo _t('SELECT') ?></button>
             </div></div>
 
 
@@ -67,9 +67,9 @@
                 if(!$field_help_text){
                     ?>
                 
-                <button type="submit" name="update" class='btn'  ><i class="icon-ok"></i> <?php echo _t('UPDATE_FORM') ?></button>
                 <button type="submit" name="reset" class='btn' onclick="return confirm('Are you sure?')" ><i class="icon-remove"></i> <?php echo _t('RESET_ALL') ?></button>
-             <?php
+             <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('UPDATE_FORM') ?></button>
+                <?php
                 }
                 ?>
             </center>

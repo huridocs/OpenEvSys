@@ -65,7 +65,7 @@
 	echo "<h3>" ._t('VIEW_BIOGRAPHIC_DETAILS') . "</h3>";
 	echo "<br />";
 ?>
-	<a class="btn btn-info" href="<?php echo get_url('person','edit_biography',null,array('biography_id'=>$_GET['biography_id'])) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT_THIS_BIOGRAPHIC_DETAILS')?></a>
+	<a class="btn" href="<?php echo get_url('person','edit_biography',null,array('biography_id'=>$_GET['biography_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_BIOGRAPHIC_DETAILS')?></a>
 	<br />
     <br />
 <?php
@@ -82,7 +82,7 @@
 	echo "<h3>" ._t('VIEW_RELATED_PERSON') . "</h3>";
 ?>
 	<br />
-	<a class="btn btn-success" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->related_person)) ?>"><i class="icon-zoom-in icon-white"></i><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
+	<a class="btn" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->related_person)) ?>"><i class="icon-zoom-in"></i><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
 	<br />
 <?php
 	echo "<br />";		

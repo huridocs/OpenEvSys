@@ -1500,21 +1500,21 @@ div.dataTables_scrollFoot table {
 /*
  * TableTools styles
  */
-.table tbody tr.active td,
+/*.table tbody tr.active td,
 .table tbody tr.active th {
 	background-color: #08C;
 	color: white;
-}
-
+}*/
+/*
 .table tbody tr.active:hover td,
 .table tbody tr.active:hover th {
 	background-color: #0075b0 !important;
-}
-
+}*/
+/*
 .table-striped tbody tr.active:nth-child(odd) td,
 .table-striped tbody tr.active:nth-child(odd) th {
 	background-color: #017ebc;
-}
+}*/
 
 table.DTTT_selectable tbody tr {
 	cursor: pointer;
@@ -1686,4 +1686,34 @@ width:100%
   width: auto; display:inline; 
 } 
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th{
+background-color:#F4F4E4
+}
+.table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:#F4F4E4;}
 
+.table th, .table td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+.table thead th{
+background: #EEEAD4;
+font-weight: bold;
+color: #816443;
+}
+.table thead th a{
+
+color: #816443;
+}
+.table .control-group{
+    margin-bottom:0px;
+}
+
+.table select, .table textarea, .table input{
+    margin-bottom:0px
+}
+
+.navbar-inverse .nav > li > a {
+color: #ffffff;
+font-weight: bold;
+}

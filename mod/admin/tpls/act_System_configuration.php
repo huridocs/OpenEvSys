@@ -65,6 +65,6 @@ echo get_url('admin','System_configuration')
 </table>
 <center>
 <br />
-<button type="submit" class="btn" name='submit' ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
+<button type="submit" class="btn btn-primary" name='submit' ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 </center>
 </form>

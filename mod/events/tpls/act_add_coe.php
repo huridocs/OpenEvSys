@@ -17,16 +17,23 @@ include_once('event_title.php');
     <br />    
     <div class="form-container"> 
         <form class="form-horizontal"  action='<?php echo get_url('events', 'add_coe', null, array('eid' => $_GET['eid'], 'search_type' => 'event')) ?>' method='post' enctype='multipart/form-data'>            
-<?php
+            <div class="control-group">
+                <div class="controls">
+
+
+                    <a class="btn" href="<?php echo get_url('events', 'coe_list'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
+                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+                </div>
+            </div><?php
 $fields = shn_form_get_html_fields($chain_of_events_form);
 $fields = place_form_elements($chain_of_events_form, $fields);
 ?>		
             <div class="control-group">
                 <div class="controls">
 
-                    <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
 
-                    <a class="btn" href="<?php echo get_url('events', 'coe_list'); ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL'); ?></a>
+                    <a class="btn" href="<?php echo get_url('events', 'coe_list'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
+                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                 </div>
             </div>
 

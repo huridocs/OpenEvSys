@@ -8,7 +8,7 @@
 <?php $fields = shn_form_get_html_fields($customization_form,false);  ?>
        <div class='control-group'><?php echo $fields['mt_select'] ?></div>
         <div class="control-group">
-            <div class="controls"><button type="submit"  name="change_mt"  class="btn" ><?php echo _t('SELECT') ?></button>
+            <div class="controls"><button type="submit"  name="change_mt"  class="btn" ><i class="icon-ok"></i> <?php echo _t('SELECT') ?></button>
             </div></div>
 </fieldset>
 </form>
@@ -40,7 +40,7 @@ if($_GET['parent']!=''){
         <br/>
      	<center>
         <button type='submit' class='btn btn-danger' name='delete_yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
-        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
         </center>
     </div>       
 <?php } ?>
@@ -58,8 +58,8 @@ if($_GET['parent']!=''){
         <tr class="filter">
         	<th><?php echo _t('VISIBLE')?></th>
         	<th><?php echo _t('DELETE')?></th>
-        	<td><div class='field'> <input type='text' name='huricode_filter' value='<?php echo $_POST['huricode_filter'] ?>' size='15'/> </div> </td>
-        	<td><div class='field'> <input type='text' name='mt_term_filter' value='<?php echo $_POST['mt_term_filter'] ?>' size='40' /> </div> </td>        
+        	<th><div class='field'> <input type='text' name='huricode_filter' value='<?php echo $_POST['huricode_filter'] ?>' size='15'/> </div> </th>
+        	<th><div class='field'> <input type='text' name='mt_term_filter' value='<?php echo $_POST['mt_term_filter'] ?>' size='40' /> </div> </th>        
         </tr>
         <tr>
         	<td><input type='checkbox' onchange='$("input.visible").attr("checked",this.checked)' /></td>
@@ -116,7 +116,7 @@ if($_GET['parent']!=''){
 		<tr class='actions' >
 		
             <td class='no_edit'>
-            	<input type='submit' class='btn' name='visible' value='<?php echo _t('SET') ?>' />            
+            	<button type='submit' class='btn' name='visible'  /><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>       
             </td>
             
             <td colspan='2' class='no_edit'>

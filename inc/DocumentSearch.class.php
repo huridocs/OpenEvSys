@@ -72,10 +72,10 @@ class DocumentSearch {
         ?>
         <div class="control-group">
             <div class="controls"> 
-                <button type="submit" class="btn btn-primary" name="new_doc"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-plus icon-white"></i> <?php echo _t('NEW') ?></button>
+                   <a class="btn" href="#document_field" id='close_doc_search_form'><i class="icon-remove"></i> <?php echo _t('CLOSE'); ?></a>
                 <button type="submit" class="btn" name="search"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-search"></i> <?php echo _t('SEARCH') ?></button>	
-                <a class="btn" href="#document_field" id='close_doc_search_form'><i class="icon-remove"></i> <?php echo _t('CLOSE'); ?></a>
-            </div></div>
+               <button type="submit" class="btn btn-primary" name="new_doc"  onclick="add_anchor(this.form,'document_field');" ><i class="icon-plus icon-white"></i> <?php echo _t('NEW') ?></button>
+          </div></div>
         <?php
     }
 

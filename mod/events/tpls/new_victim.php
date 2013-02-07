@@ -19,12 +19,17 @@
     <h2><?php echo _t('WHO_IS_THE_VICTIM__') ?></h2>
     <div class="form-container">
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
-            <?php $person_form = person_form('new');?>
+            <br/><div class="control-group">
+            <div class="controls">
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH')?></a>      
+            <button type="submit" class="btn btn-primary"  name='save'><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
+            </div>
+            </div> <?php $person_form = person_form('new');?>
             <?php $fields = shn_form_get_html_fields($person_form);  ?>
             <?php $fields = place_form_elements($person_form,$fields); ?>  
             <div class="control-group">
-            <div class="controls"><a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('CANCEL')?></a>      
-            <button type="submit" class="btn"  name='save'><?php echo _t('CONTINUE') ?></button>
+            <div class="controls"><a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH')?></a>      
+            <button type="submit" class="btn btn-primary"  name='save'><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
             </div>
             </div>
         </form>

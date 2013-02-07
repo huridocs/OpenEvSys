@@ -32,8 +32,8 @@ set_url_args('act_id', $act->act_record_number);
             <br>
                 <div class="control-group">
                     <div class="controls"> 
-                        <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id)) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a><span>&nbsp;&nbsp;</span>
-                        <button type="submit" class="btn" name='set_type'  ><?php echo _t('CONTINUE') ?></button>
+                        <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+                        <button type="submit" class="btn btn-primary" name='set_type'  ><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
                     </div></div>
                 <?php
             } else {
@@ -45,9 +45,9 @@ set_url_args('act_id', $act->act_record_number);
 
                <div class="control-group">
                     <div class="controls"> 
-                     <a class="btn btn-info" href="<?php echo get_url('events', 'add_ad', null, array('eid' => $event_id)) ?>"><i class="icon-edit icon-white"></i> <?php echo _t('CHANGE_ADDITIONAL_DETAIL_TYPE') ?></a>
-                    <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id)) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
-                    <button type="submit" class="btn" name='save' ><?php echo _t('CONTINUE') ?></button>
+                      <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+                    <a class="btn" href="<?php echo get_url('events', 'add_ad', null, array('eid' => $event_id)) ?>"><i class="icon-edit "></i> <?php echo _t('CHANGE_ADDITIONAL_DETAIL_TYPE') ?></a>
+                   <button type="submit" class="btn btn-primary" name='save' ><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
                 </div></div>
     <?php
 }

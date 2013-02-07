@@ -8,7 +8,7 @@
             ?>
         </div>
         <div class="control-group">
-            <div class="controls"><button type="submit"  name="update_locale"  class="btn" ><?php echo _t('SELECT') ?></button>
+            <div class="controls"><button type="submit"  name="update_locale"  class="btn" ><i class="icon-ok"></i> <?php echo _t('SELECT') ?></button>
             </div></div>
 
     </form>

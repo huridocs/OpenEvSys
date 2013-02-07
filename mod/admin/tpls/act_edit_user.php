@@ -16,7 +16,13 @@ $username = $user->getUserName();
     <?php $fields = shn_form_get_html_fields($user_form); ?>
     <div class="form-container"> 
         <form class="form-horizontal"  action='<?php echo get_url('admin', 'edit_user') ?>' method='post'>
-            <?php echo $fields['username'] ?>
+           <div class="control-group">
+                <div class="controls">
+      <a class="btn" href="<?php get_url('admin', 'user_management') ?> " ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+              
+                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+
+                </div></div> <?php echo $fields['username'] ?>
             <?php echo $fields['first_name'] ?>
             <?php echo $fields['last_name'] ?>
             <?php echo $fields['organization'] ?>
@@ -28,10 +34,10 @@ $username = $user->getUserName();
 
             <div class="control-group">
                 <div class="controls">
+      <a class="btn" href="<?php get_url('admin', 'user_management') ?> " ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+              
+                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 
-                    <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-
-                    <a class="btn" href="<?php get_url('admin', 'user_management') ?> " ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
                 </div></div> </form>
     </div>
 </div>

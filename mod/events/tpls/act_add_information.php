@@ -21,16 +21,22 @@
     <br />
     <div class="form-container"> 
         <form class="form-horizontal"  id="information" name="information" action='<?php echo get_url('events','add_information',null)?>' method='post' enctype='multipart/form-data'>
-        <?php            
+         <div class="control-group">
+                <div class="controls">
+ <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
+           <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+           <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 
+        </div></div><?php            
             $fields = shn_form_get_html_fields($information_form);
             place_form_elements($information_form,$fields);
         ?>
-        <br />
-        <center>
-        <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><?php echo _t('PREVIOUS')?></a><span>&nbsp;&nbsp;</span>
-           <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-           <?php echo $fields['finish'];?>
-        </center>
+        
+        <div class="control-group">
+                <div class="controls">
+ <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
+           <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+           <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 
+        </div></div>
         </form>
     </div>
 </div>

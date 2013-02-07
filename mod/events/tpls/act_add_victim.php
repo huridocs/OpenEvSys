@@ -19,24 +19,44 @@
 <h2><?php echo _t('WHO_IS_THE_VICTIM__') ?></h2>
 <br />
 <?php
-if(isset($victim)){
+if(isset($victim)){?>
+<div class="control-group">
+            <div class="controls">
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+
+
+
+<?php if( acl_is_entity_allowed_boolean('person','create' ) ){// if create is ever changed for this please update acl_person_entity_is_allowed() ?> 
+<a class="btn" href="<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id)) ?>"><i class="icon-plus "></i> <?php echo _t('ADD_NEW')?></a>
+<?php  } ?>
+<?php if( acl_is_entity_allowed_boolean('person','read' ) ){  // if read is ever changed for this please update acl_person_entity_is_allowed()?>
+<a class="btn  <?php if(!isset($victim)){ echo "btn-primary";  }?>" href="<?php echo get_url('events','add_victim','search_victim',array('seq'=>'search','eid'=>$event_id)) ?>"><i class="icon-search <?php if(!isset($victim)){ echo "icon-white";  }?>"></i> <?php echo _t('SEARCH_IN_DATABASE')?></a>
+<?php } ?>
+<?php if(isset($victim)){ ?>
+<a class="btn  btn-primary" href="<?php echo get_url('events','add_act',null,array('eid'=>$event_id, 'victim'=>$victim->person_record_number)) ?>"><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT')?></a>
+<?php } ?> 
+            </div></div>
+<?php
     $person_form = person_form('view');
     popuate_formArray($person_form , $victim);
     shn_form_get_html_labels($person_form , false);
 }
 ?>
-<br />
-     <div class="control-group">
+
+    <div class="control-group">
             <div class="controls">
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+
+
+
 <?php if( acl_is_entity_allowed_boolean('person','create' ) ){// if create is ever changed for this please update acl_person_entity_is_allowed() ?> 
-<a class="btn btn-primary" href="<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_NEW')?></a>
+<a class="btn" href="<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id)) ?>"><i class="icon-plus "></i> <?php echo _t('ADD_NEW')?></a>
 <?php  } ?>
 <?php if( acl_is_entity_allowed_boolean('person','read' ) ){  // if read is ever changed for this please update acl_person_entity_is_allowed()?>
-<a class="btn" href="<?php echo get_url('events','add_victim','search_victim',array('seq'=>'search','eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH_IN_DATABASE')?></a>
+<a class="btn  <?php if(!isset($victim)){ echo "btn-primary";  }?>" href="<?php echo get_url('events','add_victim','search_victim',array('seq'=>'search','eid'=>$event_id)) ?>"><i class="icon-search <?php if(!isset($victim)){ echo "icon-white";  }?>"></i> <?php echo _t('SEARCH_IN_DATABASE')?></a>
 <?php } ?>
-<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a>
 <?php if(isset($victim)){ ?>
-<a class="btn" href="<?php echo get_url('events','add_act',null,array('eid'=>$event_id, 'victim'=>$victim->person_record_number)) ?>"><?php echo  _t('CONTINUE')?></a>
+<a class="btn  btn-primary" href="<?php echo get_url('events','add_act',null,array('eid'=>$event_id, 'victim'=>$victim->person_record_number)) ?>"><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT')?></a>
 <?php } ?> 
             </div></div>
 </div>

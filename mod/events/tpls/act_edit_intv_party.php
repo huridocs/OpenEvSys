@@ -9,16 +9,22 @@
     <br />
     <div class="form-container"> 
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events','edit_intv_party',null,array('intervention_id'=>$_GET['intervention_id']))?>' method='post' enctype='multipart/form-data'>
-    <?php		
+    <div class="control-group">
+                <div class="controls">
+
+                  <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+                <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+             </div>
+            </div><?php		
         place_form_elements($person_form,$fields); 
 		
 	?>
             <div class="control-group">
                 <div class="controls">
 
-                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-                  <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL')?></a><span>&nbsp;&nbsp;</span>
-         </div>
+                  <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+                <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+             </div>
             </div>
 
 	

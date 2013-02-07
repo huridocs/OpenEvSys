@@ -12,7 +12,7 @@
         <br />
         <center>
                   <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
-        <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+        <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
      
        </center>
         <?php
@@ -65,7 +65,7 @@
 	}		
 ?>
 <center>
-	<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><?php echo _t('BACK')?></a>
+	<a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
 </center>
 <br />
 </div>

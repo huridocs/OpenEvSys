@@ -8,7 +8,13 @@
 <div class="form-container"> 
 
 <form class="form-horizontal"  action='<?php echo get_url('admin','add_user')?>' method='post'>
+<div class="control-group">
+            <div class="controls">
+  <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+          
+                <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 
+            </div></div>
 <fieldset>
     <legend>Login Information</legend>
 
@@ -33,10 +39,10 @@
   </fieldset>  
          <div class="control-group">
             <div class="controls">
+  <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
+          
+                <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 
-                <button type="submit" class="btn" name="save" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-
-            <a class="btn" href="<?php get_url('admin','user_management' ) ?> " ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>
             </div></div>
     
        

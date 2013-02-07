@@ -7,7 +7,7 @@
         <?php $fields = shn_form_get_html_fields($customization_form, false); ?>
         <div class='control-group'><?php echo $fields['entity_select'] ?></div>
         <div class="control-group">
-            <div class="controls"><button type="submit"  name="change_entity"  class="btn" ><?php echo _t('SELECT') ?></button>
+            <div class="controls"><button type="submit"  name="change_entity"  class="btn" ><i class="icon-ok"></i> <?php echo _t('SELECT') ?></button>
             </div></div>
 
     </form>

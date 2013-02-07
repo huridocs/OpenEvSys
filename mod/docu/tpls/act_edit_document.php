@@ -16,7 +16,7 @@ include_once('docu_title.php');
                 <br />
                 <center>
                     <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
-                    <button type='submit' class='btn' name='no' ><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></button>
+                    <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
 
                 </center>		
             </div>
@@ -25,7 +25,14 @@ include_once('docu_title.php');
         ?>
 
         <div class="form-container">    
-            <?php
+            <div class="control-group">
+                <div class="controls">
+
+                    
+                    <a class="btn" href="<?php echo get_url('docu', 'view_document', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>    
+               <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+ </div>
+            </div>  <?php
             //$document_form['doc_id']= array('type'=>'hidden',null,'extra_opts'=>array('value'=>$this->supporting_docs_meta->doc_id)); 
             popuate_formArray($document_form, $supporting_docs);
             popuate_formArray($document_form, $supporting_docs_meta);
@@ -36,10 +43,10 @@ include_once('docu_title.php');
             <div class="control-group">
                 <div class="controls">
 
-                    <button type="submit" class="btn" name="update" ><i class="icon-ok"></i> <?php echo _t('SAVE') ?></button>
-
-                    <a class="btn" href="<?php echo get_url('docu', 'view_document', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-stop"></i> <?php echo _t('CANCEL') ?></a>    
-                </div>
+                    
+                    <a class="btn" href="<?php echo get_url('docu', 'view_document', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>    
+               <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+ </div>
             </div>  
         </div>
     </form>
