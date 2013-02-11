@@ -1,5 +1,4 @@
-
-#:----
+#: ----
 msgid "_CONTROLER_NOT_FOUND_"
 msgstr "Controler not found."
 #: ----
