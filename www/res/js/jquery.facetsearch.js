@@ -16,25 +16,29 @@
 // https://github.com/bgrins/bindWithDelay/blob/master/bindWithDelay.js
 (function($) {
     $.fn.bindWithDelay = function( type, data, fn, timeout, throttle ) {
-    var wait = null;
-    var that = this;
+        var wait = null;
+        var that = this;
 
-    if ( $.isFunction( data ) ) {
-        throttle = timeout;
-        timeout = fn;
-        fn = data;
-        data = undefined;
-    }
+        if ( $.isFunction( data ) ) {
+            throttle = timeout;
+            timeout = fn;
+            fn = data;
+            data = undefined;
+        }
 
-    function cb() {
-        var e = $.extend(true, { }, arguments[0]);
-        var throttler = function() {
-            wait = null;
-            fn.apply(that, [e]);
+        function cb() {
+            var e = $.extend(true, { }, arguments[0]);
+            var throttler = function() {
+                wait = null;
+                fn.apply(that, [e]);
             };
 
-            if (!throttle) { clearTimeout(wait); }
-            if (!throttle || !wait) { wait = setTimeout(throttler, timeout); }
+            if (!throttle) {
+                clearTimeout(wait);
+            }
+            if (!throttle || !wait) {
+                wait = setTimeout(throttler, timeout);
+            }
         }
 
         return this.bind(type, data, cb);
@@ -48,55 +52,55 @@
 
         // some big default values
         var resdisplay = [
-                [
-                    {
-                        "field": "author.name"
-                    },
-                    {
-                        "pre": "(",
-                        "field": "year",
-                        "post": ")"
-                    }
-                ],
-                [
-                    {
-                        "pre": "<strong>",
-                        "field": "title",
-                        "post": "</strong>"
-                    }
-                ],
-                [
-                    {
-                        "field": "howpublished"
-                    },
-                    {
-                        "pre": "in <em>",
-                        "field": "journal.name",
-                        "post": "</em>,"
-                    },
-                    {
-                        "pre": "<em>",
-                        "field": "booktitle",
-                        "post": "</em>,"
-                    },
-                    {
-                        "pre": "vol. ",
-                        "field": "volume",
-                        "post": ","
-                    },
-                    {
-                        "field": "pages"
-                    },
-                    {
-                        "field": "publisher"
-                    }
-                ],
-                [
-                    {
-                        "field": "link.url"
-                    }
-                ]
-            ]
+        [
+        {
+            "field": "author.name"
+        },
+        {
+            "pre": "(",
+            "field": "year",
+            "post": ")"
+        }
+        ],
+        [
+        {
+            "pre": "<strong>",
+            "field": "title",
+            "post": "</strong>"
+        }
+        ],
+        [
+        {
+            "field": "howpublished"
+        },
+        {
+            "pre": "in <em>",
+            "field": "journal.name",
+            "post": "</em>,"
+        },
+        {
+            "pre": "<em>",
+            "field": "booktitle",
+            "post": "</em>,"
+        },
+        {
+            "pre": "vol. ",
+            "field": "volume",
+            "post": ","
+        },
+        {
+            "field": "pages"
+        },
+        {
+            "field": "publisher"
+        }
+        ],
+        [
+        {
+            "field": "link.url"
+        }
+        ]
+        ]
 
 
         // specify the defaults
@@ -122,10 +126,10 @@
         !options.paging.from ? options.paging.from = 0 : ""
 
 		
-		var selected_terms = new Array();
+        var selected_terms = new Object();
 		
-		var fmap = null;
-		var fmarkerclusterer = null;
+        var fmap = null;
+        var fmarkerclusterer = null;
 		
         // ===============================================
         // functions to do with filters
@@ -134,7 +138,7 @@
         // show the filter values
         var showfiltervals = function(event) {
             event.preventDefault();
-            /*if ( $(this).hasClass('facetsearch_open') ) {
+        /*if ( $(this).hasClass('facetsearch_open') ) {
                 $(this).children('i').replaceWith('<i class="icon-plus"></i>')
                 $(this).removeClass('facetsearch_open');
                 $('#facetsearch_' + $(this).attr('rel') ).children().hide();
@@ -167,7 +171,7 @@
                 options.facets[which]['order'] = 'reverse_term'
             }
             dosearch()
-			/*if ( !$(this).parent().parent().siblings('.facetsearch_filtershow').hasClass('facetsearch_open') ) {
+        /*if ( !$(this).parent().parent().siblings('.facetsearch_filtershow').hasClass('facetsearch_open') ) {
                 $(this).parent().parent().siblings('.facetsearch_filtershow').trigger('click')
             }*/
         }
@@ -187,13 +191,13 @@
                 options.facets[ $(this).attr('rel') ]['size'] = parseInt(newmore)
                 $(this).html('show up to ' + newmore )
                 dosearch()
-                /*if ( !$(this).parent().parent().siblings('.facetsearch_filtershow').hasClass('facetsearch_open') ) {
+            /*if ( !$(this).parent().parent().siblings('.facetsearch_filtershow').hasClass('facetsearch_open') ) {
                     $(this).parent().parent().siblings('.facetsearch_filtershow').trigger('click')
                 }*/
             }
         }
 
-       /* // insert a facet range once selected
+        /* // insert a facet range once selected
         var dofacetrange = function(event) {
             event.preventDefault()
             var rel = $('#facetsearch_rangerel').html()
@@ -312,7 +316,7 @@
                   <ul id="facetsearch_{{FILTER_NAME}}" \
                     class="facetsearch_filters"></ul> \
                     ';*/
-					var _filterTmpl = ' \
+                var _filterTmpl = ' \
                     <div class="box"> \
                     <h4 class="box-header round-top">{{FILTER_NAME}}<a class="box-btn" title="toggle"><i class="icon-minus"></i></a> \
 					<div class="dropdown" style="display:inline"><a class="box-btn dropdown-toggle" data-toggle="dropdown" \
@@ -344,8 +348,8 @@
             //$('.facetsearch_facetrange').bind('click',facetrange)
             $('.facetsearch_sort').bind('click',sortfilters)
             //$('.facetsearch_filtershow').bind('click',showfiltervals)
-			$('.facetsearch_clearfacet').bind('click',clearfacetfilters)
-			$('#facetsearch_clearall').bind('click',clearallfilters)
+            $('.facetsearch_clearfacet').bind('click',clearfacetfilters)
+            $('#facetsearch_clearall').bind('click',clearallfilters)
 			
 			
         }
@@ -356,14 +360,52 @@
             for ( var each in options.facets ) {
 			
                 $('#facetsearch_' + options.facets[each]['field'].replace(/\./gi,'_')).children().remove();
-                var records = data["facets"][ options.facets[each]['field'] ];
+                var records = data["facets"][ options.facets[each]['field'] ].terms;
+                var lev = 0;
+                var field_type = data["facets"][ options.facets[each]['field'] ].field_type;
+                var tree = "";
+                var i = 0;
                 for ( var item in records ) {
-                    var append = '<li><a class="facetsearch_filterchoice' +
-                        '" rel="' + options.facets[each]['field'] + '" href="' + item + '">' + item +
-                        ' (' + records[item] + ')</a></li>';
-                    $('#facetsearch_' + options.facets[each]['field'].replace(/\./gi,'_')).append(append);
+                    if(field_type == "mt_tree"){
+                        var append = '<li><a class="facetsearch_filterchoice' +
+                        '" data-entity="'+data["facets"][ options.facets[each]['field'] ].entity+'" data-field="' + options.facets[each]['field'] + '" data-value="' + records[item].term + '" href="#">' + records[item].label;
+                        append += '</a>';
+                        if(records[item].level < lev){
+                            var append2 = "";
+                            while (lev > records[item].level) {
+                                append2 = "</li></ul>"+append2;
+                                lev--;
+                            }
+                            append = append2+append;
+                        }else if(records[item].level > lev){                            
+                            append = "<ul>"+append;
+                            lev = records[item].level
+                        }else{
+                            
+                            if(i!=0){
+                               append = "</li>"+append
+                            }
+                        }
+                    }else{
+                        var append = '<li><a class="facetsearch_filterchoice' +
+                        '" data-entity="'+data["facets"][ options.facets[each]['field'] ].entity+'" data-field="' + options.facets[each]['field'] + '" data-value="' + records[item].term + '" href="#" >' + records[item].label;
+                        append += '</a></li>';
+                    }
+                    tree += append;
+                    i++;
                 }
-                /*if ( !$('.facetsearch_filtershow[rel="' + options.facets[each]['field'].replace(/\./gi,'_') + '"]').hasClass('facetsearch_open') ) {
+                if(tree != ""){
+                    
+                    while (lev > 0) {
+                        tree = tree+"</li></ul>";
+                        lev--;
+                    }
+                    tree += "</li>";
+                }
+                $('#facetsearch_' + options.facets[each]['field'].replace(/\./gi,'_')).append(tree);
+                    
+                
+            /*if ( !$('.facetsearch_filtershow[rel="' + options.facets[each]['field'].replace(/\./gi,'_') + '"]').hasClass('facetsearch_open') ) {
                     $('#facetsearch_' + options.facets[each]['field'].replace(/\./gi,'_') ).children().hide();
                 }*/
             }
@@ -386,7 +428,9 @@
 
         // add a filter when a new one is provided
         var addfilters = function() {
-            options.facets.push({'field':$(this).val()});
+            options.facets.push({
+                'field':$(this).val()
+            });
             // remove any current filters
             $('#facetsearch_filters').html("");
             buildfilters();
@@ -396,8 +440,8 @@
         // set the user admin filters
         var advanced = function() {
             var advanceddiv = '<div id="facetsearch_advanced">' + 
-                '<a class="facetsearch_advancedshow" href="">ADVANCED ...</a>' +
-                '<p>add filter:<br /><select id="facetsearch_addfilters"></select></p></div>';
+            '<a class="facetsearch_advancedshow" href="">ADVANCED ...</a>' +
+            '<p>add filter:<br /><select id="facetsearch_addfilters"></select></p></div>';
             $('#facetsearch_filters').after(advanceddiv);
             $('.facetsearch_advancedshow').bind('click',showadvanced).siblings().hide();
         }
@@ -407,11 +451,11 @@
             // iterate through source keys
             var options = "";
 			
-			if( typeof data["records"] != 'undefined' ){
-				for (var item in data["records"][0]) {
-					options += '<option>' + item + '</option>';
-				}
-			}
+            if( typeof data["records"] != 'undefined' ){
+                for (var item in data["records"][0]) {
+                    options += '<option>' + item + '</option>';
+                }
+            }
             $('#facetsearch_addfilters').html("");
             $('#facetsearch_addfilters').append(options);
             $('#facetsearch_addfilters').change(addfilters);
@@ -450,34 +494,36 @@
                 resultobj["start"] = dataobj.response.start;
                 resultobj["found"] = dataobj.response.numFound;
                 if (dataobj.facet_counts) {
-                  for (var item in dataobj.facet_counts.facet_fields) {
-                      var facetsobj = new Object();
-                      var count = 0;
-                      for ( var each in dataobj.facet_counts.facet_fields[item]) {
-                          if ( count % 2 == 0 ) {
-                              facetsobj[ dataobj.facet_counts.facet_fields[item][each] ] = dataobj.facet_counts.facet_fields[item][count + 1];
-                          }
-                          count += 1;
-                      }
-                      resultobj["facets"][item] = facetsobj;
-                  }
-              }
+                    for (var item in dataobj.facet_counts.facet_fields) {
+                        var facetsobj = new Object();
+                        var count = 0;
+                        for ( var each in dataobj.facet_counts.facet_fields[item]) {
+                            if ( count % 2 == 0 ) {
+                                facetsobj[ dataobj.facet_counts.facet_fields[item][each] ] = dataobj.facet_counts.facet_fields[item][count + 1];
+                            }
+                            count += 1;
+                        }
+                        resultobj["facets"][item] = facetsobj;
+                    }
+                }
 				
             }else{
-				resultobj["records"] = dataobj.response.records;
+                resultobj["records"] = dataobj.response.records;
                 resultobj["start"] = dataobj.response.start;
                 resultobj["found"] = dataobj.response.found;
-				resultobj["markers"] = dataobj.markers;
+                resultobj["markers"] = dataobj.markers;
             
-				for (var item in dataobj.facets) {
+                resultobj["facets"] = dataobj.facets
+            /*for (var item in dataobj.facets) {
                     var facetsobj = new Object();
                     for (var thing in dataobj.facets[item]["terms"]) {
-                        facetsobj[ dataobj.facets[item]["terms"][thing]["term"] ] = dataobj.facets[item]["terms"][thing]["count"];
+                        facetsobj[ dataobj.facets[item]["terms"][thing]["term"] ] = dataobj.facets[item]["terms"][thing];// dataobj.facets[item]["terms"][thing]["label"];
                     }
                     resultobj["facets"][item] = facetsobj;
-                }
-			}
-			return resultobj;
+                }*/
+            }
+            
+            return resultobj;
         }
 
         // decrement result set
@@ -531,8 +577,8 @@
 
         // given a result record, build how it should look on the page
         var buildrecord = function(record) {
-            var result = '<tr><td>';
-           /* result +=  ' \
+            /*var result = '<tr>';
+             result +=  ' \
             <div style="float:right;" class="btn-group"> \
                 <a style="margin-left:10px;" class="btn dropdown-toggle" data-toggle="dropdown" href="#"> \
                 <i class="icon-cog"></i> <span class="caret"></span></a> \
@@ -586,39 +632,45 @@
             }
             lines ? result += lines : result += 'unidentified item'
             */
-			result += record.replace(/^\s/,'').replace(/\s$/,'').replace(/\,$/,'') + "<br />"
+            var line = "<tr>"
+            for(i in record){
+                line+="<td>"+record[i]+"</td>"
+            }
+            line = line.replace(/^\s/,'').replace(/\s$/,'').replace(/\,$/,'') + "<br />"
 			
-			result += '</td></tr>'
-            return result;
+            line += '</tr>'
+            return line;
         }
 
 		
-		var addmapmarkers = function(data){
-			fmap.gmap('clear', 'markers');
+        var addmapmarkers = function(data){
+            fmap.gmap('clear', 'markers');
 			
 			
-			if(typeof data.markers != 'undefined'){
+            if(typeof data.markers != 'undefined'){
 			
-				$.each(data.markers, function(i, marker) {
-					fmap.gmap('addMarker', { 
-						'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
-						'bounds': true 
-					}).click(function() {
-						fmap.gmap('openInfoWindow', { 'content': marker.content }, this);
-					});
-				});
-				fmarkerclusterer.clearMarkers();
-				fmarkerclusterer =  new MarkerClusterer(fmap.gmap('get', 'map'), fmap.gmap('get', 'markers'));
+                $.each(data.markers, function(i, marker) {
+                    fmap.gmap('addMarker', { 
+                        'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
+                        'bounds': true 
+                    }).click(function() {
+                        fmap.gmap('openInfoWindow', {
+                            'content': marker.content
+                        }, this);
+                    });
+                });
+                fmarkerclusterer.clearMarkers();
+                fmarkerclusterer =  new MarkerClusterer(fmap.gmap('get', 'map'), fmap.gmap('get', 'markers'));
 
-			}
-		}
+            }
+        }
         // put the results on the page
         showresults = function(sdata) {
 			
             // get the data and parse from the solr / es layout
             var data = parseresults(sdata);
 			
-			addmapmarkers(data);
+            addmapmarkers(data);
 			
             // change filter options
             putvalsinfilters(data);
@@ -628,15 +680,12 @@
             populateadvanced(data);
             // put the filtered results on the page
             $('#facetsearch_results').html("");
-            var infofiltervals = new Array();
-			if(typeof data.records != 'undefined'){
-				$.each(data.records, function(index, value) {
-					// write them out to the results div
-					$('#facetsearch_results').append( buildrecord(value) );
-					//$('#facetsearch_results tr:last-child').linkify()
-				});
-			}
-            // bind the more action to show the hidden details
+            if(typeof data.records != 'undefined'){
+                $.each(data.records, function(index, value) {
+                     
+                    $('#facetsearch_results').append( buildrecord(value) );
+                 });
+            }
             $('.facetsearch_more').bind('click',showmore);
 			
 			
@@ -681,7 +730,7 @@
             }
             $('.facetsearch_filterselected',obj).each(function() {
                 query += $(this).attr('rel') + ':"' + 
-                    $(this).attr('href') + '" AND ';
+                $(this).attr('href') + '" AND ';
             });
             // add any freetext filter
             if ($('#facetsearch_freetext').val() != "") {
@@ -701,37 +750,59 @@
             var qs = {}
             var bool = false
             $('.facetsearch_filterselected',obj).each(function() {
-                !bool ? bool = {'must': [] } : ""
+                !bool ? bool = {
+                    'must': []
+                } : ""
                 if ( $(this).hasClass('facetsearch_facetrange') ) {
                     var rel = options.facets[ $(this).attr('rel') ]['field']
                     var rngs = {
                         'from': $('.facetsearch_lowrangeval', this).html(),
                         'to': $('.facetsearch_highrangeval', this).html()
                     }
-                    var obj = {'range': {}}
+                    var obj = {
+                        'range': {}
+                    }
                     obj['range'][ rel ] = rngs
                     bool['must'].push(obj)
                 } else {
-                    var obj = {'term':{}}
+                    var obj = {
+                        'term':{}
+                    }
                     obj['term'][ $(this).attr('rel') ] = $(this).attr('href')
                     bool['must'].push(obj)
                 }
             });
             for (var item in options.predefined_filters) {
-                !bool ? bool = {'must': [] } : ""
-                var obj = {'term': {}}
+                !bool ? bool = {
+                    'must': []
+                } : ""
+                var obj = {
+                    'term': {}
+                }
                 obj['term'][ item ] = options.predefined_filters[item]
                 bool['must'].push(obj)
             }
             if (bool) {
                 $('#facetsearch_freetext').val() != ""
-                    ? bool['must'].push( {'query_string': { 'query': $('#facetsearch_freetext').val() } } )
-                    : ""
-                qs['query'] = {'bool': bool}
+                ? bool['must'].push( {
+                    'query_string': {
+                        'query': $('#facetsearch_freetext').val()
+                    }
+                } )
+                : ""
+                qs['query'] = {
+                    'bool': bool
+                }
             } else {
                 $('#facetsearch_freetext').val() != ""
-                    ? qs['query'] = {'query_string': { 'query': $('#facetsearch_freetext').val() } }
-                    : qs['query'] = {'match_all': {}}
+                ? qs['query'] = {
+                    'query_string': {
+                        'query': $('#facetsearch_freetext').val()
+                    }
+                }
+                : qs['query'] = {
+                    'match_all': {}
+                }
             }
             // set any paging
             options.paging.from != 0 ? qs['from'] = options.paging.from : ""
@@ -741,32 +812,41 @@
             for (var item in options.facets) {
                 var obj = options.facets[item]
                 delete obj['display']
-                qs['facets'][obj['field']] = {"terms":obj}
+                qs['facets'][obj['field']] = {
+                    "terms":obj
+                }
             }
             return JSON.stringify(qs)
         }
 
-		var httpsearchquery = function() {
+        var httpsearchquery = function() {
+            var searchparams = new Object();
             // set default URL params
             var urlparams = "";
             for (var item in options.default_url_params) {
                 urlparams += item + "=" + options.default_url_params[item] + "&";
             }
+            
+          
             // do paging params
             var pageparams = "";
             for (var item in options.paging) {
                 pageparams += item + "=" + options.paging[item] + "&";
             }
+            
             // set facet params
             var urlfilters = "";
-			for( fac in selected_terms){
-				for(term in selected_terms[fac]){
-					urlfilters += "facets[" + fac + "][]="+selected_terms[fac][term]+"&";
-				}
-			}
-            /*for (var item in options.facets) {
-                urlfilters += "facets[" + options.facets[item]['field'] + "]=&";
-            }*/
+            for( fac in selected_terms){
+                for(term in selected_terms[fac]){
+                    urlfilters += "facets[" + fac + "][]="+selected_terms[fac][term]+"&";
+                }
+            }
+            for (var item in options.facets) {
+                urlfilters += "facetsarray[]=" + options.facets[item]['field'] +"&";
+            }
+            for (var item in options.entities) {
+                urlfilters += "entities[]=" + options.entities[item] +"&";
+            }
             // build starting URL
             var theurl = options.search_url + urlparams + pageparams + urlfilters + options.query_parameter + "=";
             // add default query values
@@ -786,48 +866,76 @@
             query = query.replace(/ AND $/,"");
              
             theurl += query;
-            return theurl;
+            
+            searchparams.paging = options.paging;
+            searchparams.selected_terms = selected_terms;
+            searchparams.facets = options.facets;
+            searchparams.entities = options.entities;
+            searchparams.query = query;
+            //console.log(searchparams)
+            //console.log(encodeURI($.toJSON(searchparams)))
+            return options.search_url+"searchparams="+encodeURI($.toJSON(searchparams))
+        //return theurl;
         }
 
         // execute a search
         var dosearch = function() {
-			fmap.gmap('closeInfoWindow');
+            fmap.gmap('closeInfoWindow');
             if ( options.search_index == "elasticsearch" ) {
-              $.ajax({
-                type: "get",
-                url: options.search_url,
-                data: {source: elasticsearchquery()},
-                // processData: false,
-                dataType: "jsonp",
-                success: showresults
-              });
+                $.ajax({
+                    type: "get",
+                    url: options.search_url,
+                    data: {
+                        source: elasticsearchquery()
+                    },
+                    // processData: false,
+                    dataType: "jsonp",
+                    success: showresults
+                });
             } else if (options.search_index == "solrsearch" ){
-                $.ajax( { type: "get", url: solrsearchquery(), dataType:"jsonp", jsonp:"json.wrf", success: function(data) { showresults(data) } } );
+                $.ajax( {
+                    type: "get", 
+                    url: solrsearchquery(), 
+                    dataType:"jsonp", 
+                    jsonp:"json.wrf", 
+                    success: function(data) {
+                        showresults(data)
+                    }
+                } );
             }else{
-				$.ajax( { type: "get", url: httpsearchquery(), dataType:"json", success: function(data) { showresults(data) } } );
+                $.ajax( {
+                    type: "get", 
+                    url: httpsearchquery(), 
+                    dataType:"json", 
+                    success: function(data) {
+                        showresults(data)
+                    }
+                } );
             
-			}
+            }
         }
 
         // trigger a search when a filter choice is clicked
         var clickfilterchoice = function(event) {
             event.preventDefault();
 			
-			if(selected_terms.hasOwnProperty($(this).attr("rel")) && $.inArray($(this).attr("href"), selected_terms[$(this).attr("rel")]) > -1){
-				return;
-			}
-			if(!selected_terms.hasOwnProperty($(this).attr("rel"))){
-				selected_terms[$(this).attr("rel")] = new Array();
-			}
+            if(selected_terms.hasOwnProperty($(this).data("entity")) && $.inArray($(this).data("field"), selected_terms[$(this).data("entity")]) > -1 && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
+                return;
+            }
+            if(!selected_terms.hasOwnProperty($(this).data("entity"))){
+                selected_terms[$(this).data("entity")] = new Object();
+            }
+            if(!selected_terms[$(this).data("entity")].hasOwnProperty($(this).data("field"))){
+                selected_terms[$(this).data("entity")][$(this).data("field")] = new Array();
+            }
 			
-			selected_terms[$(this).attr("rel")].push($(this).attr("href"));
-			
+            selected_terms[$(this).data("entity")][$(this).data("field")].push($(this).data("value"));
 			
             var newobj = '<a class="facetsearch_filterselected facetsearch_clear ' + 
-                'btn btn-info" rel="' + $(this).attr("rel") + 
-                '" alt="remove" title="remove"' +
-                ' href="' + $(this).attr("href") + '">' +
-                $(this).html().replace(/\(.*\)/,'') + ' <i class="icon-remove"></i></a>';
+            'btn btn-info" data-value="' + $(this).data("value") + 
+            '" alt="remove" title="remove"' +
+            ' href="#" data-entity="' + $(this).data("entity") + '" data-field="' + $(this).data("field") + '">' +
+            $(this).html().replace(/\(.*\)/,'') + ' <i class="icon-remove"></i></a>';
             $('#facetsearch_selectedfilters').append(newobj);
             $('.facetsearch_filterselected').unbind('click',clearfilter);
             $('.facetsearch_filterselected').bind('click',clearfilter);
@@ -838,32 +946,32 @@
         // clear a filter when clear button is pressed, and re-do the search
         var clearfilter = function(event) {
             event.preventDefault();
-			if(selected_terms.hasOwnProperty($(this).attr("rel")) && $.inArray($(this).attr("href"), selected_terms[$(this).attr("rel")]) > -1){
-				selected_terms[$(this).attr("rel")].splice(selected_terms[$(this).attr("rel")].indexOf($(this).attr("href")),1);
-			}
+            if(selected_terms.hasOwnProperty($(this).data("entity")) && $.inArray($(this).data("field"), selected_terms[$(this).data("entity")]) > -1 && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
+                selected_terms[$(this).data("entity")][$(this).data("field")].splice(selected_terms[$(this).data("entity")][$(this).data("field")].indexOf($(this).data("value")),1);
+            }
 
             $(this).remove();
             dosearch();
         }
 
-		var clearfacetfilters = function(event) {
+        var clearfacetfilters = function(event) {
             event.preventDefault();
 			
-			$('.facetsearch_filterselected[rel="'+$(this).attr("rel")+'"]').remove();
+            $('.facetsearch_filterselected[data-entity="'+$(this).data("entity")+'"][data-field="'+$(this).data("field")+'"]').remove();
 						
-			if(selected_terms.hasOwnProperty($(this).attr("rel"))){
-				delete selected_terms[$(this).attr("rel")];
-			}
+            if(selected_terms[$(this).data("entity")].hasOwnProperty($(this).data("field"))){
+                delete selected_terms[$(this).data("entity")][$(this).data("field")];
+            }
 
             //$(this).remove();
             dosearch();
         }
 		
-		var clearallfilters =function(event) {
+        var clearallfilters =function(event) {
             event.preventDefault();
 						
-			$('.facetsearch_filterselected').remove();
-			selected_terms = new Array();
+            $('.facetsearch_filterselected').remove();
+            selected_terms = new Array();
             $('#facetsearch_freetext').val("");
             
             dosearch();
@@ -935,13 +1043,13 @@
             }
         }
 		
-		var initmap = function() { 
+        var initmap = function() { 
 		
 		        
 		
-				// This URL won't work on your localhost, so you need to change it
-				// see http://en.wikipedia.org/wiki/Same_origin_policy
-				/*$.getJSON( 'http://jquery-ui-map.googlecode.com/svn/trunk/demos/json/demo.json', function(data) { 
+        // This URL won't work on your localhost, so you need to change it
+        // see http://en.wikipedia.org/wiki/Same_origin_policy
+        /*$.getJSON( 'http://jquery-ui-map.googlecode.com/svn/trunk/demos/json/demo.json', function(data) { 
 					$.each( data.markers, function(i, marker) {
 						$('#map_canvas').gmap('addMarker', { 
 							'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
@@ -951,7 +1059,7 @@
 						});
 					});
 				});*/
-			}
+        }
 
         // the facet view object to be appended to the page
         var thefacetsearch = ' \
@@ -980,34 +1088,34 @@
            </div> \
            ';
 
-	function widgetToggle(e) {
-		// Make sure the bottom of the box has rounded corners
-		e.parent().toggleClass("round-all");
-		e.parent().toggleClass("round-top");
+        function widgetToggle(e) {
+            // Make sure the bottom of the box has rounded corners
+            e.parent().toggleClass("round-all");
+            e.parent().toggleClass("round-top");
 
-		// replace plus for minus icon or the other way around
-		if(e.html() == "<i class=\"icon-plus\"></i>") {
-			e.html("<i class=\"icon-minus\"></i>");
-		} else {
-			e.html("<i class=\"icon-plus\"></i>");
-		}
+            // replace plus for minus icon or the other way around
+            if(e.html() == "<i class=\"icon-plus\"></i>") {
+                e.html("<i class=\"icon-minus\"></i>");
+            } else {
+                e.html("<i class=\"icon-plus\"></i>");
+            }
 
-		// close or open box
-		e.parent().next(".box-container-toggle").toggleClass("box-container-closed");
+            // close or open box
+            e.parent().next(".box-container-toggle").toggleClass("box-container-closed");
 
-		// store closed boxes in cookie
-		var closedBoxes = [];
-		var i = 0;
-		$(".box-container-closed").each(function()
-		{
-				closedBoxes[i] = $(this).parent(".box").attr("id");
-				i++;
-		});
+            // store closed boxes in cookie
+            var closedBoxes = [];
+            var i = 0;
+            $(".box-container-closed").each(function()
+            {
+                closedBoxes[i] = $(this).parent(".box").attr("id");
+                i++;
+            });
 		
-		//Prevent the browser jump to the link anchor
-		return false;
+            //Prevent the browser jump to the link anchor
+            return false;
 
-	}
+        }
         // ===============================================
         // now create the plugin on the page
         return this.each(function() {
@@ -1018,36 +1126,36 @@
             $(obj).append(thefacetsearch);
 			
 			
-			fmap = $('#mapcanvas').gmap().bind('init', initmap);
+            fmap = $('#mapcanvas').gmap().bind('init', initmap);
             fmarkerclusterer =  new MarkerClusterer(fmap.gmap('get', 'map'), fmap.gmap('get', 'markers'));
 
-			// append the filters to the facetsearch object
+            // append the filters to the facetsearch object
             buildfilters();
 			
-			$('.box-btn').click(function() {
-				var e = $(this);
-				//var p = b.next('a');
-				// Control functionality
-				switch(e.attr('title').toLowerCase()) {
-					case 'config':
-						widgetConfig(b, p);
-						break;
+            $('.box-btn').click(function() {
+                var e = $(this);
+                //var p = b.next('a');
+                // Control functionality
+                switch(e.attr('title').toLowerCase()) {
+                    case 'config':
+                        widgetConfig(b, p);
+                        break;
 
-					case 'toggle':
-						widgetToggle(e);
-						break;
+                    case 'toggle':
+                        widgetToggle(e);
+                        break;
 
-					case 'close':
-						widgetClose(e);
-						break;
-				}
-			});
+                    case 'close':
+                        widgetClose(e);
+                        break;
+                }
+            });
 		
             if (options.description) {
                 $('#facetsearch_filters').append('<div><h3>Meta</h3>' + options.description + '</div>')
             }
 			
-			// setup search option triggers
+            // setup search option triggers
             $('#facetsearch_partial_match').bind('click',fixmatch)
             $('#facetsearch_exact_match').bind('click',fixmatch)
             $('#facetsearch_fuzzy_match').bind('click',fixmatch)

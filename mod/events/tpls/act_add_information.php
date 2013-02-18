@@ -22,7 +22,7 @@
     <div class="form-container"> 
         <form class="form-horizontal"  id="information" name="information" action='<?php echo get_url('events','add_information',null)?>' method='post' enctype='multipart/form-data'>
          <div class="control-group">
-                <div class="controls">
+                <div >
  <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
            <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
            <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 
@@ -32,7 +32,7 @@
         ?>
         
         <div class="control-group">
-                <div class="controls">
+                <div >
  <a class="btn" href="<?php echo get_url('events','add_source',null,array('person_id'=> $_SESSION['src']['source'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
            <a class="btn" href="<?php echo get_url('events','add_source',null) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
            <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH')?></button> 

@@ -418,7 +418,7 @@ class eventsModule extends shnModule {
         $this->set_victim_dob($_REQUEST['victim']);
         //if action is not set
         $this->act_form = act_form('new');
-        if (isset($_POST['save']) || isset($_POST['add_ad'])) {
+        if (isset($_POST['save']) || isset($_POST['add_ad']) || isset($_POST['save_without'])) {
             $status = shn_form_validate($this->act_form);
             if ($status) {
                 $act = new Act();
@@ -428,10 +428,13 @@ class eventsModule extends shnModule {
                 $act->SaveAll();
                 $_SESSION['vp']['act'] = $act->act_record_number;
 
-                if (isset($_POST['add_ad']))
+                if (isset($_POST['add_ad'])){
                     set_redirect_header('events', 'add_ad', null, array('act_id' => $act->act_record_number));
-                else
+                }elseif(isset($_POST['save_without'])){
+                    set_redirect_header('events', 'vp_list', null, null);
+                }else{
                     set_redirect_header('events', 'add_perpetrator', null, array('act_id' => $act->act_record_number));
+                }
             }
         }
     }

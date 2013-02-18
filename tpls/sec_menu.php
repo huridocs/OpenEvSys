@@ -42,33 +42,7 @@
                        <a href="<?php get_url('docu', 'browse') ?>"><?php echo _t('DOCUMENTS') ?></a></li>
                            
                 <?php } ?>
-                <?php if (acl_is_mod_allowed('analysis')) { ?>
-                    <?php
-                    $active = '';
-                    if ('analysis' == $module) {
-                        $active = 'active';
-                        $breadcrumbs->pushCrumb(array('name' => _t('ANALYSIS'), 'mod' => 'analysis', 'act' => 'search'), 0);
-                    }
-                    ?>
-                    <li class="<?php echo $active ?>">
-                       <a href="<?php get_url('analysis', 'adv_search') ?>" ><?php echo _t('ANALYSIS') ?></a></li>
-                          
-                <?php } ?>
-                <?php if (acl_is_mod_allowed('admin')) { ?>
-                    <?php
-                    $active = '';
-                    if ('admin' == $module) {
-                        $active = 'active';
-                        $breadcrumbs->pushCrumb(array('name' => _t('ADMIN'), 'mod' => 'admin', 'act' => 'user_management'), 0);
-                    }
-                    ?>
-                    <li class="<?php echo $active ?>">
-                       <a href="<?php get_url('admin', 'user_management') ?>">
-                                    <?php echo _t('ADMIN') ?></a></li>
-                    </li>
-
-                <?php } ?>
-
+        
 
                 <?php
                 $active = '';
@@ -115,7 +89,39 @@
                     <li><a href="?act=logout"><i class="icon-off"></i> <?php echo _t('SIGN_OUT') ?></a></li>
 
                 </ul>
-            </div>
+            </div> <ul class="nav" style="float:right">
+          
+                <?php if (acl_is_mod_allowed('analysis')) { ?>
+                    <?php
+                    $active = '';
+                    if ('analysis' == $module) {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('ANALYSIS'), 'mod' => 'analysis', 'act' => 'search'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>">
+                       <a href="<?php get_url('analysis', 'adv_search') ?>" ><?php echo _t('ANALYSIS') ?></a></li>
+                          
+                <?php } ?>
+                <?php if (acl_is_mod_allowed('admin')) { ?>
+                    <?php
+                    $active = '';
+                    if ('admin' == $module) {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('ADMIN'), 'mod' => 'admin', 'act' => 'user_management'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>">
+                       <a href="<?php get_url('admin', 'user_management') ?>">
+                                    <?php echo _t('ADMIN') ?></a></li>
+                    </li>
+
+                <?php } ?>
+
+            
+
+            </ul>
+           
         </div>	
     </div>
 </div>

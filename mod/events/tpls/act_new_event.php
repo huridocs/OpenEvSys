@@ -18,7 +18,7 @@
     <div class="form-container"> 
         <form class="form-horizontal"  action='<?php echo get_url('events', 'new_event') ?>' id="event_form" name="event_form" method='post' enctype='multipart/form-data'>
             <div class="control-group">
-                <div class="controls">
+                <div >
 
 
                     <a class='btn' href="<?php get_url('events', 'browse') ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
@@ -27,7 +27,7 @@
             </div><?php $fields = shn_form_get_html_fields($event_form); ?>
             <?php $fields = place_form_elements($event_form, $fields); ?>
             <div class="control-group">
-                <div class="controls">
+                <div >
 
 
                     <a class='btn' href="<?php get_url('events', 'browse') ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>

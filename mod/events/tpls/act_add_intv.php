@@ -22,7 +22,7 @@
 <div class="form-container"> 
 <form class="form-horizontal"  id="intervention" name="intervention" action='<?php echo get_url('events','add_intv',null,array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
 <div class="control-group">
-                <div class="controls">
+                <div >
 	<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('person_id'=> $_SESSION['intv']['intv_party'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
     <?php /* <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('ADD_INTERVENTIONS')?></button>*/ ?>
     
@@ -35,7 +35,7 @@
 ?>
 <br />
  <div class="control-group">
-                <div class="controls">
+                <div >
 	<a class="btn" href="<?php echo get_url('events','add_intv_party',null,array('person_id'=> $_SESSION['intv']['intv_party'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
     <?php /* <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('ADD_INTERVENTIONS')?></button>*/ ?>
     

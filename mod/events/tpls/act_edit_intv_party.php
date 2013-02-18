@@ -10,7 +10,7 @@
     <div class="form-container"> 
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events','edit_intv_party',null,array('intervention_id'=>$_GET['intervention_id']))?>' method='post' enctype='multipart/form-data'>
     <div class="control-group">
-                <div class="controls">
+                <div >
 
                   <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
                 <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
@@ -20,7 +20,7 @@
 		
 	?>
             <div class="control-group">
-                <div class="controls">
+                <div >
 
                   <a class="btn" href="<?php echo get_url('events','intv_list',null,array('eid'=>$event_id,'intervention_id'=>$_GET['intervention_id'],'type'=>'intv_party')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
                 <button type="submit" class="btn btn-primary" name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>

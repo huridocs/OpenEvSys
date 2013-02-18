@@ -8,7 +8,7 @@
 <div class="form-container">
 <form class="form-horizontal"  action='<?php echo get_url('person','edit_biography',null,array('search_type'=>'person'))?>' method='post' enctype='multipart/form-data'>
   <div class="control-group">
-                <div class="controls">
+                <div >
 
                     
         <a class="btn" href="<?php echo get_url('person','person'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
@@ -21,7 +21,7 @@
     $fields = place_form_elements($biography_form,$fields);
 ?>
        <div class="control-group">
-                <div class="controls">
+                <div >
 
                     
         <a class="btn" href="<?php echo get_url('person','person'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>

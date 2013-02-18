@@ -3,7 +3,7 @@ var hurimap = new Object();
 
 $(document).ready(function() {
 
-	/*var  input = $("#filter_text").find('td').find('div').find('input');	
+    /*var  input = $("#filter_text").find('td').find('div').find('input');	
 	var  span = $("#filter_text").find('td').find('span');
 
 	$(span).parent().click(function()
@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 
 				    
-	/*$(input).blur(function()
+    /*$(input).blur(function()
 	{
 		if($(this).val().length == 0){
 			var title = $(this).attr("title");
@@ -30,391 +30,391 @@ $(document).ready(function() {
 					    
 	$(input).blur();*/
 	
-	var  select = $("#filter_text").find('td').find('select');
+    var  select = $("#filter_text").find('td').find('select');
 						    
-	$(select).blur(function()
-	{		
-		if ($(this).val().length == 0){			
-			var title = $(this).attr("title");
-//			$(this).hide();
-			$("#span_"+title).show();
-		}			
-	});
+    $(select).blur(function()
+    {		
+        if ($(this).val().length == 0){			
+            var title = $(this).attr("title");
+            //			$(this).hide();
+            $("#span_"+title).show();
+        }			
+    });
 							    
-	$(select).blur();
+    $(select).blur();
 
 });
 
 
 function getAge(formname) {	
-	var date_of_birth = formname.vdate_of_birth.value;
-	var dob_type = formname.vdob_type.value;	
+    var date_of_birth = formname.vdate_of_birth.value;
+    var dob_type = formname.vdob_type.value;	
 	
-	if(date_of_birth == ''){
-		alert(_("PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"));
-		return false;
-	}
+    if(date_of_birth == ''){
+        alert(_("PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"));
+        return false;
+    }
 	
-	var initial_date = formname.initial_date.value;
+    var initial_date = formname.initial_date.value;
 	
-	year = date_of_birth.substring(0,4);
-	month = date_of_birth.substring(5,7) - 1;	
-	date = date_of_birth.substring(8,10);
+    year = date_of_birth.substring(0,4);
+    month = date_of_birth.substring(5,7) - 1;	
+    date = date_of_birth.substring(8,10);
 	
-	yearStr = initial_date.substring(0,4);
-	monthStr = initial_date.substring(5,7) - 1;	
-	dateStr = initial_date.substring(8,10);	
+    yearStr = initial_date.substring(0,4);
+    monthStr = initial_date.substring(5,7) - 1;	
+    dateStr = initial_date.substring(8,10);	
 	
-	var inyear = '';
-	var inmonth = '';
-	var indate = '';	
+    var inyear = '';
+    var inmonth = '';
+    var indate = '';	
 	
-	if (month != parseInt(month)) { 
-		alert(_('TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_')); 
-		return false; 
-	}
+    if (month != parseInt(month)) { 
+        alert(_('TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_')); 
+        return false; 
+    }
 	 
-	if (date != parseInt(date)){ 
-		alert(_('TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_')); 
-		return false; 
-	}
-	if (year != parseInt(year)) { 
-		alert(_('TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_')); 
-		return false; 
-	}
-	if (year.length < 4) { 
-		alert(_('TYPE_YEAR_OF_BIRTH_IN_FULL_')); 
-		return false; 
-	}	
+    if (date != parseInt(date)){ 
+        alert(_('TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_')); 
+        return false; 
+    }
+    if (year != parseInt(year)) { 
+        alert(_('TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_')); 
+        return false; 
+    }
+    if (year.length < 4) { 
+        alert(_('TYPE_YEAR_OF_BIRTH_IN_FULL_')); 
+        return false; 
+    }	
 	
-	theYear = yearStr - year;	
-	theMonth = monthStr - month;
-	theDate = dateStr - date;
+    theYear = yearStr - year;	
+    theMonth = monthStr - month;
+    theDate = dateStr - date;
 	
-	var days = "";
-	if (monthStr == 0 || monthStr == 2 || monthStr == 4 || monthStr == 6 || monthStr == 7 || monthStr == 9 || monthStr == 11) days = 31;
-	if (monthStr == 3 || monthStr == 5 || monthStr == 8 || monthStr == 10) days = 30;
-	if (monthStr == 1) days = 28;
+    var days = "";
+    if (monthStr == 0 || monthStr == 2 || monthStr == 4 || monthStr == 6 || monthStr == 7 || monthStr == 9 || monthStr == 11) days = 31;
+    if (monthStr == 3 || monthStr == 5 || monthStr == 8 || monthStr == 10) days = 30;
+    if (monthStr == 1) days = 28;
 	
-	inyear = theYear;
+    inyear = theYear;
 	
-	if (month < monthStr && date > dateStr) { 
-		inyear = parseInt(inyear) + 1;
-	    inmonth = theMonth - 1; 
-	}
+    if (month < monthStr && date > dateStr) { 
+        inyear = parseInt(inyear) + 1;
+        inmonth = theMonth - 1; 
+    }
 	
-	if (month < monthStr && date <= dateStr) { 
-		inmonth = theMonth; 
-	}
-	else if (month == monthStr && (date < dateStr || date == dateStr)) { 
-		inmonth = 0; 
-	}
-	else if (month == monthStr && date > dateStr) { 
-		inmonth = 11; 
-	}
-	else if (month > monthStr && date <= dateStr) { 
-		inyear = inyear - 1;
-		inmonth = ((12 - -(theMonth)) + 1); 
-	}
-	else if (month > monthStr && date > dateStr) { 
-		inmonth = ((12 - -(theMonth))); 
-	}
+    if (month < monthStr && date <= dateStr) { 
+        inmonth = theMonth; 
+    }
+    else if (month == monthStr && (date < dateStr || date == dateStr)) { 
+        inmonth = 0; 
+    }
+    else if (month == monthStr && date > dateStr) { 
+        inmonth = 11; 
+    }
+    else if (month > monthStr && date <= dateStr) { 
+        inyear = inyear - 1;
+        inmonth = ((12 - -(theMonth)) + 1); 
+    }
+    else if (month > monthStr && date > dateStr) { 
+        inmonth = ((12 - -(theMonth))); 
+    }
 	
-	if (date < dateStr) { 
-		indate = theDate; 
-	}
-	else if (date == dateStr) { 
-		indate = 0; 
-	}
-	else { 
-		inyear = inyear - 1; 
-		indate = days - (-(theDate)); 
-	}
+    if (date < dateStr) { 
+        indate = theDate; 
+    }
+    else if (date == dateStr) { 
+        indate = 0; 
+    }
+    else { 
+        inyear = inyear - 1; 
+        indate = days - (-(theDate)); 
+    }
 	
-	if(inyear < 0){
-		inyear = 0;
-	}	
+    if(inyear < 0){
+        inyear = 0;
+    }	
 	
-	//02000000000048 - Unknown day
-	//03000000000048 - Unknown month and day
-	//01000000000048 - Estimate
+    //02000000000048 - Unknown day
+    //03000000000048 - Unknown month and day
+    //01000000000048 - Estimate
 	
-	if(dob_type == '02000000000048'){
-		formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear +_("_MONTH_S__")+ inmonth;
-	}
-	else if(dob_type == '03000000000048'){
-		formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear;
-	}
-	else if(dob_type == '01000000000048'){
-		formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear;
-	}
-	else{
-		formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear +_("_MONTH_S__")+ inmonth +_("_DAY_S__")+ indate;
-	}
+    if(dob_type == '02000000000048'){
+        formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear +_("_MONTH_S__")+ inmonth;
+    }
+    else if(dob_type == '03000000000048'){
+        formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear;
+    }
+    else if(dob_type == '01000000000048'){
+        formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear;
+    }
+    else{
+        formname.age_at_time_of_victimisation.value = _("YEAR_S__") + inyear +_("_MONTH_S__")+ inmonth +_("_DAY_S__")+ indate;
+    }
 	
 	
 }
 
 function add_anchor(oformCtrl,pageAnchor)
 {
-	var formname = $(oformCtrl).attr('id');	
-	var link = $('#'+formname).attr("action");
-	$('#'+formname).attr("action", link+ "#"+pageAnchor);	
+    var formname = $(oformCtrl).attr('id');	
+    var link = $('#'+formname).attr("action");
+    $('#'+formname).attr("action", link+ "#"+pageAnchor);	
 }
 
 
 function selected_doclist(oform)
 {	
-	var ol = $('#doclist').show();	
-	var list = "";	
+    var ol = $('#doclist').show();	
+    var list = "";	
 	
-	var selected = new Array();	
-	var m =0;
-	for (k = 0; k < oform.length; k++){
-		if(oform.elements[k].name == 'supporting_documents[]' && oform.elements[k].value != ''){			
-			selected[m++] = oform.elements[k].value;			
-		}		
-	}
+    var selected = new Array();	
+    var m =0;
+    for (k = 0; k < oform.length; k++){
+        if(oform.elements[k].name == 'supporting_documents[]' && oform.elements[k].value != ''){			
+            selected[m++] = oform.elements[k].value;			
+        }		
+    }
 	
-	var checked = new Array();
-	var n = 0;
-	var isExist = false;
+    var checked = new Array();
+    var n = 0;
+    var isExist = false;
 	
-	for (i = 0; i < oform.length; i++){		
-		if(oform.elements[i].name == 'doc_id_list[]'){
-			if(oform.elements[i].checked){
-				str = oform.elements[i].value;				
-				checked[n++] = str.substring(0,str.indexOf('_'));
-			}
-		}
-	}	
+    for (i = 0; i < oform.length; i++){		
+        if(oform.elements[i].name == 'doc_id_list[]'){
+            if(oform.elements[i].checked){
+                str = oform.elements[i].value;				
+                checked[n++] = str.substring(0,str.indexOf('_'));
+            }
+        }
+    }	
 	
-	for(x = 0; x < selected.length; x++){
-		for(y =0; y < checked.length; y++){
-			if(checked[y] == selected[x]){				
-				checked.splice(y,1);
-				isExist = true;
-			}			
-		}
-	}
+    for(x = 0; x < selected.length; x++){
+        for(y =0; y < checked.length; y++){
+            if(checked[y] == selected[x]){				
+                checked.splice(y,1);
+                isExist = true;
+            }			
+        }
+    }
 				
-	for (i = 0; i < oform.length; i++){		
-		if(oform.elements[i].name == 'doc_id_list[]'){
-			if(oform.elements[i].checked){
-				str = oform.elements[i].value;
-				docid = str.substring(0,str.indexOf('_'));				
-				doctitle = str.substring(str.indexOf('_')+1, str.length);
+    for (i = 0; i < oform.length; i++){		
+        if(oform.elements[i].name == 'doc_id_list[]'){
+            if(oform.elements[i].checked){
+                str = oform.elements[i].value;
+                docid = str.substring(0,str.indexOf('_'));				
+                doctitle = str.substring(str.indexOf('_')+1, str.length);
 				 				
-				for(z = 0; z < checked.length; z++ ){
-					if(checked[z] == docid){
-						list += '<li id="'+ i +'">' + doctitle + '<input type="hidden" name ="supporting_documents[]" value="'+ docid + '"/>&nbsp;&nbsp;&nbsp;<a href="#address_field" onclick="removeElement('+ i +');">'+_('REMOVE')+'</a>' + '</li>';
-						isExist = true;
-					}
-				}
+                for(z = 0; z < checked.length; z++ ){
+                    if(checked[z] == docid){
+                        list += '<li id="'+ i +'">' + doctitle + '<input type="hidden" name ="supporting_documents[]" value="'+ docid + '"/>&nbsp;&nbsp;&nbsp;<a href="#address_field" onclick="removeElement('+ i +');">'+_('REMOVE')+'</a>' + '</li>';
+                        isExist = true;
+                    }
+                }
 				
-				if(!isExist){
-					list += '<li id="'+ i +'">' + doctitle + '<input type="hidden" name ="supporting_documents[]" value="'+ docid + '"/>&nbsp;&nbsp;&nbsp;<a href="#address_field" onclick="removeElement('+ i +');">'+_('REMOVE')+'</a>' + '</li>';
-				}
-			}
-			oform.elements[i].checked = false;
-		}		
-	}
-	ol.append(list);	
+                if(!isExist){
+                    list += '<li id="'+ i +'">' + doctitle + '<input type="hidden" name ="supporting_documents[]" value="'+ docid + '"/>&nbsp;&nbsp;&nbsp;<a href="#address_field" onclick="removeElement('+ i +');">'+_('REMOVE')+'</a>' + '</li>';
+                }
+            }
+            oform.elements[i].checked = false;
+        }		
+    }
+    ol.append(list);	
 }
 
 function edit_address(address_id)
 {	
-	var oforms = document.forms['person_form'];
-	var address_record_number = 'person_address[' + address_id + '][address_record_number]';
-	var address_type = 'person_address[' + address_id + '][address_type]';
-	var address = 'person_address[' + address_id + '][address]';
-	var country = 'person_address[' + address_id + '][country]';
-	var phone = 'person_address[' + address_id + '][phone]';
-	var cellular = 'person_address[' + address_id + '][cellular]';
-	var fax = 'person_address[' + address_id + '][fax]';
-	var email = 'person_address[' + address_id + '][email]';
-	var web = 'person_address[' + address_id + '][web]';
-	var start_date = 'person_address[' + address_id + '][start_date]';
-	var end_date = 'person_address[' + address_id + '][end_date]';
+    var oforms = document.forms['person_form'];
+    var address_record_number = 'person_address[' + address_id + '][address_record_number]';
+    var address_type = 'person_address[' + address_id + '][address_type]';
+    var address = 'person_address[' + address_id + '][address]';
+    var country = 'person_address[' + address_id + '][country]';
+    var phone = 'person_address[' + address_id + '][phone]';
+    var cellular = 'person_address[' + address_id + '][cellular]';
+    var fax = 'person_address[' + address_id + '][fax]';
+    var email = 'person_address[' + address_id + '][email]';
+    var web = 'person_address[' + address_id + '][web]';
+    var start_date = 'person_address[' + address_id + '][start_date]';
+    var end_date = 'person_address[' + address_id + '][end_date]';
 		
-	oforms['address_record_number'].value = oforms[address_record_number].value;
-	oforms['address_type'].value = oforms[address_type].value;
-	oforms['address'].value = oforms[address].value;
-	oforms['country'].value = oforms[country].value;
-	oforms['phone'].value = oforms[phone].value;
-	oforms['cellular'].value = oforms[cellular].value;
-	oforms['fax'].value = oforms[fax].value;
-	oforms['email'].value = oforms[email].value;
-	oforms['web'].value = oforms[web].value;
-	oforms['start_date'].value = oforms[start_date].value;
-	oforms['end_date'].value = oforms[end_date].value;
-	//alert(oforms[address_record_number].value);
+    oforms['address_record_number'].value = oforms[address_record_number].value;
+    oforms['address_type'].value = oforms[address_type].value;
+    oforms['address'].value = oforms[address].value;
+    oforms['country'].value = oforms[country].value;
+    oforms['phone'].value = oforms[phone].value;
+    oforms['cellular'].value = oforms[cellular].value;
+    oforms['fax'].value = oforms[fax].value;
+    oforms['email'].value = oforms[email].value;
+    oforms['web'].value = oforms[web].value;
+    oforms['start_date'].value = oforms[start_date].value;
+    oforms['end_date'].value = oforms[end_date].value;
+//alert(oforms[address_record_number].value);
 }
 
 var address_count = 1;
 
 function listAddress()
 {
-	var selected_country = document.getElementById('country');
-	var selected_address = document.getElementById('address_type');
-	var selected_address_str = selected_address.options[selected_address.selectedIndex].text;
-	var selected_country_str = selected_country.options[selected_country.selectedIndex].text;
+    var selected_country = document.getElementById('country');
+    var selected_address = document.getElementById('address_type');
+    var selected_address_str = selected_address.options[selected_address.selectedIndex].text;
+    var selected_country_str = selected_country.options[selected_country.selectedIndex].text;
 	
-	var oforms = document.forms['person_form'];
+    var oforms = document.forms['person_form'];
 	
-	$('#addressArrayList').show();
-	var table = $('#addressTable').show();	
-	var tbody = table.find('tbody');
+    $('#addressArrayList').show();
+    var table = $('#addressTable').show();	
+    var tbody = table.find('tbody');
 	
-	var validate_msg = _('FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY') + "\n";
-	var is_validated = true;
+    var validate_msg = _('FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY') + "\n";
+    var is_validated = true;
 	
-	if(oforms['address_type'].value == ""){
-		validate_msg += _("ADDRESS_TYPE") +"\n";
-		is_validated = false;
-	}
+    if(oforms['address_type'].value == ""){
+        validate_msg += _("ADDRESS_TYPE") +"\n";
+        is_validated = false;
+    }
 	
-	if(oforms['validate_address'].value != ""){
-		if(oforms['address'].value == ""){
-			validate_msg += _("ADDRESS") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_address'].value != ""){
+        if(oforms['address'].value == ""){
+            validate_msg += _("ADDRESS") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_country'].value != ""){
-		if(oforms['country'].value == ""){
-			validate_msg += _("COUNTRY") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_country'].value != ""){
+        if(oforms['country'].value == ""){
+            validate_msg += _("COUNTRY") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_phone'].value != ""){
-		if(oforms['phone'].value == ""){
-			validate_msg += _("PHONE") +"\n";
-			is_validated = false;
-		}
-	}	
+    if(oforms['validate_phone'].value != ""){
+        if(oforms['phone'].value == ""){
+            validate_msg += _("PHONE") +"\n";
+            is_validated = false;
+        }
+    }	
 	
-	if(oforms['validate_cellular'].value != ""){
-		if(oforms['cellular'].value == ""){
-			validate_msg += _("CELLULAR") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_cellular'].value != ""){
+        if(oforms['cellular'].value == ""){
+            validate_msg += _("CELLULAR") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_fax'].value != ""){
-		if(oforms['fax'].value == ""){
-			validate_msg += _("FAX") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_fax'].value != ""){
+        if(oforms['fax'].value == ""){
+            validate_msg += _("FAX") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_email'].value != ""){
-		if(oforms['email'].value == ""){
-			validate_msg += _("EMAIL") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_email'].value != ""){
+        if(oforms['email'].value == ""){
+            validate_msg += _("EMAIL") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_web'].value != ""){
-		if(oforms['web'].value == ""){
-			validate_msg += _("WEB") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_web'].value != ""){
+        if(oforms['web'].value == ""){
+            validate_msg += _("WEB") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_start_date'].value != ""){
-		if(oforms['start_date'].value == ""){
-			validate_msg += _("START_DATE") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_start_date'].value != ""){
+        if(oforms['start_date'].value == ""){
+            validate_msg += _("START_DATE") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(oforms['validate_end_date'].value != ""){
-		if(oforms['end_date'].value == ""){
-			validate_msg += _("END_DATE") +"\n";
-			is_validated = false;
-		}
-	}
+    if(oforms['validate_end_date'].value != ""){
+        if(oforms['end_date'].value == ""){
+            validate_msg += _("END_DATE") +"\n";
+            is_validated = false;
+        }
+    }
 	
-	if(is_validated){
-		if(oforms['address_record_number'].value != ''){
-			var address_id = oforms['address_record_number'].value;
-			var add_count = 'person_address[' + address_id + '][address_count]';
+    if(is_validated){
+        if(oforms['address_record_number'].value != ''){
+            var address_id = oforms['address_record_number'].value;
+            var add_count = 'person_address[' + address_id + '][address_count]';
 			
-			remove_field(oforms[add_count].value);
+            remove_field(oforms[add_count].value);
 			
-			tbody.append(''+
-					'<tr id="'+ address_count +'" >'+
-					'<td>'+ selected_address_str +'<input type="hidden" name="person_address['+address_id+']['+ 'address_count' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_id+']['+ 'address_record_number' + ']" value="'+ oforms['address_record_number'].value +'" /><input type="hidden" name="person_address['+address_id+']['+ 'address_type' + ']" value="'+ oforms['address_type'].value +'" /></td>'+
-					'<td>'+ oforms['address'].value  +'<input type="hidden" name="person_address['+address_id+']['+ 'address' + ']" value="'+ oforms['address'].value +'" /></td>'+
-					'<td>'+ selected_country_str +'<input type="hidden" name="person_address['+address_id+']['+ 'country' + ']" value="'+ oforms['country'].value +'" /></td>'+
-					'<td>'+ oforms['phone'].value  +'<input type="hidden" name="person_address['+address_id+']['+ 'phone' + ']" value="'+ oforms['phone'].value +'" /></td>'+
-					'<td>'+ oforms['cellular'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'cellular' + ']" value="'+ oforms['cellular'].value +'" /></td>'+
-					'<td>'+ oforms['fax'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'fax' + ']" value="'+ oforms['fax'].value +'" /></td>'+
-					'<td>'+ oforms['email'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'email' + ']" value="'+ oforms['email'].value +'" /></td>'+
-					'<td>'+ oforms['web'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'web' + ']" value="'+ oforms['web'].value +'" /></td>'+
-					'<td>'+ oforms['start_date'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'start_date' + ']" value="'+ oforms['start_date'].value +'" /></td>'+
-					'<td>'+ oforms['end_date'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'end_date' + ']" value="'+ oforms['end_date'].value +'" /></td>'+
-					"<td><a id='edit_address_frm' href='#address_field' onclick='edit_address(\""+ address_id + "\");'>"+_('EDIT')+"</a> | <a href='#address_field' onclick='removeElement("+ address_count +");'>"+_('REMOVE')+"</a></td>"+
-					'</tr>');
-		}
-		else{
-			tbody.append(''+
-					'<tr id="'+ address_count +'" >'+
-					'<td>'+ selected_address_str +'<input type="hidden" name="person_address['+address_count+']['+ 'address_count' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_count+']['+ 'address_record_number' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_count+']['+ 'address_type' + ']" value="'+ oforms['address_type'].value +'" /></td>'+
-					'<td>'+ oforms['address'].value  +'<input type="hidden" name="person_address['+address_count+']['+ 'address' + ']" value="'+ oforms['address'].value +'" /></td>'+
-					'<td>'+ selected_country_str +'<input type="hidden" name="person_address['+address_count+']['+ 'country' + ']" value="'+ oforms['country'].value +'" /></td>'+
-					'<td>'+ oforms['phone'].value  +'<input type="hidden" name="person_address['+address_count+']['+ 'phone' + ']" value="'+ oforms['phone'].value +'" /></td>'+
-					'<td>'+ oforms['cellular'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'cellular' + ']" value="'+ oforms['cellular'].value +'" /></td>'+
-					'<td>'+ oforms['fax'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'fax' + ']" value="'+ oforms['fax'].value +'" /></td>'+
-					'<td>'+ oforms['email'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'email' + ']" value="'+ oforms['email'].value +'" /></td>'+
-					'<td>'+ oforms['web'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'web' + ']" value="'+ oforms['web'].value +'" /></td>'+
-					'<td>'+ oforms['start_date'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'start_date' + ']" value="'+ oforms['start_date'].value +'" /></td>'+
-					'<td>'+ oforms['end_date'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'end_date' + ']" value="'+ oforms['end_date'].value +'" /></td>'+
-					"<td><a id='edit_address_frm' href='#address_field' onclick='edit_address("+ address_count + ");'>"+_('EDIT')+"</a> | <a href='#address_field' onclick='removeElement("+ address_count +");'>"+_('REMOVE')+"</a></td>"+
-					'</tr>');
-		}
+            tbody.append(''+
+                '<tr id="'+ address_count +'" >'+
+                '<td>'+ selected_address_str +'<input type="hidden" name="person_address['+address_id+']['+ 'address_count' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_id+']['+ 'address_record_number' + ']" value="'+ oforms['address_record_number'].value +'" /><input type="hidden" name="person_address['+address_id+']['+ 'address_type' + ']" value="'+ oforms['address_type'].value +'" /></td>'+
+                '<td>'+ oforms['address'].value  +'<input type="hidden" name="person_address['+address_id+']['+ 'address' + ']" value="'+ oforms['address'].value +'" /></td>'+
+                '<td>'+ selected_country_str +'<input type="hidden" name="person_address['+address_id+']['+ 'country' + ']" value="'+ oforms['country'].value +'" /></td>'+
+                '<td>'+ oforms['phone'].value  +'<input type="hidden" name="person_address['+address_id+']['+ 'phone' + ']" value="'+ oforms['phone'].value +'" /></td>'+
+                '<td>'+ oforms['cellular'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'cellular' + ']" value="'+ oforms['cellular'].value +'" /></td>'+
+                '<td>'+ oforms['fax'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'fax' + ']" value="'+ oforms['fax'].value +'" /></td>'+
+                '<td>'+ oforms['email'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'email' + ']" value="'+ oforms['email'].value +'" /></td>'+
+                '<td>'+ oforms['web'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'web' + ']" value="'+ oforms['web'].value +'" /></td>'+
+                '<td>'+ oforms['start_date'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'start_date' + ']" value="'+ oforms['start_date'].value +'" /></td>'+
+                '<td>'+ oforms['end_date'].value +'<input type="hidden" name="person_address['+address_id+']['+ 'end_date' + ']" value="'+ oforms['end_date'].value +'" /></td>'+
+                "<td><a id='edit_address_frm' href='#address_field' onclick='edit_address(\""+ address_id + "\");'>"+_('EDIT')+"</a> | <a href='#address_field' onclick='removeElement("+ address_count +");'>"+_('REMOVE')+"</a></td>"+
+                '</tr>');
+        }
+        else{
+            tbody.append(''+
+                '<tr id="'+ address_count +'" >'+
+                '<td>'+ selected_address_str +'<input type="hidden" name="person_address['+address_count+']['+ 'address_count' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_count+']['+ 'address_record_number' + ']" value="'+ address_count +'" /><input type="hidden" name="person_address['+address_count+']['+ 'address_type' + ']" value="'+ oforms['address_type'].value +'" /></td>'+
+                '<td>'+ oforms['address'].value  +'<input type="hidden" name="person_address['+address_count+']['+ 'address' + ']" value="'+ oforms['address'].value +'" /></td>'+
+                '<td>'+ selected_country_str +'<input type="hidden" name="person_address['+address_count+']['+ 'country' + ']" value="'+ oforms['country'].value +'" /></td>'+
+                '<td>'+ oforms['phone'].value  +'<input type="hidden" name="person_address['+address_count+']['+ 'phone' + ']" value="'+ oforms['phone'].value +'" /></td>'+
+                '<td>'+ oforms['cellular'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'cellular' + ']" value="'+ oforms['cellular'].value +'" /></td>'+
+                '<td>'+ oforms['fax'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'fax' + ']" value="'+ oforms['fax'].value +'" /></td>'+
+                '<td>'+ oforms['email'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'email' + ']" value="'+ oforms['email'].value +'" /></td>'+
+                '<td>'+ oforms['web'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'web' + ']" value="'+ oforms['web'].value +'" /></td>'+
+                '<td>'+ oforms['start_date'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'start_date' + ']" value="'+ oforms['start_date'].value +'" /></td>'+
+                '<td>'+ oforms['end_date'].value +'<input type="hidden" name="person_address['+address_count+']['+ 'end_date' + ']" value="'+ oforms['end_date'].value +'" /></td>'+
+                "<td><a id='edit_address_frm' href='#address_field' onclick='edit_address("+ address_count + ");'>"+_('EDIT')+"</a> | <a href='#address_field' onclick='removeElement("+ address_count +");'>"+_('REMOVE')+"</a></td>"+
+                '</tr>');
+        }
 	
-		address_count++;
+        address_count++;
 		
-		oforms['address_record_number'].value = "";
-		oforms['address_type'].value = "";
-		oforms['address'].value = "";
-		//$('#country').remove();
-		//$('#country_label').remove();
-		//$('#country_remove').remove();            
-		oforms['phone'].value = "";
-		oforms['cellular'].value = ""
-		oforms['fax'].value = "";
-		oforms['email'].value ="";
-		oforms['web'].value = "";
-		oforms['start_date'].value = "";
-		oforms['end_date'].value = "";
-	}
-	else{
-		alert(validate_msg);
-	}
+        oforms['address_record_number'].value = "";
+        oforms['address_type'].value = "";
+        oforms['address'].value = "";
+        //$('#country').remove();
+        //$('#country_label').remove();
+        //$('#country_remove').remove();            
+        oforms['phone'].value = "";
+        oforms['cellular'].value = ""
+        oforms['fax'].value = "";
+        oforms['email'].value ="";
+        oforms['web'].value = "";
+        oforms['start_date'].value = "";
+        oforms['end_date'].value = "";
+    }
+    else{
+        alert(validate_msg);
+    }
 }
 
 function removeElement(elementID) {	
-	if (confirm("Do you really want to remove this field?")){
-		$('#'+elementID).remove();
-	}
+    if (confirm("Do you really want to remove this field?")){
+        $('#'+elementID).remove();
+    }
 }
 
 function remove_field(elementID) {	
-	$('#'+elementID).remove();
+    $('#'+elementID).remove();
 }
 
-    $(document).ready(function () {
-		$("#admin_menu").treeview({
-			collapsed: false,
-			animated: "medium",
-			control:"#sidetreecontrol",
-			persist: "location"
-		});
-   	});
+$(document).ready(function () {
+    $("#admin_menu").treeview({
+        collapsed: false,
+        animated: "medium",
+        control:"#sidetreecontrol",
+        persist: "location"
+    });
+});
 
 
 function addControler(name)
@@ -434,7 +434,7 @@ function format_mt_tree(state) {
     level = parseInt(level)
     if(level){
         var marginpx = 15;
-        sel_val += "<div style='margin-left:"+level*marginpx+"px'>"+state.text+"</div>"
+        sel_val += "<span style='margin-left:"+level*marginpx+"px'>"+state.text+"</span>"
     }else{
         sel_val += state.text
     }
@@ -443,20 +443,41 @@ function format_mt_tree(state) {
     
 }
 window.onload = function(){ 
-	$('#hidefrm').hide();
-	$('#hideQueryfrm').hide();
-	$('#frm_search').hide();
-	$('#frm_saved_query').hide();
-	$('#address_frm').hide();
-	$('#hide_address_frm').hide();	
-	$('#addressArrayList').hide();
+    $('#hidefrm').hide();
+    $('#hideQueryfrm').hide();
+    $('#frm_search').hide();
+    $('#frm_saved_query').hide();
+    $('#address_frm').hide();
+    $('#hide_address_frm').hide();	
+    $('#addressArrayList').hide();
         
-        $(".datepicker").datepicker({format:'yyyy-mm-dd' });	
-        $(".select").select2({width: 'resolve',allowClear: true,placeholder: "Select"});
-        $(".mt_select").select2({width: 'resolve',allowClear: true,placeholder: "Select"});
-        $(".mt_select_mlt").select2({width: 'resolve',allowClear: true,placeholder: "Select",closeOnSelect:false});
-        $(".mt-tree").select2({width: 'resolve',allowClear: true,placeholder: "Select",closeOnSelect:false,formatResult: format_mt_tree,
-            formatSelection: format_mt_tree});
+    $(".datepicker").datepicker({
+        format:'yyyy-mm-dd'
+    });	
+    $(".select").select2({
+        width: 'resolve',
+        allowClear: true,
+        placeholder: "Select"
+    });
+    $(".mt_select").select2({
+        width: 'resolve',
+        allowClear: true,
+        placeholder: "Select"
+    });
+    $(".mt_select_mlt").select2({
+        width: 'resolve',
+        allowClear: true,
+        placeholder: "Select",
+        closeOnSelect:false
+    });
+    $(".mt-tree").select2({
+        width: 'resolve',
+        allowClear: true,
+        placeholder: "Select",
+        closeOnSelect:false,
+        formatResult: format_mt_tree,
+        formatSelection: format_mt_tree
+    });
         
 /*	
 	if(readCookie("helpstatus") != "on" && readCookie("helpstatus") != "off"){
@@ -474,114 +495,114 @@ window.onload = function(){
 }
 
 $(document).ready(function(){
-	$("#show_related_event").click(function(){
-		$('#show_related_event').hide();
-		$('#hide_related_event').show();	
-		$('#related_event_search').show();		
-	});
+    $("#show_related_event").click(function(){
+        $('#show_related_event').hide();
+        $('#hide_related_event').show();	
+        $('#related_event_search').show();		
+    });
 
-	$("#hide_related_event").click(function(){
-		$('#show_related_event').show();
-		$('#hide_related_event').hide();	
-		$('#related_event_search').hide();		
-	});
+    $("#hide_related_event").click(function(){
+        $('#show_related_event').show();
+        $('#hide_related_event').hide();	
+        $('#related_event_search').hide();		
+    });
 	
-	$("#related_event_search_close").click(function(){
-		$('#show_related_event').show();
-		$('#hide_related_event').hide();	
-		$('#related_event_search').hide();		
-	});
+    $("#related_event_search_close").click(function(){
+        $('#show_related_event').show();
+        $('#hide_related_event').hide();	
+        $('#related_event_search').hide();		
+    });
 });
 
 $(document).ready(function(){
-	$("#show_related_victim").click(function(){
-		$('#show_related_victim').hide();
-		$('#hide_related_victim').show();	
-		$('#related_victim_search').show();		
-	});
+    $("#show_related_victim").click(function(){
+        $('#show_related_victim').hide();
+        $('#hide_related_victim').show();	
+        $('#related_victim_search').show();		
+    });
 
-	$("#hide_related_victim").click(function(){
-		$('#show_related_victim').show();
-		$('#hide_related_victim').hide();	
-		$('#related_victim_search').hide();		
-	});
+    $("#hide_related_victim").click(function(){
+        $('#show_related_victim').show();
+        $('#hide_related_victim').hide();	
+        $('#related_victim_search').hide();		
+    });
 	
-	$("#related_victim_search_close").click(function(){
-		$('#show_related_victim').show();
-		$('#hide_related_victim').hide();	
-		$('#related_victim_search').hide();		
-	});
+    $("#related_victim_search_close").click(function(){
+        $('#show_related_victim').show();
+        $('#hide_related_victim').hide();	
+        $('#related_victim_search').hide();		
+    });
 });
 
 
 $(document).ready(function(){
-	$("#show_related_person").click(function(){
-		$('#show_related_person').hide();
-		$('#hide_related_person').show();	
-		$('#person_search_form').show();		
-	});
+    $("#show_related_person").click(function(){
+        $('#show_related_person').hide();
+        $('#hide_related_person').show();	
+        $('#person_search_form').show();		
+    });
 
-	$("#hide_related_person").click(function(){
-		$('#show_related_person').show();
-		$('#hide_related_person').hide();	
-		$('#person_search_form').hide();		
-	});
+    $("#hide_related_person").click(function(){
+        $('#show_related_person').show();
+        $('#hide_related_person').hide();	
+        $('#person_search_form').hide();		
+    });
 	
-	$("#related_person_search_close").click(function(){
-		$('#show_related_person').show();
-		$('#hide_related_person').hide();	
-		$('#person_search_form').hide();		
-	});
+    $("#related_person_search_close").click(function(){
+        $('#show_related_person').show();
+        $('#hide_related_person').hide();	
+        $('#person_search_form').hide();		
+    });
 });
 
 $(document).ready(function(){
-	$("#show_address_frm").click(function(){
-		$('#show_address_frm').hide();
-		$('#hide_address_frm').show();	
-		$('#address_frm').slideToggle();		
-	});
+    $("#show_address_frm").click(function(){
+        $('#show_address_frm').hide();
+        $('#hide_address_frm').show();	
+        $('#address_frm').slideToggle();		
+    });
 	
-	$("#edit_address_frm").click(function(){
-		$('#show_address_frm').hide();
-		$('#hide_address_frm').show();	
-		$('#address_frm').show();		
-	});
+    $("#edit_address_frm").click(function(){
+        $('#show_address_frm').hide();
+        $('#hide_address_frm').show();	
+        $('#address_frm').show();		
+    });
 
-	$("#hide_address_frm").click(function(){
-		$('#show_address_frm').show();
-		$('#hide_address_frm').hide();	
-		$('#address_frm').slideToggle();		
-	});
+    $("#hide_address_frm").click(function(){
+        $('#show_address_frm').show();
+        $('#hide_address_frm').hide();	
+        $('#address_frm').slideToggle();		
+    });
 
-	$("#close_address_frm").click(function(){
-		$('#show_address_frm').show();		
-		$('#hide_address_frm').hide();
-		$('#address_frm').slideToggle();		
-	});	
+    $("#close_address_frm").click(function(){
+        $('#show_address_frm').show();		
+        $('#hide_address_frm').hide();
+        $('#address_frm').slideToggle();		
+    });	
 	
-	$("#show_document").click(function(){
-		$('#hide_document').show();
-		$('#show_document').hide();		
-		$('#document_search').show();		
-	});
+    $("#show_document").click(function(){
+        $('#hide_document').show();
+        $('#show_document').hide();		
+        $('#document_search').show();		
+    });
 	
-	$("#hide_document").click(function(){
-		$('#hide_document').hide();
-		$('#show_document').show();		
-		$('#document_search').hide();		
-	});
+    $("#hide_document").click(function(){
+        $('#hide_document').hide();
+        $('#show_document').show();		
+        $('#document_search').hide();		
+    });
 
-	$("#close_doc_search_form").click(function(){		
-		$('#show_document').show();		
-		$('#hide_document').hide();	
-		$('#document_search').hide();	
-	});
+    $("#close_doc_search_form").click(function(){		
+        $('#show_document').show();		
+        $('#hide_document').hide();	
+        $('#document_search').hide();	
+    });
 
-	$("#close_doc_add_form").click(function(){		
-		$('#show_document').show();		
-		$('#hide_document').hide();		
-		$('#document_search').hide();				
-	});	
+    $("#close_doc_add_form").click(function(){		
+        $('#show_document').show();		
+        $('#hide_document').hide();		
+        $('#document_search').hide();				
+    });	
 	
 });
 /*
@@ -615,7 +636,9 @@ function field_set_to_tab(id)
         $tab.click(function (e){
             $fieldset.hide();
             $('#fieldset'+i).show();
-            $('.tab').each(function (ii){$(this).removeClass('active')});
+            $('.tab').each(function (ii){
+                $(this).removeClass('active')
+                });
             $(this).addClass('active');
             return false;
         });
@@ -649,7 +672,7 @@ function keyEvent(mod,act){
     tAct=act;
     var serverurl = window.location.href;
     var baseServerURL = new Array();
-	baseServerURL=serverurl.split('?');
+    baseServerURL=serverurl.split('?');
     targetURL=baseServerURL[0]+"?mod="+tMod+"&act="+tAct;           		
     setTimeout( "window.location.href = targetURL", 1*1 );  
 }
@@ -705,7 +728,7 @@ function testMod(key){
         default:
             return;
     }
-        return false;
+    return false;
 }
 
 
@@ -727,17 +750,19 @@ function testMod(key){
                 $('#help_popup').remove();
                 $('body').append('<div id="help_popup" style="position: absolute;">Loading....</div>');
                 $('#help_popup')
-                    .css('top', (event.pageY - options.xOffset) + 'px')
-                    .css('left',(event.pageX + options.yOffset) + 'px');
-	            $("#help_popup ").load($(this).attr('href')+'&'+options.args);
-                $(document).click(function (){$("#help_popup").remove();})
+                .css('top', (event.pageY - options.xOffset) + 'px')
+                .css('left',(event.pageX + options.yOffset) + 'px');
+                $("#help_popup ").load($(this).attr('href')+'&'+options.args);
+                $(document).click(function (){
+                    $("#help_popup").remove();
+                })
                 return false; 
             });
         });
 
         function debug($obj) {
             if (window.console && window.console.log) {
-                 ;//console.log();
+            ;//console.log();
             }
         };
     };
@@ -784,7 +809,7 @@ function testMod(key){
                 var obj = $('#'+$(this).attr('rel'));
                 obj.show('fast');
                 $(this).text(_("REMOVE_CLARIFY"))
-                    .attr('class',options.removeLinkClass);
+                .attr('class',options.removeLinkClass);
                 $(this).unbind('click');
                 $(this).bind('click', removeClarifyBox);
             }
@@ -802,7 +827,7 @@ function testMod(key){
 
         function debug($obj) {
             if (window.console && window.console.log) {
-                 ;//console.log();
+            ;//console.log();
             }
         };
     };
@@ -851,12 +876,12 @@ function testMod(key){
 
             link.text(_('CLICK_TO_SELECT_AN_OPTION'));
             link.attr('class',options.showLinkClass)
-                    .click(showTreeBox);
+            .click(showTreeBox);
 
             function mttreeClickEvent(e)
             {
-            	if (e.target) targ = e.target;
-            	else if (e.srcElement) targ = e.srcElement;
+                if (e.target) targ = e.target;
+                else if (e.srcElement) targ = e.srcElement;
                 var el = $(targ);
                 if(el.attr('huricode') == undefined)return true;
                 var data = {
@@ -872,24 +897,24 @@ function testMod(key){
                 var obj = $('#'+id);
                 obj.show('fast');
                 $('#'+id+'_link').text(_("HIDE_TREE"))
-                    .attr('class',options.removeLinkClass)
-                    .unbind('click',showTreeBox)
-                    .click(hideTreeBox);
+                .attr('class',options.removeLinkClass)
+                .unbind('click',showTreeBox)
+                .click(hideTreeBox);
             }
 
             function hideTreeBox(){
                 var obj = $('#'+id);
                 obj.hide('fast');
                 $('#'+id+'_link').text(_("CLICK_TO_SELECT_AN_OPTION"))
-                    .attr('class',options.showLinkClass)
-                    .unbind('click',hideTreeBox)
-                    .click(showTreeBox);
+                .attr('class',options.showLinkClass)
+                .unbind('click',hideTreeBox)
+                .click(showTreeBox);
             }           
         });
 
         function debug($obj) {
             if (window.console && window.console.log) {
-                 ;//console.log();
+            ;//console.log();
             }
         };
     };
@@ -960,7 +985,7 @@ function testMod(key){
 
         function debug($obj) {
             if (window.console && window.console.log) {
-                 ;//console.log();
+            ;//console.log();
             }
         };
     };
@@ -993,7 +1018,9 @@ function testMod(key){
                     var li = $('<li></li>');
                     var lable = $('<span>'+data.label+' </span>');
                     var input = $('<input type="hidden" name="'+data.field_id+'[]" value="'+data.huricode+'" />');
-                    var remove = $('<a>'+_('REMOVE')+'</a>').click(function(){$(this).parent().remove()});
+                    var remove = $('<a>'+_('REMOVE')+'</a>').click(function(){
+                        $(this).parent().remove()
+                        });
                     li.append(input).append(lable).append(remove);
                     if(options.clarify){
                         var clari_id = id+'_'+data.huricode+'_clarify';
@@ -1011,7 +1038,7 @@ function testMod(key){
 
         function debug($obj) {
             if (window.console && window.console.log) {
-                 ;//console.log();
+            ;//console.log();
             }
         };
     };
@@ -1024,25 +1051,50 @@ $(document).ready(function(){
     $('.multi_tree').multitree();
     $('.clarify').clarify();
     
-    
-     $('.help').bind('click',function(){
-                         
-      var e=$(this);
-     // e.popover({content: '<div>Loading....</div>', html : true }).popover('show');
-      $.get($(this).attr('href')+"&stream=text",function(d){
-          //e.popover('hide');
-          e.popover({content: d, html : true }).popover('show');
-      });
-      return false;
+    var isVisible = false;
+    var clickedAway = false;
+
+   
+$('.help').bind('click',function(){
+        console.log("help: isVisible:"+isVisible+":clickedAway:"+clickedAway)
+                            
+        var e=$(this);
+        // e.popover({content: '<div>Loading....</div>', html : true }).popover('show');
+        $.get($(this).attr('href')+"&stream=text",function(d){
+             e.popover({
+                trigger:'manual',
+                content: d, 
+                html : true
+            }).popover('show');
+            //console.log("help: isVisible:"+isVisible+":clickedAway:"+clickedAway)
+            isVisible = true
+        });
+        return false;
     });
+    $(document).click(function(e) {
+         $('.help').popover('hide')
+        //console.log("click: isVisible:"+isVisible+":clickedAway:"+clickedAway)
+       /* if(isVisible & clickedAway)
+        {
+            $('.help').popover('hide')
+            isVisible = clickedAway = false
+        }
+        else
+        {
+            clickedAway = true
+        }*/
+    });
+
+
+    
     //$('.help').help({args:'stream=text'});
 
     //reload page when logout
     $(document).ajaxComplete( function(event, xhr, ajaxOptions){
         var regex = /Sign in to OpenEvSys/i;
         if(xhr.responseText.search(regex) != -1){
-           window.location.reload();
-	}
+            window.location.reload();
+        }
     });
 });
 
@@ -1050,99 +1102,113 @@ $(document).ready(function(){
 function update_mt(val, ori , id , lan)
 {
     //send the data to server
-    $.post("index.php?mod=admin&act=update_mt&stream=text", { 'msgid' : id , 'locale' : lan, 'msgstr' : val },
+    $.post("index.php?mod=admin&act=update_mt&stream=text", {
+        'msgid' : id , 
+        'locale' : lan, 
+        'msgstr' : val
+    },
     function(data){
         if(data != "true"){
             alert(_('ERROR_OCCORED_WHILE_UPDATING_SERVER_')+data);
         }
-      }, "text");
+    }, "text");
 }
 
 function addJqgrid(field)
 {
-	var colNames =$('#list123').getGridParam('colNames');
-	var colModel =$('#list123').getGridParam('colModel');
-	$('#list123').GridUnload();	
+    var colNames =$('#list123').getGridParam('colNames');
+    var colModel =$('#list123').getGridParam('colModel');
+    $('#list123').GridUnload();	
 	
-	var colLength = colNames.length;
-	var modelLength = colModel.length;
-	var colNames_new = new Array(colNames.length+1);
-	var colModel_new = new Array(modelLength+1);
-	for(var count = 0;colLength >= count; count++)
-	{
-		colNames_new[count] = colNames[count];
-	}
+    var colLength = colNames.length;
+    var modelLength = colModel.length;
+    var colNames_new = new Array(colNames.length+1);
+    var colModel_new = new Array(modelLength+1);
+    for(var count = 0;colLength >= count; count++)
+    {
+        colNames_new[count] = colNames[count];
+    }
 	
-	colNames_new[colLength] = field;
+    colNames_new[colLength] = field;
 	
-	for(var count = 0;modelLength >= count; count++)
-	{
-		colModel_new[count] = colModel[count];
-	}
-	colModel_new[modelLength] = {name:field, index:field, width:80};
+    for(var count = 0;modelLength >= count; count++)
+    {
+        colModel_new[count] = colModel[count];
+    }
+    colModel_new[modelLength] = {
+        name:field, 
+        index:field, 
+        width:80
+    };
 	
-	var options = {"div":"#list123","file":"example.php","rownum":"10","caption":"Search Results","pager":"#pager"};
+    var options = {
+        "div":"#list123",
+        "file":"example.php",
+        "rownum":"10",
+        "caption":"Search Results",
+        "pager":"#pager"
+    };
 
-	var rowList = [10,20,30];
+    var rowList = [10,20,30];
 	
-	var jqgrid = new initJqgrid();
-	jqgrid.init(options,colNames_new,colModel_new,rowList);
+    var jqgrid = new initJqgrid();
+    jqgrid.init(options,colNames_new,colModel_new,rowList);
 	
-	//console.log(colNames_new);
-	//debugger;
+//console.log(colNames_new);
+//debugger;
 	
 	
 }
 
 function createList(id)
 {
-	var test = queryBuilder.getInstance();
-	alert(test.getSelectedEntities());
+    var test = queryBuilder.getInstance();
+    alert(test.getSelectedEntities());
 	
 }
 function remove(count)
 {
-	var sr =  searchResults.getInstance();
-	sr.removeField(count);
+    var sr =  searchResults.getInstance();
+    sr.removeField(count);
 }
 
 //Help Enable Disable
 function createCookie(name,value,days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires = "; expires="+date.toGMTString();
-	}
-	else var expires = "";
-	document.cookie = name+"="+value+expires+"; path=/";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
 }
 
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-	}
-	return null;
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
 }
 
 function eraseCookie(name) {
-	createCookie(name,"",-1);
+    createCookie(name,"",-1);
 }
 
 function setHelpStatus(){
-	var helpstatus = readCookie("helpstatus");
-	aObj = document.getElementById("help_switch_link");
-	if(helpstatus == "off"){
-		createCookie("helpstatus","on",0);
-		aObj.innerHTML = _("DISABLE_HELP");		
-	}
-	else{
-		createCookie("helpstatus","off",0);		
-		aObj.innerHTML = _("ENABLE_HELP");
-	}
+    var helpstatus = readCookie("helpstatus");
+    aObj = document.getElementById("help_switch_link");
+    if(helpstatus == "off"){
+        createCookie("helpstatus","on",0);
+        aObj.innerHTML = _("DISABLE_HELP");		
+    }
+    else{
+        createCookie("helpstatus","off",0);		
+        aObj.innerHTML = _("ENABLE_HELP");
+    }
 		
 }
 
@@ -1150,112 +1216,116 @@ function setHelpStatus(){
 
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
-	"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-	"sPaginationType": "bootstrap",
-	"oLanguage": {
-		"sLengthMenu": "_MENU_ records per page"
-	}
+    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+    "sPaginationType": "bootstrap",
+    "oLanguage": {
+        "sLengthMenu": "_MENU_ records per page"
+    }
 } );
 
 
 /* Default class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
-	"sWrapper": "dataTables_wrapper form-inline"
+    "sWrapper": "dataTables_wrapper form-inline"
 } );
 
 
 /* API method to get paging information */
 $.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
 {
-	return {
-		"iStart":         oSettings._iDisplayStart,
-		"iEnd":           oSettings.fnDisplayEnd(),
-		"iLength":        oSettings._iDisplayLength,
-		"iTotal":         oSettings.fnRecordsTotal(),
-		"iFilteredTotal": oSettings.fnRecordsDisplay(),
-		"iPage":          oSettings._iDisplayLength === -1 ?
-			0 : Math.ceil( oSettings._iDisplayStart / oSettings._iDisplayLength ),
-		"iTotalPages":    oSettings._iDisplayLength === -1 ?
-			0 : Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
-	};
+    return {
+        "iStart":         oSettings._iDisplayStart,
+        "iEnd":           oSettings.fnDisplayEnd(),
+        "iLength":        oSettings._iDisplayLength,
+        "iTotal":         oSettings.fnRecordsTotal(),
+        "iFilteredTotal": oSettings.fnRecordsDisplay(),
+        "iPage":          oSettings._iDisplayLength === -1 ?
+        0 : Math.ceil( oSettings._iDisplayStart / oSettings._iDisplayLength ),
+        "iTotalPages":    oSettings._iDisplayLength === -1 ?
+        0 : Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
+    };
 };
 
 
 /* Bootstrap style pagination control */
 $.extend( $.fn.dataTableExt.oPagination, {
-	"bootstrap": {
-		"fnInit": function( oSettings, nPaging, fnDraw ) {
-			var oLang = oSettings.oLanguage.oPaginate;
-			var fnClickHandler = function ( e ) {
-				e.preventDefault();
-				if ( oSettings.oApi._fnPageChange(oSettings, e.data.action) ) {
-					fnDraw( oSettings );
-				}
-			};
+    "bootstrap": {
+        "fnInit": function( oSettings, nPaging, fnDraw ) {
+            var oLang = oSettings.oLanguage.oPaginate;
+            var fnClickHandler = function ( e ) {
+                e.preventDefault();
+                if ( oSettings.oApi._fnPageChange(oSettings, e.data.action) ) {
+                    fnDraw( oSettings );
+                }
+            };
 
-			$(nPaging).addClass('pagination').append(
-				'<ul>'+
-					'<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
-					'<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
-				'</ul>'
-			);
-			var els = $('a', nPaging);
-			$(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
-			$(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
-		},
+            $(nPaging).addClass('pagination').append(
+                '<ul>'+
+                '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+                '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+                '</ul>'
+                );
+            var els = $('a', nPaging);
+            $(els[0]).bind( 'click.DT', {
+                action: "previous"
+            }, fnClickHandler );
+            $(els[1]).bind( 'click.DT', {
+                action: "next"
+            }, fnClickHandler );
+        },
 
-		"fnUpdate": function ( oSettings, fnDraw ) {
-			var iListLength = 5;
-			var oPaging = oSettings.oInstance.fnPagingInfo();
-			var an = oSettings.aanFeatures.p;
-			var i, ien, j, sClass, iStart, iEnd, iHalf=Math.floor(iListLength/2);
+        "fnUpdate": function ( oSettings, fnDraw ) {
+            var iListLength = 5;
+            var oPaging = oSettings.oInstance.fnPagingInfo();
+            var an = oSettings.aanFeatures.p;
+            var i, ien, j, sClass, iStart, iEnd, iHalf=Math.floor(iListLength/2);
 
-			if ( oPaging.iTotalPages < iListLength) {
-				iStart = 1;
-				iEnd = oPaging.iTotalPages;
-			}
-			else if ( oPaging.iPage <= iHalf ) {
-				iStart = 1;
-				iEnd = iListLength;
-			} else if ( oPaging.iPage >= (oPaging.iTotalPages-iHalf) ) {
-				iStart = oPaging.iTotalPages - iListLength + 1;
-				iEnd = oPaging.iTotalPages;
-			} else {
-				iStart = oPaging.iPage - iHalf + 1;
-				iEnd = iStart + iListLength - 1;
-			}
+            if ( oPaging.iTotalPages < iListLength) {
+                iStart = 1;
+                iEnd = oPaging.iTotalPages;
+            }
+            else if ( oPaging.iPage <= iHalf ) {
+                iStart = 1;
+                iEnd = iListLength;
+            } else if ( oPaging.iPage >= (oPaging.iTotalPages-iHalf) ) {
+                iStart = oPaging.iTotalPages - iListLength + 1;
+                iEnd = oPaging.iTotalPages;
+            } else {
+                iStart = oPaging.iPage - iHalf + 1;
+                iEnd = iStart + iListLength - 1;
+            }
 
-			for ( i=0, ien=an.length ; i<ien ; i++ ) {
-				// Remove the middle elements
-				$('li:gt(0)', an[i]).filter(':not(:last)').remove();
+            for ( i=0, ien=an.length ; i<ien ; i++ ) {
+                // Remove the middle elements
+                $('li:gt(0)', an[i]).filter(':not(:last)').remove();
 
-				// Add the new list items and their event handlers
-				for ( j=iStart ; j<=iEnd ; j++ ) {
-					sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
-					$('<li '+sClass+'><a href="#">'+j+'</a></li>')
-						.insertBefore( $('li:last', an[i])[0] )
-						.bind('click', function (e) {
-							e.preventDefault();
-							oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
-							fnDraw( oSettings );
-						} );
-				}
+                // Add the new list items and their event handlers
+                for ( j=iStart ; j<=iEnd ; j++ ) {
+                    sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
+                    $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+                    .insertBefore( $('li:last', an[i])[0] )
+                    .bind('click', function (e) {
+                        e.preventDefault();
+                        oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
+                        fnDraw( oSettings );
+                    } );
+                }
 
-				// Add / remove disabled classes from the static elements
-				if ( oPaging.iPage === 0 ) {
-					$('li:first', an[i]).addClass('disabled');
-				} else {
-					$('li:first', an[i]).removeClass('disabled');
-				}
+                // Add / remove disabled classes from the static elements
+                if ( oPaging.iPage === 0 ) {
+                    $('li:first', an[i]).addClass('disabled');
+                } else {
+                    $('li:first', an[i]).removeClass('disabled');
+                }
 
-				if ( oPaging.iPage === oPaging.iTotalPages-1 || oPaging.iTotalPages === 0 ) {
-					$('li:last', an[i]).addClass('disabled');
-				} else {
-					$('li:last', an[i]).removeClass('disabled');
-				}
-			}
-		}
-	}
+                if ( oPaging.iPage === oPaging.iTotalPages-1 || oPaging.iTotalPages === 0 ) {
+                    $('li:last', an[i]).addClass('disabled');
+                } else {
+                    $('li:last', an[i]).removeClass('disabled');
+                }
+            }
+        }
+    }
 } );
 
 
@@ -1264,36 +1334,36 @@ $.extend( $.fn.dataTableExt.oPagination, {
  * Required TableTools 2.1+
  */
 if ( $.fn.DataTable.TableTools ) {
-	// Set the classes that TableTools uses to something suitable for Bootstrap
-	$.extend( true, $.fn.DataTable.TableTools.classes, {
-		"container": "DTTT btn-group",
-		"buttons": {
-			"normal": "btn",
-			"disabled": "disabled"
-		},
-		"collection": {
-			"container": "DTTT_dropdown dropdown-menu",
-			"buttons": {
-				"normal": "",
-				"disabled": "disabled"
-			}
-		},
-		"print": {
-			"info": "DTTT_print_info modal"
-		},
-		"select": {
-			"row": "active"
-		}
-	} );
+    // Set the classes that TableTools uses to something suitable for Bootstrap
+    $.extend( true, $.fn.DataTable.TableTools.classes, {
+        "container": "DTTT btn-group",
+        "buttons": {
+            "normal": "btn",
+            "disabled": "disabled"
+        },
+        "collection": {
+            "container": "DTTT_dropdown dropdown-menu",
+            "buttons": {
+                "normal": "",
+                "disabled": "disabled"
+            }
+        },
+        "print": {
+            "info": "DTTT_print_info modal"
+        },
+        "select": {
+            "row": "active"
+        }
+    } );
 
-	// Have the collection use a bootstrap compatible dropdown
-	$.extend( true, $.fn.DataTable.TableTools.DEFAULTS.oTags, {
-		"collection": {
-			"container": "ul",
-			"button": "li",
-			"liner": "a"
-		}
-	} );
+    // Have the collection use a bootstrap compatible dropdown
+    $.extend( true, $.fn.DataTable.TableTools.DEFAULTS.oTags, {
+        "collection": {
+            "container": "ul",
+            "button": "li",
+            "liner": "a"
+        }
+    } );
 }
 
 

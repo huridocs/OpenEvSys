@@ -9,7 +9,7 @@
     <div class="form-container"> 
     <form class="form-horizontal"  action='<?php echo get_url('person','new_address')?>' name="person_form" id="person_address" method='post' enctype='multipart/form-data'>    	
        <div class="control-group">
-                <div class="controls">
+                <div >
 
                   <a class='btn' href='<?php get_url('person','address_list') ?>' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
        
@@ -21,7 +21,7 @@
 		$fields = place_form_elements($address_form,$fields);
 		?>
          <div class="control-group">
-                <div class="controls">
+                <div >
 
                   <a class='btn' href='<?php get_url('person','address_list') ?>' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
        

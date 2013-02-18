@@ -22,7 +22,7 @@ include_once('event_title.php');
                     <div>
                         <?php shn_form_radio(_t('ADDITIONAL_DETAIL_TYPE'), 'ad_type', array('options' => $ad_types)); ?>
                         <div class="control-group">
-                            <div class="controls"><a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id, 'act_id' => $_GET['act_id'], 'row' => $_GET['row'], 'type' => 'act')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a> 
+                            <div ><a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id, 'act_id' => $_GET['act_id'], 'row' => $_GET['row'], 'type' => 'act')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a> 
                                 <button type='submit' class='btn btn-primary' ><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
                             </div></div></div>
 
@@ -35,7 +35,7 @@ include_once('event_title.php');
                     ?>
                     <input type="hidden" name="ad_type" value='<?php echo $ad_type ?>' />
                     <div class="control-group">
-                        <div class="controls">
+                        <div >
                             <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id, 'act_id' => $_GET['act_id'], 'row' => $_GET['row'], 'type' => 'act')) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a> 
                             <button  type='submit' class='btn btn-primary' name="update" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                         </div></div>

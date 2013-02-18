@@ -23,7 +23,7 @@
     if (isset($source)) {
         ?>
           <div class="control-group">
-        <div class="controls">
+        <div >
 
             <a class="btn" href="<?php echo get_url('events', 'src_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
 
@@ -51,7 +51,7 @@
     }
     ?>
     <div class="control-group">
-        <div class="controls">
+        <div >
 
             <a class="btn" href="<?php echo get_url('events', 'src_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
 

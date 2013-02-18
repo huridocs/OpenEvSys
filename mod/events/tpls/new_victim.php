@@ -20,7 +20,7 @@
     <div class="form-container">
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events','add_victim','new_victim',array('eid'=>$event_id))?>' method='post' enctype='multipart/form-data'>
             <br/><div class="control-group">
-            <div class="controls">
+            <div >
                 <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH')?></a>      
             <button type="submit" class="btn btn-primary"  name='save'><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
             </div>
@@ -28,7 +28,7 @@
             <?php $fields = shn_form_get_html_fields($person_form);  ?>
             <?php $fields = place_form_elements($person_form,$fields); ?>  
             <div class="control-group">
-            <div class="controls"><a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH')?></a>      
+            <div ><a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-search"></i> <?php echo _t('SEARCH')?></a>      
             <button type="submit" class="btn btn-primary"  name='save'><i class="icon-chevron-right icon-white"></i> <?php echo _t('NEXT') ?></button>
             </div>
             </div>

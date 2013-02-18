@@ -22,6 +22,7 @@ class shnBreadcrumbs {
 
     public function renderBreadcrumbs() {
         ksort($this->crumbs);
+        if($this->crumbs){
         ?>
         <div>
             <ul class="breadcrumb">
@@ -54,6 +55,7 @@ class shnBreadcrumbs {
             </ul>
         </div>
         <?php
+        }
     }
 
 }

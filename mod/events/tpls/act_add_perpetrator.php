@@ -26,8 +26,8 @@
 if(isset($perpetrator)){
     ?>
 <div class="control-group">
-            <div class="controls"> 
-                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+            <div > 
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('Add Perpetrator later')?></a>
 
 <a class="btn" href="<?php echo get_url('events','add_perpetrator','new_perpetrator',array('eid'=>$event_id)) ?>"><i class="icon-plus"></i> <?php echo _t('ADD_NEW')?></a>
 <a class="btn <?php if(!isset($perpetrator)){ echo "btn-primary";  }?>" href="<?php echo get_url('events','add_perpetrator','search_perpetrator',array('eid'=>$event_id)) ?>"><i class="icon-search  <?php if(!isset($perpetrator)){ echo "icon-white";  }?>"></i> <?php echo _t('SEARCH_IN_DATABASE')?></a>
@@ -42,8 +42,8 @@ if(isset($perpetrator)){
 }
 ?>
 <div class="control-group">
-            <div class="controls"> 
-                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
+            <div > 
+                <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('Add Perpetrator later')?></a>
 
 <a class="btn" href="<?php echo get_url('events','add_perpetrator','new_perpetrator',array('eid'=>$event_id)) ?>"><i class="icon-plus"></i> <?php echo _t('ADD_NEW')?></a>
 <a class="btn <?php if(!isset($perpetrator)){ echo "btn-primary";  }?>" href="<?php echo get_url('events','add_perpetrator','search_perpetrator',array('eid'=>$event_id)) ?>"><i class="icon-search  <?php if(!isset($perpetrator)){ echo "icon-white";  }?>"></i> <?php echo _t('SEARCH_IN_DATABASE')?></a>

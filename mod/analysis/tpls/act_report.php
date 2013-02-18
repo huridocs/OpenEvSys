@@ -10,4 +10,4 @@
 ?>
 <br />
 </div>
-<a class="btn" href="<?php echo get_url('analysis','search_result',null,array('main_entity'=>$main_entity)); ?>"><?php echo _('BACK'); ?></a>
+<a class="btn" href="<?php echo get_url('analysis','search_result',null,array('main_entity'=>$main_entity)); ?>"><i class="icon-chevron-left"></i> <?php echo _('BACK'); ?></a>

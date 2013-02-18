@@ -23,7 +23,7 @@
     if (isset($intv_party)) {
         ?>
         <div class="control-group">
-            <div class="controls"> 
+            <div > 
                 <a class="btn" href="<?php echo get_url('events', 'intv_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
 
                 <?php if (acl_is_entity_allowed_boolean('person', 'create')) {// if create is ever changed for this please update acl_person_entity_is_allowed() ?>    
@@ -52,7 +52,7 @@
     }
     ?>
     <div class="control-group">
-        <div class="controls"> 
+        <div > 
             <a class="btn" href="<?php echo get_url('events', 'intv_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
           
             <?php if (acl_is_entity_allowed_boolean('person', 'create')) {// if create is ever changed for this please update acl_person_entity_is_allowed() ?>    

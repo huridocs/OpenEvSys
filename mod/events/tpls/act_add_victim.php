@@ -21,7 +21,7 @@
 <?php
 if(isset($victim)){?>
 <div class="control-group">
-            <div class="controls">
+            <div >
                 <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
 
 
@@ -44,7 +44,7 @@ if(isset($victim)){?>
 ?>
 
     <div class="control-group">
-            <div class="controls">
+            <div >
                 <a class="btn" href="<?php echo get_url('events','vp_list',null,array('eid'=>$event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
 
 

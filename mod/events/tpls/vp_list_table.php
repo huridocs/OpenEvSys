@@ -17,11 +17,13 @@
             <th><?php echo _t('TYPE_OF_ACT') ?></th>
 			<th width='16px'><input type='checkbox' onchange='$("input.delete_inv").attr("checked",this.checked)' /></th>
             <th><?php echo _t('PERPETRATOR_NAME_S_') ?></th>
+            <th><?php echo _t('Perpetrator Roles') ?></th>
             <th><?php echo _t('INVOLVEMENT') ?></th>
         </tr>
     </thead>
     <tbody>	
     <?php foreach($vp_list as $record){ 
+       
             $class = ($act->act_record_number==$record['act_record_number'])?' active ':'';
     ?>
         <tr class='<?php echo $class ?>'>
@@ -51,6 +53,11 @@
             <td class="<?php echo $odd.$class ?>">
                 <a href="<?php get_url('events','vp_list',null,array('inv_id'=>$record['involvement_record_number'],'type'=>'perter')) ?>"><?php echo $record['pname']?></a>
             </td>
+           
+            <td class="<?php echo $odd.$class ?>">
+                <?php if($record['perpetrator_record_number']){ ?>
+                <a href="<?php get_url('person', 'role_list', null, array('eid'=>null,'pid' => $record['perpetrator_record_number'])) ?>"><?php echo _t('ROLE_LIST')?></a>
+            <?php } ?></td>
             <td class="<?php echo $odd.$class ?>">
                 <a href="<?php get_url('events','vp_list',null,array('inv_id'=>$record['involvement_record_number'],'type'=>'inv')) ?>"><?php echo get_mt_term($record['degree_of_involvement'])?></a>
             </td>			

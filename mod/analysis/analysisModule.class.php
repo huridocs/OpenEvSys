@@ -1263,34 +1263,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     public function act_get_data_dict() {
-        $res = Browse::getAllEntityFields();
-        $domain = new Domain();
-        foreach ($res as $record) {
-            $entity = $record['entity'];
-            if (isset($entity) && !isset($domain->$entity)) {
-                $domain->$entity = new domain();
-                $domain->$entity->fields = new domain();
-//                $domain->$entity->fields = array();
-            }
-            $fo = new Domain();
-            $name = $record['field_name'];
-            $fo->value = $record['field_name'];
-            $fo->label = $record['field_label'];
-            $fo->field_type = ($record['datatype'] == 'N') ? 'number' : $record['field_type'];
-            $fo->list_code = $record['list_code'];
-            $fo->select = $record['in_results'];
-            $domain->$entity->fields->$name = $fo;
-        }
-        //add the entity list
-        $entities = analysis_get_advance_search_entities();
 
-        foreach ($entities as $key => $entity) {
-            $domain->$key->value = $entity['type'];
-            $domain->$key->label = $entity['title'];
-            $domain->$key->desc = $entity['desc'];
-            $domain->$key->ac_type = $entity['ac_type'];
-        }
-        echo json_encode($domain);
+        echo json_encode($this->getEntityFields());
         exit(0);
     }
 
@@ -1299,17 +1273,22 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     public function act_load_grid() {
+
         global $global;
         include_once 'searchSql.php';
 
-        $page = (int) $_GET['page'];
-        $limit = (int) $_GET['rows'];
+        $start = (int) $_GET['iDisplayStart'];
+        $limit = (int) $_GET['iDisplayLength'];
+        if (!$limit) {
+            $limit = 10;
+        }
         $sidx = $_GET['sidx'];
         $sord = $_GET['sord'];
 
         //convert json query to an object 
         $query = json_decode($_GET['query']);
 
+//var_dump($query);exit;
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
@@ -1363,15 +1342,16 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         if ($page > $total_pages)
             $page = $total_pages;
 
-        $start = $limit * $page - $limit;
+        // $start = $limit * $page - $limit;
 
         if ($start < 0)
             $start = 0;
 
         $sql = $sqlArray['result'];
         //print $sql;
-
-        $sql .= " LIMIT $start , $limit";
+        if ($limit != -1) {
+            $sql .= " LIMIT $start , $limit";
+        }
         //$sql .= "LIMIT $start , $limit";
         //echo $sql;
         try {
@@ -1380,25 +1360,28 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $response->error = "error"; //$e->getMessage();
         }
 
+        $response->sEcho = intval($_GET['sEcho']);
+
         $response->page = $page; // current page
-        $response->total = $total_pages; // total pages
-        $response->records = $count; // total records
+        $response->iTotalRecords = $count; // total pages
+        $response->iTotalDisplayRecords = $count; // total records
+        //$response->aaSorting = array(array(1=>"desc"));
+
         $i = 0;
-
-        /* var_dump($res);
-          while(!$res->EOF)
-          {
-          var_dump($res->fields[0]);
-
-          $res->MoveNext();
-          } */
+        $aoColumns = array();
+        foreach ($fields_array as $fields_arrayItem) {
+            $aoColumns[] = array("mData" => $fields_arrayItem["name"], "sTitle" => $fields_arrayItem["name"]);
+        }
         $number_of_fields = count($fields_array);
         foreach ($res as $key => $val) {
-            $response->rows[$i]['id'] = $val[$fields_array[0]];
+            //$response->aaData[$i]['id'] = $val[$fields_array[0]];
             $array_values = array();
+            $array_values['id'] = $val[$fields_array[0]];
+
 
             for ($count = 0; $number_of_fields > $count; $count++) {
                 $field_name = $fields_array[$count]['name'];
+
                 $record_number_field = substr($field_name, strlen($field_name) - 13);
 
                 $confidentiality_field = substr($field_name, strlen($field_name) - 15);
@@ -1427,7 +1410,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     foreach ($list as $term) {
                         $string = $string . ", " . get_mt_term(trim($term));
                     }
-                    $array_values[] = ltrim($string, ',');
+                    $array_values[$field_name] = ltrim($string, ',');
                 } else if ($record_number_field == 'record_number' || $doc_field == 'doc_id') {
                     if (preg_match('/event/', $field_name)) {
                         $link_entity = 'event';
@@ -1459,71 +1442,359 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
                     if ($link_entity != 'address') {
                         $url = get_record_url($val[$field_name], $link_entity);
-                        $array_values[] = "<a href='$url' target='_blank'>" . $val[$field_name] . "</a>";
+                        $array_values[$field_name] = "<a href='$url' target='_blank'>" . $val[$field_name] . "</a>";
                     } else {
-                        $array_values[] = $val[$field_name];
+                        $array_values[$field_name] = $val[$field_name];
                     }
                 } else {
-                    $array_values[] = $val[$field_name];
+                    $array_values[$field_name] = $val[$field_name];
                 }
             }
-            $response->rows[$i]['cell'] = $array_values;
+            $response->aaData[$i] = $array_values;
             $i++;
         }
+
+
+        $response->aoColumns = $aoColumns;
 
         echo json_encode($response);
 
         exit(0);
     }
 
+    private function getEntityFields() {
+        $res = Browse::getAllEntityFields();
+        $domain = new Domain();
+        foreach ($res as $record) {
+            $entity = $record['entity'];
+            if (isset($entity) && !isset($domain->$entity)) {
+                $domain->$entity = new domain();
+                $domain->$entity->fields = new domain();
+//                $domain->$entity->fields = array();
+            }
+            $fo = new Domain();
+            $name = $record['field_name'];
+            $fo->value = $record['field_name'];
+            $fo->label = $record['field_label'];
+            $fo->field_type = ($record['datatype'] == 'N') ? 'number' : $record['field_type'];
+            $fo->list_code = $record['list_code'];
+            $fo->select = $record['in_results'];
+            $domain->$entity->fields->$name = $fo;
+        }
+        //add the entity list
+        $entities = analysis_get_advance_search_entities();
+
+        foreach ($entities as $key => $entity) {
+            $domain->$key->value = $entity['type'];
+            $domain->$key->label = $entity['title'];
+            $domain->$key->desc = $entity['desc'];
+            $domain->$key->ac_type = $entity['ac_type'];
+        }
+        return $domain;
+    }
+
     public function act_facetsearch() {
-        $entities = array('event', 'act' ,'victim' ,'involvement' ,'perpetrator','information',
-                'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
-            'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
-            'destruction');
+        /* $entities = array('event', 'act' ,'victim' ,'involvement' ,'perpetrator','information',
+          'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
+          'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
+          'destruction'); */
+        $entities = array('event', 'person', 'act', 'victim', 'involvement', 'perpetrator', 'information',
+            'source', 'intervention', 'supporting_docs_meta',
+            'biographic_details');
         $this->entities = $entities;
+
+
+        $this->domaindata = $this->getEntityFields();
     }
 
     public function act_facetsearchresults() {
-        $resp = array("response" => array("start" => 47, "found" => 57));
+        global $global;
 
-        $records = array();
-        $rand = rand(5, 50);
+        $searchparams = $_GET['searchparams'];
+        $searchparams = json_decode($searchparams);
+        $resp = array();
+        if ($searchparams) {
+            $domaindata = $this->getEntityFields();
+//var_dump($searchparams);exit;
 
-        function rand_string($length) {
-            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
-            $str = "";
-            $size = strlen($chars);
-            for ($i = 0; $i < $length; $i++) {
-                $str .= $chars[rand(0, $size - 1)];
+            $query = new stdClass;
+            if(count((array)$searchparams->selected_terms)){
+                foreach ($searchparams->selected_terms as $entity => $fields) {
+                    foreach ($fields as $field => $terms) {
+                        $i = 1;
+                        foreach ($terms as $term) {
+                            $condition = new stdClass;
+                            $condition->entity = $entity;
+                            $condition->field = $field;
+                            $condition->operator = "=";
+                            $condition->value = $term;
+                            if ($i == count($terms)) {
+                                $condition->link = "and";
+                            } else {
+                                $condition->link = "or";
+                            }
+                            $query->conditions[] = $condition;
+                            $i++;
+                        }
+                    }
+                }
+            }else{
+                $condition = new stdClass;
+                $condition->entity = "event";
+                $condition->field = "event_title";
+                $condition->operator = "contains";
+                $condition->value = "";
+               
+                $query->conditions[] = $condition;
+            }
+            $sel = new stdClass;
+            $sel->entity = "event";
+            $sel->field = "event_title";
+            $query->select = array($sel);
+
+            $from = (int) $searchparams->paging->from;
+            $size = (int) $searchparams->paging->size;
+            if ($from < 0) {
+                $from = 0;
+            }
+            if ($size < 1) {
+                $size = 10;
             }
 
-            return $str;
+
+            $records = array();
+
+            include_once 'searchSql.php';
+
+            $start = $from;
+            $limit = $size;
+
+            $sidx = $_GET['sidx'];
+            if (!$sidx) {
+                $sidx = 1;
+            }
+            $sord = $_GET['sord'];
+
+
+            $fields_array = array();
+            $entities = analysis_get_search_entities();
+
+            //if the query is a search put select fields to the array
+            foreach ($query->select as $field) {
+                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
+                $mt = is_mt_field($entity, $field->field);
+                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+            }
+
+            $searchSql = new SearchResultGenerator();
+            $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
+            $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
+
+            try {
+                $res_count = $global['db']->Execute($count_query);
+            } catch (Exception $e) {
+                $response->error = "error"; //$e->getMessage();
+                $res_count = null;
+            }
+
+            if ($res_count != null)
+                while (!$res_count->EOF) {
+                    $count = $res_count->fields[0];
+                    $res_count->MoveNext();
+                }
+
+            /* if ($count > 0) {
+              $total_pages = ceil($count / $limit);
+              } else {
+              $total_pages = 0;
+              }
+
+              if ($page > $total_pages)
+              $page = $total_pages;
+             */
+            // $start = $limit * $page - $limit;
+
+
+            $sql = $sqlArray['result'];
+
+            if ($limit != -1) {
+                $sql .= " LIMIT $start , $limit";
+            }
+
+            try {
+                $res = $global['db']->Execute($sql);
+            } catch (Exception $e) {
+                $response->error = "error"; //$e->getMessage();
+            }
+
+
+            $resp = array("response" => array("start" => $from, "found" => $count));
+$number_of_fields = count($fields_array);
+            foreach ($res as $key => $val) {
+                //$response->aaData[$i]['id'] = $val[$fields_array[0]];
+                $array_values = array();
+                
+
+                for ($count = 0; $number_of_fields > $count; $count++) {
+                    $field_name = $fields_array[$count]['name'];
+
+                    $record_number_field = substr($field_name, strlen($field_name) - 13);
+
+                    $confidentiality_field = substr($field_name, strlen($field_name) - 15);
+                    $deceased_field = substr($field_name, strlen($field_name) - 8);
+                    $doc_field = substr($field_name, strlen($field_name) - 6);
+
+                    if ($confidentiality_field == 'confidentiality') {
+                        if ($val[$field_name] == 'y') {
+                            $val[$field_name] = _t('YES');
+                        } else {
+                            $val[$field_name] = _t('NO');
+                        }
+                    }
+
+                    if ($deceased_field == 'deceased') {
+                        if ($val[$field_name] == 'y') {
+                            $val[$field_name] = _t('YES');
+                        } else {
+                            $val[$field_name] = _t('NO');
+                        }
+                    }
+
+                    $string = null;
+                    if ($fields_array[$count]['mt']) {
+                        $list = explode(',', $val[$field_name]);
+                        foreach ($list as $term) {
+                            $string = $string . ", " . get_mt_term(trim($term));
+                        }
+                        $array_values[$field_name] = ltrim($string, ',');
+                    } else if ($record_number_field == 'record_number' || $doc_field == 'doc_id') {
+                        if (preg_match('/event/', $field_name)) {
+                            $link_entity = 'event';
+                        } else if (preg_match('/act/', $field_name)) {
+                            $link_entity = 'act';
+                        } else if (preg_match('/source/', $field_name)) {
+                            $link_entity = 'source';
+                        } else if (preg_match('/perpetrator/', $field_name)) {
+                            $link_entity = 'perpetrator';
+                        } else if (preg_match('/victim/', $field_name)) {
+                            $link_entity = 'victim';
+                        } else if (preg_match('/involvement/', $field_name)) {
+                            $link_entity = 'involvement';
+                        } else if (preg_match('/information/', $field_name)) {
+                            $link_entity = 'information';
+                        } else if (preg_match('/intervention/', $field_name)) {
+                            $link_entity = 'intervention';
+                        } else if (preg_match('/intervening_party/', $field_name)) {
+                            $link_entity = 'intervening_party';
+                        } else if (preg_match('/person/', $field_name)) {
+                            $link_entity = 'person';
+                        } else if (preg_match('/biographic_details/', $field_name)) {
+                            $link_entity = 'biographic_details';
+                        } else if (preg_match('/supporting_docs_meta/', $field_name)) {
+                            $link_entity = 'supporting_docs_meta';
+                        } else if (preg_match('/address/', $field_name)) {
+                            $link_entity = 'address';
+                        }
+
+                        if ($link_entity != 'address') {
+                            $url = get_record_url($val[$field_name], $link_entity);
+                            $array_values[$field_name] = "<a href='$url' target='_blank'>" . $val[$field_name] . "</a>";
+                        } else {
+                            $array_values[$field_name] = $val[$field_name];
+                        }
+                    } else {
+                        $array_values[$field_name] = $val[$field_name];
+                    }
+                }
+                $records[] = $array_values;
+                $i++;
+            }
+
+
+            $resp["response"]["records"] = $records;
+
+            if ($searchparams->facets) {
+                foreach ($searchparams->facets as $facet) {
+                    $entity = $facet->entity;
+                    $field = $facet->field;
+
+                    if ($domaindata->$entity->ac_type) {
+                        $en = $domaindata->$entity->ac_type;
+                        $fields = $domaindata->$en->fields;
+                    } else {
+                        $fields = $domaindata->$entity->fields;
+                    }
+                    $fieldType = $fields->$field->field_type;
+                    $listCode = $fields->$field->list_code;
+
+                    $terms = array();
+                    switch ($fieldType) {
+                        case 'radio':
+                            $resp["facets"][$field] = array("terms" => array(
+                                    array('term' => 'y', 'label' => _t('Yes')),
+                                    array('term' => 'n', 'label' => _t('No'))
+                                ), "entity" => $entity);
+                            break;
+                        case 'mt_select':
+                            $data_array = MtFieldWrapper::getMTList($listCode);
+                            $size = count($data_array);
+                            $options[''] = ' ';
+                            for ($i = 0; $i < $size; $i++) {
+                                //$options[$data_array[$i]['vocab_number']] = $data_array[$i]['label'];
+                                $terms[] = array('term' => $data_array[$i]['vocab_number'],
+                                    'label' => $data_array[$i]['label']);
+                            }
+                            $resp["facets"][$field] = array("terms" => $terms, "entity" => $entity);
+
+                            break;
+                        case 'mt_tree':
+                            $data_array = MtFieldWrapper::getMTList($listCode);
+                            $count = count($data_array);
+                            for ($i = 0; $i < $count;) {
+                                $element1 = $data_array[$i];
+                                $element2 = $data_array[++$i];
+
+                                $h1 = strlen(rtrim($element1['huri_code'], '0'));
+                                $h2 = strlen(rtrim($element2['huri_code'], '0'));
+
+                                if ($h1 % 2 == 1)
+                                    $h1++;
+                                if ($h2 % 2 == 1)
+                                    $h2++;
+
+
+                                $terms[] = array('term' => $element1['vocab_number'],
+                                    'label' => $element1['label'],
+                                    'level' => (int) $level);
+
+                                if ($h1 < $h2) {
+                                    $level++;
+                                    $h2 = $h2 - 2;
+                                    while ($h1 < $h2) {
+                                        $level++;
+                                        $h2 = $h2 - 2;
+                                    }
+                                }
+                                if ($h2 < $h1 && isset($element2)) {
+                                    while ($h2 < $h1) {
+                                        $level--;
+                                        $h1 = $h1 - 2;
+                                    }
+                                }
+                            }
+
+
+                            $resp["facets"][$field] = array("terms" => $terms, "field_type" => "mt_tree", "entity" => $entity);
+                            break;
+                    }
+                }
+            }
+            $markers = array();
+            for ($i = 1; $i <= $rand; $i++) {
+                $markers[] = array("latitude" => rand(0, 80), "longitude" => rand(0, 100), "title" => "bl asdasd" . rand(0, 360), "content" => "<h1>asasd</h1><br/>bl bla bla" . rand(0, 360));
+            }
+            $resp["markers"] = $markers;
         }
-
-        for ($i = 1; $i <= $rand; $i++) {
-            $records[] = rand_string(50);
-        }
-        $resp["response"]["records"] = $records;
-
-        $resp["facets"] = array("year" =>
-            array("terms" => array(array('term' => 'asd ads', 'count' => rand(1, 10)),
-                    array('term' => 'dfds', 'count' => rand(1, 10)),
-                    array('term' => 'rtert', 'count' => rand(1, 10)),
-                    array('term' => 'trt', 'count' => rand(1, 10)))),
-            "publisher" =>
-            array("terms" => array(array('term' => 'asdfa', 'count' => rand(1, 10)),
-                    array('term' => 'lll', 'count' => rand(1, 10)),
-                    array('term' => 'pq', 'count' => rand(1, 10)),
-                    array('term' => 'kj', 'count' => rand(1, 10)))));
-
-
-        $markers = array();
-        for ($i = 1; $i <= $rand; $i++) {
-            $markers[] = array("latitude" => rand(0, 80), "longitude" => rand(0, 100), "title" => "bl asdasd" . rand(0, 360), "content" => "<h1>asasd</h1><br/>bl bla bla" . rand(0, 360));
-        }
-        $resp["markers"] = $markers;
-
         echo json_encode($resp);
         exit;
     }

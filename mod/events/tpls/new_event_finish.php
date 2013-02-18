@@ -17,7 +17,7 @@ include_once('event_title.php');
     <div class='alert alert-info'> <button type="button" class="close" data-dismiss="alert">×</button> 
         <strong><?php echo _t('FINISHED__YOU_CAN_DO_THE_FOLLOWING_') ?></strong><br /><br />
         <div class="control-group">
-            <div class="controls">
+            <div >
 
                 <a href="<?php get_url('events', 'edit_event', null) ?>" class="btn"><i class="icon-edit"></i> <?php echo _t('CONTINUE_EDITING_THIS_EVENT_RECORD') ?></a>
                 <a href="<?php get_url('events', 'vp_list', null) ?>" class="btn btn-primary"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT') ?></a>
