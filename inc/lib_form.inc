@@ -1110,38 +1110,44 @@ function shn_form_location($label,$name,$extra_opts)
         $value['latitude'] = 46.1983922;
         $value['longitude'] = 6.1422961;
     }
+    
     if(isset($label)){
     ?>
     <label for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="locationFieldsConatiner">
-        <input type="hidden" name="latitude" id="latitude" value="<?php if($value['latitude'])echo $value['latitude']?>">
-    <input type="hidden" name="longitude" id="longitude" value="<?php if($value['longitude'])echo $value['latitude']?>">
-    <input type="hidden" name="country_name" id="country_name" value="Armenia" />
-    <input type="hidden" name="incident_zoom" id="incident_zoom" value="" />
+        <input type="hidden" name="<?php echo $name?>_latitude" id="<?php echo $name?>_latitude" value="<?php if($value['latitude'])echo $value['latitude']?>">
+    <input type="hidden" name="<?php echo $name?>_longitude" id="<?php echo $name?>_longitude" value="<?php if($value['longitude'])echo $value['longitude']?>">
+    <input type="hidden" name="<?php echo $name?>_country_name" id="<?php echo $name?>_country_name" value="Armenia" />
+    <input type="hidden" name="<?php echo $name?>_incident_zoom" id="<?php echo $name?>_incident_zoom" value="" />
 		
-    <div id="mapContainer"></div>
+    <div id="<?php echo $name?>_mapContainer" class="mapContainer"></div>
     <div class="findLocation">
-        <div id="editContainer" class="olControlEditingToolbar"></div>
+        <div id="<?php echo $name?>_editContainer" class="olControlEditingToolbar editContainer"></div>
             <div class="locationButtons" >
                     <ul >
-                            <li><a href="#" class="locationButtonsLast" onclick="return false;">DELETE LAST</a></li>
-                            <li><a href="#" class="locationButtonsDelete" onclick="return false;">DELETE SELECTED</a></li>
-                            <li><a href="#" class="locationButtonsClear" onclick="return false;">CLEAR MAP</a></li>
+                            <li><a href="#" class="<?php echo $name?>_locationButtonsLast" onclick="return false;">DELETE LAST</a></li>
+                            <li><a href="#" class="<?php echo $name?>_locationButtonsDelete" onclick="return false;">DELETE SELECTED</a></li>
+                            <li><a href="#" class="<?php echo $name?>_locationButtonsClear" onclick="return false;">CLEAR MAP</a></li>
                     </ul>
             </div>
             <div style="clear:both;"></div>
-            <input type="text" id="locationFind" name="location_find" value=""  title="City, State and/or Country" class="findtext" />						
+            <input type="text" id="<?php echo $name?>_locationFind" name="<?php echo $name?>_location_find" value=""  title="City, State and/or Country" class="findtext" />						
             <div style="float:left;margin:9px 0 0 5px;">
-                    <input type="button" name="button" id="button" value="Find Location" class="buttonFind" />
+                    <input type="button" name="button" id="button" value="Find Location" class="<?php echo $name?>_buttonFind" />
             </div>
-            <div id="findLoading" class="findLoading"></div>
-            <div style="clear:both;" id="find_text">* Search for your location using a location name OR latitude,longitude coordinates (format: 38.19, 85.61), OR click on the map to pinpoint the correct location..</div>
+            <div id="<?php echo $name?>_findLoading" class="<?php echo $name?>_findLoading"></div>
+            <div style="clear:both;" id="<?php echo $name?>_find_text">* Search for your location using a location name OR latitude,longitude coordinates (format: 38.19, 85.61), OR click on the map to pinpoint the correct location..</div>
     </div>
     </div>
     <script type="text/javascript">
         jQuery(window).load(function() {
-initEditMap(<?php if($value)echo json_encode($value)?>);
+initEditMap(<?php 
+    $value["mapContainer"] = $name."_mapContainer";
+    $value["editContainer"] = $name."_editContainer";
+    $value["fieldName"] = $name;
+    echo json_encode($value);
+?>);
     });
 </script>
     <?php

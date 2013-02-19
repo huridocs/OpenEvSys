@@ -463,7 +463,7 @@ float: left;
 height: 31px;
 margin: 9px 0 0 3px;
 }
-#mapContainer{
+.mapContainer{
     z-index: 0;
 padding: 0 !important;
 margin: 0 !important;
@@ -475,7 +475,7 @@ width: 450px;
 height: 350px;
 position: relative;
 }
-#editContainer{
+.editContainer{
     
 }
 div.olMap {

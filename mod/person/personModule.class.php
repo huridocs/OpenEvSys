@@ -98,6 +98,7 @@ class personModule extends shnModule
     {    	
     	$this->person_form = person_form('new');
     	unset($this->person_form['person_addresses']);
+        
         if(isset($_POST['save'])){           
             $status = shn_form_validate($this->person_form);
             if($status){
@@ -236,7 +237,8 @@ class personModule extends shnModule
             $this->person = new Person();
             $this->person->LoadFromRecordNumber($this->pid);
             $this->person->LoadRelationships();
-            $this->person->LoadPicture();	
+            $this->person->LoadPicture();
+            
             popuate_formArray($person_form,$this->person);			
         	$this->person_form = $person_form;
 			$this->fields = shn_form_get_html_fields($person_form);

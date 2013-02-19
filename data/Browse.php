@@ -791,6 +791,12 @@ class Browse implements BrowseStrategy
         $res = $browse->ExecuteQuery("SELECT field_number,field_name , essential FROM data_dict WHERE entity='$entity' ORDER BY CAST(label_number as UNSIGNED)");
         return $res;
     }
+    public static function getFieldByName($entity,$field_name)
+    {
+        $browse = new Browse();
+        $res = $browse->ExecuteQuery("SELECT field_number,field_name , essential FROM data_dict WHERE entity='$entity' and field_name='$field_name'");
+        return $res;
+    }
     
     public static function getAuditLogForEvent($event_record_number){
         $browse = new Browse();        

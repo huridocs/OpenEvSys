@@ -175,6 +175,7 @@ class eventsModule extends shnModule {
     public function act_new_event() {
         $this->event_form = event_form('new');
         //if a save is request save the event
+        
         if (isset($_POST['save'])) {
             $status = shn_form_validate($this->event_form);
             
@@ -182,7 +183,6 @@ class eventsModule extends shnModule {
                 $event = new Event();
                 $event->event_record_number = shn_create_uuid('event');
                 form_objects($this->event_form, $event);
-                
                 $event->SaveAll();
                 $this->event = $event;
 
@@ -244,6 +244,7 @@ class eventsModule extends shnModule {
         $this->event->LoadRelationships();
         $event_form = event_form('view');
         popuate_formArray($event_form, $this->event);
+        
         $this->event_form = $event_form;
     }
 
