@@ -77,7 +77,10 @@
         <span>&copy;</span>
         <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
         <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
-        <span class='version'><?php echo _t('VERSION');echo " : ";echo file_get_contents(APPROOT.'/VERSION'); ?></span>
+        <span class='version'><?php 
+         $version = explode( '=', file_get_contents(APPROOT.'/www/VERSION'));
+         echo _t('VERSION');echo " : ";echo $version[1]        
+        ?></span>
     </div>
 
 <?php if($_SESSION['translator']){ ?>
