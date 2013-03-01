@@ -734,124 +734,124 @@ function queryBuilder(){
             var entity_name = e.entity;
             
             var entselect = $("<select id=\"\" name=\"\" class=\"entselect\" />");
-   $("<option />", {
+            $("<option />", {
                 value:  entity_name, 
                 text: od.getEntityLabel(entity_name)
             }).appendTo(entselect);
  
-        var div = $("<div class='row-fluid show-grid'></div>");
-        div.append(entselect);
-        $('#query_builder').append(div);
-        entselect.select2({
-            width: 'resolve'
-        }).select2("disable");
+            var div = $("<div class='row-fluid show-grid'></div>");
+            div.append(entselect);
+            $('#query_builder').append(div);
+            entselect.select2({
+                width: 'resolve'
+            }).select2("disable");
         
             var fieldselect = $("<select id=\"\" name=\""+entity_name+"\" class=\"fieldselect\" />");
-           $("<option />", {
+            $("<option />", {
                 value:  field_name, 
                 text: od.getFieldLabel(field_name , entity_name)
             }).appendTo(fieldselect);
        
         
-        div.append(fieldselect);
+            div.append(fieldselect);
         
-        fieldselect.select2({
-            width: 'resolve'
-        }).select2("disable");
+            fieldselect.select2({
+                width: 'resolve'
+            }).select2("disable");
     
         
-        var field_type = od.getFieldType(field_name, entity_name);
+            var field_type = od.getFieldType(field_name, entity_name);
         
-        var options = openevsysDomain.getInstance().getOperator(field_type);
+            var options = openevsysDomain.getInstance().getOperator(field_type);
                
-        var operatorselect = $("<select id=\"\" name=\"\" class=\"operatorselect\" />");
+            var operatorselect = $("<select id=\"\" name=\"\" class=\"operatorselect\" />");
      
-        for(var option in options){
-            if(options[option].value == e.operator){
-                $("<option selected=\"selected\" />", {
-                    value:  options[option].value, 
-                    text: options[option].label
-                }).appendTo(operatorselect);
-            }else{
-                $("<option />", {
-                    value:  options[option].value, 
-                    text: options[option].label
-                }).appendTo(operatorselect);
-            }
-        }
-       
-        div.append(operatorselect);
-        operatorselect.select2({
-            width: 'resolve'
-        });
-        if(field_type == 'date'){
-            operatorselect.on("change", function() { 
-                var ov = $(this).val();
-                if( ov == 'between' || ov == 'not_between'){
-                    var o = $('<input type="text" value="" class="daterangepicker" />');
-                    div.append(o);
-                    o.daterangepicker();
+            for(var option in options){
+                if(options[option].value == e.operator){
+                    $("<option selected=\"selected\" />", {
+                        value:  options[option].value, 
+                        text: options[option].label
+                    }).appendTo(operatorselect);
+                }else{
+                    $("<option />", {
+                        value:  options[option].value, 
+                        text: options[option].label
+                    }).appendTo(operatorselect);
                 }
-                else{
-                    var o = $('<input type="text" value="" class="datepicker" />');
+            }
+       
+            div.append(operatorselect);
+            operatorselect.select2({
+                width: 'resolve'
+            });
+            if(field_type == 'date'){
+                operatorselect.on("change", function() { 
+                    var ov = $(this).val();
+                    if( ov == 'between' || ov == 'not_between'){
+                        var o = $('<input type="text" value="" class="daterangepicker" />');
+                        div.append(o);
+                        o.daterangepicker();
+                    }
+                    else{
+                        var o = $('<input type="text" value="" class="datepicker" />');
+                        div.append(o);
+                        o.datepicker({
+                            format:'yyyy-mm-dd'
+                        });
+                
+                    }
+                });
+            }
+            switch(field_type){
+                case "date":
+                    var o = $('<input type="text" value="" class="datepicker qb-con" />');
                     div.append(o);
                     o.datepicker({
                         format:'yyyy-mm-dd'
                     });
-                
-                }
-            });
-        }
-        switch(field_type){
-            case "date":
-                var o = $('<input type="text" value="" class="datepicker qb-con" />');
-                div.append(o);
-                o.datepicker({
-                    format:'yyyy-mm-dd'
-                });
                
                
-                break;
-            case "mt_select":
-                var mt_select = $("<select id=\"\" name=\"\" class=\"qb-con\" />");
-                //$("<option />", {value:  "", text: ""}).appendTo(select);
-                mt_select.qb_mt_select({
-                    mt: od.getListCode(field_name, entity_name)
-                });
-                div.append(mt_select);
-                mt_select.select2({
-                    width: 'resolve'
-                });
+                    break;
+                case "mt_select":
+                    var mt_select = $("<select id=\"\" name=\"\" class=\"qb-con\" />");
+                    //$("<option />", {value:  "", text: ""}).appendTo(select);
+                    mt_select.qb_mt_select({
+                        mt: od.getListCode(field_name, entity_name)
+                    });
+                    div.append(mt_select);
+                    mt_select.select2({
+                        width: 'resolve'
+                    });
                
-               break;
-            case "mt_tree":
-                var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
-                mt_tree.qb_mt_tree({
-                    mt: od.getListCode(field_name, entity_name)
-                });
-                div.append(mt_tree);
-                mt_tree.select2({
-                    width: 'resolve',
-                    formatResult: format_mt_tree,
-                    formatSelection: format_mt_tree
-                });
-               break;
-            case "radio":
-                var name = genName();
-                var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
-                div.append(o);
-                break;
-            case "checkbox":
-                var o = $('<label class="checkbox inline"><input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/></label>');
-                div.append(o);
-                break;
-            default:
-                var o = $('<input type="text" value="" class="qb-con" />');
-                div.append(o);
-        }
-        this.addAndOperater(div);
+                    break;
+                case "mt_tree":
+                    var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
+                    mt_tree.qb_mt_tree({
+                        mt: od.getListCode(field_name, entity_name)
+                    });
+                    div.append(mt_tree);
+                    mt_tree.select2({
+                        width: 'resolve',
+                        formatResult: format_mt_tree,
+                        formatSelection: format_mt_tree
+                    });
+                    break;
+                case "radio":
+                    var name = genName();
+                    var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
+                    div.append(o);
+                    break;
+                case "checkbox":
+                    var o = $('<label class="checkbox inline"><input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/></label>');
+                    div.append(o);
+                    break;
+                default:
+                    var o = $('<input type="text" value="" class="qb-con" />');
+                    div.append(o);
+            }
+            this.addAndOperater(div);
         
-        continue;
+            continue;
         
             var con = $('<li class="qb-condition"></li>');
             con.append('<a class="qb-entity qb-selected" data-value="'+e.entity+'">'+od.getEntityLabel(e.entity)+'</a>');
@@ -1014,7 +1014,7 @@ function queryBuilder(){
     }
 
     this.addFieldSelect = function(entselect){
-         var options = openevsysDomain.getInstance().getEntityFields(entselect.val());
+        var options = openevsysDomain.getInstance().getEntityFields(entselect.val());
        
         var select = $("<select id=\"\" name=\""+entselect.val()+"\" class=\"fieldselect\" />");
         $("<option />", {
@@ -1146,7 +1146,7 @@ function queryBuilder(){
                     width: 'resolve'
                 });
                
-               break;
+                break;
             case "mt_tree":
                 var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
                 mt_tree.qb_mt_tree({
@@ -1158,7 +1158,7 @@ function queryBuilder(){
                     formatResult: format_mt_tree,
                     formatSelection: format_mt_tree
                 });
-               break;
+                break;
             case "radio":
                 var name = genName();
                 var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
@@ -1314,6 +1314,17 @@ function queryBuilder(){
     this.getSelectedEntities = function(){
         var arr = $('#query_builder').find('.entselect');
         var entities = new Array();
+        var arr = $('#query_builder').find('.row-fluid');
+        $.each(arr ,function(){
+            if($(this).attr('data-status')=='new')return true;
+            var entity = $(this).find('select.entselect:first').val();
+            var field = $(this).find('select.fieldselect:first').val();
+            if(field != null && field != "" && entity != null && entity != "" && $.inArray(entity , entities) == -1){
+                entities.push(entity);
+            }
+        });
+        return entities;
+        
         $.each(arr ,function(){
             var v = $(this).val();
             //var v = $(this).attr('data-value');
@@ -1361,7 +1372,6 @@ function queryBuilder(){
         //display select variables
         var select = new Array();
         var entities = this.getSelectedEntities();
-        
         for(var i in entities){
             var fields = openevsysDomain.getInstance().getSelectFields(entities[i]);
             for(var f in fields){
@@ -1393,7 +1403,8 @@ function advSearch(){
     this.query_builder = null;
     this.search_result = null;
     this.group_by = null;
-
+    this.additional_fields = new Array();
+    
     this.setQuery = function(query){
         this.query_builder.setQuery(query);
     }
@@ -1518,6 +1529,54 @@ function advSearch(){
     }
 	
 	
+    this.addField = function(field , entity){
+        openevsysDomain.getInstance().setSelectField(entity,field);
+        this.Search();
+        return;
+        this.query.select.push({
+            'entity':entity , 
+            'field': field
+        });
+        var colLength = colNames.length;
+        var modelLength = colModel.length;
+        var colNames_new = new Array(colNames.length+1);
+        var colModel_new = new Array(modelLength+1);
+        for(var count = 0;colLength >= count; count++)
+        {
+            colNames_new[count] = colNames[count];
+        }
+		
+        colNames_new[colLength] = openevsysDomain.getInstance().getFieldLabel(field, entity);
+		
+        for(var count = 0;modelLength >= count; count++)
+        {
+            colModel_new[count] = colModel[count];
+        }
+        colModel_new[modelLength] = {
+            name:field+"_"+entity, 
+            index:field+""+entity, 
+            width:80
+        };
+		
+        var options = {
+            "div":"#list123",
+            "file":"example.php",
+            "rownum":"10",
+            "caption":"Search Results",
+            "pager":"#pager"
+        };
+        var colEntity = this.getEntity(colModel_new);
+        //var rowList = [10,20,30];
+        var fieldNames = new Array();
+        for(var i in this.query.select){
+            fieldNames.push(this.query.select[i].field);
+        }
+		
+        this.jqinit(options,colNames_new,colModel_new,colEntity,fieldNames);
+		
+    }
+	
+	
     this.Search = function(){
         this.query = this.query_builder.getQuery();
         
@@ -1531,7 +1590,7 @@ function advSearch(){
         }
         this.fetchResultsAndDisplay()
         
-        /*$.ajax( {
+    /*$.ajax( {
         "url": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
         "success": function ( json ) {
             json.bDestroy = true;
@@ -1539,13 +1598,13 @@ function advSearch(){
         },
         "dataType": "json"
     } );*/
-        /*$("#datatable").dataTable( {
+    /*$("#datatable").dataTable( {
 		/*"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
 		"sPaginationType": "bootstrap",
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
 		},*/
-        /*"bProcessing": true,
+    /*"bProcessing": true,
                 "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query))
 	} );*/
         
@@ -1554,7 +1613,7 @@ function advSearch(){
     	this.search_result.setQuery(this.query);
         this.search_result.fetchResultsAndDisplay();*/
     }
-    this.fetchResultsAndDisplay = function(){
+    this.fetchResultsAndDisplay = function(query){
         
         this.query = this.query_builder.getQuery();
         if(this.query.conditions < 1 ){
@@ -1562,7 +1621,20 @@ function advSearch(){
             return;
         }
         
-        $('#datatable').dataTable( {
+        od = openevsysDomain.getInstance();
+        
+       
+        var columns = new Array();
+        for (var i = 0; i < this.query.select.length; i++) {
+            var sel = this.query.select[i];
+            var column = new Object();
+            column.mData = sel.entity+"_"+sel.field
+            column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+            columns.push(column);
+        }
+        console.log(columns)
+        
+        var oTable = $('#datatable').dataTable( {
             "sDom": "<'row'<'span6'<'toolbar'>><'span6'l>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "oLanguage": {
@@ -1575,31 +1647,20 @@ function advSearch(){
             '<option value="-1">All</option>'+
             '</select> records'
             },
+            "bAutoWidth": false,
             "bDestroy": true,
             "bProcessing": true,
             "bServerSide": true,
             "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
-            "aoColumns":[{
-                "mData":"event_event_record_number",
-                "sTitle":"event_event_record_number"
-            },{
-                "mData":"event_event_title",
-                "sTitle":"event_event_title"
-            },{
-                "mData":"event_initial_date",
-                "sTitle":"event_initial_date"
-            },{
-                "mData":"event_final_date",
-                "sTitle":"event_final_date"
-            },{
-                "mData":"event_project_title",
-                "sTitle":"event_project_title"
-            }]
+            "aoColumns":columns
         } );
         $("div.toolbar").html($("#toolbar2").html());
         $("#toolbar2").hide();
         this.initAdditionalFieldsList();
-        this.updateToolBar();	
+        this.updateToolBar();
+
+        //oTable.fnAdjustColumnSizing();
+        
         $('#qb-qs-save').click(function(){
             
             $('#query-name').text($('#query_name').val());
@@ -1663,7 +1724,7 @@ function advSearch(){
             console.log(query)
             //var sr = searchResults.getInstance();
             var q = $.secureEvalJSON(query);
-             console.log(q)
+            console.log(q)
            
             as.setQuery(q);
             as.fetchResultsAndDisplay();

@@ -275,19 +275,19 @@
         var buildfilters = function() {
             var filters = options.facets;
             var thefilters = ' \
-			 <div class="box"><form method="GET" action="#search" class="form-inline"> \
-                   <div id="facetsearch_searchbar" class="input-prepend input-append"> \
+			 <div class="box" style="display:none"> \
+                   <div id="facetsearch_searchbar" class="input-prepend input-append" > \
                    <span class="add-on"><i class="icon-search"></i></span> \
-                   <input class="input-block-level" id="facetsearch_freetext" name="q" value="" placeholder="search term" autofocus /> \
+                   <input class="input-block-level span6" id="facetsearch_freetext" name="q" value="" placeholder="search term" autofocus /> \
                    <div  class="btn-group"> \
-                    <a  class="btn dropdown-toggle" data-toggle="dropdown" href="#"> \
-                    <i class="icon-cog"></i> <span class="caret"></span></a> \
+                    <button  class="btn dropdown-toggle" data-toggle="dropdown" > \
+                    <i class="icon-cog"></i> <span class="caret"></span></button> \
                     <ul class="dropdown-menu"> \
                     <li><a id="facetsearch_clearall" href="#">clear all</a></li> \
                     <li class="divider"></li> \
                     <li><a id="facetsearch_howmany" href="#">results per page ({{HOW_MANY}})</a></li> \
-                    </ul></div>></div> \
-				   </form></div> \
+                    </ul></div></div> \
+				   </div> \
 				    ';
             thefilters = thefilters.replace(/{{HOW_MANY}}/gi,options.paging.size)
             
@@ -316,20 +316,27 @@
                   <ul id="facetsearch_{{FILTER_NAME}}" \
                     class="facetsearch_filters"></ul> \
                     ';*/
+                
                 var _filterTmpl = ' \
                     <div class="box"> \
                     <h4 class="box-header round-top">{{FILTER_NAME}}<a class="box-btn" title="toggle"><i class="icon-minus"></i></a> \
 					<div class="dropdown" style="display:inline"><a class="box-btn dropdown-toggle" data-toggle="dropdown" \
-                      href="#"><span class="caret" style="margin-top:6px;margin-rigth:3px;"></span></a> \
+                      href="#" title=""><span class="caret" style="margin-top:6px;margin-rigth:3px;"></span></a> \
                       <ul class="dropdown-menu"> \
-                        <li><a class="facetsearch_clearfacet" rel="{{FILTER_EXACT}}">Clear this selections</a></li> \
+                        <li><a class="facetsearch_clearfacet" data-entity="{{FILTER_ENTITY}}" data-field="{{FILTER_FIELD}}" rel="{{FILTER_EXACT}}">Clear this selections</a></li> \
                         </ul></div></h4> \
 							<div class="box-container-toggle"><div class="box-content"> \
-							<ul id="facetsearch_{{FILTER_NAME}}" \
+							<ul id="facetsearch_{{FILTER_FIELD}}" \
                     class="facetsearch_filters"></ul></div></div></div> \
                     ';
-                thefilters += _filterTmpl.replace(/{{FILTER_NAME}}/g, filters[idx]['field'].replace(/\./gi,'_')).replace(/{{FILTER_EXACT}}/g, filters[idx]['field']);
-                if ('size' in filters[idx] ) {
+                
+                thefilters += _filterTmpl.replace(/{{FILTER_NAME}}/g, filters[idx]['display']).replace(/{{FILTER_EXACT}}/g, filters[idx]['field']);
+                
+                 thefilters = thefilters.replace(/{{FILTER_ENTITY}}/g, filters[idx]['entity'].replace(/\./gi,'_'));
+                thefilters = thefilters.replace(/{{FILTER_FIELD}}/g, filters[idx]['field'].replace(/\./gi,'_'));
+                
+               
+               if ('size' in filters[idx] ) {
                     thefilters = thefilters.replace(/{{FILTER_HOWMANY}}/gi, filters[idx]['size'])
                 } else {
                     thefilters = thefilters.replace(/{{FILTER_HOWMANY}}/gi, 10)
@@ -360,6 +367,9 @@
             for ( var each in options.facets ) {
 			
                 $('#facetsearch_' + options.facets[each]['field'].replace(/\./gi,'_')).children().remove();
+                if(!data["facets"].hasOwnProperty(options.facets[each]['field'])){
+                    continue;
+                }
                 var records = data["facets"][ options.facets[each]['field'] ].terms;
                 var lev = 0;
                 var field_type = data["facets"][ options.facets[each]['field'] ].field_type;
@@ -512,7 +522,7 @@
                 resultobj["start"] = dataobj.response.start;
                 resultobj["found"] = dataobj.response.found;
                 resultobj["markers"] = dataobj.markers;
-            
+                resultobj["charts"] = dataobj.charts;
                 resultobj["facets"] = dataobj.facets
             /*for (var item in dataobj.facets) {
                     var facetsobj = new Object();
@@ -642,26 +652,91 @@
             return line;
         }
 
-		
+        var addcharts = function(data){
+           
+            if(typeof data.charts != 'undefined'){
+                if(data.charts.length){
+                    $("#chartscontainer").show();
+                    $('#chartscanvas').html("");
+                            
+            
+                    $.each(data.charts, function(i, chartarray) {
+                        var div = $("<div  class='row-fluid' ></div>");
+                        $('#chartscanvas').append(div);
+                       
+                        $.each(chartarray, function(j, chart) {
+                            if(chart.data){
+                                var data2 = google.visualization.arrayToDataTable(chart.data);
+                        
+                                charttype = chart.type
+                                divclass = "span"+parseInt(12/chartarray.length);
+                                
+                                var div2 = $("<div id='"+i+"_"+j+"' class='"+divclass+"' ></div>");
+                                div.append(div2);
+                                if(charttype == "columnchart"){
+                                    new google.visualization.ColumnChart(document.getElementById(i+"_"+j)).draw(data2,{
+                                        title:chart.title,
+                                        hAxis: {
+                                            title: chart.haxistitle
+                                        },
+                                        height:200
+                                    });
+                                }else if(charttype == "piechart"){
+                                    new google.visualization.PieChart(document.getElementById(i+"_"+j)).draw(data2, {
+                                        title:chart.title,
+                                        height:200
+                                    });
+                                }else if(charttype =="areachart"){
+                                    new google.visualization.AreaChart(document.getElementById(i+"_"+j)).draw(data2, {
+                                        title:chart.title,
+                                        height:200
+                                    });
+                                }else if(charttype =="barchart"){
+                                    new google.visualization.BarChart(document.getElementById(i+"_"+j)).draw(data2, {
+                                        title:chart.title,
+                                        height:300
+                                    });
+                                }
+       
+                            }
+                        });
+                        
+                    });
+                }else{
+                    $("#chartscontainer").hide();
+                }
+            }else{
+                $("#chartscontainer").hide();
+            }
+                
+                     
+        }	
         var addmapmarkers = function(data){
-            fmap.gmap('clear', 'markers');
-			
+            $('#mapcanvas').gmap('refresh');
+            //google.maps.event.trigger(fmap.gmap('get','map'), "resize");
+                      
+            fmap.gmap('clear', 'markers');			
 			
             if(typeof data.markers != 'undefined'){
-			
-                $.each(data.markers, function(i, marker) {
-                    fmap.gmap('addMarker', { 
-                        'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
-                        'bounds': true 
-                    }).click(function() {
-                        fmap.gmap('openInfoWindow', {
-                            'content': marker.content
-                        }, this);
+		if(data.markers.length){
+                    $("#mapcontainer").show();
+                    $.each(data.markers, function(i, marker) {
+                        fmap.gmap('addMarker', { 
+                            'position': new google.maps.LatLng(marker.latitude, marker.longitude), 
+                            'bounds': true 
+                        }).click(function() {
+                            fmap.gmap('openInfoWindow', {
+                                'content': marker.content
+                            }, this);
+                        });
                     });
-                });
-                fmarkerclusterer.clearMarkers();
-                fmarkerclusterer =  new MarkerClusterer(fmap.gmap('get', 'map'), fmap.gmap('get', 'markers'));
-
+                    fmarkerclusterer.clearMarkers();
+                    fmarkerclusterer =  new MarkerClusterer(fmap.gmap('get', 'map'), fmap.gmap('get', 'markers'));
+                }else{
+                    $("#mapcontainer").hide();
+                }
+            }else{
+                $("#mapcontainer").hide();
             }
         }
         // put the results on the page
@@ -671,7 +746,9 @@
             var data = parseresults(sdata);
 			
             addmapmarkers(data);
-			
+		
+            addcharts(data);
+            
             // change filter options
             putvalsinfilters(data);
             // put result metadata on the page
@@ -919,7 +996,7 @@
         var clickfilterchoice = function(event) {
             event.preventDefault();
 			
-            if(selected_terms.hasOwnProperty($(this).data("entity")) && $.inArray($(this).data("field"), selected_terms[$(this).data("entity")]) > -1 && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
+            if(selected_terms.hasOwnProperty($(this).data("entity")) && selected_terms[$(this).data("entity")].hasOwnProperty($(this).data("field")) && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
                 return;
             }
             if(!selected_terms.hasOwnProperty($(this).data("entity"))){
@@ -946,10 +1023,16 @@
         // clear a filter when clear button is pressed, and re-do the search
         var clearfilter = function(event) {
             event.preventDefault();
-            if(selected_terms.hasOwnProperty($(this).data("entity")) && $.inArray($(this).data("field"), selected_terms[$(this).data("entity")]) > -1 && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
-                selected_terms[$(this).data("entity")][$(this).data("field")].splice(selected_terms[$(this).data("entity")][$(this).data("field")].indexOf($(this).data("value")),1);
+            if(selected_terms.hasOwnProperty($(this).data("entity")) && selected_terms[$(this).data("entity")].hasOwnProperty($(this).data("field")) && $.inArray($(this).data("value"), selected_terms[$(this).data("entity")][$(this).data("field")]) > -1){
+                if(selected_terms[$(this).data("entity")][$(this).data("field")].length == 1){
+                    
+                    selected_terms[$(this).data("entity")][$(this).data("field")] = new Array();
+                
+                }else{
+                    selected_terms[$(this).data("entity")][$(this).data("field")].splice(selected_terms[$(this).data("entity")][$(this).data("field")].indexOf($(this).data("value")),1);
+                }
             }
-
+         
             $(this).remove();
             dosearch();
         }
@@ -958,9 +1041,8 @@
             event.preventDefault();
 			
             $('.facetsearch_filterselected[data-entity="'+$(this).data("entity")+'"][data-field="'+$(this).data("field")+'"]').remove();
-						
-            if(selected_terms[$(this).data("entity")].hasOwnProperty($(this).data("field"))){
-                delete selected_terms[$(this).data("entity")][$(this).data("field")];
+            if(selected_terms.hasOwnProperty($(this).data("entity"))){
+                selected_terms[$(this).data("entity")][$(this).data("field")] =  new Array();
             }
 
             //$(this).remove();
@@ -971,7 +1053,7 @@
             event.preventDefault();
 						
             $('.facetsearch_filterselected').remove();
-            selected_terms = new Array();
+            selected_terms = new Object();
             $('#facetsearch_freetext').val("");
             
             dosearch();
@@ -1036,7 +1118,7 @@
             var newhowmany = prompt('Currently displaying ' + options.paging.size + 
                 ' results per page. How many would you like instead?')
             if (newhowmany) {
-                options.paging.size = parseInt(newhowmany)
+                options.paging.size = parseInt(newhowmany) || options.paging.size
                 options.paging.from = 0
                 $('#facetsearch_howmany').html('results per page (' + options.paging.size + ')')
                 dosearch()
@@ -1063,29 +1145,33 @@
 
         // the facet view object to be appended to the page
         var thefacetsearch = ' \
-           <div id="facetsearch"> \
+           <form method="GET" action="#search" class="form-inline"><div id="facetsearch"> \
              <div class="row-fluid"> \
-               <div class="span3"> \
-                 <div class="box"><h4 class="box-header round-top">Filters</h4> \
-							<div class="box-container-toggle"><div class="box-content"> \
-							<div id="facetsearch_filters" class="box"></div> \
-               </div></div></div></div> \
                <div class="span9"> \
 						<div style="clear:both;" id="facetsearch_selectedfilters" ></div> \
-						<div id="mapcontainer" class="box">\
+						<div id="mapcontainer" class="box" >\
 							<h4 class="box-header round-top">Map <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
 							<div class="box-container-toggle"> \
 							<div id="mapcanvas"></div> \
 						</div> </div> \
-						<div id="detailscontainer" class="box"> \
+						<div id="chartscontainer" class="box" >\
+							<h4 class="box-header round-top">Charts <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
+							<div class="box-container-toggle"> \
+							<div id="chartscanvas"></div> \
+						</div> </div> \<div id="detailscontainer" class="box"> \
 							<h4 class="box-header round-top">Results <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
 							<div class="box-container-toggle"><div class="box-content"> \
 							<table class="table table-striped" id="facetsearch_results"></table> \
 							<div id="facetsearch_metadata"></div> \
 						</div> </div></div>\
 			   </div> \
-             </div> \
-           </div> \
+             <div class="span3"> \
+                 <div class="box"><h4 class="box-header round-top">Filters</h4> \
+							<div class="box-container-toggle"><div class="box-content"> \
+							<div id="facetsearch_filters" class="box"></div> \
+               </div></div></div></div> \
+               </div> \
+           </div></form> \
            ';
 
         function widgetToggle(e) {

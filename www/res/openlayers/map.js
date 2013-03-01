@@ -10,11 +10,11 @@ function initEditMap(settings){
     
     var defaultSettings = {
         mapContainer:"mapContainer",
-        editContainer:"editContainer"
+        editContainer:"editContainer",
+        fieldName:"location"
     
     };
     settings = jQuery.extend(defaultSettings, settings);		
-    
     
     var options = {
         units: "dd",
@@ -120,12 +120,26 @@ function initEditMap(settings){
     });
     map.addLayer(vlayer);
 			
+    var endDragfname  = settings.fieldName+"_endDrag"
+    var code = ""
+    //code += "function "+endDragfname+"(feature, pixel) {";
+    code +="for (f in selectedFeatures) {";
+    code +="    f.state = OpenLayers.State.UPDATE;";
+    code +="}";
+    code +="refreshFeatures(\""+settings.fieldName+"\");";
 			
+    code +="var latitude = parseFloat(jQuery('input[name=\""+settings.fieldName+"_latitude\"]').val());"
+    code +="var longitude = parseFloat(jQuery('input[name=\""+settings.fieldName+"_longitude\"]').val());"
+			
+    code +="reverseGeocode(latitude, longitude,\""+settings.fieldName+"\");"
+    //code +="}";
+    var endDragf = new Function(code);
+    
     // Drag Control
     var drag = new OpenLayers.Control.DragFeature(vlayer, {
         onStart: startDrag,
         onDrag: doDrag,
-        onComplete: endDrag
+        onComplete: endDragf
     });
     map.addControl(drag);
 			
@@ -142,13 +156,13 @@ function initEditMap(settings){
         // vlayer.removeFeatures(vlayer.features);
         },
         featuresadded: function(event) {
-            refreshFeatures(event);
+            refreshFeatures(event,settings.fieldName);
         },
         featuremodified: function(event) {
-            refreshFeatures(event);
+            refreshFeatures(event,settings.fieldName);
         },
         featuresremoved: function(event) {
-            refreshFeatures(event);
+            refreshFeatures(event,settings.fieldName);
         }
     });
 			
@@ -211,7 +225,7 @@ function initEditMap(settings){
     highlightCtrl.activate();
     selectCtrl.activate();
     
-    jQuery('.locationButtonsLast').on('click', function () {
+    jQuery('.'+settings.fieldName+'_locationButtonsLast').on('click', function () {
         if (vlayer.features.length > 0) {
             x = vlayer.features.length - 1;
             vlayer.removeFeatures(vlayer.features[x]);
@@ -223,7 +237,7 @@ function initEditMap(settings){
     });
 			
     // Delete Selected Features
-    jQuery('.locationButtonsDelete').on('click', function () {
+    jQuery('.'+settings.fieldName+'_locationButtonsDelete').on('click', function () {
         for(var y=0; y < selectedFeatures.length; y++) {
             vlayer.removeFeatures(selectedFeatures);
         }
@@ -234,11 +248,11 @@ function initEditMap(settings){
     });
 			
     // Clear Map
-    jQuery('.locationButtonsClear').on('click', function () {
+    jQuery('.'+settings.fieldName+'_locationButtonsClear').on('click', function () {
         vlayer.removeFeatures(vlayer.features);
-        jQuery('input[name="geometry[]"]').remove();
-        jQuery('input[name="latitude"]').val("");
-        jQuery('input[name="longitude"]').val("");
+        jQuery('input[name="'+settings.fieldName+'_geometry[]"]').remove();
+        jQuery('input[name="'+settings.fieldName+'_latitude"]').val("");
+        jQuery('input[name="'+settings.fieldName+'_longitude"]').val("");
         /*jQuery('#geometry_label').val("");
 				jQuery('#geometry_comment').val("");
 				jQuery('#geometry_color').val("");
@@ -252,26 +266,26 @@ function initEditMap(settings){
 	
         
     // GeoCode
-    jQuery('.buttonFind').on('click', function () {
-        geoCode();
+    jQuery('.'+settings.fieldName+'_buttonFind').on('click', function () {
+        geoCode(settings.fieldName);
     });
-    jQuery('#locationFind').bind('keypress', function(e) {
+    jQuery('#'+settings.fieldName+'_locationFind').bind('keypress', function(e) {
         var code = (e.keyCode ? e.keyCode : e.which);
         if(code == 13) { //Enter keycode
-            geoCode();
+            geoCode(settings.fieldName);
             return false;
         }
     });
 			
     // Event on Latitude/Longitude Typing Change
-    jQuery('#latitude, #longitude').bind("focusout keyup", function() {
-        var newlat = jQuery('input[name="latitude"]').val();
-        var newlon = jQuery('input[name="longitude"]').val();
+    jQuery('#'+settings.fieldName+'_latitude, #'+settings.fieldName+'_longitude').bind("focusout keyup", function() {
+        var newlat = jQuery('input[name="'+settings.fieldName+'_latitude"]').val();
+        var newlon = jQuery('input[name="'+settings.fieldName+'_longitude"]').val();
         if (!isNaN(newlat) && !isNaN(newlon))
         {
             // Clear the map first
             vlayer.removeFeatures(vlayer.features);
-            jQuery('input[name="geometry[]"]').remove();
+            jQuery('input[name="'+settings.fieldName+'_geometry[]"]').remove();
 					
             point = new OpenLayers.Geometry.Point(newlon, newlat);
             OpenLayers.Projection.transform(point, proj_4326,proj_900913);
@@ -297,8 +311,10 @@ function initEditMap(settings){
 function initViewMap(settings){
     
     var defaultSettings = {
-        mapContainer:"mapContainer"
-        
+        mapContainer:"mapContainer",
+        editContainer:"editContainer",
+        fieldName:"location"
+    
     };
     settings = jQuery.extend(defaultSettings, settings);		
     
@@ -436,15 +452,15 @@ function initViewMap(settings){
     map.setCenter(startPoint, 8);
 			
     // Create the Editing Toolbar
-    var container = document.getElementById(settings.editContainer);
-    refreshFeatures();
+    //var container = document.getElementById(settings.editContainer);
+    //refreshFeatures(settings.fieldName);
     
 }
 
-function geoCode()
+function geoCode(fieldName)
 {
-    jQuery('#findLoading').html('<img src="res/openlayers/img/loading_g.gif">');
-    address = jQuery("#locationFind").val();
+    jQuery('#'+fieldName+'_findLoading').html('<img src="res/openlayers/img/loading_g.gif">');
+    address = jQuery("#"+fieldName+"_locationFind").val();
     jQuery.post("index.php?mod=events&act=geocode", {
         address: address
     },
@@ -452,7 +468,7 @@ function geoCode()
         if (data.status == 'success'){
             // Clear the map first
             vlayer.removeFeatures(vlayer.features);
-            jQuery('input[name="geometry[]"]').remove();
+            jQuery('input[name="'+fieldName+'_geometry[]"]').remove();
 						
             point = new OpenLayers.Geometry.Point(data.longitude, data.latitude);
             OpenLayers.Projection.transform(point, proj_4326,proj_900913);
@@ -468,10 +484,10 @@ function geoCode()
             map.panTo(myPoint);
 												
             // Update form values
-            jQuery("#country_name").val(data.country);
-            jQuery('input[name="latitude"]').val(data.latitude);
-            jQuery('input[name="longitude"]').val(data.longitude);
-            jQuery("#location_name").val(data.location_name);
+            jQuery("#"+fieldName+"_country_name").val(data.country);
+            jQuery('input[name="'+fieldName+'_latitude"]').val(data.latitude);
+            jQuery('input[name="'+fieldName+'_longitude"]').val(data.longitude);
+            jQuery("#"+fieldName+"_location_name").val(data.location_name);
         } else {
             // Alert message to be displayed
             var alertMessage = address + " not found!\n\n***************************\n" + 
@@ -480,7 +496,7 @@ function geoCode()
 
             alert(alertMessage)
         }
-        jQuery('div#findLoading').html('');
+        jQuery('div#'+fieldName+'_findLoading').html('');
     }, "json");
     return false;
 }
@@ -564,11 +580,11 @@ function doDrag(feature, pixel) {
 }
 
 /* Featrue stopped moving */
-function endDrag(feature, pixel) {
+/*function endDrag(feature, pixel) {
     for (f in selectedFeatures) {
         f.state = OpenLayers.State.UPDATE;
     }
-    refreshFeatures();
+    refreshFeatures(fieldName);
 			
     // Fetching Lat Lon Values
     var latitude = parseFloat(jQuery('input[name="latitude"]').val());
@@ -576,11 +592,11 @@ function endDrag(feature, pixel) {
 			
     // Looking up country name using reverse geocoding
     reverseGeocode(latitude, longitude);
-}
+}*/
 		
-function refreshFeatures(event) {
+function refreshFeatures(event,fieldName) {
     var geoCollection = new OpenLayers.Geometry.Collection;
-    jQuery('input[name="geometry[]"]').remove();
+    jQuery('input[name="'+fieldName+'_geometry[]"]').remove();
     for(i=0; i < vlayer.features.length; i++) {
         newFeature = vlayer.features[i].clone();
         newFeature.geometry.transform(proj_900913,proj_4326);
@@ -625,14 +641,14 @@ function refreshFeatures(event) {
                 color: color, 
                 strokewidth: strokewidth
             });
-            jQuery('form').append(jQuery('<input></input>').attr('name','geometry[]').attr('type','hidden').attr('value',geometryAttributes));
+            jQuery('form').append(jQuery('<input></input>').attr('name',fieldName+'_geometry[]').attr('type','hidden').attr('value',geometryAttributes));
         }
     }
     // Centroid of location will constitute the Location
     // if its not a point
     centroid = geoCollection.getCentroid(true);
-    jQuery('input[name="latitude"]').val(centroid.y);
-    jQuery('input[name="longitude"]').val(centroid.x);
+    jQuery('input[name="'+fieldName+'_latitude"]').val(centroid.y);
+    jQuery('input[name="'+fieldName+'_longitude"]').val(centroid.x);
 }
 			
                         
@@ -675,7 +691,7 @@ function updateFeature(feature, color, strokeWidth){
 }
 		
 // Reverse GeoCoder
-function reverseGeocode(latitude, longitude) {		
+function reverseGeocode(latitude, longitude,fieldName) {		
     var latlng = new google.maps.LatLng(latitude, longitude);
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode({
@@ -683,7 +699,7 @@ function reverseGeocode(latitude, longitude) {
     }, function(results, status){
         if (status == google.maps.GeocoderStatus.OK) {
             var country = results[results.length - 1].formatted_address;
-            jQuery("#country_name").val(country);
+            jQuery("#"+fieldName+"_country_name").val(country);
         } else {
             console.log("Geocoder failed due to: " + status);
         }

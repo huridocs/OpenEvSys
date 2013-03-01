@@ -1362,9 +1362,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         $response->sEcho = intval($_GET['sEcho']);
 
-        $response->page = $page; // current page
-        $response->iTotalRecords = $count; // total pages
-        $response->iTotalDisplayRecords = $count; // total records
+        $response->page = (int)$page; // current page
+        $response->iTotalRecords = (int)$count; // total pages
+        $response->iTotalDisplayRecords = (int)$count; // total records
         //$response->aaSorting = array(array(1=>"desc"));
 
         $i = 0;
@@ -1373,6 +1373,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $aoColumns[] = array("mData" => $fields_arrayItem["name"], "sTitle" => $fields_arrayItem["name"]);
         }
         $number_of_fields = count($fields_array);
+        $response->aaData = array();
         foreach ($res as $key => $val) {
             //$response->aaData[$i]['id'] = $val[$fields_array[0]];
             $array_values = array();
@@ -1498,9 +1499,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
           'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
           'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
           'destruction'); */
-        $entities = array('event', 'person', 'act', 'victim', 'involvement', 'perpetrator', 'information',
-            'source', 'intervention', 'supporting_docs_meta',
-            'biographic_details');
+        $entities = array('event',  'act', 'person','victim',  'perpetrator',
+            'source', 'intervention');
         $this->entities = $entities;
 
 
@@ -1508,17 +1508,17 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     public function act_facetsearchresults() {
-        global $global;
+        global $global,$conf;
 
         $searchparams = $_GET['searchparams'];
         $searchparams = json_decode($searchparams);
         $resp = array();
         if ($searchparams) {
             $domaindata = $this->getEntityFields();
-//var_dump($searchparams);exit;
+            
 
             $query = new stdClass;
-            if(count((array)$searchparams->selected_terms)){
+            if (count((array) $searchparams->selected_terms)) {
                 foreach ($searchparams->selected_terms as $entity => $fields) {
                     foreach ($fields as $field => $terms) {
                         $i = 1;
@@ -1538,19 +1538,41 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         }
                     }
                 }
-            }else{
+            }
+           
+            $selEntity =  $searchparams->entities[0];
+            //var_dump($selEntity);exit;
+            if ($domaindata->$selEntity->ac_type) {
+                $selEntity = $domaindata->$selEntity->ac_type;
+            }
+
+            if (!$query->conditions) {
                 $condition = new stdClass;
-                $condition->entity = "event";
-                $condition->field = "event_title";
+                $condition->entity = $selEntity;
+                $f = (array) $domaindata->$selEntity->fields;
+                $f = array_shift($f);
+                $condition->field = $f->value;
                 $condition->operator = "contains";
                 $condition->value = "";
-               
                 $query->conditions[] = $condition;
             }
-            $sel = new stdClass;
-            $sel->entity = "event";
-            $sel->field = "event_title";
-            $query->select = array($sel);
+            $selectFields = array();
+            //var_dump($query->conditions);exit;
+
+            if (false && $domaindata->$selEntity->select) {
+                $selectFields = $domaindata->$selEntity->select;
+            } else {
+                foreach ($domaindata->$selEntity->fields as $field) {
+
+                    if ($field->select == "y") {
+                        $sel = new stdClass;
+                        $sel->entity = $selEntity;
+                        $sel->field = $field->value;
+                        $selectFields[] = $sel;
+                    }
+                }
+            }
+            $query->select = $selectFields;
 
             $from = (int) $searchparams->paging->from;
             $size = (int) $searchparams->paging->size;
@@ -1558,7 +1580,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 $from = 0;
             }
             if ($size < 1) {
-                $size = 10;
+                $size = 20;
             }
 
 
@@ -1588,8 +1610,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
+            //var_dump($sqlArray['result']);exit;
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
-
+            //var_dump($sqlArray['result']);exit;
             try {
                 $res_count = $global['db']->Execute($count_query);
             } catch (Exception $e) {
@@ -1602,17 +1625,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $count = $res_count->fields[0];
                     $res_count->MoveNext();
                 }
-
-            /* if ($count > 0) {
-              $total_pages = ceil($count / $limit);
-              } else {
-              $total_pages = 0;
-              }
-
-              if ($page > $total_pages)
-              $page = $total_pages;
-             */
-            // $start = $limit * $page - $limit;
 
 
             $sql = $sqlArray['result'];
@@ -1629,11 +1641,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
             $resp = array("response" => array("start" => $from, "found" => $count));
-$number_of_fields = count($fields_array);
+            $number_of_fields = count($fields_array);
             foreach ($res as $key => $val) {
                 //$response->aaData[$i]['id'] = $val[$fields_array[0]];
                 $array_values = array();
-                
+
 
                 for ($count = 0; $number_of_fields > $count; $count++) {
                     $field_name = $fields_array[$count]['name'];
@@ -1712,7 +1724,12 @@ $number_of_fields = count($fields_array);
 
 
             $resp["response"]["records"] = $records;
-
+            $recField = $selEntity . "_record_number";
+            $sql = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.event_record_number) AS count
+                FROM eventterm t join ({$sqlArray['result']}) d on  d.$recField=t.event_record_number join
+                mt_vocab m on m.vocab_number=t.val
+                LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' ) where t.field='victim_sex' GROUP BY t.val
+        ";
             if ($searchparams->facets) {
                 foreach ($searchparams->facets as $facet) {
                     $entity = $facet->entity;
@@ -1789,9 +1806,62 @@ $number_of_fields = count($fields_array);
                     }
                 }
             }
+            $locationFields = Browse::getEntityLocationFields($selEntity);
+            $field_names = array();
+            $fieldsArray = array();
             $markers = array();
-            for ($i = 1; $i <= $rand; $i++) {
-                $markers[] = array("latitude" => rand(0, 80), "longitude" => rand(0, 100), "title" => "bl asdasd" . rand(0, 360), "content" => "<h1>asasd</h1><br/>bl bla bla" . rand(0, 360));
+
+
+            if ($locationFields) {
+                $selectFields = array();
+                $sel = new stdClass;
+                $sel->entity = $selEntity;
+                $sel->field = $selEntity . "_record_number";
+                $selectFields[] = $sel;
+
+
+                foreach ($locationFields as $locationField) {
+                    $field_names[] = $locationField["field_name"];
+                    /* $fieldsArray[] = $locationField["field_name"] . "_latitude";
+                      $fieldsArray[] = $locationField["field_name"] . "_longitude"; */
+
+
+                    $sel = new stdClass;
+                    $sel->entity = $selEntity;
+                    $sel->field = $locationField["field_name"] . "_latitude";
+                    $selectFields[] = $sel;
+
+                    $sel = new stdClass;
+                    $sel->entity = $selEntity;
+                    $sel->field = $locationField["field_name"] . "_longitude";
+                    $selectFields[] = $sel;
+                }
+
+                $query->select = $selectFields;
+                $searchSql = new SearchResultGenerator();
+                $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
+
+                $sql = $sqlArray['result'];
+
+                if ($limit != -1) {
+                    // $sql .= " LIMIT $start , $limit";
+                }
+                //$sql = "select " . $selEntity . "_record_number," . implode(",", $fieldsArray) . " from " . $selEntity;
+                try {
+                    $res = $global['db']->GetAll($sql);
+                } catch (Exception $e) {
+                    $response->error = "error"; //$e->getMessage();
+                }
+
+                foreach ($res as $val) {
+                    $url = get_record_url($val[0], $selEntity);
+                    $i = 1;
+                    foreach ($field_names as $field_name) {
+                        $markers[] = array("latitude" => $val[$i], "longitude" => $val[$i + 1],
+                            "title" => $val[0], "content" => "<a href='" . $url . "' target='_blank'>" . $val[0] . "</a>");
+                        $i = $i + 2;
+                    }
+                }
             }
             $resp["markers"] = $markers;
         }

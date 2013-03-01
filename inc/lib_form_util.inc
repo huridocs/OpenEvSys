@@ -179,25 +179,26 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                     'map' => array('entity' => $entity, 'field' => $entityField['field_name'], 'mt' => $entityField['list_code'], 'mlt' => $mlt, 'link_table' => $link_table, 'link_field' => $link_field),
                     'extra_opts' => array('label' => $entityField['field_label_l10n'],'clari' => $clari, 'validation' => $validation, 'required' => $required, 'help' => $entityField['field_number'])
                 );
-                if ($type == "location" && ($viewType == "new" || $viewType == "edit")) {
-                    $formArray["latitude"] = array('type' => "hidden",
-                        'label' => "",
-                        'field_number' => $field_number,
-                        'map' => array('entity' => $entity,
-                            'field' => "latitude",
-                            'mt' => $entityField['list_code'],
-                            'mlt' => $mlt,
-                            'link_table' => $link_table,
-                            'link_field' => $link_field),
-                        'extra_opts' => array()
-                    );
-                    $formArray["longitude"] = array('type' => "hidden",
-                        'label' => "",
-                        'field_number' => $field_number,
-                        'map' => array('entity' => $entity,
-                            'field' => "longitude",
-                            'mt' => $entityField['list_code'],
-                            'mlt' => $mlt,
+              
+                                if($type == "location" && ($viewType == "new" || $viewType == "edit" || $viewType == "view" || $viewType == "all")){
+                                 $formArray[  $entityField['field_name']."_latitude" ]    = array('type'=>"hidden",
+                                       'label'=>"",
+                                       'field_number' => $field_number ,
+	                            'map'=>array('entity'=>$entity,
+                                        'field'=>$entityField['field_name']."_latitude" ,
+                                        'mt'=>$entityField['list_code'] ,
+                                        'mlt'=>$mlt ,
+                                        'link_table'=>$link_table ,
+                                        'link_field'=>$link_field ),
+	                            'extra_opts' => array(   )    
+                                    ); 
+                                   $formArray[  $entityField['field_name']."_longitude" ]    = array('type'=>"hidden",
+                                       'label'=>"",
+                                       'field_number' => $field_number ,
+	                            'map'=>array('entity'=>$entity,
+                                        'field'=>$entityField['field_name']."_longitude" ,
+                                        'mt'=>$entityField['list_code'] ,
+                                        'mlt'=>$mlt ,
                             'link_table' => $link_table,
                             'link_field' => $link_field),
                         'extra_opts' => array()
@@ -244,15 +245,19 @@ function popuate_formArray(&$formArray, $entity) {
                 $formField['extra_opts']['value'] = $entity->$formField['map']['field'];
             }
 
-            if ($formField['type'] == "location") {
-                if (isset($entity->latitude) && isset($entity->longitude)) {
-                    $geoval = array('latitude' => $entity->latitude,
-                        'longitude' => $entity->longitude);
-                    if ($entity->geometries) {
-                        $geoval['geometries'] = $entity->geometries;
-                    }
-                    $formField['extra_opts']['value'] = $geoval;
-                }
+                        if($formField['type'] == "location"){
+                           
+                        $fieldName = $formField['map']['field'];
+                        $fieldNameLat = $fieldName."_latitude";
+                        $fieldNameLon = $fieldName."_longitude";
+                            if(isset($entity->$fieldNameLat) && isset($entity->$fieldNameLon)){
+                                $geoval = array('latitude'=>$entity->$fieldNameLat,
+                                    'longitude'=>$entity->$fieldNameLon);
+                                if ( $entity->geometries[$fieldName]){
+                                   $geoval['geometries'] = $entity->geometries[$fieldName];
+                                }	
+                                $formField['extra_opts']['value'] = $geoval;
+                            }
             }
             //var_dump($formField['map']['field']);
             //var_dump($formField['extra_opts']);

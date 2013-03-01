@@ -579,6 +579,18 @@ class Browse implements BrowseStrategy
         return $res;
     }
 
+    public static function getEntityLocationFields($entity)
+    {
+        global $conf;
+        $browse = new Browse();
+        $sql = "Select d.* , 
+                    IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n' 
+                FROM data_dict d
+                LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' ) 
+                WHERE entity = '$entity' and field_type='location' and enabled='y' ORDER BY field_number";
+        $res = $browse->ExecuteQuery($sql);
+        return $res;
+    }
     
     public static function getSecondaryEntityFields($entity,$secondary_entity)
     {
@@ -793,6 +805,12 @@ class Browse implements BrowseStrategy
     {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("SELECT field_number,field_name , essential FROM data_dict WHERE entity='$entity' ORDER BY CAST(label_number as UNSIGNED)");
+        return $res;
+    }
+    public static function getFieldByName($entity,$field_name)
+    {
+        $browse = new Browse();
+        $res = $browse->ExecuteQuery("SELECT field_number,field_name , essential FROM data_dict WHERE entity='$entity' and field_name='$field_name'");
         return $res;
     }
     
@@ -1085,6 +1103,7 @@ class Browse implements BrowseStrategy
         $res = $browse->ExecuteQuery($sql);
         return $res;
     }
+    
 
 /*{{{ Functions related to data export */
     public static function getEvents()

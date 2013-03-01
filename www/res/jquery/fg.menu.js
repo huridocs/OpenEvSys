@@ -247,8 +247,8 @@ function Menu(caller, options){
 		$('#menuSelection').text($(item).text());
 		//alert(text($(item).text());	
 		//addJqgrid($(item).text());
-		var addfield = searchResults.getInstance();
-		addfield.addField($(item).attr('data-field'), $(item).attr('data-entity'));
+		var as = advSearch.getInstance();
+		as.addField($(item).attr('data-field'), $(item).attr('data-entity'));
 		// location.href = $(item).attr('href');
 	};
 };

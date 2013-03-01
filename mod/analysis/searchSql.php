@@ -529,8 +529,9 @@ class SearchResultGenerator{
     
     public function createResult($entity, $field , $type){
     	$entityArray = $this->getEntityArray($entity);
+        
     	$selectField = $this->getFieldAlias($entityArray[$field] , $type , $entity);
-    	//var_dump('selectField' , $selectField);
+    	//var_dump('selectField' , $entityArray[$field]);
     	if( !($selectField == null || $selectField=='' )){
     	    $this->sqlArray['select'][$selectField] = $selectField;
     	}
@@ -781,6 +782,7 @@ class SearchResultGenerator{
 		if($this->entityArray[$entity] == null){
 			$this->entityArray[$entity] = $this->getFormArrayForEntity($entity);
 		}
+                
 		return $this->entityArray[$entity];		
 	}
 	

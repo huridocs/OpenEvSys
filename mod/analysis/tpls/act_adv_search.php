@@ -74,7 +74,7 @@
         </div>
 </div>
 <script language="javascript">
-    var as = new advSearch();
+    var as = advSearch.getInstance();
     as.init();
 
     var query = '<?php echo $_GET['query'] ?>';

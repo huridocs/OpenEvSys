@@ -34,12 +34,13 @@ class Geometry extends ADODB_Active_Record {
     public $entity_type;
     public $entity_id;
     public $geometry;
+    public $field_name;
     public $keyName;
     
     protected $pkey = array('event_record_number');
 
     public function __construct($entity_type = false, $pkeyarr = false, $db = false, $options = array()) {
-        parent::__construct('geometry', $pkey, $db, $options);
+        parent::__construct('mlt_geometry', $pkey, $db, $options);
         if($entity_type){
             $this->entity_type = $entity_type;
         }
@@ -54,12 +55,12 @@ class Geometry extends ADODB_Active_Record {
         
          global $global;
         global $conf;
-        $sql = "SELECT AsText(`geometry`) as `geometry`
-                    FROM `geometry` WHERE entity_type='$entity_type' AND entity_id='$entity_id'";
+        $sql = "SELECT AsText(`geometry`) as `geometry`,field_name
+                    FROM `mlt_geometry` WHERE entity_type='$entity_type' AND entity_id='$entity_id'";
         $items = $global['db']->GetAll($sql);
         $results = array();
         foreach($items as $item){
-            $results[] = $item[0];
+            $results[$item["field_name"]][] = $item["geometry"];
         }
         
         return $results;
@@ -71,7 +72,7 @@ class Geometry extends ADODB_Active_Record {
 	{
 		$db = $this->DB(); if (!$db) return false;
 		
-		$sql = "DELETE FROM  `geometry` WHERE entity_type='$this->entity_type' AND entity_id='$entity_id' ";
+		$sql = "DELETE FROM  `mlt_geometry` WHERE entity_type='$this->entity_type' AND entity_id='$entity_id' ";
 		$ok = $db->Execute($sql);
 		
 		return $ok ? true : false;
