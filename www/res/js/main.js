@@ -495,113 +495,130 @@ window.onload = function(){
 }
 
 $(document).ready(function(){
-    $("#show_related_event").click(function(){
+    $("#show_related_event").click(function(e){
         $('#show_related_event').hide();
         $('#hide_related_event').show();	
-        $('#related_event_search').show();		
+        $('#related_event_search').show();
+        e.preventDefault();
     });
 
-    $("#hide_related_event").click(function(){
+    $("#hide_related_event").click(function(e){
         $('#show_related_event').show();
         $('#hide_related_event').hide();	
-        $('#related_event_search').hide();		
+        $('#related_event_search').hide();
+        e.preventDefault();
     });
 	
-    $("#related_event_search_close").click(function(){
+    $("#related_event_search_close").click(function(e){
         $('#show_related_event').show();
         $('#hide_related_event').hide();	
-        $('#related_event_search').hide();		
+        $('#related_event_search').hide();	
+        e.preventDefault();
     });
 });
 
 $(document).ready(function(){
-    $("#show_related_victim").click(function(){
+    $("#show_related_victim").click(function(e){
         $('#show_related_victim').hide();
         $('#hide_related_victim').show();	
-        $('#related_victim_search').show();		
+        $('#related_victim_search').show();
+        e.preventDefault();
     });
 
-    $("#hide_related_victim").click(function(){
+    $("#hide_related_victim").click(function(e){
         $('#show_related_victim').show();
         $('#hide_related_victim').hide();	
-        $('#related_victim_search').hide();		
+        $('#related_victim_search').hide();
+        e.preventDefault();
     });
 	
-    $("#related_victim_search_close").click(function(){
+    $("#related_victim_search_close").click(function(e){
         $('#show_related_victim').show();
         $('#hide_related_victim').hide();	
-        $('#related_victim_search').hide();		
+        $('#related_victim_search').hide();	
+        e.preventDefault();
     });
 });
 
 
 $(document).ready(function(){
-    $("#show_related_person").click(function(){
+    $("#show_related_person").click(function(e){
         $('#show_related_person').hide();
         $('#hide_related_person').show();	
-        $('#person_search_form').show();		
+        $('#person_search_form').show();	
+        e.preventDefault();	
     });
 
-    $("#hide_related_person").click(function(){
+    $("#hide_related_person").click(function(e){
         $('#show_related_person').show();
         $('#hide_related_person').hide();	
-        $('#person_search_form').hide();		
+        $('#person_search_form').hide();
+        e.preventDefault();
     });
 	
-    $("#related_person_search_close").click(function(){
+    $("#related_person_search_close").click(function(e){
         $('#show_related_person').show();
         $('#hide_related_person').hide();	
-        $('#person_search_form').hide();		
+        $('#person_search_form').hide();
+        e.preventDefault();
     });
 });
 
 $(document).ready(function(){
-    $("#show_address_frm").click(function(){
+    $("#show_address_frm").click(function(e){
         $('#show_address_frm').hide();
         $('#hide_address_frm').show();	
-        $('#address_frm').slideToggle();		
+        $('#address_frm').slideToggle();
+        e.preventDefault();
     });
 	
-    $("#edit_address_frm").click(function(){
+    $("#edit_address_frm").click(function(e){
         $('#show_address_frm').hide();
         $('#hide_address_frm').show();	
-        $('#address_frm').show();		
+        $('#address_frm').show();
+        e.preventDefault();
     });
 
-    $("#hide_address_frm").click(function(){
+    $("#hide_address_frm").click(function(e){
         $('#show_address_frm').show();
         $('#hide_address_frm').hide();	
-        $('#address_frm').slideToggle();		
+        $('#address_frm').slideToggle();
+        e.preventDefault();
     });
 
-    $("#close_address_frm").click(function(){
+    $("#close_address_frm").click(function(e){
         $('#show_address_frm').show();		
         $('#hide_address_frm').hide();
-        $('#address_frm').slideToggle();		
+        $('#address_frm').slideToggle();	
+        e.preventDefault();
     });	
 	
-    $("#show_document").click(function(){
+    $("#show_document").click(function(e){
         $('#hide_document').show();
         $('#show_document').hide();		
-        $('#document_search').show();		
+        $('#document_search').show();
+        e.preventDefault();
     });
 	
-    $("#hide_document").click(function(){
+    $("#hide_document").click(function(e){
         $('#hide_document').hide();
         $('#show_document').show();		
-        $('#document_search').hide();		
+        $('#document_search').hide();
+        e.preventDefault();
     });
 
-    $("#close_doc_search_form").click(function(){		
+    $("#close_doc_search_form").click(function(e){		
         $('#show_document').show();		
         $('#hide_document').hide();	
         $('#document_search').hide();	
+        e.preventDefault();
     });
 
-    $("#close_doc_add_form").click(function(){		
+    $("#close_doc_add_form").click(function(e){		
         $('#show_document').show();		
         $('#hide_document').hide();		
-        $('#document_search').hide();				
+        $('#document_search').hide();	
+        e.preventDefault();
     });	
 	
 });

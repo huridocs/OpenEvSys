@@ -854,7 +854,7 @@ function shn_form_related_person($label,$name,$extra_opts)
     if(isset($_POST['search']) || $_GET['request_page'] != null){
     	if($_GET['person_id'] != null){
     		?>
-	    	<a class="show_search_form" href="#" id="show_related_person" style="display:none;"><?php echo _t('SHOW_SEARCH_FORM');?></a>
+	    	<a class="show_search_form" href="#" id="show_related_person" style="display:none;" ><?php echo _t('SHOW_SEARCH_FORM');?></a>
 			<a class="hide_search_form" href="#" id="hide_related_person" style="display;"><?php echo _t('HIDE_SEARCH_FORM');?></a>
 	    	<?php
     	}

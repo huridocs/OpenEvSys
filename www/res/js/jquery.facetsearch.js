@@ -130,7 +130,8 @@
 		
         var fmap = null;
         var fmarkerclusterer = null;
-		
+	var chartwrappers = new Object();
+        	
         // ===============================================
         // functions to do with filters
         // ===============================================
@@ -332,11 +333,11 @@
                 
                 thefilters += _filterTmpl.replace(/{{FILTER_NAME}}/g, filters[idx]['display']).replace(/{{FILTER_EXACT}}/g, filters[idx]['field']);
                 
-                 thefilters = thefilters.replace(/{{FILTER_ENTITY}}/g, filters[idx]['entity'].replace(/\./gi,'_'));
+                thefilters = thefilters.replace(/{{FILTER_ENTITY}}/g, filters[idx]['entity'].replace(/\./gi,'_'));
                 thefilters = thefilters.replace(/{{FILTER_FIELD}}/g, filters[idx]['field'].replace(/\./gi,'_'));
                 
                
-               if ('size' in filters[idx] ) {
+                if ('size' in filters[idx] ) {
                     thefilters = thefilters.replace(/{{FILTER_HOWMANY}}/gi, filters[idx]['size'])
                 } else {
                     thefilters = thefilters.replace(/{{FILTER_HOWMANY}}/gi, 10)
@@ -393,7 +394,7 @@
                         }else{
                             
                             if(i!=0){
-                               append = "</li>"+append
+                                append = "</li>"+append
                             }
                         }
                     }else{
@@ -676,6 +677,9 @@
                                 if(charttype == "columnchart"){
                                     new google.visualization.ColumnChart(document.getElementById(i+"_"+j)).draw(data2,{
                                         title:chart.title,
+                                        titleTextStyle: {
+                                            fontSize: 14
+                                        },
                                         hAxis: {
                                             title: chart.haxistitle
                                         },
@@ -684,18 +688,48 @@
                                 }else if(charttype == "piechart"){
                                     new google.visualization.PieChart(document.getElementById(i+"_"+j)).draw(data2, {
                                         title:chart.title,
+                                        titleTextStyle: {
+                                            fontSize: 14
+                                        },
+                                        chartArea:{
+                                            left:20,
+                                            top:20,
+                                            width:"100%",
+                                            height:"90%"
+                                        },
                                         height:200
                                     });
                                 }else if(charttype =="areachart"){
                                     new google.visualization.AreaChart(document.getElementById(i+"_"+j)).draw(data2, {
                                         title:chart.title,
+                                        titleTextStyle: {
+                                            fontSize: 14
+                                        },
                                         height:200
                                     });
                                 }else if(charttype =="barchart"){
                                     new google.visualization.BarChart(document.getElementById(i+"_"+j)).draw(data2, {
                                         title:chart.title,
+                                        titleTextStyle: {
+                                            fontSize: 14
+                                        },
                                         height:300
                                     });
+                                }else if(charttype =="editchart"){
+                                    var button = $("<button  class='btn openeditorbtn'  data-editorid='"+i+"_"+j+"' >Edit</button>");
+                                    $(div).append(button);
+                                    editcharttype = "BarChart";
+                                    if(j%2 == 1){
+                                        editcharttype = "PieChart";
+                                    }
+                                    
+                                    wrapper = new google.visualization.ChartWrapper({
+                                    dataTable : data2,containerId: i+"_"+j,
+                                    chartType: editcharttype,
+                                    options:{ title:chart.title,titleTextStyle: {fontSize: 14}, height:300}
+                                  });
+                                  wrapper.draw();
+                                  chartwrappers[i+"_"+j] = wrapper;
                                 }
        
                             }
@@ -708,9 +742,26 @@
             }else{
                 $("#chartscontainer").hide();
             }
-                
+            $('.openeditorbtn').bind('click',openeditor);
+	  
                      
         }	
+        var openeditor = function(event) {
+            event.preventDefault();
+            var editorid = $(this).data("editorid");
+            var editor = new google.visualization.ChartEditor();
+            wrapper = chartwrappers[editorid]
+            console.log(editorid)
+                   
+                   
+            google.visualization.events.addListener(editor, 'ok',
+                function() {
+                    wrapper = editor.getChartWrapper();
+                    wrapper.draw(document.getElementById(editorid));
+                });
+            editor.openDialog(wrapper);
+        }
+        
         var addmapmarkers = function(data){
             $('#mapcanvas').gmap('refresh');
             //google.maps.event.trigger(fmap.gmap('get','map'), "resize");
@@ -718,7 +769,7 @@
             fmap.gmap('clear', 'markers');			
 			
             if(typeof data.markers != 'undefined'){
-		if(data.markers.length){
+                if(data.markers.length){
                     $("#mapcontainer").show();
                     $.each(data.markers, function(i, marker) {
                         fmap.gmap('addMarker', { 
@@ -761,7 +812,7 @@
                 $.each(data.records, function(index, value) {
                      
                     $('#facetsearch_results').append( buildrecord(value) );
-                 });
+                });
             }
             $('.facetsearch_more').bind('click',showmore);
 			

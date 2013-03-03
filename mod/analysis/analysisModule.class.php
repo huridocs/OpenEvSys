@@ -1282,14 +1282,12 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         if (!$limit) {
             $limit = 10;
         }
-        
-        
+
+
 
         //convert json query to an object 
         $query = json_decode($_GET['query']);
 
-        
-        
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
@@ -1363,9 +1361,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         $response->sEcho = intval($_GET['sEcho']);
 
-        $response->page = (int)$page; // current page
-        $response->iTotalRecords = (int)$count; // total pages
-        $response->iTotalDisplayRecords = (int)$count; // total records
+        $response->page = (int) $page; // current page
+        $response->iTotalRecords = (int) $count; // total pages
+        $response->iTotalDisplayRecords = (int) $count; // total records
         //$response->aaSorting = array(array(1=>"desc"));
 
         $i = 0;
@@ -1500,7 +1498,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
           'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
           'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
           'destruction'); */
-        $entities = array('event',  'act', 'person','victim',  'perpetrator',
+        $entities = array('event', 'act', 'person', 'victim', 'perpetrator',
             'source', 'intervention');
         $this->entities = $entities;
 
@@ -1509,16 +1507,17 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     public function act_facetsearchresults() {
-        global $global,$conf;
+        global $global, $conf;
 
         $searchparams = $_GET['searchparams'];
         $searchparams = json_decode($searchparams);
         $resp = array();
         if ($searchparams) {
             $domaindata = $this->getEntityFields();
-            
+
 
             $query = new stdClass;
+
             if (count((array) $searchparams->selected_terms)) {
                 foreach ($searchparams->selected_terms as $entity => $fields) {
                     foreach ($fields as $field => $terms) {
@@ -1540,8 +1539,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     }
                 }
             }
-           
-            $selEntity =  $searchparams->entities[0];
+
+            $selEntity = $selEntityOriginal = $searchparams->entities[0];
             //var_dump($selEntity);exit;
             if ($domaindata->$selEntity->ac_type) {
                 $selEntity = $domaindata->$selEntity->ac_type;
@@ -1549,7 +1548,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             if (!$query->conditions) {
                 $condition = new stdClass;
-                $condition->entity = $selEntity;
+                $condition->entity = $selEntityOriginal;
                 $f = (array) $domaindata->$selEntity->fields;
                 $f = array_shift($f);
                 $condition->field = $f->value;
@@ -1557,8 +1556,24 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 $condition->value = "";
                 $query->conditions[] = $condition;
             }
+            
             $selectFields = array();
-            //var_dump($query->conditions);exit;
+            foreach ($query->conditions as $cond) {
+                $sel = new stdClass;
+                $sel->entity = $cond->entity;
+                $sel->field = $cond->field;
+                $selectFields[] = $sel;
+            }
+            if ($searchparams->facets) {
+                foreach ($searchparams->facets as $facet) {
+                    $entity = $facet->entity;
+                    $field = $facet->field;
+                    $sel = new stdClass;
+                    $sel->entity = $entity;
+                    $sel->field = $field;
+                    $selectFields[] = $sel;
+                }
+            }
 
             if (false && $domaindata->$selEntity->select) {
                 $selectFields = $domaindata->$selEntity->select;
@@ -1567,12 +1582,15 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
                     if ($field->select == "y") {
                         $sel = new stdClass;
-                        $sel->entity = $selEntity;
+                        $sel->entity = $selEntityOriginal;
                         $sel->field = $field->value;
                         $selectFields[] = $sel;
                     }
                 }
             }
+            
+            $selectFields = array_unique($selectFields,SORT_REGULAR);
+            
             $query->select = $selectFields;
 
             $from = (int) $searchparams->paging->from;
@@ -1602,18 +1620,26 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $fields_array = array();
             $entities = analysis_get_search_entities();
 
+            $fieldTitles = array();
             //if the query is a search put select fields to the array
             foreach ($query->select as $field) {
                 $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
                 $mt = is_mt_field($entity, $field->field);
                 array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+                $fieldname = $field->field;
+                if(isset($domaindata->$entity->fields->$fieldname->label)){
+                    $fieldTitles[] = $domaindata->$entity->fields->$fieldname->label;
+                }else{
+                    $fieldTitles[] = $field->field;
+                }
             }
+            $records[0] = $fieldTitles;
 
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
             //var_dump($sqlArray['result']);exit;
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
-            //var_dump($sqlArray['result']);exit;
+
             try {
                 $res_count = $global['db']->Execute($count_query);
             } catch (Exception $e) {
@@ -1643,6 +1669,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             $resp = array("response" => array("start" => $from, "found" => $count));
             $number_of_fields = count($fields_array);
+            
             foreach ($res as $key => $val) {
                 //$response->aaData[$i]['id'] = $val[$fields_array[0]];
                 $array_values = array();
@@ -1713,10 +1740,18 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $url = get_record_url($val[$field_name], $link_entity);
                             $array_values[$field_name] = "<a href='$url' target='_blank'>" . $val[$field_name] . "</a>";
                         } else {
-                            $array_values[$field_name] = $val[$field_name];
+                            if ($val[$field_name]) {
+                                $array_values[$field_name] = $val[$field_name];
+                            } else {
+                                $array_values[$field_name] = "";
+                            }
                         }
                     } else {
-                        $array_values[$field_name] = $val[$field_name];
+                        if ($val[$field_name]) {
+                            $array_values[$field_name] = $val[$field_name];
+                        } else {
+                            $array_values[$field_name] = "";
+                        }
                     }
                 }
                 $records[] = $array_values;
@@ -1725,12 +1760,19 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
             $resp["response"]["records"] = $records;
-            $recField = $selEntity . "_record_number";
-            $sql = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.event_record_number) AS count
-                FROM eventterm t join ({$sqlArray['result']}) d on  d.$recField=t.event_record_number join
-                mt_vocab m on m.vocab_number=t.val
-                LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' ) where t.field='victim_sex' GROUP BY t.val
-        ";
+            $recField = get_primary_key($selEntity); // . "_record_number";
+          
+            $charts = array();
+
+            $conditions = array();
+            if (count((array) $query->conditions)) {
+                foreach ($query->conditions as $condition) {
+                    $condition2 = $condition;
+                    $conditions[$condition->entity][$condition->field][] = $condition2;
+                }
+            }
+            //var_dump($conditions, $sqlArray['result']);
+
             if ($searchparams->facets) {
                 foreach ($searchparams->facets as $facet) {
                     $entity = $facet->entity;
@@ -1745,6 +1787,82 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $fieldType = $fields->$field->field_type;
                     $listCode = $fields->$field->list_code;
 
+                    //charts
+                    $entityForm = $searchSql->getEntityArray($entity);
+                    $fieldArray = $entityForm[$field];
+
+                    $recField = get_primary_key($entity);
+                    if ($fieldArray['map']['mlt']) {
+                        $mltTable = 'mlt_' . $searchSql->tableOfEntity($fieldArray['map']['entity']) . '_' . $fieldArray['map']['field'];
+
+                        $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.record_number) AS count
+                            FROM ({$sqlArray['result']}) d LEFT JOIN $mltTable t  on  t.record_number=d.{$selEntityOriginal}_$recField left join
+                            mt_vocab m on m.vocab_number=t.vocab_number
+                            LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY t.vocab_number
+                            ";
+                          
+                    } elseif (is_management_field($fieldArray)) {
+                        $f = $selEntityOriginal."_".$fieldArray['map']['field'];
+                        
+                         $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(d.{$selEntityOriginal}_$recField) AS count
+                            FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$selEntityOriginal}_$recField and t.entity_type='$selEntity' 
+                            left join  mt_vocab m on m.vocab_number=t.{$fieldArray['map']['field']}
+                            LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY $f
+                            ";
+                            
+                            
+                            
+                    } else {
+                        $f = $selEntityOriginal."_".$fieldArray['map']['field'];
+                        
+                        if($fieldType == "mt_select" || $fieldType == "mt_tree"){
+                            $sqlchart = "SELECT IFNULL(l.msgstr , english)  as val, COUNT({$selEntityOriginal}_$recField) AS count
+                            FROM ({$sqlArray['result']}) d left join  mt_vocab m on m.vocab_number=d.{$f}
+                            LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY {$f}";
+                        }else{
+                            $sqlchart = "SELECT d.{$f} as val, COUNT({$selEntityOriginal}_$recField) AS count
+                            FROM ({$sqlArray['result']}) d   GROUP BY {$f}";
+                        }
+                        
+                        
+                    }
+                    //var_dump($sqlchart);
+                    if($sqlchart){
+                         try {
+                                $res = $global['db']->Execute($sqlchart);
+                                $chart = array();
+                                $chart["type"] = "editchart";
+                                $chart["title"] = $fieldArray["label"];
+                                $chart2 = $chart;
+                                foreach($res as $val){
+                                    $chart["data"][0][0] = $chart["title"];
+                                    $chart["data"][1][0] = "";
+                                    
+                                    
+                                    $vall = _t("Undefined");
+                                    if($val[0]){
+                                        
+                                        if($val[0] == "y"){
+                                           $vall=  _t('Yes');
+                                        }elseif($val[0] == "n"){
+                                            $vall = _t('No');
+                                        }else{
+                                            $vall = $val[0];
+                                        }
+                                    }
+                                    $chart["data"][0][] = $vall;
+                                    $chart["data"][1][] = (int) $val[1]; 
+                                    
+                                    $chart2["data"][0] = array( $chart["title"],_t("Count"));
+                                    $chart2["data"][] = array($vall,(int) $val[1]);
+                                }
+                                
+                                $resp["charts"][] = array($chart,$chart2);
+                                
+                            } catch (Exception $e) {
+                                $response->error = "error"; //$e->getMessage();
+                            }
+                    }
                     $terms = array();
                     switch ($fieldType) {
                         case 'radio':
@@ -1812,12 +1930,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $fieldsArray = array();
             $markers = array();
 
-
             if ($locationFields) {
                 $selectFields = array();
                 $sel = new stdClass;
-                $sel->entity = $selEntity;
-                $sel->field = $selEntity . "_record_number";
+                $sel->entity = $selEntityOriginal;
+                $sel->field = get_primary_key($selEntity); // . "_record_number";
                 $selectFields[] = $sel;
 
 
@@ -1828,12 +1945,12 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
                     $sel = new stdClass;
-                    $sel->entity = $selEntity;
+                    $sel->entity = $selEntityOriginal;
                     $sel->field = $locationField["field_name"] . "_latitude";
                     $selectFields[] = $sel;
 
                     $sel = new stdClass;
-                    $sel->entity = $selEntity;
+                    $sel->entity = $selEntityOriginal;
                     $sel->field = $locationField["field_name"] . "_longitude";
                     $selectFields[] = $sel;
                 }

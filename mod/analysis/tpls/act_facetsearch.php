@@ -7,7 +7,7 @@ global $conf;
 <script type="text/javascript" src="res/js/jquery.facetsearch.js"></script>
  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
         <script type="text/javascript">
-            google.load('visualization', '1', {packages: ['corechart']});
+            google.load('visualization', '1', {packages: ['corechart','charteditor']});
         </script>
 <div class="panel">
     <ul class="nav nav-tabs facet-tabs" id="myTab">

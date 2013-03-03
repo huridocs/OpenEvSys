@@ -736,7 +736,7 @@ class SearchResultGenerator {
         return $sqlStatement;
     }
 
-    private function getEntityArray($entity) {
+    public function getEntityArray($entity) {
         //var_dump('get_entity_array' , $entity);
 
         $entity = $this->tableOfEntity($entity);
@@ -747,7 +747,7 @@ class SearchResultGenerator {
         return $this->entityArray[$entity];
     }
 
-    private function getFormArrayForEntity($entityOri) {
+    public function getFormArrayForEntity($entityOri) {
         include_once APPROOT . 'inc/lib_entity_forms.inc';
         // HAVE TO EXIT GRACEFULLY IF A INVALIED ENTITY IS SUPPLIED
         //var_dump('formarrayforentity' , $entity);
@@ -766,7 +766,7 @@ class SearchResultGenerator {
         return $entityForm('all');
     }
 
-    private function tableOfEntity($entity_type) {
+    public function tableOfEntity($entity_type) {
         if ($entity_type == 'victim' || $entity_type == 'perpetrator' || $entity_type == 'source' || $entity_type == 'intervening_party') {
             $entity_table = 'person';
         } else {
@@ -775,7 +775,7 @@ class SearchResultGenerator {
         return trim($entity_table);
     }
 
-    private function isPersonExtention($entity_type) {
+    public function isPersonExtention($entity_type) {
         if ($entity_type == 'victim' || $entity_type == 'perpetrator' || $entity_type == 'source' || $entity_type == 'intervening_party') {
             return true;
         } else {
