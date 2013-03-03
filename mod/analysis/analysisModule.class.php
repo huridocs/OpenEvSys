@@ -1282,13 +1282,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         if (!$limit) {
             $limit = 10;
         }
-        $sidx = $_GET['sidx'];
-        $sord = $_GET['sord'];
+        
+        
 
         //convert json query to an object 
         $query = json_decode($_GET['query']);
 
-//var_dump($query);exit;
+        
+        
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
@@ -1319,7 +1320,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //var_dump($sqlArray);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
-
+        //var_dump($sqlArray['result']);exit;
         try {
             $res_count = $global['db']->Execute($count_query);
         } catch (Exception $e) {

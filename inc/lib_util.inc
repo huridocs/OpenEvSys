@@ -156,8 +156,17 @@ function set_redirect_header($module = 'home', $action = 'default', $view = null
     $view = (isset($view)) ? "&view=$view" : null;
 
     if (is_array($args))
-        foreach ($args as $id => $value)
-            $al .= "&$id=$value";
+        foreach ($args as $id => $value){
+        
+            if(is_array($value)){
+                foreach($value as $val){
+                   $al .= "&$id"."[]=$val";
+                }
+            }else{
+                $al .= "&$id=$value";
+            
+            }
+        }
 
     if ($conf['mod_rewrite'] == 'true')
         $uri = "index.php/$module/$action/$id.$stream?";

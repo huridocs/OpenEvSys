@@ -108,11 +108,10 @@ class eventsModule extends shnModule {
             $coe = new ChainOfEvents();
             $coe->LoadFromRecordNumber($_GET['coe_id']);
             $coe->LoadRelationships();
-            if($_GET['reverse']){
+            if ($_GET['reverse']) {
                 $coe->reverse();
             }
             $_GET['eid'] = $coe->event;
-            
         }
     }
 
@@ -143,7 +142,6 @@ class eventsModule extends shnModule {
             $field['extra_opts']['value'] = $_GET[$fieldName];
             $field['extra_opts']['required'] = null;
             $field['extra_opts']['class'] = "input-block-level";
-            
         }
 
         $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);
@@ -179,12 +177,12 @@ class eventsModule extends shnModule {
         //if a save is request save the event
         if (isset($_POST['save'])) {
             $status = shn_form_validate($this->event_form);
-            
+
             if ($status) {
                 $event = new Event();
                 $event->event_record_number = shn_create_uuid('event');
                 form_objects($this->event_form, $event);
-                
+
                 $event->SaveAll();
                 $this->event = $event;
 
@@ -408,7 +406,7 @@ class eventsModule extends shnModule {
         }
     }
 
-/* }}} */
+    /* }}} */
 
     public function act_add_act() {
         //fetch the victim
@@ -428,11 +426,11 @@ class eventsModule extends shnModule {
                 $act->SaveAll();
                 $_SESSION['vp']['act'] = $act->act_record_number;
 
-                if (isset($_POST['add_ad'])){
+                if (isset($_POST['add_ad'])) {
                     set_redirect_header('events', 'add_ad', null, array('act_id' => $act->act_record_number));
-                }elseif(isset($_POST['save_without'])){
+                } elseif (isset($_POST['save_without'])) {
                     set_redirect_header('events', 'vp_list', null, null);
-                }else{
+                } else {
                     set_redirect_header('events', 'add_perpetrator', null, array('act_id' => $act->act_record_number));
                 }
             }
@@ -533,9 +531,19 @@ class eventsModule extends shnModule {
 
     public function act_add_perpetrator() {
         //set the act number
-        $_GET['act_id'] = (isset($_GET['act_id'])) ? $_GET['act_id'] : $_SESSION['act_id'];
-        $_SESSION['act_id'] = $_GET['act_id'];
-
+        if (isset($_REQUEST['acts'])) {
+            $acts = $_REQUEST['acts'];
+        } elseif (isset($_GET['act_id'])) {
+            $acts = array($_GET['act_id']);
+        } else {
+            $acts = $_SESSION['acts'];
+        }
+        $_SESSION['acts'] = $acts;
+        
+        if(!$acts){
+            set_redirect_header('events', 'vp_list');
+       }
+        
         //if a new person save 
         if (isset($_POST['save'])) {
             $this->perpetrator = $this->save_person();
@@ -548,13 +556,23 @@ class eventsModule extends shnModule {
             $this->perpetrator->LoadPicture();
         }
 
-        $this->act = new Act();
-        $this->act->LoadFromRecordNumber($_SESSION['act_id']);
-        $this->act_name = get_mt_term($this->act->type_of_act);
-        $this->victim = new Person();
-        $this->victim->LoadFromRecordNumber($this->act->victim);
+        $acts_array = array();
+        foreach ($_SESSION['acts'] as $act_id) {
+            $act = new Act();
+            $act->LoadFromRecordNumber($act_id);
+            $victim = new Person();
+            $victim->LoadFromRecordNumber($act->victim);
+            $act_array = array();
+            $act_array['act'] = $act;
+            $act_array['act_name'] = get_mt_term($act->type_of_act);
+            ;
+            $act_array['victim'] = $victim;
+            $acts_array[] = $act_array;
+        }
+        $this->acts = $acts_array;
     }
 
+    
     public function act_add_involvement() {
         $involvement_form = involvement_form('new');
         $this->involvement_form = $involvement_form;
@@ -572,28 +590,49 @@ class eventsModule extends shnModule {
             if ($status) {
                 $this->save_involvement();
                 $this->act_add_perpetrator();
-                set_redirect_header('events', 'add_perpetrator', null, array('act_id' => $_SESSION['act_id']));
+                set_redirect_header('events', 'add_perpetrator', null, array('acts' => $_SESSION['acts']));
                 return;
             }
         }
 
-        $this->act = new Act();
+        $acts_array = array();
+        foreach ($_SESSION['acts'] as $act_id) {
+            $act = new Act();
+            $act->LoadFromRecordNumber($act_id);
+            $victim = new Person();
+            $victim->LoadFromRecordNumber($act->victim);
+            $perpetrator = new Person();
+            $perpetrator->LoadFromRecordNumber($_SESSION['vp']['perpetrator']);
+            $act_array = array();
+            $act_array['act'] = $act;
+            $act_array['act_name'] = get_mt_term($act->type_of_act);
+            $act_array['perpetrator'] = $perpetrator;
+
+            $acts_array[] = $act_array;
+        }
+        $this->acts = $acts_array;
+
+        /*$this->act = new Act();
         $this->act->LoadFromRecordNumber($_SESSION['act_id']);
         $this->act_name = get_mt_term($this->act->type_of_act);
         $this->perpetrator = new Person();
-        $this->perpetrator->LoadFromRecordNumber($_SESSION['vp']['perpetrator']);
+        $this->perpetrator->LoadFromRecordNumber($_SESSION['vp']['perpetrator']);*/
     }
 
     protected function save_involvement() {
-        $involvement_form = involvement_form('new');
-        $inv = new Involvement();
-        $inv->involvement_record_number = shn_create_uuid('inv');
-        form_objects($involvement_form, $inv);
-        $inv->event = $this->event_id;
-        $inv->act = $_SESSION['act_id'];
-        $inv->perpetrator = $_SESSION['vp']['perpetrator'];
-        $inv->SaveAll();
-        return $inv;
+        $invs = array();
+        foreach ($_SESSION['acts'] as $act_id) {        
+            $involvement_form = involvement_form('new');
+            $inv = new Involvement();
+            $inv->involvement_record_number = shn_create_uuid('inv');
+            form_objects($involvement_form, $inv);
+            $inv->event = $this->event_id;
+            $inv->act = $act_id;
+            $inv->perpetrator = $_SESSION['vp']['perpetrator'];
+            $inv->SaveAll();
+            $invs[] = $inv;
+        }
+        return $invs;
     }
 
     public function act_edit_victim() {
@@ -725,6 +764,7 @@ class eventsModule extends shnModule {
                 $inv->LoadRelationships();
                 $inv->LoadManagementData();
                 form_objects($involvement_form, $inv);
+                
                 $inv->SaveAll();
                 set_redirect_header('events', 'vp_list', null, array('inv_id' => $inv->involvement_record_number, 'type' => 'inv'));
                 return;
@@ -738,7 +778,7 @@ class eventsModule extends shnModule {
             $this->set_act();
     }
 
-/* }}} */
+    /* }}} */
 
     public function act_delete_act() {
         if (isset($_POST['no'])) {
@@ -1011,16 +1051,16 @@ class eventsModule extends shnModule {
     public function act_coe_list() {
         $this->related_events = Browse::getChainOfEvents($this->event->event_record_number);
         $this->related_events_reverse = Browse::getChainOfEventsReverse($this->event->event_record_number);
-            
+
         if (isset($_GET['coe_id'])) {
             global $messages;
             $coe = new ChainOfEvents();
             $coe->LoadFromRecordNumber($_GET['coe_id']);
-            if($_GET['reverse']){
+            if ($_GET['reverse']) {
                 $coe->reverse();
             }
             $coe->LoadRelationships();
-            
+
             if ($coe->chain_of_events_record_number != $_GET['coe_id'] || $coe->chain_of_events_record_number == '') {
                 shnMessageQueue::addError($messages['coe_not_found']);
                 unset($_GET['type']);

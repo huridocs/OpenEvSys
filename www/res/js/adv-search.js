@@ -765,71 +765,92 @@ function queryBuilder(){
             var options = openevsysDomain.getInstance().getOperator(field_type);
                
             var operatorselect = $("<select id=\"\" name=\"\" class=\"operatorselect\" />");
-     
             for(var option in options){
-                if(options[option].value == e.operator){
-                    $("<option selected=\"selected\" />", {
-                        value:  options[option].value, 
-                        text: options[option].label
-                    }).appendTo(operatorselect);
-                }else{
-                    $("<option />", {
-                        value:  options[option].value, 
-                        text: options[option].label
-                    }).appendTo(operatorselect);
-                }
+                $("<option />", {
+                    value:  options[option].value, 
+                    text: options[option].label
+                }).appendTo(operatorselect);
+                
             }
        
             div.append(operatorselect);
+                    
+            operatorselect.val( e.operator ).attr('selected',true);
             operatorselect.select2({
                 width: 'resolve'
             });
+            
+            
             if(field_type == 'date'){
                 operatorselect.on("change", function() { 
                     var ov = $(this).val();
+                    var d = $(this).parent().find('.dateselect')
+                
                     if( ov == 'between' || ov == 'not_between'){
-                        var o = $('<input type="text" value="" class="daterangepicker" />');
-                        div.append(o);
-                        o.daterangepicker();
+                        var o = $('<input type="text" value="" class="daterangepickerinput searchval dateselect" />');
+                        //div.append(o);
+                        o.daterangepicker({
+                            format:'yyyy-MM-dd',
+                            separator: ' , '
+                        });
                     }
                     else{
-                        var o = $('<input type="text" value="" class="datepicker" />');
-                        div.append(o);
+                        var o = $('<input type="text" value="" class="datepicker searchval dateselect" />');
+                        //div.append(o);
                         o.datepicker({
                             format:'yyyy-mm-dd'
                         });
                 
                     }
+                    d.replaceWith(o)
                 });
             }
+            
             switch(field_type){
                 case "date":
-                    var o = $('<input type="text" value="" class="datepicker qb-con" />');
-                    div.append(o);
-                    o.datepicker({
-                        format:'yyyy-mm-dd'
-                    });
-               
+                    if( e.operator == 'between' || e.operator == 'not_between'){
+                        var o = $('<input type="text" value="" class="daterangepickerinput searchval dateselect" />');
+                        div.append(o);
+                        o.val(e.value);
+                        o.daterangepicker({
+                            format:'yyyy-MM-dd',
+                            separator: ' , '
+                        });
+                    }
+                    else{
+                        var o = $('<input type="text" value="" class="datepicker searchval dateselect"  />');
+                        div.append(o);
+                        o.val(e.value);
+                        o.datepicker({
+                            format:'yyyy-mm-dd'
+                        });
+                    }
                
                     break;
                 case "mt_select":
-                    var mt_select = $("<select id=\"\" name=\"\" class=\"qb-con\" />");
+                    var mt_select = $("<select id=\"\" name=\"\" class=\"select searchval\" />");
                     //$("<option />", {value:  "", text: ""}).appendTo(select);
                     mt_select.qb_mt_select({
-                        mt: od.getListCode(field_name, entity_name)
+                        mt: od.getListCode(field_name, entity_name),
+                        'selected' : e.value
                     });
                     div.append(mt_select);
+                    mt_select.val( e.value ).attr('selected',true);
+            
                     mt_select.select2({
                         width: 'resolve'
                     });
-               
+                    mt_select.select2("val",e.value);
                     break;
                 case "mt_tree":
-                    var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
+                    var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" />');
                     mt_tree.qb_mt_tree({
-                        mt: od.getListCode(field_name, entity_name)
+                        mt: od.getListCode(field_name, entity_name),
+                        'selected' : e.value
                     });
                     div.append(mt_tree);
+                    mt_tree.val( e.value ).attr('selected',true);
+            
                     mt_tree.select2({
                         width: 'resolve',
                         formatResult: format_mt_tree,
@@ -838,19 +859,34 @@ function queryBuilder(){
                     break;
                 case "radio":
                     var name = genName();
-                    var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
+                    var yesck = (e.value == 'y')?" checked='true' " : "" ;
+                    var nock = (e.value == 'n')?" checked='true' " : "" ;
+                 
+                    var o = $("<label class='radio inline'><input type='radio' class='searchval-radio-yes' name='"+name+"' value='y' "+yesck+" />"+_('YES')+"</label><label class='radio inline'><input class='searchval-radio-no' type='radio' name='"+name+"' value='n' "+nock+"  />"+_('NO')+"</label>");
                     div.append(o);
                     break;
                 case "checkbox":
-                    var o = $('<label class="checkbox inline"><input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/></label>');
+                    if(e.value != '' && e.value != null){
+                        var chked = 'checked="true"';
+                    }else {
+                        var chked = '';
+                    }
+                   
+                    var o = $('<label class="checkbox inline"><input class="searchval-checkbox" type="checkbox" '+chked+' name="deceased"/></label>');
                     div.append(o);
                     break;
                 default:
-                    var o = $('<input type="text" value="" class="qb-con" />');
+                    var o = $('<input type="text" value="" class="searchval" />');
+                    o.val(e.value);
                     div.append(o);
+                
             }
-            this.addAndOperater(div);
-        
+            
+            if( e.link != null ){
+                this.addAndOperater(div, e.link);
+            }else{
+                this.addAndOperater(div);
+            }
             continue;
         
             var con = $('<li class="qb-condition"></li>');
@@ -908,7 +944,7 @@ function queryBuilder(){
                         var chked = 'checked="true"';
                     else 
                         var chked = '';
-                    var o = $('<input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased" '+chked+'/>');
+                    var o = $('<input class="qb-checkbox" type="checkbox"  name="deceased" '+chked+'/>');
                     con.append(o);
                     break;
                 default:
@@ -1110,24 +1146,30 @@ function queryBuilder(){
         if(field_type == 'date'){
             select.on("change", function() { 
                 var ov = $(this).val();
+                var d = $(this).parent().find('.dateselect')
+                
                 if( ov == 'between' || ov == 'not_between'){
-                    var o = $('<input type="text" value="" class="daterangepicker" />');
-                    div.append(o);
-                    o.daterangepicker();
+                    var o = $('<input type="text" value="" class="daterangepickerinput searchval dateselect" />');
+                    //div.append(o);
+                    o.daterangepicker({
+                        format:'yyyy-MM-dd',
+                        separator: ' , '
+                    });
                 }
                 else{
-                    var o = $('<input type="text" value="" class="datepicker" />');
-                    div.append(o);
+                    var o = $('<input type="text" value="" class="datepicker searchval dateselect" />');
+                    //div.append(o);
                     o.datepicker({
                         format:'yyyy-mm-dd'
                     });
                 
                 }
+                d.replaceWith(o)
             });
         }
         switch(field_type){
             case "date":
-                var o = $('<input type="text" value="" class="datepicker qb-con" />');
+                var o = $('<input type="text" value="" class="datepicker searchval dateselect" />');
                 div.append(o);
                 o.datepicker({
                     format:'yyyy-mm-dd'
@@ -1136,7 +1178,7 @@ function queryBuilder(){
                
                 break;
             case "mt_select":
-                var mt_select = $("<select id=\"\" name=\"\" class=\"qb-con\" />");
+                var mt_select = $("<select id=\"\" name=\"\" class=\"select searchval\" />");
                 //$("<option />", {value:  "", text: ""}).appendTo(select);
                 mt_select.qb_mt_select({
                     mt: od.getListCode(field_name, entity_name)
@@ -1148,7 +1190,7 @@ function queryBuilder(){
                
                 break;
             case "mt_tree":
-                var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree\" />');
+                var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" />');
                 mt_tree.qb_mt_tree({
                     mt: od.getListCode(field_name, entity_name)
                 });
@@ -1161,15 +1203,15 @@ function queryBuilder(){
                 break;
             case "radio":
                 var name = genName();
-                var o = $("<label class='radio inline'><input type='radio' class='qb-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='qb-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
+                var o = $("<label class='radio inline'><input type='radio' class='searchval-radio-yes' name='"+name+"' value='y'/>"+_('YES')+"</label><label class='radio inline'><input class='searchval-radio-no' type='radio' name='"+name+"' value='n'  />"+_('NO')+"</label>");
                 div.append(o);
                 break;
             case "checkbox":
-                var o = $('<label class="checkbox inline"><input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/></label>');
+                var o = $('<label class="checkbox inline"><input class="searchval-checkbox" type="checkbox"  name="deceased"/></label>');
                 div.append(o);
                 break;
             default:
-                var o = $('<input type="text" value="" class="qb-con" />');
+                var o = $('<input type="text" value="" class="searchval" />');
                 div.append(o);
         }
         this.addAndOperater(div);
@@ -1211,7 +1253,7 @@ function queryBuilder(){
                 e.after(o);
                 break;
             case "checkbox":
-                var o = $('<input class="qb-checkbox" type="checkbox" tabindex="27" name="deceased"/>');
+                var o = $('<input class="qb-checkbox" type="checkbox" name="deceased"/>');
                 e.after(o);
                 break;
             default:
@@ -1263,14 +1305,18 @@ function queryBuilder(){
         ];
         var select = $("<select id=\"\" name=\"\" class=\"operselect\" />");
         for(var option in options){
-            $("<option />", {
-                value:  options[option].value, 
-                text: options[option].label
-            }).appendTo(select);
-           
+            if(options[option].value == value){
+                   
+                $("<option />", {
+                    value:  options[option].value, 
+                    text: options[option].label
+                }).appendTo(select);
+            }
         }
         //var div = $(sel).closest("div");
         div.append(select);
+        select.val( value ).attr('selected',true);
+            
         //$('#query_builder').append(div);
         select.select2({
             width: 'resolve'
@@ -1348,24 +1394,30 @@ function queryBuilder(){
                 return true;
             }
             c.operator = $(this).find('select.operatorselect:first').val();
-            c.value = $(this).find('.qb-con:first').attr('value');
+            if($(this).find('.searchval').is("select")){
+                c.value = $(this).find('select.searchval:first').val();
+            }else{
+                c.value = $(this).find('.searchval:first').val();
+            }
+            
             //handle checkboxes
-            if($(this).find('.qb-checkbox').length > 0 ){
-                if($(this).find('.qb-checkbox').attr('checked'))
+            if($(this).find('.searchval-checkbox').length > 0 ){
+                if($(this).find('.searchval-checkbox').is(':checked'))
                     c.value = 'y';
                 else
                     c.value = 'n';
             }
             //handle radio buttons
-            if($(this).find('.qb-radio-yes').length > 0 ){
-                if($(this).find('.qb-radio-yes').attr('checked'))
+            if($(this).find('.searchval-radio-yes').length > 0 ){
+                if($(this).find('.searchval-radio-yes').is(':checked'))
                     c.value = 'y';
             }
-            if($(this).find('.qb-radio-no').length > 0 ){
-                if($(this).find('.qb-radio-no').attr('checked'))
+            if($(this).find('.searchval-radio-no').length > 0 ){
+                if($(this).find('.searchval-radio-no').is(':checked'))
                     c.value = 'n';
             }
-            c.link = $(this).find('.qb-link:first').attr('data-value');
+            c.link = $(this).find('select.operselect:first').val();
+            
             conditions.push(c);
         });
 
@@ -1404,6 +1456,7 @@ function advSearch(){
     this.search_result = null;
     this.group_by = null;
     this.additional_fields = new Array();
+    this.oTable = null;
     
     this.setQuery = function(query){
         this.query_builder.setQuery(query);
@@ -1632,9 +1685,12 @@ function advSearch(){
             column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
             columns.push(column);
         }
-        console.log(columns)
         
-        var oTable = $('#datatable').dataTable( {
+        if(this.oTable){
+            this.oTable.fnDestroy();
+        }
+        $('#datatable').html("")
+        var settings =  {
             "sDom": "<'row'<'span6'<'toolbar'>><'span6'l>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "oLanguage": {
@@ -1653,7 +1709,9 @@ function advSearch(){
             "bServerSide": true,
             "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
             "aoColumns":columns
-        } );
+        };
+        this.oTable = $('#datatable').dataTable( settings);
+        
         $("div.toolbar").html($("#toolbar2").html());
         $("#toolbar2").hide();
         this.initAdditionalFieldsList();
@@ -1721,10 +1779,10 @@ function advSearch(){
         domain.data = data;
         queryBuilder.getInstance().init();
         if(query != ''){
-            console.log(query)
+            
             //var sr = searchResults.getInstance();
             var q = $.secureEvalJSON(query);
-            console.log(q)
+            //console.log(q)
            
             as.setQuery(q);
             as.fetchResultsAndDisplay();
@@ -1785,7 +1843,7 @@ function genName(){
     $.fn.qb_mt_select = function(options) {
         var defaults = {
             url: "index.php?mod=home&act=mt_select&stream=text",
-            selected : null,
+            selected : null
         };
         var options = $.extend(defaults, options);
 

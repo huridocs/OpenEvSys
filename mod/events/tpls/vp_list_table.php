@@ -1,5 +1,6 @@
 <?php if( acl_vp_entity_add_is_allowed() ){?>
 <a class="btn btn-primary" href="<?php echo get_url('events','add_victim',null,array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_VICTIM')?></a>
+<a class="btn" href="#" onclick="$('#acts_form').attr('action','<?php echo get_url('events','add_perpetrator',null,array('eid'=>$event_id)) ?>');$('#acts_form').submit();return false;"><i class="icon-plus"></i> <?php echo _t('ADD_PERPETRATOR_S_')?></a>
 <?php } ?>
 <br/><br/>
 <?php if(!isset($vp_list)){ ?>
@@ -7,7 +8,7 @@
     <?php echo _t('THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME') ?>
     </div>
 <?php }else{ ?>
-<form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
+<form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post" id="acts_form">
 <table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>

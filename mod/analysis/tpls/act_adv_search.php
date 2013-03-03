@@ -42,8 +42,8 @@
     </div>
     <div class='clecrfix'></div>
     <div class="row-fluid">
-        <table style="width:100%" id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"><tbody>
-            </tbody></table> 
+        <table style="width:100%" id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+            </table> 
         <div id="pager" class="scroll" style="text-align:center;"></div> 
     </div>
 

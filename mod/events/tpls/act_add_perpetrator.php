@@ -19,8 +19,11 @@
     </div>
 
 <br />
-<h2><?php echo _t('WHO_IS_RESPONSIBLE_FOR_THE').' <em>"'.$act_name.'"</em> '._t('AGAINST').' <em>"'.$victim->person_name.'"</em> ?' ?></h2>
-<br />
+<h2><?php
+    foreach($acts as $act){
+        echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>' ;
+    }
+    ?></h2><br />
 <?php
 //if a perpetrator is selected show perpetrator record
 if(isset($perpetrator)){

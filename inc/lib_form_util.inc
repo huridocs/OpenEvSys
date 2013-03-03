@@ -157,7 +157,10 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
             $mlt = ( (trim($entityField['is_repeat']) == 'Y' || trim($entityField['is_repeat']) == 'y' ) ? true : false );
 
             $visible = ( $visible_field == null || trim($entityField[$visible_field]) == 'Y' || trim($entityField[$visible_field]) == 'y' ) ? true : false;
-
+            if($entity == "involvement" && $entityField['field_name'] =="perpetrator"){
+                $visible = true;
+                $type = $entityField['field_type'] = "related_person";
+            }
             $link_table = $entityField['link_table'];
             $link_field = $entityField['link_field'];
 
@@ -915,7 +918,7 @@ function shn_form_get_html_person_search_ctrl($columnNames = null, $columnValues
                     }
                     ?>
                     <td><a
-                            href="<?php echo get_url($mod, $act, null, array('information_id' => $_GET['information_id'], 'intervention_id' => $_GET['intervention_id'], 'person_id' => $columnvalue['person_record_number'])); ?>"><?php echo _t('SELECT'); ?>
+                            href="<?php echo get_url($mod, $act, null, array('inv_id' => $_GET['inv_id'],'information_id' => $_GET['information_id'], 'intervention_id' => $_GET['intervention_id'], 'person_id' => $columnvalue['person_record_number'])); ?>"><?php echo _t('SELECT'); ?>
                         </a></td>
                 </tr>
                 <?php

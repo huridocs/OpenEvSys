@@ -20,7 +20,10 @@
     </div>
 
     <br />
-    <h2><?php echo _t('HOW_WAS_') . ' [' . $perpetrator->person_name . '] ' . _t('INVOLVED_IN') . ' [' . $act_name . '] ?' ?></h2>
+    <h2><?php
+    foreach($acts as $act){
+        echo _t('HOW_WAS_') . ' [' . $act['perpetrator']->person_name . '] ' . _t('INVOLVED_IN') . ' [' . $act['act_name'] . '] ?<br/>';
+    }?></h2>
     <br />
     <div class="form-container"> 
         <form class="form-horizontal"  id="involvement" name="involvement" action='<?php echo get_url('events', 'add_involvement', null, array('eid' => $event_id)) ?>' method='post' enctype='multipart/form-data'>
@@ -28,7 +31,7 @@
                 <div >
                     <a class="btn" href="<?php echo get_url('events', 'add_perpetrator', null, array('person_id' => $_SESSION['vp']['perpetrator'])) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK') ?></a>
                     <a class="btn" href="<?php echo get_url('events', 'vp_list', null, array('eid' => $event_id)) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></a>
-                    <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('ADD_MORE_PERPETRATORS') ?></button> 
+                    <button type="submit" name="more"  class="btn"><i class="icon-plus"></i> <?php echo _t('Save and Add More Perpetrators') ?></button> 
 
                     <button type="submit" name="finish"  class="btn btn-primary"><i class="icon-chevron-right icon-white"></i> <?php echo _t('FINISH') ?></button> 
 
