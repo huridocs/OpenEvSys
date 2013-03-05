@@ -28,15 +28,15 @@ INSERT INTO `data_dict_original` (`field_number`, `field_label`, `field_type`, `
 ('2172', 'Location', 'location', 'L', '2172', '0', 'N', 'n', 'act_location', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'act', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('2672', 'Location', 'location', 'L', '2672', '0', 'N', 'n', 'intervention_location', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'intervention', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n');
 
-ALTER TABLE `event` ADD `event_location_latitude` double NOT NULL DEFAULT '0';
-ALTER TABLE `event` ADD `event_location_longitude` double NOT NULL DEFAULT '0';
+ALTER TABLE `event` ADD `event_location_latitude` double NULL;
+ALTER TABLE `event` ADD `event_location_longitude` double NULL;
 
-ALTER TABLE `person` ADD `person_location_latitude` double NOT NULL DEFAULT '0';
-ALTER TABLE `person` ADD `person_location_longitude` double NOT NULL DEFAULT '0';
+ALTER TABLE `person` ADD `person_location_latitude` double NULL;
+ALTER TABLE `person` ADD `person_location_longitude` double NULL;
 
-ALTER TABLE `act` ADD `act_location_latitude` double NOT NULL DEFAULT '0';
-ALTER TABLE `act` ADD `act_location_longitude` double NOT NULL DEFAULT '0';
+ALTER TABLE `act` ADD `act_location_latitude` double NULL;
+ALTER TABLE `act` ADD `act_location_longitude` double NULL;
 
-ALTER TABLE `intervention` ADD `intervention_location_latitude` double NOT NULL DEFAULT '0';
-ALTER TABLE `intervention` ADD `intervention_location_longitude` double NOT NULL DEFAULT '0';
+ALTER TABLE `intervention` ADD `intervention_location_latitude` double NULL;
+ALTER TABLE `intervention` ADD `intervention_location_longitude` double NULL;
 

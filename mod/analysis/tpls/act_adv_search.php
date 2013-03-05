@@ -1,3 +1,5 @@
+ <script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="res/js/adv-search.js"></script>
 <div class="searchPanel">
     <div class="panel" id="qb-panel">
         <a id="qb-count-toggle"><?php echo _t('COUNT') ?></a>
@@ -43,7 +45,7 @@
     <div class='clecrfix'></div>
     <div class="row-fluid">
         <table style="width:100%" id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
-            </table> 
+        </table> 
         <div id="pager" class="scroll" style="text-align:center;"></div> 
     </div>
 
@@ -58,14 +60,14 @@
         </div>
         <div class="modal-body">
             <p>
-                <div class="control-group">
-    <label class="control-label"><?php echo _t('NAME') ?></label>
-    <div class="controls"><input type="text"  id="query_name"  name="query_name" /></div>
-  </div>
-  <div class="control-group">
-    <label class="control-label"><?php echo _t('DESCRIPTION') ?></label>
-    <div class="controls"> <textarea type="text" name="query_desc" id="query_desc" rows="4" cols="30" ></textarea> </div>
-  </div>
+            <div class="control-group">
+                <label class="control-label"><?php echo _t('NAME') ?></label>
+                <div class="controls"><input type="text"  id="query_name"  name="query_name" /></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label"><?php echo _t('DESCRIPTION') ?></label>
+                <div class="controls"> <textarea type="text" name="query_desc" id="query_desc" rows="4" cols="30" ></textarea> </div>
+            </div>
         </div>
         <div class="modal-footer">
 
@@ -74,9 +76,9 @@
         </div>
 </div>
 <script language="javascript">
+    var query = '<?php echo $_GET['query'] ?>';
+        
     var as = advSearch.getInstance();
     as.init();
-
-    var query = '<?php echo $_GET['query'] ?>';
 
 </script>

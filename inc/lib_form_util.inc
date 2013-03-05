@@ -544,7 +544,7 @@ function shn_form_get_html_fields($form, $field_div = true) {
     return $fields;
 }
 
-function shn_form_get_html_table($columnNames = null, $columnValues = null) {
+function shn_form_get_html_table($columnNames = null, $columnValues = null,$sortable = true) {
     echo "<table class='table table-bordered table-striped table-hover'>";
     echo "<thead>";
     echo "<tr>";
@@ -563,8 +563,13 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null) {
         }else{
             echo '<th >';
         }
-        echo '<a href="' . $url . '">' . $value;
-        echo "</a></th>";
+        if($sortable){
+            echo '<a href="' . $url . '">' . $value;
+            echo "</a></th>";
+        }else{
+             echo $value."</th>";
+        
+        }
     }
     echo "</tr>";
     echo "</thead>";

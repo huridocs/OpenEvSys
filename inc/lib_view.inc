@@ -301,6 +301,10 @@ function shn_view_checkbox($label,$value,$extra_opts)
 
 function shn_view_location($label,$value,$extra_opts)
 {
+    
+    global $global;
+    $global["js"][] = "map";
+    
     $class = "class='{$extra_opts['class']}'";
     if(is_array($extra_opts['clari_value']))
     $clari = array_pop($extra_opts['clari_value']);

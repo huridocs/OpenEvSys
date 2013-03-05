@@ -540,7 +540,7 @@ function groupBy(){
                 }
                 //add remove link
                 var remove = $('<a class="qb-remove" title="'+_('REMOVE_CONDITION')+'">x</a>').click(function(e){
-                    qb = groupBy.getInstance(null);
+                    //qb = groupBy.getInstance(null);
                     qb.removeCondition(e.currentTarget);
                 }); 
                 con.prepend(remove);
@@ -606,12 +606,12 @@ function groupBy(){
             'options': options
         });
         a.bind('onchange', function(e){  
-            qb = groupBy.getInstance();
+            //qb = groupBy.getInstance();
             qb.addFieldSelect(e);
         });
         //add remove link
         var remove = $('<a class="qb-remove" title="'+_('REMOVE_CONDITION')+'">x</a>').click(function(e){
-            qb = groupBy.getInstance();
+            //qb = groupBy.getInstance();
             qb.removeCondition(e.currentTarget);
         }); 
         con.prepend(remove);
@@ -633,7 +633,7 @@ function groupBy(){
             'mode':'multix'
         });
         sa.bind('onchange', function(e){  
-            qb = groupBy.getInstance(null);
+            //qb = groupBy.getInstance(null);
             qb.addField(e);
         });
         a.after('<span>.</span>');
@@ -966,7 +966,7 @@ function queryBuilder(){
             $('#query_builder').append(con);
         }
         this.addNewCondition();
-        groupBy.getInstance().setQuery(query);
+        //groupBy.getInstance().setQuery(query);
 
         //add select fields
         for(i in query.select){
@@ -1003,29 +1003,11 @@ function queryBuilder(){
             //alert($(this).val());
             qb = queryBuilder.getInstance(null);
             qb.addFieldSelect($(this));
-            groupBy.getInstance().update();
+            //groupBy.getInstance().update();
         });
         return;
         
-        var con = $('<li class="qb-condition qb-new" data-status="new"></li>');
-        var a   = $('<a class="qb-entity">'+_('SELECT_ENTITY')+'</a>');
-        con.append(a);
-        var options = openevsysDomain.getInstance().getRelatedEntities(this.getSelectedEntities());
-        a.menupop({
-            'options': options
-        });
-        a.bind('onchange', function(e){  
-            qb = queryBuilder.getInstance(null);
-            qb.addFieldSelect(e);
-            groupBy.getInstance().update();
-        });
-        //add remove link
-        var remove = $('<a class="qb-remove" title="'+_('REMOVE_CONDITION')+'">x</a>').click(function(e){
-            qb = queryBuilder.getInstance(null);
-            qb.removeCondition(e.currentTarget);
-        }); 
-        con.prepend(remove);
-        $('#query_builder').append(con);
+       
     }
 
     this.removeCondition = function(e){
@@ -1046,7 +1028,7 @@ function queryBuilder(){
             $('#query_builder li.qb-new').remove();
             this.addNewCondition();
         }
-        groupBy.getInstance().update();
+        //groupBy.getInstance().update();
     }
 
     this.addFieldSelect = function(entselect){
@@ -1081,26 +1063,7 @@ function queryBuilder(){
         
         
         return;
-        
-        //if there is a previous condition operater to it
-        var a = $(e.currentTarget);
-        a.parent().removeClass('qb-new');
-        //disable entity select
-        a.unbind('click');
-        a.addClass('qb-selected');
-        this.addAndOperater(a.parent().prev());
-        var sa = $('<a class="qb-field">'+_('SELECT_FIELD')+'</a>');
-        a.after(sa);
-        sa.menupop({
-            'options': openevsysDomain.getInstance().getEntityFields(a.attr('data-value')), 
-            'mode':'multix'
-        });
-        sa.bind('onchange', function(e){  
-            qb = queryBuilder.getInstance(null);
-            qb.addField(e);
-        });
-        a.after('<span>.</span>');
-        var hlpObj = new $.Helptextviewer('field_select');	
+        	
     }
 
     this.addField = function(fieldselect){
@@ -1108,14 +1071,7 @@ function queryBuilder(){
         this.addController(fieldselect);
         this.addNewCondition();
         return;
-        
-        var a = $(e.currentTarget);
-        a.unbind('click');
-        a.addClass('qb-selected');
-        this.addController(a);
-        //remove the new attribute
-        a.parent().removeAttr('data-status');
-        this.addNewCondition();
+       
     }
 
     this.addController = function(fieldselect){
@@ -1217,78 +1173,6 @@ function queryBuilder(){
         this.addAndOperater(div);
         return;
   
-        
-        
-        var entity = e.parent().find('.qb-entity:first');
-        var entity_name = entity.attr('data-value');
-        var field_name = e.attr('data-value');
-        var od = openevsysDomain.getInstance();
-        var field_type = od.getFieldType(field_name, entity_name);
-        switch(field_type){
-            case "date":
-                var o = $('<input type="text" value="" class="qb-con" />').click(function(){
-                    registerDate = $(this);
-                });
-                o.attr('readonly',true);
-                e.after(o);
-                queryBuilder.createDate(o,null);
-                break;
-            case "mt_select":
-                var o = $('<select class="qb-con"  class="qb-con"><option value="" selected="selected"></option></select>');
-                e.after(o);
-                o.qb_mt_select({
-                    mt: od.getListCode(field_name, entity_name)
-                });
-                break;
-            case "mt_tree":
-                var o = $('<a class="qb-mt-tree">'+_('SELECT_TREE_OPTION')+'</a>');
-                e.after(o);
-                o.qb_mt_tree({
-                    mt: od.getListCode(field_name, entity_name)
-                });
-                break;
-            case "radio":
-                var name = genName();
-                var o = $("<input type='radio'  class='qb-radio-yes' name='"+name+"' value='y'/><span  class='qb-empty-hide' >"+_('YES')+"</span><input type='radio' name='"+name+"' value='n'  class='qb-radio-no'/><span  class='qb-empty-hide' >"+_('NO')+"</span>");
-                e.after(o);
-                break;
-            case "checkbox":
-                var o = $('<input class="qb-checkbox" type="checkbox" name="deceased"/>');
-                e.after(o);
-                break;
-            default:
-                var o = $('<input type="text" value="" class="qb-con" />');
-                e.after(o);
-        }
-
-        //add operaters according to field types
-        var op = openevsysDomain.getInstance().getOperator(field_type);
-        var o = $('<a class="qb-operator" data-value="'+op[0].value+'">'+op[0].label+'</a>');
-        e.after(o);
-        o.menupop({
-            'options': op
-        });
-        if(field_type == 'date'){
-            o.bind('onchange', function(e){ 
-                var ov = $(e.currentTarget).attr('data-value');
-                if( ov == 'between' || ov == 'not_between'){
-                    queryBuilder.createDate($(e.currentTarget).parent().find('.qb-con:first'), "range");
-                }
-                else{
-                    queryBuilder.createDate($(e.currentTarget).parent().find('.qb-con:first'), null);
-                    var val = $(e.currentTarget).parent().find('.qb-con:first').attr('value');
-                    $(e.currentTarget).parent().find('.qb-con:first').attr('value',val.substring(0,10));
-                }
-            });
-        }
-        o.bind('onchange', function(e){ 
-            var ov = $(e.currentTarget).attr('data-value');
-            if(ov == 'empty')
-                $(e.currentTarget).parent().addClass('qb-empty-field');
-            else
-                $(e.currentTarget).parent().removeClass('qb-empty-field');
-
-        });
     }
 
     this.addAndOperater = function(div , value){
@@ -1324,32 +1208,7 @@ function queryBuilder(){
         return;
         
         
-        if(condition == null || condition.children('.qb-link').length != 0)return;
-        var op = [
-        {
-            'value':'and',
-            'label':_('AND')
-        },
-
-        {
-            'value':'or' ,
-            'label':_('OR')
-        }
-        ];
-        if(value != null){
-            for(var i in op){
-                if(value == op[i].value){
-                    var a = $('<a class="qb-link" data-value="'+op[i].value+'">'+op[i].label+'</a>');
-                    break;
-                }
-            }
-        }
-        else
-            var a = $('<a class="qb-link" data-value="'+op[0].value+'">'+op[0].label+'</a>');
-        condition.append(a);
-        a.menupop({
-            'options': op
-        });
+       
     }
 
     this.clearConditions = function(){
@@ -1371,13 +1230,7 @@ function queryBuilder(){
         });
         return entities;
         
-        $.each(arr ,function(){
-            var v = $(this).val();
-            //var v = $(this).attr('data-value');
-            if(v != null && v != "" && $.inArray(v , entities) == -1)
-                entities.push(v);
-        });
-        return entities;
+       
     }
 
     this.getQuery = function(){
@@ -1586,46 +1439,7 @@ function advSearch(){
         openevsysDomain.getInstance().setSelectField(entity,field);
         this.Search();
         return;
-        this.query.select.push({
-            'entity':entity , 
-            'field': field
-        });
-        var colLength = colNames.length;
-        var modelLength = colModel.length;
-        var colNames_new = new Array(colNames.length+1);
-        var colModel_new = new Array(modelLength+1);
-        for(var count = 0;colLength >= count; count++)
-        {
-            colNames_new[count] = colNames[count];
-        }
-		
-        colNames_new[colLength] = openevsysDomain.getInstance().getFieldLabel(field, entity);
-		
-        for(var count = 0;modelLength >= count; count++)
-        {
-            colModel_new[count] = colModel[count];
-        }
-        colModel_new[modelLength] = {
-            name:field+"_"+entity, 
-            index:field+""+entity, 
-            width:80
-        };
-		
-        var options = {
-            "div":"#list123",
-            "file":"example.php",
-            "rownum":"10",
-            "caption":"Search Results",
-            "pager":"#pager"
-        };
-        var colEntity = this.getEntity(colModel_new);
-        //var rowList = [10,20,30];
-        var fieldNames = new Array();
-        for(var i in this.query.select){
-            fieldNames.push(this.query.select[i].field);
-        }
-		
-        this.jqinit(options,colNames_new,colModel_new,colEntity,fieldNames);
+        
 		
     }
 	
@@ -1739,7 +1553,7 @@ function advSearch(){
 
     this.Count = function(){
         this.query = this.query_builder.getQuery();
-        this.query.group_by = this.group_by.getGroupBy();
+        //this.query.group_by = this.group_by.getGroupBy();
         if(this.query.group_by.length < 1 ){
             $.pnotify({
                 pnotify_title: 'Error', 
@@ -1760,13 +1574,13 @@ function advSearch(){
             domain.fetchDomainData(advSearch.initObjects);
         });
         this.query_builder = queryBuilder.getInstance();
-        this.group_by = groupBy.getInstance();
-        this.group_by.init();
+        //this.group_by = groupBy.getInstance();
+        //this.group_by.init();
         this.toggleQueryPanel();
         this.toggleCountPanel();
         $('#qb-clear-but').click(function(){
             queryBuilder.getInstance().clearConditions();
-            groupBy.getInstance().clearConditions();
+            //groupBy.getInstance().clearConditions();
             $('.resultPanel').hide();
         });
         $('#qb-search-but').click(function(){
@@ -1790,7 +1604,7 @@ function advSearch(){
             //sr.fetchResultsAndDisplay();
             queryBuilder.getInstance().setQuery(q);
         }
-        var hlpObj = new $.Helptextviewer('welcome');	
+        
     }
 
     this.toggleQueryPanel = function(){
@@ -1862,58 +1676,6 @@ function genName(){
 })(jQuery);
 
 
-function treePop(element){
-    this.element = element;
-    this.menu = null;
-    this.value = null;
-
-    this.createPopup= function(options){
-        var ul = $('<ul></ul>').click(this.mttreeClickEvent);
-        var div = $("<div class='pop'></div>").click(function(){
-            return false;
-        });
-        div.append(ul);
-        ul.wrap('<div class="pop_menu qb-tree-pop"></div>');
-        ul.after('<input type="hidden" class="qb-con" value="'+options.selected+'" />');
-        this.element.before(div);
-        this.menu = div;
-
-        ul.treeview({
-            collapsed: true,
-            animated: "none",
-            control:"#sidetreecontrol",
-            persist: "location",
-            url : 'index.php?mod=home&act=mt_tree&stream=text&list_code=' + options.mt
-        });
-    }
-
-    this.mttreeClickEvent = function(e)
-    {
-        if (e.target) targ = e.target;
-        else if (e.srcElement) targ = e.srcElement;
-        var el = $(targ);
-        if(el.attr('huricode') == undefined)return true;
-        //var obj = $('#'+data.field_id+'_ul') 
-        //obj.triggerHandler('selectTreeItem',data);
-        $(this).parent().find('.qb-con:first').attr('value',el.attr('huricode'));
-        $(this).parent().parent().parent().find('.qb-mt-tree:first').text(el.text());
-        $('.pop').removeClass('active');
-    }
-
-    this.showPopup = function(){
-        this.menu.addClass("active");
-        return false;
-    }
-
-    this.hidePopup = function(){
-        //        this.menu.removeClass("active");
-        return false;
-    }
-
-    $(document).click(function(){ 
-        $('.pop').removeClass('active');
-    });
-}
 
 (function($){
     $.fn.qb_mt_tree = function(options) {
@@ -1930,13 +1692,7 @@ function treePop(element){
             $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
         });
         
-        /*return this.each(function()
-        {
-            var obj = $(this);
-            var mp = new treePop(obj);
-            mp.createPopup(options);
-            obj.click(function(){return mp.showPopup();});
-        });*/
+        
 
         function debug($obj) {
             if (window.console && window.console.log) {

@@ -1,3 +1,5 @@
+<script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="res/js/adv-search.js"></script>
 <h2><?php echo "Advanced Search Report"?></h2>
 <br />
 <a style="float:left;" class="btn" href='JavaScript:window.print();' ><i class="icon-print"></i>  <?php echo _t('PRINT_THIS_PAGE')?></a>
@@ -6,7 +8,7 @@
 <div id="browse">
 <?php
 	if($columnValues != null){		
-		shn_form_get_html_table($columnNames, $columnValues);		
+		shn_form_get_html_table($columnNames, $columnValues,false);		
 	}
 ?>
 <br />

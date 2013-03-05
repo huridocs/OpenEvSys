@@ -751,14 +751,7 @@ function shn_form_mt_tree_mlt($label,$name,$extra_opts)
         }
     echo "</ol>";
     _shn_form_print_mt_tree($extra_opts['mt'],$name);
-?>
-    <script language='javascript'>
-/*        $('#<?php echo $name ?>_ol').multitree({
-           // clarify:<?php echo ($extra_opts['clarify'])?'true':'false'; ?>
-        });*/
-    </script>
-   
-<?php
+
 
     shn_form_extra_opts($extra_opts);
      ?>
@@ -1357,6 +1350,8 @@ function shn_form_address($label,$name,$extra_opts)
 function shn_form_location($label,$name,$extra_opts)
 {
     //var_dump($extra_opts);exit;
+    global $global;
+    $global["js"][] = "map";
     
     $value = (isset($_POST[$name])? $_POST[$name] : $extra_opts['value']);
     //to prevent warnings set $options to array() if it is null

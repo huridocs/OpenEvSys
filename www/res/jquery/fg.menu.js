@@ -245,8 +245,6 @@ function Menu(caller, options){
 		menu.kill();
 		// edit this for your own custom function/callback:
 		$('#menuSelection').text($(item).text());
-		//alert(text($(item).text());	
-		//addJqgrid($(item).text());
 		var as = advSearch.getInstance();
 		as.addField($(item).attr('data-field'), $(item).attr('data-entity'));
 		// location.href = $(item).attr('href');

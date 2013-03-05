@@ -164,6 +164,10 @@ $menus["analysis"]["facetsearch"] = array(
     "title" => _t('Faceted search'),
     "url" => get_url('analysis', 'facetsearch', null, null, null, true));
 
+$menus["analysis"]["dashboard"] = array(
+    "title" => _t('Dashboard'),
+    "url" => get_url('analysis', 'dashboard', null, null, null, true));
+
 $menus["analysis"]["adv_report"] = array(
     "alias" => "adv_search");
 
