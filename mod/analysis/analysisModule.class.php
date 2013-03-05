@@ -1764,6 +1764,27 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         global $global;
         $global["js"][] = "map";
 
+        $entities_map = array(
+            'event' => array('act', 'victim', 'perpetrator', 'involvement', 'intervention', 'information', 'source', 'chain_of_events'),
+            'act' => array('involvement', 'victim', 'perpetrator', 'arrest', 'torture', 'killing', 'destruction'),
+            'victim' => array('involvement', 'perpetrator'),
+            'involvement' => array('perpetrator'),
+            'perpetrator' => array(),
+            'information' => array('source'),
+            'source' => array(),
+            'intervention' => array('intervening_party', 'victim'),
+            'intervening_party' => array(),
+            'supporting_docs_meta' => array(),
+            'person' => array('address', 'biographic_details'),
+            'biographic_details' => array(),
+            'address' => array(),
+            'chain_of_events' => array(),
+            'arrest' => array('involvement', 'victim', 'perpetrator'),
+            'torture' => array('involvement', 'victim', 'perpetrator'),
+            'killing' => array('involvement', 'victim', 'perpetrator'),
+            'destruction' => array('involvement', 'victim', 'perpetrator'));
+
+
         /* $entities = array('event', 'act' ,'victim' ,'involvement' ,'perpetrator','information',
           'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
           'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
@@ -1771,7 +1792,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $entities = array('event', 'act', 'person', 'victim', 'perpetrator',
             'source', 'intervention');
         $this->entities = $entities;
-
+        $this->entities_map = $entities_map;
 
         $this->domaindata = $this->getEntityFields();
     }
@@ -1787,12 +1808,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
             $query = new stdClass;
-
+            $ents = array();
+            $additionalFields = array();
             if (count((array) $searchparams->selected_terms)) {
                 foreach ($searchparams->selected_terms as $entity => $fields) {
                     foreach ($fields as $field => $terms) {
                         $i = 1;
                         foreach ($terms as $term) {
+                            $ents[] = $entity;
                             $condition = new stdClass;
                             $condition->entity = $entity;
                             $condition->field = $field;
@@ -1816,16 +1839,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 $selEntity = $domaindata->$selEntity->ac_type;
             }
 
-            if (!$query->conditions) {
-                $condition = new stdClass;
-                $condition->entity = $selEntityOriginal;
-                $f = (array) $domaindata->$selEntity->fields;
-                $f = array_shift($f);
-                $condition->field = $f->value;
-                $condition->operator = "contains";
-                $condition->value = "";
-                $query->conditions[] = $condition;
-            }
+
 
             $selectFields = array();
             foreach ($query->conditions as $cond) {
@@ -1836,30 +1850,57 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
             if ($searchparams->facets) {
                 foreach ($searchparams->facets as $facet) {
-                    $entity = $facet->entity;
-                    $field = $facet->field;
+
                     $sel = new stdClass;
-                    $sel->entity = $entity;
-                    $sel->field = $field;
+                    $sel->entity = $facet->entity;
+                    $sel->field = $facet->field;
                     $selectFields[] = $sel;
                 }
             }
 
-            if (false && $domaindata->$selEntity->select) {
-                $selectFields = $domaindata->$selEntity->select;
-            } else {
-                foreach ($domaindata->$selEntity->fields as $field) {
-
-                    if ($field->select == "y") {
-                        $sel = new stdClass;
-                        $sel->entity = $selEntityOriginal;
-                        $sel->field = $field->value;
-                        $selectFields[] = $sel;
-                    }
+            foreach ($domaindata->$selEntity->fields as $field) {
+                if ($field->select == "y") {
+                    $sel = new stdClass;
+                    $sel->entity = $selEntityOriginal;
+                    $sel->field = $field->value;
+                    $selectFields[] = $sel;
                 }
             }
 
             $selectFields = array_unique($selectFields, SORT_REGULAR);
+            foreach ($selectFields as $sfield) {
+                if (!in_array($sfield->entity, $ents)) {
+                    $ents[] = $sfield->entity;
+                    $condition = new stdClass;
+                    $entt = $sfield->entity;
+                    $selEntt = $entt;
+                    if ($domaindata->$entt->ac_type) {
+                        $selEntt = $domaindata->$entt->ac_type;
+                    }
+                    $f = (array) $domaindata->$selEntt->fields;
+                    $f = array_shift($f);
+                    $condition->entity = $entt;
+                    $condition->field = $f->value;
+                    $condition->operator = "contains";
+                    $condition->value = "";
+                    $query->conditions[] = $condition;
+                }
+            }
+            foreach ($ents as $ent) {
+                $recField = get_primary_key($ent);
+                $sel = new stdClass;
+                $sel->entity = $ent;
+                $sel->field = $recField;
+                if (!in_array($sel, $selectFields)) {
+
+                    $selectFields[] = $sel;
+                    $additionalFields[$sel->entity][] = $recField;
+                }
+            }
+            
+            $selectFields = array_unique($selectFields, SORT_REGULAR);
+
+
 
             $query->select = $selectFields;
 
@@ -1893,6 +1934,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $fieldTitles = array();
             //if the query is a search put select fields to the array
             foreach ($query->select as $field) {
+                if(in_array($field->field,$additionalFields[$field->entity])){
+                    continue;
+                }
                 $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
                 $mt = is_mt_field($entity, $field->field);
                 array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
@@ -1903,11 +1947,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $fieldTitles[] = $field->field;
                 }
             }
+            
             $records[0] = $fieldTitles;
 
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
-            //var_dump($sqlArray['result']);exit;
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
             try {
@@ -2061,25 +2105,31 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $entityForm = $searchSql->getEntityArray($entity);
                     $fieldArray = $entityForm[$field];
 
-                    $recField = get_primary_key($entity);
+                    $recField = get_primary_key($selEntityOriginal);
+                    $selEntt = $entity;
+                    if ($domaindata->$entt->ac_type) {
+                        $selEntt = $domaindata->$entt->ac_type;
+                    }
+                    $recFieldEnt = get_primary_key($searchSql->tableOfEntity($fieldArray['map']['entity']));
+
                     if ($fieldArray['map']['mlt']) {
                         $mltTable = 'mlt_' . $searchSql->tableOfEntity($fieldArray['map']['entity']) . '_' . $fieldArray['map']['field'];
 
                         $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.record_number) AS count
-                            FROM ({$sqlArray['result']}) d LEFT JOIN $mltTable t  on  t.record_number=d.{$selEntityOriginal}_$recField left join
+                            FROM ({$sqlArray['result']}) d LEFT JOIN $mltTable t  on  t.record_number=d.{$entity}_$recFieldEnt left join
                             mt_vocab m on m.vocab_number=t.vocab_number
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY t.vocab_number
                             ";
                     } elseif (is_management_field($fieldArray)) {
-                        $f = $selEntityOriginal . "_" . $fieldArray['map']['field'];
+                        $f = $entity . "_" . $fieldArray['map']['field'];
 
                         $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(d.{$selEntityOriginal}_$recField) AS count
-                            FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$selEntityOriginal}_$recField and t.entity_type='$selEntity' 
+                            FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$entity}_$recFieldEnt and t.entity_type='$entity' 
                             left join  mt_vocab m on m.vocab_number=t.{$fieldArray['map']['field']}
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY $f
                             ";
                     } else {
-                        $f = $selEntityOriginal . "_" . $fieldArray['map']['field'];
+                        $f = $entity . "_" . $fieldArray['map']['field'];
 
                         if ($fieldType == "mt_select" || $fieldType == "mt_tree") {
                             $sqlchart = "SELECT IFNULL(l.msgstr , english)  as val, COUNT({$selEntityOriginal}_$recField) AS count
@@ -2090,7 +2140,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             FROM ({$sqlArray['result']}) d   GROUP BY {$f}";
                         }
                     }
-                    //var_dump($sqlchart);
+
                     if ($sqlchart) {
                         try {
                             $res = $global['db']->Execute($sqlchart);
@@ -2099,9 +2149,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $chart["title"] = $fieldArray["label"];
                             $chart2 = $chart;
                             foreach ($res as $val) {
-                                $chart["data"][0][0] = $chart["title"];
-                                $chart["data"][1][0] = "";
-
+                               
 
                                 $vall = _t("Undefined");
                                 if ($val[0]) {
@@ -2116,6 +2164,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 } elseif (!(int) $val[1]) {
                                     continue;
                                 }
+                                 $chart["data"][0][0] = $chart["title"];
+                                $chart["data"][1][0] = "";
+
                                 $chart["data"][0][] = $vall;
                                 $chart["data"][1][] = (int) $val[1];
 
