@@ -197,7 +197,7 @@ if ($module == "events") {
     </div>
 </div>
 <?php
-if ($title) {
+if ($title && !in_array($action,array("browse_act","browse_intervention"))) {
     ?>
     <h3 class="breadcrumb" style="padding-top:4px;padding-bottom: 4px"><?php echo '<span>' . $title_pre . '</span> : <span>' . $title . '</span>'; ?></h3>
 

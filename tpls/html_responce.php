@@ -55,7 +55,7 @@
         $module = get_module();
         ?>
         <?php include_section('menu'); ?>
-        <?php include_section('top_menu'); ?>
+        <?php /*include_section('top_menu'); */?>
 
         <div id="container" class="container-fluid">
             <?php include_section('breadcrumb') ?>

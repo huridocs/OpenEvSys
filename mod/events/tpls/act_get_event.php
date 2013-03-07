@@ -12,8 +12,8 @@ include_once('event_title.php');
     <a class="btn" href="<?php echo get_url('events','print') ?>">
         <i class="icon-print"></i> <?php echo _t('PRINT_THIS_EVENT')?></a>
        <?php if( acl_is_entity_allowed_boolean('event' , 'delete')){?>
-    <a class="btn btn-danger" href="<?php echo get_url('events','delete_event') ?>">
-        <i class="icon-trash icon-white"></i> <?php echo _t('DELETE_THIS_EVENT')?></a>
+    <a class="btn btn-grey" href="<?php echo get_url('events','delete_event') ?>">
+        <i class="icon-trash"></i> <?php echo _t('DELETE_THIS_EVENT')?></a>
     <?php }?>  
     	<br />
     <br />

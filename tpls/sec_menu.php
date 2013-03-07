@@ -9,7 +9,7 @@
                 <?php if (acl_is_mod_allowed('events')) { ?>
                     <?php
                     $active = '';
-                    if ('events' == $module) {
+                    if ('events' == $module && !in_array($action,array("browse_act","browse_intervention"))) {
                         $active = 'active';
                         $breadcrumbs->pushCrumb(array('name' => _t('EVENTS'), 'mod' => 'events', 'act' => 'browse'), 0);
                     }
@@ -42,7 +42,42 @@
                        <a href="<?php get_url('docu', 'browse') ?>"><?php echo _t('DOCUMENTS') ?></a></li>
                            
                 <?php } ?>
-        
+                       <?php if (acl_is_mod_allowed('events')) { ?>
+                    <?php
+                    $active = '';
+                    if ('events' == $module && $action =="browse_act") {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('ACTS'), 'mod' => 'events', 'act' => 'browse_act'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>"><a href="<?php get_url('events', 'browse_act') ?>"><?php echo _t('ACTS') ?></a>
+                           
+                    </li>
+                <?php } ?>
+                       <?php if (acl_is_mod_allowed('events')) { ?>
+                    <?php
+                    $active = '';
+                    if ('events' == $module && $action =="browse_intervention") {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('INTERVENTIONS'), 'mod' => 'events', 'act' => 'browse_intervention'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>"><a href="<?php get_url('events', 'browse_intervention') ?>"><?php echo _t('INTERVENTIONS') ?></a>
+                           
+                    </li>
+                <?php } ?>
+        <?php if (acl_is_mod_allowed('dashboard')) { ?>
+                    <?php
+                    $active = '';
+                    if ('dashboard' == $module) {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('Dashboard'), 'mod' => 'dashboard', 'act' => 'dashboard'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>"><a href="<?php get_url('dashboard', 'dashboard') ?>"><?php echo _t('Dashboard') ?></a>
+                           
+                    </li>
+                <?php } ?>
 
                 <?php
                 $active = '';

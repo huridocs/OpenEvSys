@@ -22,8 +22,8 @@
 <div id="container">
     <div id="login-container">
         <div id="content">
-            <center><img src="theme/<?php echo $conf['theme'] ?>/images/img_logo.png" class="logo"/></center>
-            <?php   include_once APPROOT.'/tpls/html_login_form.php';?>
+            <center><img src="theme/<?php echo $conf['theme'] ?>/images/img_logo.png?v=1" class="logo"/></center>
+           <br/><br/><br/><br/><br/> <br/><br/><?php   include_once APPROOT.'/tpls/html_login_form.php';?><br/><br/><br/><br/><br/><br/><br/>
         </div>
 
         <div id="footer">

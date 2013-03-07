@@ -11,7 +11,7 @@ include_once('event_title.php');
     <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post" >
         <div class="control-group">
                 <div class="controls"> 
-              <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+              <button type='submit' class='btn btn-grey' name='yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
      </div></div>        
     </form>
@@ -194,7 +194,7 @@ include_once('event_title.php');
     <form class="form-horizontal"  action="<?php get_url('events','delete_event')?>" method="post">
         <br />
         <center>
-             <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+             <button type='submit' class='btn btn-grey' name='yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
        
         </center>        

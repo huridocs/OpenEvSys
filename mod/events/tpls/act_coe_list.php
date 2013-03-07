@@ -51,7 +51,7 @@
         <?php }?>
 		<tr class='actions'>
             <td colspan='8'>
-                     <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                     <button type='submit' class='btn btn-grey' name='delete' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
             </td>
         </tr>				
     </tbody>

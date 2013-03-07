@@ -156,15 +156,14 @@ function set_redirect_header($module = 'home', $action = 'default', $view = null
     $view = (isset($view)) ? "&view=$view" : null;
 
     if (is_array($args))
-        foreach ($args as $id => $value){
-        
-            if(is_array($value)){
-                foreach($value as $val){
-                   $al .= "&$id"."[]=$val";
+        foreach ($args as $id => $value) {
+
+            if (is_array($value)) {
+                foreach ($value as $val) {
+                    $al .= "&$id" . "[]=$val";
                 }
-            }else{
+            } else {
                 $al .= "&$id=$value";
-            
             }
         }
 
@@ -180,9 +179,9 @@ function set_redirect_header($module = 'home', $action = 'default', $view = null
 
 function array_to_list($array) {
     if (is_array($array)) {
-        echo implode(" , ",$array);
-       /* foreach ($array as $item)
-            echo "$item , ";*/
+        echo implode(" , ", $array);
+        /* foreach ($array as $item)
+          echo "$item , "; */
     }
     else
         echo $array;
@@ -205,13 +204,13 @@ function get_record_url($record_number, $entity, $url_type = "view") {
             case 'intervening_party':
                 return "index.php?mod=person&act=person&pid=$record_number";
             case 'act':
-                return "index.php?mod=events&act=vp_list&act_id=$record_number&type=act";
+                return "index.php?mod=events&act=edit_act&act_id=$record_number";
             case 'involvement':
                 return "index.php?mod=events&act=vp_list&inv_id=$record_number&type=inv";
             case 'information':
                 return "index.php?mod=events&act=src_list&type=information&information_id=$record_number";
             case 'intervention':
-                return "index.php?mod=events&act=intv_list&type=intv&intervention_id=$record_number";
+                return "index.php?mod=events&act=edit_intv&intervention_id=$record_number";
             case 'supporting_docs_meta':
                 return "index.php?mod=docu&act=edit_document&doc_id=$record_number";
             case 'biographic_details':
@@ -234,13 +233,13 @@ function get_record_url($record_number, $entity, $url_type = "view") {
             case 'intervening_party':
                 return "index.php?mod=person&act=delete_person&pid=$record_number";
             case 'act':
-                return "index.php?mod=events&act=vp_list&act_id=$record_number&type=act";
+                return "index.php?mod=events&act=delete_act&act_id=$record_number";
             case 'involvement':
                 return "index.php?mod=events&act=vp_list&inv_id=$record_number&type=inv";
             case 'information':
                 return "index.php?mod=events&act=src_list&type=information&information_id=$record_number";
             case 'intervention':
-                return "index.php?mod=events&act=intv_list&type=intv&intervention_id=$record_number";
+                return "index.php?mod=events&act=delete_intervention&intervention_id=$record_number";
             case 'supporting_docs_meta':
                 return "index.php?mod=docu&act=delete_document&doc_id=$record_number";
             case 'biographic_details':
@@ -319,38 +318,40 @@ function get_primary_key($entity) {
             return $entity . "_record_number";
     }
 }
-function get_mod_label($entity,$type = "single") {
 
-     switch ($entity) {
-            case 'event':
-            case 'events':
-                if($type == "single"){
-                    return _t('Event');
-                }else{
-                    return _t('Events');
-                }
-            case 'person':
-            case 'person':
-                if($type == "single"){
-                    return _t('Person');
-                }else{
-                    return _t('Persons');
-                }
-            case 'docu':
-                if($type == "single"){
-                    return _t('Document');
-                }else{
-                    return _t('Documents');
-                }
-            default:
-                if($type == "single"){
-                    return _t(ucfirst($entity));
-                }else{
-                    return _t(ucfirst($entity));
-                }
-                return;
-        }
+function get_mod_label($entity, $type = "single") {
+
+    switch ($entity) {
+        case 'event':
+        case 'events':
+            if ($type == "single") {
+                return _t('Event');
+            } else {
+                return _t('Events');
+            }
+        case 'person':
+        case 'person':
+            if ($type == "single") {
+                return _t('Person');
+            } else {
+                return _t('Persons');
+            }
+        case 'docu':
+            if ($type == "single") {
+                return _t('Document');
+            } else {
+                return _t('Documents');
+            }
+        default:
+            if ($type == "single") {
+                return _t(ucfirst($entity));
+            } else {
+                return _t(ucfirst($entity));
+            }
+            return;
+    }
 }
+
 function get_primary_entity($entity) {
     switch ($entity) {
         case 'act':
@@ -368,7 +369,7 @@ function get_primary_entity($entity) {
     }
 }
 
-function set_links_in_recordset($recordset, $entity) {
+function set_links_in_recordset($recordset, $entity, $additionalurlfields = array()) {
 
     $pk = get_primary_key($entity);
 
@@ -386,6 +387,20 @@ function set_links_in_recordset($recordset, $entity) {
         $record['record_url'] = get_record_url($record[$pk], $entity, $primary_entity_record_number);
         $record['record_edit_url'] = get_record_url($record[$pk], $entity, "edit");
         $record['record_delete_url'] = get_record_url($record[$pk], $entity, "delete");
+        if ($additionalurlfields) {
+            foreach ($additionalurlfields as $field => $additionalurlfield) {
+                if(isset($record[$field]) && isset($record[$additionalurlfield["val"]])){
+                    $entity2 = $additionalurlfield["entity"];
+                    $primary_entity2 = get_primary_entity($entity);
+                    if ($primary_entity2 != null) {
+                        $primary_entity_record_number2 = $record[get_primary_key($primary_entity2)];
+                    } else {
+                        $primary_entity_record_number2 = null;
+                    }
+                    $record[$field . '_record_url'] = get_record_url($record[$additionalurlfield["val"]], $entity2, $primary_entity_record_number2);
+                }
+            }
+        }
         $recordArray[] = $record;
 
         //var_dump( $entity , $record); 
@@ -490,41 +505,40 @@ function is_locale_changed() {
 
 function is_management_field($formField) {
 
-    if($formField['field_number'] == "0172"){
+    if ($formField['field_number'] == "0172") {
         return true;
     }
-	if($formField['type'] == 'text' || $formField['type'] == 'date'){
-		$fld_name = $formField['map']['field'];
-		if(
-				$fld_name=='entity_type' ||
-				$fld_name=='entity_id' ||
-				$fld_name=='date_received' ||
-				$fld_name=='date_of_entry' ||
-				$fld_name=='entered_by' ||
-				$fld_name=='project_title' ||
-				/*$fld_name=='comments' ||*/
-				$fld_name=='record_grouping' ||
-				$fld_name=='date_updated' ||
-				$fld_name=='updated_by' ||
-				$fld_name=='monitoring_status'
-				
-				){
-			return true;
-		}
-	}
-
-	
-	return false;
-	/*
-    if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
-            return false;
-    }
-    $field_number = $formField['field_number'] %100;
-    if( $field_number >=  60 && $field_number< 80 && !($field_number == 67 || $field_number == 66 )){
+    if ($formField['type'] == 'text' || $formField['type'] == 'date') {
+        $fld_name = $formField['map']['field'];
+        if (
+                $fld_name == 'entity_type' ||
+                $fld_name == 'entity_id' ||
+                $fld_name == 'date_received' ||
+                $fld_name == 'date_of_entry' ||
+                $fld_name == 'entered_by' ||
+                $fld_name == 'project_title' ||
+                /* $fld_name=='comments' || */
+                $fld_name == 'record_grouping' ||
+                $fld_name == 'date_updated' ||
+                $fld_name == 'updated_by' ||
+                $fld_name == 'monitoring_status'
+        ) {
             return true;
-    }else{
-            return false;
-    }*/
+        }
+    }
+
+
+    return false;
+    /*
+      if($formField['type'] == 'document' || $formField['type'] == 'mt_select' || $formField['type'] =='mt_tree' || $formField['type'] =='checkbox' || $formField['type'] =='radio'){
+      return false;
+      }
+      $field_number = $formField['field_number'] %100;
+      if( $field_number >=  60 && $field_number< 80 && !($field_number == 67 || $field_number == 66 )){
+      return true;
+      }else{
+      return false;
+      } */
 }
 
 function is_mt_field($entity, $field) {
@@ -545,23 +559,24 @@ function data_uri($file, $mime) {
     return "data:$mime;base64,$base64";
 }
 
-function get_chaintype_reverse($type){
-    $types = array("01000000000022"=>"22000000000022",
-        "02000000000022"=>"21000000000022",
-        "03000000000022"=>"23000000000022",
-        "11000000000022"=>"11000000000022",
-        "21000000000022"=>"02000000000022",
-        "22000000000022"=>"01000000000022",
-        "23000000000022"=>"03000000000022");
-    if($types[$type]){
+function get_chaintype_reverse($type) {
+    $types = array("01000000000022" => "22000000000022",
+        "02000000000022" => "21000000000022",
+        "03000000000022" => "23000000000022",
+        "11000000000022" => "11000000000022",
+        "21000000000022" => "02000000000022",
+        "22000000000022" => "01000000000022",
+        "23000000000022" => "03000000000022");
+    if ($types[$type]) {
         return $types[$type];
     }
     return $type;
 }
 
-function get_module(){
+function get_module() {
     return $_GET['mod'];
 }
-function get_action(){
+
+function get_action() {
     return $_GET['act'];
 }

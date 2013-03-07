@@ -576,7 +576,7 @@ class adminModule extends shnModule
         
         $this->modules = array('admin'=>'Admin','analysis'=>'Analysis',
                                 'events'=>'Events','person'=>'Person',
-                                'docu'=>'Documents'/*,'help'=>'Help','home'=>'Home'*/);
+                                'docu'=>'Documents','dashboard'=> 'Dashboard'/*,'help'=>'Help','home'=>'Home'*/);
         $modules = $gacl->get_objects('modules','0','AXO');
 
         //add the user to acl list
@@ -605,6 +605,7 @@ class adminModule extends shnModule
                         array_push($axo_array['modules'],$key);
                     }
                 }
+                
                 $acl_ids = $gacl->search_acl(FALSE, FALSE, FALSE,FALSE, $role , FALSE,FALSE, FALSE, FALSE);
             	$gacl->add_acl(array( 'access'=>array('access') ),NULL,	array( $id ),$axo_array );
 
@@ -614,7 +615,6 @@ class adminModule extends shnModule
             }
         }
 
-        
         foreach($groups as $id=>$role)
         {
             $acl_ids = $gacl->search_acl(FALSE, FALSE, FALSE,FALSE, $role , FALSE,'modules',FALSE , FALSE);

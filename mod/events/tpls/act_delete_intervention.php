@@ -10,11 +10,11 @@
     <form class="form-horizontal"  action="<?php get_url('events','delete_intervention')?>" method="post">
         <br />
         <center>
-              <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+              <button type='submit' class='btn btn-grey' name='yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
      </center>
         <?php			
-			foreach($_POST['interventions'] as $val){ ?>
+			foreach($intervention_ids as $val){ ?>
         		<input type='hidden' name='interventions[]' value='<?php echo $val ?>' />
         <?php			 
 			}

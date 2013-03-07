@@ -612,20 +612,8 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
     <form   action="<?php get_url($mod, $action) ?>" method="get">
         <input type="hidden" name="mod" value="<?php echo $mod ?>" />
         <input type="hidden" name="act" value="<?php echo $action ?>" />
-        <div class="box" id="box-0">
-            <h4 class="box-header round-top"><?php 
-            if($action == "doc_list"){
-            echo get_mod_label("docu","plural");
-            }else{
-             echo get_mod_label($mod,"plural");
-               
-            }
-            ?>
-            </h4>        
-            <div class="box-container-toggle">
-                <div class="box-content">
-
-                    <table class='table table-bordered table-striped table-hover'>
+       
+                   <table class='table table-bordered table-striped table-hover'>
                         <thead>
 
 
@@ -696,8 +684,11 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
                                             if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
                                                 $columnvalue[$field] = " . . . ";
                                             }
-                                            $displayValue = '<a href="' . $columnvalue['entity_record_url'] . '" title="' . $columnvalue['record_number'] . '">' . $columnvalue[$field] . '</a>';
-                                        } else {
+                                            $displayValue = '<a href="' . $columnvalue['entity_record_url'] . '" >' . $columnvalue[$field] . '</a>';
+                                        }else if(isset($columnvalue[$field.'_record_url'])){
+                                                $displayValue = '<a href="' . $columnvalue[$field.'_record_url'] . '" title="' . $columnvalue['record_number'] . '">' . $columnvalue[$field] . '</a>';
+                                        
+                                        }else {
                                             $displayValue = $columnvalue[$field];
                                         }
 
@@ -714,8 +705,8 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
                                             <i class="icon-edit icon-white"></i>  
                                             <?php echo _t('Edit') ?>                                          
                                         </a>
-                                        <a class="btn btn-danger btn-mini" href="<?php echo $columnvalue['record_delete_url']?>" rel="tooltip" title="Delete">
-                                            <i class="icon-trash icon-white"></i> 
+                                        <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url']?>" rel="tooltip" title="Delete">
+                                            <i class="icon-trash"></i> 
                                             <?php echo _t('Delete') ?>
                                         </a>
                                     </td>
@@ -732,7 +723,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
                         ?>
 
                     </table>
-                </div></div></div></form>
+                </form>
     <?php
 }
 

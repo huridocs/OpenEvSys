@@ -54,7 +54,7 @@ class eventsModule extends shnModule {
         global $messages;
         global $event;
         $this->load_related_event();
-        if (isset($_GET['act']) && $_GET['act'] != 'new_event' && $_GET['act'] != 'browse' && $_GET['act'] != 'geocode') {
+        if (isset($_GET['act']) && !in_array($_GET['act'],array('new_event','browse','geocode','browse_act','browse_intervention'))) {
             $_GET['eid'] = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
             if (!isset($_GET['eid'])) {
                 shnMessageQueue::addInformation($messages['select_event']);
@@ -156,6 +156,114 @@ class eventsModule extends shnModule {
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
         $this->columnValues = $this->result_pager->get_page_data();
         $this->columnValues = set_links_in_recordset($this->columnValues, 'event');
+        set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
+
+
+        //rendering the view
+        $this->columnNames = $field_list;
+        $this->htmlFields = $htmlFields;
+    }
+
+    public function act_browse_act() {
+        include_once APPROOT . 'inc/lib_form.inc';
+
+        //$notIn = acl_list_acts_permissons();
+        $notIn = 'allowed_records'; // passed to generateSql function to use the temporary table to find the allowed records
+        require_once(APPROOT . 'mod/analysis/analysisModule.class.php');
+
+
+
+        $analysisModule = new analysisModule();
+        $sqlStatement = $analysisModule->generateSqlforEntity('act', null, $_GET, 'browse');
+
+        $entity_type_form_results = generate_formarray('act', 'browse');
+        $entity_type_form_results['act_record_number']['type'] = 'text';
+        $field_list = array();
+        foreach ($entity_type_form_results as $field_name => $field) {
+            // Generates the view's Label list
+            $field_list[$field['map']['field']] = $field['label'];
+        }
+
+        foreach ($entity_type_form_results as $fieldName => &$field) {
+            $field['extra_opts']['help'] = null;
+            $field['label'] = null;
+            $field['extra_opts']['clari'] = null;
+            $field['extra_opts']['value'] = $_GET[$fieldName];
+            $field['extra_opts']['required'] = null;
+            $field['extra_opts']['class'] = "input-block-level";
+        }
+
+        $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);
+        $htmlFields = array();
+        //iterate through the search fields, checking input values
+        foreach ($entity_type_form_results as $field_name => $x) {
+            // Generates the view's Label list
+            $htmlFields[$field_name] = $entity_fields_html[$field_name];
+        }
+
+        //var_dump($sqlStatement);
+        $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->columnValues = $this->result_pager->get_page_data();
+        $additionalurlfields = array();
+        $additionalurlfields["event"] = array("entity" => "event", "val" => "event");
+        $additionalurlfields["victim"] = array("entity" => "victim", "val" => "victim");
+        $this->columnValues = set_links_in_recordset($this->columnValues, 'act', $additionalurlfields);
+        // var_dump($this->columnValues);exit;
+        set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
+
+
+        //rendering the view
+        $this->columnNames = $field_list;
+        $this->htmlFields = $htmlFields;
+    }
+
+    public function act_browse_intervention() {
+        include_once APPROOT . 'inc/lib_form.inc';
+
+        //$notIn = acl_list_acts_permissons();
+        $notIn = 'allowed_records'; // passed to generateSql function to use the temporary table to find the allowed records
+        require_once(APPROOT . 'mod/analysis/analysisModule.class.php');
+
+
+
+        $analysisModule = new analysisModule();
+        $sqlStatement = $analysisModule->generateSqlforEntity('intervention', null, $_GET, 'browse');
+
+        $entity_type_form_results = generate_formarray('intervention', 'browse');
+        $entity_type_form_results['intervention_record_number']['type'] = 'text';
+        $field_list = array();
+        foreach ($entity_type_form_results as $field_name => $field) {
+            // Generates the view's Label list
+            $field_list[$field['map']['field']] = $field['label'];
+        }
+
+        foreach ($entity_type_form_results as $fieldName => &$field) {
+            $field['extra_opts']['help'] = null;
+            $field['label'] = null;
+            $field['extra_opts']['clari'] = null;
+            $field['extra_opts']['value'] = $_GET[$fieldName];
+            $field['extra_opts']['required'] = null;
+            $field['extra_opts']['class'] = "input-block-level";
+        }
+
+        $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);
+        $htmlFields = array();
+        //iterate through the search fields, checking input values
+        foreach ($entity_type_form_results as $field_name => $x) {
+            // Generates the view's Label list
+            $htmlFields[$field_name] = $entity_fields_html[$field_name];
+        }
+
+        //var_dump($sqlStatement);
+        $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->columnValues = $this->result_pager->get_page_data();
+        $additionalurlfields = array();
+        $additionalurlfields["event"] = array("entity" => "event", "val" => "event");
+        $additionalurlfields["victim"] = array("entity" => "victim", "val" => "victim");
+        $additionalurlfields["intervening_party"] = array("entity" => "intervening_party", "val" => "intervening_party");
+
+        $this->columnValues = set_links_in_recordset($this->columnValues, 'intervention', $additionalurlfields);
+        // var_dump($this->columnValues);exit;
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
 
 
@@ -295,6 +403,75 @@ class eventsModule extends shnModule {
     /* }}} */
 
     /* {{{1 Victim & Perpetrator functions */
+
+    public function act_duplicate_act() {
+        if (!isset($_GET['act_id'])) {
+            set_redirect_header('events', 'vp_list');
+            return;
+        }
+        $act_id = $_GET['act_id'];
+        $act = new Act();
+        $act->LoadFromRecordNumber($act_id);
+        $act->LoadRelationships();
+        if ($act->act_record_number != $act_id || $act->act_record_number == '') {
+            shnMessageQueue::addError($messages['act_not_found']);
+            unset($_GET['act_id']);
+            $this->act_vp_list();
+            change_tpl('act_vp_list');
+            return;
+        }
+        $this->victim = new Person();
+        $this->victim->LoadFromRecordNumber($this->act->victim);
+
+        $act_new = $act;
+        $act_new->act_record_number = shn_create_uuid('act');
+        $act_new->event = $this->event->event_record_number;
+        $act_new->ClearManagementData();
+        //var_dump($act_new);exit;
+        $act_new->SaveAll();
+        $_SESSION['vp']['act'] = $act_new->act_record_number;
+
+        $ad_types = array('killing' => _t('KILLING'), 'destruction' => _t('DESTRUCTION'), 'arrest' => _t('ARREST'), 'torture' => _t('TORTURE'));
+        foreach ($ad_types as $ad_type => $ad_name) {
+            $ad_class = ucfirst($ad_type);
+            $ad = new $ad_class();
+            $record_number = $ad_type . '_record_number';
+            $ad->LoadFromRecordNumber($act_id);
+            $ad->LoadRelationships();
+
+            if (isset($ad->$record_number)) {
+                $ad_new = $ad;
+                $ad_new->$record_number = $act_new->act_record_number;
+                $ad_new->ClearManagementData();
+                $ad_new->SaveAll();
+            }
+        }
+        $vp_list = Browse::getVpListArray(array($act_id));
+        foreach ($vp_list as $record) {
+
+            $inv = new Involvement();
+            $inv->LoadFromRecordNumber($record['involvement_record_number']);
+            $inv->LoadRelationships();
+            if ($inv->involvement_record_number != $record['involvement_record_number'] || $inv->involvement_record_number == '') {
+                continue;
+            }
+            $inv->involvement_record_number = shn_create_uuid('inv');
+            $inv->event = $this->event_id;
+            $inv_new = $inv;
+            $inv_new->act = $act_new->act_record_number;
+            
+            $inv_new->ClearManagementData();
+
+            $inv_new->SaveAll();
+            
+        }
+
+//shnMessageQueue::addInformation($messages['select_event']);
+        set_redirect_header('events', 'vp_list');
+        return;
+        $this->act_vp_list();
+        change_tpl('act_vp_list');
+    }
 
     /**
      * act_vp_list will list victim and perpetrator related to a perticuler event
@@ -539,11 +716,11 @@ class eventsModule extends shnModule {
             $acts = $_SESSION['acts'];
         }
         $_SESSION['acts'] = $acts;
-        
-        if(!$acts){
+
+        if (!$acts) {
             set_redirect_header('events', 'vp_list');
-       }
-        
+        }
+
         //if a new person save 
         if (isset($_POST['save'])) {
             $this->perpetrator = $this->save_person();
@@ -572,7 +749,6 @@ class eventsModule extends shnModule {
         $this->acts = $acts_array;
     }
 
-    
     public function act_add_involvement() {
         $involvement_form = involvement_form('new');
         $this->involvement_form = $involvement_form;
@@ -612,16 +788,16 @@ class eventsModule extends shnModule {
         }
         $this->acts = $acts_array;
 
-        /*$this->act = new Act();
-        $this->act->LoadFromRecordNumber($_SESSION['act_id']);
-        $this->act_name = get_mt_term($this->act->type_of_act);
-        $this->perpetrator = new Person();
-        $this->perpetrator->LoadFromRecordNumber($_SESSION['vp']['perpetrator']);*/
+        /* $this->act = new Act();
+          $this->act->LoadFromRecordNumber($_SESSION['act_id']);
+          $this->act_name = get_mt_term($this->act->type_of_act);
+          $this->perpetrator = new Person();
+          $this->perpetrator->LoadFromRecordNumber($_SESSION['vp']['perpetrator']); */
     }
 
     protected function save_involvement() {
         $invs = array();
-        foreach ($_SESSION['acts'] as $act_id) {        
+        foreach ($_SESSION['acts'] as $act_id) {
             $involvement_form = involvement_form('new');
             $inv = new Involvement();
             $inv->involvement_record_number = shn_create_uuid('inv');
@@ -764,7 +940,7 @@ class eventsModule extends shnModule {
                 $inv->LoadRelationships();
                 $inv->LoadManagementData();
                 form_objects($involvement_form, $inv);
-                
+
                 $inv->SaveAll();
                 set_redirect_header('events', 'vp_list', null, array('inv_id' => $inv->involvement_record_number, 'type' => 'inv'));
                 return;
@@ -785,17 +961,22 @@ class eventsModule extends shnModule {
             set_redirect_header('events', 'vp_list');
             return;
         }
-
+        if ($_GET['act_id']) {
+            $act_ids = array($_GET['act_id']);
+        } else {
+            $act_ids = $_POST['acts'];
+        }
+        $this->act_ids = $act_ids;
         $this->del_confirm = true;
         if (isset($_POST['yes'])) {
             if (isset($_POST['act'])) {
-                array_push($_POST['acts'], $_POST['act']);
+                array_push($act_ids, $_POST['act']);
             } else if (isset($_POST['inv'])) {
                 array_push($_POST['invs'], $_POST['inv']);
             }
             //if multiplt events are selected
-            if (is_array($_POST['acts'])) {
-                foreach ($_POST['acts'] as $act) {
+            if (is_array($act_ids)) {
+                foreach ($act_ids as $act) {
                     $c = new Act();
                     $c->DeleteFromRecordNumber($act);
                 }
@@ -809,8 +990,8 @@ class eventsModule extends shnModule {
             return;
         }
 
-        if (isset($_POST['acts'])) {
-            $this->vp_list = Browse::getVpListArray($_POST['acts']);
+        if (isset($act_ids)) {
+            $this->vp_list = Browse::getVpListArray($act_ids);
         } else if (isset($_POST['invs'])) {
             $this->vp_list = Browse::getVpListInvArray($_POST['invs']);
         }
@@ -1021,18 +1202,24 @@ class eventsModule extends shnModule {
     }
 
     public function act_delete_intervention() {
-        if (!isset($_POST['interventions']) || isset($_POST['no'])) {
+        if ($_GET['intervention_id']) {
+            $intervention_ids = array($_GET['intervention_id']);
+        } else {
+            $intervention_ids = $_POST['interventions'];
+        }
+        if (!$intervention_ids || isset($_POST['no'])) {
             set_redirect_header('events', 'intv_list');
             return;
         }
+        $this->intervention_ids = $intervention_ids;
 
         $this->del_confirm = true;
         if (isset($_POST['yes'])) {
             if (isset($_POST['intervention']))
-                array_push($_POST['interventions'], $_POST['intervention']);
+                array_push($intervention_ids, $_POST['intervention']);
             //if multiplt events are selected
-            if (is_array($_POST['interventions'])) {
-                foreach ($_POST['interventions'] as $intervention) {
+            if (is_array($intervention_ids)) {
+                foreach ($intervention_ids as $intervention) {
                     $i = new Intervention();
                     $i->DeleteFromRecordNumber($intervention);
                 }
@@ -1041,7 +1228,7 @@ class eventsModule extends shnModule {
             return;
         }
 
-        $this->intv_list = Browse::getIntvListArray($_POST['interventions']);
+        $this->intv_list = Browse::getIntvListArray($intervention_ids);
     }
 
     /* }}} */

@@ -11,13 +11,13 @@
     <form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
         <br />
         <center>
-                  <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                  <button type='submit' class='btn btn-grey' name='yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
      
        </center>
         <?php
-			if(isset($_POST['acts'])){
-				foreach($_POST['acts'] as $val){ ?>
+			if(isset($act_ids)){
+				foreach($act_ids as $val){ ?>
         			<input type='hidden' name='acts[]' value='<?php echo $val ?>' />
         		<?php
 				}

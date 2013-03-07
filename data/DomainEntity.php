@@ -134,6 +134,13 @@ class DomainEntity extends ADODB_Active_Record {
     public function getManagementData() {
         return $this->managementFields;
     }
+     public function ClearManagementData() {
+        foreach ($this->managementFields as $mngField) {
+            $this->$mngField = null;
+        }
+        $this->Management = null;
+        $this->_saved = false;
+    }
 
     private function SetManagementData() {
         if ($this->Management == null) {

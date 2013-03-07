@@ -8,7 +8,7 @@
                 <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__') ?></h3>
                 <br />
                 <center>
-                    <button type='submit' class='btn btn-danger' name='delete_yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                    <button type='submit' class='btn btn-grey' name='delete_yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
                     <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
 
                 </center>
@@ -87,7 +87,7 @@
                     <tr class='actions' >
                         <td></td>
                         <td colspan='6'>
-                            <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                            <button type='submit' class='btn btn-grey' name='delete' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
 
                     </tr>
                 </tbody>

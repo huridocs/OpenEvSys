@@ -40,3 +40,6 @@ ALTER TABLE `act` ADD `act_location_longitude` double NULL;
 ALTER TABLE `intervention` ADD `intervention_location_latitude` double NULL;
 ALTER TABLE `intervention` ADD `intervention_location_longitude` double NULL;
 
+
+INSERT INTO `gacl_aco` (`section_value`, `value`, `order_value`, `name`, `hidden`) VALUES( 'modules', 'dashboard', 8, 'Dashboard', 0);
+INSERT INTO `gacl_aco_map` (`acl_id`, `section_value`, `value`) VALUES(10, 'modules', 'dashboard');

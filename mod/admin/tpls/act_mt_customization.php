@@ -39,7 +39,7 @@ if($_GET['parent']!=''){
         <?php } ?>
         <br/>
      	<center>
-        <button type='submit' class='btn btn-danger' name='delete_yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+        <button type='submit' class='btn btn-grey' name='delete_yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
         </center>
     </div>       
@@ -120,7 +120,7 @@ if($_GET['parent']!=''){
             </td>
             
             <td colspan='2' class='no_edit'>
-                <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                <button type='submit' class='btn btn-grey' name='delete' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
                 <button  name='' class="btn btn-primary" onclick="add_new_mt(this);$('#save_new_terms').show();return false;" ><i class="icon-plus icon-white"></i> <?php echo _t('ADD_NEW') ?></button>
                 
             </td>

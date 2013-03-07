@@ -18,8 +18,8 @@
             <th><?php echo _t('TYPE_OF_ACT') ?></th>
 			<th width='16px'><input type='checkbox' onchange='$("input.delete_inv").attr("checked",this.checked)' /></th>
             <th><?php echo _t('PERPETRATOR_NAME_S_') ?></th>
-            <th><?php echo _t('Perpetrator Roles') ?></th>
             <th><?php echo _t('INVOLVEMENT') ?></th>
+            <th><?php echo _t('Duplicate') ?></th>
         </tr>
     </thead>
     <tbody>	
@@ -55,18 +55,18 @@
                 <a href="<?php get_url('events','vp_list',null,array('inv_id'=>$record['involvement_record_number'],'type'=>'perter')) ?>"><?php echo $record['pname']?></a>
             </td>
            
-            <td class="<?php echo $odd.$class ?>">
-                <?php if($record['perpetrator_record_number']){ ?>
-                <a href="<?php get_url('person', 'role_list', null, array('eid'=>null,'pid' => $record['perpetrator_record_number'])) ?>"><?php echo _t('ROLE_LIST')?></a>
-            <?php } ?></td>
+         
             <td class="<?php echo $odd.$class ?>">
                 <a href="<?php get_url('events','vp_list',null,array('inv_id'=>$record['involvement_record_number'],'type'=>'inv')) ?>"><?php echo get_mt_term($record['degree_of_involvement'])?></a>
-            </td>			
+            </td>
+            <td class="<?php echo $odd.$class ?>">
+                <a class="btn btn-mini" href="<?php get_url('events','duplicate_act',null,array('act_id'=>$record['act_record_number'])) ?>"><i class="icon-repeat"></i> <?php echo _t('Duplicate') ?></a>
+            </td>
         </tr>
     <?php } ?>
 		<tr class='actions'>
             <td colspan='8'>                
-                <button type='submit' class='btn btn-danger' name='delete' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                <button type='submit' class='btn btn-grey' name='delete' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
             </td>
         </tr>		
     </tbody>

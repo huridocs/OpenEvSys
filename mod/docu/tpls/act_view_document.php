@@ -7,7 +7,7 @@
             <a class="btn" href="<?php echo get_url('docu', 'download', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-download-alt"></i> <?php echo _t('DOWNLOAD_DOCUMENT'); ?></a>
             <?php }
         ?>
-        <a class="btn btn-danger" href="<?php echo get_url('docu', 'delete_document', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-trash icon-white"></i>  <?php echo _t('DELETE_DOCUMENT'); ?></a>
+        <a class="btn btn-grey" href="<?php echo get_url('docu', 'delete_document', null, array('doc_id' => $_GET['doc_id'])) ?>"><i class="icon-trash"></i>  <?php echo _t('DELETE_DOCUMENT'); ?></a>
         <?php
         if ($supporting_docs->uri == null) {
             shnMessageQueue::addInformation('No attachment found to this Document.');

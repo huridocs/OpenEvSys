@@ -26,7 +26,10 @@
             echo "<br />";
                     ?>
                     <a class="btn" href="<?php echo get_url('events', 'edit_perpetrator', null, array('inv_id' => $_GET['inv_id'], 'pid' => $perpetrator->person_record_number)) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_PERSON') ?></a>
-                    <a class="btn" href="<?php echo get_url('person', 'person', null, array('pid' => $perpetrator->person_record_number)) ?>"><i class="icon-zoom-in"></i> <?php echo _t('MORE_ABOUT_THIS_PERSON') ?></a><?php
+                    <a class="btn" href="<?php echo get_url('person', 'person', null, array('pid' => $perpetrator->person_record_number)) ?>"><i class="icon-zoom-in"></i> <?php echo _t('MORE_ABOUT_THIS_PERSON') ?></a>
+                   
+                <a class="btn"  href="<?php get_url('person', 'role_list', null, array('eid'=>null,'pid' => $perpetrator->person_record_number)) ?>"><i class="icon-zoom-in"></i> <?php echo _t("View person's roles")?></a>
+                        <?php
             echo "<br />";
             echo "<br />";
             $person_form = person_form('view');
@@ -41,14 +44,14 @@
                     <a class="btn" href="<?php get_url('events', 'edit_ad', null, array('act_id' => $_GET['act_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_ADDITIONAL_DETAILS') ?></a>
                     <a class="btn" href="<?php get_url('events', 'add_perpetrator', null, array('act_id' => $_GET['act_id'])) ?>"><i class="icon-plus"></i> <?php echo _t('ADD_PERPETRATOR_S_') ?></a>
                     <?php if (isset($ad)) { ?>
-                        <a class="btn btn-danger" href="<?php get_url('events', 'delete_ad', null, array('act_id' => $_GET['act_id'])) ?>"><i class="icon-trash icon-white"></i>  <?php echo _t('DELETE_ADDITIONAL_DETAILS') ?></a>
+                        <a class="btn btn-grey" href="<?php get_url('events', 'delete_ad', null, array('act_id' => $_GET['act_id'])) ?>"><i class="icon-trash"></i>  <?php echo _t('DELETE_ADDITIONAL_DETAILS') ?></a>
                         <?php if (isset($delete_ad)) { ?>
                             <div class="alert alert-error" >
                                 <h3><?php echo _t('DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__') ?></h3>
                                 <form class="form-horizontal"  action="<?php get_url('events', 'delete_ad', null, array('act_id' => $act->act_record_number)) ?>" method="post">
                                     <br />
                                     <center>
-                                        <button type='submit' class='btn btn-danger' name='yes' ><i class="icon-trash icon-white"></i> <?php echo _t('DELETE') ?></button>
+                                        <button type='submit' class='btn btn-grey' name='yes' ><i class="icon-trash"></i> <?php echo _t('DELETE') ?></button>
                                         <button type='submit' class='btn' name='no' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
                                     </center>
                                 </form>

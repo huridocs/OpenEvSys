@@ -5,7 +5,7 @@ include_once('event_title.php');
     <br />
     <?php include_once('vp_list_table.php') ?>
     <br />
-    <h2><?php echo _t('ACT_DETAILS') ?>
+    <h2><?php echo _t('ACT_DETAILS') ?></h2>
         <?php
         $act_form = generate_formarray('act', 'view');
         popuate_formArray($act_form, $act);

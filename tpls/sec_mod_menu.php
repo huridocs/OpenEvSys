@@ -164,12 +164,14 @@ $menus["analysis"]["facetsearch"] = array(
     "title" => _t('Faceted search'),
     "url" => get_url('analysis', 'facetsearch', null, null, null, true));
 
-$menus["analysis"]["dashboard"] = array(
-    "title" => _t('Dashboard'),
-    "url" => get_url('analysis', 'dashboard', null, null, null, true));
 
 $menus["analysis"]["adv_report"] = array(
     "alias" => "adv_search");
+
+
+$menus["dashboard"]["dashboard"] = array(
+    "title" => _t('Dashboard'),
+    "url" => get_url('dashboard', 'dashboard', null, null, null, true));
 
 
 //Home
@@ -185,7 +187,7 @@ $menus["home"]["edit_password"] = array(
 
 
 
-if ($module != "admin" && $action != "browse") {
+if ($module != "admin" && $action != "browse" && !in_array($action,array("browse_act","browse_intervention"))) {
     ?>
     <ul class="nav nav-tabs tabnav"> 
         <?php

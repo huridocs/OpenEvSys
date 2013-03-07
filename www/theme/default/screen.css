@@ -1182,9 +1182,9 @@ h6 {
 .navbar-inverse .brand{
     color:white;
 }
-.breadcrumb{
+/*.breadcrumb{
     background: #F0F0CE;
-}
+}*/
 
 .navbar-inverse .nav > li > a {
     color: #ccc;
@@ -1922,3 +1922,41 @@ div.DTFC_LeftFootWrapper table {
   margin-left: 1em;
   display: block;
 }
+
+/*
+
+.btn-grey {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #816443;
+  *background-color: #816443;
+  background-image: -moz-linear-gradient(top, #9c856b, #816443);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9c856b), to(#816443));
+  background-image: -webkit-linear-gradient(top, #9c856b, #816443);
+  background-image: -o-linear-gradient(top, #9c856b, #816443);
+  background-image: linear-gradient(to bottom, #9c856b, #816443);
+  background-repeat: repeat-x;
+  border-color: #816443 #816443 #816443;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9c856b', endColorstr='#ff816443', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey:active,
+.btn-grey.active,
+.btn-grey.disabled,
+.btn-grey[disabled] {
+  color: #ffffff;
+  background-color: #816443;
+  *background-color: #816443;
+}
+
+.btn-grey:active,
+.btn-grey.active {
+  background-color: #816443 \9;
+}
+.btn-group.open .btn-grey.dropdown-toggle {
+  background-color: #816443;
+}*/

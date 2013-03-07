@@ -16,7 +16,7 @@
 <?php
     shn_form_select('Select language','select_locale',array('options'=>$locales, 'value'=>$current_locale));
 ?>
-<button type="submit" class="btn btn-danger" name='remove_locale'  ><i class="icon-trash icon-white"></i> <?php echo _t('REMOVE') ?></button>
+<button type="submit" class="btn btn-grey" name='remove_locale'  ><i class="icon-trash"></i> <?php echo _t('REMOVE') ?></button>
 </fieldset>
 </form>
 </div>
