@@ -309,6 +309,7 @@ function shn_view_location($label,$value,$extra_opts)
     if(is_array($extra_opts['clari_value']))
     $clari = array_pop($extra_opts['clari_value']);
     //var_dump($value);exit;
+    
 ?>
     <tr <?php echo $class ?>>
         <td class='title' align='right'><?php echo $label ?></td>
@@ -319,6 +320,7 @@ function shn_view_location($label,$value,$extra_opts)
     //to prevent warnings set $options to array() if it is null
     $options=($options==null)?array():$options;
     $name = rand(0,10000000);
+    if($value['latitude'] && $value['longitude']){
      ?>
     <div class="locationFieldsConatiner">
      		
@@ -340,7 +342,8 @@ function shn_view_location($label,$value,$extra_opts)
 </script>
    <?php if(isset($clari)){ ?>
             <p class='clarify_note'><em><?php echo _t('CLARIFYING_NOTE')?><span><?php echo ' : '.$clari  ?></span></em><p>
-            <?php } ?>
+            <?php } 
+    }?>
         </td>
     </tr>
 <?php

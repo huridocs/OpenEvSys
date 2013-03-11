@@ -41,9 +41,10 @@ function shn_form_extra_opts($extra_opts)
         echo "<a href='".get_url('help','help_popup',null,array('id'=>$id),null,true)."' class='help' target='_blank' title='".$extra_opts['label']."'><i class='icon-question-sign'></i></a>";
     }
 
-    if (isset($extra_opts['error'])){
-        foreach($extra_opts['error'] as $error)
-            echo "<p class=\"note error\">{$error}</p>";
+    if (isset($extra_opts['error']) && count($extra_opts['error'])){
+        echo "<span class='help-inline'>";
+        echo implode(", ",$extra_opts['error']);
+        echo "</span>";
     }
     ?>
 </div>
@@ -89,9 +90,12 @@ function shn_form_text($label,$name,$extra_opts)
     else
         $text_options .= " size='40'";*/
 
-    if(isset($extra_opts['class']))
+    if(isset($extra_opts['class'])){
         $class .= $extra_opts['class'];
 
+    }else{
+        $class .= "input-large";
+    }
     if(isset($extra_opts['error']) && count($extra_opts['error'])>0)
         $class .= ' error ';
 
@@ -182,7 +186,7 @@ function shn_form_date($label,$name,$extra_opts)
     if(isset($extra_opts['class'])){
         $class .= $extra_opts['class'];
     }else{
-        $class .= "input-medium";
+        $class .= "input-large";
     }
 
     if(isset($extra_opts['error']) && count($extra_opts['error'])>0)
@@ -238,9 +242,14 @@ function shn_form_textarea($label,$name,$extra_opts)
     if(isset($extra_opts['error']) && count($extra_opts['error'])>0)
         $class .= ' error ';
 
-    if(isset($class))
-        $text_opts .= " class='$class'";
+    if(isset($class)){
+        $class .= $class;
+    }else{
+        $class .= "input-xlarge";
+    }
 
+     if(isset($class))
+        $text_opts .= " class='$class'";
 
     if($extra_opts['no_label']!==true){
     ?>
@@ -284,7 +293,7 @@ function shn_form_select($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select class="select" title="<?php echo $name?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <select class="select input-large" title="<?php echo $name?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -337,7 +346,7 @@ function shn_form_mt_select($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select class="mt_select" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <select class="mt_select input-large" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -422,7 +431,7 @@ function shn_form_mt_select_mlt($label,$name,$extra_opts)
     <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
     <?php } ?>
     <div class="controls">
-    <select class="mt_select_mlt" name="<?php echo $name?>[]" id="<?php echo $name?>" multiple="multiple" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>" title="<?php echo _t('SELECT').' '.$label ?>">
+    <select class="mt_select_mlt input-large" name="<?php echo $name?>[]" id="<?php echo $name?>" multiple="multiple" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>" title="<?php echo _t('SELECT').' '.$label ?>">
     <?php
     foreach ($options as $opt_value => $desc )
     {
@@ -552,13 +561,14 @@ function _shn_form_mt_tree($label,$name,$extra_opts,$multiple = false)
     }
     
     ?>
-    <select class="mt-tree" title="<?php echo $name?>" <?php if($width)echo 'style="width:'.$width.'px"';?> 
+    <select class="mt-tree input-large" title="<?php echo $name?>" <?php if($width)echo 'data-width="'.$width.'"';?> 
             onchange="<?php echo $extra_opts['onchange']?>" 
-            name="<?php echo $name?>" id="<?php echo $name?>"
+            name="<?php echo $name?>[]" id="<?php echo $name?>"
  <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>"
  <?php if($multiple)echo ' multiple="multiple"';?> >
+        <option value=""></option>
     <?php
-    $level = 0;
+    $level = 0; 
      for($i=0; $i<$count; )
         {
             $element1 = $data_array[$i];
@@ -621,7 +631,7 @@ function _shn_form_print_mt_tree($mt,$name)
     $count = count($data_array);
    
     ?>
-    <select class="mt-tree" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
+    <select class="mt-tree input-large" title="<?php echo $name?>" onchange="<?php echo $extra_opts['onchange']?>" name="<?php echo $name?>[]" id="<?php echo $name?>" <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>">
     <?php
     $level = 0;
      for($i=0; $i<$count; )
@@ -1359,8 +1369,8 @@ function shn_form_location($label,$name,$extra_opts)
 
     if(!isset($value['latitude']) && !isset($value['longitude'])){
                             
-        $value['latitude'] = 46.1983922;
-        $value['longitude'] = 6.1422961;
+        /*$value['latitude'] = 46.1983922;
+        $value['longitude'] = 6.1422961;*/
     }
     if(isset($label)){
     ?>

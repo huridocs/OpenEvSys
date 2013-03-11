@@ -4,6 +4,7 @@ global $conf;
 global $global;
 
 define('APPROOT',realpath(dirname(__FILE__).'/../').'/');
+$_SESSION['username']='admin';
 
 require_once(APPROOT.'conf/sysconf.php');
 

@@ -1960,3 +1960,7 @@ div.DTFC_LeftFootWrapper table {
 .btn-group.open .btn-grey.dropdown-toggle {
   background-color: #816443;
 }*/
+
+.show_clarify,.remove_clarify{
+    cursor:pointer;
+}

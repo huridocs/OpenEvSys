@@ -1,25 +1,37 @@
- <script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="res/js/adv-search.js"></script>
 <div class="searchPanel">
-    <div class="panel" id="qb-panel">
-        <a id="qb-count-toggle"><?php echo _t('COUNT') ?></a>
-        <a id="qb-query-toggle">&nbsp;&nbsp;</a>
+    <div class="panel" >
         <?php if (isset($query)) { ?>
             <strong id="query-name"><?php echo $query->name ?></strong>
         <?php } else { ?>
             <strong id="query-name"><?php echo _t('UNTITLED_QUERY') ?></strong>
         <?php } ?>
+        
+
         <form class="form-horizontal"  onsubmit="return false">
-            <fieldset id="qb-group-by" style="display:none">
-                <legend><?php echo _t('COUNT') ?></legend>
-                <ol id="qb-group-list"></ol>
-            </fieldset>
+            
             <fieldset id="qb-conditions" >
               <!--  <legend><?php echo _t('SEARCH_CONDITIONS') ?></legend> -->
                 <div id="query_builder"></div>
             </fieldset>
+            <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseCount">
+                        <?php echo _t('COUNT') ?>
+                    </a>
+                </div>
+                <div id="collapseCount" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       <div id="query_builder_count"></div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="clearfix" ></div>
-            <button    id="qb-search-but" class="qb-but btn" ><i class="icon-ok"></i> <?php echo _t('SEARCH') ?></button>
+            <button    id="qb-search-but" class="qb-but btn" data-type="search" ><i class="icon-ok"></i> <?php echo _t('SEARCH') ?></button>
             <button   id="qb-clear-but" class="qb-but btn" ><i class="icon-remove"></i> <?php echo _t('CLEAR') ?></button> 
         </form>
     </div>

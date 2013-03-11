@@ -9,7 +9,7 @@ global $conf;
 <div class="panel">
     <div class="row-fluid">
         <div class="span12">
-            <form class="form-inline" action='<?php echo get_url('analysis','dashboard')?>' method="post">
+            <form class="form-inline" action='<?php echo get_url('dashboard','dashboard')?>' method="post">
             <div class="well">
                 <label><?php echo _t("Date range")?>:</label>   
                 <div class="input-prepend">

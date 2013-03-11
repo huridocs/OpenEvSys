@@ -80,14 +80,19 @@ function get_url($module = 'home', $action = 'default', $view = null, $args = nu
     $act = (isset($action)) ? "&amp;act=$action" : null;
     $view = (isset($view)) ? "&amp;view=$view" : null;
     $stream = (isset($stream)) ? "&amp;stream=$stream" : null;
-    if (is_array($args))
+    if (is_array($args)) {
         foreach ($args as $id => $value) {
-            if (is_array($value))
-                foreach ($value as $val)
+
+            if (is_array($value)) {
+                foreach ($value as $val) {
+                    
                     $al .= "&amp;{$id}[]=$val";
-            else if (isset($value))
+                }
+            } else if (isset($value)) {
                 $al .= "&amp;$id=$value";
+            }
         }
+    }
 
     if ($conf['mod_rewrite'] == 'true')
         $uri = "index.php/$module/$action/$id.$stream?";
@@ -389,7 +394,7 @@ function set_links_in_recordset($recordset, $entity, $additionalurlfields = arra
         $record['record_delete_url'] = get_record_url($record[$pk], $entity, "delete");
         if ($additionalurlfields) {
             foreach ($additionalurlfields as $field => $additionalurlfield) {
-                if(isset($record[$field]) && isset($record[$additionalurlfield["val"]])){
+                if (isset($record[$field]) && isset($record[$additionalurlfield["val"]])) {
                     $entity2 = $additionalurlfield["entity"];
                     $primary_entity2 = get_primary_entity($entity);
                     if ($primary_entity2 != null) {

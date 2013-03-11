@@ -1314,7 +1314,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         $searchSql = new SearchResultGenerator();
         $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-        //var_dump($sqlArray);exit;
+        var_dump($sqlArray);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
         //var_dump($sqlArray['result']);exit;
@@ -2024,8 +2024,10 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $url = get_record_url($val[0], $selEntity);
                     $i = 1;
                     foreach ($field_names as $field_name) {
+                        if($val[$i] && $val[$i + 1]){
                         $markers[] = array("latitude" => $val[$i], "longitude" => $val[$i + 1],
                             "title" => $val[0], "content" => "<a href='" . $url . "' target='_blank'>" . $val[0] . "</a>");
+                        }
                         $i = $i + 2;
                     }
                 }

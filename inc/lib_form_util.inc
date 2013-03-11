@@ -185,7 +185,7 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
               
                                 if($type == "location" && ($viewType == "new" || $viewType == "edit" || $viewType == "view" || $viewType == "all")){
                                  $formArray[  $entityField['field_name']."_latitude" ]    = array('type'=>"hidden",
-                                       'label'=>"",
+                                       'label'=>$entityField['field_label_l10n']." "._t("latitude"),
                                        'field_number' => $field_number ,
 	                            'map'=>array('entity'=>$entity,
                                         'field'=>$entityField['field_name']."_latitude" ,
@@ -196,7 +196,7 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
 	                            'extra_opts' => array(   )    
                                     ); 
                                    $formArray[  $entityField['field_name']."_longitude" ]    = array('type'=>"hidden",
-                                       'label'=>"",
+                                       'label'=>$entityField['field_label_l10n']." "._t("longitude"),
                                        'field_number' => $field_number ,
 	                            'map'=>array('entity'=>$entity,
                                         'field'=>$entityField['field_name']."_longitude" ,
@@ -222,7 +222,7 @@ function label_to_field($label) {
 function popuate_formArray(&$formArray, $entity) {
 
     if ($formArray != null && $entity != null) {  // The function cannot continue unless the variables have been passed
-        foreach ($formArray as &$formField) {   // iterate throught the elements in the form array
+        foreach ($formArray as $key=>&$formField) {   // iterate throught the elements in the form array
             $recordkeyName = '' . $formField['map']['entity'] . '_record_number';
             $entity_key_value = $entity->$recordkeyName;
 
@@ -253,14 +253,21 @@ function popuate_formArray(&$formArray, $entity) {
                         $fieldName = $formField['map']['field'];
                         $fieldNameLat = $fieldName."_latitude";
                         $fieldNameLon = $fieldName."_longitude";
-                            if(isset($entity->$fieldNameLat) && isset($entity->$fieldNameLon)){
+                        
+                            if($entity->$fieldNameLat && $entity->$fieldNameLon){
                                 $geoval = array('latitude'=>$entity->$fieldNameLat,
                                     'longitude'=>$entity->$fieldNameLon);
                                 if ( $entity->geometries[$fieldName]){
                                    $geoval['geometries'] = $entity->geometries[$fieldName];
                                 }	
                                 $formField['extra_opts']['value'] = $geoval;
+                            }else{
+                                unset($entity->$fieldNameLat);
+                                unset($entity->$fieldNameLon);
+                                unset($formArray[$fieldNameLat]);
+                                unset($formArray[$fieldNameLon]);
                             }
+                            
             }
             //var_dump($formField['map']['field']);
             //var_dump($formField['extra_opts']);
@@ -394,12 +401,23 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                       $clari_note_object->record_number = $entity_key_value;
                       $clari_note_object->field_name = $formField['map']['field'];
                       $clari_note_object->value = $valuesArray[$fieldName.'_clarify']; */
-                    $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $valuesArray[$fieldName], $valuesArray[$fieldName . '_clarify']);
+                    if(is_array($valuesArray[$fieldName])){
+                        $v = $valuesArray[$fieldName];
+                        $va = array_shift($v);
+                        $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $va, $valuesArray[$fieldName . '_clarify']);
+                    }else{
+                        if($fieldName == "deceased"){
+                            $valuesArray[$fieldName] = ($valuesArray[$fieldName] == 'on') ? 'y' : 'n';
+                        }
+                        $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $valuesArray[$fieldName], $valuesArray[$fieldName . '_clarify']);
+                    
+                    }
                     if ($clariNote->value != null) {
                         $entity->clari_notes[] = $clariNote;
                     }
                 } else {
                     if (is_array($valuesArray[$fieldName]))
+                        
                         foreach ($valuesArray[$fieldName] as $mtvalue) {
                             /*
                               $clari_note_object = new ClariNotes();
@@ -409,12 +427,14 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                               $clari_note_object->vocab_number = $mtvalue; //iterate this array to get clari notes for each multi value
                               $clari_note_object->value = $valuesArray[$fieldName.'_clarify_' . $mtvalue ]; */
 
-                            $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
+                            //$clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
+                            $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_clarify']);
 
 
                             if ($clariNote->value != null) {
                                 $entity->clari_notes[] = $clariNote;
                             }
+                            break;
                         }
                 }
             }
@@ -530,8 +550,15 @@ function shn_form_get_html_fields($form, $field_div = true) {
             $controler($options['label'], $field_id, $options['extra_opts']);
             $html = ob_get_clean();
             
-            if ($options['type'] != 'submit' && $options['type'] != 'hidden' && $field_div)
-                $html = "<div class='control-group'>$html</div>";
+            if ($options['type'] != 'submit' && $options['type'] != 'hidden' && $field_div){
+                $html2 = "<div class='control-group";
+                if(isset($options['extra_opts']['error']) && count($options['extra_opts']['error'])){
+                    $html2.= " error ";
+                }
+    
+                $html2.= "'>$html</div>";
+                $html = $html2;
+            }
 
             $fields[$field_id] = $html;
             $fields[$i++] = $html;

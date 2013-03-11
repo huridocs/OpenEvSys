@@ -54,7 +54,7 @@ class eventsModule extends shnModule {
         global $messages;
         global $event;
         $this->load_related_event();
-        if (isset($_GET['act']) && !in_array($_GET['act'],array('new_event','browse','geocode','browse_act','browse_intervention'))) {
+        if (isset($_GET['act']) && !in_array($_GET['act'], array('new_event', 'browse', 'geocode', 'browse_act', 'browse_intervention'))) {
             $_GET['eid'] = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
             if (!isset($_GET['eid'])) {
                 shnMessageQueue::addInformation($messages['select_event']);
@@ -351,6 +351,7 @@ class eventsModule extends shnModule {
     public function act_get_event() {
         $this->event->LoadRelationships();
         $event_form = event_form('view');
+
         popuate_formArray($event_form, $this->event);
         $this->event_form = $event_form;
     }
@@ -361,6 +362,7 @@ class eventsModule extends shnModule {
             $status = shn_form_validate($event_form);
             if ($status) {
                 $this->event->LoadRelationships();
+                
                 form_objects($event_form, $this->event);
 
 
@@ -459,11 +461,10 @@ class eventsModule extends shnModule {
             $inv->event = $this->event_id;
             $inv_new = $inv;
             $inv_new->act = $act_new->act_record_number;
-            
+
             $inv_new->ClearManagementData();
 
             $inv_new->SaveAll();
-            
         }
 
 //shnMessageQueue::addInformation($messages['select_event']);
@@ -1413,6 +1414,12 @@ class eventsModule extends shnModule {
         $person = new Person();
         form_objects($person_form, $person);
         $person->deceased = ($person->deceased == 'on') ? 'y' : 'n';
+        if (isset($person->number_of_persons_in_group) && !$person->number_of_persons_in_group) {
+            $person->number_of_persons_in_group = Null;
+        }
+        if (isset($person->dependants) && !$person->dependants) {
+            $person->dependants = Null;
+        }
         $person->SaveAll();
         $person->SaveAddresses($_POST['person_address']);
         $person->SavePicture();
@@ -1426,6 +1433,12 @@ class eventsModule extends shnModule {
         $person->LoadManagementData();
         form_objects($person_form, $person);
         $person->deceased = ($person->deceased == 'on') ? 'y' : 'n';
+        if (isset($person->number_of_persons_in_group) && !$person->number_of_persons_in_group) {
+            $person->number_of_persons_in_group = Null;
+        }
+        if (isset($person->dependants) && !$person->dependants) {
+            $person->dependants = Null;
+        }
         $person->SaveAll();
         $person->SaveAddresses($_POST['person_address']);
 

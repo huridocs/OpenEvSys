@@ -59,7 +59,7 @@ $conf['theme'] = 'default';
 
 # specify the database name.
 #
-$conf['db_name'] = 'openevsys';
+$conf['db_name'] =  'openevsys';
 
 # specify user name that Sahana can use to connect.
 #

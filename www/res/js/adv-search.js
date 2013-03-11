@@ -510,7 +510,7 @@ function groupBy(){
     this.setQuery = function(query){
         if(query.group_by != null ){
             $('#qb-count-empty').remove();
-            $('#qb-group-list').empty();
+            $('#query_builder_count').empty();
             od = openevsysDomain.getInstance();
             for(var c in query.group_by){
                 var e = query.group_by[c];
@@ -545,7 +545,7 @@ function groupBy(){
                 }); 
                 con.prepend(remove);
                 //add the condition to the list
-                $('#qb-group-list').append(con);
+                $('#query_builder_count').append(con);
             }
             this.addNewCondition();
             $('#qb-count-toggle').trigger('click');
@@ -558,23 +558,34 @@ function groupBy(){
         var entities = queryBuilder.getInstance().getSelectedEntities();
         $('#qb-count-empty').remove();
         if( entities.length == 0 ){
-            $('#qb-group-list').empty();
-            $('#qb-group-by').prepend("<span id='qb-count-empty'>"+_('YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING')+"</span>");
+            $('#query_builder_count').empty();
+            $('#query_builder_count').prepend("<span id='qb-count-empty'>"+_('YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING')+"</span>");
             return;
         }
-        else if($('#qb-group-list > li').length == 0 ){
+        var arr = $('#query_builder_count').find('.row-fluid');
+        if(!arr.length){
+            this.addNewCondition();
+        }
+        var newarr = $('#query_builder_count').find('.row-fluid.new');
+        if(newarr.length){
+             newarr.remove();
+            this.addNewCondition();
+        }
+        return;
+        
+    /*else if($('#query_builder_count > li').length == 0 ){
             this.addNewCondition();
             return;
         }
         //remove elements which are not in search conditions
         for(var e in entities){
-            var r = $('#qb-group-list > li > a');
+            var r = $('#query_builder_count > li > a');
         }
 
-        if($('#qb-group-list li.qb-new').length > 0){
-            $('#qb-group-list li.qb-new').remove();
+        if($('#query_builder_count li.qb-new').length > 0){
+            $('#query_builder_count li.qb-new').remove();
             this.addNewCondition();
-        }
+        }*/
     }
 
     this.removeCondition = function(e){
@@ -593,11 +604,42 @@ function groupBy(){
     }
 
     this.clearConditions = function(){
-        $('#qb-group-list').empty();
-        this.addNewCondition();
+        $('#query_builder_count').empty();
+       // this.addNewCondition();
     }
 
     this.addNewCondition = function(){
+        var options = openevsysDomain.getInstance().getEntities(queryBuilder.getInstance().getSelectedEntities());
+        
+        var select = $("<select id=\"\" name=\"\" class=\"entselectgroup\" />");
+        $("<option />", {
+            value:  "", 
+            text: ""
+        }).appendTo(select);
+          
+        for(var option in options){
+            $("<option />", {
+                value:  options[option].value, 
+                text: options[option].label
+            }).appendTo(select);
+ 
+        }
+        var div = $("<div class='row-fluid show-grid new'></div>");
+        div.append(select);
+        $('#query_builder_count').append(div);
+        select.select2({
+            width: 'resolve',
+            placeholder: _('SELECT_ENTITY'),
+            allowClear:false
+        });
+        select.on("change", function() { 
+            //alert($(this).val());
+            qbg = groupBy.getInstance(null);
+            qbg.addFieldSelect($(this));
+        //groupBy.getInstance().update();
+        });
+        return;
+        
         var con = $('<li class="qb-condition qb-new" data-status="new"></li>');
         var a   = $('<a class="qb-entity">'+_('SELECT_ENTITY')+'</a>');
         con.append(a);
@@ -615,11 +657,46 @@ function groupBy(){
             qb.removeCondition(e.currentTarget);
         }); 
         con.prepend(remove);
-        $('#qb-group-list').append(con);
+        $('#query_builder_count').append(con);
     }
 
 
-    this.addFieldSelect = function(e){
+    this.addFieldSelect = function(entselect){
+        $(".entselectgroup").select2("disable");
+        
+        var options = openevsysDomain.getInstance().getEntityFields(entselect.val());
+       
+        var select = $("<select id=\"\" name=\""+entselect.val()+"\" class=\"fieldselectgroup\" />");
+        $("<option />", {
+            value:  "", 
+            text: ""
+        }).appendTo(select);
+        
+        for(var option in options){
+            $("<option />", {
+                value:  options[option].value, 
+                text: options[option].label
+            }).appendTo(select);
+       
+        }
+        var div = $(entselect).closest("div");
+        div.append(select);
+        $(div).removeClass('new');
+        
+        $(".entselectgroup").select2("disable");
+        select.select2({
+            width: 'resolve',
+            placeholder: _('SELECT_FIELD')
+        });
+        select.on("change", function() { 
+            //alert($(this).val());
+            qbg = groupBy.getInstance(null);
+            qbg.addField($(this));
+        });
+        
+        
+        return;
+        
         //if there is a previous condition operater to it
         var a = $(e.currentTarget);
         a.parent().removeClass('qb-new');
@@ -639,7 +716,12 @@ function groupBy(){
         a.after('<span>.</span>');
     }
 
-    this.addField = function(e){
+    this.addField = function(fieldselect){
+        $(".fieldselectgroup").select2("disable");
+        this.addController(fieldselect);
+        this.addNewCondition();
+        return;
+        
         var a = $(e.currentTarget);
         a.unbind('click');
         a.addClass('qb-selected');
@@ -650,9 +732,25 @@ function groupBy(){
     }
 
     this.getGroupBy = function(){
+         var g = new Array();
+       
+         var arr = $('#query_builder_count').find('.row-fluid');
+        $.each(arr ,function(){
+            if($(this).attr('data-status')=='new')return true;
+            var c = new Object();
+            
+            c.entity = $(this).find('select.entselectgroup:first').val();
+            c.field = $(this).find('select.fieldselectgroup:first').val();
+            if(c.entity == "" || c.field == ""){
+                return true;
+            }
+            c.type = $(this).find('select.typeselectgroup:first').val();
+            g.push(c);
+        });
+        return g;
         //create condition array
         var g = new Array();
-        var arr = $('#qb-group-list').find('.qb-condition');
+        var arr = $('#query_builder_count').find('.qb-condition');
         $.each(arr ,function(){
             if($(this).attr('data-status')=='new')return true;
             var c = new Object();
@@ -664,7 +762,80 @@ function groupBy(){
         return g;
     }
 
-    this.addController = function(e){
+    this.addController = function(fieldselect){
+        var div = $(fieldselect).closest("div");
+        //var entity = div.find(".entselect");
+        var entity_name = fieldselect.attr("name");
+        
+        var field_name = fieldselect.val();
+        
+        var od = openevsysDomain.getInstance();
+        var field_type = od.getFieldType(field_name, entity_name);
+        
+        var options = openevsysDomain.getInstance().getOperator(field_type);
+               
+        switch(field_type){
+            case "date":
+          
+                var select = $("<select id=\"\" name=\"\" class=\"select searchval qb-count-type typeselectgroup\" />");
+               
+                $("<option />", {
+                    value:  "daily", 
+                    text: _('GROUP_BY_DAY')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "monthly", 
+                    text: _('GROUP_BY_MONTHLY')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "yearly", 
+                    text: _('GROUP_BY_YEARLY')
+                    }).appendTo(select);
+                
+                div.append(select);
+                select.select2({
+                    width: 'resolve'
+                });
+               
+                break;
+            case "mt_tree":
+                var select = $("<select id=\"\" name=\"\" class=\"select searchval qb-count-type typeselectgroup\" />");
+               
+                $("<option />", {
+                    value:  "1", 
+                    text: _('1ST_LEVEL')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "2", 
+                    text: _('2ND_LEVEL')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "3", 
+                    text: _('3RD_LEVEL')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "4", 
+                    text: _('4TH_LEVEL')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "5", 
+                    text: _('5TH_LEVEL')
+                    }).appendTo(select);
+                $("<option />", {
+                    value:  "6", 
+                    text: _('6TH_LEVEL')
+                    }).appendTo(select);
+                
+                div.append(select);
+                select.select2({
+                    width: 'resolve'
+                });
+                
+               
+                break;
+        }
+        return;
+       
         var entity = e.parent().find('.qb-entity:first');
         var entity_name = entity.attr('data-value');
         var field_name = e.attr('data-value');
@@ -1003,7 +1174,7 @@ function queryBuilder(){
             //alert($(this).val());
             qb = queryBuilder.getInstance(null);
             qb.addFieldSelect($(this));
-            //groupBy.getInstance().update();
+            
         });
         return;
         
@@ -1028,7 +1199,7 @@ function queryBuilder(){
             $('#query_builder li.qb-new').remove();
             this.addNewCondition();
         }
-        //groupBy.getInstance().update();
+    //groupBy.getInstance().update();
     }
 
     this.addFieldSelect = function(entselect){
@@ -1059,6 +1230,7 @@ function queryBuilder(){
             //alert($(this).val());
             qb = queryBuilder.getInstance(null);
             qb.addField($(this));
+            groupBy.getInstance().update();
         });
         
         
@@ -1291,6 +1463,8 @@ function queryBuilder(){
         var query = new Object();
         query.conditions = conditions;
         query.select = select;
+        
+        
         return query;
     }
 }/*}}}*/
@@ -1456,31 +1630,9 @@ function advSearch(){
             return;
         }
         this.fetchResultsAndDisplay()
-        
-    /*$.ajax( {
-        "url": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
-        "success": function ( json ) {
-            json.bDestroy = true;
-            $('#datatable').dataTable( json );
-        },
-        "dataType": "json"
-    } );*/
-    /*$("#datatable").dataTable( {
-		/*"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-		"sPaginationType": "bootstrap",
-		"oLanguage": {
-			"sLengthMenu": "_MENU_ records per page"
-		},*/
-    /*"bProcessing": true,
-                "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query))
-	} );*/
-        
-        
-    /*this.search_result = searchResults.getInstance();
-    	this.search_result.setQuery(this.query);
-        this.search_result.fetchResultsAndDisplay();*/
+
     }
-    this.fetchResultsAndDisplay = function(query){
+    this.fetchResultsAndDisplay = function(stype){
         
         this.query = this.query_builder.getQuery();
         if(this.query.conditions < 1 ){
@@ -1489,17 +1641,33 @@ function advSearch(){
         }
         
         od = openevsysDomain.getInstance();
-        
-       
         var columns = new Array();
-        for (var i = 0; i < this.query.select.length; i++) {
-            var sel = this.query.select[i];
+            
+       if(stype == "count"){
+           this.query.group_by = this.group_by.getGroupBy();
+       
+           console.log(this.query.group_by)
+          for (var i = 0; i < this.query.group_by.length; i++) {
+                var sel = this.query.group_by[i];
+                var column = new Object();
+                column.mData = sel.entity+"_"+sel.field
+                column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+                columns.push(column);
+            } 
+             
             var column = new Object();
-            column.mData = sel.entity+"_"+sel.field
-            column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+            column.mData = "count"
+            column.sTitle = _('COUNT');
             columns.push(column);
-        }
-        
+       }else{
+            for (var i = 0; i < this.query.select.length; i++) {
+                var sel = this.query.select[i];
+                var column = new Object();
+                column.mData = sel.entity+"_"+sel.field
+                column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+                columns.push(column);
+            }
+       }
         if(this.oTable){
             this.oTable.fnDestroy();
         }
@@ -1553,7 +1721,8 @@ function advSearch(){
 
     this.Count = function(){
         this.query = this.query_builder.getQuery();
-        //this.query.group_by = this.group_by.getGroupBy();
+        this.query.group_by = this.group_by.getGroupBy();
+         console.log(this.query.group_by)
         if(this.query.group_by.length < 1 ){
             $.pnotify({
                 pnotify_title: 'Error', 
@@ -1562,9 +1731,7 @@ function advSearch(){
             });
             return;
         }
-        this.search_result = searchResults.getInstance();
-        this.search_result.setQuery(this.query);
-        this.search_result.fetchResultsAndDisplay();
+        this.fetchResultsAndDisplay("count")
     }
 
     /* This function will initialise the advance search class */
@@ -1574,17 +1741,30 @@ function advSearch(){
             domain.fetchDomainData(advSearch.initObjects);
         });
         this.query_builder = queryBuilder.getInstance();
-        //this.group_by = groupBy.getInstance();
-        //this.group_by.init();
-        this.toggleQueryPanel();
-        this.toggleCountPanel();
+        this.group_by = groupBy.getInstance();
+        this.group_by.init();
+        $('#collapseCount').on('show', function () {
+            $('#qb-search-but').data('type','count')
+            $('#qb-search-but').html('<i class="icon-ok"></i> '+_('COUNT'))
+        })
+        $('#collapseCount').on('hide', function () {
+            $('#qb-search-but').data('type','search')
+            $('#qb-search-but').html('<i class="icon-ok"></i> '+_('SEARCH'))
+        })
+        
         $('#qb-clear-but').click(function(){
             queryBuilder.getInstance().clearConditions();
             //groupBy.getInstance().clearConditions();
+            groupBy.getInstance().update();
             $('.resultPanel').hide();
         });
         $('#qb-search-but').click(function(){
-            as.Search();
+            var stype = $('#qb-search-but').data('type')
+            if(stype == "count"){
+                as.Count();
+            }else{
+                as.Search();
+            }
         });
     }
 
@@ -1607,41 +1787,7 @@ function advSearch(){
         
     }
 
-    this.toggleQueryPanel = function(){
-        $('#qb-query-toggle').toggle(
-            function(){
-                $('#qb-query-toggle').addClass('active');
-                $('#qb-panel').addClass('qb-collapse');
-                $('#qb-panel > form').hide()
-            },
-            function(){
-                $('#qb-query-toggle').removeClass('active');
-                $('#qb-panel').removeClass('qb-collapse');
-                $('#qb-panel > form').show()
-            });
-    }
-
-    this.toggleCountPanel = function(){
-        $('#qb-count-toggle').toggle(
-            function(){
-                $('#qb-count-toggle').removeClass('active');
-                $('#qb-group-by').show();
-                $('#qb-search-but').unbind('click');
-                $('#qb-search-but').val(_('COUNT')).click(function(){
-                    as.Count();
-                });
-            },
-            function(){
-                $('#qb-count-toggle').addClass('active');
-                $('#qb-group-by').hide();
-                $('#qb-search-but').unbind('click');
-                $('#qb-search-but').val(_('SEARCH')).click(function(){
-                    as.Search();
-                });
-            }
-            );
-
-    }
+  
 }
 /*}}}*/
 

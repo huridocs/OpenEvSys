@@ -22,14 +22,14 @@ $(document).ready(function() {
 
 function getAge(formname) {	
     var date_of_birth = formname.vdate_of_birth.value;
-    var dob_type = formname.vdob_type.value;	
+    var dob_type = formname.vdob_type.value;
+    var initial_date = formname.initial_date.value;
+
 	
-    if(date_of_birth == ''){
+    if( date_of_birth == '' || date_of_birth == '0000-00-00' || initial_date == '' || initial_date == '0000-00-00'){
         alert(_("PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"));
         return false;
     }
-	
-    var initial_date = formname.initial_date.value;
 	
     year = date_of_birth.substring(0,4);
     month = date_of_birth.substring(5,7) - 1;	
@@ -421,30 +421,93 @@ window.onload = function(){
     $(".datepicker").datepicker({
         format:'yyyy-mm-dd'
     });	
-    $(".select").select2({
-        width: 'resolve',
-        allowClear: true,
-        placeholder: "Select"
+    $('.select').each(function() {
+        var dropdownCss = new Object;
+        if ($(this).attr('data-width')) {
+            dropdownCss.width = $(this).attr('data-width');
+        }
+        var containerCss = new Object();
+        containerCss.width = parseInt($(this).css('width'));
+        containerCss.width = containerCss.width+14
+        
+        $(this).select2({
+            allowClear: true,
+            placeholder: "Select",
+            dropdownCss:dropdownCss,
+            containerCss:containerCss
+        });
+      
+     
     });
-    $(".mt_select").select2({
-        width: 'resolve',
-        allowClear: true,
-        placeholder: "Select"
+    
+    $('.mt_select').each(function() {
+        var dropdownCss = new Object;
+        if ($(this).attr('data-width')) {
+            dropdownCss.width = $(this).attr('data-width');
+        }
+        var containerCss = new Object();
+        containerCss.width = parseInt($(this).css('width'));
+        containerCss.width = containerCss.width+14
+        
+        $(this).select2({
+            allowClear: true,
+            placeholder: "Select",
+            dropdownCss:dropdownCss,
+            containerCss:containerCss
+        });
+      
+     
     });
-    $(".mt_select_mlt").select2({
-        width: 'resolve',
-        allowClear: true,
-        placeholder: "Select",
-        closeOnSelect:false
+    $('.mt_select_mlt').each(function() {
+        var dropdownCss = new Object;
+        if ($(this).attr('data-width')) {
+            dropdownCss.width = $(this).attr('data-width');
+        }
+        var containerCss = new Object();
+        containerCss.width = parseInt($(this).css('width'));
+        containerCss.width = containerCss.width+14
+        
+        $(this).select2({
+            allowClear: true,
+            placeholder: "Select",
+            closeOnSelect:false,
+            dropdownCss:dropdownCss,
+            containerCss:containerCss
+        });
+      
+     
     });
-    $(".mt-tree").select2({
+   
+    $('.mt-tree').each(function() {
+        var dropdownCss = new Object;
+        if ($(this).attr('data-width')) {
+            dropdownCss.width = $(this).attr('data-width');
+        }
+        var containerCss = new Object();
+        containerCss.width = parseInt($(this).css('width'));
+        containerCss.width = containerCss.width+14
+        
+        $(this).select2({       
+             
+            allowClear: true,
+            placeholder: "Select",
+            closeOnSelect:false,
+            formatResult: format_mt_tree,
+            formatSelection: format_mt_tree,
+            dropdownCss:dropdownCss,
+            containerCss:containerCss
+        });
+      
+     
+    });
+/* $(".mt-tree").select2({
         width: 'resolve',
         allowClear: true,
         placeholder: "Select",
         closeOnSelect:false,
         formatResult: format_mt_tree,
         formatSelection: format_mt_tree
-    });
+    });*/
         
 /*	
 	if(readCookie("helpstatus") != "on" && readCookie("helpstatus") != "off"){
@@ -616,7 +679,7 @@ function field_set_to_tab(id)
             $('#fieldset'+i).show();
             $('.tab').each(function (ii){
                 $(this).removeClass('active')
-                });
+            });
             $(this).addClass('active');
             return false;
         });
@@ -768,7 +831,7 @@ function testMod(key){
                 link.attr('id',id+'_link');
                 link.attr('rel',id);
                 obj.after(link);
-                if(obj.attr('value') == ''){
+                if(obj.attr('value') == '' || obj.attr('value') == undefined){
                     obj.hide();
                     link.text(_('CLARIFY'));
                     link.attr('class',options.showLinkClass);
@@ -822,13 +885,13 @@ $(document).ready(function(){
     var clickedAway = false;
 
    
-$('.help').bind('click',function(){
+    $('.help').bind('click',function(){
         console.log("help: isVisible:"+isVisible+":clickedAway:"+clickedAway)
-                            
+        $('.help').popover('destroy')
         var e=$(this);
         // e.popover({content: '<div>Loading....</div>', html : true }).popover('show');
         $.get($(this).attr('href')+"&stream=text",function(d){
-             e.popover({
+            e.popover({
                 trigger:'manual',
                 content: d, 
                 html : true
@@ -839,9 +902,9 @@ $('.help').bind('click',function(){
         return false;
     });
     $(document).click(function(e) {
-         $('.help').popover('hide')
-        //console.log("click: isVisible:"+isVisible+":clickedAway:"+clickedAway)
-       /* if(isVisible & clickedAway)
+        $('.help').popover('destroy')
+    //console.log("click: isVisible:"+isVisible+":clickedAway:"+clickedAway)
+    /* if(isVisible & clickedAway)
         {
             $('.help').popover('hide')
             isVisible = clickedAway = false
