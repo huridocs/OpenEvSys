@@ -9,7 +9,7 @@
 <br />
 <br />
 <?php
-	if(is_array($biographics) && count($biographics) !=0 ){
+    if ((is_array($biographics) && count($biographics) != 0) || is_array($biographics_reverse) && count($biographics_reverse) != 0) {
 ?>
 <form class="form-horizontal"  action="<?php get_url('person','delete_biographic')?>" method="post">
 <table class='table table-bordered table-striped table-hover'>
@@ -37,6 +37,18 @@
         </tr>
 <?php
 			}		
+                    foreach ($biographics_reverse as $bio) {
+                        ?>
+                        <tr class='<?php if ($i++ % 2 == 1) echo "odd ";if ($_GET['biography_id'] == $bio['biographic_details_record_number']) echo 'active'; ?>' >
+                            <td><input name="biographics[]" type='checkbox' value='<?php echo $bio['biographic_details_record_number'] ?>' class='delete'/></td>
+                            <td><a href="<?php echo get_url('person', 'biography_list', null, array('biography_id' => $bio['biographic_details_record_number'], 'type' => 'bd', 'reverse' => 1)); ?>"><?php echo $bio['biographic_details_record_number']; ?></a></td>
+                            <td><a href="<?php echo get_url('person', 'biography_list', null, array('biography_id' => $bio['biographic_details_record_number'], 'type' => 'bd', 'reverse' => 1)); ?>"><?php echo get_mt_term(get_biography_reverse($bio['relationship_type'])); ?></a></td>
+                            <td><a href="<?php echo get_url('person', 'biography_list', null, array('biography_id' => $bio['biographic_details_record_number'], 'type' => 'rp', 'reverse' => 1)); ?>"><?php echo $bio['person_name']; ?></a></td>
+                            <td><?php echo $bio['initial_date']; ?></td>
+                            <td><?php echo $bio['final_date']; ?></td>            
+                        </tr>
+                        <?php
+                    }
 ?>   
 		<tr class='actions'>
             <td colspan='8'><button type='submit' class='btn btn-grey' name='delete' >
@@ -81,8 +93,23 @@
 <?php
 	echo "<h3>" ._t('VIEW_RELATED_PERSON') . "</h3>";
 ?>
-	<br />
+                <br />
+                <?php
+                if (isset($_GET['reverse'])) {
+               ?>
+	<a class="btn" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->person)) ?>"><i class="icon-zoom-in"></i><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
+                
+                <?php
+                
+                } else {
+                ?>
 	<a class="btn" href="<?php echo get_url('person','person',null,array('pid'=>$biographic_details->related_person)) ?>"><i class="icon-zoom-in"></i><?php echo _t('MORE_ABOUT_THIS_PERSON')?></a>
+                
+                <?php
+                
+                }
+                ?>
+
 	<br />
 <?php
 	echo "<br />";		

@@ -35,7 +35,7 @@
 ?>
 			<tr class='<?php if($i++%2==1)echo "odd ";if($_GET['row']==$i)echo 'active'; ?>' >
             <td><?php echo $bio['relationship_type']; ?></td>
-			<td><?php echo $bio['name']; ?></td>
+			<td><?php echo $bio['person_name']; ?></td>
 			<td><?php echo $bio['initial_date']; ?></td>
 			<td><?php echo $bio['final_date']; ?></td>            
         </tr>

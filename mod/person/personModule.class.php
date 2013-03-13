@@ -83,7 +83,11 @@ class personModule extends shnModule {
             $this->biographic_details = new BiographicDetail();
             $this->biographic_details->LoadFromRecordNumber($_GET['biography_id']);
             $this->biographic_details->LoadRelationships();
-            $_GET['pid'] = $this->biographic_details->person;
+            if (isset($_GET['reverse'])) {
+                $_GET['pid'] = $this->biographic_details->related_person;
+            } else {
+                $_GET['pid'] = $this->biographic_details->person;
+            }
         }
     }
 
@@ -256,6 +260,7 @@ class personModule extends shnModule {
 
     function act_person() {
         $this->biographics = Browse::getRelativeInfo($_GET['pid']); //loaded for contextual info			
+        $this->biographics_reverse = Browse::getRelativeInfoReverse($_GET['pid']);
     }
 
     function act_browse() {
@@ -480,7 +485,11 @@ class personModule extends shnModule {
                 break;
             case 'rp':
                 $this->related_person = new Person();
-                $this->related_person->LoadFromRecordNumber($this->biographic_details->related_person);
+                if (isset($_GET['reverse'])) {
+                    $this->related_person->LoadFromRecordNumber($this->biographic_details->person);
+                } else {
+                    $this->related_person->LoadFromRecordNumber($this->biographic_details->related_person);
+                }
                 $this->related_person->LoadRelationships();
                 $person_form = person_form('view');
                 popuate_formArray($person_form, $this->related_person);
@@ -581,11 +590,14 @@ class personModule extends shnModule {
 
     public function biography_list($person_id) {
         $this->biographics = Browse::getBiographyList($person_id);
+        $this->biographics_reverse = Browse::getBiographyListReverse($person_id);
     }
 
     public function act_print() {
         $this->person->LoadRelationships();
         $this->biographics = Browse::getBiographyList($this->person->person_record_number);
+        $this->biographics_reverse = Browse::getBiographyListReverse($this->person->person_record_number);
+    
     }
 
     public function act_permissions() {

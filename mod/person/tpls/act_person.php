@@ -20,7 +20,7 @@ draw_card_list('pd', $pid);
     popuate_formArray($person_form, $person);
     shn_form_get_html_labels($person_form, false);
 
-    if (count($biographics) != 0) {
+    if(count($biographics) != 0 || count($biographics_reverse) != 0){    	
         ?>
         <br />
         <br />	
@@ -40,6 +40,13 @@ draw_card_list('pd', $pid);
                     </tr>
                     <?php
                 }
+                        foreach($biographics_reverse as $bio){      			
+?>
+			<tr class='<?php if($i++%2==1)echo "odd ";if($_GET['row']==$i)echo 'active'; ?>' >			
+			<td><a href="<?php echo get_url('person','person',null,array('pid'=>$bio['related_person'])); ?>"><?php echo "<strong>". $bio['person_name']. "</strong>"; ?></a><?php echo " is a/an <strong>" . get_mt_term(get_biography_reverse($bio['relationship_type'])). "</strong> of this person"; ?></td>          
+     		</tr>
+<?php
+			}
                 ?>   
 
             </tbody>
