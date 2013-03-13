@@ -185,6 +185,16 @@ class BiographicDetail extends DomainEntity{
         $this->LoadManagementData();
     }
 
+    public function reverse(){
+        $person = $this->person;
+        $related_person = $this->related_person;
+        $type_of_relationship = $this->type_of_relationship;
+        
+        $this->person = $related_person;
+        $this->related_person = $person;
+        $this->type_of_relationship = get_biography_reverse($type_of_relationship);
+        
+    }
 
 
    

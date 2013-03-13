@@ -235,6 +235,26 @@ class Browse implements BrowseStrategy
 		$rows = $browse->ExecuteQuery($sql);
         return $rows;
 	}
+	public static function getBiographyListReverse($person_id)
+    {
+        global $conf;
+		$sql = "SELECT 
+                    bd.biographic_details_record_number, 
+                    bd.related_person, 
+                    rp.person_name, 
+                    bd.type_of_relationship as relationship_type, 
+                    bd.initial_date, 
+                    bd.final_date 
+				FROM biographic_details AS bd
+				INNER JOIN person p ON bd.related_person = p.person_record_number
+				LEFT JOIN person rp ON bd.person = rp.person_record_number
+				WHERE related_person = '$person_id'";
+	
+		$browse = new Browse();
+		$rows = $browse->ExecuteQuery($sql);
+        return $rows;
+	}
+	
 	
 	public static function getRelativeInfo($person_id)
 	{
@@ -253,6 +273,26 @@ class Browse implements BrowseStrategy
 				LEFT JOIN mt_vocab mt ON bd.type_of_relationship = mt.vocab_number
                 LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = mt.vocab_number AND l.locale = '{$conf['locale']}' ) 
 				WHERE bd.related_person = '$person_id'";
+		
+		$browse = new Browse();
+		$rows = $browse->ExecuteQuery($sql);
+        return $rows;
+	}
+        public static function getRelativeInfoReverse($person_id)
+	{
+        global $conf;
+		$sql = "SELECT 
+                    bd.biographic_details_record_number, 
+                    bd.related_person, 
+                    p.person_name, 
+                    bd.type_of_relationship AS 'relationship_type', 
+                    bd.initial_date, 
+                    bd.final_date ,
+                    bd.person
+				FROM biographic_details AS bd
+				INNER JOIN person p ON bd.related_person = p.person_record_number
+				LEFT JOIN person rp ON bd.person = rp.person_record_number
+				WHERE bd.person = '$person_id'";
 		
 		$browse = new Browse();
 		$rows = $browse->ExecuteQuery($sql);
