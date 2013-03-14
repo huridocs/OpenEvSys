@@ -357,6 +357,7 @@ class personModule extends shnModule
 		
 		$this->biographics = Browse::getBiographyListArray($_POST['biographics']);		
 	}
+	
 
 	function act_new_biography()
 	{
@@ -366,7 +367,7 @@ class personModule extends shnModule
         include_once APPROOT.'inc/lib_uuid.inc';
 		include_once APPROOT.'inc/lib_form.inc';
         
-		$biography_form = biographic_form('new');
+		$this->biography_form = biographic_form('new');
 		
 		$this->pid = (isset($_GET['pid']) && $_GET['pid'] != null) ? $_GET['pid'] : $_SESSION['person']['pid'];
 		if($this->pid != null){
@@ -378,19 +379,19 @@ class personModule extends shnModule
 		
 		if(isset($_POST['save'])){
 			$this->pid = $_SESSION['person']['pid'];
-            $status = shn_form_validate($biography_form);
+            $status = shn_form_validate($this->biography_form);
             if($status){
                 if($_POST['biographic_details_record_number'] == ''){
                    $_POST['biographic_details_record_number'] = shn_create_uuid('biography');
                 }
                 $_GET['pid'] = $_SESSION['person']['pid'];
-                $biography = new BiographicDetail();
-                $biography->LoadfromRecordNumber($_POST['biographic_details_record_number']);
-                $biography->biographic_details_record_number = $_POST['biographic_details_record_number'];				
-                form_objects($biography_form, $biography); 
-				$biography->person = $_SESSION['person']['pid'];
-                if($biography->related_person == '') $biography->related_person = null;	
-                $biography->SaveAll();
+                $this->biography = new BiographicDetail();
+                $this->biography->LoadfromRecordNumber($_POST['biographic_details_record_number']);
+                $this->biography->biographic_details_record_number = $_POST['biographic_details_record_number'];				
+                form_objects($this->biography_form, $this->biography); 
+				$this->biography->person = $_SESSION['person']['pid'];
+                if($this->biography->related_person == '') $this->biography->related_person = null;	
+                $this->biography->SaveAll();
 
                 $_GET['pid'] = null;            
 				
@@ -398,12 +399,12 @@ class personModule extends shnModule
 				$this->biography_list($_SESSION['person']['pid']);
 				$_SESSION['pid'] = $_SESSION['person']['pid'];
 				
-				set_redirect_header('person','biography_list',null,array('biography_id'=>$biography->biographic_details_record_number,'type'=>'bd'));
+				set_redirect_header('person','biography_list',null,array('biography_id'=>$this->biography->biographic_details_record_number,'type'=>'bd'));
             }			
         }
 		else{
-			$biography_form['related_person']['extra_opts']['readonly'] = true;
-			$this->biography_form = $biography_form;
+			$this->biography_form['related_person']['extra_opts']['readonly'] = true;
+			//$this->biography_form = $biography_form;
 		}					
 	}
 
@@ -412,7 +413,7 @@ class personModule extends shnModule
 		include_once APPROOT.'inc/lib_form_util.inc';
         include_once APPROOT.'inc/lib_uuid.inc';  
 	
-		$biography_form = biographic_form('edit');      
+		$this->biography_form = biographic_form('edit');      
 
 		$this->pid = (isset($_GET['pid']) && $_GET['pid'] != null) ? $_GET['pid'] : $_SESSION['pid'];
 		if($this->pid != null){
@@ -424,25 +425,25 @@ class personModule extends shnModule
 		
 		if(isset($_GET['biography_id'])){
             set_url_args('biography_id',$this->biographic_details->biographic_details_record_number);
-			popuate_formArray($biography_form,$this->biographic_details);			
-			$this->biography_form = $biography_form;
+			popuate_formArray($this->biography_form,$this->biographic_details);			
+			$this->biography_form = $this->biography_form;
 		}
 		
 		if(isset($_POST['save'])){
 			$this->pid = $_SESSION['person']['pid'];
-            $status = shn_form_validate($biography_form);
+            $status = shn_form_validate($this->biography_form);
             if($status){
                 if($_POST['biographic_details_record_number'] == ''){
                    $_POST['biographic_details_record_number'] = shn_create_uuid('biography');
                 }
                 $_GET['pid'] = $_SESSION['person']['pid'];
-                $biography = new BiographicDetail();
-                $biography->LoadfromRecordNumber($_POST['biographic_details_record_number']);
-                $biography->biographic_details_record_number = $_POST['biographic_details_record_number'];				
-                form_objects($biography_form, $biography); 
-				$biography->person = $_SESSION['person']['pid'];
-                if($biography->related_person == '') $biography->related_person = null;	
-                $biography->SaveAll();
+                $this->biography = new BiographicDetail();
+                $this->biography->LoadfromRecordNumber($_POST['biographic_details_record_number']);
+                $this->biography->biographic_details_record_number = $_POST['biographic_details_record_number'];				
+                form_objects($this->biography_form, $this->biography); 
+				$this->biography->person = $_SESSION['person']['pid'];
+                if($this->biography->related_person == '') $this->biography->related_person = null;	
+                $this->biography->SaveAll();
 
                 $_GET['pid'] = null;
                 $_GET['bid'] = $_POST['biographic_details_record_number'];
@@ -450,7 +451,7 @@ class personModule extends shnModule
 				$this->biography_list($_SESSION['person']['pid']);
 				$_SESSION['pid'] = $_SESSION['person']['pid'];
 				
-				set_redirect_header('person','biography_list',null,array('biography_id'=>$biography->biographic_details_record_number,'type'=>'bd'));
+				set_redirect_header('person','biography_list',null,array('biography_id'=>$this->biography->biographic_details_record_number,'type'=>'bd'));
             }			
         }
 	}	
