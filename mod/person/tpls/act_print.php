@@ -17,7 +17,7 @@
 ?>
 <br />
 <?php
-if(isset($biographics)){
+if(isset($biographics) || isset($biographics_reverse)){
     echo '<h2>'._t('BIOGRAPHIC_DETAILS').'</h2>';
     ?>
     <br />
@@ -38,12 +38,23 @@ if(isset($biographics)){
             <tr class='<?php if($i++%2==1)echo "odd ";if($_GET['row']==$i)echo 'active'; ?>' >
                 <td><?php echo ++$key ?></td>
                 <td><?php echo $record['relationship_type']; ?></td>
-                <td><?php echo $record['name']; ?></td>
+                <td><?php echo $record['person_name']; ?></td>
                 <td><?php echo $record['initial_date']; ?></td>            
                 <td><?php echo $record['final_date']; ?></td>            
             </tr>		
     <?php 	
-            }		
+            }
+             foreach($biographics_reverse as $key=>$record){ 
+    ?>
+            <tr class='<?php if($i++%2==1)echo "odd ";if($_GET['row']==$i)echo 'active'; ?>' >
+                <td><?php echo ++$key ?></td>
+                <td><?php echo get_mt_term(get_biography_reverse($record['relationship_type'])); ?></td>
+                <td><?php echo $record['person_name']; ?></td>
+                <td><?php echo $record['initial_date']; ?></td>            
+                <td><?php echo $record['final_date']; ?></td>            
+            </tr>		
+    <?php 	
+            }
     ?> 
         </tbody>
     </table>
@@ -53,11 +64,23 @@ if(isset($biographics)){
     $bio = new BiographicDetail();
 
     foreach($biographics as $key=>$record){ 
-        echo '<br /><h3>'.++$key.'. '._t('PERSON_NAME').' : '.$record['name'].'</h3><br />';
+        echo '<br /><h3>'.++$key.'. '._t('PERSON_NAME').' : '.$record['person_name'].'</h3><br />';
         //print victim details
         $person->LoadFromRecordNumber($record['related_person']);
         $person->LoadRelationships();
         $bio->LoadFromRecordNumber($record['biographic_details_record_number']);
+        $bio->LoadRelationships();
+        popuate_formArray($bio_form , $bio);
+        shn_form_get_html_labels($bio_form, false);
+        echo '<br />';
+    } 
+    foreach($biographics_reverse as $key=>$record){ 
+        echo '<br /><h3>'.++$key.'. '._t('PERSON_NAME').' : '.$record['person_name'].'</h3><br />';
+        //print victim details
+        $person->LoadFromRecordNumber($record['person']);
+        $person->LoadRelationships();
+        $bio->LoadFromRecordNumber($record['biographic_details_record_number']);
+        $bio->reverse();
         $bio->LoadRelationships();
         popuate_formArray($bio_form , $bio);
         shn_form_get_html_labels($bio_form, false);

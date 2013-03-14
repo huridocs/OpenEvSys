@@ -34,15 +34,13 @@ include_once APPROOT.'inc/lib_files.inc';
 
 include_once 'messages.inc';
 
-class personModule extends shnModule
-{
-    function act_default()
-    {
+class personModule extends shnModule {
+
+    function act_default() {
         set_redirect_header('person','browse');
     }
 
-    function section_mod_menu()
-    {
+    function section_mod_menu() {
         $data['breadcrumbs'] = shnBreadcrumbs::getBreadcrumbs();
         if($_GET['act']=='new_person')
             $data['active'] = 'new';
@@ -85,8 +83,12 @@ class personModule extends shnModule
     		$this->biographic_details = new BiographicDetail();
         	$this->biographic_details->LoadFromRecordNumber($_GET['biography_id']);    
 		    $this->biographic_details->LoadRelationships();
+            if (isset($_GET['reverse'])) {
+                $_GET['pid'] = $this->biographic_details->related_person;
+            } else {
             $_GET['pid'] = $this->biographic_details->person; 
         }
+    }
     }
     /**
      * act_new_person will generate ui to add a new person 
@@ -94,8 +96,7 @@ class personModule extends shnModule
      * @access public
      * @return void
      */
-	public function act_new_person()
-    {    	
+    public function act_new_person() {
     	$this->person_form = person_form('new');
     	unset($this->person_form['person_addresses']);
         
@@ -121,8 +122,7 @@ class personModule extends shnModule
      * @access public
      * @return void
      */
-	public function act_address_list()
-    {    
+    public function act_address_list() {
     	$this->address = new Address();
     	
     	$this->person = new Person();
@@ -139,8 +139,7 @@ class personModule extends shnModule
         }
     }
     
-    public function act_new_address()
-    {
+    public function act_new_address() {
     	$this->address = new Address(); 	
     	$this->address_form = address_form('new');		
 		
@@ -158,8 +157,7 @@ class personModule extends shnModule
         }
     }
     
-	public function act_edit_address()
-    {
+    public function act_edit_address() {
     	$this->address = new Address(); 	
     	$this->address_form = address_form('edit');	
 
@@ -183,8 +181,7 @@ class personModule extends shnModule
         }
     }
     
-    function act_delete_address()
-    {
+    function act_delete_address() {
     	$this->address = new Address();
     	
     	if(!isset($_POST['addresses']) || isset($_POST['no'])){
@@ -209,8 +206,7 @@ class personModule extends shnModule
         }
     }
     
-	function act_edit_person()
-	{
+    function act_edit_person() {
 		include_once APPROOT.'inc/lib_form_util.inc';
         include_once APPROOT.'inc/lib_uuid.inc';
         
@@ -245,14 +241,13 @@ class personModule extends shnModule
 		}
 	}
 
-    function act_person()
-	{
+    function act_person() {
 		$this->biographics = Browse::getRelativeInfo($_GET['pid']);//loaded for contextual info			
+        $this->biographics_reverse = Browse::getRelativeInfoReverse($_GET['pid']);
     }
 
 
-    function act_browse()
-    {
+    function act_browse() {
 		include_once APPROOT.'inc/lib_form.inc';
 
 		$notIn = acl_list_person_permissons();
@@ -296,8 +291,7 @@ class personModule extends shnModule
     	$this->htmlFields = $htmlFields;		
     }
 
-    function act_delete_person()
-    {
+    function act_delete_person() {
         if(isset($_POST['no'])){
             set_redirect_header('person','browse');
             return;
@@ -333,8 +327,7 @@ class personModule extends shnModule
 		$this->intervening_party_records = $this->person_intervening_party_pager->get_page_data();		         
     }
 
-	public function act_delete_biographic()
-	{
+    public function act_delete_biographic() {
 		if(!isset($_POST['biographics']) || isset($_POST['no'])){
             set_redirect_header('person','biography_list');			
             return;
@@ -357,10 +350,8 @@ class personModule extends shnModule
 		
 		$this->biographics = Browse::getBiographyListArray($_POST['biographics']);		
 	}
-	
 
-	function act_new_biography()
-	{
+    function act_new_biography() {
 		global $conf;
 
 		include_once APPROOT.'inc/lib_form_util.inc';
@@ -408,8 +399,7 @@ class personModule extends shnModule
 		}					
 	}
 
-	function act_edit_biography()
-	{
+    function act_edit_biography() {
 		include_once APPROOT.'inc/lib_form_util.inc';
         include_once APPROOT.'inc/lib_uuid.inc';  
 	
@@ -456,8 +446,7 @@ class personModule extends shnModule
         }
 	}	
 
-	function act_biography_list()
-	{
+    function act_biography_list() {
 		include_once APPROOT.'inc/lib_form_util.inc';
         include_once APPROOT.'inc/lib_uuid.inc';
         
@@ -477,7 +466,11 @@ class personModule extends shnModule
                 break;
             case 'rp':
     			$this->related_person = new Person();
+                if (isset($_GET['reverse'])) {
+                    $this->related_person->LoadFromRecordNumber($this->biographic_details->person);
+                } else {
 	    		$this->related_person->LoadFromRecordNumber($this->biographic_details->related_person);
+                }
 		    	$this->related_person->LoadRelationships();
 			    $person_form = person_form('view');			
     			popuate_formArray($person_form, $this->related_person);
@@ -489,8 +482,7 @@ class personModule extends shnModule
 		$this->biography_list($this->pid);
 	}
 
-	function act_supporting_doc()
-	{
+    function act_supporting_doc() {
 		include_once APPROOT.'inc/lib_form_util.inc';
         include_once APPROOT.'inc/lib_uuid.inc';
 		$this->supporting_doc_form = $supporting_doc_form;
@@ -520,8 +512,7 @@ class personModule extends shnModule
         }
 	}
 
-	function act_role_list()
-	{
+    function act_role_list() {
                 $_GET['show_all'] = true;
 		$this->person_victim = "Victim";
 		$this->person_victim_type = 'victim';
@@ -563,8 +554,7 @@ class personModule extends shnModule
 		}	
 	}    
 
-	public function person_information($person_id,$person_form)
-	{		
+    public function person_information($person_id, $person_form) {
 		$person = new Person();
 		$person->LoadFromRecordNumber($person_id);    
 		$person->LoadRelationships();		
@@ -573,40 +563,38 @@ class personModule extends shnModule
 		return $person;
 	}
 
-	public function related_person_name($person_id)
-	{		
+    public function related_person_name($person_id) {
 		$person = new Person();
 		$person->LoadFromRecordNumber($person_id);		
 		return $person->person_name;
 	}
 		
-	public function biography_list($person_id)
-	{		
+    public function biography_list($person_id) {
 		$this->biographics = Browse::getBiographyList($person_id);
+        $this->biographics_reverse = Browse::getBiographyListReverse($person_id);
 	}	
 
-    public function act_print()
-    {
+    public function act_print() {
         $this->person->LoadRelationships();
 		$this->biographics = Browse::getBiographyList($this->person->person_record_number);
+        $this->biographics_reverse = Browse::getBiographyListReverse($this->person->person_record_number);
     }
 
 
-    public function act_permissions()
-    {
+    public function act_permissions() {
         $gacl_api = acl_get_gacl_api();
         $this->roles = acl_get_roles();
         if(isset($_POST['update'])){
             foreach($this->roles as $role_val => $role_name){
-                if($role_val=='admin')continue;
+                if ($role_val == 'admin')
+                    continue;
                 $acl_id = $gacl_api->search_acl('access','access', FALSE, FALSE, $role_name,'person', $this->person->person_record_number, FALSE, FALSE);
                 if( isset($_POST['roles'])&&in_array($role_val, $_POST['roles'])){
                     if(count($acl_id)==0){
                         $aro_grp =  $gacl_api->get_group_id($role_val, $role_name, 'ARO');
                         $return = $gacl_api->add_acl( array( 'access'=>array('access')), null , array($aro_grp), array( 'person'=>array($this->person->person_record_number)), null , 1 );
                     }
-                }
-                else{
+                } else {
                     $gacl_api->del_acl($acl_id[0]);
                 }
             }
