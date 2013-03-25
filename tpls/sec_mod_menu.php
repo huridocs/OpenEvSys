@@ -161,7 +161,7 @@ $menus["analysis"]["search_query"] = array(
     "url" => get_url('analysis', 'search_query', null, null, null, true));
 
 $menus["analysis"]["facetsearch"] = array(
-    "title" => _t('Faceted search'),
+    "title" => _t('Charts and map'),
     "url" => get_url('analysis', 'facetsearch', null, null, null, true));
 
 

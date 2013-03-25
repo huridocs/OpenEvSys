@@ -23,14 +23,14 @@ if(isset($vp_list)){
     ?>
     <br />
      <form class="form-horizontal"  action="<?php get_url('events','delete_act')?>" method="post">
-    <table class='print'>
+    <table class='table table-bordered table-hover'>
         <thead>
             <tr>
-                <td width="10pt"></td>
-                <td><?php echo _t('VICTIM_NAME') ?></td>
-                <td><?php echo _t('TYPE_OF_ACT') ?></td>
-                <td><?php echo _t('PERPETRATOR_NAME_S_') ?></td>
-                <td><?php echo _t('INVOLVEMENT') ?></td>
+                <th width="10pt"></th>
+                <th><?php echo _t('VICTIM_NAME') ?></th>
+                <th><?php echo _t('TYPE_OF_ACT') ?></th>
+                <th><?php echo _t('PERPETRATOR_NAME_S_') ?></th>
+                <th><?php echo _t('INVOLVEMENT') ?></th>
             </tr>
         </thead>
         <tbody>       
@@ -100,13 +100,13 @@ if(isset($vp_list)){
 if(isset($sources)){
     echo '<h2>'._t('SOURCES').'</h2>';
     ?>
-    <table class='print'>
+    <table class='table table-bordered table-hover'>
         <thead>
             <tr>
-                <td></td>
-                <td class="title"><?php echo _t('DATE_OF_SOURCE_MATERIAL')?></td>
-                <td class="title"><?php echo _t('SOURCE_NAME') ?></td>
-                <td class="title"><?php echo _t('INFORMATION')?></td>
+                <th></th>
+                <th><?php echo _t('DATE_OF_SOURCE_MATERIAL')?></th>
+                <th><?php echo _t('SOURCE_NAME') ?></th>
+                <th><?php echo _t('INFORMATION')?></th>
             </tr>
         </thead>
         <tbody>
@@ -155,13 +155,13 @@ if(isset($sources)){
 if(isset($intv_list)){
     echo '<h2>'._t('INTERVENTIONS').'</h2>';
     ?>
-    <table class="print">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <td></td>
-                <td><?php echo _t('DATE_OF_INTERVENTION') ?></td>
-                <td><?php echo _t('INTERVENING_PARTY') ?></td>
-                <td><?php echo _t('TYPE_OF_INTERVENTION') ?></td>
+                <th></th>
+                <th><?php echo _t('DATE_OF_INTERVENTION') ?></th>
+                <th><?php echo _t('INTERVENING_PARTY') ?></th>
+                <th><?php echo _t('TYPE_OF_INTERVENTION') ?></th>
 
             </tr>
         </thead>
@@ -211,13 +211,13 @@ if(isset($intv_list)){
 if(isset($related_events) || isset($related_events_reverse)){
     echo '<h2>'._t('CHANE_OF_EVENTS').'</h2>';
 ?>
-    <table class="print">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
-				<td></td>
-                <td><?php echo _t('INITIAL_DATE') ?></td>
-                <td><?php echo _t('RELATED_EVENT_TITLE') ?></td>
-                <td><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></td>
+				<th></th>
+                <th><?php echo _t('INITIAL_DATE') ?></th>
+                <th><?php echo _t('RELATED_EVENT_TITLE') ?></th>
+                <th><?php echo _t('TYPE_OF_CHAIN_OF_EVENTS') ?></th>
             </tr>
         </thead>
         <tbody>

@@ -508,7 +508,7 @@ function groupBy(){
     }
 
     this.setQuery = function(query){
-        if(query.group_by != null ){
+        if(query.group_by != null && query.group_by.length != 0){
             $('#qb-count-empty').remove();
             $('#query_builder_count').empty();
             od = openevsysDomain.getInstance();
@@ -1367,9 +1367,13 @@ function advSearch(){
         for(var count=0;entities.length > count;count++)
         {
             var fields = obj.getEntityFields(entities[count]);
+            
             list += "<li><a href='#'>"+obj.getEntityLabel(entities[count])+"</a><ul>";
             for(var key in fields)
             {
+                if(fields[key].field_type == "location"){
+                    continue;
+                }
                 //console.log(key);
                 for(countIn = 0;this.query.select.length > countIn; countIn++)
                 {
@@ -1648,7 +1652,7 @@ function advSearch(){
            
             as.setQuery(q);
             
-            if(q.group_by != null ){
+            if(q.group_by != null && q.group_by.length != 0){
                 as.fetchResultsAndDisplay("count");
             }else{
                 as.fetchResultsAndDisplay();

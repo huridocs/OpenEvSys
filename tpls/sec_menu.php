@@ -42,7 +42,7 @@
                        <a href="<?php get_url('docu', 'browse') ?>"><?php echo _t('DOCUMENTS') ?></a></li>
                            
                 <?php } ?>
-                       <?php if (acl_is_mod_allowed('events')) { ?>
+                       <?php /*if (acl_is_mod_allowed('events')) { ?>
                     <?php
                     $active = '';
                     if ('events' == $module && $action =="browse_act") {
@@ -65,19 +65,8 @@
                     <li class="<?php echo $active ?>"><a href="<?php get_url('events', 'browse_intervention') ?>"><?php echo _t('INTERVENTIONS') ?></a>
                            
                     </li>
-                <?php } ?>
-        <?php if (acl_is_mod_allowed('dashboard')) { ?>
-                    <?php
-                    $active = '';
-                    if ('dashboard' == $module) {
-                        $active = 'active';
-                        $breadcrumbs->pushCrumb(array('name' => _t('Dashboard'), 'mod' => 'dashboard', 'act' => 'dashboard'), 0);
-                    }
-                    ?>
-                    <li class="<?php echo $active ?>"><a href="<?php get_url('dashboard', 'dashboard') ?>"><?php echo _t('Dashboard') ?></a>
-                           
-                    </li>
-                <?php } ?>
+                <?php } */?>
+       
 
                 <?php
                 $active = '';
@@ -125,7 +114,18 @@
 
                 </ul>
             </div> <ul class="nav" style="float:right">
-          
+           <?php if (acl_is_mod_allowed('dashboard')) { ?>
+                    <?php
+                    $active = '';
+                    if ('dashboard' == $module) {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('Dashboard'), 'mod' => 'dashboard', 'act' => 'dashboard'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>"><a href="<?php get_url('dashboard', 'dashboard') ?>"><?php echo _t('Dashboard') ?></a>
+                           
+                    </li>
+                <?php } ?>
                 <?php if (acl_is_mod_allowed('analysis')) { ?>
                     <?php
                     $active = '';

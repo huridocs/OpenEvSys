@@ -683,7 +683,8 @@
                                         hAxis: {
                                             title: chart.haxistitle
                                         },
-                                        height:200
+                                        height:200,
+                                        chartArea: {left:20,width: '80%'}
                                     });
                                 }else if(charttype == "piechart"){
                                     new google.visualization.PieChart(document.getElementById(i+"_"+j)).draw(data2, {
@@ -725,8 +726,9 @@
                                     
                                     wrapper = new google.visualization.ChartWrapper({
                                     dataTable : data2,containerId: i+"_"+j,
-                                    chartType: editcharttype,
-                                    options:{ title:chart.title,titleTextStyle: {fontSize: 14}, height:300}
+                                    chartType: chart.editcharttype,
+                                    options:{ title:chart.title,titleTextStyle: {fontSize: 14}, height:300,
+                                    chartArea: {left:40,width: '60%'}}
                                   });
                                   wrapper.draw();
                                   chartwrappers[i+"_"+j] = wrapper;

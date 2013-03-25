@@ -21,14 +21,14 @@ if(isset($biographics) || isset($biographics_reverse)){
     echo '<h2>'._t('BIOGRAPHIC_DETAILS').'</h2>';
     ?>
     <br />
-    <table class='print'>
+    <table class='table table-bordered table-hover'>
         <thead>
             <tr>
-                <td></td>
-                <td class="title"><?php echo _t('TYPE_OF_RELATIONSHIP')?></td>
-                <td class="title"><?php echo _t('RELATED_PERSON') ?></td>
-                <td class="title"><?php echo _t('INITIAL_DATE')?></td>
-                <td class="title"><?php echo _t('FINAL_DATE')?></td>
+                <th></th>
+                <th><?php echo _t('TYPE_OF_RELATIONSHIP')?></th>
+                <th><?php echo _t('RELATED_PERSON') ?></th>
+                <th><?php echo _t('INITIAL_DATE')?></th>
+                <th><?php echo _t('FINAL_DATE')?></th>
             </tr>
         </thead>
         <tbody>

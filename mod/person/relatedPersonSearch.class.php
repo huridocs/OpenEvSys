@@ -91,7 +91,13 @@ class RelatedPersonSearch {
 	?>			
        <a class="btn" href="<?php echo get_url($this->mod,$this->act,null,null) ?>"><i class="icon-chevron-left"></i> <?php echo _t('BACK')?></a>
        <a class="btn" href="<?php echo get_url($this->mod,$this->cancel,null,null) ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL')?></a>
-       <button type="submit" class="btn"><i class="icon-search"></i> <?php echo _t('SEARCH')?></button>
+       <?php
+       if($this->act == "add_victim"){
+           ?>
+        <a class="btn" href="<?php echo get_url($this->mod,$this->act,null,array("view"=>"new_victim")) ?>"><i class="icon-plus "></i> <?php echo _t('ADD_NEW')?></a>
+      <?php
+       }
+       ?><button type="submit" class="btn"><i class="icon-search"></i> <?php echo _t('SEARCH')?></button>
        <br /><br />
     <?php     
     }

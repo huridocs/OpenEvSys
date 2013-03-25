@@ -1840,8 +1840,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
                     $recField = get_primary_key($selEntityOriginal);
                     $selEntt = $entity;
-                    if ($domaindata->$entt->ac_type) {
-                        $selEntt = $domaindata->$entt->ac_type;
+                    if ($domaindata->$selEntt->ac_type) {
+                        $selEntt = $domaindata->$selEntt->ac_type;
                     }
                     $recFieldEnt = get_primary_key($searchSql->tableOfEntity($fieldArray['map']['entity']));
 
@@ -1879,8 +1879,12 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $res = $global['db']->Execute($sqlchart);
                             $chart = array();
                             $chart["type"] = "editchart";
+                            $chart["editcharttype"] = "BarChart";
+                            
                             $chart["title"] = $fieldArray["label"];
                             $chart2 = $chart;
+                            $chart2["editcharttype"] = "PieChart";
+                            
                             foreach ($res as $val) {
                                
 
@@ -1907,7 +1911,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 $chart2["data"][] = array($vall, (int) $val[1]);
                             }
 
-                            $resp["charts"][] = array($chart, $chart2);
+                            //$resp["charts"][] = array($chart, $chart2);
+                            $resp["charts"][] = array($chart);
+                            $resp["charts"][] = array($chart2);
                         } catch (Exception $e) {
                             $response->error = "error"; //$e->getMessage();
                         }

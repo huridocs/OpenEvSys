@@ -563,7 +563,7 @@ function _shn_form_mt_tree($label,$name,$extra_opts,$multiple = false)
     ?>
     <select class="mt-tree input-large" title="<?php echo $name?>" <?php if($width)echo 'data-width="'.$width.'"';?> 
             onchange="<?php echo $extra_opts['onchange']?>" 
-            name="<?php echo $name?>[]" id="<?php echo $name?>"
+            name="<?php echo $name?><?php if($multiple)echo'[]';?>" id="<?php echo $name?>"
  <?php echo $select_opts?> tabindex="<?php echo ++$shn_tabindex?>"
  <?php if($multiple)echo ' multiple="multiple"';?> >
         <option value=""></option>
@@ -672,52 +672,7 @@ function _shn_form_print_mt_tree($mt,$name)
     ?>
     </select>
     <?php
-    return;
-    if($count > 100){
-        ?><ul class="mt-tree" id="<?php echo $name?>_ul" field_id="<?php echo $name ?>" mt_url="<?php get_url('home','mt_tree',null,array('list_code'=>$mt),'text') ?>"><?php 
-    }
-    else{
-        ?><ul class="mt-tree" id="<?php echo $name?>_ul" field_id="<?php echo $name ?>" ><?php 
-        echo "\n\t";
-        $pcode = '00';
-        $depth = 0;
-        for($i=0; $i<$count; )
-        {
-            $element1 = $data_array[$i];
-            $element2 = $data_array[++$i];
-
-            $h1 = strlen(rtrim($element1['huri_code'],'0'));
-            $h2 = strlen(rtrim($element2['huri_code'],'0'));
-
-            if($h1%2 == 1)$h1++;
-            if($h2%2 == 1)$h2++;
-
-            ?><li><span huricode="<?php echo $element1['vocab_number'] ?>"><?php echo $element1['label']?></span><?php
-
-
-            if($h1 == $h2){
-                echo "</li>\n";
-            }
-
-            if($h1 < $h2){
-                echo "\n<ul>\n";
-                $h2 = $h2 - 2;
-                while($h1 < $h2){   
-                    echo "\n<li><span>--</span><ul>\n";
-                    $h2 = $h2 - 2;
-                }
-            }
-            if($h2 < $h1 && isset($element2)){
-                while($h2 < $h1){   
-                    echo "\n</ul></li>\n";
-                    $h1 = $h1 - 2;
-                }
-            }
-        }
-    }
-    ?>
-    </ul>
-<?php
+ 
 }
 
 
@@ -726,47 +681,6 @@ function shn_form_mt_tree_mlt($label,$name,$extra_opts)
 {
  _shn_form_mt_tree($label,$name,$extra_opts,true);
  
- return;
-    global $global;
-    global $shn_tabindex;
-    
-    $options = array();
-
-    $value = (isset($_POST[$name])? $_POST[$name] : $extra_opts['value']);
-    //to prevent warnings set $options to array() if it is null
-    if(isset($label)){
-    ?>
-    <label  class="control-label" for="<?php echo $name?>"><?php echo $label?></label>
-    <?php
-    }
-?>
-    <div class="controls">
-        <?php
-    //print values if exists
-    echo "<ol id='{$name}_ol' class='multi_tree' field_id='$name'>";	
-    if(is_array($value))
-        foreach($value as $val){
-    ?>
-        <li>
-            <input type="hidden" name="<?php echo $name?>[]" id="<?php echo $name ?>" value="<?php echo $val ?>" />
-            <span><?php echo get_mt_term($val) ?></span>
-            <a onclick="$(this).parent().remove();"><?php echo _gettext('REMOVE') ?></a>
-            <?php
-            $ctid = $name.'_'.$val;
-            if($extra_opts['clari'])
-                shn_form_clari($ctid,$extra_opts['clari_value'][$val]);
-            ?>
-        </li>
-    <?php    
-        }
-    echo "</ol>";
-    _shn_form_print_mt_tree($extra_opts['mt'],$name);
-
-
-    shn_form_extra_opts($extra_opts);
-     ?>
-    </div>
-        <?php
 }
 
 /**
