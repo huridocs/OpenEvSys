@@ -753,7 +753,6 @@
             var editorid = $(this).data("editorid");
             var editor = new google.visualization.ChartEditor();
             wrapper = chartwrappers[editorid]
-            console.log(editorid)
                    
                    
             google.visualization.events.addListener(editor, 'ok',

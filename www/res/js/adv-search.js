@@ -551,8 +551,11 @@ function groupBy(){
                         var dck = (e.type == 'daily')?' selected="true" ' : '' ;
                         var mck = (e.type == 'monthly')?' selected="true" ' : '' ;
                         var yck = (e.type == 'yearly')?' selected="true" ' : '' ;
-                        var select = $('<select id="" name="" class="select searchval qb-count-type typeselectgroup"><option value="daily" '+dck+' >'+_('GROUP_BY_DAY')+'</option><option value="monthly"  '+mck+'>'+_('GROUP_BY_MONTHLY')+'</option><option value="yearly"  '+yck+'>'+_('GROUP_BY_YEARLY')+'</option></select>"');
-                        div.append(select);
+                        var selectt = $('<select id="" name="" class=" searchval qb-count-type typeselectgroup"><option value="daily" '+dck+' >'+_('GROUP_BY_DAY')+'</option><option value="monthly"  '+mck+'>'+_('GROUP_BY_MONTHLY')+'</option><option value="yearly"  '+yck+'>'+_('GROUP_BY_YEARLY')+'</option></select>"');
+                        div.append(selectt);
+                        selectt.select2({
+                            width: 'resolve'
+                        });
                         break;
                     case "mt_tree":
                         var o1ck = (e.type == '1')?' selected="true" ' : '' ;
@@ -562,10 +565,31 @@ function groupBy(){
                         var o5ck = (e.type == '5')?' selected="true" ' : '' ;
                         var o6ck = (e.type == '6')?' selected="true" ' : '' ;
                        
-                        var select = $('<select id="" name="" class="select searchval qb-count-type typeselectgroup"><option value="1" '+o1ck+'>'+_('1ST_LEVEL')+'</option><option value="2" '+o2ck+'>'+_('2ND_LEVEL')+'</option><option value="3" '+o3ck+'>'+_('3RD_LEVEL')+'</option><option value="4" '+o4ck+'>'+_('4TH_LEVEL')+'</option><option value="5" '+o5ck+'>'+_('5TH_LEVEL')+'</option><option value="6" '+o6ck+'>'+_('6TH_LEVEL')+'</option></select>');
-                        div.append(select);
+                        var selectt = $('<select id="" name="" class=" searchval qb-count-type typeselectgroup"><option value="1" '+o1ck+'>'+_('1ST_LEVEL')+'</option><option value="2" '+o2ck+'>'+_('2ND_LEVEL')+'</option><option value="3" '+o3ck+'>'+_('3RD_LEVEL')+'</option><option value="4" '+o4ck+'>'+_('4TH_LEVEL')+'</option><option value="5" '+o5ck+'>'+_('5TH_LEVEL')+'</option><option value="6" '+o6ck+'>'+_('6TH_LEVEL')+'</option></select>');
+                        div.append(selectt);
+                        selectt.select2({
+                            width: 'resolve'
+                        });
                         break;
                 }
+                
+                var but = $("<div class='closediv' style='margin-top: 7px;'><a href='#' title='"+_('REMOVE_CONDITION')+"'  ><i class='icon-remove'></i></a></div>");
+                div.append(but);
+       
+                $('#query_builder_count .closediv a').click(function(e){
+                    e.preventDefault();
+                    var div = $(this).closest("div.row-fluid");
+                    div.remove();
+           
+                    var divlast = $('#query_builder_count').find('div.row-fluid:last')
+                    var entity = divlast.find('select.entselectgroup:first').val();
+                    if(entity == null || entity == "" ){
+                        divlast.remove();
+                        qbg = groupBy.getInstance(null);
+                        qbg.addNewCondition();
+                    }
+            
+                });
                 
             }
             this.addNewCondition();            
@@ -637,6 +661,7 @@ function groupBy(){
  
         }
         var div = $("<div class='row-fluid show-grid new'></div>");
+         
         div.append(select);
         $('#query_builder_count').append(div);
         select.select2({
@@ -687,12 +712,14 @@ function groupBy(){
             qbg.addField($(this));
         });
         
+       
         
     }
 
     this.addField = function(fieldselect){
         $(".fieldselectgroup").select2("disable");
         this.addController(fieldselect);
+        
         this.addNewCondition();
        
     }
@@ -726,7 +753,6 @@ function groupBy(){
         
         var od = openevsysDomain.getInstance();
         var field_type = od.getFieldType(field_name, entity_name);
-        
         var options = openevsysDomain.getInstance().getOperator(field_type);
                
         switch(field_type){
@@ -789,6 +815,23 @@ function groupBy(){
                
                 break;
         }
+        var but = $("<div class='closediv' style='margin-top: 7px;'><a href='#' title='"+_('REMOVE_CONDITION')+"'  ><i class='icon-remove'></i></a></div>");
+        div.append(but);
+       
+        $('#query_builder_count .closediv a').click(function(e){
+            e.preventDefault();
+            var div = $(this).closest("div.row-fluid");
+            div.remove();
+           
+            var divlast = $('#query_builder_count').find('div.row-fluid:last')
+            var entity = divlast.find('select.entselectgroup:first').val();
+            if(entity == null || entity == "" ){
+                divlast.remove();
+                qbg = groupBy.getInstance(null);
+                qbg.addNewCondition();
+            }
+            
+        });
         
      
     }
@@ -1206,7 +1249,9 @@ function queryBuilder(){
                 var o = $('<input type="text" value="" class="searchval" />');
                 div.append(o);
         }
+        
         this.addAndOperater(div);
+        
         return;
   
     }
@@ -1224,14 +1269,13 @@ function queryBuilder(){
         }
         ];
         var select = $("<select id=\"\" name=\"\" class=\"operselect\" />");
-        for(var option in options){
-            if(options[option].value == value){
+        for(var i in options){
                    
                 $("<option />", {
-                    value:  options[option].value, 
-                    text: options[option].label
+                    value:  options[i].value, 
+                    text: options[i].label
                 }).appendTo(select);
-            }
+            
         }
         //var div = $(sel).closest("div");
         div.append(select);
@@ -1241,6 +1285,27 @@ function queryBuilder(){
         select.select2({
             width: 'resolve'
         });
+        
+        var but = $("<div class='closediv'><a href='#' title='"+_('REMOVE_CONDITION')+"' ><i class='icon-remove'></i></a></div>");
+        div.append(but);
+       
+        $('#query_builder .closediv a').click(function(e){
+            e.preventDefault();
+            var div = $(this).closest("div.row-fluid");
+            div.remove();
+           
+            var divlast = $('#query_builder').find('div.row-fluid:last')
+            var entity = divlast.find('select.entselect:first').val();
+            if(entity == null || entity == "" ){
+                divlast.remove();
+                qb = queryBuilder.getInstance(null);
+           
+                qb.addNewCondition();
+            }
+            
+            groupBy.getInstance().update();
+        });
+        
         return;
         
         
