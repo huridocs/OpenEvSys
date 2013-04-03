@@ -99,7 +99,7 @@ function get_form_element_length($formType) {
 function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
     //$viewType can be 'new' , 'edit' or 'view'
     //var_dump($entity , $viewType);
-    global $global;
+    global $global,$conf;
     if ($entity != null) {
 
         if ($entity == 'victim' || $entity == 'perpetrator' || $entity == 'source' || $entity == 'intervening_party') {
@@ -149,9 +149,14 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 $visible_field = 'visible_new';
                 break;
         }
+        
+        $isAdmin = acl_is_mod_allowed('admin');
 
         //var_dump($visible_field);
         foreach ($entityFields as $entityField) {
+            if (!$isAdmin && isset($conf['fieldstohide']) && isset($conf['fieldstohide'][$entity]) && in_array($entityField['field_name'], $conf['fieldstohide'][$entity])) {
+                continue;
+            }
             $type = $entityField['field_type'];
             $clari = ( (trim($entityField['clar_note']) == 'Y' || trim($entityField['clar_note']) == 'y' ) ? true : false );
             $mlt = ( (trim($entityField['is_repeat']) == 'Y' || trim($entityField['is_repeat']) == 'y' ) ? true : false );

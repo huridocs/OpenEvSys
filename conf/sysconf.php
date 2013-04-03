@@ -132,3 +132,5 @@ $conf['media_mode'] = 0777;
 
 //session timeout in minuts
 $conf['session_timeout']= 60;
+
+$conf['fieldstohide'] = array("event"=>array("publishable","public_title","public_title_eng", "summary_spa", "summary_eng"));
