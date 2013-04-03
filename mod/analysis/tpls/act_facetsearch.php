@@ -10,20 +10,21 @@ global $conf;
     google.load('visualization', '1', {packages: ['corechart','charteditor']});
 </script>
 <div class="panel">
-    <ul class="nav nav-tabs facet-tabs" id="myTab">
-        <?php
+    <select name="entselect" id="entselect">
+        <option value=""></option>
+    <?php
         $i = 0;
 
         foreach ($entities as $entity) {
             ?>
-            <li <?php if ($i == 0) echo 'class="active"' ?>><a href="#<?php echo $entity ?>"><?php echo $domaindata->$entity->label ?></a></li>
+            <option value="<?php echo $entity ?>"><?php echo $domaindata->$entity->label ?></option>
             <?php
             $i++;
         }
         ?>
-    </ul>
-
-    <div class="tab-content">
+    </select>
+<br/>
+<br/>
         <?php
         $i = 0;
         $facetlabels = array();
@@ -37,17 +38,30 @@ global $conf;
                 $fields[$entity] = $domaindata->$entity->fields;
                 $entity_trans = $entity;
             }
-
+            
             foreach ($entities_map[$entity] as $ent) {
                 $fields = array_merge($fields, getFieldsRecursive($ent, $entities_map, $domaindata));
             }
+            //$fields = array_unique($fields, SORT_REGULAR);
+            
             return $fields;
         }
-
+        function getParent($entity, $entities_map){
+            $entityParent = $entity;
+            foreach($entities_map as $k=>$e){
+                if(in_array($entity, $e)){
+                    $entityParent = getParent($k,$entities_map);
+                    break;
+                }
+            }
+            return $entityParent;
+        }
         foreach ($entities as $entity) {
-            $fields = getFieldsRecursive($entity, $entities_map, $domaindata);
+            $entityParent = getParent($entity, $entities_map);
+            
+            $fields = getFieldsRecursive($entityParent, $entities_map, $domaindata);
             ?>
-            <div class="tab-pane <?php if ($i == 0) echo "active"; ?>" id="<?php echo $entity ?>">
+            <div style="display:none" class="fieldsbox" id="<?php echo $entity ?>">
                 <select name="facets" multiple="multiple" class="facetsselect" id="<?php echo $entity ?>facets"> 
                     <?php
                     $i = 1;
@@ -76,7 +90,6 @@ global $conf;
             $i++;
         }
         ?>
-    </div>
     <br/> <br/>
     <div class="facetsearchcontainer"></div>
 
@@ -118,7 +131,18 @@ global $conf;
         $('#myTab a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
-        })
+        });
+        $("#entselect").select2({
+            width: 'resolve',
+            allowClear: true,
+            placeholder: "Select entity"
+        });
+        $("#entselect").on("change", function() { 
+            $(".fieldsbox").hide();
+            
+           $("#"+$(this).val()).show();
+        });
+        
         $(".facetsselect").select2({
             width: 'resolve',
             allowClear: true,

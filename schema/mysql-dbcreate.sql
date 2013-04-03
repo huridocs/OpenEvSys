@@ -68,7 +68,8 @@ DROP TABLE IF EXISTS  `address` ;
 DROP TABLE IF EXISTS  `biographic_details` ;
 DROP TABLE IF EXISTS  `person` ;
 DROP TABLE IF EXISTS  `event` ;
-
+DROP TABLE IF EXISTS  `mlt_geometry` ;
+DROP TABLE IF EXISTS  `mlt_geometry_seq` ;
 
 DROP TABLE IF EXISTS  mt_1_index_term ;
 
@@ -782,8 +783,8 @@ CREATE  TABLE IF NOT EXISTS  `event` (
   `files` TEXT NULL DEFAULT NULL ,
   `record_grouping` VARCHAR(500) NULL DEFAULT NULL ,
   -- `monitoring_status` VARCHAR(60) NULL DEFAULT NULL ,
-  `latitude` double NOT NULL DEFAULT '0',
-  `longitude` double NOT NULL DEFAULT '0',
+  `event_location_latitude` double  NULL DEFAULT NULL,
+  `event_location_longitude` double  NULL DEFAULT NULL,
   PRIMARY KEY (`event_record_number`) ,
   -- INDEX  (`initial_date_type` ASC) ,
   -- INDEX final_date_type_fk (`final_date_type` ASC) ,
@@ -804,6 +805,21 @@ CREATE  TABLE IF NOT EXISTS  `event` (
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
 ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mlt_geometry` (
+  `geometry_record_number` varchar(45) NOT NULL,
+  `entity_type` varchar(100) NOT NULL,
+  `entity_id` varchar(45) NOT NULL,
+  `geometry` geometry NOT NULL,
+  `field_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`geometry_record_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE IF NOT EXISTS `mlt_geometry_seq` (
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -854,8 +870,8 @@ CREATE  TABLE IF NOT EXISTS  `person` (
   `reliability_as_source` VARCHAR(14)  ,    -- 42: Reliability.
   `reliability_as_intervening_party` VARCHAR(14)  , -- 42: Reliability.
   `files` TEXT,
-  `latitude` double NOT NULL DEFAULT '0',
-  `longitude` double NOT NULL DEFAULT '0',
+  `person_location_latitude` double  NULL DEFAULT NULL,
+  `person_location_longitude` double  NULL DEFAULT NULL,
   PRIMARY KEY (`person_record_number`),
   FOREIGN KEY (`counting_unit`) REFERENCES mt_7_counting_units (vocab_number) , -- 07: Counting Units
 
@@ -965,8 +981,8 @@ CREATE  TABLE IF NOT EXISTS  `act` (
   -- `06_*_international_instruments` VARCHAR(60) NULL DEFAULT NULL , -- 06 international instruments
   
    -- `supporting_documents` VARCHAR(60) NULL DEFAULT NULL ,
-  `latitude` double NOT NULL DEFAULT '0',
-  `longitude` double NOT NULL DEFAULT '0',
+  `act_location_latitude` double  NULL DEFAULT NULL,
+  `act_location_longitude` double NULL DEFAULT NULL,
   PRIMARY KEY (`act_record_number`, `event`) ,
   -- INDEX fk_Act_Event (`Event_event_record_number` ASC) ,
   -- INDEX fk_Act_Person (`victim_person_record_number` ASC) ,
@@ -1201,8 +1217,8 @@ CREATE  TABLE IF NOT EXISTS  `intervention` (
   remarks TEXT,
   `intervention_status` VARCHAR(14) NULL DEFAULT NULL ,      -- 45: Intervention Status 
   `priority` VARCHAR(14) NULL DEFAULT NULL ,                 -- 46: Priority,
-  `latitude` double NOT NULL DEFAULT '0',
-  `longitude` double NOT NULL DEFAULT '0',
+  `intervention_location_latitude` double  NULL DEFAULT NULL,
+  `intervention_location_longitude` double  NULL DEFAULT NULL,
   PRIMARY KEY (`intervention_record_number`) ,  
     FOREIGN KEY (`event` ) REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE

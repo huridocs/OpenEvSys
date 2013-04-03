@@ -87,6 +87,7 @@ $gacl_api->add_object('modules', 'Home' , 'home' ,4,0,'AXO');
 $gacl_api->add_object('modules', 'Help' , 'help' ,5,0,'AXO');
 $gacl_api->add_object('modules', 'Admin' , 'admin' ,6,0,'AXO');
 $gacl_api->add_object('modules', 'Analysis' , 'analysis' ,7,0,'AXO');
+$gacl_api->add_object('modules', 'Dashboard' , 'dashboard' ,8,0,'AXO');
 
 $gacl_api->add_object('entities', 'Event' , 'event' ,1,0,'AXO');
 $gacl_api->add_object('entities', 'Person' , 'person' ,2 ,0,'AXO');
@@ -157,7 +158,11 @@ $gacl_api->add_acl( 	array( 'access'=>array('access') ) ,
                         array( $g_user_data_entry ),
                         array( 'modules' => array(  'person' , 'events' , 'docu' ) ) 															
                 );    	 				
-                
+$gacl_api->add_acl( 	array( 'access'=>array('access') ) ,
+                        null ,
+                        array( $g_user_admin ),
+                        array( 'modules' => array('dashboard'  ) ) 															
+                );                
 
 $gacl_api->add_acl( 	array( 'crud'=>array('create', 'read' , 'update' , 'delete') ) ,
                         null ,

@@ -1492,7 +1492,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         return $domain;
     }
 
-  
     public function act_facetsearch() {
         global $global;
         $global["js"][] = "map";
@@ -1536,6 +1535,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $searchparams = $_GET['searchparams'];
         $searchparams = json_decode($searchparams);
         $resp = array();
+
         if ($searchparams) {
             $domaindata = $this->getEntityFields();
 
@@ -1630,12 +1630,25 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $additionalFields[$sel->entity][] = $recField;
                 }
             }
-            
+
             $selectFields = array_unique($selectFields, SORT_REGULAR);
 
 
 
             $query->select = $selectFields;
+
+            function entitySort($a, $b) {
+                $enord = array('event', 'act', 'intervention', 'arrest', 'torture', 'killing', 'destruction',
+                    'victim', 'involvement', 'perpetrator', 'information', 'source', 'chain_of_events',
+                    'intervening_party', 'address', 'biographic_details', 'supporting_docs_meta');
+                $aorder = array_search($a->entity, $enord);
+                $border = array_search($b->entity, $enord);
+                return $border - $aorder;
+            }
+
+            usort($query->select, "entitySort");
+            usort($query->conditions, "entitySort");
+
 
             $from = (int) $searchparams->paging->from;
             $size = (int) $searchparams->paging->size;
@@ -1667,7 +1680,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $fieldTitles = array();
             //if the query is a search put select fields to the array
             foreach ($query->select as $field) {
-                if(in_array($field->field,$additionalFields[$field->entity])){
+                if (in_array($field->field, $additionalFields[$field->entity])) {
                     continue;
                 }
                 $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
@@ -1680,9 +1693,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $fieldTitles[] = $field->field;
                 }
             }
-            
-            $records[0] = $fieldTitles;
 
+            $records[0] = $fieldTitles;
+//var_dump($query->select);exit;
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
@@ -1734,7 +1747,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     if ($confidentiality_field == 'confidentiality') {
                         if ($val[$field_name] == 'y') {
                             $val[$field_name] = _t('YES');
-                        } else {
+                        } elseif ($val[$field_name] == 'n') {
                             $val[$field_name] = _t('NO');
                         }
                     }
@@ -1750,6 +1763,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $string = null;
                     if ($fields_array[$count]['mt']) {
                         $list = explode(',', $val[$field_name]);
+                        //var_dump($val);exit;
                         foreach ($list as $term) {
                             $string = $string . ", " . get_mt_term(trim($term));
                         }
@@ -1848,7 +1862,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     if ($fieldArray['map']['mlt']) {
                         $mltTable = 'mlt_' . $searchSql->tableOfEntity($fieldArray['map']['entity']) . '_' . $fieldArray['map']['field'];
 
-                        $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.record_number) AS count
+                        $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.record_number) AS count,m.vocab_number as vocab_number
                             FROM ({$sqlArray['result']}) d LEFT JOIN $mltTable t  on  t.record_number=d.{$entity}_$recFieldEnt left join
                             mt_vocab m on m.vocab_number=t.vocab_number
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY t.vocab_number
@@ -1856,7 +1870,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     } elseif (is_management_field($fieldArray)) {
                         $f = $entity . "_" . $fieldArray['map']['field'];
 
-                        $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(d.{$selEntityOriginal}_$recField) AS count
+                        $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(d.{$selEntityOriginal}_$recField) AS count,m.vocab_number as vocab_number
                             FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$entity}_$recFieldEnt and t.entity_type='$entity' 
                             left join  mt_vocab m on m.vocab_number=t.{$fieldArray['map']['field']}
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY $f
@@ -1865,28 +1879,28 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         $f = $entity . "_" . $fieldArray['map']['field'];
 
                         if ($fieldType == "mt_select" || $fieldType == "mt_tree") {
-                            $sqlchart = "SELECT IFNULL(l.msgstr , english)  as val, COUNT({$selEntityOriginal}_$recField) AS count
+                            $sqlchart = "SELECT IFNULL(l.msgstr , english)  as val, COUNT({$selEntityOriginal}_$recField) AS count,m.vocab_number as vocab_number
                             FROM ({$sqlArray['result']}) d left join  mt_vocab m on m.vocab_number=d.{$f}
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY {$f}";
                         } else {
-                            $sqlchart = "SELECT d.{$f} as val, COUNT({$selEntityOriginal}_$recField) AS count
+                            $sqlchart = "SELECT d.{$f} as val, COUNT({$selEntityOriginal}_$recField) AS count,d.{$f} as vocab_number
                             FROM ({$sqlArray['result']}) d   GROUP BY {$f}";
                         }
                     }
-
+                    $facetcounts = array();
                     if ($sqlchart) {
                         try {
                             $res = $global['db']->Execute($sqlchart);
                             $chart = array();
                             $chart["type"] = "editchart";
                             $chart["editcharttype"] = "BarChart";
-                            
+
                             $chart["title"] = $fieldArray["label"];
                             $chart2 = $chart;
                             $chart2["editcharttype"] = "PieChart";
-                            
+
                             foreach ($res as $val) {
-                               
+
 
                                 $vall = _t("Undefined");
                                 if ($val[0]) {
@@ -1901,7 +1915,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 } elseif (!(int) $val[1]) {
                                     continue;
                                 }
-                                 $chart["data"][0][0] = $chart["title"];
+                                $chart["data"][0][0] = $chart["title"];
                                 $chart["data"][1][0] = "";
 
                                 $chart["data"][0][] = $vall;
@@ -1909,6 +1923,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
                                 $chart2["data"][0] = array($chart["title"], _t("Count"));
                                 $chart2["data"][] = array($vall, (int) $val[1]);
+
+                                $facetcounts[$val[2]] = (int) $val[1];
                             }
 
                             //$resp["charts"][] = array($chart, $chart2);
@@ -1921,19 +1937,32 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $terms = array();
                     switch ($fieldType) {
                         case 'radio':
-                            $resp["facets"][$field] = array("terms" => array(
-                                    array('term' => 'y', 'label' => _t('Yes')),
-                                    array('term' => 'n', 'label' => _t('No'))
-                                ), "entity" => $entity);
+
+                            $label = _t('Yes');
+                            if (isset($facetcounts["y"])) {
+                                $label .= " (" . $facetcounts["y"] . ")";
+                            }
+                            $resp["facets"][$field]["terms"][] = array('term' => 'y', 'label' => $label);
+
+                            $label = _t('No');
+                            if (isset($facetcounts["n"])) {
+                                $label .= " (" . $facetcounts["n"] . ")";
+                            }
+                            $resp["facets"][$field]["terms"][] = array('term' => 'n', 'label' => $label);
+
+                            $resp["facets"][$field]["entity"] = $entity;
                             break;
                         case 'mt_select':
                             $data_array = MtFieldWrapper::getMTList($listCode);
                             $size = count($data_array);
                             $options[''] = ' ';
                             for ($i = 0; $i < $size; $i++) {
-                                //$options[$data_array[$i]['vocab_number']] = $data_array[$i]['label'];
+                                $label = $data_array[$i]['label'];
+                                if (isset($facetcounts[$data_array[$i]['vocab_number']])) {
+                                    $label .= " (" . $facetcounts[$data_array[$i]['vocab_number']] . ")";
+                                }
                                 $terms[] = array('term' => $data_array[$i]['vocab_number'],
-                                    'label' => $data_array[$i]['label']);
+                                    'label' => $label);
                             }
                             $resp["facets"][$field] = array("terms" => $terms, "entity" => $entity);
 
@@ -1953,9 +1982,13 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 if ($h2 % 2 == 1)
                                     $h2++;
 
+                                $label = $element1['label'];
+                                if (isset($facetcounts[$element1['vocab_number']])) {
+                                    $label .= " (" . $facetcounts[$element1['vocab_number']] . ")";
+                                }
 
                                 $terms[] = array('term' => $element1['vocab_number'],
-                                    'label' => $element1['label'],
+                                    'label' => $label,
                                     'level' => (int) $level);
 
                                 if ($h1 < $h2) {
@@ -2030,9 +2063,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $url = get_record_url($val[0], $selEntity);
                     $i = 1;
                     foreach ($field_names as $field_name) {
-                        if($val[$i] && $val[$i + 1]){
-                        $markers[] = array("latitude" => $val[$i], "longitude" => $val[$i + 1],
-                            "title" => $val[0], "content" => "<a href='" . $url . "' target='_blank'>" . $val[0] . "</a>");
+                        if ($val[$i] && $val[$i + 1]) {
+                            $markers[] = array("latitude" => $val[$i], "longitude" => $val[$i + 1],
+                                "title" => $val[0], "content" => "<a href='" . $url . "' target='_blank'>" . $val[0] . "</a>");
                         }
                         $i = $i + 2;
                     }
