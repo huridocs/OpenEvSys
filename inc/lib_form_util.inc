@@ -158,8 +158,13 @@ function generate_formarray($entity , $viewType = 'new' , $allVisible = false){
 				break;
 		}
 
+                $isAdmin = acl_is_mod_allowed('admin');
+
 		//var_dump($visible_field);
 		foreach ( $entityFields as $entityField ){
+                    if (!$isAdmin && isset($conf['fieldstohide']) && isset($conf['fieldstohide'][$entity]) && in_array($entityField['field_name'], $conf['fieldstohide'][$entity])) {
+                        continue;
+                    }
 			$type = $entityField['field_type'];
 			$clari = ( (trim($entityField['clar_note']) == 'Y'  || trim($entityField['clar_note']) == 'y' )
 			?  true : false );
