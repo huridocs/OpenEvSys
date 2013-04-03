@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" >
   
     <script src="theme/default/theme.js" type="text/javascript"></script>
-   <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="res/jquery/jquery-1.9.1.min.js"></script>
        
          <script src="res/bootstrap/bootstrap.min.js"></script>
        	<script type="text/javascript">

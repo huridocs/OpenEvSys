@@ -1,117 +1,151 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-<title>OpenEvSys 1.1 Installer</title>
+<title>OpenEvSys 2.0</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="screen"  href="theme/default/screen.css"/>
-    <link rel="stylesheet" type="text/css" media="print" href="theme/default/print.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/jquery.asmselect.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="res/jquery/jquery-treeview/jquery.treeview.css" />
+    <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css"  href="theme/default/screen.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="theme/default/css/bootstrap.min.css" >
+  
     <script src="theme/default/theme.js" type="text/javascript"></script>
-    <script type="text/javascript" src="res/jquery/jquery.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery-ui/jquery-ui.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery.hotkeys.js"></script>
-    <script type="text/javascript" src="res/js/main.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery.asmselect.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery-treeview/lib/jquery.cookie.js"></script>
-    <script type="text/javascript" src="res/jquery/jquery-treeview/jquery.treeview.js"></script>
+   <script src="res/jquery/jquery-1.9.1.min.js"></script>
+       
+         <script src="res/bootstrap/bootstrap.min.js"></script>
+       	<script type="text/javascript">
+      	$(document).ready(function(){
+   			$('#username').focus();
+ 		});
+    </script>
+    <style>
+        input{
+            height:30px !important;
+        }
+        
+        </style>
 </head>
 <body>
 <div id="container">
-    <br />
-    <br />
-    <div class="form-container">
-    <form action='index.php' method='post'>
-        <center><h2>OpenEvSys Installer</h2></center>
-        <div width="600px" style="margin:auto;width:600px;">
-            <div class="panel">
-                <div id="installer">
+    <div id="login-container">
+        <div id="content">
+               <center><img src="theme/default/images/img_logo.png?v=1" class="logo"/></center>
+           <br/><br/>
+    <form action='index.php' method='post' class="form-horizontal hero-unit" style="margin: 0 auto;width: 600px;padding:20px;">
+        <center><h3>OpenEvSys Installer</h3></center>
                 <?php 
-                    if($sucess)
+                    if(isset($sucess) && $sucess)
                     {
                 ?>
-                <strong class='green'>Installation was successful</strong>
+        <div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+                <strong>Installation was successful</strong>
                 <p><em><strong>Warning :</strong></em> Please make the "../conf/sysconf.php" read only.</p>
                 <br />
                 <center><a href='index.php'>Click to Continue</a></center>
+        </div>
                 <?php
                     }
                     else{
                         if(is_array($global['error'])){ 
-                            echo "<div class='error'>";
-                            echo "<ul>";
-                            foreach($global['error'] as $error){
+                            ?>
+         <div class="alert alert-error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+  <ul>
+                           <?php foreach($global['error'] as $error){
                                 echo "<li>$error</li>";
-                            }
-                            echo "</ul>";
-                            echo "</div>";
+                            }?>
+                            </ul>
+                            </div>
+        <?php
                         }
                 ?>
-                    <h3>1. Check file permission</h3>
-                    <p>OpenEvSys require the following tables to be writable via webserver.</p>
+                    <h4>1. Check file permission</h4>
+                    <p>OpenEvSys require the following folders to be writable via webserver.</p>
                     <ul>
                         <li><?php echo APPROOT?>conf/  &nbsp; <?php echo $conf_dir; ?></li>
                         <li><?php echo APPROOT?>media/ &nbsp; <?php echo $media; ?></li>
                     </ul>
                     <br />
-                    <h3>2. Database Setup</h3>
-                    <div class='field'>                    
-                        <label>Host</label>
-                        <input type='input' name='db_host'/>
-                    </div>
-                    <div class='field'>                    
-                        <label>User</label>
-                        <input type='input' name='db_user' />
-                    </div>
-                    <div class='field'>                    
-                        <label>Password</label>
-                        <input type='password' name='db_password' />
-                    </div>
-                    <div class='field'>                    
-                        <label>Database Name</label>
-                        <input type='input' name='db_name'/>
-                    </div>
+                    <h4>2. Database Setup</h4>
+                    
+                   <div class="control-group">
+      
+    <label class="control-label" for="db_host">Host</label>
+    <div class="controls">
+      <input type="text" id="db_host" name="db_host"  autocomplete="off">
+    </div>
+  </div>
+             <div class="control-group">
+      
+    <label class="control-label" for="db_user">User</label>
+    <div class="controls">
+      <input type="text" id="db_user" name="db_user"  autocomplete="off">
+    </div>
+  </div>
+                     <div class="control-group">
+      
+    <label class="control-label" for="db_password">Password</label>
+    <div class="controls">
+      <input type="password" id="db_password" name="db_password"  autocomplete="off">
+    </div>
+  </div>
+                     <div class="control-group">
+      
+    <label class="control-label" for="db_name">Database Name</label>
+    <div class="controls">
+      <input type="text" id="db_name" name="db_name"  autocomplete="off">
+    </div>
+  </div>
+                   <br />
+                    <h4>3. Admin Password</h4>
                     <br />
-                    <h3>3. Admin Password</h3>
+                    <div class="control-group">
+      
+    <label class="control-label" for="password">Type Password</label>
+    <div class="controls">
+      <input type="password" id="password" name="password"  autocomplete="off">
+    </div>
+  </div>
+                    <div class="control-group">
+      
+    <label class="control-label" for="password_c">Confirm Password</label>
+    <div class="controls">
+      <input type="password" id="password_c" name="password_c"  autocomplete="off">
+    </div>
+  </div>
                     <br />
-                    <div class='field'>                    
-                        <label>Type Password</label>
-                        <input type='password' name='password' />
-                    </div>
-                    <div class='field'>                    
-                        <label>Confirm Password</label>
-                        <input type='password' name='password_c' />
-                    </div>
-                    <br />
-                    <h3>4. System identifier</h3>
-                    <p>Following id should be unique to this installation of openevsys. </p>
-                    <div class='field'>                  
-                        <label>Unique identifier</label>
-                        <input type='text' name='base_uuid' value="<?php echo getUniqueCode(5); ?>" />
-                    </div>
+                    <h4>4. System identifier</h4>
+                    <p>Following id should be unique to this installation of OpenEvSys. </p>
+                    <div class="control-group">
+      
+    <label class="control-label" for="base_uuid">Unique identifier</label>
+    <div class="controls">
+      <input type="text" id="base_uuid" name="base_uuid" value="<?php echo getUniqueCode(5); ?>" autocomplete="off">
+    </div>
+  </div>
                     <br />
                     <center>
-                        <?php if($file_check){ ?>
-                        <input type='submit' value='Check Permissions' class='submit'/>
+                        <?php if(isset($file_check) && $file_check){ ?>
+                        <input type='submit' value='Check Permissions' class='btn'/>
                         <?php }else{?>
-                        <input type='submit' value='Install' class='submit' name='install' />
+                        <input type='submit' value='Install' class='btn' name='install' />
                         <?php }?>
                     </center>
                 <?php
                     }
                 ?>
-                </div>
-            </div>
-        </div>
+           
     </form>
     </div>
-    <div id="footer">
-        <span>About</span>
-        <a href="http://openevsys.org" target='blank'>OpenEvSys</a><span>&nbsp;|&nbsp;</span>
-        <span>&copy;</span>
-        <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
-        <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
-        <span class='version'><?php echo 'Version';echo " : ";echo file_get_contents(APPROOT.'/VERSION'); ?></span>
+
+        <div id="footer">
+            <span>About</span>
+            <a href="http://openevsys.org" target='blank'>OpenEvSys</a><span>&nbsp;|&nbsp;</span>
+            <span>&copy;</span>
+            <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
+            <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
+            <span class='version'>VERSION : <?php echo file_get_contents(APPROOT.'/VERSION'); ?></span>
+        </div>
     </div>
 </div>
 </body>
