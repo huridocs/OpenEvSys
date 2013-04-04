@@ -2,6 +2,13 @@
 
 include_once APPROOT.'inc/lib_form.inc';
 
+function endswith($string, $test) {
+	$strlen = strlen($string);
+	$testlen = strlen($test);
+	if ($testlen > $strlen) return false;
+	return substr_compare($string, $test, -$testlen) === 0;
+}
+
 function compartmentalize_view_form($entity_form ) {
 
 	$normalFields =array();
@@ -12,7 +19,9 @@ function compartmentalize_view_form($entity_form ) {
 		 
 		if( $entity_form[$fieldName]['type'] != 'submit' ){
 			$field_number = $entity_form[$fieldName]['field_number'] % 100 ;
-			if( $field_number == 1 || $field_number == 61 || $field_number == 62 || $field_number == 70 || $field_number == 71  ){
+			
+			if(endswith($fieldName,"_record_number") || 'date_of_entry'==$fieldName || 'entered_by'==$fieldName ||'date_updated'==$fieldName || 'updated_by'==$fieldName){			
+			//if( $field_number == 1 || $field_number == 61 || $field_number == 62 || $field_number == 70 || $field_number == 71  ){
 				$systemFields[$fieldName] = $field;
 			} else if ($field_number == 66){
 				$supportingDocFields[$fieldName] = $field;
