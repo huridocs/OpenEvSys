@@ -117,8 +117,9 @@ function generate_formarray($entity , $viewType = 'new' , $allVisible = false){
 	//$viewType can be 'new' , 'edit' or 'view'
 	//var_dump($entity , $viewType);
 	global $global;
+	global $conf;
 	if( $entity!=null){
-		 
+	
 		if($entity == 'victim' || $entity=='perpetrator' || $entity == 'source' || $entity =='intervening_party'){
 			//var_dump('generate_form_array',$entity);
 			$secEntity = new SecEntity();
