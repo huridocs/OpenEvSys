@@ -50,7 +50,7 @@ function exception_handler($e)
         $controller->sendResponce();
     }
     else if($e instanceof ADODB_Exception){
-        var_dump($e);
+        
         $controller = shnFrontController::getController();
         $controller->setAction('db_error');
         $controller->sendResponce();

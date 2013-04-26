@@ -187,17 +187,21 @@ class Person extends DomainEntity{
             	if($uri != ''){            		
 	            	$supporting_docs->doc_id = $picture_id;            
 		            $supporting_docs->uri = $uri; 
+					$supporting_docs->_saved = true;
 		            form_objects($document_form, $supporting_docs);
-		            $supporting_docs->Delete();            
+					
+		            //$supporting_docs->Delete();            
 		            $supporting_docs->Save();            
 		            		            
 		            form_objects($document_form, $supporting_docs_meta);
 		            $supporting_docs_meta->title = "Picture";
 		            $supporting_docs_meta->doc_id = $picture_id;
-		            $supporting_docs_meta->format = $type;            
+		            $supporting_docs_meta->format = $type;  
+					$supporting_docs_meta->_saved = true;
 		            $supporting_docs_meta->Save();		    		
 			    		    	
 			    	$pictureDoc->doc_id = $picture_id;
+			    	$pictureDoc->_saved = true;
 			    	$pictureDoc->linked_by = $_SESSION['username'];    			
 			    	$pictureDoc->Save();
             	}
