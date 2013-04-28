@@ -1049,7 +1049,7 @@ function queryBuilder(){
         //add select fields
         for(i in query.select){
             var fields = openevsysDomain.getInstance().getSelectFields(query.select[i].entity);
-            od.setSelectField(query.select[i].entity, query.select[i].field);
+            od.unsetSelectField(query.select[i].entity, query.select[i].field);
         }
     }
 
@@ -1549,6 +1549,13 @@ function advSearch(){
         
 		
     }
+     this.removeField = function(field , entity){
+        openevsysDomain.getInstance().unsetSelectField(entity,field);
+        this.Search();
+        return;
+        
+		
+    }
 	
 	
     this.Search = function(){
@@ -1584,6 +1591,9 @@ function advSearch(){
                 var column = new Object();
                 column.mData = sel.entity+"_"+sel.field
                 column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+                
+                column.entity = sel.entity;
+                column.field = sel.field;
                 columns.push(column);
             } 
              
@@ -1597,6 +1607,8 @@ function advSearch(){
                 var column = new Object();
                 column.mData = sel.entity+"_"+sel.field
                 column.sTitle = od.getFieldLabel(sel.field ,sel.entity);
+                column.entity = sel.entity;
+                column.field = sel.field;
                 columns.push(column);
             }
         }
@@ -1633,6 +1645,9 @@ function advSearch(){
 
         //oTable.fnAdjustColumnSizing();
         
+        $('#datatable th').each( function (i) {
+             $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
+        } );
         $('#qb-qs-save').click(function(){
             
             $('#query-name').text($('#query_name').val());
@@ -1738,7 +1753,12 @@ var namenumber = 0;
 function genName(){
     return 'name' + namenumber++;
 }
-
+function removeField(field,entity){
+    var as = advSearch.getInstance();
+    as.removeField(field,entity);
+    return false;
+		
+}
 
 //Jquery plugin to fetch microthusari values
 (function($){
