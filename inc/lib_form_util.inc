@@ -1006,4 +1006,3 @@ function shn_form_get_html_event_search_ctrl($columnNames = null, $columnValues 
     </table>
     <?php
 }
-

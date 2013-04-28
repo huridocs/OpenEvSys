@@ -1,8 +1,9 @@
 <?php global $conf, $global; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php $version = explode( '=', file_get_contents(APPROOT.'/VERSION')); ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['locale'] ?>" lang="<?php echo $conf['locale'] ?>">
     <head>
-        <title>OpenEvSys 2.0</title>
+        <title>OpenEvSys <?php echo $version[0]?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
@@ -101,7 +102,7 @@
                         <span class='version'><?php
                                 echo _t('VERSION');
                                 echo " : ";
-                                echo file_get_contents(APPROOT . '/VERSION');
+                                echo $version[0];
                                 ?></span>
                     </div>
                 </footer>
@@ -113,3 +114,4 @@
                 <?php } ?>
                 </body>
                 </html>
+
