@@ -66,7 +66,7 @@ class adminModule extends shnModule
         //include select entity form        
         $this->customization_form = $customization_form;
         //if the locale is changed need to display extra column in label customization
-        if(is_locale_changed())
+        //if(is_locale_changed())
             $this->locale = $conf['locale']; 
         
         if(isset($this->entity_select)){
@@ -101,8 +101,17 @@ class adminModule extends shnModule
           
             //include field form
             include_once APPROOT.'mod/admin/entity_form.inc';
+            include_once(APPROOT.'inc/i18n/lib_l10n.inc');
+            $this->locales = l10n_get_locals();
+            
             $this->entity_form = $entity_form;
-            $this->res = form_customization_get_field_table($this->entity_select);
+            if($this->sub_act=='label'){
+                $locales = l10n_get_locals();
+                $this->res = Browse::getFieldsTranslations($this->entity_select,$this->locales);
+                
+            }else{
+                $this->res = form_customization_get_field_table($this->entity_select);
+            }
         }
     }
 

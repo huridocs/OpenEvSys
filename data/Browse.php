@@ -840,6 +840,39 @@ class Browse implements BrowseStrategy
         $res = $browse->ExecuteQuery($sql);
         return $res;
     }
+    public static function getFieldsTranslations($entity,$langorder = null)
+    {
+        global $conf;
+        $browse = new Browse();
+        $sql = "SELECT 
+                    field_number, 
+                    field_label, 
+                    field_name, 
+                    field_type, 
+                    label_number, 
+                    clar_note, 
+                    enabled , 
+                    visible_new , 
+                    visible_edit , 
+                    visible_view, 
+                    visible_browse, 
+                    visible_browse_editable , 
+                    visible_search , 
+                    visible_search_display, 
+                    required , 
+                    validation , 
+                    essential,
+                    l.msgstr ,
+                    l.locale
+                FROM data_dict 
+                LEFT JOIN data_dict_l10n as l ON  l.msgid = field_number  
+                WHERE entity='$entity' ORDER BY CAST(label_number as UNSIGNED)";
+        if($langorder && is_array($langorder)){
+            $sql .= ",FIELD(l.locale,'".implode("','",$langorder)."')";
+        }
+        $res = $browse->ExecuteQuery($sql);
+        return $res;
+    }
     
     public static function getFieldsIds($entity)
     {

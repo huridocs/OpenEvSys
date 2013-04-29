@@ -33,6 +33,7 @@ function exception_handler($e)
 {
     //if the 404 exception is thrown print out the error page
     ob_clean();
+    var_dump($e);
     if($e instanceof shn404Exception){
         header("HTTP/1.0 404 Not Found");
         shnFrontController::loadDefaultModule();
