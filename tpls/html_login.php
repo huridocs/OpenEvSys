@@ -3,8 +3,8 @@
 <html>
 <head>
 
-<?php $version = explode( '=', file_get_contents(APPROOT.'/VERSION')); ?>
-<title>OpenEvSys <?php echo $version[0]?></title>
+<?php $version = explode( '=', file_get_contents(APPROOT.'/www/VERSION')); ?>
+<title>OpenEvSys <?php echo $version[1]?></title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css"  href="theme/<?php echo $conf['theme'] ?>/screen.css"/>
@@ -35,7 +35,7 @@
             <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
             <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
 
-            <span class='version'><?php echo _t('VERSION');echo " : ";echo $version[0]?></span>
+            <span class='version'><?php echo _t('VERSION');echo " : ";echo $version[1]?></span>
 
         </div>
     </div>
