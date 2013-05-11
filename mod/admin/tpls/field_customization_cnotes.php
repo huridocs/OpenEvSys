@@ -1,44 +1,59 @@
 <div id="browse">
-<table class='table table-bordered table-striped table-hover'>
-    <thead>
-        <tr>
-            <th><?php echo(_t('FIELD_NUMBER')); ?></th>
-            <th><?php echo(_t('FIELD_NAME')); ?></th>
-            <th><?php echo(_t('FIELD_TYPE')); ?></th>
-            <th><?php echo(_t('LABEL')); ?></th>
-            <th><?php echo(_t('CLARIFY')); ?></th>            
-        </tr>
-    </thead>
-    <tbody>
-    <?php foreach($res as $record){  ?>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td><?php echo $record['field_number']; ?></td>
-            <td><?php echo $record['field_name']; ?></td>
-            <td><?php echo $record['field_type']; ?></td>
-            <td><?php echo $record['field_label'];?></td>
-           
-            <td align="center">
-                <?php $name = 'clari_'.$record['field_number'];?>
-                <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if(strtolower($record['clar_note'])=='y')echo "checked='true'";?>/>
-            </td>
-            
+    <table class='table table-bordered table-striped table-hover'>
+        <thead>
+            <tr>
+                <th><?php echo(_t('FIELD_NAME')); ?></th>
+                <th><?php echo(_t('LABEL')); ?></th>
+                <th><?php echo(_t('Enabled')); ?></th> 
+                <th><?php echo(_t('IS_REQUIRED')); ?></th> 
+                <th><?php echo(_t('Multivalue')); ?></th> 
+                <th><?php echo(_t('CLARIFY')); ?></th> 
 
-        </tr>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($res as $record) {
+                ?>
+                <tr>
+                    <td><?php echo $record['field_name']; ?></td>
+                    <td><?php echo $record['field_label']; ?></td>
+                    <td align="center">
+                        <?php $name = 'enabled_' . $record['field_number']; ?>
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['enabled']) == 'y') echo "checked='true'"; ?>  <?php echo ($record['essential'] == 'y' ? ' disabled="disables"' : "") ?>/>
+                    </td>                   
+                    <td align="center">
+                        <?php $name = 'required_' . $record['field_number']; ?>
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['required']) == 'y') echo "checked='true'"; ?> <?php echo ($record['essential'] == 'y' ? ' disabled="disables"' : "") ?> />
+                    </td>
+                    <td align="center">
+                        <?php $name = 'is_repeat_' . $record['field_number']; ?>
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php
+                    if (($record['field_type'] == "mt_tree" || $record['field_type'] == "mt_select") && strtolower($record['is_repeat']) == 'y') {
+                        echo "checked='true'";
+                    }
+                        ?> 
+                        <?php
+                        if ($record['field_type'] != "mt_tree" && $record['field_type'] != "mt_select") {
+                            echo ' disabled="disables"';
+                        }
+                        ?>
+                               />
+                    </td>
+                    <td align="center">
+                        <?php $name = 'clari_' . $record['field_number']; ?>
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['clar_note']) == 'y') echo "checked='true'"; ?>/>
+                    </td>
 
-    <?php } ?>
-    		
-            <tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td> <?php /*echo $fields1['reset']*/ ?>      </td>
-            <td>  </td>
-            <td>  </td>
-            <td>  </td>
 
-            <td>
-            <button type="submit" name="reset_clari" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
-            </td>
-            
-        </tr>
-    </tbody>
-</table>
+                </tr>
+
+            <?php } ?>
+
+
+        </tbody>
+    </table>
 </div>
 <input type="hidden" name="clari" id="clari" value="used"/>
+<input type="hidden" name="enabled" id="enabled" value="used"/>
+<input type="hidden" name="is_repeat" id="is_repeat" value="used"/>
+<input type="hidden" name="required" id="required" value="used"/>

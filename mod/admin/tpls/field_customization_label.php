@@ -14,7 +14,7 @@
                 ?>
                 <li <?php if ($locale == $code) {
                 echo 'class="active"';
-            } ?>><a href="#<?php echo $code ?>" data-toggle="tab"><?php echo $loc ?></a></li>
+            } ?>><a href="#<?php echo $code ?>" data-toggle="tab" data-locale="<?php echo $code ?>"><?php echo $loc ?></a></li>
                 <?php
             }
 
@@ -40,11 +40,11 @@
                         <?php
                         foreach ($locales as $code => $loc) {
                             ?>
-                            <div <?php if ($locale != $code) {
+                            <div class="labelinputdiv labelinputdiv_<?php echo $code?>" <?php if ($locale != $code) {
                         echo 'style="display:none"';
                     } ?>>
         <?php $name = 'label_' . $record['field_number']; //echo $record['field_label'];  ?>
-                                <input  type="text" name="<?php echo $name; ?>_<?php echo $locale ?>" id="<?php echo $name; ?>_<?php echo $locale ?>"  value="<?php echo $record['field_label']; ?>"></input>
+                                <input  type="text" name="<?php echo $name; ?>[<?php echo $code ?>]" id="<?php echo $name; ?>_<?php echo $code ?>"  value="<?php if($record['label_'.$code])echo $record['label_'.$code]; ?>"></input>
 
                             </div>
                             <?php
@@ -66,21 +66,7 @@
                     ?>
                 </tr>
 <?php } ?>
-           <!-- <tr  <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
-                <td>  </td>
-                <td>  </td>
-                <td>  </td>
-                <td align="center"> 
-            <?php echo $fields1['reset_label'] ?> 
-                </td>
-            <?php
-            if (isset($locale)) {
-                ?>
-                    <td>  </td>
-                <?php
-            }
-            ?>
-            </tr>-->
+          
         </tbody>
     </table>
 </div>
@@ -89,6 +75,8 @@
 <script>
     $('#langTabs a').click(function (e) {
         e.preventDefault();
-        $(this).tab('show');
+       var locale = $(this).data('locale');
+       $('.labelinputdiv').hide();
+       $('.labelinputdiv_'+locale).show();
     })
 </script>

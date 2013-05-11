@@ -42,19 +42,7 @@
 
     <?php } ?>
     		
-        <tr  <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td>  </td> 
-            <td>  </td> 
-            <td>  </td>
-            <td>  </td>
-            <!--<td>
-            <button type="submit" name="reset_visible_search" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
-            </td>
-            -->
-            <td>
-            <button type="submit" name="reset_visible_search_display" class='btn'  ><i class="icon-remove"></i> <?php echo _t('RESET') ?></button></td>
-            </td>  
-        </tr>
+        
     </tbody>
 </table>
 </div>

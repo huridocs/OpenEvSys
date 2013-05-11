@@ -1,0 +1,1 @@
+ALTER TABLE mt_vocab  MODIFY huri_code varchar(14) NULL ;

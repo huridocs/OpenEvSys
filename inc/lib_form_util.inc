@@ -134,10 +134,10 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 //acl_is_entity_allowed($entity , 'read' , $record_number);
                 break;
             case 'search':
-                $visible_field = 'visible_search';
+                $visible_field = 'visible_browse';//'visible_search';
                 break;
             case 'search_view':
-                $visible_field = 'visible_search_display';
+                $visible_field = 'visible_browse';//'visible_search_display';
                 break;
             case 'browse':
                 $visible_field = 'visible_browse';

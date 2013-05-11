@@ -39,8 +39,6 @@ class SecEntity{
     }
 	
     
-	// sec_entity - source, victim, perpetrator , intervening_party
-	// $option    - browse, visible_search , visible_search_display 
 	
     
 	/**

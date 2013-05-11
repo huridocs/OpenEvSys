@@ -149,108 +149,7 @@ class analysisModule extends shnModule {
         }
     }
 
-    public function _act_search_form() { // removed
-        $this->entity_search_form($this->main_entity);
-    }
-
-    /* {{{ Search Result */
-
-    public function _act_search_result() { // removed
-        include_once APPROOT . 'inc/lib_form_util.inc';
-        $_POST = $_GET; //need to remove this hack some how
-        //shuffle actions for search result
-        $this->shuffle_actions($this->main_entity);
-
-        //actions for search result		
-        $this->actions = analysis_get_actions();
-
-        //display second level search form
-        $this->entity_search_form($this->main_entity);
-
-        if (isset($_GET['query_save'])) {
-            $this->act_save_query();
-        }
-
-
-        if (isset($_GET['shuffle_results'])) {
-            if ($_GET['shuffle_results'] != 'all') {
-                //$shufSql = $this->getShuffelSql($this->main_entity, $this->search_entity);
-                $sqlStatement = $this->generateSqlforEntity($this->main_entity, true);
-                //echo "SHUFFLE STATEMENT : $sqlStatement<br>";
-            } else {
-                $sqlStatement = $this->generateSqlforEntity($this->main_entity);
-            }
-        } else {
-            $sqlStatement = $this->generateSqlforEntity($this->search_entity);
-        }
-
-        if (isset($_GET['action'])) {
-            switch ($_GET['actions']) {
-                case 'csv':
-                    $this->act_csv();
-                    break;
-                case 'report':
-                    $this->act_report();
-                    change_tpl('act_report');
-                    break;
-                case 'export_spreadsheet':
-                    $this->act_export_spreadsheet();
-                    break;
-                case 'save_org_sql':
-
-                case 'save_shuffle_sql':
-                    $this->save_query = true;
-                    break;
-// 				case 'view_record_seq':
-//                  set_redirect_header('analysis','view_record_seq',null,null,'text');
-//              	break;
-// 				case 'view_record_map':
-//                  set_redirect_header('analysis','view_record_map',null,null,'text');
-//                  break;
-            }
-        }
-
-        if ($where != null) {
-            $sqlStatement .= " WHERE $where";
-        }
-
-        $entity_type_form_results = generate_formarray($this->search_entity, 'search_view');
-
-
-        $field_list = array();
-        //iterate through the search fields, checking input values
-        foreach ($entity_type_form_results as $field_name => $field) {
-            // Generates the view's Label list
-            $field_list[$field['map']['field']] = $field['label'];
-        }
-
-//echo ($sqlStatement);
-        $this->result_pager = Browse::getExecuteSql($sqlStatement);
-        $this->columnValues = $this->result_pager->get_page_data();
-
-        $displayEntity = $this->main_entity;
-        if ($_POST['shuffle_results'] != 'all' && $_POST['shuffle_results'] != null) {
-            $displayEntity = $_POST['shuffle_results'];
-        } else {
-            $displayEntity = $this->main_entity;
-        }
-
-        $displayEntity = get_table_for_entity($displayEntity);
-        $this->columnValues = set_links_in_recordset($this->columnValues, $displayEntity);
-
-        set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
-        if (isset($_POST['person_addresses'])) {
-            mergeAddressFields($this->columnValues);
-        }
-
-        //rendering the view
-        $this->columnNames = $field_list;
-
-        //var_dump('values' , $this->columnValues);
-        //var_dump('names' , $this->columnNames); 
-    }
-
-    /* }}} */
+   
 
     /* {{{ Query Functions */
 
@@ -1972,16 +1871,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $count = count($data_array);
                             for ($i = 0; $i < $count;) {
                                 $element1 = $data_array[$i];
-                                $element2 = $data_array[++$i];
-
-                                $h1 = strlen(rtrim($element1['huri_code'], '0'));
-                                $h2 = strlen(rtrim($element2['huri_code'], '0'));
-
-                                if ($h1 % 2 == 1)
-                                    $h1++;
-                                if ($h2 % 2 == 1)
-                                    $h2++;
-
+                                
                                 $label = $element1['label'];
                                 if (isset($facetcounts[$element1['vocab_number']])) {
                                     $label .= " (" . $facetcounts[$element1['vocab_number']] . ")";
@@ -1989,22 +1879,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
                                 $terms[] = array('term' => $element1['vocab_number'],
                                     'label' => $label,
-                                    'level' => (int) $level);
+                                    'level' => (int) $element1["term_level"]);
 
-                                if ($h1 < $h2) {
-                                    $level++;
-                                    $h2 = $h2 - 2;
-                                    while ($h1 < $h2) {
-                                        $level++;
-                                        $h2 = $h2 - 2;
-                                    }
-                                }
-                                if ($h2 < $h1 && isset($element2)) {
-                                    while ($h2 < $h1) {
-                                        $level--;
-                                        $h1 = $h1 - 2;
-                                    }
-                                }
+                               $i++;
                             }
 
 

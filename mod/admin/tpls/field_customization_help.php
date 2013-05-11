@@ -1,118 +1,129 @@
 <?php global $conf; ?>
-<?php
-if($field_help_text){
-    echo "<h3>{$field_help_text['field_number']} : {$field_help_text['field_label']}</h3>";
-?>
-<div id="browse">
-<input type='hidden' name='field_number' value='<?php echo $field_help_text['field_number'] ?>' />
-<table class='table table-bordered table-striped table-hover'>
-    <thead>
-        <tr>
-            <th><?php echo(_t('SECTION')); ?></th>
-            <th><?php echo $conf['fb_locale'] ?></th>
-            <?php if(isset($locale)){?><th><?php echo $locale?></th><?php } ?>
-        </tr>
-    </thead>
-    <tbody>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> >
-            <td><?php echo(_t('DEFINITION')); ?></td>
-            <td>
-                <textarea  name='definition'><?php echo $field_help_text['definition']; ?></textarea>
-            </td>
-            <?php if(isset($locale)){?>
-            <td><?php echo $record['l10n_definition']?>
-                <textarea  name='l10n_definition'><?php echo $field_help_text['l10n_definition']; ?></textarea>
-            </td>
-            <?php } ?>
-        </tr>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td><?php echo(_t('GUIDELINES')); ?></td>
-            <td>
-                <textarea  name='guidelines'><?php echo $field_help_text['guidelines']; ?></textarea>
-            </td>
-            <?php if(isset($locale)){?>
-            <td><?php echo $record['l10n_definition']?>
-                <textarea  name='l10n_guidelines'><?php echo $field_help_text['l10n_guidelines']; ?></textarea>
-            </td>
-            <?php } ?>
-        </tr>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td><?php echo(_t('ENTRY')); ?></td>
-            <td>
-                <textarea  name='entry'><?php echo $field_help_text['entry']; ?></textarea>
-            </td>
-            <?php if(isset($locale)){?>
-            <td><?php echo $record['l10n_definition']?>
-                <textarea  name='l10n_entry'><?php echo $field_help_text['l10n_entry']; ?></textarea>
-            </td>
-            <?php } ?>
-        </tr>
-        <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-            <td><?php echo(_t('EXAMPLE')); ?></td>
-            <td>
-                <textarea  name='examples'><?php echo $field_help_text['examples']; ?></textarea>
-            </td>
-            <?php if(isset($locale)){?>
-            <td><?php echo $record['l10n_definition']?>
-                <textarea  name='l10n_examples'><?php echo $field_help_text['l10n_examples']; ?></textarea>
-            </td>
-            <?php } ?>
-        </tr>
-    </tbody>
-</table>
-<br />
-    <center>
-    <button type='submit' class='btn' ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
-    <button type='submit' class='btn btn-primary' name='save_help' ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE_HELP_TEXT') ?></button>
-    </center>
-</div>
-<?php
-}
-else{
-?>
-<div id="browse">
-<?php $help_text_pager->render_pages(); ?>
-<table class='table table-bordered table-striped table-hover'>
-    <thead>
-        <tr>
-            <th><?php echo(_t('FIELD_LABEL')); ?></th>
-            <th><?php echo _t('SECTION') ?></th>
-            <th><?php echo $conf['fb_locale'] ?></th>
-            <?php if(isset($locale)){?><td><?php echo $locale?></td><?php } ?>
-        </tr>
-    </thead>
-    <tbody>
-    <?php 
-        $res = $help_text_pager->get_page_data();
-        foreach($res as $record){  
-?>
-            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?> >
-                <td rowspan='4'>
-                    <a href="<?php get_url('admin','field_customization',null,array('entity_select'=>$entity_select,'sub_act'=>'help','fno'=>$record['field_number'])) ?>"><?php echo $record['field_label']; ?></a></td>
-                <td><?php echo(_t('DEFINITION')); ?></td>
-                <td><?php echo $record['definition']; ?></td>
-                <?php if(isset($locale)){?><td><?php echo $record['l10n_definition']?></td><?php } ?>
+
+    <div id="browse">
+<input type="hidden" name="save_help" value="1" />
+        <table class='table table-bordered table-striped table-hover'>
+            <thead>
+                <tr>
+                    <th><?php echo(_t('FIELD_LABEL')); ?></th>
+                    <th><?php echo _t('SECTION') ?></th>
+                    
+                    <th>
+            <ul class="nav nav-tabs" id="helpTabs">   
+                <?php
+                foreach ($locales as $code => $loc) {
+                    ?>
+                    <li <?php
+            if ($locale == $code) {
+                echo 'class="active"';
+            }
+                    ?>><a href="#<?php echo $code ?>" data-toggle="tab" data-locale="<?php echo $code ?>"><?php echo $loc ?></a></li>
+                        <?php }
+                    ?>
+            </ul>
+            </th>
             </tr>
-            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-                <td><?php echo(_t('GUIDELINES')); ?></td>
-                <td><?php echo $record['guidelines']; ?></td>
-                <?php if(isset($locale)){?><td><?php echo $record['l10n_guidelines']?></td><?php } ?>
-            </tr>
-            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-                <td><?php echo(_t('ENTRY')); ?></td>
-                <td><?php echo $record['entry']; ?></td>
-                <?php if(isset($locale)){?><td><?php echo $record['l10n_entry']?></td><?php } ?>
-            </tr>
-            <tr <?php echo ($i++%2==1)?'class="odd"':''; ?>>
-                <td><?php echo(_t('EXAMPLE')); ?></td>
-                <td><?php echo $record['examples']; ?></td>
-                <?php if(isset($locale)){?><td><?php echo $record['l10n_examples']?></td><?php } ?>
-            </tr>
-<?php   } ?>
-    </tbody>
-</table>
-<?php $help_text_pager->render_pages(); ?>
-</div>
-<?php 
-} 
-?>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($help_texts as $record) {
+                    ?>
+                    <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?> >
+                        <td rowspan='4'><?php echo $record['field_label']; ?></td>
+                        <td><?php echo(_t('DEFINITION')); ?></td>
+                        <td>
+                            <?php
+                            foreach ($locales as $code => $loc) {
+                                ?>
+                                <div class="helpdefinitiondiv helpdefinitiondiv_<?php echo $code ?>" <?php
+                    if ($locale != $code) {
+                        echo 'style="display:none"';
+                    }
+                                ?>>
+                                <?php $name = 'definition_' . $record['field_number']; //echo $record['field_label'];   ?>
+                                    <textarea class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['definition_' . $code]) echo $record['definition_' . $code]; ?></textarea>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
+                        <td><?php echo(_t('GUIDELINES')); ?></td>
+                        <td>
+                            <?php
+                            foreach ($locales as $code => $loc) {
+                                ?>
+                                <div class="helpguidelinesdiv helpguidelinesdiv_<?php echo $code ?>" <?php
+                    if ($locale != $code) {
+                        echo 'style="display:none"';
+                    }
+                                ?>>
+                                <?php $name = 'guidelines_' . $record['field_number']; //echo $record['field_label'];   ?>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['guidelines_' . $code]) echo $record['guidelines_' . $code]; ?></textarea>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </td>
+                      
+                    </tr>
+                    <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
+                        <td><?php echo(_t('ENTRY')); ?></td>
+                        <td>
+                            <?php
+                            foreach ($locales as $code => $loc) {
+                                ?>
+                                <div class="helpentrydiv helpentrydiv_<?php echo $code ?>" <?php
+                    if ($locale != $code) {
+                        echo 'style="display:none"';
+                    }
+                                ?>>
+                                <?php $name = 'entry_' . $record['field_number']; //echo $record['field_label'];   ?>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['entry_' . $code]) echo $record['entry_' . $code]; ?></textarea>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
+                        <td><?php echo(_t('EXAMPLE')); ?></td>
+                        <td>
+                            <?php
+                            foreach ($locales as $code => $loc) {
+                                ?>
+                                <div class="helpexamplesdiv helpexamplesdiv_<?php echo $code ?>" <?php
+                    if ($locale != $code) {
+                        echo 'style="display:none"';
+                    }
+                                ?>>
+                                <?php $name = 'examples_' . $record['field_number']; //echo $record['field_label'];   ?>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['examples_' . $code]) echo $record['examples_' . $code]; ?></textarea>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </td>
+                    </tr>
+    <?php } ?>
+            </tbody>
+        </table>
+
+    </div>
+   
+<script>
+    $('#helpTabs a').click(function (e) {
+        e.preventDefault();
+       var locale = $(this).data('locale');
+       $('.helpdefinitiondiv').hide();
+       $('.helpguidelinesdiv').hide();
+       $('.helpentrydiv').hide();
+       $('.helpexamplesdiv').hide();
+       
+       $('.helpdefinitiondiv_'+locale).show();
+       $('.helpguidelinesdiv_'+locale).show();
+       $('.helpentrydiv_'+locale).show();
+       $('.helpexamplesdiv_'+locale).show();
+    })
+</script>

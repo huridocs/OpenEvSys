@@ -31,7 +31,6 @@
 class MtTerms extends ADODB_Active_Record{
     
     public $vocab_number;
-    public $huri_code;
     public $english;
     public $label;
     
@@ -51,12 +50,7 @@ class MtTerms extends ADODB_Active_Record{
         }else{
             $listCode = $this->getListCodeforMTField($fieldName);
         }
-        //var_dump($listCode); 
-        /*
-        $codes = $this->Find("TRIM(list_code)='$listCode' ORDER BY huri_code");
         
-        return $codes;
-        */ 
         if($listCode != null || trim($listCode)!=''){
         	//var_dump($listCode);
             $mtTable = "mt_{$listCode}_{$fieldName}";        
@@ -64,10 +58,12 @@ class MtTerms extends ADODB_Active_Record{
         }
         
         global $conf;
-        $sql = "SELECT m.vocab_number, m.huri_code , IFNULL(l.msgstr , english) as 'label' FROM mt_vocab m 
+        $sql = "SELECT m.vocab_number , IFNULL(l.msgstr , english) as 'label',
+                term_order,parent_vocab_number ,term_level 
+                FROM mt_vocab m 
                 LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
                 $consistancyJoin
-                WHERE TRIM(list_code)='$listCode' AND visible = 'y' ORDER BY huri_code";
+                WHERE TRIM(list_code)='$listCode' AND visible = 'y' ORDER BY term_order";
         //echo $sql;
         $browse = new Browse();
         $res = $browse->ExecuteQuery($sql);
@@ -75,30 +71,6 @@ class MtTerms extends ADODB_Active_Record{
         return $res;        
     }
 
-/*    
-    public function getAllHuriTermsPaged($fieldName){
-       
-        if(  is_numeric($fieldName) ){
-            $listCode = (int)$fieldName;
-        }else{
-            $listCode = $this->getListCodeforMTField($fieldName);
-        }
-        //var_dump($listCode); 
-        /*
-        $codes = $this->Find("TRIM(list_code)='$listCode' ORDER BY huri_code");
-        
-        return $codes;
-        */ 
-        
-/*        
-        $browse = new Browse();
-        $res = $browse->ExecuteQuery("select * from mt_vocab WHERE TRIM(list_code)='$listCode' ORDER BY huri_code");
-        //print_r($res);
-        return $res;        
-        
-    }
-*/
-    
     public function Save(){
         
     }
@@ -132,8 +104,21 @@ class MtTerms extends ADODB_Active_Record{
     public function DeleteFromRecordNumber($mt_select,$vocab_number){    	
         $db = $this->DB(); if (!$db) return false;        
         $save = $db->SetFetchMode(ADODB_FETCH_NUM);
-        $sql = "DELETE from mt_vocab WHERE vocab_number LIKE '$vocab_number'";
-        $db->Execute($sql);       
+        $sqlarray = array();
+        if(!is_array($vocab_number)){
+            $vocab_number = array($vocab_number);
+        }
+        $sqlarray[] = "DELETE from mt_vocab WHERE vocab_number in ('".implode("','",$vocab_number)."')";
+        $sqlarray[] = "DELETE from mt_vocab_l10n WHERE msgid in ('".implode("','",$vocab_number)."')";
+        
+        $mtIndex = new MtIndex();
+        $mt_table = 'mt_' . $mt_select . '_' . $mtIndex->getTermforCode($mt_select);
+        $sqlarray[] = "DELETE from $mt_table WHERE vocab_number in ('".implode("','",$vocab_number)."')";
+        
+       
+        foreach($sqlarray as $sql){
+            $db->Execute($sql);       
+        }
     }
 
     public function LoadfromVocabNumber($vocab_number){
