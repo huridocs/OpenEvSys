@@ -186,7 +186,7 @@ function openevsysDomain()
         'arrest':['involvement','victim','perpetrator'],
         'torture':['involvement','victim','perpetrator'],
         'killing':['involvement','victim','perpetrator'],
-        'destruction':['involvement','victim','perpetrator'],
+        'destruction':['involvement','victim','perpetrator']
     }
 
     this.setSelectField = function(entity, field){
@@ -199,6 +199,9 @@ function openevsysDomain()
             if (this.data[entity].select[key] == field) {
                 return;
             }
+        }
+        if(!this.data[entity].select){
+            this.data[entity].select = new Array();
         }
         this.data[entity].select.push(field)
     }
@@ -989,12 +992,13 @@ function queryBuilder(){
                         'selected' : e.value
                     });
                     div.append(mt_select);
-                    mt_select.val( e.value ).attr('selected',true);
+                    //mt_select.val( e.value ).attr('selected',true);
             
                     mt_select.select2({
                         width: 'resolve'
                     });
-                    mt_select.select2("val",e.value);
+                    
+                    //mt_select.select2("val",e.value);
                     break;
                 case "mt_tree":
                     var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" />');
@@ -1003,7 +1007,7 @@ function queryBuilder(){
                         'selected' : e.value
                     });
                     div.append(mt_tree);
-                    mt_tree.val( e.value ).attr('selected',true);
+                    //mt_tree.val( e.value ).attr('selected',true);
             
                     mt_tree.select2({
                         width: 'resolve',
@@ -1048,8 +1052,8 @@ function queryBuilder(){
 
         //add select fields
         for(i in query.select){
-            var fields = openevsysDomain.getInstance().getSelectFields(query.select[i].entity);
-            od.unsetSelectField(query.select[i].entity, query.select[i].field);
+            //var fields = openevsysDomain.getInstance().getSelectFields(query.select[i].entity);
+            od.setSelectField(query.select[i].entity, query.select[i].field);
         }
     }
 
@@ -1271,10 +1275,10 @@ function queryBuilder(){
         var select = $("<select id=\"\" name=\"\" class=\"operselect\" />");
         for(var i in options){
                    
-                $("<option />", {
-                    value:  options[i].value, 
-                    text: options[i].label
-                }).appendTo(select);
+            $("<option />", {
+                value:  options[i].value, 
+                text: options[i].label
+            }).appendTo(select);
             
         }
         //var div = $(sel).closest("div");
@@ -1378,8 +1382,10 @@ function queryBuilder(){
         //display select variables
         var select = new Array();
         var entities = this.getSelectedEntities();
+        
         for(var i in entities){
             var fields = openevsysDomain.getInstance().getSelectFields(entities[i]);
+            
             for(var f in fields){
                 var field = {
                     'entity': entities[i], 
@@ -1549,7 +1555,7 @@ function advSearch(){
         
 		
     }
-     this.removeField = function(field , entity){
+    this.removeField = function(field , entity){
         openevsysDomain.getInstance().unsetSelectField(entity,field);
         this.Search();
         return;
@@ -1636,6 +1642,7 @@ function advSearch(){
             "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
             "aoColumns":columns
         };
+        
         this.oTable = $('#datatable').dataTable( settings);
         
         $("div.toolbar").html($("#toolbar2").html());
@@ -1646,7 +1653,7 @@ function advSearch(){
         //oTable.fnAdjustColumnSizing();
         
         $('#datatable th').each( function (i) {
-             $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
+            $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
         } );
         $('#qb-qs-save').click(function(){
             
@@ -1771,7 +1778,13 @@ function removeField(field,entity){
 
         return this.each(function()
         {
-            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected,function(){
+                if(options.selected){
+                    $(this).val( options.selected ).attr('selected',true);
+            
+                    $(this).select2("val",options.selected);
+                }
+            } );
         });
 
 
@@ -1797,7 +1810,13 @@ function removeField(field,entity){
 
         return this.each(function()
         {
-            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected,function(){
+                if(options.selected){
+                    $(this).val( options.selected ).attr('selected',true);
+            
+                    $(this).select2("val",options.selected);
+                }
+            } );
         });
         
         

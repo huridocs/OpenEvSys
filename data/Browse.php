@@ -118,7 +118,7 @@ class Browse implements BrowseStrategy
             $created_by = $global['db']->qstr("%{$options['query_type']}%");
             $where .="AND query_type LIKE $created_by";
         }
-        $sql = $sql . $where;
+        $sql = $sql . $where." order by created_date desc";
 		
 		$pager = new shnPager($sql);
         return $pager;

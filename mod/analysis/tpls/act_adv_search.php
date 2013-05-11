@@ -1,5 +1,5 @@
 <script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="res/js/adv-search.js"></script>
+<script type="text/javascript" src="res/js/adv-search.js?v=<?php echo $version?>"></script>
 <div class="searchPanel">
     <div class="panel" >
         <?php if (isset($query)) { ?>
