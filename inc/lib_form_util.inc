@@ -350,7 +350,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
             //var_dump($formField['map']);
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
                 //$name = $formField['map']['field'];
-                if ($formField['map']['mt'] != '0') {   // micro thesauri terms
+                if ($formField['map']['mt']) {   // micro thesauri terms
                     if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
                         if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
@@ -360,9 +360,12 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                     }
                 } else {
                     if ($fieldName != $recordkeyName) {
-
+                
                         if (!($valuesArray[$fieldName] == null && $fieldName == 'supporting_documents')) {
+                            
+                
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
+                            
                         } else if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
                         } else {
@@ -444,6 +447,8 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 }
             }
         }
+                                         
+                
     }
     //var_dump($entity);
 
@@ -469,47 +474,28 @@ function shn_form_validate(&$form) {
 
             $vals = $_POST[$field_id];
             $valFunctions = $field['extra_opts']['validation'];
+            if($field["type"] == "upload"){
+                $vals = $_FILES[$field_id];
+                $valFunctions[] = "upload";
+            }
+            
             if (is_array($valFunctions) && sizeof($valFunctions) > 0) {
                 foreach ($valFunctions as $function) {
                     if ($function != '') {
-                        //var_dump('validating ' , $vals , $function);
-                        //$ok = Zend_Validate::is($vals, $function);
-                        //var_dump($ok);
+                        
                         $valMsg = null;
                         $ok = validate_field($function, $vals, $valMsg);
-                        //var_dump($function  , $ok);
-
+                        
                         if (!($ok == true )) {
                             $valide = false;
                             $field['extra_opts']['error'][] = $valMsg;
-                            //var_dump($ok);
-                        }
+                       }
                     }
                 }
             }
-            /*
-              $validate = 'shn_valid_'.$field['valid'];
-              $error = true;
-              if(isset($vals)&& function_exists($validate)){
-              if(is_array($vals)){
-              //validate all elements
-              foreach($vals as $value)
-              $error = $validate($_POST[$field_id]) && $error;
-              }
-              else
-              $error = $validate($_POST[$field_id]);
-              if(!$error){
-              $eo = $form[$field_id]['extra_opts'];
-              $eo=(is_array($eo))?$eo:array();
-              $eo['error']=true;
-              $form[$field_id]['extra_opts'] = $eo;
-              $gerror = false;
-              }
-              }
-             */
+            
         }
     }
-
     //spl_autoload_register(array('AutoLoadClass', '__autoload'));
     //var_dump($form);
     return $valide;

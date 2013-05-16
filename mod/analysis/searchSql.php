@@ -260,8 +260,28 @@ class SearchResultGenerator {
             case 'mt_tree':
                 switch ($condition['operator']) {
                     case 'sub':
-                        $huriParent = rtrim(substr($value, 0, 10), '0');
-                        $conditionString = " $fieldAlias  LIKE  '$huriParent%' ";
+                        //var_dump($value);exit;
+                        
+                        
+                        $sql = "SELECT max(m.term_level) from mt_vocab m WHERE m.list_code = (select m2.list_code from mt_vocab m2 where vocab_number ='$value')";
+    $depth = $global['db']->GetOne($sql);
+    
+    $sql = "";
+    $sqllevel = "'$value'";
+    for ($i = 1; $i <= $depth; $i++) {
+        $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
+        $sql[] = $sqllevel;
+    }
+    //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
+    $sql = "select vocab_number from  (".implode(" union ", $sql).") a ";
+    //$vocList = $global['db']->GetOne($sql);
+    $res = $global['db']->Execute($sql);
+    $vocList = array();
+    foreach($res as $v){
+        $vocList[] = "'".$v['vocab_number']."'";
+    }
+    $conditionString = " $fieldAlias  in (".implode(",",$vocList).") ";
+                        
                         break;
                     case '=':
                         $conditionString = " $fieldAlias = '$value'";
@@ -351,7 +371,8 @@ class SearchResultGenerator {
                         break;
                 }
                 $fieldAliasView = $this->getFieldAlias($fieldArray, 'field', $entity);
-                $conditionString = "  SUBSTR( $fieldAlias , -14 , $length )  ";
+                //$conditionString = "  SUBSTR( $fieldAlias , -14 , $length )  ";
+                $conditionString = $fieldAlias;
                 //var_dump('fieldAliasView' , $fieldAliasView);
                 //var_dump('fieldAlias' , $fieldAlias);
                 $this->sqlArray['select'][] = "  $fieldAliasView";
@@ -430,6 +451,7 @@ class SearchResultGenerator {
             $formField['map']['entity'] = $entityType;
         }
         $entityField = $formField['map']['entity'];
+        
         if ($formField['map']['mlt']) {
             $fieldSqlArray = $this->mtJoin($formField, $type);
             $entityField = $fieldSqlArray['field'];

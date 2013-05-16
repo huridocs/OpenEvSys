@@ -72,6 +72,8 @@ class docuModule extends shnModule {
     }
 
     public function act_browse() {
+        global $conf;
+
         include_once APPROOT . 'inc/lib_form.inc';
 
         require_once(APPROOT . 'mod/analysis/analysisModule.class.php');
@@ -89,6 +91,9 @@ class docuModule extends shnModule {
         foreach ($entity_type_form_results as $field_name => $field) {
             // Generates the view's Label list
             $field_list[$field['map']['field']] = $field['label'];
+        }
+        if (is_array($conf['browsefields']['supporting_docs_meta']) && in_array("eventslinks", $conf['browsefields']['supporting_docs_meta'])) {
+            $field_list['eventslinks'] = _t('LINKS');
         }
 
         foreach ($entity_type_form_results as $fieldName => &$field) {
@@ -111,9 +116,17 @@ class docuModule extends shnModule {
 
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
         $this->columnValues = $this->result_pager->get_page_data();
+
         $this->columnValues = set_links_in_recordset($this->columnValues, 'supporting_docs_meta');
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
-
+        foreach ($this->columnValues as $k => $v) {
+            $linksa = array();
+            $links = Browse::getDocumentLinks($v['doc_id'], 'event');
+            foreach ($links as $record) {
+                $linksa[] = "<a href=\"" . get_record_url($record['record_number'], "event") . "\" >" . $record['record_number'] . "</a>";
+            }
+            $this->columnValues[$k]['eventslinks'] = implode("<br/>", $linksa);
+        }
         //rendering the view
         $this->columnNames = $field_list;
         $this->htmlFields = $htmlFields;
@@ -182,6 +195,7 @@ class docuModule extends shnModule {
 
         if (isset($_POST['update']) || isset($_POST['yes']) || isset($_POST['no'])) {
             $status = shn_form_validate($this->document_form);
+
             if (!$status)
                 return;
 

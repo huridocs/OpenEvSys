@@ -1067,12 +1067,12 @@ class Browse implements BrowseStrategy {
         $sql = "SELECT 
                     field_number ,
                     field_name ,
-                    datatype ,
                     IFNULL(dl.msgstr , d.field_label) as 'field_label',                      
                     LOWER(entity) as entity ,
                     field_type ,
                     visible_adv_search_display as in_results,
-                    list_code 	
+                    list_code 	,
+                    d.validation
                 FROM data_dict as d 
                 LEFT JOIN data_dict_l10n AS dl ON (d.field_number = dl.msgid AND dl.locale = '{$conf['locale']}' )
                 WHERE  d.entity IS NOT NULL AND visible_adv_search = 'y' and enabled='y'  ORDER BY entity, field_number";

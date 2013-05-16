@@ -181,11 +181,10 @@ function form_customization_process_entity_form($entity) {
         if (isset($_POST['clari'])) {
             $fieldValues['clar_note'] = strtolower($_POST['clari_' . $recordNumber]) == 'y' ? 'y' : 'n';
         }
-        if (isset($_POST['is_repeat'])) {
-            $fieldValues['is_repeat'] = strtolower($_POST['is_repeat_' . $recordNumber]) == 'y' ? 'y' : 'n';
-             
-        }
-        
+        /* if (isset($_POST['is_repeat'])) {
+          $fieldValues['is_repeat'] = strtolower($_POST['is_repeat_' . $recordNumber]) == 'y' ? 'y' : 'n';
+          } */
+
         if (isset($_POST['validation'])) {
             $fieldValues['validation'] = $_POST['validation_' . $recordNumber];
         }
@@ -224,9 +223,35 @@ function form_customization_update_fields_order($entity) {
     }
 }
 
-function form_customization_add_field($entity, $field_name, $field_number, $order, $field_label, $field_type, $field_mysql_type = null) {
+function form_customization_add_field($field_type_options) {
 
-    switch ($field_type) {
+    $fieldValues = array();
+    $fieldValues['entity'] = $_POST['entity_select'];
+    $fieldValues['field_name'] = str_replace(" ", "", strtolower($_POST['field_name']));
+    $fieldValues['field_number'] = $_POST['field_number'];
+    $fieldValues['field_label'] = $_POST['field_label'];
+    $fieldValues['field_type'] = $_POST['field_type'];
+
+    $fieldValues['required'] = strtolower($_POST['required']) == 'y' ? 'y' : 'n';
+    $fieldValues['visible_new'] = strtolower($_POST['visible_new']) == 'y' ? 'y' : 'n';
+    $fieldValues['visible_view'] = strtolower($_POST['visible_view']) == 'y' ? 'y' : 'n';
+    $fieldValues['visible_browse'] = strtolower($_POST['visible_browse']) == 'y' ? 'y' : 'n';
+    $fieldValues['visible_adv_search'] = strtolower($_POST['visible_adv_search']) == 'y' ? 'y' : 'n';
+    $fieldValues['visible_adv_search_display'] = strtolower($_POST['visible_adv_search_display']) == 'y' ? 'y' : 'n';
+    $fieldValues['clar_note'] = strtolower($_POST['clari']) == 'y' ? 'y' : 'n';
+    $fieldValues['is_repeat'] = 'n';
+    $fieldValues['validation'] = ""; //$_POST['validation'];
+    $fieldValues['essential'] = 'n';
+    $fieldValues['enabled'] = 'y';
+    $fieldValues['label_number'] = 0;
+    $fieldValues['list_code'] = 0;
+    
+    foreach ($fieldValues as $k => $v) {
+        $v = preg_replace('/[^A-Za-z0-9\-_]/', '', $v); // Removes special chars.
+        $v = trim($v);
+        $fieldValues[$k] = $v;
+    }
+    switch ($fieldValues['field_type']) {
         case 'text':
             $field_mysql_type = "VARCHAR(100)";
             break;
@@ -236,17 +261,97 @@ function form_customization_add_field($entity, $field_name, $field_number, $orde
         case 'date':
             $field_mysql_type = "DATE";
             break;
+        case 'radio':
+            $field_mysql_type = "VARCHAR(1)";
+            break;
+        case 'location':
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            break;
+        case 'mt_tree':
+            $fieldValues['visible_browse'] = 'n';
+            $field_mysql_type = "VARCHAR(14)";
+            $fieldValues['list_code'] = (int) $_POST['list_code'];
+            break;
+        case 'mt_tree_multi':
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['is_repeat'] = 'y';
+            $fieldValues['field_type'] = 'mt_tree';
+            $fieldValues['list_code'] = (int) $_POST['list_code'];
+            break;
+        case 'mt_select' :
+            $fieldValues['visible_browse'] = 'n';
+            $field_mysql_type = "VARCHAR(14)";
+            $fieldValues['list_code'] = (int) $_POST['list_code'];
+            break;
+        case 'mt_select_multi':
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['is_repeat'] = 'y';
+            $fieldValues['field_type'] = 'mt_select';
+            $fieldValues['list_code'] = (int) $_POST['list_code'];
+            break;
     }
+    $fieldValues['visible_edit'] = $fieldValues['visible_new'];
+    $fieldValues['visible_search'] = $fieldValues['visible_browse'];
+    $fieldValues['visible_search_display'] = $fieldValues['visible_browse'];
+
+
+    $validated = true;
+    if (!$fieldValues['entity'] || !$fieldValues['field_name'] || !$fieldValues['field_number']
+            || !$fieldValues['field_label'] ||
+            (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && !$fieldValues['list_code'])) {
+        shnMessageQueue::addError(_t('FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES'));
+        $validated = false;
+    } else if (form_customization_field_name_exists($fieldValues['field_name'], $fieldValues['entity'])) {
+        shnMessageQueue::addError(_t('FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME'));
+        $validated = false;
+    } else if (form_customization_field_number_exists($fieldValues['field_number'])) {
+        shnMessageQueue::addError(_t('FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER'));
+        $validated = false;
+    } else if (is_management_field(array('field_number' => $fieldValues['field_number']))) {
+        shnMessageQueue::addError(_t('FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_'));
+        $validated = false;
+    } else if (!array_key_exists($fieldValues['field_type'], $field_type_options)) {
+        shnMessageQueue::addError(_t('NOT_A_VALID_FIELD_TYPE__TRY_AGAIN'));
+        $validated = false;
+    }
+
+    if (!$validated) {
+        return false;
+    }
+
+    $sql = "INSERT INTO data_dict (`" . implode("`,`", array_keys($fieldValues)) . "`) values('" . implode("','", $fieldValues) . "')";
 
 
     //add field to Data Dict
     $dbQuery = new Browse();
     try {
-        $dbQuery->ExecuteNonQuery("INSERT INTO data_dict ( field_number , field_label , field_type, label_number, field_name , entity ) VALUES ('$field_number' , '$field_label' , '$field_type' , '$order' , '$field_name' , '$entity' ) ");
+        $dbQuery->ExecuteNonQuery($sql);
 
-        //alter table to add the new field
-        //ALTER TABLE `event` ADD `test_field` VARCHAR( 100 ) NOT NULL 
-        $dbQuery->ExecuteNonQuery("ALTER TABLE `$entity` ADD `$field_name` $field_mysql_type ");
+        if ($fieldValues['field_type'] == "location") {
+            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
+            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
+        }if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
+            $mtIndex = new MtIndex();
+            $mt_term = $mtIndex->getTermforCode($fieldValues['list_code']);
+
+            $sql = "CREATE  TABLE IF NOT EXISTS  `mlt_" . $fieldValues['entity'] . "_" . $fieldValues['field_name'] . "` (
+                `vocab_number` VARCHAR(14) NOT NULL ,
+                `record_number` VARCHAR(45) NOT NULL ,
+                PRIMARY KEY (`vocab_number`, `record_number`) ,
+                  FOREIGN KEY (`vocab_number` )
+                  REFERENCES  `mt_" . $fieldValues['list_code'] . "_" . $mt_term . "` (`vocab_number` )
+                  ON DELETE RESTRICT
+                  ON UPDATE CASCADE,
+                  FOREIGN KEY (`record_number` )
+                  REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
+                  ON DELETE CASCADE
+                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+            $dbQuery->ExecuteNonQuery($sql);
+        } else {
+            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "` $field_mysql_type ");
+        }
     } catch (Exception $e) {
         return false;
     }

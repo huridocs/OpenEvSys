@@ -17,29 +17,42 @@
  *
  */
 
+function checkFileExtension($filename){
+    $path_parts = pathinfo($filename);
+    $ext = $path_parts['extension'];
+    $notallowedexts = array("php","html","htm","inc","exe","bat","msi","cgi","bin");
+    if(in_array($ext, $notallowedexts)){
+        return false;
+    }
+    return true;
+}
 function shn_files_store($name , $dir= 'documents' , &$file_type){
     global $global;
     global $conf;
-
+    
     switch ($_FILES[$name]['error']) {
         case UPLOAD_ERR_OK:
             include_once APPROOT.'inc/lib_uuid.inc';
             $file_id = shn_create_uuid('file');
             $file_name = basename($_FILES[$name]['name']);
-            //print $file_name;
-            $file_size = $_FILES[$name]['size'];
-            $file_type = $_FILES[$name]['type'];
-            
-            $file_tmp_name = $_FILES[$name]['tmp_name'];
-            $dir = $dir;
-            $uploaddir = $conf['media_dir'];
-           
-            _shn_files_create_dir($uploaddir . $dir , $conf['media_mode']);
+            if(!checkFileExtension($file_name)){
+                $error = _t('FILE_UPLOAD_STOPPED_BY_EXTENSION_');
+            }else{
+                //print $file_name;
+                $file_size = $_FILES[$name]['size'];
+                $file_type = $_FILES[$name]['type'];
 
-            $file_path = $uploaddir . $dir . str_replace('/', '_', $file_id)."_". $file_name;
-            
-            if (move_uploaded_file($_FILES[$name]['tmp_name'], $file_path)) {
-                return $file_path;
+                $file_tmp_name = $_FILES[$name]['tmp_name'];
+                $dir = $dir;
+                $uploaddir = $conf['media_dir'];
+
+                _shn_files_create_dir($uploaddir . $dir , $conf['media_mode']);
+
+                $file_path = $uploaddir . $dir . str_replace('/', '_', $file_id)."_". $file_name;
+
+                if (move_uploaded_file($_FILES[$name]['tmp_name'], $file_path)) {
+                    return $file_path;
+                }
             }
             break; 
         case UPLOAD_ERR_INI_SIZE:

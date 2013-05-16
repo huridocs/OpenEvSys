@@ -1213,7 +1213,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         $searchSql = new SearchResultGenerator();
         $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-        //var_dump($sqlArray);exit;
+       //var_dump($_GET['query'],$sqlArray['result']);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
         //var_dump($sqlArray['result']);exit;
@@ -1374,7 +1374,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $name = $record['field_name'];
             $fo->value = $record['field_name'];
             $fo->label = $record['field_label'];
-            $fo->field_type = ($record['datatype'] == 'N') ? 'number' : $record['field_type'];
+            $fo->field_type = ($record['validation'] == 'number') ? 'number' : $record['field_type'];
             $fo->list_code = $record['list_code'];
             $fo->select = $record['in_results'];
             $domain->$entity->fields->$name = $fo;

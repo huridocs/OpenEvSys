@@ -72,9 +72,6 @@
                 <?php include_section('mod_menu') ?>
 
 
-
-                <!-- <?php include_section('modwrap_open') // these are put in to fotmat admin section         ?>
-                -->
                 <?php if ($module == "admin") { ?>
                     <div class="span10" >
                     <?php } else { ?>
@@ -88,8 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <?php include_section('modwrap_close') ?>
-                    -->
+                    
 
                 </div>
                 <footer>

@@ -22,12 +22,12 @@ function mt_customization_update() {
     //sanitize strings
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
     $locales = l10n_get_locals();
-
     if (isset($_POST['mt_label']) && isset($_POST['label']) && is_array($_POST['label'])) {
         foreach ($_POST['label'] as $vocab_number => $labels) {
-            if (isset($_POST['updateselected']) && !isset($_POST['vocab_number_list'][$vocab_number])) {
+            if ($_POST["bulkaction"] == "updateselected" && !isset($_POST['vocab_number_list'][$vocab_number])) {
                 continue;
             }
+
             if (is_array($labels)) {
                 $vocab_number = $global['db']->qstr($vocab_number);
                 foreach ($locales as $code => $loc) {
@@ -162,6 +162,45 @@ function mt_customization_add_terms($mt_term) {
     }
 }
 
+function mt_customization_add_new_taxonomy() {
+    global $global;
+    $term = str_replace(" ", "", strtolower($_POST['term']));
+    $term = preg_replace('/[^A-Za-z0-9\-_]/', '', $term); // Removes special chars.
+    $term = trim($term);
+    if (!$term) {
+        shnMessageQueue::addError(_t('Micro-thesauri cannot be empty'));
+        return false;
+    }
+    
+    $mtIndex = new MtIndex();
+    $code = $mtIndex->getCodeforTerm($term);
+    
+    if ($code) {
+        shnMessageQueue::addError(_t('Micro-thesauri name already exists'));
+        return false;
+    }
+    $max = $global['db']->GetOne("select max(no) from mt_index");
+    $code = (int) $max + 1;
+    
+    $dbQuery = new Browse();
+    try {
+        $dbQuery->ExecuteNonQuery("insert into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')");
+
+        $sql = "CREATE TABLE IF NOT EXISTS mt_" . $code . "_" . $term . "(
+            vocab_number VARCHAR(14) NOT NULL ,
+            PRIMARY KEY ( vocab_number ) ,
+            FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+
+        ) ENGINE = InnoDB;";
+        $dbQuery->ExecuteNonQuery($sql);
+    } catch (Exception $e) {
+        return false;
+    }
+    return true;
+}
+
 function mt_customization_is_tree($mt_code) {
     global $global;
     $mt_code = (strlen($mt_code) == 1) ? "0$mt_code" : $mt_code;
@@ -228,14 +267,18 @@ function mt_customization_validate_mtterm($list_code, $vocab_number, $huri_term,
 }
 
 //Visibility
-function mt_visibility_update($vocab_number, $val) {
+function mt_visibility_update($vocab_numbers, $val) {
     global $conf;
     global $global;
-    $sql = "UPDATE mt_vocab SET visible='$val' WHERE vocab_number = '$vocab_number'";
-    $res = $global['db']->Execute($sql);
-
-    if ($res) {
-        return true;
-    }else
-        return false;
+    //sanitize strings
+    if (!is_array($vocab_numbers)) {
+        $vocab_numbers = array($vocab_numbers);
+    } else {
+        $vocab_numbers = array_keys($vocab_numbers);
+    }
+    if (!empty($vocab_numbers)) {
+        $vocab_numbers = implode("','", $vocab_numbers);
+        $sql = "UPDATE mt_vocab SET visible='$val' WHERE vocab_number in ('" . $vocab_numbers . "')";
+        $res = $global['db']->Execute($sql);
+    }
 }

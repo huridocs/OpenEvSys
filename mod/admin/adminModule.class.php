@@ -82,17 +82,17 @@ class adminModule extends shnModule {
                     form_customization_process_entity_form($this->entity_select);
                 }
 
-                /*if (isset($_POST['reset'])) {
-                    form_customization_reset_all($this->entity_select);
-                }*/
+                /* if (isset($_POST['reset'])) {
+                  form_customization_reset_all($this->entity_select);
+                  } */
 
                 // OES-28
-                /*$reset_fields = form_customization_get_reset_fields();
-                foreach ($reset_fields as $post_value => $table_field) {
-                    if (isset($_POST[$post_value])) {
-                        form_customization_reset_field($this->entity_select, $table_field);
-                    }
-                }*/
+                /* $reset_fields = form_customization_get_reset_fields();
+                  foreach ($reset_fields as $post_value => $table_field) {
+                  if (isset($_POST[$post_value])) {
+                  form_customization_reset_field($this->entity_select, $table_field);
+                  }
+                  } */
             }
             //include field form
             include_once APPROOT . 'mod/admin/entity_form.inc';
@@ -106,53 +106,69 @@ class adminModule extends shnModule {
         }
     }
 
+    public function act_new_mt(){
+        include_once 'lib_mt_customization.inc';
+        if (isset($_POST['add_new'])) {
+
+            $return = mt_customization_add_new_taxonomy();
+            if ($return) {
+                shnMessageQueue::addInformation(_t('Micro-thesauri created successfully'));
+            }
+        }
+    }
+    
     public function act_new_field() {
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
 
-        $this->entity_select = $_REQUEST['entity_select'];
+        $entity_select_options = array(
+            '' => '',
+            'person' => _t('PERSON'),
+            'event' => _t('EVENT'),
+            'act' => _t('ACT'),
+            'arrest' => _t('ARREST'),
+            'destruction' => _t('DESTRUCTION'),
+            'killing' => _t('KILLING'),
+            'torture' => _t('TORTURE'),
+            'chain_of_events' => _t('CHAIN_OF_EVENT'),
+            'involvement' => _t('INVOLVEMENT'),
+            'information' => _t('INFORMATION'),
+            'intervention' => _t('INTERVENTION'),
+            'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
+            'address' => _t('ADDRESS'),
+            'supporting_docs_meta' => _t('DOCUMENT')
+        );
+        $field_type_options = array(
+            'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
+            'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),
+            'date' => _t('DATE_FIELD_'),
+            'radio' => _t('Radio field'),
+            'location' => _t('Geolocation'),
+            'mt_tree' => _t('Tree'),
+            'mt_tree_multi' => _t('Multivalue Tree'),
+            'mt_select' => _t('Select'),
+            'mt_select_multi' => _t('Multivalue Select')
+        );
+        $mtIndex = new MtIndex();
+        $index_terms = $mtIndex->Find('');
+        $taxonomies = array();
+        $taxonomies[''] = '';
+        foreach ($index_terms as $index_term) {
+            $taxonomies[$index_term->no] = $index_term->no . ' - ' . $index_term->term;
+        }
+        
+        $this->taxonomies = $taxonomies;
+        $this->entity_select_options = $entity_select_options;
+        $this->field_type_options = $field_type_options;
 
-        include_once APPROOT . 'mod/admin/customization_form.inc';
-        //include select entity form        
-        $this->customization_form = $customization_form;
+        if (isset($_POST['add_new'])) {
 
-        if (isset($this->entity_select)) {
-            include_once(APPROOT . 'mod/admin/new_field_form.inc');
-            $this->new_field_form = $new_field_form;
-
-            if (isset($_POST['add_new'])) {
-                //validate
-                $validated = true;
-                if ((!isset($_POST['field_name']) || !isset($_POST['field_number']) || !isset($_POST['field_label']) ) ||
-                        ( '' == $_POST['field_name'] || '' == $_POST['field_number'] || '' == $_POST['field_label'] )) {
-                    shnMessageQueue::addError(_t('FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES'));
-                    $validated = false;
-                } else if (form_customization_field_name_exists(strtolower($_POST['field_name']), $entity_select)) {
-                    shnMessageQueue::addError(_t('FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME'));
-                    $validated = false;
-                } else if (form_customization_field_number_exists($_POST['field_number'])) {
-                    shnMessageQueue::addError(_t('FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER'));
-                    $validated = false;
-                } else if (is_management_field(array('field_number' => $_POST['field_number']))) {
-                    shnMessageQueue::addError(_t('FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_'));
-                    $validated = false;
-                } else if (!array_key_exists($_POST['field_type'], $field_type_options)) {
-                    shnMessageQueue::addError(_t('NOT_A_VALID_FIELD_TYPE__TRY_AGAIN'));
-                    $validated = false;
-                }
-
-                if ($validated) {
-                    $return = form_customization_add_field($this->entity_select, strtolower($_POST['field_name']), $_POST['field_number'], $_POST['order'], $_POST['field_label'], $_POST['field_type']);
-                    if ($return) {
-                        shnMessageQueue::addInformation(_t('FIELD_CREATED_SUCCESSFULLY_'));
-                    }
-                } else {
-                    shnMessageQueue::addError(_t('ERROR_WHILE_CREATING_FIELD_'));
-                }
+            $return = form_customization_add_field($field_type_options);
+            if ($return) {
+                shnMessageQueue::addInformation(_t('FIELD_CREATED_SUCCESSFULLY_'));
             }
         }
     }
 
-   
     /* }}} */
 
     /* {{{ User management */
@@ -430,60 +446,40 @@ class adminModule extends shnModule {
 
         if (isset($this->mt_select)) {
             //handle delete requests
-            if (isset($_POST['deleteselected'])) {
+            if (isset($_POST['bulkaction']) && $_POST['bulkaction'] == "deleteselected") {
                 $this->has_children = false;
-                foreach ($_POST['vocab_number_list'] as $vocab_number=>$v) {
-                   $this->has_children = $this->has_children || mt_customization_has_children($vocab_number);
+                foreach ($_POST['vocab_number_list'] as $vocab_number => $v) {
+                    $this->has_children = $this->has_children || mt_customization_has_children($vocab_number);
                 }
-                
-                if(!$this->has_children){
-                        mt_customization_delete($this->mt_select, $_POST['vocab_number_list']);
-            
-                }else{
+
+                if (!$this->has_children) {
+                    mt_customization_delete($this->mt_select, $_POST['vocab_number_list']);
+                } else {
                     $this->haschildren = true;
                 }
             } else if (isset($_POST['delete_yes'])) {
-
                 mt_customization_delete($this->mt_select, $_POST['vocab_number_list']);
-            } elseif ($this->sub_act == 'label' && ( isset($_POST['update']) || isset($_POST['updateselected']) )) {
+            } elseif ($this->sub_act == 'label' && ( isset($_POST['update']) || $_POST['bulkaction'] == "updateselected")) {
                 mt_customization_update();
             } elseif ($this->sub_act == 'order' && isset($_POST['itemsorder'])) {
-                $itemorders = @json_decode(stripslashes($_POST['itemsorder']),true);
-                if(is_array($itemorders)){
+                $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
+                if (is_array($itemorders)) {
                     mt_customization_update_terms_order($itemorders);
                 }
-            }elseif($this->sub_act == 'label' &&  isset($_POST['save_new_terms']) ){
+            } elseif ($this->sub_act == 'label' && isset($_POST['save_new_terms'])) {
                 mt_customization_add_terms($this->mt_select);
+            } elseif ($this->sub_act == 'label' && $_POST['bulkaction'] == "visible") {
+                mt_visibility_update($_POST['vocab_number_list'], "y");
+            } elseif ($this->sub_act == 'label' && $_POST['bulkaction'] == "disable") {
+                mt_visibility_update($_POST['vocab_number_list'], "n");
             }
-
-
-            
-        }
         
-
-        //include field form
-        if (isset($this->mt_select)) {
             $mtTerms = new MtTerms();
 
             if ($this->sub_act == 'label') {
                 $this->res = Browse::getHuriTermsTranslations($this->mt_select, $this->locales);
             } elseif ($this->sub_act == 'order') {
                 $this->res = MtFieldWrapper::getMTList($this->mt_select);
-            }
-        }
-
-        // handle visiblity
-        if (isset($_POST['visible'])) {
-
-            foreach ($this->mt_cust as $record) {
-
-                if (in_array($record['vocab_number'], $_POST['visible_vocab_number_list'])) {
-                    // add a y to the MT visible                    
-                    $return = mt_visibility_update($record['vocab_number'], 'y');
-                } else {
-                    // add a n to the MT visible
-                    $return = mt_visibility_update($record['vocab_number'], 'n');
-                }
             }
         }
     }

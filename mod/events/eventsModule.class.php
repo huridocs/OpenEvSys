@@ -365,7 +365,6 @@ class eventsModule extends shnModule {
                 
                 form_objects($event_form, $this->event);
 
-
                 $this->event->SaveAll();
                 set_redirect_header('events', 'get_event', null, array('eid' => $this->event->event_record_number));
                 return;

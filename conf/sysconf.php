@@ -134,3 +134,5 @@ $conf['media_mode'] = 0777;
 $conf['session_timeout']= 60;
 
 $conf['fieldstohide'] = array("event"=>array("publishable","public_title","public_title_eng", "summary_spa", "summary_eng"));
+
+$conf['browsefields'] = array("supporting_docs_meta"=>array("eventslinks"));

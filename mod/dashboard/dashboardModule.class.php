@@ -32,7 +32,7 @@ class dashboardModule extends shnModule {
             $name = $record['field_name'];
             $fo->value = $record['field_name'];
             $fo->label = $record['field_label'];
-            $fo->field_type = ($record['datatype'] == 'N') ? 'number' : $record['field_type'];
+            $fo->field_type = ($record['validation'] == 'number') ? 'number' : $record['field_type'];
             $fo->list_code = $record['list_code'];
             $fo->select = $record['in_results'];
             $domain->$entity->fields->$name = $fo;

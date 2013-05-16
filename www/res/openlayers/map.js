@@ -1,8 +1,10 @@
 var map;
+var maps = [];
 var thisLayer;
 var proj_4326 = new OpenLayers.Projection('EPSG:4326');
 var proj_900913 = new OpenLayers.Projection('EPSG:900913');
 var vlayer;
+var vlayers = [];
 var highlightCtrl;
 var selectCtrl;
 var selectedFeatures = [];
@@ -32,7 +34,8 @@ function initEditMap(settings){
    
     // Now initialise the map
     map = new OpenLayers.Map(settings.mapContainer, options);
-			
+    maps[settings.fieldName] = map;
+    
     var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", { 
         type: google.maps.MapTypeId.SATELLITE,
         animationEnabled: true,
@@ -60,13 +63,13 @@ function initEditMap(settings){
         maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
     });
 
-    map.addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
-    map.addControl(new OpenLayers.Control.Navigation());
-    map.addControl(new OpenLayers.Control.Zoom());
-    map.addControl(new OpenLayers.Control.MousePosition());
-    map.addControl(new OpenLayers.Control.ScaleLine());
-    map.addControl(new OpenLayers.Control.Scale('mapScale'));
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
+    maps[settings.fieldName].addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Navigation());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Zoom());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.MousePosition());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.ScaleLine());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Scale('mapScale'));
+    maps[settings.fieldName].addControl(new OpenLayers.Control.LayerSwitcher());
     
     // Vector/Drawing Layer Styles
     style1 = new OpenLayers.Style({
@@ -118,7 +121,8 @@ function initEditMap(settings){
             zIndexing: true
         }
     });
-    map.addLayer(vlayer);
+    vlayers[settings.fieldName] = vlayer;
+    maps[settings.fieldName].addLayer(vlayers[settings.fieldName]);
 			
     var endDragfname  = settings.fieldName+"_endDrag"
     var code = ""
@@ -136,15 +140,15 @@ function initEditMap(settings){
     var endDragf = new Function(code);
     
     // Drag Control
-    var drag = new OpenLayers.Control.DragFeature(vlayer, {
+    var drag = new OpenLayers.Control.DragFeature(vlayers[settings.fieldName], {
         onStart: startDrag,
         onDrag: doDrag,
         onComplete: endDragf
     });
-    map.addControl(drag);
+    maps[settings.fieldName].addControl(drag);
 			
     // Vector Layer Events
-    vlayer.events.on({
+    vlayers[settings.fieldName].events.on({
         beforefeaturesadded: function(event) {
         //for(i=0; i < vlayer.features.length; i++) {
         //	if (vlayer.features[i].geometry.CLASS_NAME == "OpenLayers.Geometry.Point") {
@@ -167,12 +171,12 @@ function initEditMap(settings){
     });
 			
     // Vector Layer Highlight Features
-    highlightCtrl = new OpenLayers.Control.SelectFeature(vlayer, {
+    highlightCtrl = new OpenLayers.Control.SelectFeature(vlayers[settings.fieldName], {
         hover: true,
         highlightOnly: true,
         renderIntent: "temporary"
     });
-    selectCtrl = new OpenLayers.Control.SelectFeature(vlayer, {
+    selectCtrl = new OpenLayers.Control.SelectFeature(vlayers[settings.fieldName], {
         clickout: true, 
         toggle: false,
         multiple: false, 
@@ -181,8 +185,8 @@ function initEditMap(settings){
         onSelect: addSelected,
         onUnselect: clearSelected
     });
-    map.addControl(highlightCtrl);
-    map.addControl(selectCtrl);
+    maps[settings.fieldName].addControl(highlightCtrl);
+    maps[settings.fieldName].addControl(selectCtrl);
 			
                         
     // Insert Saved Geometries
@@ -192,43 +196,43 @@ function initEditMap(settings){
         for(i in settings.geometries){
             wktFeature = wkt.read(settings.geometries[i]);
             wktFeature.geometry.transform(proj_4326,proj_900913);
-            vlayer.addFeatures(wktFeature);
-	}       			
+            vlayers[settings.fieldName].addFeatures(wktFeature);
+        }       			
     }else{
         // Default Point
-            point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
-            OpenLayers.Projection.transform(point, proj_4326, map.getProjectionObject());
-            var origFeature = new OpenLayers.Feature.Vector(point);
-            vlayer.addFeatures(origFeature);
+        point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
+        OpenLayers.Projection.transform(point, proj_4326, maps[settings.fieldName].getProjectionObject());
+        var origFeature = new OpenLayers.Feature.Vector(point);
+        vlayers[settings.fieldName].addFeatures(origFeature);
 				
     }						
 			
     // Create a lat/lon object
     var startPoint = new OpenLayers.LonLat(settings.longitude, settings.latitude);
-    startPoint.transform(proj_4326, map.getProjectionObject());
+    startPoint.transform(proj_4326, maps[settings.fieldName].getProjectionObject());
 			
     // Display the map centered on a latitude and longitude (Google zoom levels)
-    map.setCenter(startPoint, 8);
+    maps[settings.fieldName].setCenter(startPoint, 8);
    					
 
 			
     // Create the Editing Toolbar
     var container = document.getElementById(settings.editContainer);
     var panel = new OpenLayers.Control.EditingToolbar(
-        vlayer, {
+        vlayers[settings.fieldName], {
             div: container
         }
         );
-    map.addControl(panel);
+    maps[settings.fieldName].addControl(panel);
     panel.activateControl(panel.controls[0]);
     drag.activate();
     highlightCtrl.activate();
     selectCtrl.activate();
     
     jQuery('.'+settings.fieldName+'_locationButtonsLast').on('click', function () {
-        if (vlayer.features.length > 0) {
-            x = vlayer.features.length - 1;
-            vlayer.removeFeatures(vlayer.features[x]);
+        if (vlayers[settings.fieldName].features.length > 0) {
+            x = vlayers[settings.fieldName].features.length - 1;
+            vlayers[settings.fieldName].removeFeatures(vlayers[settings.fieldName].features[x]);
         }
         /*jQuery('#geometry_color').ColorPickerHide();
 				jQuery('#geometryLabelerHolder').hide(400);*/
@@ -239,7 +243,7 @@ function initEditMap(settings){
     // Delete Selected Features
     jQuery('.'+settings.fieldName+'_locationButtonsDelete').on('click', function () {
         for(var y=0; y < selectedFeatures.length; y++) {
-            vlayer.removeFeatures(selectedFeatures);
+            vlayers[settings.fieldName].removeFeatures(selectedFeatures);
         }
         /*jQuery('#geometry_color').ColorPickerHide();
 				jQuery('#geometryLabelerHolder').hide(400);*/
@@ -249,7 +253,7 @@ function initEditMap(settings){
 			
     // Clear Map
     jQuery('.'+settings.fieldName+'_locationButtonsClear').on('click', function () {
-        vlayer.removeFeatures(vlayer.features);
+        vlayers[settings.fieldName].removeFeatures(vlayers[settings.fieldName].features);
         jQuery('input[name="'+settings.fieldName+'_geometry[]"]').remove();
         jQuery('input[name="'+settings.fieldName+'_latitude"]').val("");
         jQuery('input[name="'+settings.fieldName+'_longitude"]').val("");
@@ -284,21 +288,21 @@ function initEditMap(settings){
         if (!isNaN(newlat) && !isNaN(newlon))
         {
             // Clear the map first
-            vlayer.removeFeatures(vlayer.features);
+            vlayers[settings.fieldName].removeFeatures(vlayers[settings.fieldName].features);
             jQuery('input[name="'+settings.fieldName+'_geometry[]"]').remove();
 					
             point = new OpenLayers.Geometry.Point(newlon, newlat);
             OpenLayers.Projection.transform(point, proj_4326,proj_900913);
 					
             f = new OpenLayers.Feature.Vector(point);
-            vlayer.addFeatures(f);
+            vlayers[settings.fieldName].addFeatures(f);
 					
             // create a new lat/lon object
             myPoint = new OpenLayers.LonLat(newlon, newlat);
-            myPoint.transform(proj_4326, map.getProjectionObject());
+            myPoint.transform(proj_4326, maps[settings.fieldName].getProjectionObject());
 
             // display the map centered on a latitude and longitude
-            map.panTo(myPoint);
+            maps[settings.fieldName].panTo(myPoint);
         }
         else
         {
@@ -335,7 +339,7 @@ function initViewMap(settings){
    
     // Now initialise the map
     map = new OpenLayers.Map(settings.mapContainer, options);
-			
+			maps[settings.fieldName] = map
     var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", { 
         type: google.maps.MapTypeId.SATELLITE,
         animationEnabled: true,
@@ -363,13 +367,13 @@ function initViewMap(settings){
         maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
     });
 
-    map.addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
-    map.addControl(new OpenLayers.Control.Navigation());
-    map.addControl(new OpenLayers.Control.Zoom());
-    map.addControl(new OpenLayers.Control.MousePosition());
-    map.addControl(new OpenLayers.Control.ScaleLine());
-    map.addControl(new OpenLayers.Control.Scale('mapScale'));
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
+    maps[settings.fieldName].addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Navigation());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Zoom());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.MousePosition());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.ScaleLine());
+    maps[settings.fieldName].addControl(new OpenLayers.Control.Scale('mapScale'));
+    maps[settings.fieldName].addControl(new OpenLayers.Control.LayerSwitcher());
     
     // Vector/Drawing Layer Styles
     style1 = new OpenLayers.Style({
@@ -421,7 +425,8 @@ function initViewMap(settings){
             zIndexing: true
         }
     });
-    map.addLayer(vlayer);
+    vlayers[settings.fieldName] = vlayer
+    maps[settings.fieldName].addLayer(vlayers[settings.fieldName]);
 			
 	
 			
@@ -431,29 +436,29 @@ function initViewMap(settings){
     wkt = new OpenLayers.Format.WKT();
     if(settings.geometries){
         for(i in settings.geometries){
-             wktFeature = wkt.read(settings.geometries[i]);
+            wktFeature = wkt.read(settings.geometries[i]);
             wktFeature.geometry.transform(proj_4326,proj_900913);
-            vlayer.addFeatures(wktFeature);
-	}       			
+            vlayers[settings.fieldName].addFeatures(wktFeature);
+        }       			
     }else{
         // Default Point
-            point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
-            OpenLayers.Projection.transform(point, proj_4326, map.getProjectionObject());
-            var origFeature = new OpenLayers.Feature.Vector(point);
-            vlayer.addFeatures(origFeature);
+        point = new OpenLayers.Geometry.Point(settings.longitude, settings.latitude);
+        OpenLayers.Projection.transform(point, proj_4326, maps[settings.fieldName].getProjectionObject());
+        var origFeature = new OpenLayers.Feature.Vector(point);
+        vlayers[settings.fieldName].addFeatures(origFeature);
 				
     }                 							
 			
     // Create a lat/lon object
     var startPoint = new OpenLayers.LonLat(settings.longitude, settings.latitude);
-    startPoint.transform(proj_4326, map.getProjectionObject());
+    startPoint.transform(proj_4326, maps[settings.fieldName].getProjectionObject());
 			
     // Display the map centered on a latitude and longitude (Google zoom levels)
-    map.setCenter(startPoint, 8);
+    maps[settings.fieldName].setCenter(startPoint, 8);
 			
-    // Create the Editing Toolbar
-    //var container = document.getElementById(settings.editContainer);
-    //refreshFeatures(settings.fieldName);
+// Create the Editing Toolbar
+//var container = document.getElementById(settings.editContainer);
+//refreshFeatures(settings.fieldName);
     
 }
 
@@ -467,21 +472,21 @@ function geoCode(fieldName)
     function(data){
         if (data.status == 'success'){
             // Clear the map first
-            vlayer.removeFeatures(vlayer.features);
+            vlayers[fieldName].removeFeatures(vlayers[fieldName].features);
             jQuery('input[name="'+fieldName+'_geometry[]"]').remove();
 						
             point = new OpenLayers.Geometry.Point(data.longitude, data.latitude);
             OpenLayers.Projection.transform(point, proj_4326,proj_900913);
 						
             f = new OpenLayers.Feature.Vector(point);
-            vlayer.addFeatures(f);
+            vlayers[fieldName].addFeatures(f);
 						
             // create a new lat/lon object
             myPoint = new OpenLayers.LonLat(data.longitude, data.latitude);
-            myPoint.transform(proj_4326, map.getProjectionObject());
+            myPoint.transform(proj_4326, maps[fieldName].getProjectionObject());
 
             // display the map centered on a latitude and longitude
-            map.panTo(myPoint);
+            maps[fieldName].panTo(myPoint);
 												
             // Update form values
             jQuery("#"+fieldName+"_country_name").val(data.country);
@@ -571,7 +576,7 @@ function startDrag(feature, pixel) {
 function doDrag(feature, pixel) {
     for (f in selectedFeatures) {
         if (feature != selectedFeatures[f]) {
-            var res = map.getResolution();
+            var res = maps[settings.fieldName].getResolution();
             selectedFeatures[f].geometry.move(res * (pixel.x - lastPixel.x), res * (lastPixel.y - pixel.y));
             vlayer.drawFeature(selectedFeatures[f]);
         }
@@ -597,11 +602,11 @@ function doDrag(feature, pixel) {
 function refreshFeatures(event,fieldName) {
     var geoCollection = new OpenLayers.Geometry.Collection;
     jQuery('input[name="'+fieldName+'_geometry[]"]').remove();
-    for(i=0; i < vlayer.features.length; i++) {
-        newFeature = vlayer.features[i].clone();
+    for(i=0; i < vlayers[fieldName].features.length; i++) {
+        newFeature = vlayers[fieldName].features[i].clone();
         newFeature.geometry.transform(proj_900913,proj_4326);
         geoCollection.addComponents(newFeature.geometry);
-        if (vlayer.features.length == 1 && vlayer.features[i].geometry.CLASS_NAME == "OpenLayers.Geometry.Point") {
+        if (vlayers[fieldName].features.length == 1 && vlayers[fieldName].features[i].geometry.CLASS_NAME == "OpenLayers.Geometry.Point") {
         // If feature is a Single Point - save as lat/lon
         } else {
             // Otherwise, save geometry values
@@ -614,23 +619,23 @@ function refreshFeatures(event,fieldName) {
             var lat = '';
             var color = '';
             var strokewidth = '';
-            if ( typeof(vlayer.features[i].label) != 'undefined') {
-                label = vlayer.features[i].label;
+            if ( typeof(vlayers[fieldName].features[i].label) != 'undefined') {
+                label = vlayers[fieldName].features[i].label;
             }
-            if ( typeof(vlayer.features[i].comment) != 'undefined') {
-                comment = vlayer.features[i].comment;
+            if ( typeof(vlayers[fieldName].features[i].comment) != 'undefined') {
+                comment = vlayers[fieldName].features[i].comment;
             }
-            if ( typeof(vlayer.features[i].lon) != 'undefined') {
-                lon = vlayer.features[i].lon;
+            if ( typeof(vlayers[fieldName].features[i].lon) != 'undefined') {
+                lon = vlayers[fieldName].features[i].lon;
             }
-            if ( typeof(vlayer.features[i].lat) != 'undefined') {
-                lat = vlayer.features[i].lat;
+            if ( typeof(vlayers[fieldName].features[i].lat) != 'undefined') {
+                lat = vlayers[fieldName].features[i].lat;
             }
-            if ( typeof(vlayer.features[i].color) != 'undefined') {
-                color = vlayer.features[i].color;
+            if ( typeof(vlayers[fieldName].features[i].color) != 'undefined') {
+                color = vlayers[fieldName].features[i].color;
             }
-            if ( typeof(vlayer.features[i].strokewidth) != 'undefined') {
-                strokewidth = vlayer.features[i].strokewidth;
+            if ( typeof(vlayers[fieldName].features[i].strokewidth) != 'undefined') {
+                strokewidth = vlayers[fieldName].features[i].strokewidth;
             }
             geometryAttributes = JSON.stringify({
                 geometry: geometry, 
@@ -653,7 +658,7 @@ function refreshFeatures(event,fieldName) {
 			
                         
 function incidentZoom(event) {
-    jQuery("#incident_zoom").val(map.getZoom());
+    jQuery("#incident_zoom").val(maps[settings.fieldName].getZoom());
 }
 		
 function updateFeature(feature, color, strokeWidth){
