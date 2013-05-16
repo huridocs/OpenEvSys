@@ -1,7 +1,8 @@
 <html>
 <head>
-<?php $version = explode( '=', file_get_contents(APPROOT.'/VERSION')); ?>
-<title>OpenEvSys <?php echo $version[0]?> Installer</title>
+<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));
+$version = $version[1]; ?>
+<title>OpenEvSys <?php echo $version?> Installer</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
@@ -146,7 +147,7 @@
             <span>&copy;</span>
             <a href="http://www.huridocs.org" target='blank'>HURIDOCS</a><span>&nbsp;|&nbsp;</span>
             <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html" target='blank'>AGPL v3 licensed</a><span>&nbsp;|&nbsp;</span>
-            <span class='version'>VERSION : <?php echo $version[0]; ?></span>
+            <span class='version'>VERSION : <?php echo $version; ?></span>
         </div>
     </div>
 </div>

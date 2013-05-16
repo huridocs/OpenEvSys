@@ -171,8 +171,14 @@ class shnPager implements BrowseStrategy
                 <div class="input-prepend input-append span" style="width:auto">
                     <span class="add-on"><?php echo _t('RECORDS_PER_PAGE') ?></span>
                 
-                <input style="width:22px;" type='text' id="rpp" name="rpp" size='3' value="<?php echo $this->rpp ?>" onchange="window.location.replace($('#rpp_set').attr('href')+ '&rpp=' + $(this).attr('value'));"/>
-                <span class="add-on"><a id="rpp_set" href="<?php $args['request_page'] = 1; get_url($request->module, $request->action , $request->tpl , $args )?>" onclick="$(this).attr('href', $(this).attr('href')+ '&rpp=' + $('#rpp').attr('value'))" ><?php echo _t('SET') ?></a>
+                <input style="width:22px;" type='text' id="rpp" name="rpp" size='3' value="<?php echo $this->rpp ?>"
+                       onchange="/*$('#rpp_set').attr('href',$('#rpp_set').attr('href')+ '&rpp=' + $(this).val());*/"/>
+                <span class="add-on"><a id="rpp_set" href="<?php $args['request_page'] = 1;
+                
+                get_url($request->module, $request->action , $request->tpl , $args );
+                $args2 = $args;
+                unset($args2['rpp']);
+                ?>" onclick="$(this).attr('href', '<?php get_url($request->module, $request->action , $request->tpl , $args2 )?>'+ '&rpp=' + $('#rpp').val())" ><?php echo _t('SET') ?></a>
                 </span>
                 </div>
     <div class="span well well-small" style="padding: 4px;width:auto">

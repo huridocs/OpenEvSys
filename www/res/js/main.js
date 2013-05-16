@@ -831,7 +831,8 @@ function testMod(key){
                 link.attr('id',id+'_link');
                 link.attr('rel',id);
                 obj.after(link);
-                if(obj.attr('value') == '' || obj.attr('value') == undefined){
+               
+                if(obj.val() == '' || obj.val() == undefined){
                     obj.hide();
                     link.text(_('CLARIFY'));
                     link.attr('class',options.showLinkClass);

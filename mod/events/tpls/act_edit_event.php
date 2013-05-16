@@ -9,9 +9,9 @@ include_once('event_title.php');
         <form class="form-horizontal"  id="event_form" name="event_form" action='<?php echo get_url('events', 'edit_event', null, array('eid' => $event_id)) ?>' method='post' enctype='multipart/form-data'>
             <div class="control-group">
                 <div >
+                    <a class="btn" href="<?php echo get_url('events', 'get_event'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
 
-                    <button type="submit" class="btn" name="cancel" ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
-<button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                     
                 </div>
             </div> <?php $fields = shn_form_get_html_fields($event_form); ?>
@@ -19,7 +19,7 @@ include_once('event_title.php');
             <div class="control-group">
                 <div >
 
-                    <button type="submit" class="btn" name="cancel" ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
+ <a class="btn" href="<?php echo get_url('events', 'get_event'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
 <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                     
                 </div>

@@ -200,6 +200,9 @@ function openevsysDomain()
                 return;
             }
         }
+        if(!this.data[entity].select){
+            this.data[entity].select = new Array();
+        }
         this.data[entity].select.push(field)
     }
 
@@ -991,12 +994,13 @@ function queryBuilder(){
                         'selected' : e.value
                     });
                     div.append(mt_select);
-                    mt_select.val( e.value ).attr('selected',true);
+                    //mt_select.val( e.value ).attr('selected',true);
             
                     mt_select.select2({
                         width: 'resolve'
                     });
-                    mt_select.select2("val",e.value);
+                    
+                    //mt_select.select2("val",e.value);
                     break;
                 case "mt_tree":
                     var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" />');
@@ -1005,7 +1009,7 @@ function queryBuilder(){
                         'selected' : e.value
                     });
                     div.append(mt_tree);
-                    mt_tree.val( e.value ).attr('selected',true);
+                    //mt_tree.val( e.value ).attr('selected',true);
             
                     mt_tree.select2({
                         width: 'resolve',
@@ -1050,8 +1054,8 @@ function queryBuilder(){
 
         //add select fields
         for(i in query.select){
-            var fields = openevsysDomain.getInstance().getSelectFields(query.select[i].entity);
-            od.unsetSelectField(query.select[i].entity, query.select[i].field);
+            //var fields = openevsysDomain.getInstance().getSelectFields(query.select[i].entity);
+            od.setSelectField(query.select[i].entity, query.select[i].field);
         }
     }
 
@@ -1773,7 +1777,13 @@ function removeField(field,entity){
 
         return this.each(function()
         {
-            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected,function(){
+                if(options.selected){
+                    $(this).val( options.selected ).attr('selected',true);
+            
+                    $(this).select2("val",options.selected);
+                }
+            } );
         });
 
 
@@ -1799,7 +1809,13 @@ function removeField(field,entity){
 
         return this.each(function()
         {
-            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected );
+            $(this).load( options.url+'&list_code='+options.mt+'&selected='+options.selected,function(){
+                if(options.selected){
+                    $(this).val( options.selected ).attr('selected',true);
+            
+                    $(this).select2("val",options.selected);
+                }
+            } );
         });
         
         

@@ -1,9 +1,10 @@
 <?php global $conf, $global; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php $version = explode( '=', file_get_contents(APPROOT.'/VERSION')); ?>
+<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));
+$version = $version[1]; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['locale'] ?>" lang="<?php echo $conf['locale'] ?>">
     <head>
-        <title>OpenEvSys <?php echo $version[0]?></title>
+        <title>OpenEvSys <?php echo $version?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
@@ -20,7 +21,7 @@
 
         <link rel="stylesheet" type="text/css" media="screen" href="res/select2/select2.css" />
 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/datepicker.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/datepicker.css?v=<?php echo $version?>" />
         <link rel="stylesheet" type="text/css" media="screen" href="res/bootstrap/bootstrap-daterangepicker/daterangepicker.css" />
 
 
@@ -29,7 +30,7 @@
         <script src="res/jquery/jquery-1.9.1.min.js"></script>
 
         <script src="res/bootstrap/bootstrap.min.js"></script>
-        <script src="res/bootstrap/bootstrap-datepicker.js"></script>
+        <script src="res/bootstrap/bootstrap-datepicker.js?v=<?php echo $version?>"></script>
         <script src="res/bootstrap/bootstrap-daterangepicker/date.js"></script>
         <script src="res/bootstrap/bootstrap-daterangepicker/daterangepicker.js"></script>
 
@@ -40,11 +41,11 @@
         <script type="text/javascript" src="res/jquery/jquery.gettext.js"></script>
 
         <script type="text/javascript" src="res/jquery/jquery.pnotify.js"></script>
-        <script type="text/javascript" src="res/js/main.js"></script>
+        <script type="text/javascript" src="res/js/main.js?v=<?php echo $version?>"></script>
         <script type="text/javascript" src="res/jquery/jquery.json-2.3.js"></script>
 
-        <script type="text/javascript" src="res/jquery/fg.menu.js"></script>
-        <script type="text/javascript" src="res/js/fg.menu.js"></script>
+        <script type="text/javascript" src="res/jquery/fg.menu.js?v=<?php echo $version?>"></script>
+        <script type="text/javascript" src="res/js/fg.menu.js?v=<?php echo $version?>"></script>
         <?php if(in_array("map", $global["js"])) { ?>
             <script type="text/javascript" src="res/openlayers/OpenLayers.js"></script>
             <script type="text/javascript" src="res/openlayers/map.js"></script>
@@ -98,7 +99,7 @@
                         <span class='version'><?php
                                 echo _t('VERSION');
                                 echo " : ";
-                                echo $version[0];
+                                echo $version;
                                 ?></span>
                     </div>
                 </footer>
