@@ -6,14 +6,16 @@ function shn_config_database_update($key, $value)
 	global $global;
 	$sql = "SELECT confkey, value FROM config
                 WHERE confkey = '$key'";
-
-	if($results = $global['db']->GetALL($sql)) {
-		$sql = "UPDATE config SET value = '$value'
+        $value = $global['db']->qstr($value);
+	
+        if($results = $global['db']->GetALL($sql)) {
+            
+		$sql = "UPDATE config SET value = $value
                 WHERE confkey = '$key' ";
 		$global['db']->Execute($sql);
 
 	} else {
-		$sql = "INSERT INTO config VALUES (NULL, '$key', '$value')";
+		$sql = "INSERT INTO config VALUES (NULL, '$key', $value)";
 		$global['db']->Execute($sql);
 	}
 }

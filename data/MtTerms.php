@@ -59,7 +59,7 @@ class MtTerms extends ADODB_Active_Record{
         
         global $conf;
         $sql = "SELECT m.vocab_number , IFNULL(l.msgstr , english) as 'label',
-                term_order,parent_vocab_number ,term_level 
+                term_order,parent_vocab_number ,term_level ,huri_code
                 FROM mt_vocab m 
                 LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
                 $consistancyJoin

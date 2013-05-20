@@ -1,6 +1,21 @@
-<?php 
-    include_once('tabs.php');
-?><br />
+<?php
+global $conf;
+$conf['print_person_sidebar'] = "";
+if($conf['print_person_header']){
+    echo "<div class='row-fluid'><div class='span12'>".$conf['print_person_header']."</div></div>";
+}
+?>
+<div class="row-fluid">
+    <?php
+$title = htmlspecialchars($person->event_title);
+
+if($conf['print_person_sidebar']){
+   echo "<div class='span9'>";
+}else{
+    echo "<div class='span12'>";
+}
+?>
+    <h3><?php echo $title?></h3><br />
 <center class='phide'>
     <?php echo _t('PRINTABLE_VIEW') ?> 
     :: 
@@ -12,6 +27,10 @@
     include_once('person_name.php');
 //print the event summary 
     $person_form = generate_formarray('person','view');
+    $person_form['picture'] = array('type'=>'upload','label'=>_t('PICTURE'),
+							  'map'=>array('field'=>'picture'),
+	                          'extra_opt'=>array('value'=>''),
+            'extra_opts'=>array('validation'=>array('upload')));
     popuate_formArray($person_form , $person);
     shn_form_get_html_labels($person_form , false);
 ?>
@@ -87,7 +106,16 @@ if(isset($biographics) || isset($biographics_reverse)){
         echo '<br />';
     } 
 }
+?>
+</div>
+<?php
+if($conf['print_person_sidebar']){
+   echo "<div class='span3'>".$conf['print_person_sidebar']."</div>";
+}
+?>
+    
 
+</div>
 
 
 

@@ -301,7 +301,7 @@ class homeModule extends shnModule {
 
     function act_mt_tree() {
         $data_array = MtFieldWrapper::getMTList($_GET['list_code']);
-        
+
         $count = count($data_array);
         for ($i = 0; $i < $count;) {
             $element1 = $data_array[$i];
@@ -317,7 +317,6 @@ class homeModule extends shnModule {
             <?php
             $i++;
         }
-       
     }
 
     function act_mt_select() {
@@ -325,5 +324,33 @@ class homeModule extends shnModule {
         $this->terms = $micro_thesauri->getTerms();
     }
 
+    function act_filemanager() {
+        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
+        if (isset($_GET['del_file'])) {
+            @unlink($imagesfolder . $_GET['del_file']);
+        }
+    }
+
+    function act_filemanagerupload() {
+        include_once APPROOT . 'inc/lib_uuid.inc';
+        include_once APPROOT . 'inc/lib_files.inc';
+        $type = null;
+        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
+        $uri = shn_files_store('file', null, &$type,$imagesfolder);
+        exit;
+    }
+
+    function act_forcedownload() {
+        $path = $_POST['path'];
+        $name = $_POST['name'];
+        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
+        header('Pragma: private');
+        header('Cache-control: private, must-revalidate');
+        header("Content-Type: application/octet-stream");
+        header("Content-Length: " . (string) (filesize($imagesfolder . $path)));
+        header('Content-Disposition: attachment; filename="' . ($name) . '"');
+        readfile($imagesfolder . $path);
+        exit;
+    }
 
 }

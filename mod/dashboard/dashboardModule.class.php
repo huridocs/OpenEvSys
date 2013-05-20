@@ -103,12 +103,18 @@ class dashboardModule extends shnModule {
             $this->daterange = "";
         }
 
-        $sql = "SELECT  DATE_FORMAT(m.date_of_entry,'$dateFormat') as val , COUNT(e.event_record_number) AS count
+        /*$sql = "SELECT  DATE_FORMAT(m.date_of_entry,'$dateFormat') as val , COUNT(e.event_record_number) AS count
                 FROM  event e join management m on m.entity_id=e.event_record_number and m.entity_type='event' ";
         if ($datestart && $dateend) {
             $sql .= " where m.date_of_entry BETWEEN '$datestart' AND '$dateend' ";
         }
-        $sql .= "GROUP BY val order by m.date_of_entry ";
+        $sql .= "GROUP BY val order by m.date_of_entry ";*/
+        $sql = "SELECT  DATE_FORMAT(e.initial_date ,'$dateFormat') as val , COUNT(e.event_record_number) AS count
+                FROM  event e  ";
+        if ($datestart && $dateend) {
+            $sql .= " where e.initial_date  BETWEEN '$datestart' AND '$dateend' ";
+        }
+        $sql .= "GROUP BY val order by e.initial_date  ";
         try {
             $res_count = $global['db']->Execute($sql);
 
@@ -127,12 +133,21 @@ class dashboardModule extends shnModule {
         }
 
 
-        $sql = "SELECT  DATE_FORMAT(m.date_of_entry,'$dateFormat') as val , COUNT(a.act_record_number) AS count
+       /* $sql = "SELECT  DATE_FORMAT(m.date_of_entry,'$dateFormat') as val , COUNT(a.act_record_number) AS count
                 FROM  act a join management m on m.entity_id=a.act_record_number and m.entity_type='act' ";
         if ($datestart && $dateend) {
             $sql .= " where m.date_of_entry BETWEEN '$datestart' AND '$dateend' ";
         }
         $sql .= "GROUP BY val order by m.date_of_entry "; //where e.event_date<>'0000-00-00'
+        * */
+        $sql = "SELECT  DATE_FORMAT(a.initial_date,'$dateFormat') as val , COUNT(a.act_record_number) AS count
+                FROM  act a   ";
+        if ($datestart && $dateend) {
+            $sql .= " where a.initial_date BETWEEN '$datestart' AND '$dateend' ";
+        }
+        $sql .= "GROUP BY val order by a.initial_date "; 
+        
+        
         try {
             $res_count = $global['db']->Execute($sql);
             foreach ($res_count as $row) {

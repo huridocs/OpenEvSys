@@ -92,6 +92,14 @@ function shn_valid_email($value) {
 
     return $ok;
 }
+function shn_valid_datecomperision($value1,$value2) {
+    $value1 = strtotime($value1);
+    $value2 = strtotime($value2);
+    if($value1>=$value2){
+        return true;
+    }return false;
+    
+}
 
 /**
  * shn_valid_date 

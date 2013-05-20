@@ -106,24 +106,36 @@ function mt_customization_delete($mt_select, $vocab_number_list) {
     }
 }
 
+function get_next_vocab_number(){
+    global $global;
+    $sql = "SELECT CAST(vocab_number AS UNSIGNED) as vocab_number  FROM mt_vocab order by vocab_number desc";
+    
+    while(true){
+        $vocab_number = $global['db']->GetOne($sql)+1;
+
+        $sql = "SELECT vocab_number FROM mt_vocab WHERE vocab_number='$vocab_number' ";
+        $vocab_number2 = $global['db']->GetOne($sql);
+       if (empty($vocab_number2)) {
+           return $vocab_number;
+        }
+    }
+    
+}
 function mt_customization_add_terms($mt_term) {
     global $global;
 
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
     $locales = l10n_get_locals();
 
-
     $fieldValues = array();
-
     $mtIndex = new MtIndex();
     $mt_table = 'mt_' . $mt_term . '_' . $mtIndex->getTermforCode($mt_term);
-    $index = 0;
+    
+        
     $mt_term = (strlen($mt_term) == 1) ? '0' . $mt_term : $mt_term;
-    if (is_array($_POST['new_vocab_number']) && is_array($_POST['new_term_label'])) {
-        foreach ($_POST['new_vocab_number'] as $vocab_number) {
-            //$fieldValues['vocab_number'] = $_POST['vocab_number'][$index];
-            $recordNumber = $vocab_number . $mt_term;
-            $vocab_number = trim($vocab_number);
+    if (is_array($_POST['new_term_label'])) {
+        for ($index = 0;$index < count($_POST['new_term_label']['en']);$index++) {
+            $vocab_number = get_next_vocab_number();
             $huri_term = trim($_POST['new_term_label']['en'][$index]);
 
             if ($vocab_number == '' || $huri_term == '') {
@@ -157,7 +169,6 @@ function mt_customization_add_terms($mt_term) {
             } catch (Exception $e) {
                 shnMessageQueue::addError(_t('ERROR_OCCURRED_WHILE_CREATING_HURITERM_') . "  [ $vocab_number : $huri_term ]");
             }
-            $index++;
         }
     }
 }

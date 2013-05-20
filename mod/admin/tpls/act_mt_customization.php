@@ -47,13 +47,12 @@
         <form class="form-horizontal"  action='<?php echo get_url('admin', 'mt_customization', null, array('sub_act' => $_REQUEST['sub_act'], 'mt_select' => $mt_select)) ?>' method='post'>
             <center>
 
-                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('UPDATE_FORM') ?></button>
+                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('Save changes') ?></button>
                 <?php
                 if ($sub_act == 'label') {
                     ?>
-                     <button name='' class="btn" onclick="add_new_mt();$('#save_new_terms').show();return false;" ><i class="icon-plus"></i> <?php echo _t('ADD_NEW') ?></button>
-                    <button type='submit' class='btn' name='save_new_terms' id='save_new_terms'  style="display:none" ><i class="icon-ok"></i> <?php echo _t('SAVE_NEW_FIELDS') ?></button>
-
+                     <button name='' class="btn" onclick="add_new_mt();return false;" ><i class="icon-plus"></i> <?php echo _t('Add new term') ?></button>
+                    
                     <?php
                 }
                 ?>
@@ -82,12 +81,12 @@
             ?>
             <center>
 
-                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('UPDATE_FORM') ?></button>
-                <?php
+                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('Save changes') ?></button>
+               <?php
                 if ($sub_act == 'label') {
                     ?>
-                    <button type="submit" name="updateselected" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('Update selected') ?></button>
-
+                     <button name='' class="btn" onclick="add_new_mt();return false;" ><i class="icon-plus"></i> <?php echo _t('Add new term') ?></button>
+                    
                     <?php
                 }
                 ?>

@@ -103,10 +103,37 @@ class adminModule extends shnModule {
             } else {
                 $this->res = form_customization_get_field_table($this->entity_select);
             }
+            if ($this->sub_act == 'visibility') {
+                $fields_form = generate_formarray($this->entity_select, "new");
+                $fields_form2 = array();
+                foreach ($fields_form as $k => $f) {
+                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select') {
+                        $fields_form2[$k] = $f;
+                    }
+                }
+
+                $this->fields_form = $fields_form2;
+                $res = Browse::getFields($this->entity_select);
+                $fields = array();
+
+                $field_numbers = array();
+                foreach ($res as $record) {
+                    if ($record['enabled'] == 'y' && $record['visible_new'] == 'y' &&
+                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select')) {
+                        $fields[$record['field_number']] = $record;
+                    }
+                    $field_numbers[] = $record['field_number'];
+                }
+                $this->fields_for_hide = $fields;
+
+                $browse = new Browse();
+                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
+                $this->visibility_fields = $browse->ExecuteQuery($sql);
+            }
         }
     }
 
-    public function act_new_mt(){
+    public function act_new_mt() {
         include_once 'lib_mt_customization.inc';
         if (isset($_POST['add_new'])) {
 
@@ -116,7 +143,7 @@ class adminModule extends shnModule {
             }
         }
     }
-    
+
     public function act_new_field() {
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
 
@@ -155,7 +182,7 @@ class adminModule extends shnModule {
         foreach ($index_terms as $index_term) {
             $taxonomies[$index_term->no] = $index_term->no . ' - ' . $index_term->term;
         }
-        
+
         $this->taxonomies = $taxonomies;
         $this->entity_select_options = $entity_select_options;
         $this->field_type_options = $field_type_options;
@@ -459,21 +486,22 @@ class adminModule extends shnModule {
                 }
             } else if (isset($_POST['delete_yes'])) {
                 mt_customization_delete($this->mt_select, $_POST['vocab_number_list']);
-            } elseif ($this->sub_act == 'label' && ( isset($_POST['update']) || $_POST['bulkaction'] == "updateselected")) {
-                mt_customization_update();
             } elseif ($this->sub_act == 'order' && isset($_POST['itemsorder'])) {
                 $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
                 if (is_array($itemorders)) {
                     mt_customization_update_terms_order($itemorders);
                 }
-            } elseif ($this->sub_act == 'label' && isset($_POST['save_new_terms'])) {
+            } elseif ($this->sub_act == 'label' && ( isset($_POST['update']) || $_POST['bulkaction'] == "updateselected")) {
                 mt_customization_add_terms($this->mt_select);
+                mt_customization_update();
             } elseif ($this->sub_act == 'label' && $_POST['bulkaction'] == "visible") {
+                mt_customization_add_terms($this->mt_select);
                 mt_visibility_update($_POST['vocab_number_list'], "y");
             } elseif ($this->sub_act == 'label' && $_POST['bulkaction'] == "disable") {
+                mt_customization_add_terms($this->mt_select);
                 mt_visibility_update($_POST['vocab_number_list'], "n");
             }
-        
+
             $mtTerms = new MtTerms();
 
             if ($this->sub_act == 'label') {
@@ -655,6 +683,18 @@ class adminModule extends shnModule {
             shn_config_database_update('locale', $_POST['locale']);
             //redirect to same page to refresh the strings
             set_redirect_header('admin', 'set_locale');
+        }
+    }
+
+    public function act_change_print() {
+        global $conf;
+        if (isset($_POST["save"])) {
+            $keys = array('print_event_header', 'print_event_sidebar', 'print_person_header', 'print_person_sidebar');
+            foreach ($keys as $key) {
+                $value = $_POST[$key];
+                $conf[$key] = $value;
+                shn_config_database_update($key, $value);
+            }
         }
     }
 

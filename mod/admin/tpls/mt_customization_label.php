@@ -68,7 +68,7 @@
                         echo 'style="display:none"';
                     }
                             ?>>
-                                <input  type="text" name="label[<?php echo $record['vocab_number']; ?>][<?php echo $code ?>]"  value="<?php if ($record['label_' . $code]) echo $record['label_' . $code]; ?>"></input>
+                                <input  type="text" name="label[<?php echo $record['vocab_number']; ?>][<?php echo $code ?>]"  value="<?php if ($record['label_' . $code]) echo htmlentities ($record['label_' . $code]); ?>"></input>
 
                             </div>
                             <?php
@@ -101,7 +101,7 @@
     function add_new_mt()
     {
         var template = "";
-        template += "<tr><td></td><td><input type='text' name='new_vocab_number[]'   /></td><td>";
+        template += "<tr><td></td><td></td><td>";
         template +="<?php
             foreach ($locales as $code => $loc) {
                 echo "<div class='labelinputdiv labelinputdiv_" . $code . "' ";

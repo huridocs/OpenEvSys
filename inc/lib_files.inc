@@ -26,7 +26,7 @@ function checkFileExtension($filename){
     }
     return true;
 }
-function shn_files_store($name , $dir= 'documents' , &$file_type){
+function shn_files_store($name , $dir= 'documents' , &$file_type,$uploaddir = ""){
     global $global;
     global $conf;
     
@@ -44,8 +44,9 @@ function shn_files_store($name , $dir= 'documents' , &$file_type){
 
                 $file_tmp_name = $_FILES[$name]['tmp_name'];
                 $dir = $dir;
-                $uploaddir = $conf['media_dir'];
-
+                if(!$uploaddir){
+                    $uploaddir = $conf['media_dir'];
+                }
                 _shn_files_create_dir($uploaddir . $dir , $conf['media_mode']);
 
                 $file_path = $uploaddir . $dir . str_replace('/', '_', $file_id)."_". $file_name;

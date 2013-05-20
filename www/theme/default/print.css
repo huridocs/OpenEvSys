@@ -1,5 +1,5 @@
 *{margin:0;padding:0;}
-body { font-family: serif; font-size:9pt; color: black; background: white;}
+body { font-family: serif; font-size:9pt; color: black; background: white;padding-top:0px}
 a:link, a:visited {background: white; color: black; text-decoration: underline;font-weight: bold;}
 H1, H2, H3 {background: white; color: black; padding-bottom: 5pt;font-size:14pt;}
 label{ margin-left:5pt; margin-right:5pt; margin:2pt;}
@@ -46,3 +46,6 @@ p.clarify_note {font-size:0.89em;color:#888888;margin-top:5px;}
 
 br.page_break {page-break-after: always;}
 
+.navbar {
+    display: none;
+}

@@ -906,6 +906,7 @@ class eventsModule extends shnModule {
 
         if (isset($_POST['update'])) {
             $status = shn_form_validate($act_form);
+            
             if ($status) {
                 $act = new Act();
                 $act->LoadFromRecordNumber($_REQUEST['act_id']);
@@ -919,6 +920,7 @@ class eventsModule extends shnModule {
                 return;
             }
         }
+        $this->act_form = $act_form;
         //if an involvement is requested
         if (isset($_GET['inv_id']))
             $this->set_inv();

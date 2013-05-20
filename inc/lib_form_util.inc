@@ -20,7 +20,7 @@ function compartmentalize_view_form($entity_form) {
             } else {
                 $normalFields[$fieldName] = $field;
             }
-            //echo $fields[$fieldName];
+//echo $fields[$fieldName];
         }
     }
 
@@ -97,18 +97,20 @@ function get_form_element_length($formType) {
 }
 
 function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
-    //$viewType can be 'new' , 'edit' or 'view'
-    //var_dump($entity , $viewType);
-    global $global,$conf;
+//$viewType can be 'new' , 'edit' or 'view'
+//var_dump($entity , $viewType);
+    global $global, $conf;
     if ($entity != null) {
 
         if ($entity == 'victim' || $entity == 'perpetrator' || $entity == 'source' || $entity == 'intervening_party') {
-            //var_dump('generate_form_array',$entity);
+//var_dump('generate_form_array',$entity);
             $secEntity = new SecEntity();
             return $secEntity->getFormArray($entity, $viewType);
         }
 
         $formArray = array();
+        $field_numbers = array();
+        $fieldmapping = array();
         $entityFields = Browse::getEntityFields($entity);
 
         $visible_field = null;
@@ -131,13 +133,13 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 break;
             case 'view':
                 $visible_field = 'visible_view';
-                //acl_is_entity_allowed($entity , 'read' , $record_number);
+//acl_is_entity_allowed($entity , 'read' , $record_number);
                 break;
             case 'search':
-                $visible_field = 'visible_browse';//'visible_search';
+                $visible_field = 'visible_browse'; //'visible_search';
                 break;
             case 'search_view':
-                $visible_field = 'visible_browse';//'visible_search_display';
+                $visible_field = 'visible_browse'; //'visible_search_display';
                 break;
             case 'browse':
                 $visible_field = 'visible_browse';
@@ -149,10 +151,10 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 $visible_field = 'visible_new';
                 break;
         }
-        
+
         $isAdmin = acl_is_mod_allowed('admin');
 
-        //var_dump($visible_field);
+//var_dump($visible_field);
         foreach ($entityFields as $entityField) {
             if (!$isAdmin && isset($conf['fieldstohide']) && isset($conf['fieldstohide'][$entity]) && in_array($entityField['field_name'], $conf['fieldstohide'][$entity])) {
                 continue;
@@ -162,7 +164,7 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
             $mlt = ( (trim($entityField['is_repeat']) == 'Y' || trim($entityField['is_repeat']) == 'y' ) ? true : false );
 
             $visible = ( $visible_field == null || trim($entityField[$visible_field]) == 'Y' || trim($entityField[$visible_field]) == 'y' ) ? true : false;
-            if($entity == "involvement" && $entityField['field_name'] =="perpetrator"){
+            if ($entity == "involvement" && $entityField['field_name'] == "perpetrator") {
                 $visible = true;
                 $type = $entityField['field_type'] = "related_person";
             }
@@ -177,36 +179,39 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
             $validation = array();
             $validation = split(',', $validationString);
             if ($requiredTerm != null) {
-                //var_dump($requiredTerm);
+//var_dump($requiredTerm);
                 $validation[] = $requiredTerm;
             }
 
+            $field_numbers[] = $field_number;
+            $fieldmapping[$field_number] = $entityField['field_name'];
 
             if ($visible == true || $allVisible == true) {
                 $formArray[$entityField['field_name']] = array('type' => $entityField['field_type'], 'label' => $entityField['field_label_l10n'], 'field_number' => $field_number,
+                    'view_type' => $viewType,
                     'map' => array('entity' => $entity, 'field' => $entityField['field_name'], 'mt' => $entityField['list_code'], 'mlt' => $mlt, 'link_table' => $link_table, 'link_field' => $link_field),
-                    'extra_opts' => array('label' => $entityField['field_label_l10n'],'clari' => $clari, 'validation' => $validation, 'required' => $required, 'help' => $entityField['field_number'])
+                    'extra_opts' => array('label' => $entityField['field_label_l10n'], 'clari' => $clari, 'validation' => $validation, 'required' => $required, 'help' => $entityField['field_number'])
                 );
-              
-                                if($type == "location" && ($viewType == "new" || $viewType == "edit" || $viewType == "view" || $viewType == "all")){
-                                 $formArray[  $entityField['field_name']."_latitude" ]    = array('type'=>"hidden",
-                                       'label'=>$entityField['field_label_l10n']." "._t("latitude"),
-                                       'field_number' => $field_number ,
-	                            'map'=>array('entity'=>$entity,
-                                        'field'=>$entityField['field_name']."_latitude" ,
-                                        'mt'=>$entityField['list_code'] ,
-                                        'mlt'=>$mlt ,
-                                        'link_table'=>$link_table ,
-                                        'link_field'=>$link_field ),
-	                            'extra_opts' => array(   )    
-                                    ); 
-                                   $formArray[  $entityField['field_name']."_longitude" ]    = array('type'=>"hidden",
-                                       'label'=>$entityField['field_label_l10n']." "._t("longitude"),
-                                       'field_number' => $field_number ,
-	                            'map'=>array('entity'=>$entity,
-                                        'field'=>$entityField['field_name']."_longitude" ,
-                                        'mt'=>$entityField['list_code'] ,
-                                        'mlt'=>$mlt ,
+
+                if ($type == "location" && ($viewType == "new" || $viewType == "edit" || $viewType == "view" || $viewType == "all")) {
+                    $formArray[$entityField['field_name'] . "_latitude"] = array('type' => "hidden",
+                        'label' => $entityField['field_label_l10n'] . " " . _t("latitude"),
+                        'field_number' => $field_number,
+                        'map' => array('entity' => $entity,
+                            'field' => $entityField['field_name'] . "_latitude",
+                            'mt' => $entityField['list_code'],
+                            'mlt' => $mlt,
+                            'link_table' => $link_table,
+                            'link_field' => $link_field),
+                        'extra_opts' => array()
+                    );
+                    $formArray[$entityField['field_name'] . "_longitude"] = array('type' => "hidden",
+                        'label' => $entityField['field_label_l10n'] . " " . _t("longitude"),
+                        'field_number' => $field_number,
+                        'map' => array('entity' => $entity,
+                            'field' => $entityField['field_name'] . "_longitude",
+                            'mt' => $entityField['list_code'],
+                            'mlt' => $mlt,
                             'link_table' => $link_table,
                             'link_field' => $link_field),
                         'extra_opts' => array()
@@ -214,7 +219,17 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 }
             }
         }
-        //var_dump($formArray);
+        if (in_array($viewType, array("new","edit", "all"))) {
+            $browse = new Browse();
+            $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
+            $visibility_fields = $browse->ExecuteQuery($sql);
+            
+            foreach ($visibility_fields as $vfield) {
+                $field_name = $fieldmapping[$vfield['field_number2']];
+                $formArray[$field_name]['extra_opts']['visibility_field'][$vfield['value']][] = $vfield['field_number'];
+            }
+        }
+//var_dump($formArray);
         return $formArray;
     }
 }
@@ -227,7 +242,7 @@ function label_to_field($label) {
 function popuate_formArray(&$formArray, $entity) {
 
     if ($formArray != null && $entity != null) {  // The function cannot continue unless the variables have been passed
-        foreach ($formArray as $key=>&$formField) {   // iterate throught the elements in the form array
+        foreach ($formArray as $key => &$formField) {   // iterate throught the elements in the form array
             $recordkeyName = '' . $formField['map']['entity'] . '_record_number';
             $entity_key_value = $entity->$recordkeyName;
 
@@ -235,7 +250,7 @@ function popuate_formArray(&$formArray, $entity) {
                 if ($formField['extra_opts'] == null) {
                     $formField['extra_opts'] = array();
                 }
-                //$formField['extra_opts'] = array();
+//$formField['extra_opts'] = array();
                 if ($formField['map']['mlt'] == 'true') {
                     $valueArray = array();
                     if (is_array($entity->$formField['map']['field'])) {
@@ -253,33 +268,32 @@ function popuate_formArray(&$formArray, $entity) {
                 $formField['extra_opts']['value'] = $entity->$formField['map']['field'];
             }
 
-                        if($formField['type'] == "location"){
-                           
-                        $fieldName = $formField['map']['field'];
-                        $fieldNameLat = $fieldName."_latitude";
-                        $fieldNameLon = $fieldName."_longitude";
-                        
-                            if($entity->$fieldNameLat && $entity->$fieldNameLon){
-                                $geoval = array('latitude'=>$entity->$fieldNameLat,
-                                    'longitude'=>$entity->$fieldNameLon);
-                                if ( $entity->geometries[$fieldName]){
-                                   $geoval['geometries'] = $entity->geometries[$fieldName];
-                                }	
-                                $formField['extra_opts']['value'] = $geoval;
-                            }else{
-                                unset($entity->$fieldNameLat);
-                                unset($entity->$fieldNameLon);
-                                unset($formArray[$fieldNameLat]);
-                                unset($formArray[$fieldNameLon]);
-                            }
-                            
+            if ($formField['type'] == "location") {
+
+                $fieldName = $formField['map']['field'];
+                $fieldNameLat = $fieldName . "_latitude";
+                $fieldNameLon = $fieldName . "_longitude";
+
+                if ($entity->$fieldNameLat && $entity->$fieldNameLon) {
+                    $geoval = array('latitude' => $entity->$fieldNameLat,
+                        'longitude' => $entity->$fieldNameLon);
+                    if ($entity->geometries[$fieldName]) {
+                        $geoval['geometries'] = $entity->geometries[$fieldName];
+                    }
+                    $formField['extra_opts']['value'] = $geoval;
+                } else {
+                    unset($entity->$fieldNameLat);
+                    unset($entity->$fieldNameLon);
+                    unset($formArray[$fieldNameLat]);
+                    unset($formArray[$fieldNameLon]);
+                }
             }
-            //var_dump($formField['map']['field']);
-            //var_dump($formField['extra_opts']);
+//var_dump($formField['map']['field']);
+//var_dump($formField['extra_opts']);
         }
     }
 
-    //var_dump($formArray);
+//var_dump($formArray);
 }
 
 function getClariNotes($formField, $recordNumber) {  // pass a form array element and retrive the clarifying notes for the field
@@ -291,7 +305,7 @@ function getClariNotes($formField, $recordNumber) {  // pass a form array elemen
             $clariNote = new ClariNotes();
             $clariNotes = $clariNote->Find($formField['map']['entity'], $recordNumber, $formField['map']['field']);
             foreach ($clariNotes as $note) {
-                //var_dump( $note->vocab_number, $note->value );
+//var_dump( $note->vocab_number, $note->value );
                 $notesArray["$note->vocab_number"] = $note->value;
             }
         } else {
@@ -300,13 +314,13 @@ function getClariNotes($formField, $recordNumber) {  // pass a form array elemen
             if (sizeof($clariNotes) > 0) {
                 $note = $clariNotes[0];
 
-                //var_dump( $note->vocab_number, $note->value );
+//var_dump( $note->vocab_number, $note->value );
 
                 $notesArray["$note->vocab_number"] = $note->value;
             }
         }
     }
-    //var_dump($notesArray);
+//var_dump($notesArray);
     return $notesArray;
 }
 
@@ -314,11 +328,11 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     if ($valuesArray == null) {                // testing
         $valuesArray = $_POST;
     }
-    //var_dump($valuesArray);
-    //$formArrayEntry = current($formArray);
-    //reset($formArray);
+//var_dump($valuesArray);
+//$formArrayEntry = current($formArray);
+//reset($formArray);
     $recordkeyName = '' . $entity->_table . '_record_number';
-    //$entity_key_value = $entity->$recordkeyName;
+//$entity_key_value = $entity->$recordkeyName;
 
     if ($entity->$recordkeyName == null && ($valuesArray[$recordkeyName] == null || $valuesArray[$recordkeyName] == '' )) {
         $entity_key_value = $entity->$recordkeyName = shn_create_uuid($entity->_table);
@@ -342,14 +356,14 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                     $entity->LoadFromRecordNumber($valuesArray[$fieldName]);
                     $entity->LoadManagementData();
                     $entity_key_value = $valuesArray[$fieldName];
-                    //var_dump('values array field name ' , $valuesArray[ $fieldName]);
+//var_dump('values array field name ' , $valuesArray[ $fieldName]);
                 }
             }
 
 
-            //var_dump($formField['map']);
+//var_dump($formField['map']);
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
-                //$name = $formField['map']['field'];
+//$name = $formField['map']['field'];
                 if ($formField['map']['mt']) {   // micro thesauri terms
                     if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
                         if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
@@ -360,12 +374,11 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                     }
                 } else {
                     if ($fieldName != $recordkeyName) {
-                
+
                         if (!($valuesArray[$fieldName] == null && $fieldName == 'supporting_documents')) {
-                            
-                
+
+
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
-                            
                         } else if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
                         } else {
@@ -395,7 +408,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                         }
                     }
                 }
-                //var_dump($termArray);
+//var_dump($termArray);
                 if (sizeof($termArray) > 0) {
                     $entity->$formField['map']['field'] = $termArray;
                 }
@@ -409,23 +422,21 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                       $clari_note_object->record_number = $entity_key_value;
                       $clari_note_object->field_name = $formField['map']['field'];
                       $clari_note_object->value = $valuesArray[$fieldName.'_clarify']; */
-                    if(is_array($valuesArray[$fieldName])){
+                    if (is_array($valuesArray[$fieldName])) {
                         $v = $valuesArray[$fieldName];
                         $va = array_shift($v);
                         $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $va, $valuesArray[$fieldName . '_clarify']);
-                    }else{
-                        if($fieldName == "deceased"){
+                    } else {
+                        if ($fieldName == "deceased") {
                             $valuesArray[$fieldName] = ($valuesArray[$fieldName] == 'on') ? 'y' : 'n';
                         }
                         $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $valuesArray[$fieldName], $valuesArray[$fieldName . '_clarify']);
-                    
                     }
                     if ($clariNote->value != null) {
                         $entity->clari_notes[] = $clariNote;
                     }
                 } else {
                     if (is_array($valuesArray[$fieldName]))
-                        
                         foreach ($valuesArray[$fieldName] as $mtvalue) {
                             /*
                               $clari_note_object = new ClariNotes();
@@ -435,7 +446,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                               $clari_note_object->vocab_number = $mtvalue; //iterate this array to get clari notes for each multi value
                               $clari_note_object->value = $valuesArray[$fieldName.'_clarify_' . $mtvalue ]; */
 
-                            //$clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
+//$clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
                             $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_clarify']);
 
 
@@ -447,19 +458,17 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 }
             }
         }
-                                         
-                
     }
-    //var_dump($entity);
+//var_dump($entity);
 
     return $entity;
 }
 
 function shn_form_validate(&$form) {
-
-    //set_include_path( get_include_path() . ':'. APPROOT .'3rd/');
-    //require_once "Zend/Loader.php";
-    //Zend_Loader::registerAutoload();
+    global $conf;
+//set_include_path( get_include_path() . ':'. APPROOT .'3rd/');
+//require_once "Zend/Loader.php";
+//Zend_Loader::registerAutoload();
 
     include_once APPROOT . 'inc/lib_validate.inc';
     $valide = true;
@@ -474,37 +483,51 @@ function shn_form_validate(&$form) {
 
             $vals = $_POST[$field_id];
             $valFunctions = $field['extra_opts']['validation'];
-            if($field["type"] == "upload"){
+            if ($field["type"] == "upload") {
                 $vals = $_FILES[$field_id];
                 $valFunctions[] = "upload";
             }
-            
+
+
             if (is_array($valFunctions) && sizeof($valFunctions) > 0) {
                 foreach ($valFunctions as $function) {
                     if ($function != '') {
-                        
+
                         $valMsg = null;
                         $ok = validate_field($function, $vals, $valMsg);
-                        
+
                         if (!($ok == true )) {
                             $valide = false;
                             $field['extra_opts']['error'][] = $valMsg;
-                       }
+                        }
                     }
                 }
             }
-            
+            if (isset($conf['fieldsvalidation'][$field['map']['entity']][$field['map']['field']])) {
+                $vf = $conf['fieldsvalidation'][$field['map']['entity']][$field['map']['field']];
+                if (!empty($_POST[$vf['field']]) && !empty($vals)) {
+                    switch ($vf['validation']) {
+                        case ">":
+                            $valide2 = shn_valid_datecomperision($vals, $_POST[$vf['field']]);
+                            if (!$valide2) {
+                                $valide = false;
+                                $field['extra_opts']['error'][] = _t($vf['error']);
+                            }
+                            break;
+                    }
+                }
+            }
         }
     }
-    //spl_autoload_register(array('AutoLoadClass', '__autoload'));
-    //var_dump($form);
+//spl_autoload_register(array('AutoLoadClass', '__autoload'));
+//var_dump($form);
     return $valide;
 }
 
 function validate_field($validationType, $vals, &$errorMsg) {
     $validate = 'shn_valid_' . $validationType;
     $valid = true;
-    //hack to array values
+//hack to array values
     if ($validationType == 'notnull' && !isset($vals)) {
         $valid = $validate($vals) && $valid;
         if (!$valid)
@@ -513,7 +536,7 @@ function validate_field($validationType, $vals, &$errorMsg) {
 
     if (isset($vals) && function_exists($validate)) {
         if (is_array($vals)) {
-            //validate all elements
+//validate all elements
             foreach ($vals as $value)
                 $valid = $validate($value) && $valid;
         }
@@ -521,7 +544,7 @@ function validate_field($validationType, $vals, &$errorMsg) {
             $valid = $validate($vals) && $valid;
         if (!$valid) {
             $errorMsg = shn_valid_get_error();
-            //var_dump($errorMsg);
+//var_dump($errorMsg);
         }
     }
 
@@ -540,14 +563,16 @@ function shn_form_get_html_fields($form, $field_div = true) {
             ob_start();
             $controler($options['label'], $field_id, $options['extra_opts']);
             $html = ob_get_clean();
-            
-            if ($options['type'] != 'submit' && $options['type'] != 'hidden' && $field_div){
+
+            if ($options['type'] != 'submit' && $options['type'] != 'hidden' && $field_div) {
                 $html2 = "<div class='control-group";
-                if(isset($options['extra_opts']['error']) && count($options['extra_opts']['error'])){
+                if (isset($options['extra_opts']['error']) && count($options['extra_opts']['error'])) {
                     $html2.= " error ";
                 }
-    
-                $html2.= "'>$html</div>";
+
+                $html2.= "' id='" . $options['field_number'] . "_group'>$html</div>";
+                
+                 
                 $html = $html2;
             }
 
@@ -556,13 +581,13 @@ function shn_form_get_html_fields($form, $field_div = true) {
         }
         else
             ;
-        // echo $controler._t('_CONTROLER_NOT_FOUND_');
+// echo $controler._t('_CONTROLER_NOT_FOUND_');
     }
 
     return $fields;
 }
 
-function shn_form_get_html_table($columnNames = null, $columnValues = null,$sortable = true) {
+function shn_form_get_html_table($columnNames = null, $columnValues = null, $sortable = true) {
     echo "<table class='table table-bordered table-striped table-hover'>";
     echo "<thead>";
     echo "<tr>";
@@ -571,22 +596,21 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
 
         $columnId = get_column_sort_id($field);
 
-        
+
         if ($columnId == "column_desc") {
             echo '<th class=" header headerSortDown">';
-            //echo ' <i class="icon-arrow-down"></i>';
+//echo ' <i class="icon-arrow-down"></i>';
         } elseif ($columnId == "column_asc") {
             echo '<th class="header headerSortUp">';
-            //echo ' <i class="icon-arrow-up"></i>';
-        }else{
+//echo ' <i class="icon-arrow-up"></i>';
+        } else {
             echo '<th >';
         }
-        if($sortable){
+        if ($sortable) {
             echo '<a href="' . $url . '">' . $value;
             echo "</a></th>";
-        }else{
-             echo $value."</th>";
-        
+        } else {
+            echo $value . "</th>";
         }
     }
     echo "</tr>";
@@ -597,151 +621,156 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null,$sort
     foreach ($columnValues as $columnvalue) {
         ?>
         <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
-            <?php
-            $tdIndex = 1;
-            foreach ($columnNames as $field => $value) {
-                if ($tdIndex == 1) {
-                    if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
-                        $columnvalue[$field] = " . . . ";
-                    }
-                    $displayValue = '<a href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
-                } else {
-                    $displayValue = $columnvalue[$field];
+        <?php
+        $tdIndex = 1;
+        foreach ($columnNames as $field => $value) {
+            if ($tdIndex == 1) {
+                if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
+                    $columnvalue[$field] = " . . . ";
                 }
-
-                echo "<td>" . $displayValue . "</td>";
-                $tdIndex++;
+                $displayValue = '<a href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
+            } else {
+                $displayValue = $columnvalue[$field];
             }
-            echo "</tr>";
-        }
 
-        echo "</tbody>";
-        echo "</table>";
+            echo "<td>" . $displayValue . "</td>";
+            $tdIndex++;
+        }
+        echo "</tr>";
     }
 
-    function shn_form_get_html_filter_table($columnNames = null, $columnValues = null, $htmlFilterFields = null) {
-        $requestObj = new shnRequest();
-        $mod = $requestObj->getRequestModule();
-        $action = $requestObj->getRequestAction();
-        
-        $cols = count($columnNames);
-        ?>
+    echo "</tbody>";
+    echo "</table>";
+}
+
+function shn_form_get_html_filter_table($columnNames = null, $columnValues = null, $htmlFilterFields = null) {
+    $requestObj = new shnRequest();
+    $mod = $requestObj->getRequestModule();
+    $action = $requestObj->getRequestAction();
+
+    $cols = count($columnNames);
+    ?>
 
     <form   action="<?php get_url($mod, $action) ?>" method="get">
         <input type="hidden" name="mod" value="<?php echo $mod ?>" />
         <input type="hidden" name="act" value="<?php echo $action ?>" />
-       
-                   <table class='table table-bordered table-striped table-hover'>
-                        <thead>
+
+        <table class='table table-bordered table-striped table-hover'>
+            <thead>
 
 
-                            <tr> 
-                                <?php
-                                foreach ($columnNames as $field => $value) {
-                                    $url = get_sort_heading($field);
+                <tr> 
+    <?php
+    foreach ($columnNames as $field => $value) {
+        $url = get_sort_heading($field);
 
-                                    $columnId = get_column_sort_id($field);
+        $columnId = get_column_sort_id($field);
 
-                                    if ($columnId == "column_desc") {
-                                        echo '<th class=" header headerSortDown">';
-                                        //echo ' <i class="icon-arrow-down"></i>';
-                                    } elseif ($columnId == "column_asc") {
-                                        echo '<th class="header headerSortUp">';
-                                        //echo ' <i class="icon-arrow-up"></i>';
-                                    }else{
-                                        echo '<th >';
-                                    }
-                                    echo '<a href="' . $url . '">' . $value;
-        
-                                   
-                                    echo "</a></th>";
-                                }
-                                ?>
-                                <th><?php echo _t('Actions') ?></th>
-                                
-                            </tr>
-                            <tr class="filter" id="filter_text">
-                                <?php
-                                foreach ($columnNames as $field => $value) {
-                                    $label = ucwords(str_replace('_', ' ', $field));
-                                    echo "<td id='td_" . $field . "'>" . $htmlFilterFields[$field] . "</td>";
-                                    //echo "<th id='td_" . $field . "'><span id='span_" . $field . "' class='inactive'>" . $value . "</span>" . $htmlFilterFields[$field] . "</th>";
-                                }
-                                ?>
-                                <td class="table_actions" >
-                                        <button type="submit" name="filter" class="btn btn-mini">
-  <i class="icon-filter"></i><?php echo _t('FILTER') ?>
-</button>
-                                       <a class="btn btn-mini" href="<?php get_url($mod, $action, null, array('reset' => 'true')); ?>">
-                                        <i class="icon-remove"></i>  
-                                            <?php echo _t('RESET') ?></a>
-                                </td>
+        if ($columnId == "column_desc") {
+            echo '<th class=" header headerSortDown">';
+            //echo ' <i class="icon-arrow-down"></i>';
+        } elseif ($columnId == "column_asc") {
+            echo '<th class="header headerSortUp">';
+            //echo ' <i class="icon-arrow-up"></i>';
+        } else {
+            echo '<th >';
+        }
+        echo '<a href="' . $url . '">' . $value;
 
-                            </tr>
-                        </thead>
-                        <?php
-                        if ($columnValues != null && count($columnValues) != 0) {
-                            echo "<tbody>";
 
-                            $i = 0;
-                            foreach ($columnValues as $columnvalue) {
-                                ?>
-                                <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
-                                   
-                                    <?php
-                                    $tdIndex = 1;
+        echo "</a></th>";
+    }
+    ?>
+                    <th><?php echo _t('Actions') ?></th>
 
-                                    foreach ($columnNames as $field => $value) {
-                                        
-                                        if ($tdIndex == 1) {
-                                            if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
-                                                $columnvalue[$field] = " . . . ";
-                                            }
-                                            $displayValue = '<a href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
-                                        } else if ($tdIndex == 2 && $columnvalue['entity_record_url'] != null) {
-                                            if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
-                                                $columnvalue[$field] = " . . . ";
-                                            }
-                                            $displayValue = '<a href="' . $columnvalue['entity_record_url'] . '" >' . $columnvalue[$field] . '</a>';
-                                        }else if(isset($columnvalue[$field.'_record_url'])){
-                                                $displayValue = '<a href="' . $columnvalue[$field.'_record_url'] . '" title="' . $columnvalue['record_number'] . '">' . $columnvalue[$field] . '</a>';
-                                        
-                                        }else {
-                                            $displayValue = $columnvalue[$field];
-                                        }
+                </tr>
+                <tr class="filter" id="filter_text">
+    <?php
+    foreach ($columnNames as $field => $value) {
+        $label = ucwords(str_replace('_', ' ', $field));
+        echo "<td id='td_" . $field . "'>" . $htmlFilterFields[$field] . "</td>";
+        //echo "<th id='td_" . $field . "'><span id='span_" . $field . "' class='inactive'>" . $value . "</span>" . $htmlFilterFields[$field] . "</th>";
+    }
+    ?>
+                    <td class="table_actions" >
+                        <button type="submit" name="filter" class="btn btn-mini">
+                            <i class="icon-filter"></i><?php echo _t('FILTER') ?>
+                        </button>
+                        <a class="btn btn-mini" href="<?php get_url($mod, $action, null, array('reset' => 'true')); ?>">
+                            <i class="icon-remove"></i>  
+    <?php echo _t('RESET') ?></a>
+                    </td>
 
-                                        echo "<td>" . $displayValue . "</td>";
-                                        $tdIndex++;
-                                    }
-                                    ?>
-                                     <td>
-                                        <a class="btn btn-success btn-mini" href="<?php echo $columnvalue['record_url']?>" rel="tooltip" title="View">
-                                            <i class="icon-zoom-in icon-white"></i>  
-                                            <?php echo _t('View') ?>                       
-                                        </a>
-                                        <a class="btn btn-info btn-mini" href="<?php echo $columnvalue['record_edit_url']?>" rel="tooltip" title="Edit">
-                                            <i class="icon-edit icon-white"></i>  
-                                            <?php echo _t('Edit') ?>                                          
-                                        </a>
-                                        <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url']?>" rel="tooltip" title="Delete">
-                                            <i class="icon-trash"></i> 
-                                            <?php echo _t('Delete') ?>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <?php
-                                
+                </tr>
+            </thead>
+    <?php
+    if ($columnValues != null && count($columnValues) != 0) {
+        echo "<tbody>";
+
+        $i = 0;
+        foreach ($columnValues as $columnvalue) {
+            ?>
+                    <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
+
+                    <?php
+                    $tdIndex = 1;
+
+                    foreach ($columnNames as $field => $value) {
+
+                        if ($tdIndex == 1) {
+                            if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
+                                $columnvalue[$field] = " . . . ";
                             }
-
-                            echo "</tbody>";
+                            $displayValue = '<a href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
+                        } else if ($tdIndex == 2 && $columnvalue['entity_record_url'] != null) {
+                            if ($columnvalue[$field] == null || trim($columnvalue[$field]) == '') {
+                                $columnvalue[$field] = " . . . ";
+                            }
+                            $displayValue = '<a href="' . $columnvalue['entity_record_url'] . '" >' . $columnvalue[$field] . '</a>';
+                        } else if (isset($columnvalue[$field . '_record_url'])) {
+                            $displayValue = '<a href="' . $columnvalue[$field . '_record_url'] . '" title="' . $columnvalue['record_number'] . '">' . $columnvalue[$field] . '</a>';
                         } else {
-                            shnMessageQueue::addInformation(_t('NO_RECORDS_WERE_FOUND_'));
-                            echo shnMessageQueue::renderMessages();
+                            $displayValue = $columnvalue[$field];
                         }
-                        ?>
 
-                    </table>
-                </form>
+                        echo "<td>" . $displayValue . "</td>";
+                        $tdIndex++;
+                    }
+                    ?>
+                        <td>
+                            <a class="btn btn-success btn-mini" href="<?php echo $columnvalue['record_url'] ?>" rel="tooltip" title="View">
+                                <i class="icon-zoom-in icon-white"></i>  
+            <?php echo _t('View') ?>                       
+                            </a>
+                            <a class="btn btn-info btn-mini" href="<?php echo $columnvalue['record_edit_url'] ?>" rel="tooltip" title="Edit">
+                                <i class="icon-edit icon-white"></i>  
+            <?php echo _t('Edit') ?>                                          
+                            </a>
+                            <?php
+                            $entity = $mod;
+                            if($entity == "events"){
+                                $entity = "event";
+                            }
+                            if($mod == "docu" || acl_is_entity_allowed_boolean($entity , 'delete')){?>
+                            <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url'] ?>" rel="tooltip" title="Delete">
+                                <i class="icon-trash"></i> 
+            <?php echo _t('Delete') ?>                                
+                            </a>
+                            <?php }?>
+                        </td>
+                    </tr>
+            <?php
+        }
+
+        echo "</tbody>";
+    } else {
+        shnMessageQueue::addInformation(_t('NO_RECORDS_WERE_FOUND_'));
+        echo shnMessageQueue::renderMessages();
+    }
+    ?>
+
+        </table>
+    </form>
     <?php
 }
 
@@ -840,21 +869,21 @@ function shn_form_get_html_doc_search_ctrl($columnNames = null, $columnValues = 
     ?>
     <table class="table table-bordered table-striped table-hover">
         <thead>
-            <?php
-            $count = 1;
-            $no_of_column = 1;
-            foreach ($columnValues as $columnvalue) {
-                if ($count == 1) {
-                    foreach ($columnNames as $field => $value) {
-                        echo "<th>$value</th>";
-                        $no_of_column++;
-                    }
-                    echo "<th>" . _t('ACTION') . "</th>";
-                    echo "</tr>";
-                }
-                $count++;
+    <?php
+    $count = 1;
+    $no_of_column = 1;
+    foreach ($columnValues as $columnvalue) {
+        if ($count == 1) {
+            foreach ($columnNames as $field => $value) {
+                echo "<th>$value</th>";
+                $no_of_column++;
             }
-            ?>
+            echo "<th>" . _t('ACTION') . "</th>";
+            echo "</tr>";
+        }
+        $count++;
+    }
+    ?>
         </thead>
         <tbody>
             <?php
@@ -863,32 +892,32 @@ function shn_form_get_html_doc_search_ctrl($columnNames = null, $columnValues = 
             foreach ($columnValues as $columnvalue) {
                 ?>
                 <tr>
-                    <?php
-                    $tdIndex = 1;
-                    foreach ($columnNames as $field => $value) {
-                        if ($tdIndex == 1) {
-                            $displayValue = '<a target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
-                        } else {
-                            $displayValue = $columnvalue[$field];
-                        }
-                        echo "<td>" . $displayValue . "</td>";
-                        $tdIndex++;
+                <?php
+                $tdIndex = 1;
+                foreach ($columnNames as $field => $value) {
+                    if ($tdIndex == 1) {
+                        $displayValue = '<a target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
+                    } else {
+                        $displayValue = $columnvalue[$field];
                     }
-                    ?>
-            <td><input type="checkbox" name="doc_id_list[]"
-                       id="<?php echo $columnvalue['doc_id'] ?>"
-                       value="<?php echo $columnvalue['doc_id'] . '_' . $columnvalue['title']; ?>" />
-            </td>
-        </tr>
+                    echo "<td>" . $displayValue . "</td>";
+                    $tdIndex++;
+                }
+                ?>
+                    <td><input type="checkbox" name="doc_id_list[]"
+                               id="<?php echo $columnvalue['doc_id'] ?>"
+                               value="<?php echo $columnvalue['doc_id'] . '_' . $columnvalue['title']; ?>" />
+                    </td>
+                </tr>
         <?php
     }
     ?>
-    </tbody>
-    <tr>
-        <td colspan="<?php echo $no_of_column; ?>" align="right"><input type="submit" class="btn " value="select" id="selected_doc" name="selected_doc"
-                onclick="selected_doclist(this.form,'document_field'); return false;" />
-        </td>
-    </tr>
+        </tbody>
+        <tr>
+            <td colspan="<?php echo $no_of_column; ?>" align="right"><input type="submit" class="btn " value="select" id="selected_doc" name="selected_doc"
+                                                                            onclick="selected_doclist(this.form,'document_field'); return false;" />
+            </td>
+        </tr>
     </table>
     <?php
 }
@@ -897,20 +926,20 @@ function shn_form_get_html_person_search_ctrl($columnNames = null, $columnValues
     ?>
     <table class="table table-bordered table-striped table-hover">
         <thead>
-            <?php
-            $count = 1;
-            foreach ($columnValues as $columnvalue) {
-                if ($count == 1) {
-                    echo "<tr>";
-                    foreach ($columnNames as $field => $value) {
-                        echo "<th>$value</th>";
-                    }
-                    echo "<th>" . _t('ACTION') . "</th>";
-                    echo "</tr>";
-                }
-                $count++;
+    <?php
+    $count = 1;
+    foreach ($columnValues as $columnvalue) {
+        if ($count == 1) {
+            echo "<tr>";
+            foreach ($columnNames as $field => $value) {
+                echo "<th>$value</th>";
             }
-            ?>
+            echo "<th>" . _t('ACTION') . "</th>";
+            echo "</tr>";
+        }
+        $count++;
+    }
+    ?>
         </thead>
         <tbody>
             <?php
@@ -919,48 +948,48 @@ function shn_form_get_html_person_search_ctrl($columnNames = null, $columnValues
             foreach ($columnValues as $columnvalue) {
                 ?>
                 <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
-                    <?php
-                    $tdIndex = 1;
-                    foreach ($columnNames as $field => $value) {
-                        if ($tdIndex == 1) {
-                            $displayValue = '<a target="_blank" target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
-                        } else {
-                            $displayValue = $columnvalue[$field];
-                        }
-                        echo "<td>" . $displayValue . "</td>";
-                        $tdIndex++;
+                <?php
+                $tdIndex = 1;
+                foreach ($columnNames as $field => $value) {
+                    if ($tdIndex == 1) {
+                        $displayValue = '<a target="_blank" target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
+                    } else {
+                        $displayValue = $columnvalue[$field];
                     }
-                    ?>
+                    echo "<td>" . $displayValue . "</td>";
+                    $tdIndex++;
+                }
+                ?>
                     <td><a
-                            href="<?php echo get_url($mod, $act, null, array('inv_id' => $_GET['inv_id'],'information_id' => $_GET['information_id'], 'intervention_id' => $_GET['intervention_id'], 'person_id' => $columnvalue['person_record_number'])); ?>"><?php echo _t('SELECT'); ?>
+                            href="<?php echo get_url($mod, $act, null, array('inv_id' => $_GET['inv_id'], 'information_id' => $_GET['information_id'], 'intervention_id' => $_GET['intervention_id'], 'person_id' => $columnvalue['person_record_number'])); ?>"><?php echo _t('SELECT'); ?>
                         </a></td>
                 </tr>
-                <?php
-            }
-            ?>
+        <?php
+    }
+    ?>
         </tbody>
     </table>
-    <?php
-}
+            <?php
+        }
 
-function shn_form_get_html_event_search_ctrl($columnNames = null, $columnValues = null, $htmlFilterFields = null, $mod = null, $act = null) {
-    ?>
+        function shn_form_get_html_event_search_ctrl($columnNames = null, $columnValues = null, $htmlFilterFields = null, $mod = null, $act = null) {
+            ?>
     <table class="table table-bordered table-striped table-hover">
         <thead>
-            <?php
-            $count = 1;
-            foreach ($columnValues as $columnvalue) {
-                if ($count == 1) {
-                    echo "<tr>";
-                    foreach ($columnNames as $field => $value) {
-                        echo "<th>$value</th>";
-                    }
-                    echo "<th>" . _t('ACTION') . "</th>";
-                    echo "</tr>";
-                }
-                $count++;
+    <?php
+    $count = 1;
+    foreach ($columnValues as $columnvalue) {
+        if ($count == 1) {
+            echo "<tr>";
+            foreach ($columnNames as $field => $value) {
+                echo "<th>$value</th>";
             }
-            ?>
+            echo "<th>" . _t('ACTION') . "</th>";
+            echo "</tr>";
+        }
+        $count++;
+    }
+    ?>
         </thead>
         <tbody>
             <?php
@@ -969,26 +998,28 @@ function shn_form_get_html_event_search_ctrl($columnNames = null, $columnValues 
             foreach ($columnValues as $columnvalue) {
                 ?>
                 <tr <?php echo ($i++ % 2 == 1) ? 'class="odd"' : ''; ?>>
-                    <?php
-                    $tdIndex = 1;
-                    foreach ($columnNames as $field => $value) {
-                        if ($tdIndex == 1) {
-                            $displayValue = '<a target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
-                        } else {
-                            $displayValue = $columnvalue[$field];
-                        }
-                        echo "<td>" . $displayValue . "</td>";
-                        $tdIndex++;
+                <?php
+                $tdIndex = 1;
+                foreach ($columnNames as $field => $value) {
+                    if ($tdIndex == 1) {
+                        $displayValue = '<a target="_blank" href="' . $columnvalue['record_url'] . '">' . $columnvalue[$field] . '</a>';
+                    } else {
+                        $displayValue = $columnvalue[$field];
                     }
-                    ?>
+                    echo "<td>" . $displayValue . "</td>";
+                    $tdIndex++;
+                }
+                ?>
                     <td><a
                             href="<?php echo get_url($mod, $act, null, array('event_id' => $columnvalue['event_record_number'], 'coeid' => $_GET['coeid'])); ?>"><?php echo _t('SELECT'); ?>
                         </a></td>
                 </tr>
-                <?php
-            }
-            ?>
+        <?php
+    }
+    ?>
         </tbody>
     </table>
-    <?php
-}
+            <?php
+        }
+
+        

@@ -121,6 +121,7 @@ function form_customization_process_entity_form($entity) {
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
     $locales = l10n_get_locals();
 
+    
 
     foreach ($records as $record) {
         $fieldValues = array();
@@ -188,6 +189,40 @@ function form_customization_process_entity_form($entity) {
         if (isset($_POST['validation'])) {
             $fieldValues['validation'] = $_POST['validation_' . $recordNumber];
         }
+
+        if(isset($_POST['visibility_field'])){
+            $dbQuery = new Browse();
+            try {
+                $dbQuery->ExecuteNonQuery("delete from data_dict_visibility where field_number='$recordNumber' ");
+            } catch (Exception $e) {
+                //var_dump($e,$sql);
+            }
+        }
+        
+        if (isset($_POST['visibility_field_' . $recordNumber]) && isset($_POST['visibility_field_' . $recordNumber . '_vals'])) {
+            $field_number2 = $_POST['visibility_field_' . $recordNumber];
+            $field_number2 = $global['db']->qstr($field_number2);
+            
+            $vals = $_POST['visibility_field_' . $recordNumber . '_vals'];
+            if(!is_array($vals)){
+                $vals = array($vals);
+            }
+            
+            $sql = "INSERT INTO data_dict_visibility (`field_number`,`field_number2`,`value`) values ";
+            $sql2 = array();
+            foreach($vals as $val){
+                $val = $global['db']->qstr($val);
+                $sql2[] = " ('$recordNumber', $field_number2,$val)";
+            }
+            $sql .= implode(",",$sql2);
+
+            $dbQuery = new Browse();
+            try {
+                $dbQuery->ExecuteNonQuery($sql);
+            } catch (Exception $e) {
+                //var_dump($e,$sql);
+            }
+        }
         $global['db']->AutoExecute('data_dict', $fieldValues, 'UPDATE', "field_number = '$recordNumber'");
     }
 }
@@ -245,7 +280,7 @@ function form_customization_add_field($field_type_options) {
     $fieldValues['enabled'] = 'y';
     $fieldValues['label_number'] = 0;
     $fieldValues['list_code'] = 0;
-    
+
     foreach ($fieldValues as $k => $v) {
         $v = preg_replace('/[^A-Za-z0-9\-_]/', '', $v); // Removes special chars.
         $v = trim($v);
@@ -413,3 +448,4 @@ function form_customization_update_help($post, $entity) {
         }
     }
 }
+

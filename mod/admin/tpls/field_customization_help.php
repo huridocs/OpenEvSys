@@ -41,7 +41,7 @@
                     }
                                 ?>>
                                 <?php $name = 'definition_' . $record['field_number']; //echo $record['field_label'];   ?>
-                                    <textarea class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['definition_' . $code]) echo $record['definition_' . $code]; ?></textarea>
+                                    <textarea class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['definition_' . $code]) echo htmlentities($record['definition_' . $code]); ?></textarea>
                                 </div>
                                 <?php
                             }
@@ -60,7 +60,7 @@
                     }
                                 ?>>
                                 <?php $name = 'guidelines_' . $record['field_number']; //echo $record['field_label'];   ?>
-                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['guidelines_' . $code]) echo $record['guidelines_' . $code]; ?></textarea>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['guidelines_' . $code]) echo htmlentities($record['guidelines_' . $code]); ?></textarea>
                                 </div>
                                 <?php
                             }
@@ -80,7 +80,7 @@
                     }
                                 ?>>
                                 <?php $name = 'entry_' . $record['field_number']; //echo $record['field_label'];   ?>
-                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['entry_' . $code]) echo $record['entry_' . $code]; ?></textarea>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['entry_' . $code]) echo htmlentities($record['entry_' . $code]); ?></textarea>
                                 </div>
                                 <?php
                             }
@@ -99,7 +99,7 @@
                     }
                                 ?>>
                                 <?php $name = 'examples_' . $record['field_number']; //echo $record['field_label'];   ?>
-                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['examples_' . $code]) echo $record['examples_' . $code]; ?></textarea>
+                                    <textarea  class="input-block-level" name='<?php echo $name; ?>[<?php echo $code ?>]'><?php if ($record['examples_' . $code]) echo htmlentities($record['examples_' . $code]); ?></textarea>
                                 </div>
                                 <?php
                             }

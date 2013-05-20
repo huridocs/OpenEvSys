@@ -1451,7 +1451,16 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $condition = new stdClass;
                             $condition->entity = $entity;
                             $condition->field = $field;
-                            $condition->operator = "=";
+                            if ($domaindata->$entity->ac_type) {
+                                $selEntity2 = $domaindata->$entity->ac_type;
+                            }else{
+                                $selEntity2 = $entity;
+                            }
+                            if($domaindata->$selEntity2->fields->$field->field_type == "mt_tree"){
+                                $condition->operator = "sub";
+                            }else{
+                                $condition->operator = "=";
+                            }
                             $condition->value = $term;
                             if ($i == count($terms)) {
                                 $condition->link = "and";
@@ -1597,6 +1606,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 //var_dump($query->select);exit;
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
+            
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
             try {
