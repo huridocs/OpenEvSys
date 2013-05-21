@@ -12,3 +12,5 @@ CREATE TABLE IF NOT EXISTS `data_dict_visibility` (
   `field_number2` varchar(60) NOT NULL,
   `value` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+update data_dict set visible_new='y' where essential='y';

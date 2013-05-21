@@ -365,13 +365,13 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
 //$name = $formField['map']['field'];
                 if ($formField['map']['mt']) {   // micro thesauri terms
-                    if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
+                    //if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
                         if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                             $entity->$formField['map']['field'] = $valuesArray[$fieldName];
                         } else {
                             $entity->$formField['map']['field'] = null;
                         }
-                    }
+                    //}
                 } else {
                     if ($fieldName != $recordkeyName) {
 

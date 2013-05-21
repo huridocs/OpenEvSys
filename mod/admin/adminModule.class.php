@@ -689,7 +689,7 @@ class adminModule extends shnModule {
     public function act_change_print() {
         global $conf;
         if (isset($_POST["save"])) {
-            $keys = array('print_event_header', 'print_event_sidebar', 'print_person_header', 'print_person_sidebar');
+            $keys = array('print_report_header', 'print_event_header','print_person_header');// 'print_event_sidebar', , 'print_person_sidebar');
             foreach ($keys as $key) {
                 $value = $_POST[$key];
                 $conf[$key] = $value;

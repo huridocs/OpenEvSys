@@ -44,7 +44,7 @@
                         echo 'style="display:none"';
                     } ?>>
         <?php $name = 'label_' . $record['field_number']; //echo $record['field_label'];  ?>
-                                <input  type="text" name="<?php echo $name; ?>[<?php echo $code ?>]" id="<?php echo $name; ?>_<?php echo $code ?>"  value="<?php if($record['label_'.$code])echo htmlentities($record['label_'.$code]); ?>"></input>
+                                <input  type="text" name="<?php echo $name; ?>[<?php echo $code ?>]" id="<?php echo $name; ?>_<?php echo $code ?>"  value="<?php if($record['label_'.$code])echo htmlentities($record['label_'.$code], ENT_QUOTES, "UTF-8"); ?>"></input>
 
                             </div>
                             <?php

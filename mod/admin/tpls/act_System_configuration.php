@@ -3,6 +3,18 @@
 <form class="form-horizontal"  action='<?php 
 echo get_url('admin','System_configuration')
  ?>' method='post'>
+ <?php global $conf; ?>
+<script type="text/javascript" src="res/jquery/tinymce/4.0b3/jquery.tinymce.min.js"></script>
+<script type="text/javascript" src="res/jquery/tinymce/4.0b3/tinymce.min.js"></script>
+
+<div class="row-fluid">
+            <div class="span12" >
+                <h3><?php echo _t('Header for login page') ?></h3>
+
+                <textarea class="tinymce" name="login_header" rows="15"><?php echo htmlentities($conf['login_header'], ENT_QUOTES, "UTF-8")?></textarea>     
+
+            </div>
+        </div>
 <table class='table table-bordered table-striped table-hover'>
 <thead>
 <tr>
@@ -68,3 +80,14 @@ echo get_url('admin','System_configuration')
 <button type="submit" class="btn btn-primary" name='submit' ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 </center>
 </form>
+<script>
+    tinymce.init({
+        selector: ".tinymce",
+        plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+            "searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
+            "table contextmenu directionality emoticons paste textcolor filemanager"
+        ],
+        toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect forecolor backcolor | link unlink anchor | filemanager image media | print preview code"
+    });
+</script>

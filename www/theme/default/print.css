@@ -46,6 +46,15 @@ p.clarify_note {font-size:0.89em;color:#888888;margin-top:5px;}
 
 br.page_break {page-break-after: always;}
 
-.navbar {
+.navbar,.tabnav,.btn {
     display: none;
+}
+.table-bordered {
+border: 1px solid black;
+}
+.table ,.table th{
+    background-color: none !important;
+}
+.print_report_header{
+    display: block;
 }

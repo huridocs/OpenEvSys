@@ -364,7 +364,7 @@ class eventsModule extends shnModule {
                 $this->event->LoadRelationships();
                 
                 form_objects($event_form, $this->event);
-
+//var_dump($_POST,$this->event);exit;
                 $this->event->SaveAll();
                 set_redirect_header('events', 'get_event', null, array('eid' => $this->event->event_record_number));
                 return;

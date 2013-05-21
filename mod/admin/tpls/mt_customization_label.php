@@ -68,7 +68,7 @@
                         echo 'style="display:none"';
                     }
                             ?>>
-                                <input  type="text" name="label[<?php echo $record['vocab_number']; ?>][<?php echo $code ?>]"  value="<?php if ($record['label_' . $code]) echo htmlentities ($record['label_' . $code]); ?>"></input>
+                                <input  type="text" name="label[<?php echo $record['vocab_number']; ?>][<?php echo $code ?>]"  value="<?php if ($record['label_' . $code]) echo htmlentities ($record['label_' . $code], ENT_QUOTES, "UTF-8"); ?>"></input>
 
                             </div>
                             <?php

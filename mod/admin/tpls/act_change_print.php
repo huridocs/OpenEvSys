@@ -10,19 +10,27 @@
                 <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
 
             </div></div>
+        <div class="row-fluid">
+            <div class="span12" >
+                <h3><?php echo _t('Header for report print view') ?></h3>
+
+                <textarea class="tinymce" name="print_report_header" rows="15"><?php echo htmlentities($conf['print_report_header'], ENT_QUOTES, "UTF-8")?></textarea>     
+
+            </div>
+        </div>
         
         <div class="row-fluid">
             <div class="span12" >
                 <h3><?php echo _t('Header for event print view') ?></h3>
 
-                <textarea class="tinymce" name="print_event_header" rows="15"><?php echo htmlentities($conf['print_event_header'])?></textarea>     
+                <textarea class="tinymce" name="print_event_header" rows="15"><?php echo htmlentities($conf['print_event_header'], ENT_QUOTES, "UTF-8")?></textarea>     
 
             </div>
 
            <!-- <div class="span6" >
                 <h3><?php echo _t('Sidebar for event print view') ?></h3>
 
-                <textarea class="tinymce" name="print_event_sidebar"><?php echo htmlentities($conf['print_event_sidebar'])?></textarea>     
+                <textarea class="tinymce" name="print_event_sidebar"><?php echo htmlentities($conf['print_event_sidebar'], ENT_QUOTES, "UTF-8")?></textarea>     
 
             </div>-->
         </div>
@@ -30,14 +38,14 @@
             <div class="span12" >
                 <h3><?php echo _t('Header for person print view') ?></h3>
 
-                <textarea class="tinymce" name="print_person_header" rows="15"><?php echo htmlentities($conf['print_person_header'])?></textarea>     
+                <textarea class="tinymce" name="print_person_header" rows="15"><?php echo htmlentities($conf['print_person_header'], ENT_QUOTES, "UTF-8")?></textarea>     
 
             </div>
 
             <!--<div class="span6" >
                 <h3><?php echo _t('Sidebar for person print view') ?></h3>
 
-                <textarea class="tinymce" name="print_person_sidebar"><?php echo htmlentities($conf['print_person_sidebar'])?></textarea>     
+                <textarea class="tinymce" name="print_person_sidebar"><?php echo htmlentities($conf['print_person_sidebar'], ENT_QUOTES, "UTF-8")?></textarea>     
 
             </div>-->
         </div>

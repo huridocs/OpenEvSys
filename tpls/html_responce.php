@@ -7,8 +7,8 @@ $version = $version[1]; ?>
         <title>OpenEvSys <?php echo $version?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap-responsive.min.css" />
 
         <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/screen.css?v=<?php echo $version?>"/>
         <link rel="stylesheet" type="text/css" media="print"  href="theme/<?php echo $conf['theme'] ?>/print.css?v=<?php echo $version?>"/>
