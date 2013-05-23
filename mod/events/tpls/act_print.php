@@ -1,4 +1,21 @@
-<?php  ?>
+<?php
+global $conf;
+$conf['print_event_sidebar'] = "";
+if($conf['print_event_header']){
+    echo "<div class='row-fluid'><div class='span12'>".$conf['print_event_header']."</div></div>";
+}
+?>
+<div class="row-fluid">
+    <?php
+$title = htmlspecialchars($event->event_title);
+
+if($conf['print_event_sidebar']){
+   echo "<div class='span9'>";
+}else{
+    echo "<div class='span12'>";
+}
+?>
+    <h3><?php echo $title?></h3>
 <br />
 <center class='phide'>
     <?php echo _t('PRINTABLE_VIEW') ?>
@@ -258,3 +275,13 @@ if(isset($related_events) || isset($related_events_reverse)){
         echo "<br class='page_break' />";
     } 
 }
+?>
+</div>
+<?php
+if($conf['print_event_sidebar']){
+   echo "<div class='span3'>".$conf['print_event_sidebar']."</div>";
+}
+?>
+    
+
+</div>

@@ -12,19 +12,19 @@ include_once('event_title.php');
                     <a class="btn" href="<?php echo get_url('events', 'get_event'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
 
                     <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
-
+                    
                 </div>
             </div> <?php $fields = shn_form_get_html_fields($event_form); ?>
             <?php $fields = place_form_elements($event_form, $fields); ?>
             <div class="control-group">
                 <div >
 
-                    <button type="submit" class="btn" name="cancel" ><i class="icon-remove-circle"></i> <?php echo _t('CANCEL') ?></button>
-                    <button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
-
+ <a class="btn" href="<?php echo get_url('events', 'get_event'); ?>"><i class="icon-remove-circle"></i> <?php echo _t('CANCEL'); ?></a>
+<button type="submit" class="btn btn-primary" name="save" ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+                    
                 </div>
             </div> 
-
+            
 
         </form>
     </div>

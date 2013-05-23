@@ -1,4 +1,4 @@
-<script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
+<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));$version = $version[1]; ?><script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="res/js/adv-search.js?v=<?php echo $version?>"></script>
 <div class="searchPanel">
     <div class="panel" >

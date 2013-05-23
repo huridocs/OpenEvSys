@@ -59,10 +59,7 @@ class MtField extends ADODB_Active_Record{
         return $records; 
     }
     
-    public function getHuricode(){
-        $this->mt_vocab->huri_code;   
-        return $this->mt_vocab->huri_code;
-    }
+    
     
     public function getListCode(){
         return $this->mt_vocab->list_code;

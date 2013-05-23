@@ -141,9 +141,9 @@ function change_tpl($template) {
     $controller->view->setTemplate($template);
 }
 
-function get_mt_term($huricode) {
+function get_mt_term($vocab_number) {
     $mtterms = new MtTerms();
-    $mtterms->LoadfromVocabNumber($huricode);
+    $mtterms->LoadfromVocabNumber($vocab_number);
     return $mtterms->label;
 }
 

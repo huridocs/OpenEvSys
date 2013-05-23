@@ -9,7 +9,6 @@
                 $action = $_GET['act'];
                 
 
-                if (!isset($conf['extension'])) {
                     ?>
                     <li><a href='<?php get_url('admin', 'field_customization') ?>'><?php echo _t('FORM_CUSTOMIZATION') ?></a>
                     </li>
@@ -22,7 +21,8 @@
 
 
                     <li class="<?php if ($action == "mt_customization") echo "active" ?>"><a href="<?php get_url('admin', 'mt_customization') ?>"><?php echo _t('MICRO_THESAURI') ?></a></li>
-                <?php } ?>
+                    <li class="subnav <?php if ($action == "new_mt") echo "active" ?>"><a href="<?php get_url('admin', 'new_mt') ?>"><?php echo _t('Add new Micro-thesauri') ?></a></li>
+                  
                 <li>
                     <a href="<?php get_url('admin', 'user_management') ?>"><?php echo _t('USER_MANAGEMENT') ?></a>
                 </li>
@@ -56,7 +56,10 @@
                 </li>
                 -->
                 <li class="<?php if ($action == "System_configuration") echo "active" ?>"><a href="<?php get_url('admin', 'System_configuration') ?>"><?php echo _t('SYSTEM_CONFIGURATION') ?></a></li>
-                <?php
+                 <li class="<?php if ($action == "change_print") echo "active" ?>">
+                    <a href="<?php get_url('admin', 'change_print') ?>"><?php echo _t('Print configuration') ?></a>
+                </li>
+                    <?php
                 global $conf;
                 if (isset($conf['extension'])) {
                     ?>

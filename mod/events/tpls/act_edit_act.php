@@ -19,7 +19,7 @@
             </div><input type="hidden" value="<?php echo $victim_dob; ?>" name="vdate_of_birth"/>
             <input type="hidden" value="<?php echo $victim_dob_type; ?>" name="vdob_type"/>
             <?php
-            $act_form = generate_formarray('act', 'edit');
+            //$act_form = generate_formarray('act', 'edit');
             $act_form['update'] = array('type' => 'submit', 'label' => _t('SAVE'));
             $act_form['age_at_time_of_victimisation']['extra_opts']['onclick'] = "getAge(this.form);";
 

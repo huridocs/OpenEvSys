@@ -45,7 +45,7 @@ class MicroThesauri
     {
         global $global;
         global $conf;
-        $sql = "SELECT m.vocab_number, m.huri_code , IFNULL(l.msgstr , m.english) as 'label' 
+        $sql = "SELECT m.vocab_number,  IFNULL(l.msgstr , m.english) as 'label' ,m.term_level,m.term_order ,m.parent_vocab_number 
                     FROM mt_vocab AS m
                     LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
                     WHERE m.list_code = '{$this->list_code}' AND m.visible='y'";
@@ -55,48 +55,8 @@ class MicroThesauri
 
 
 
-    /** 
-     * If this function is called the micro thesauri will be considered as a tree.
-     */
-    public function getRootTerms()
-    {
-        global $global;
-        global $conf;
-        for($i=0;$i<7;$i++){
-            $sql = "SELECT m.vocab_number, m.huri_code , IFNULL(l.msgstr , m.english) as 'label', COUNT(c.huri_code) as children  
-                    FROM mt_vocab AS m
-                    LEFT JOIN mt_vocab as c 
-                        ON c.huri_code LIKE RPAD( CONCAT(TRIM(TRAILING '00' FROM m.huri_code),'__'), 12 ,'0') AND c.list_code = '{$this->list_code}'  
-                    LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
-                    WHERE m.list_code = '{$this->list_code}' AND (LENGTH(TRIM(TRAILING '00' FROM m.huri_code))/2) = $i AND m.visible='y' GROUP BY m.huri_code";
-            $terms = $global['db']->GetAll($sql);
-            if( count($terms) > 0)
-                break;
-        }
-        return $terms;
-    }
 
 
-    public function getChildren($parent)
-    {
-        global $global;
-        global $conf;
-        $parent = $global['db']->qstr($parent);
-        $sql = "SELECT m.vocab_number, m.huri_code , IFNULL(l.msgstr , m.english) as 'label', COUNT(c.huri_code) as children  
-                FROM mt_vocab AS m
-                LEFT JOIN mt_vocab as c 
-                    ON  c.huri_code LIKE RPAD( CONCAT(TRIM(TRAILING '00' FROM m.huri_code),'__'), 12 ,'0') 
-                    AND c.list_code = '{$this->list_code}' 
-                    AND c.huri_code != m.huri_code
-                LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
-                WHERE m.list_code = '{$this->list_code}' 
-                    AND m.huri_code LIKE RPAD( CONCAT(TRIM(TRAILING '00' FROM LEFT($parent ,12 )),'__'), 12 ,'0') 
-                    AND m.huri_code != LEFT ($parent, 12)
-                    AND m.visible='y'
-                GROUP BY m.huri_code";
-        $terms = $global['db']->GetAll($sql);
-        return $terms;
-    }
 
     public function getListCode()
     {

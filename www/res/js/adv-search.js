@@ -561,6 +561,7 @@ function groupBy(){
                         });
                         break;
                     case "mt_tree":
+                        break;
                         var o1ck = (e.type == '1')?' selected="true" ' : '' ;
                         var o2ck = (e.type == '2')?' selected="true" ' : '' ;
                         var o3ck = (e.type == '3')?' selected="true" ' : '' ;
@@ -783,6 +784,7 @@ function groupBy(){
                
                 break;
             case "mt_tree":
+                break;
                 var select = $("<select id=\"\" name=\"\" class=\"select searchval qb-count-type typeselectgroup\" />");
                
                 $("<option />", {

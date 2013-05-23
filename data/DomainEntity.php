@@ -134,7 +134,8 @@ class DomainEntity extends ADODB_Active_Record {
     public function getManagementData() {
         return $this->managementFields;
     }
-     public function ClearManagementData() {
+
+    public function ClearManagementData() {
         foreach ($this->managementFields as $mngField) {
             $this->$mngField = null;
         }
@@ -279,7 +280,6 @@ class DomainEntity extends ADODB_Active_Record {
     private function DeleteGeometries() {
         $geometry = new Geometry($this->entity);
         $geometryObjects = $geometry->DeleteByEntityId($this->{$this->keyName});
-
     }
 
     public function SaveGeometries() {
@@ -287,24 +287,24 @@ class DomainEntity extends ADODB_Active_Record {
 
             $this->DeleteGeometries();
             $this->loadGeometriesFromPost();
-           
-            if (is_array($this->geometries)) {
-                $this->geometries = array_unique($this->geometries);
-                foreach ($this->geometries as $key=>$geometries) {
-                $geometries = array_unique($geometries);
-                
-                foreach ($geometries as $geometry) {
-                    $geometryObject = new Geometry($this->entity);
-                    $geometryObject->geometry_record_number = shn_create_uuid('mlt_geometry');
-                
-                    $geometryObject->entity_id = $this->{$this->keyName};
-                    //$field = Browse::getFieldByName($this->entity,$key);
-                    $geometryObject->field_name = $key;
-                    $geometryObject->geometry = $geometry;
 
-                    $geometryObject->Save();
+            if (is_array($this->geometries)) {
+                //$this->geometries = array_unique($this->geometries);
+                foreach ($this->geometries as $key => $geometries) {
+                    $geometries = array_unique($geometries);
+
+                    foreach ($geometries as $geometry) {
+                        $geometryObject = new Geometry($this->entity);
+                        $geometryObject->geometry_record_number = shn_create_uuid('mlt_geometry');
+
+                        $geometryObject->entity_id = $this->{$this->keyName};
+                        //$field = Browse::getFieldByName($this->entity,$key);
+                        $geometryObject->field_name = $key;
+                        $geometryObject->geometry = $geometry;
+
+                        $geometryObject->Save();
+                    }
                 }
-                 }
             }
         }
     }
@@ -313,14 +313,16 @@ class DomainEntity extends ADODB_Active_Record {
         global $global;
         if ($this->supporting_geometry) {
             $geometriesA = array();
-            foreach($_POST as $key=>$val){
-                if(strpos($key,"_geometry")){
-                    if($_POST[$key]){
+            foreach ($_POST as $key => $val) {
+                if (strpos($key, "_geometry")) {
+
+                    if ($_POST[$key]) {
                         $geometries = $_POST[$key];
                     }
-                    if(!is_array($geometries)){
-                       return; 
+                    if (!is_array($geometries)) {
+                        return;
                     }
+
                     $geometriesJson = array();
                     foreach ($geometries as $item) {
                         if (!empty($item)) {
@@ -328,21 +330,19 @@ class DomainEntity extends ADODB_Active_Record {
                             $item = json_decode($item);
                             //++ TODO - validate geometry
                             $geometry = (isset($item->geometry)) ? $global['db']->qstr($item->geometry) : "";
-                             if ($geometry) {
+                            if ($geometry) {
                                 $geometriesJson[] = $item->geometry;
                             }
                         }
                     }
-                    if($geometriesJson){
-                        $fieldname = explode("_geometry",$key);
+
+                    if ($geometriesJson) {
+                        $fieldname = explode("_geometry", $key);
                         $geometriesA[$fieldname[0]] = $geometriesJson;
                     }
                 }
-                
-                
             }
-                        
-            if($geometriesA){
+            if ($geometriesA) {
                 $this->geometries = $geometriesA;
             }
         }

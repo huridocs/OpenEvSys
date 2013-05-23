@@ -7,11 +7,11 @@ $version = $version[1]; ?>
         <title>OpenEvSys <?php echo $version?></title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <link rel="shortcut icon" href="res/img/oevsys.png" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="theme/<?php echo $conf['theme'] ?>/css/bootstrap-responsive.min.css" />
 
-        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/screen.css"/>
-        <link rel="stylesheet" type="text/css" media="print"  href="theme/<?php echo $conf['theme'] ?>/print.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/screen.css?v=<?php echo $version?>"/>
+        <link rel="stylesheet" type="text/css" media="print"  href="theme/<?php echo $conf['theme'] ?>/print.css?v=<?php echo $version?>"/>
 
         <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/fg.menu.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="theme/fg-menu/theme/ui.all.css" />
@@ -52,15 +52,24 @@ $version = $version[1]; ?>
             <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.7&amp;sensor=false"></script>
         <?php } ?>
     </head>
-    <body>
-        <?php
+    <?php
         $module = get_module();
+        $action = get_action();
+        
         ?>
-        <?php include_section('menu'); ?>
+    <body>
+        
+        <?php
+        
+            include_section('menu');
+        ?>
         <?php /*include_section('top_menu'); */?>
 
         <div id="container" class="container-fluid">
-            <?php include_section('breadcrumb') ?>
+            <?php 
+            if($action != "print"){
+                include_section('breadcrumb');
+            }?>
 
             <div class="row-fluid">
                 <?php
@@ -70,12 +79,12 @@ $version = $version[1]; ?>
             <div class="row-fluid">
                 <?php include_section('mod_sidebar') ?>
 
-                <?php include_section('mod_menu') ?>
+                <?php 
+                if($action != "print"){
+                    include_section('mod_menu');
+                }?>
 
 
-
-                <!-- <?php include_section('modwrap_open') // these are put in to fotmat admin section         ?>
-                -->
                 <?php if ($module == "admin") { ?>
                     <div class="span10" >
                     <?php } else { ?>
@@ -89,8 +98,7 @@ $version = $version[1]; ?>
                             </div>
                         </div>
                     </div>
-                    <!-- <?php include_section('modwrap_close') ?>
-                    -->
+                    
 
                 </div>
                 <footer>

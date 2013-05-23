@@ -25,10 +25,11 @@
  * @package Framework
  * 
  */
+define('DS',DIRECTORY_SEPARATOR);
 
 //generate the base location of the system
-define('APPROOT',realpath(dirname(__FILE__).'/../').'/');
-define('WWWWROOT',realpath(dirname(__FILE__).'/').'/');
+define('APPROOT',realpath(dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR);
+define('WWWWROOT',realpath(dirname(__FILE__).DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR);
 
 //if the sysconf file does not exist then the system has not setuped yet
 //call the web instaler and exit
