@@ -347,18 +347,23 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
 
     $entity->clari_notes = array();
 
+	foreach ($formArray as $fieldName => $formField) {
+   
+		$recordkeyName = '' . $formField['map']['entity'] . '_record_number';            //have to change to handle act's child tables which have the act_record_number
+		if ($formField['map']['field'] == $recordkeyName) {
+			if ($valuesArray[$fieldName] != '') {
+				$entity->LoadFromRecordNumber($valuesArray[$fieldName]);
+				$entity->LoadManagementData();
+				$entity_key_value = $valuesArray[$fieldName];
+//var_dump('values array field name ' , $valuesArray[ $fieldName]);
+			}
+			break;
+		}
+	}
     foreach ($formArray as $fieldName => $formField) {
         if ($formField['map']['entity'] == $entity->_table) {
 
-            $recordkeyName = '' . $formField['map']['entity'] . '_record_number';            //have to change to handle act's child tables which have the act_record_number
-            if ($formField['map']['field'] == $recordkeyName) {
-                if ($valuesArray[$fieldName] != '') {
-                    $entity->LoadFromRecordNumber($valuesArray[$fieldName]);
-                    $entity->LoadManagementData();
-                    $entity_key_value = $valuesArray[$fieldName];
-//var_dump('values array field name ' , $valuesArray[ $fieldName]);
-                }
-            }
+            
 
 
 //var_dump($formField['map']);
