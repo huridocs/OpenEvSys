@@ -264,22 +264,26 @@ class SearchResultGenerator {
                         
                         
                         $sql = "SELECT max(m.term_level) from mt_vocab m WHERE m.list_code = (select m2.list_code from mt_vocab m2 where vocab_number ='$value')";
-    $depth = $global['db']->GetOne($sql);
+    $depth = (int)$global['db']->GetOne($sql);
     
-    $sql = "";
+    $sql = array();
     $sqllevel = "'$value'";
-    for ($i = 1; $i <= $depth; $i++) {
-        $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
-        $sql[] = $sqllevel;
-    }
-    //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
-    $sql = "select vocab_number from  (".implode(" union ", $sql).") a ";
-    //$vocList = $global['db']->GetOne($sql);
-    $res = $global['db']->Execute($sql);
     $vocList = array();
-    foreach($res as $v){
-        $vocList[] = "'".$v['vocab_number']."'";
+        
+    if($depth){
+        for ($i = 1; $i <= $depth; $i++) {
+            $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
+            $sql[] = $sqllevel;
+        }
+        //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
+        $sql = "select vocab_number from  (".implode(" union ", $sql).") a ";
+        //$vocList = $global['db']->GetOne($sql);
+        $res = $global['db']->Execute($sql);
+        foreach($res as $v){
+            $vocList[] = "'".$v['vocab_number']."'";
+        }
     }
+    $vocList[] = "'$value'";
     $conditionString = " $fieldAlias  in (".implode(",",$vocList).") ";
                         
                         break;

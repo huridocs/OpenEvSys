@@ -330,7 +330,7 @@ class DomainEntity extends ADODB_Active_Record {
                             $item = json_decode($item);
                             //++ TODO - validate geometry
                             $geometry = (isset($item->geometry)) ? $global['db']->qstr($item->geometry) : "";
-                            if ($geometry) {
+                            if ($geometry && strpos( $geometry,"NaN") === false) {
                                 $geometriesJson[] = $item->geometry;
                             }
                         }

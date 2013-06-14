@@ -91,3 +91,9 @@ foreach ($index_terms as $index_term) {
         $term_order++;
     }
 }
+
+$sql = "update data_dict set enabled='y' where essential='y';";
+$res = $global['db']->Execute($sql);
+$sql = "update data_dict set visible_new='y' where field_name='person_record_number';";
+$res = $global['db']->Execute($sql);
+    

@@ -60,6 +60,7 @@ $conf['theme'] = 'default';
 # specify the database name.
 #
 $conf['db_name'] =  'openevsys';
+$conf['db_name'] =  'oe_slot28_aae';
 
 # specify user name that Sahana can use to connect.
 #
@@ -119,7 +120,7 @@ $conf['related_search'] = false;
 
 # File upload configuration
 #
-$conf['media_dir'] ='../media/';
+$conf['media_dir'] = APPROOT.'media'.DIRECTORY_SEPARATOR;
 # mode should be a number not a string
 $conf['media_mode'] = 0777;
 

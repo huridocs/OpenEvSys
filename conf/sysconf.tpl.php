@@ -119,7 +119,7 @@ $conf['related_search'] = false;
 
 # File upload configuration
 #
-$conf['media_dir'] ='../media/';
+$conf['media_dir'] = APPROOT.'media'.DIRECTORY_SEPARATOR;
 # mode should be a number not a string
 $conf['media_mode'] = 0777;
 

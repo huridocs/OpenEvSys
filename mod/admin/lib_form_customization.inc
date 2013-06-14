@@ -223,7 +223,9 @@ function form_customization_process_entity_form($entity) {
                 //var_dump($e,$sql);
             }
         }
+        if($fieldValues){
         $global['db']->AutoExecute('data_dict', $fieldValues, 'UPDATE', "field_number = '$recordNumber'");
+        }
     }
 }
 
