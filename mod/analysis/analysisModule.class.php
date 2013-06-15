@@ -735,7 +735,7 @@ class analysisModule extends shnModule {
                 $sqlArray['select'][] = $fieldName;  //management data dosent appear in the $entity table ** FIX TO HANDLE THAT
             }
 
-            if ($field['map']['mlt'] == true) {
+            if ($field['map']['mlt'] == true && $field['type'] != "user_select") {
                 $isMLTpresent = true;   // this is only mlt present in VIEW, could have been searched too 
                 $mtJoinArray = $this->generateMtJoin($field, $dataArray, $field_name, $sqlArray);
                 $mtJoins['select'] .= " , " . $mtJoinArray['select'];
@@ -840,7 +840,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //var_dump('search field array',$search_field_array);
         foreach ($search_field_array as $field_name => $field) {   //iterate through the search fields, checking input values
             //var_dump($field , $dataArray[$field['map']['field']  ]);
-            if ($field['map']['mlt'] == true) {
+            if ($field['map']['mlt'] == true && $field['type'] != "user_select") {
                 //var_dump($dataArray[$field_name]);
                 if (is_array($dataArray[$field_name])) {
                     $mtJoinArray = $this->generateMtJoin($field, $dataArray, $field_name, $sqlArray);
@@ -1768,7 +1768,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     }
                     $recFieldEnt = get_primary_key($searchSql->tableOfEntity($fieldArray['map']['entity']));
 
-                    if ($fieldArray['map']['mlt']) {
+                    if ($fieldArray['map']['mlt'] && $fieldArray['type'] != "user_select") {
                         $mltTable = 'mlt_' . $searchSql->tableOfEntity($fieldArray['map']['entity']) . '_' . $fieldArray['map']['field'];
 
                         $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(t.record_number) AS count,m.vocab_number as vocab_number

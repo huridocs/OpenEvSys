@@ -307,26 +307,35 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['visible_adv_search_display'] = 'n';
             break;
         case 'mt_tree':
-            $fieldValues['visible_browse'] = 'n';
             $field_mysql_type = "VARCHAR(14)";
             $fieldValues['list_code'] = (int) $_POST['list_code'];
             break;
         case 'mt_tree_multi':
-            $fieldValues['visible_browse'] = 'n';
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'mt_tree';
             $fieldValues['list_code'] = (int) $_POST['list_code'];
             break;
         case 'mt_select' :
-            $fieldValues['visible_browse'] = 'n';
             $field_mysql_type = "VARCHAR(14)";
             $fieldValues['list_code'] = (int) $_POST['list_code'];
             break;
         case 'mt_select_multi':
-            $fieldValues['visible_browse'] = 'n';
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'mt_select';
             $fieldValues['list_code'] = (int) $_POST['list_code'];
+            break;
+        case 'user_select' :
+             $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            $field_mysql_type = "VARCHAR(14)";
+            break;
+        case 'user_select_multi':
+             $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            $fieldValues['is_repeat'] = 'y';
+            $fieldValues['field_type'] = 'user_select';
             break;
     }
     $fieldValues['visible_edit'] = $fieldValues['visible_new'];
@@ -386,6 +395,22 @@ function form_customization_add_field($field_type_options) {
                   ON DELETE CASCADE
                   ON UPDATE CASCADE)ENGINE = InnoDB;";
             $dbQuery->ExecuteNonQuery($sql);
+        }if ($fieldValues['field_type'] == "user_select" && $fieldValues['is_repeat'] == 'y') {
+           
+            $sql = "CREATE  TABLE IF NOT EXISTS  `mlt_" . $fieldValues['entity'] . "_" . $fieldValues['field_name'] . "` (
+                `username` VARCHAR(255) NOT NULL ,
+                `record_number` VARCHAR(45) NOT NULL ,
+                PRIMARY KEY (`username`, `record_number`) ,
+                  FOREIGN KEY (`username` )
+                  REFERENCES  `user` (`username` )
+                  ON DELETE RESTRICT
+                  ON UPDATE CASCADE,
+                  FOREIGN KEY (`record_number` )
+                  REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
+                  ON DELETE CASCADE
+                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+           $dbQuery->ExecuteNonQuery($sql);
+            
         } else {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "` $field_mysql_type ");
         }

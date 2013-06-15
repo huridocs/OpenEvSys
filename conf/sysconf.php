@@ -60,7 +60,7 @@ $conf['theme'] = 'default';
 # specify the database name.
 #
 $conf['db_name'] =  'openevsys';
-$conf['db_name'] =  'oe_slot28_aae';
+//$conf['db_name'] =  'oe_slot28_aae';
 
 # specify user name that Sahana can use to connect.
 #
@@ -141,3 +141,5 @@ $conf['fieldsvalidation'] = array("event"=>array("final_date"=>array("field"=>"i
         "act"=>array("final_date"=>array("field"=>"initial_date","validation"=>">","error"=>'Final date must be after initial date')));
 
 $conf["debug"] = true;
+
+$conf['menus'] = array("biography_list"=>true);

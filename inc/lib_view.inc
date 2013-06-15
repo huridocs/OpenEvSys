@@ -95,6 +95,10 @@ function shn_view_mt_tree($label,$value,$extra_opts)
 {
     shn_view_text($label,get_mt_term($value),$extra_opts);
 }
+function shn_view_user_select($label,$value,$extra_opts)
+{
+    shn_view_text($label,Browse::getUserFullName($value),$extra_opts);
+}
 
 
 function shn_view_mt_select_mlt($label,$value,$extra_opts)
@@ -125,6 +129,33 @@ function shn_view_mt_select_mlt($label,$value,$extra_opts)
 <?php
 }
 
+function shn_view_user_select_mlt($label,$value,$extra_opts)
+{
+    $class = "class='{$extra_opts['class']}'";
+?>
+    <tr <?php echo $class ?>>
+        <td class='title' align='right'><?php echo $label ?></td>
+        <td class='text'>
+        <div style='margin-left:20px;'>
+<?php   
+        if(is_array($value)&&count($value)>0){
+            echo "<ul>\n";
+            foreach($value as $val){ 
+                echo "\t<li>".htmlspecialchars(Browse::getUserFullName($val))."</li>\n";
+                $clari = $extra_opts['clari_value'][$val];
+                if(isset($clari)){ ?>
+                <p class='clarify_note'><em><?php echo _t('CLARIFYING_NOTE')?><span><?php echo ' : '.$clari  ?></span></em><p>
+<?php
+                } 
+            }
+            echo "</ul>\n";
+        }
+?>
+        </div>
+        </td>
+    </tr>
+<?php
+}
 
 
 function shn_view_document($label,$value,$extra_opts)

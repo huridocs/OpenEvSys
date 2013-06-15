@@ -344,43 +344,152 @@ function shn_form_mt_select($label, $name, $extra_opts) {
                 jQuery(document).ready(function($) {
         <?php
         foreach ($visibility_field as $v => $f) {
-            
-            if (in_array($v,$values)) {
+
+            if (in_array($v, $values)) {
                 foreach ($f as $field) {
                     echo "$('#" . $field . "_group').hide();";
                 }
             }
         }
         ?>
-                            $("#<?php echo $name ?>").on("change", function(event) { 
-                                var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                                val = $(this).val()
-                                values = val;
-                                if(!$.isArray(val)){
-                                    values = new Array(val);
-                                }
-                                for(val2 in visibility_fields){
-                                    
-                                    if($.inArray(val2,values)<0){
-                                        for(i in visibility_fields[val2]){
-                                            $("#"+visibility_fields[val2][i]+"_group").show();
-                                        }
-                                    }
-                                }
-                                for(j in values){
-                                    val = values[j]
-                                    
-                                    if(visibility_fields.hasOwnProperty(val)){
-                                        for(i in visibility_fields[val]){
-                                            $("#"+visibility_fields[val][i]+"_group").hide();
-                                        }
-                                    }
-                                }
-                            });
-                        });
+                $("#<?php echo $name ?>").on("change", function(event) { 
+                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                    val = $(this).val()
+                    values = val;
+                    if(!$.isArray(val)){
+                        values = new Array(val);
+                    }
+                    for(val2 in visibility_fields){
+                                            
+                        if($.inArray(val2,values)<0){
+                            for(i in visibility_fields[val2]){
+                                $("#"+visibility_fields[val2][i]+"_group").show();
+                            }
+                        }
+                    }
+                    for(j in values){
+                        val = values[j]
+                                            
+                        if(visibility_fields.hasOwnProperty(val)){
+                            for(i in visibility_fields[val]){
+                                $("#"+visibility_fields[val][i]+"_group").hide();
+                            }
+                        }
+                    }
+                });
+            });
             </script>
+            <?php }
+        ?>
+    </div>
+    <?php
+}
+
+function shn_form_user_select($label, $name, $extra_opts) {
+    global $global;
+    global $shn_tabindex;
+
+    $options = array();
+    $data_array = Browse::getUserListAll();
+    $size = count($data_array);
+    $options[''] = ' ';
+    for ($i = 0; $i < $size; $i++) {
+        $fullname = $data_array[$i]['first_name'] . " " . $data_array[$i]['last_name'];
+        $fullname = trim($fullname);
+        if (!$fullname) {
+            $fullname = $data_array[$i]['username'];
+        }
+        $options[$data_array[$i]['username']] = $fullname;
+    }
+    //print_r($options);
+
+    $value = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
+    //to prevent warnings set $options to array() if it is null
+    $options = ($options == null) ? array() : $options;
+
+    if (isset($label)) {
+        ?>
+        <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
+    <?php } ?>
+    <div class="controls">
+        <select class="mt_select input-large" title="<?php echo $name ?>" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>">
             <?php
-        }?>
+            foreach ($options as $opt_value => $desc) {
+                if (is_array($value))
+                    $sel = ( in_array($opt_value, $value) ) ? 'selected="selected"' : null;
+                else
+                    $sel = ( $opt_value == $value ) ? 'selected="selected"' : null;
+                ?>
+                <option value="<?php echo $opt_value ?>" <?php echo $sel ?> ><?php echo $desc ?></option>
+                <?php
+            }
+            ?>
+        </select>
+        <?php
+        if ($extra_opts['clari']) {
+            if (is_array($extra_opts['clari_value']) && count($extra_opts['clari_value']) > 0)
+                $clari_value = array_pop($extra_opts['clari_value']);
+            shn_form_clari($name, $clari_value);
+        }
+
+        shn_form_extra_opts($extra_opts);
+        ?>
+    </div>
+    <?php
+}
+
+function shn_form_user_select_mlt($label, $name, $extra_opts) {
+    global $global;
+    global $shn_tabindex;
+
+
+    $data_array = Browse::getUserListAll();
+    $size = count($data_array);
+    
+    for ($i = 0; $i < $size; $i++) {
+        $fullname = $data_array[$i]['first_name'] . " " . $data_array[$i]['last_name'];
+        $fullname = trim($fullname);
+        if (!$fullname) {
+            $fullname = $data_array[$i]['username'];
+        }
+        $options[$data_array[$i]['username']] = $fullname;
+    }
+
+    $value = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
+    //to prevent warnings set $options to array() if it is null
+    $options = ($options == null) ? array() : $options;
+
+    if (isset($label)) {
+        ?>
+        <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
+    <?php } ?>
+    <div class="controls">
+        <select class="mt_select_mlt input-large" name="<?php echo $name ?>[]" id="<?php echo $name ?>" multiple="multiple" <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>" title="<?php echo _t('SELECT') . ' ' . $label ?>">
+            <?php
+            foreach ($options as $opt_value => $desc) {
+                if (is_array($value))
+                    $sel = ( in_array($opt_value, $value) ) ? 'selected="selected"' : null;
+                else
+                    $sel = ( $opt_value == $value ) ? 'selected="selected"' : null;
+                ?>
+                <option value="<?php echo $opt_value ?>" <?php echo $sel ?> ><?php echo $desc ?></option>
+                <?php
+            }
+            ?>
+        </select>
+
+        <?php
+        if ($extra_opts['clari']) {
+            if (is_array($extra_opts['clari_value'])) {
+                foreach ($extra_opts['clari_value'] as $key => $cval) {
+                    $ctid = $name . '_' . $key . '_clarify';
+                    ?>
+                    <textarea id="<?php echo $ctid ?>" name="<?php echo $ctid ?>" class="clarify" ><?php echo $cval ?></textarea>
+                    <?php
+                }
+            }
+        }
+        ?>
     </div>
     <?php
 }
@@ -413,8 +522,6 @@ function shn_form_mt_select_mlt($label, $name, $extra_opts) {
     global $global;
     global $shn_tabindex;
 
-    if ($extra_opts['clari'])
-        $clari = ", addClarify: true";
 
     $options = array();
     $data_array = MtFieldWrapper::getMTList($extra_opts['mt']);
@@ -472,43 +579,43 @@ function shn_form_mt_select_mlt($label, $name, $extra_opts) {
                 jQuery(document).ready(function($) {
         <?php
         foreach ($visibility_field as $v => $f) {
-            
-            if (in_array($v,$values)) {
+
+            if (in_array($v, $values)) {
                 foreach ($f as $field) {
                     echo "$('#" . $field . "_group').hide();";
                 }
             }
         }
         ?>
-                            $("#<?php echo $name ?>").on("change", function(event) { 
-                                var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                                val = $(this).val()
-                                values = val;
-                                if(!$.isArray(val)){
-                                    values = new Array(val);
-                                }
-                                for(val2 in visibility_fields){
-                                    
-                                    if($.inArray(val2,values)<0){
-                                        for(i in visibility_fields[val2]){
-                                            $("#"+visibility_fields[val2][i]+"_group").show();
-                                        }
-                                    }
-                                }
-                                for(j in values){
-                                    val = values[j]
-                                    
-                                    if(visibility_fields.hasOwnProperty(val)){
-                                        for(i in visibility_fields[val]){
-                                            $("#"+visibility_fields[val][i]+"_group").hide();
-                                        }
-                                    }
-                                }
-                            });
-                        });
+                $("#<?php echo $name ?>").on("change", function(event) { 
+                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                    val = $(this).val()
+                    values = val;
+                    if(!$.isArray(val)){
+                        values = new Array(val);
+                    }
+                    for(val2 in visibility_fields){
+                                            
+                        if($.inArray(val2,values)<0){
+                            for(i in visibility_fields[val2]){
+                                $("#"+visibility_fields[val2][i]+"_group").show();
+                            }
+                        }
+                    }
+                    for(j in values){
+                        val = values[j]
+                                            
+                        if(visibility_fields.hasOwnProperty(val)){
+                            for(i in visibility_fields[val]){
+                                $("#"+visibility_fields[val][i]+"_group").hide();
+                            }
+                        }
+                    }
+                });
+            });
             </script>
-            <?php
-        }?>
+            <?php }
+        ?>
     </div>
     <?php
 }
@@ -601,7 +708,7 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
                 onchange="<?php echo $extra_opts['onchange'] ?>" 
                 name="<?php echo $name ?><?php if ($multiple) echo'[]'; ?>" id="<?php echo $name ?>"
                 <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>"
-                <?php if ($multiple) echo ' multiple="multiple"'; ?> >
+            <?php if ($multiple) echo ' multiple="multiple"'; ?> >
             <option value=""></option>
             <?php
             for ($i = 0; $i < $count;) {
@@ -639,40 +746,40 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
                 jQuery(document).ready(function($) {
         <?php
         foreach ($visibility_field as $v => $f) {
-            
-            if (in_array($v,$values)) {
+
+            if (in_array($v, $values)) {
                 foreach ($f as $field) {
                     echo "$('#" . $field . "_group').hide();";
                 }
             }
         }
         ?>
-                            $("#<?php echo $name ?>").on("change", function(event) { 
-                                var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                                val = $(this).val()
-                                values = val;
-                                if(!$.isArray(val)){
-                                    values = new Array(val);
-                                }
-                                for(val2 in visibility_fields){
-                                    
-                                    if($.inArray(val2,values)<0){
-                                        for(i in visibility_fields[val2]){
-                                            $("#"+visibility_fields[val2][i]+"_group").show();
-                                        }
-                                    }
-                                }
-                                for(j in values){
-                                    val = values[j]
-                                    
-                                    if(visibility_fields.hasOwnProperty(val)){
-                                        for(i in visibility_fields[val]){
-                                            $("#"+visibility_fields[val][i]+"_group").hide();
-                                        }
-                                    }
-                                }
-                            });
-                        });
+                $("#<?php echo $name ?>").on("change", function(event) { 
+                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                    val = $(this).val()
+                    values = val;
+                    if(!$.isArray(val)){
+                        values = new Array(val);
+                    }
+                    for(val2 in visibility_fields){
+                                            
+                        if($.inArray(val2,values)<0){
+                            for(i in visibility_fields[val2]){
+                                $("#"+visibility_fields[val2][i]+"_group").show();
+                            }
+                        }
+                    }
+                    for(j in values){
+                        val = values[j]
+                                            
+                        if(visibility_fields.hasOwnProperty(val)){
+                            for(i in visibility_fields[val]){
+                                $("#"+visibility_fields[val][i]+"_group").hide();
+                            }
+                        }
+                    }
+                });
+            });
             </script>
             <?php
         }
@@ -805,9 +912,9 @@ function shn_form_related_person($label, $name, $extra_opts) {
                     <h4 class="box-header round-top"><?php echo _t('PERSONS') ?> </h4>
                     <div class="box-container-toggle">
                         <div class="box-content"><?php
-        include_once APPROOT . 'inc/PersonSearch.class.php';
-        $personSearch = New PersonSearch();
-        $personSearch->render();
+            include_once APPROOT . 'inc/PersonSearch.class.php';
+            $personSearch = New PersonSearch();
+            $personSearch->render();
             ?>
                         </div></div></div></fieldset>
             <?php
@@ -879,12 +986,12 @@ function shn_form_related_victim($label, $name, $extra_opts) {
                     <h4 class="box-header round-top"><?php echo _t('PERSONS') ?> </h4>
                     <div class="box-container-toggle">
                         <div class="box-content"><?php
-        include_once APPROOT . 'inc/PersonVictimSearch.class.php';
-        $personSearch = New PersonVictimSearch();
-        $personSearch->render();
+            include_once APPROOT . 'inc/PersonVictimSearch.class.php';
+            $personSearch = New PersonVictimSearch();
+            $personSearch->render();
             ?></div></div></div></fieldset><?php
-                } else {
-            ?>
+    } else {
+        ?>
             <a class="show_search_form" href="#" id="show_related_victim" style="display;"><?php echo _t('SHOW_SEARCH_FORM'); ?></a>
             <a class="hide_search_form" href="#" id="hide_related_victim" style="display:none;"><?php echo _t('HIDE_SEARCH_FORM'); ?></a>
             <fieldset id='related_victim_search' style='display:none;'>
@@ -897,10 +1004,10 @@ function shn_form_related_victim($label, $name, $extra_opts) {
                             $personSearch = New PersonVictimSearch();
                             $personSearch->render();
                             ?></div></div></div></fieldset><?php
-                }
-                $extra_opts['help'] = null;
-                shn_form_extra_opts($extra_opts);
-                        ?>
+    }
+    $extra_opts['help'] = null;
+    shn_form_extra_opts($extra_opts);
+    ?>
     </div>
     <?php
 }
@@ -961,17 +1068,17 @@ function shn_form_related_event($label, $name, $extra_opts) {
                     <h4 class="box-header round-top"><?php echo _t('EVENTS') ?> </h4>
                     <div class="box-container-toggle">
                         <div class="box-content"><?php
-        include_once APPROOT . 'inc/EventSearch.class.php';
-        $data['event_id'] = $_GET['eid'];
-        $eventSearch = New EventSearch();
-        $eventSearch->render($data);
+            include_once APPROOT . 'inc/EventSearch.class.php';
+            $data['event_id'] = $_GET['eid'];
+            $eventSearch = New EventSearch();
+            $eventSearch->render($data);
             ?></div></div></div></fieldset><?php
-                }
+    }
 
 
-                $extra_opts['help'] = null;
-                shn_form_extra_opts($extra_opts);
-        ?>
+    $extra_opts['help'] = null;
+    shn_form_extra_opts($extra_opts);
+    ?>
     </div>
     <?php
 }
@@ -1106,25 +1213,25 @@ function shn_form_document($label, $name, $extra_opts) {
                     <h4 class="box-header round-top"><?php echo _t('DOCUMENTS') ?> </h4>
                     <div class="box-container-toggle">
                         <div class="box-content"><?php
-        include_once APPROOT . 'inc/DocumentSearch.class.php';
-        $documentSearch = New DocumentSearch();
-        $documentSearch->render();
+            include_once APPROOT . 'inc/DocumentSearch.class.php';
+            $documentSearch = New DocumentSearch();
+            $documentSearch->render();
             ?></div></div></div></fieldset><?php
-                } else {
-            ?><fieldset id='document_search' style='display:none;'>
+    } else {
+        ?><fieldset id='document_search' style='display:none;'>
                 <div class="box" style="margin-top:10px">
                     <h4 class="box-header round-top"><?php echo _t('DOCUMENTS') ?> </h4>
                     <div class="box-container-toggle">
                         <div class="box-content"><?php
-                    include_once APPROOT . 'inc/DocumentSearch.class.php';
-                    $documentSearch = New DocumentSearch();
-                    $documentSearch->render();
+        include_once APPROOT . 'inc/DocumentSearch.class.php';
+        $documentSearch = New DocumentSearch();
+        $documentSearch->render();
             ?></div></div></div></fieldset><?php
-                }
-                unset($doclistarray);
-                $extra_opts['help'] = null;
-                shn_form_extra_opts($extra_opts);
-        ?>
+    }
+    unset($doclistarray);
+    $extra_opts['help'] = null;
+    shn_form_extra_opts($extra_opts);
+    ?>
     </div>
     <?php
 }

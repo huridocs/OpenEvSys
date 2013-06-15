@@ -52,7 +52,7 @@ class personModule extends shnModule {
     function __construct() {
         global $messages;
         $this->load_related_person();
-        if (isset($_GET['act']) && $_GET['act'] != 'new_person' && $_GET['act'] != 'browse') {
+        if (isset($_GET['act']) && $_GET['act'] != 'new_person' && $_GET['act'] != 'browse' && $_GET['act'] != 'browse_biography') {
             $_GET['pid'] = (isset($_GET['pid'])) ? $_GET['pid'] : $_SESSION['pid'];
             $this->pid = $_GET['pid'];
             if (!isset($_GET['pid'])) {
@@ -299,6 +299,7 @@ class personModule extends shnModule {
         }
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
         $this->columnValues = $this->result_pager->get_page_data();
+        
         $this->columnValues = set_links_in_recordset($this->columnValues, 'person');
 
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
@@ -661,4 +662,57 @@ class personModule extends shnModule {
         }
     }
 
+    public function act_browse_biography(){
+        include_once APPROOT . 'inc/lib_form.inc';
+
+        //$notIn = acl_list_acts_permissons();
+        $notIn = 'allowed_records'; // passed to generateSql function to use the temporary table to find the allowed records
+        require_once(APPROOT . 'mod/analysis/analysisModule.class.php');
+
+
+
+        $analysisModule = new analysisModule();
+        $sqlStatement = $analysisModule->generateSqlforEntity('biographic_details', null, $_GET, 'browse');
+
+        $entity_type_form_results = generate_formarray('biographic_details', 'browse');
+        $entity_type_form_results['biographic_details_record_number']['type'] = 'text';
+        $field_list = array();
+        foreach ($entity_type_form_results as $field_name => $field) {
+            // Generates the view's Label list
+            $field_list[$field['map']['field']] = $field['label'];
+        }
+
+        foreach ($entity_type_form_results as $fieldName => &$field) {
+            $field['extra_opts']['help'] = null;
+            $field['label'] = null;
+            $field['extra_opts']['clari'] = null;
+            $field['extra_opts']['value'] = $_GET[$fieldName];
+            $field['extra_opts']['required'] = null;
+            $field['extra_opts']['class'] = "input-block-level";
+        }
+
+        $entity_fields_html = shn_form_get_html_fields($entity_type_form_results);
+        $htmlFields = array();
+        //iterate through the search fields, checking input values
+        foreach ($entity_type_form_results as $field_name => $x) {
+            // Generates the view's Label list
+            $htmlFields[$field_name] = $entity_fields_html[$field_name];
+        }
+
+        //var_dump($sqlStatement);
+        $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->columnValues = $this->result_pager->get_page_data();
+        $additionalurlfields = array();
+        $additionalurlfields["person"] = array("entity" => "person", "val" => "person");
+        $additionalurlfields["related_person"] = array("entity" => "person", "val" => "person");
+        
+        $this->columnValues = set_links_in_recordset($this->columnValues, 'biographic_details', $additionalurlfields);
+        // var_dump($this->columnValues);exit;
+        set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
+
+
+        //rendering the view
+        $this->columnNames = $field_list;
+        $this->htmlFields = $htmlFields;
+    }
 }

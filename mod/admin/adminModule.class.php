@@ -53,6 +53,9 @@ class adminModule extends shnModule {
         if ($this->entity_select == 'event' || $this->entity_select == 'person' || $this->entity_select == 'supporting_docs_meta') {
             $this->browse_needed = true;
         }
+        if($this->entity_select == 'biographic_details' && $conf['menus']['biography_list']){
+            $this->browse_needed = true;
+        }
 
         include_once APPROOT . 'mod/admin/customization_form.inc';
         //include select entity form        
@@ -170,6 +173,8 @@ class adminModule extends shnModule {
             'date' => _t('DATE_FIELD_'),
             'radio' => _t('Radio field'),
             'location' => _t('Geolocation'),
+            'user_select' => _t('User Select'),
+            'user_select_multi' => _t('Multivalue User Select'),
             'mt_tree' => _t('Tree'),
             'mt_tree_multi' => _t('Multivalue Tree'),
             'mt_select' => _t('Select'),

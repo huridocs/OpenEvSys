@@ -571,6 +571,31 @@ class Browse implements BrowseStrategy {
         $pager = new shnPager($sql);
         return $pager;
     }
+       public static function getUserListAll() {
+        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
+        
+        $browse = new Browse();
+        $res = $browse->ExecuteQuery($sql);
+        return $res; 
+    }
+     public static function getUserFullName($username) {
+        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,
+            status FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username where U.username='".$username."'";
+        
+        $browse = new Browse();
+        $res = $browse->ExecuteQuery($sql);
+        $fullname = "";
+        foreach($res as $row){
+            $fullname = $row['first_name'] . " " . $row['last_name'];
+            $fullname = trim($fullname);
+            if (!$fullname) {
+                $fullname = $row['username'];
+            }
+            break;
+        }
+        
+        return $fullname; 
+    }
 
     public static function getPerpetrator($id) {
         $browse = new Browse();

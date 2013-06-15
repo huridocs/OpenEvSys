@@ -48,6 +48,7 @@ class DomainEntity extends ADODB_Active_Record {
     protected $managementFields = array('date_received', 'project_title', 'comments', 'record_grouping',
         'monitoring_status', 'entered_by', 'date_of_entry', 'updated_by', 'date_updated');
     protected $mt = array();
+    protected $uf = array();
     private $entity;
     private $keyName;
 
@@ -56,17 +57,28 @@ class DomainEntity extends ADODB_Active_Record {
         $this->entity = $table;
         $this->keyName = $this->entity . '_record_number';
         $this->loadMTNames();
+        $this->loadUserFieldNames();
     }
 
     private function loadMTNames() {
         $entityFields = Browse::getEntityFields($this->getEntityType());
         foreach ($entityFields as $entityField) {
             $mlt = ( (trim($entityField['is_repeat']) == 'Y' || trim($entityField['is_repeat']) == 'y' ) ? true : false);
-            if ($mlt) {
+            if ($mlt && $entityField['field_type'] != 'user_select') {
                 $this->mt[] = $entityField['field_name'];
             }
         }
         $this->mt = array_unique($this->mt);
+    }
+    private function loadUserFieldNames() {
+        $entityFields = Browse::getEntityFields($this->getEntityType());
+        foreach ($entityFields as $entityField) {
+            $mlt = ( (trim($entityField['is_repeat']) == 'Y' || trim($entityField['is_repeat']) == 'y' ) ? true : false);
+            if ($mlt && $entityField['field_type'] == 'user_select') {
+                $this->uf[] = $entityField['field_name'];
+            }
+        }
+        $this->uf = array_unique($this->uf);
     }
 
     public function getEntityType() {
@@ -84,6 +96,11 @@ class DomainEntity extends ADODB_Active_Record {
         foreach ($this->mt as $mtField) {
             if (sizeof($this->$mtField) > 0) {
                 MtFieldWrapper::setMTTermsforEntity($mtField, $this->entity, $this->{$this->keyName}, $this->$mtField);
+            }
+        }
+        foreach ($this->uf as $userField) {
+            if (sizeof($this->$userField) > 0) {
+                UserFieldWrapper::setUserTermsforEntity($userField, $this->entity, $this->{$this->keyName}, $this->$userField);
             }
         }
         $this->saveClarifyingNotes();
@@ -107,6 +124,9 @@ class DomainEntity extends ADODB_Active_Record {
     public function LoadRelationships() {
         foreach ($this->mt as $mtField) {
             MtFieldWrapper::getMTTermsforEntity($mtField, $this->entity, $this, $this->{$this->keyName});
+        }
+        foreach ($this->uf as $userField) {
+            UserFieldWrapper::getUserTermsforEntity($userField, $this->entity, $this, $this->{$this->keyName});
         }
         $this->LoadDocs();
         $this->LoadGeometries();

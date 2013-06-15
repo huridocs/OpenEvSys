@@ -1,4 +1,6 @@
-<div class="navbar navbar-fixed-top navbar-inverse"  >
+<?php
+global $conf;
+?><div class="navbar navbar-fixed-top navbar-inverse"  >
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="<?php get_url(); ?>" title="OpenEvSys">OpenEvSys</a>
@@ -21,7 +23,7 @@
                 <?php if (acl_is_mod_allowed('person')) { ?>
                     <?php
                     $active = '';
-                    if ('person' == $module) {
+                    if ('person' == $module && $action != "browse_biography") {
                         $active = 'active';
                         $breadcrumbs->pushCrumb(array('name' => _t('PERSONS'), 'mod' => 'person', 'act' => 'browse'), 0);
                     }
@@ -41,7 +43,24 @@
                     <li class="<?php echo $active ?>">
                        <a href="<?php get_url('docu', 'browse') ?>"><?php echo _t('DOCUMENTS') ?></a></li>
                            
-                <?php } ?>
+                <?php }
+                
+                if($conf['menus']['biography_list']){
+                    if (acl_is_mod_allowed('person')) { ?>
+                    <?php
+                    $active = '';
+                    if ('person' == $module && $action == "browse_biography") {
+                        $active = 'active';
+                        $breadcrumbs->pushCrumb(array('name' => _t('BIOGRAPHIC_DETAILS'), 'mod' => 'person', 'act' => 'browse'), 0);
+                    }
+                    ?>
+                    <li class="<?php echo $active ?>">
+                       <a href="<?php get_url('person', 'browse_biography') ?>"><?php echo _t('BIOGRAPHIC_DETAILS') ?></a></li>
+                         
+                <?php }
+                }
+                
+                ?>
                        <?php /*if (acl_is_mod_allowed('events')) { ?>
                     <?php
                     $active = '';

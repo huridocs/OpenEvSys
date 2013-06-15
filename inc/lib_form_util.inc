@@ -255,7 +255,11 @@ function popuate_formArray(&$formArray, $entity) {
                     $valueArray = array();
                     if (is_array($entity->$formField['map']['field'])) {
                         foreach ($entity->$formField['map']['field'] as $vals) {
-                            $valueArray[] = $vals->vocab_number;
+                            if ($formField['type'] == "user_select") {
+                                $valueArray[] = $vals->username;
+                            } else {
+                                $valueArray[] = $vals->vocab_number;
+                            }
                         }
                     }
                     $formField['extra_opts']['value'] = $valueArray;
@@ -370,7 +374,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
 //var_dump($formField['map']);
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
 //$name = $formField['map']['field'];
-                if ($formField['map']['mt']) {   // micro thesauri terms
+                if ($formField['map']['mt'] || $formField['type'] == 'user_select') {   // micro thesauri terms
                     //if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
                     if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                         $entity->$formField['map']['field'] = $valuesArray[$fieldName];
@@ -394,30 +398,58 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                     }
                 }
             } else {                                  // multivalue Terms
-                $termArray = array();
-                if ($valuesArray[$fieldName] != null) {
-                    if (is_array($valuesArray[$fieldName])) {
-                        $valuesArray[$fieldName] = array_unique($valuesArray[$fieldName]); //remove duplicate MT values
-                        foreach ($valuesArray[$fieldName] as $mtvalue) {
-                            if (trim($mtvalue) != '') {
+                if ($formField['type'] == 'user_select') {
+                    $userArray = array();
+                    if ($valuesArray[$fieldName] != null) {
+                        if (is_array($valuesArray[$fieldName])) {
+                            $valuesArray[$fieldName] = array_unique($valuesArray[$fieldName]); //remove duplicate MT values
+                            foreach ($valuesArray[$fieldName] as $mtvalue) {
+                                if (trim($mtvalue) != '') {
+                                    $userTerm = UserFieldWrapper::getUserObject($formField['map']['field'], $formField['map']['entity']);
+                                    $userTerm->username = $mtvalue;
+                                    $userTerm->record_number = $entity->$recordkeyName;
+                                    $userArray[] = $userTerm;
+                                }
+                            }
+                        } else {
+                            if (trim($valuesArray[$fieldName]) != '') {
+                                $userTerm = UserFieldWrapper::getUserObject($formField['map']['field'], $formField['map']['entity']);
+                                $userTerm->username = $valuesArray[$fieldName];
+                                $userTerm->record_number = $entity->$recordkeyName;
+                                $userArray[] = $userTerm;
+                            }
+                        }
+                    }
+//var_dump($termArray);
+                    if (sizeof($userArray) > 0) {
+                        $entity->$formField['map']['field'] = $userArray;
+                    }
+                } else {
+                    $termArray = array();
+                    if ($valuesArray[$fieldName] != null) {
+                        if (is_array($valuesArray[$fieldName])) {
+                            $valuesArray[$fieldName] = array_unique($valuesArray[$fieldName]); //remove duplicate MT values
+                            foreach ($valuesArray[$fieldName] as $mtvalue) {
+                                if (trim($mtvalue) != '') {
+                                    $mtTerm = MtFieldWrapper::getMTObject($formField['map']['field'], $formField['map']['entity']);
+                                    $mtTerm->vocab_number = $mtvalue;
+                                    $mtTerm->record_number = $entity->$recordkeyName;
+                                    $termArray[] = $mtTerm;
+                                }
+                            }
+                        } else {
+                            if (trim($valuesArray[$fieldName]) != '') {
                                 $mtTerm = MtFieldWrapper::getMTObject($formField['map']['field'], $formField['map']['entity']);
-                                $mtTerm->vocab_number = $mtvalue;
+                                $mtTerm->vocab_number = $valuesArray[$fieldName];
                                 $mtTerm->record_number = $entity->$recordkeyName;
                                 $termArray[] = $mtTerm;
                             }
                         }
-                    } else {
-                        if (trim($valuesArray[$fieldName]) != '') {
-                            $mtTerm = MtFieldWrapper::getMTObject($formField['map']['field'], $formField['map']['entity']);
-                            $mtTerm->vocab_number = $valuesArray[$fieldName];
-                            $mtTerm->record_number = $entity->$recordkeyName;
-                            $termArray[] = $mtTerm;
-                        }
                     }
-                }
 //var_dump($termArray);
-                if (sizeof($termArray) > 0) {
-                    $entity->$formField['map']['field'] = $termArray;
+                    if (sizeof($termArray) > 0) {
+                        $entity->$formField['map']['field'] = $termArray;
+                    }
                 }
             }
 
@@ -762,9 +794,9 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                                 ?>
                                 <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url'] ?>" rel="tooltip" title="Delete">
                                     <i class="icon-trash"></i> 
-                                <?php echo _t('Delete') ?>                                
+                                    <?php echo _t('Delete') ?>                                
                                 </a>
-            <?php } ?>
+                            <?php } ?>
                         </td>
                     </tr>
                     <?php

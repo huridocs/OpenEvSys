@@ -187,7 +187,7 @@ $menus["home"]["edit_password"] = array(
 
 
 
-if ($module != "admin" && $action != "browse" && !in_array($action,array("browse_act","browse_intervention"))) {
+if ($module != "admin" && $action != "browse" && !in_array($action,array("browse_act","browse_intervention","browse_biography"))) {
     ?>
     <ul class="nav nav-tabs tabnav"> 
         <?php
