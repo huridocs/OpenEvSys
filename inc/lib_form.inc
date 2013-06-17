@@ -99,7 +99,7 @@ function shn_form_text($label, $name, $extra_opts) {
     }
     ?>	
     <div class="controls">
-        <input title="<?php echo $name ?>" type="text" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $readonly ?> value="<?php echo htmlentities($value) ?>" tabindex="<?php echo++$shn_tabindex ?>" <?php echo $text_options ?>  />
+        <input title="<?php echo $name ?>" type="text" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $readonly ?> value="<?php echo htmlentities($value,ENT_QUOTES, "UTF-8") ?>" tabindex="<?php echo++$shn_tabindex ?>" <?php echo $text_options ?>  />
         <?php
         if ($extra_opts['clari']) {
             if (is_array($extra_opts['clari_value']) && count($extra_opts['clari_value']) > 0)
@@ -233,7 +233,7 @@ function shn_form_textarea($label, $name, $extra_opts) {
     <div class="controls">
         <textarea name="<?php echo $name ?>" id="<?php echo $name ?>"
                   cols="<?php echo $cols ?>" rows="<?php echo $rows ?>"
-                  <?php echo $text_opts ?> tabindex="<?php echo++$shn_tabindex ?>"><?php echo $value ?></textarea>
+                  <?php echo $text_opts ?> tabindex="<?php echo++$shn_tabindex ?>"><?php echo htmlspecialchars($value) ?></textarea>
 
         <?php
         if ($extra_opts['clari']) {

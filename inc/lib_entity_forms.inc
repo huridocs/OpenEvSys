@@ -19,7 +19,7 @@ function person_form($viewType){
     if($viewType != 'search')
 	$person_form['picture'] = array('type'=>'upload','label'=>_t('PICTURE'),
 							  'map'=>array('field'=>'picture'),
-	                          'extra_opt'=>array('value'=>''),
+	                          'extra_opts'=>array('value'=>''),
             'extra_opts'=>array('validation'=>array('upload')));
 	
 //	'document_title' => array('type'=>'text', 'label'=>'Document Title', 
