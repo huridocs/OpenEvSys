@@ -9,12 +9,6 @@ CREATE TABLE IF NOT EXISTS `mlt_geometry` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-
-CREATE TABLE IF NOT EXISTS `mlt_geometry_seq` (
-  `id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
 INSERT INTO `data_dict` (`field_number`, `field_label`, `field_type`, `datatype`, `label_number`, `list_code`, `is_repeat`, `clar_note`, `field_name`, `link_table`, `link_field`, `remove`, `chk_remove`, `num_levels`, `lite`, `bool_def`, `numb_def`, `entity`, `find`, `essential`, `enabled`, `visible_new`, `visible_edit`, `visible_view`, `visible_search`, `visible_search_display`, `visible_browse`, `visible_browse_editable`, `validation`, `required`, `visible_adv_search`, `visible_adv_search_display`) VALUES
 ('0173', 'Location', 'location', 'L', '0173', '0', 'N', 'n', 'event_location', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'event', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0972', 'Location', 'location', 'L', '0972', '0', 'N', 'n', 'person_location', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),

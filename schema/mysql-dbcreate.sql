@@ -69,7 +69,6 @@ DROP TABLE IF EXISTS  `biographic_details` ;
 DROP TABLE IF EXISTS  `person` ;
 DROP TABLE IF EXISTS  `event` ;
 DROP TABLE IF EXISTS  `mlt_geometry` ;
-DROP TABLE IF EXISTS  `mlt_geometry_seq` ;
 
 DROP TABLE IF EXISTS  mt_1_index_term ;
 
@@ -813,12 +812,6 @@ CREATE TABLE IF NOT EXISTS `mlt_geometry` (
   `geometry` geometry NOT NULL,
   `field_name` varchar(100) NOT NULL,
   PRIMARY KEY (`geometry_record_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-CREATE TABLE IF NOT EXISTS `mlt_geometry_seq` (
-  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

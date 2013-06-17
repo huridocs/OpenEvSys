@@ -60,8 +60,9 @@ $conf['theme'] = 'default';
 # specify the database name.
 #
 $conf['db_name'] =  'openevsys';
+$conf['db_name'] =  'oedemo';
 //$conf['db_name'] =  'oe_slot28_aae';
-
+//$conf['db_name'] =  'oe_slot51';
 # specify user name that Sahana can use to connect.
 #
 $conf['db_user'] = 'root';
