@@ -1441,6 +1441,7 @@ class eventsModule extends shnModule {
             $person->dependants = Null;
         }
         $person->SaveAll();
+        $person->SavePicture();
         $person->SaveAddresses($_POST['person_address']);
 
         return $person;

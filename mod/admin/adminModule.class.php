@@ -478,6 +478,10 @@ class adminModule extends shnModule {
 
         if (isset($this->mt_select)) {
             //handle delete requests
+			if(isset($_POST['bulkaction']) && !$_POST['vocab_number_list']){
+				shnMessageQueue::addError(_t('Please select items to performa action'));
+
+			}
             if (isset($_POST['bulkaction']) && $_POST['bulkaction'] == "deleteselected") {
                 $this->has_children = false;
                 foreach ($_POST['vocab_number_list'] as $vocab_number => $v) {
