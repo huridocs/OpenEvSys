@@ -1148,7 +1148,7 @@ function shn_form_document($label, $name, $extra_opts) {
             $supporting_doc = new SupportingDocs();
             $supporting_doc->doc_id = shn_create_uuid('doc');
             $type = null;
-            $uri = shn_files_store('choose_file_upload', null, &$type);
+            $uri = shn_files_store('choose_file_upload', null, $type);
 
             if ($uri == null) {
                 $uri = '';

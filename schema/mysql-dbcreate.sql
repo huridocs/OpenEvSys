@@ -203,17 +203,18 @@ DROP TABLE IF EXISTS mt_vocab;
 
 
 CREATE TABLE IF NOT EXISTS  `mt_vocab` (
-  `vocab_number` VARCHAR(14) NOT NULL,
-  `huri_code` VARCHAR(14) NOT NULL ,
-  `english` TEXT NULL ,
-  `french` TEXT NULL ,
-  `otherlanguages` TEXT NULL ,
-  -- `prev_code` VARCHAR(20) NULL ,
-  -- `source_code` VARCHAR(20) NULL ,
-  `list_code` INT NOT NULL ,
-  `visible` VARCHAR(1) NOT NULL DEFAULT 'y',
-  PRIMARY KEY (`vocab_number` )
-)ENGINE = InnoDB;
+ `vocab_number` varchar(14) NOT NULL,
+  `huri_code` varchar(14) DEFAULT NULL,
+  `english` text,
+  `french` text,
+  `otherlanguages` text,
+  `list_code` int(11) NOT NULL,
+  `visible` varchar(1) NOT NULL DEFAULT 'y',
+  `term_order` int(11) NOT NULL DEFAULT '0',
+  `parent_vocab_number` varchar(14) NOT NULL,
+  `term_level` int(11) NOT NULL,
+  PRIMARY KEY (`vocab_number`)
+) ENGINE=InnoDB;
 
 
 

@@ -60,7 +60,10 @@ $conf['theme'] = 'default';
 # specify the database name.
 #
 $conf['db_name'] = 'openevsys';
-$conf['db_name'] = 'oe_gamze2';
+/*$conf['db_name'] = 'oe_gamze2';
+$conf['db_name'] = 'oe_slot09';
+$conf['db_name'] = 'oe_slot36';
+*/
 //$conf['db_name'] =  'oedemo';
 //$conf['db_name'] =  'oe_slot28_aae';
 //$conf['db_name'] =  'oe_slot51';

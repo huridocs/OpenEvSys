@@ -58,6 +58,6 @@ DROP TABLE IF EXISTS config;
 CREATE TABLE config(
     config_id BIGINT NOT NULL AUTO_INCREMENT,
 	confkey VARCHAR(50) NOT NULL, 
-	value VARCHAR(100),
+	value text,
     PRIMARY KEY(config_id)
 );

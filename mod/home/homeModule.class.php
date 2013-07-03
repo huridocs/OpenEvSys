@@ -336,7 +336,7 @@ class homeModule extends shnModule {
         include_once APPROOT . 'inc/lib_files.inc';
         $type = null;
         $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
-        $uri = shn_files_store('file', null, &$type,$imagesfolder);
+        $uri = shn_files_store('file', null, $type,$imagesfolder);
         exit;
     }
 

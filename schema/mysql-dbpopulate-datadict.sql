@@ -116,7 +116,7 @@ INSERT INTO `data_dict` (`field_number`, `field_label`, `field_type`, `datatype`
 ('0171', 'Updated By', 'text', 'M', '0171', '0', 'N', 'n', 'updated_by', NULL, NULL, 'Y', '0', 'N', '1', '0', NULL, 'event', 'Y', 'n', 'y', 'n', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0172', 'Monitoring Status', 'mt_select', 'L', '0172', '43', 'N', 'y', 'monitoring_status', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'event', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0173', 'Location', 'location', 'L', '0173', '0', 'N', 'n', 'event_location', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'event', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
-('0901', 'Person Record Number', 'hidden', 'I', '0901', '0', 'N', 'n', 'person_record_number', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'y', '', 'y', 'y', 'y', 'y', 'y', 'y', 'n', '', 'n', 'y', 'y'),
+('0901', 'Person Record Number', 'hidden', 'I', '0901', '0', 'N', 'n', 'person_record_number', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'y', 'y', 'y', 'y', 'y', 'y', 'y', 'y', 'n', '', 'n', 'y', 'y'),
 ('0902', 'Counting unit', 'mt_select', 'L', '0902', '07', 'N', 'n', 'counting_unit', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', 'y', 'y', '', 'n', 'y', 'n'),
 ('0903', 'Name', 'text', 'C', '0903', '0', 'N', 'n', 'person_name', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'y', 'y', 'y', 'y', '', 'n', 'y', 'y'),
 ('0904', 'Other names', 'text', 'M', '0904', '0', 'N', 'n', 'other_names', NULL, NULL, 'Y', '0', 'N', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'y', 'y', '', 'y', '', 'n', 'y', 'y'),
@@ -129,7 +129,7 @@ INSERT INTO `data_dict` (`field_number`, `field_label`, `field_type`, `datatype`
 ('0916', 'Sexual Orientation', 'mt_select', 'L', '0916', '67', 'N', 'y', 'sexual_orientation', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0917', 'Identification Documents', 'textarea', 'M', '0917', '0', 'N', 'n', 'identification_documents', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
 ('0918', 'Civil Status', 'mt_select', 'L', '0918', '08', 'N', 'y', 'civil_status', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
-('0919', 'Dependants', 'text', 'N', '0919', '0', 'N', 'y', 'dependants', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
+('0919', 'Dependants', 'text', 'N', '0919', '0', 'N', 'y', 'dependants', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', 'number', 'n', 'y', 'n'),
 ('0920', 'Formal Education', 'mt_tree', 'L', '0920', '09', 'N', 'y', 'formal_education', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
 ('0921', 'Other Training', 'text', 'M', '0921', '0', 'N', 'n', 'other_training', NULL, NULL, 'Y', '1', 'N', '0', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0922', 'Occupation', 'mt_tree', 'L', '0922', '10', 'Y', 'y', 'occupation', NULL, NULL, 'Y', '1', 'Y', '0', '0', NULL, 'Person', 'N', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
@@ -140,7 +140,7 @@ INSERT INTO `data_dict` (`field_number`, `field_label`, `field_type`, `datatype`
 ('0927', 'Deceased', 'checkbox', 'Y', '0927', '0', 'N', 'y', 'deceased', NULL, NULL, 'Y', '0', 'N', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0928', 'Date Deceased', 'date', 'D', '0928', '0', 'N', 'n', 'date_deceased', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('0930', 'Group description', 'textarea', 'M', '0930', '0', 'N', 'n', 'group_description', NULL, NULL, 'Y', '0', 'N', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
-('0931', 'Number of persons in group', 'text', 'N', '0931', '0', 'N', 'y', 'number_of_persons_in_group', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
+('0931', 'Number of persons in group', 'text', 'N', '0931', '0', 'N', 'y', 'number_of_persons_in_group', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', 'number', 'n', 'y', 'n'),
 ('0940', 'Religion', 'mt_tree', 'L', '0940', '12', 'N', 'y', 'religion', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'Y', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
 ('0941', 'Citizenship', 'mt_tree', 'L', '0941', '15', 'Y', 'y', 'citizenship', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'N', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
 ('0942', 'Ethnic Background', 'mt_select', 'L', '0942', '13', 'Y', 'y', 'ethnic_background', NULL, NULL, 'Y', '0', 'Y', '1', '0', NULL, 'Person', 'N', 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'n', '', 'n', 'y', 'n'),
@@ -346,3 +346,11 @@ insert into data_dict_original (  `field_number` , `field_label` , `field_type` 
 Select   `field_number` , `field_label` , `field_type` ,  `datatype` , `label_number` ,  `list_code` ,
 `is_repeat` ,  `clar_note` ,   `field_name` , `link_table` , `link_field` ,  `remove` ,   `chk_remove` ,   `num_levels` ,   `lite` ,   `bool_def` ,   `numb_def`,    `entity`,    `find`,    `essential` ,   `enabled`, `visible_new`,`visible_edit`,`visible_view`, `visible_search` , `visible_search_display`,  `visible_browse`, `validation` ,  `required`, `visible_adv_search`, `visible_adv_search_display` FROM data_dict;
 
+
+DROP TABLE IF EXISTS `data_dict_visibility`;
+
+CREATE TABLE IF NOT EXISTS `data_dict_visibility` (
+  `field_number` varchar(60) NOT NULL,
+  `field_number2` varchar(60) NOT NULL,
+  `value` varchar(14) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
