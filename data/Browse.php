@@ -1033,14 +1033,13 @@ class Browse implements BrowseStrategy {
         $res = $browse->ExecuteQuery($sql);
         $results = array();
         foreach ($res as $record) {
-            if (isset($results[$record["vocab_number"]])) {
-                $results[$record["vocab_number"]]["label_" . $record["locale"]] = $record["msgstr"];
-            } else {
+            if (!isset($results[$record["vocab_number"]])) {
                 $results[$record["vocab_number"]] = $record;
-                if ($record["locale"] != "en") {
-                    $results[$record["vocab_number"]]["label_" . $record["locale"]] = $record["msgstr"];
-                }
             }
+            if ($record["locale"] != "en") {
+                $results[$record["vocab_number"]]["label_" . $record["locale"]] = $record["msgstr"];
+            }
+            
         }
         
         return $results;
