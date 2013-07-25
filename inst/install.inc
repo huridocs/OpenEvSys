@@ -44,6 +44,7 @@
             _loadsql($db,'mysql-dbcreate-gacl.sql');
             _loadsql($db,'mysql-dbpopulate-datadict.sql');
             _loadsql($db,'mysql-dbpopulate-mt.sql');
+            _loadsql($db,'mysql-dbpopulate-mt2.sql');
             _loadsql($db,'mysql-dbpopulate-gacl.sql');
             _loadsql($db,'mysql-dbpopulate-help.sql');
             //iterate through language scripts
@@ -102,7 +103,12 @@ function _loadsql($db, $script_name, $path = 'schema/')
 			while (! feof($fh) ) { // a fix as Execute gets confused over carriage returns
 				$buffer = fgets($fh,1024); // read the script and fill the buffer
 				$sql=$sql.$buffer; // fill the buffer until ';' appear
-				if(preg_match('/;/',$buffer)) { // look after ';'
+                                $separator = ";";
+                                if($script_name == "mysql-dbpopulate-mt.sql"){
+                                    $separator = ";/*END*/";
+                                }
+                                
+				if(strpos ($buffer,$separator) !== false) { // look after ';'
 					$res = $db->Execute($sql);
 //                    if(!$res){echo $db->ErrorMsg();ob_flush();echo "==== $script_name ===\n";}
 					$sql=''; // clear the bucket again

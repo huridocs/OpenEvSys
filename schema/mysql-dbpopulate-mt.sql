@@ -298,7 +298,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('01030000000026', '010300000000', 'Faced charges', 'A été inculpé', 'Fue enjuiciado', 26, 'y', 7, '01000000000026', 1),
 ('01030000000027', '010300000000', 'Enhanced publicity', 'A renforcé la publicité autour de l''événement', 'Aumentó la publicidad', 27, 'y', 7, '01000000000027', 1),
 ('01030000000028', '010300000000', 'Officials acknowledge act but deny responsibility', 'Les fonctionnaires reconnaissent l''acte mais nient en être responsables', 'Funcionarios públicos reconocen el acto pero niegan responsabilidad', 28, 'y', 4, '01000000000028', 1),
-('01030000000037', '010300000000', 'Medical officer was present during torture', 'Médecin présent pendant la torture', 'Personal médico estuvo presente durante la tortura', 37, 'y', 4, '01000000000037', 1);
+('01030000000037', '010300000000', 'Medical officer was present during torture', 'Médecin présent pendant la torture', 'Personal médico estuvo presente durante la tortura', 37, 'y', 4, '01000000000037', 1);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('01030000000041', '010300000000', 'Confirmed as not a violations', 'Absence de violation confirmée', 'Confirmado que no es una violación', 41, 'y', 4, '01000000000041', 1),
 ('01030000000068', '010300000000', 'Subsistence', 'Subsistance', 'Subsistencia', 68, 'y', 53, '01000000000068', 1),
@@ -603,7 +604,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('02000000000080', '020000000000', 'Deaths and Killings', 'Morts et assassinats', 'Muertes y asesinatos', 80, 'y', 0, '', 0),
 ('02000000000090', '020000000000', 'Second issue', 'Seconde question', 'Segundo tema', 90, 'y', 0, '', 0),
 ('02000000000091', '020000000000', 'Element 2', 'Elémént 2', 'Elemento 2', 91, 'y', 0, '', 0),
-('02000000000092', '020000000000', 'Procedure 2', 'Procédure 2', 'Procedimiento 2', 92, 'y', 0, '', 0);
+('02000000000092', '020000000000', 'Procedure 2', 'Procédure 2', 'Procedimiento 2', 92, 'y', 0, '', 0);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('02010000000002', '020100000000', 'Acts which put in place laws or policies that subject individuals or groups to exploitation', 'Actes qui établissent des lois ou des mesures qui soumettent les individus ou groupes à l'' exploitation', 'Actos que promulgan leyes o establecen políticas que someten a individuos o grupos a la explotación', 2, 'y', 13, '02000000000002', 1),
 ('02010000000003', '020100000000', 'Development, participation in (Right to)', 'Développement, participer au (droit de)', 'Participar en el desarrollo (Derecho a)', 3, 'y', 50, '02000000000003', 1),
@@ -877,7 +879,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('02040100000006', '020401000000', 'Additional Protocol to the European Social Charter (1988)', 'Protocole additionnel à la Charte sociale européenne (1988)', 'Protocolo adicional a la Carta Social Europea (1988)', 6, 'y', 28, '02040000000006', 2),
 ('02040100000017', '020401000000', 'Individual farm', 'Exploitation individuelle (dont le propriétaire n''est pas la victime)', 'Granja individual', 17, 'y', 25, '02040000000017', 2),
 ('02040200000003', '020402000000', 'Public health care (Right to)', 'Système public d''assurance maladie (droit à un)', 'Servicios públicos de salud (Derecho a los)', 3, 'y', 58, '02040000000003', 2),
-('02040200000006', '020402000000', 'Protocol Amending the European Social Charter (1991)', 'Protocole portant amendement de la Charte sociale européenne (1991)', 'Protocolo de enmienda a la Carta Social Europea (1991)', 6, 'y', 29, '02040000000006', 2);
+('02040200000006', '020402000000', 'Protocol Amending the European Social Charter (1991)', 'Protocole portant amendement de la Charte sociale européenne (1991)', 'Protocolo de enmienda a la Carta Social Europea (1991)', 6, 'y', 29, '02040000000006', 2);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('02040200000017', '020402000000', 'Communal or co-operative farm', 'Exploitation communale ou coopérative', 'Granja comunal o cooperativa', 17, 'y', 26, '02040000000017', 2),
 ('02040300000006', '020403000000', 'Additional Protocol to the European Social Charter Providing for a System of Collective Complaints (1995)', 'Protocole additionnel à la Charte sociale européenne prévoyant un système de réclamations collectives (1995)', 'Protocolo adicional a la Carta Social Europea previendo un sistema de reclamaciones colectivas (1995)', 6, 'y', 30, '02040000000006', 2),
@@ -1150,7 +1153,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('03025200000015', '030252000000', 'Tajikistan', 'Tadjikistan', 'Tayikistán', 15, 'y', 149, '03020000000015', 3),
 ('03025500000015', '030255000000', 'Turkmenistan', 'Turkménistan', 'Turkmenistán', 15, 'y', 150, '03020000000015', 3),
 ('03025700000015', '030257000000', 'Uzbekistan', 'Ouzbékistan', 'Uzbekistán', 15, 'y', 151, '03020000000015', 3),
-('03027000000015', '030270000000', 'British Indian Ocean Territory [United Kingdom]', 'Océan Indien, Territoire Britannique de l'' [Royaume-Uni]', 'Territorio Británico del Océano Índico [Reino Unido]', 15, 'y', 152, '03020000000015', 3);
+('03027000000015', '030270000000', 'British Indian Ocean Territory [United Kingdom]', 'Océan Indien, Territoire Britannique de l'' [Royaume-Uni]', 'Territorio Británico del Océano Índico [Reino Unido]', 15, 'y', 152, '03020000000015', 3);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('03030000000002', '030300000000', 'Acts of omission allowing the continuation of situations of non-respect of rights of vulnerable groups', 'Actes d''omission permettant aux situations supposant le non-respect des droits des groupes à risques de durer', 'Actos de omisión que permiten la continuación de situaciones de no respeto a los derechos de grupos específicos', 2, 'y', 22, '03000000000002', 1),
 ('03030000000003', '030300000000', 'Rights specific to disabled persons', 'Droits spécifiques aux personnes handicapées', 'Derechos de las personas con discapacidad', 3, 'y', 95, '03000000000003', 1),
@@ -1424,7 +1428,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('03210200000003', '032102000000', 'Apprenticeship (Right to)', 'Apprentissage (droit à l'')', 'Capacitación en el trabajo (Derecho a la)', 3, 'y', 152, '03210000000003', 2),
 ('03210200000004', '032102000000', 'Repeal of law or policy which used to guarantee the right to liberty', 'Abrogation de lois ou de mesures qui garantissaient le droit à la liberté', 'Derogación de leyes o suspensión de políticas que garantizan el derecho a la libertad personal', 4, 'y', 95, '03210000000004', 2),
 ('03210200000005', '032102000000', 'Nakedness as a form of degradation', 'Nudité en tant que traitement dégradant', 'Desnudez como forma de denigración', 5, 'y', 83, '03210000000005', 2),
-('03210300000003', '032103000000', 'Free employment services (Right to)', 'Services gratuits d''emploi (droit aux)', 'Servicios gratuitos de contratación (Derecho a)', 3, 'y', 153, '03210000000003', 2);
+('03210300000003', '032103000000', 'Free employment services (Right to)', 'Services gratuits d''emploi (droit aux)', 'Servicios gratuitos de contratación (Derecho a)', 3, 'y', 153, '03210000000003', 2);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('03210300000004', '032103000000', 'Promulgation of law or policy which reduces guarantees for liberty', 'Promulgation de lois ou mise en oeuvre de mesures qui limitent les garanties concernant le droit à la liberté', 'Promulgación de leyes o establecimiento de políticas que reducen las garantías al derecho a la libertad personal', 4, 'y', 96, '03210000000004', 2),
 ('03210300000005', '032103000000', 'Being forced to act in a degrading way', 'On force la victime a agir de façon dégradante', 'Ser obligado a actuar de una manera denigrante', 5, 'y', 84, '03210000000005', 2),
@@ -1714,7 +1719,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('04261514070114', '042615140701', 'Dzongkha', 'Dzongkha', 'Dzongkha', 14, 'y', 107, '0', 0),
 ('04270000000011', '042700000000', 'Humpbacked', 'Bossu', 'Jorobado', 11, 'y', 66, '04000000000011', 1),
 ('04280000000011', '042800000000', 'Mute (to be used if person is mute, but not deaf )', 'Mue (à utiliser si la personne est muette mais pas sourde)', 'Mudo (para usarse cuando la persona es muda pero no sorda)', 11, 'y', 67, '04000000000011', 1),
-('04290000000011', '042900000000', 'Protruding lower jaw', 'Mâchoire du bas saillante', 'Mandíbula inferior protuberante', 11, 'y', 68, '04000000000011', 1);
+('04290000000011', '042900000000', 'Protruding lower jaw', 'Mâchoire du bas saillante', 'Mandíbula inferior protuberante', 11, 'y', 68, '04000000000011', 1);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('04300000000011', '043000000000', 'Protruding upper jaw', 'Mâchoire du haut saillante', 'Mandíbula superior protuberante', 11, 'y', 69, '04000000000011', 1),
 ('04310000000011', '043100000000', 'Shorter left leg', 'Jambe gauche plus courte', 'Pierna izquierda más corta', 11, 'y', 70, '04000000000011', 1),
@@ -1983,7 +1989,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('06010205000068', '060102050000', 'Employment policies encouraging illegal employment', 'Emploi, politiques qui encouragent le travail illégal', 'Empleo, políticas que fomentan el trabajo ilegal', 68, 'y', 115, '06010200000068', 3),
 ('06010206000068', '060102060000', 'Employment, failure to safeguard', 'Emploi, ne pas sauvegarder', 'Empleo, no salvaguardar el', 68, 'y', 116, '06010200000068', 3),
 ('06010207000068', '060102070000', 'Education, training and employment strategies for youths', 'Education, stratégies de formation et d''emploi pour la jeunesse', 'Educación, capacitación y estrategias de empleo orientadas hacia los jóvenes', 68, 'y', 117, '06010200000068', 3),
-('06010208000068', '060102080000', 'Geographical disparities in employment opportunities', 'Disparités géographiques dans les possibilités d''emploi', 'Geográfica, disparidad, en las posibilidades de empleo', 68, 'y', 118, '06010200000068', 3);
+('06010208000068', '060102080000', 'Geographical disparities in employment opportunities', 'Disparités géographiques dans les possibilités d''emploi', 'Geográfica, disparidad, en las posibilidades de empleo', 68, 'y', 118, '06010200000068', 3);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('06010209000068', '060102090000', 'Employment opportunities in the private sector', 'Emploi, possibilités d'', dans le secteur privé', 'Empleo, oportunidades de, en el sector privado', 68, 'y', 119, '06010200000068', 3),
 ('06010300000004', '060103000000', 'Restrictions against working or relating with the opposite sex', 'Restrictions empêchant de travailler ou d''être en relation avec le sexe opposé', 'Restricciones al trabajo o relaciones con el sexo opuesto', 4, 'y', 124, '06010000000004', 2),
@@ -2273,7 +2280,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('07180505110114', '071805051101', 'Greek, ancient (to 1453)', 'Grec ancien (jusqu''en 1453)', 'Griego, Antiguo (antes 1453)', 14, 'y', 151, '0', 0),
 ('07180505110214', '071805051102', 'Greek, modern (1453-)', 'Grec moderne (après 1453)', 'Griego (desde 1453)', 14, 'y', 152, '0', 0),
 ('07190000000011', '071900000000', 'Missing foot, right', 'Pied droit manquant', 'Pie derecho faltante', 11, 'y', 154, '07000000000011', 1),
-('07200000000011', '072000000000', 'Missing gallbladder', 'Vésicule biliaire manquante', 'Vesícula biliar faltante', 11, 'y', 155, '07000000000011', 1);
+('07200000000011', '072000000000', 'Missing gallbladder', 'Vésicule biliaire manquante', 'Vesícula biliar faltante', 11, 'y', 155, '07000000000011', 1);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('07210000000004', '072100000000', 'Violations of the right to marry or found a family in terms of legislation or policy-making', 'Violations du droit de se marier et de fonder une famille en termes de législation ou de mesures', 'Violaciones al derecho al matrimonio y al derecho a fundar una familia en términos de promulgación de leyes o establecimiento de políticas', 4, 'y', 136, '07000000000004', 1),
 ('07210000000011', '072100000000', 'Missing hand, left', 'Main gauche manquante', 'Mano izquierda faltante', 11, 'y', 156, '07000000000011', 1),
@@ -2536,7 +2544,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('09040000000068', '090400000000', 'Social security programmes', 'Sécurité sociale, programmes de', 'Seguridad social, programas de', 68, 'y', 253, '09000000000068', 1),
 ('09040100000068', '090401000000', 'Social security programmes (national), failure to establish', 'Sécurité sociale, programmes (nationaux) de, pas crés', 'Seguridad social, programas (nacionales) de, no crear', 68, 'y', 254, '09040000000068', 2),
 ('09040200000068', '090402000000', 'Social security benefits denied to certain workers', 'Prestations de sécurité sociale refusées à certains travailleurs', 'Seguridad social, denegado a trabajadores determinados', 68, 'y', 255, '09040000000068', 2),
-('09040300000068', '090403000000', 'Social security programmes, employers not establishing', 'Employeurs n''instaurent pas de programmes de sécurité sociale', 'Seguridad social, el empleador no cuenta con programas de', 68, 'y', 256, '09040000000068', 2);
+('09040300000068', '090403000000', 'Social security programmes, employers not establishing', 'Employeurs n''instaurent pas de programmes de sécurité sociale', 'Seguridad social, el empleador no cuenta con programas de', 68, 'y', 256, '09040000000068', 2);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('09050000000006', '090500000000', 'Protocol relating to the Status of Refugees (1966)', 'Protocole relatif au statut des réfugiés (1966)', 'Protocolo sobre el estatuto de los refugiados (1966)', 6, 'y', 95, '09000000000006', 1),
 ('09050000000011', '090500000000', 'Needle marks on finger(s), left hand', 'Marques de piqûres sur les doigts, main gauche', 'Marcas de aguja en los dedo(s), mano izquierda', 11, 'y', 214, '09000000000011', 1),
@@ -2804,7 +2813,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('11010101020168', '110101010201', 'Water for irrigation, no access to', 'Eau pour l''irrigation, pas d''accès à l''', 'Agua de riego, falta de acceso a', 68, 'y', 356, '11010101020068', 5),
 ('11010101020268', '110101010202', 'Water pollution or contamination', 'Eau, pollution ou contamination de l''', 'Agua, contaminación del', 68, 'y', 357, '11010101020068', 5),
 ('11010101020368', '110101010203', 'Potable water, failure to respect access to', 'Eau potable, non respect de l''accès à l''', 'Agua potable, no respetar el acceso a', 68, 'y', 358, '11010101020068', 5),
-('11010101030068', '110101010300', 'Oceans', 'Océans', 'Océano', 68, 'y', 359, '11010101000068', 4);
+('11010101030068', '110101010300', 'Oceans', 'Océans', 'Océano', 68, 'y', 359, '11010101000068', 4);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('11010101040068', '110101010400', 'Air, clean', 'Air pur', 'Aire puro', 68, 'y', 360, '11010101000068', 4),
 ('11010101040168', '110101010401', 'Acid rain', 'Pluie acide', 'Lluvia ácida', 68, 'y', 361, '11010101040068', 5),
@@ -3095,7 +3105,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('12010101010068', '120101010100', 'Primary health care, discrimination in access to', 'Soins de santé primaires, discrimination dans l''accès aux', 'Atención primaria de salud, discriminación en el acceso a', 68, 'y', 504, '12010101000068', 4),
 ('12010101020068', '120101010200', 'Primary health care not provided in specific communities', 'Soins de santé primaires pas disponibles pour certaines communautés', 'Atención primaria de salud no disponible en determinadas comunidades', 68, 'y', 505, '12010101000068', 4),
 ('12010101030068', '120101010300', 'Discriminatory access to primary health care services', 'Discrimination dans l''accès aux services de soins de santé primaires', 'Discriminación en el acceso a servicios de atención primaria de salud', 68, 'y', 506, '12010101000068', 4),
-('12010102000068', '120101020000', 'Reproductive health care', 'Soins de santé reproductive', 'Atención de salud reproductiva', 68, 'y', 507, '12010100000068', 3);
+('12010102000068', '120101020000', 'Reproductive health care', 'Soins de santé reproductive', 'Atención de salud reproductiva', 68, 'y', 507, '12010100000068', 3);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('12010102010068', '120101020100', 'Health counselling, reproductive', 'Santé reproductive, conseils de', 'Salud reproductiva, asesoramiento de', 68, 'y', 508, '12010102000068', 4),
 ('12010102010168', '120101020101', 'Abortion procedures, failure to provide information or counselling', 'Avortement, méthodes d'', absence d''information ou de conseils', 'Aborto, métodos de, no proporcionar información o asesoramiento sobre los', 68, 'y', 509, '12010102010068', 5),
@@ -3356,7 +3367,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('13010702020068', '130107020200', 'Child labour, failure to enforce programs targeting vulnerable children', 'Travail des enfants, ne pas appliquer des programmes pour enfants vulnérables', 'Infantil, trabajo, no ejecutar programas orientados hacia niños vulnerables', 68, 'y', 651, '13010702000068', 4),
 ('13010702030068', '130107020300', 'Child labour, lack of programs targeting vulnerable children', 'Travail des enfants, absence de programmes pour enfants vulnérables', 'Infantil, trabajo, no contar con programas orientados hacia niños vulnerables', 68, 'y', 652, '13010702000068', 4),
 ('13010703000068', '130107030000', 'Education, governmental expenditures in', 'Education, dépenses publiques', 'Educación, gasto público para la', 68, 'y', 653, '13010700000068', 3),
-('13010703010068', '130107030100', 'Post-primary education, disproportionate investment in', 'Enseignement post-primaire, investissements disproportionnés', 'Enseñanza post primaria, inversión desproporcionada en la', 68, 'y', 654, '13010703000068', 4);
+('13010703010068', '130107030100', 'Post-primary education, disproportionate investment in', 'Enseignement post-primaire, investissements disproportionnés', 'Enseñanza post primaria, inversión desproporcionada en la', 68, 'y', 654, '13010703000068', 4);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('13010704000068', '130107040000', 'Education, affirmative action programmes for', 'Education, programme d''accès à l''égalité dans l''', 'Educación, programas de acción afirmativa para la', 68, 'y', 655, '13010700000068', 3),
 ('13010800000004', '130108000000', 'Land expropriation', 'Expropriation terrienne', 'Confiscación de tierra', 4, 'y', 211, '13010000000004', 2),
@@ -3637,7 +3649,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('15031600000068', '150316000000', 'Cultural works of a community attributed to an individual', 'Oeuvres culturelles d''une communauté attribuées à un individu', 'Culturales, obras de la comunidad atribuidas a un individuo', 68, 'y', 751, '15030000000068', 2),
 ('15031700000068', '150317000000', 'Intellectual property, nature of not defined', 'Propriété intellectuelle pas définie, nature de la', 'Propiedad intelectual, de naturaleza no definida', 68, 'y', 752, '15030000000068', 2),
 ('15031800000068', '150318000000', 'Customary laws or rules regulating the reproduction and use of culture', 'Droits ou règles coutumiers pour la reproduction et l''usage de la culture', 'Cultura, leyes o normas consuetudinarias que rigen la reproducción y utilización de la', 68, 'y', 753, '15030000000068', 2),
-('15031900000068', '150319000000', 'Folklore, no protection against unauthorised use of', 'Traditions populaires, absence de protection contre l''utilisation non autorisée des', 'Folklore, no contrarrestar la utilización no autorizada del', 68, 'y', 754, '15030000000068', 2);
+('15031900000068', '150319000000', 'Folklore, no protection against unauthorised use of', 'Traditions populaires, absence de protection contre l''utilisation non autorisée des', 'Folklore, no contrarrestar la utilización no autorizada del', 68, 'y', 754, '15030000000068', 2);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('15032000000068', '150320000000', 'Material form, reduction to required to secure copyright', 'Contraindre à la forme matérielle exigée pour assurer les droits d''auteur', 'Forma material, convertir a la, como requisito para obtener derecho de autor', 68, 'y', 755, '15030000000068', 2),
 ('15032100000068', '150321000000', 'Cultural elements, failure to require consent', 'Eléments culturels, ne pas demander de consentement pour les', 'Culturales, elementos', 68, 'y', 756, '15030000000068', 2),
@@ -3885,7 +3898,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('18051909190101', '180519091901', 'Resistance movements', 'Mouvements de résistance', 'Movimientos de resistencia', 1, 'y', 240, '0', 0),
 ('18052021180101', '180520211801', 'Returnees', 'Rapatriés', 'Retornados', 1, 'y', 241, '0', 0),
 ('18060000000006', '180600000000', 'Declaration on the Rights of Disabled Persons (1975)', 'Déclaration des droits des personnes handicapées (1975)', 'Declaración de los derechos de los impedidos (1975)', 6, 'y', 176, '18000000000006', 1),
-('18070000000006', '180700000000', 'Declaration on the Right of Peoples to Peace (1984)', 'Déclaration sur les droits des peuples à la paix (1984)', 'Declaración sobre el derecho de los pueblos a la paz (1984)', 6, 'y', 177, '18000000000006', 1);
+('18070000000006', '180700000000', 'Declaration on the Right of Peoples to Peace (1984)', 'Déclaration sur les droits des peuples à la paix (1984)', 'Declaración sobre el derecho de los pueblos a la paz (1984)', 6, 'y', 177, '18000000000006', 1);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('18080000000006', '180800000000', 'Declaration on the Right to Development (1986)', 'Déclaration sur le droit au développement (1986)', 'Declaración sobre el derecho al desarrollo (1986)', 6, 'y', 178, '18000000000006', 1),
 ('18090000000006', '180900000000', 'Principles for the Protection of Persons with Mental Illness and the Improvement of Mental Health Care (1991)', 'Principes pour la protection des personnes atteintes de maladie mentale et pour l''amélioration des soins de santé mentale (1991)', 'Principios para la protección de los enfermos mentales y el mejoramiento de la atención de la salud mental (1991)', 6, 'y', 179, '18000000000006', 1),
@@ -4226,7 +4240,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('31010000000004', '310100000000', 'Direct actions which violate the rights of children and juveniles', 'Actions directes qui violent les droits des enfants et des adolescents', 'Acciones directas que violan los derechos de los niños y los jóvenes', 4, 'y', 312, '31000000000004', 1),
 ('31010100000004', '310101000000', 'Very low minimum age for working', 'Age minimum pour le travail fixé très bas', 'Edad mínima para trabajar demasiado baja', 4, 'y', 313, '31010000000004', 2),
 ('31010200000004', '310102000000', 'Discrimination against children born out of wedlock', 'Discrimination envers les enfants nés hors mariage', 'Discriminación contra niños nacidos fuera de matrimonio', 4, 'y', 314, '31010000000004', 2),
-('31210000000004', '312100000000', 'Violations of rights of children and juveniles in terms of legislation or policy-making', 'Violations des droits des enfants et des adolescents en termes de législation ou de mesures', 'Violaciones a los derechos de los niños y los jóvenes en términos de promulgación de leyes o establecimiento de políticas', 4, 'y', 315, '31000000000004', 1);
+('31210000000004', '312100000000', 'Violations of rights of children and juveniles in terms of legislation or policy-making', 'Violations des droits des enfants et des adolescents en termes de législation ou de mesures', 'Violaciones a los derechos de los niños y los jóvenes en términos de promulgación de leyes o establecimiento de políticas', 4, 'y', 315, '31000000000004', 1);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('31210100000004', '312101000000', 'Promulgation of law or policy which violates the rights of children and juveniles', 'Promulgation de lois ou de mesures qui violent les droits des enfants et des adolescents', 'Promulgación de leyes o establecimiento de políticas que violan los derechos de los niños y los jóvenes', 4, 'y', 316, '31210000000004', 2),
 ('31210200000004', '312102000000', 'Repeal of law or policy which used to guarantee the rights of children and juveniles', 'Abrogation de lois ou de mesures qui garantissaient les droits des enfants et des adolescents', 'Derogación de leyes o suspensión de políticas que garantizan los derechos de los niños y los jóvenes', 4, 'y', 317, '31210000000004', 2),
@@ -4405,7 +4420,8 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('54000000000031', '540000000000', 'Counsel paid for by client', 'Conseil payé par le client', 'Asesoría legal pagada por el acusado', 31, 'y', 20, '0', 0),
 ('54010000000004', '540100000000', 'Direct actions which violate the right to a healthy environment', 'Actions directes qui violent le droit à un environnement sain', 'Acciones directas que violan el derecho a un medio ambiente saludable', 4, 'y', 487, '54000000000004', 1),
 ('54010100000004', '540101000000', 'Deterioration of natural resources', 'Détérioration des ressources naturelles', 'Deterioro de los recursos naturales', 4, 'y', 488, '54010000000004', 2),
-('54010101000004', '540101010000', 'Pollution', 'Pollution', 'Contaminación', 4, 'y', 489, '54010100000004', 3);
+('54010101000004', '540101010000', 'Pollution', 'Pollution', 'Contaminación', 4, 'y', 489, '54010100000004', 3);/*END*/
+
 INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `otherlanguages`, `list_code`, `visible`, `term_order`, `parent_vocab_number`, `term_level`) VALUES
 ('54010200000004', '540102000000', 'Exposure to dangerous environment', 'Exposer quelqu''un à un environnement dangereux', 'Exposición a un medio ambiente peligroso', 4, 'y', 490, '54010000000004', 2),
 ('54210000000004', '542100000000', 'Violations of the right to a healthy environment in terms of legislation or policy-making', 'Violations du droit à un environnement sain en termes de législation ou de mesures', 'Violaciones al derecho a un medio ambiente saludable en términos de promulgación de leyes o establecimiento de políticas', 4, 'y', 491, '54000000000004', 1),
@@ -4542,389 +4558,3 @@ INSERT INTO `mt_vocab` (`vocab_number`, `huri_code`, `english`, `french`, `other
 ('99000000000044', '990000000000', 'Unknown', 'Inconnu', 'Desconocido', 44, 'y', 7, '0', 0),
 ('99000000000047', '990000000000', 'Unknown', 'Inconnu', 'Desconocido', 47, 'y', 5, '0', 0);
 
-
-
-
-INSERT INTO  mt_1_index_term(vocab_number) 
-SELECT vocab_number from mt_vocab  WHERE list_code=1;
-
-INSERT INTO  mt_2_violation_typology_terms (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=2;
-
-
-INSERT INTO  mt_3_rights_typology  (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=3;
-
-INSERT INTO  mt_4_types_of_acts (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=4;
-
-INSERT INTO  mt_5_methods_of_violence (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=5;
-
-INSERT INTO  mt_6_international_instruments (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=6;
-
-INSERT INTO  mt_7_counting_units (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=7;
-
-INSERT INTO  mt_8_civil_status(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=8;
-
-INSERT INTO  mt_9_education(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=9;
-
-INSERT INTO  mt_10_occupation(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=10;
-
-INSERT INTO  mt_11_physical_descriptors(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=11;
-
-INSERT INTO  mt_12_religions(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=12;
-
-INSERT INTO  mt_13_ethnic_groups(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=13;
-
-INSERT INTO  mt_14_languages(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=14;
-
-INSERT INTO  mt_15_geographical_terms (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=15;
-
-INSERT INTO  mt_16_types_of_source_material(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=16;
-
-INSERT INTO  mt_17_types_of_locations (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=17;
-
-INSERT INTO  mt_18_degrees_of_involvement(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=18;
-
-INSERT INTO  mt_19_source_connection_to_information(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=19;
-
-INSERT INTO  mt_20_types_of_intervention(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=20;
-
-INSERT INTO  mt_21_types_of_relationships(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=21;
-
-INSERT INTO  mt_22_types_of_chain_of_events(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=22;
-
-INSERT INTO  mt_23_relavant_characteristics(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=23;
-
-INSERT INTO  mt_24_types_of_perpetrators(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=24;
-
-INSERT INTO  mt_25_status_as_victim(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=25;
-
-INSERT INTO  mt_26_status_as_perpetrator(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=26;
-
-INSERT INTO  mt_27_types_of_responses(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=27;
-
-INSERT INTO  mt_28_attribution(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=28;
-
-INSERT INTO  mt_29_types_of_detention(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=29;
-
-INSERT INTO  mt_30_whereabouts(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=30;
-
-INSERT INTO  mt_31_legal_counsel (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=31;
-
-INSERT INTO  mt_32_types_of_courts(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=32;
-
-INSERT INTO  mt_33_types_of_language_used_in_court(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=33;
-
-INSERT INTO  mt_34_autopsy_results (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=34;
-
-INSERT INTO  mt_35_death_certificate(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=35;
-
-INSERT INTO  mt_36_statements_signed(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=36;
-
-INSERT INTO  mt_37_medical_attention(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=37;
-
-INSERT INTO  mt_38_intent(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=38;
-
-INSERT INTO  mt_39_sex(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=39;
-
-INSERT INTO  mt_40_types_of_addresses(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=40;
-
-INSERT INTO  mt_41_violation_status (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=41;
-
-INSERT INTO  mt_42_reliability(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=42;
-
-INSERT INTO  mt_43_monitoring_status(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=43;
-
-INSERT INTO  mt_44_impact_on_the_situation(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=44;
-
-INSERT INTO  mt_45_intervention_status(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=45;
-
-INSERT INTO  mt_46_priority(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=46;
-
-INSERT INTO  mt_47_compensation(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=47;
-
-INSERT INTO  mt_48_types_of_dates (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=48;
-
-
-
-INSERT INTO  mt_61_local_index (vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=61;
-
-INSERT INTO  mt_62_national_legislation(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=62;
-
-INSERT INTO  mt_63_local_geographical_area(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=63 ;
-
-INSERT INTO  mt_64_local_terms_for_occupations(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=64;
-
-INSERT INTO  mt_65_origins(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=65;
-
-INSERT INTO  mt_66_local_languages(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=66;
-
-INSERT INTO  mt_67_sexual_orientation(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=67;
-
-INSERT INTO  mt_68_other_thesaurus(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=68;
-
-
-INSERT INTO  mt_69_judicial_districts(vocab_number) 
-SELECT vocab_number from mt_vocab 
- WHERE list_code=69;
-
--- ------------------------------------------------------------
- 
-
-
-INSERT INTO mt_index VALUES  ( '1 ' , 'index_term' ); 
-
-INSERT INTO mt_index VALUES  ( ' 2 ' , 'violation_typology_terms ' ); 
-
-INSERT INTO mt_index VALUES  ( ' 3 ' , 'rights_typology  ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 4 ' , 'types_of_acts ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 5 ' , 'methods_of_violence ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 6 ' , 'international_instruments ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 7 ' , 'counting_units ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 8 ' , 'civil_status' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 9 ' , 'education' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 10 ' , 'occupation' ); 
-
-INSERT INTO mt_index VALUES  ( ' 11 ' , 'physical_descriptors' ); 
-
-INSERT INTO mt_index VALUES  ( ' 12 ' , 'religions' ); 
-
-INSERT INTO mt_index VALUES  ( ' 13 ' , 'ethnic_groups' ); 
-
-INSERT INTO mt_index VALUES  ( ' 14 ' , 'languages' ); 
-
-INSERT INTO mt_index VALUES  ( ' 15 ' , 'geographical_terms' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 16 ' , 'types_of_source_material' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 17 ' , 'types_of_locations ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 18 ' , 'degrees_of_involvement' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 19 ' , 'source_connection_to_information' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 20 ' , 'types_of_intervention' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 21 ' , 'types_of_relationships' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 22 ' , 'types_of_chain_of_events' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 23 ' , 'relavant_characteristics' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 24 ' , 'types_of_perpetrators' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 25 ' , 'status_as_victim' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 26 ' , 'status_as_perpetrator' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 27 ' , 'types_of_responses' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 28 ' , 'attribution' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 29 ' , 'types_of_detention' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 30 ' , 'whereabouts' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 31 ' , 'legal_counsel ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 32 ' , 'types_of_courts' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 33 ' , 'types_of_language_used_in_court' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 34 ' , 'autopsy_results ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 35 ' , 'death_certificate' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 36 ' , 'statements_signed' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 37 ' , 'medical_attention' ); 
- 
-
-INSERT INTO mt_index VALUES  ( ' 38 ' , 'intent' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 39 ' , 'sex' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 40 ' , 'types_of_addresses' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 41 ' , 'violation_status ' ); 
-
-
-INSERT INTO mt_index VALUES  ( ' 42 ' , 'reliability' ); 
-
-INSERT INTO mt_index VALUES  ( ' 43 ' , 'monitoring_status' ); 
-
-INSERT INTO mt_index VALUES  ( ' 44 ' , 'impact_on_the_situation' ); 
-
-INSERT INTO mt_index VALUES  ( ' 45 ' , 'intervention_status' ); 
-
-INSERT INTO mt_index VALUES  ( ' 46 ' , 'priority' ); 
-
-INSERT INTO mt_index VALUES  ( ' 47 ' , 'compensation' ); 
-
-INSERT INTO mt_index VALUES  ( ' 48 ' , 'types_of_dates ' ); 
-
-INSERT INTO mt_index VALUES  ( ' 61 ' , 'local_index ' ); 
-
-INSERT INTO mt_index VALUES  ( ' 62 ' , 'national_legislation' ); 
-
-INSERT INTO mt_index VALUES  ( ' 63 ' , 'local_geographical_area' ); 
-
-INSERT INTO mt_index VALUES  ( ' 64 ' , 'local_terms_for_occupations' ); 
-
-INSERT INTO mt_index VALUES  ( ' 65 ' , 'origins' ); 
-
-INSERT INTO mt_index VALUES  ( ' 66 ' , 'local_languages' ); 
-
-INSERT INTO mt_index VALUES  ( ' 67 ' , 'sexual_orientation' ); 
-
-INSERT INTO mt_index VALUES  ( ' 68 ' , 'other_thesaurus' ); 
-
-INSERT INTO mt_index VALUES  ( ' 69 ' , 'judicial_districts' );
- 

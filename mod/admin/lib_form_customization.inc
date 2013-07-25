@@ -288,6 +288,8 @@ function form_customization_add_field($field_type_options) {
         $v = trim($v);
         $fieldValues[$k] = $v;
     }
+    $fieldValues['field_name'] = str_replace("-", "_", $fieldValues['field_name']);
+    
     switch ($fieldValues['field_type']) {
         case 'text':
             $field_mysql_type = "VARCHAR(100)";
@@ -366,7 +368,6 @@ function form_customization_add_field($field_type_options) {
     if (!$validated) {
         return false;
     }
-
     $sql = "INSERT INTO data_dict (`" . implode("`,`", array_keys($fieldValues)) . "`) values('" . implode("','", $fieldValues) . "')";
 
 

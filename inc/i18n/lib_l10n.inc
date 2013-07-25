@@ -124,7 +124,7 @@ function l10n_update_po($msgid , $msgstr , $locale)
 function l10n_compile($locale){
 	$return = array();
 	$cmd = "msgfmt ".LOCALE_DIR."/$locale/LC_MESSAGES/openevsys.po --output-file=".LOCALE_DIR."/$locale/LC_MESSAGES/openevsys.mo";
-    system($cmd, &$return);
+    system($cmd, $return);
     if($return == 1){
     	shnMessageQueue::addError(_t('TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_'));
     }
