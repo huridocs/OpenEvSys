@@ -444,7 +444,7 @@ function form_customization_field_number_exists($field_number) {
 function form_customization_update_help($post, $entity) {
     global $global;
     global $conf;
-
+     
     $records = Browse::getFieldsIds($entity);
     //var_dump($records);
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
@@ -455,8 +455,7 @@ function form_customization_update_help($post, $entity) {
         $recordNumber = $record['field_number'];
         foreach ($locales as $code => $loc) {
             $dataArray = array();
-            $dataArray['field_number'] = $global['db']->qstr($recordNumber);
-
+            
             foreach ($helpsubs as $sub) {
                 if (isset($_POST[$sub . '_' . $recordNumber]) && is_array($_POST[$sub . '_' . $recordNumber])) {
                     $labels = $_POST[$sub . '_' . $recordNumber];
@@ -465,6 +464,11 @@ function form_customization_update_help($post, $entity) {
                     }
                 }
             }
+            if(!$dataArray){
+                continue;
+            }
+            $dataArray['field_number'] = $global['db']->qstr($recordNumber);
+
 
             if ($code == "en") {
                 $global['db']->Replace('help', $dataArray, 'field_number', false);
