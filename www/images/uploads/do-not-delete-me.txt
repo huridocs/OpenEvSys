@@ -1,0 +1,1 @@
+This file just to preserve images folder during zip extracion
