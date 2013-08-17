@@ -720,7 +720,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                         echo "</a></th>";
                     }
                     ?>
-                    <th><?php echo _t('Actions') ?></th>
+                    <th><?php echo _t('ACTIONS') ?></th>
 
                 </tr>
                 <tr class="filter" id="filter_text">
@@ -783,7 +783,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                             </a>
                             <a class="btn btn-info btn-mini" href="<?php echo $columnvalue['record_edit_url'] ?>" rel="tooltip" title="Edit">
                                 <i class="icon-edit icon-white"></i>  
-                                <?php echo _t('Edit') ?>                                          
+                                <?php echo _t('EDIT') ?>                                          
                             </a>
                             <?php
                             $entity = $mod;
@@ -794,7 +794,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                                 ?>
                                 <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url'] ?>" rel="tooltip" title="Delete">
                                     <i class="icon-trash"></i> 
-                                    <?php echo _t('Delete') ?>                                
+                                    <?php echo _t('DELETE') ?>                                
                                 </a>
                             <?php } ?>
                         </td>

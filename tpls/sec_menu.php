@@ -96,7 +96,7 @@ global $conf;
                 ?>
                 <li class="dropdown <?php echo $active ?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <?php echo _t('Add New') ?>
+                        <?php echo _t('ADD_NEW') ?>
                         <span class="caret"></span></a>
 
                     <ul class="dropdown-menu">

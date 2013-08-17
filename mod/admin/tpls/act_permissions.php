@@ -20,7 +20,7 @@ shn_form_select(_t('SELECT_ROLE'), 'role', array('options' => $roles));
             <tr>
                 <th>Entity Groups</th>
                 <?php foreach ($crud as $opt) { ?>
-                    <th><?php echo $opt ?></th>
+                    <th><?php echo _t($opt) ?></th>
                 <?php } ?>
             </tr>
         </thead>

@@ -47,7 +47,7 @@
         <form class="form-horizontal"  action='<?php echo get_url('admin', 'mt_customization', null, array('sub_act' => $_REQUEST['sub_act'], 'mt_select' => $mt_select)) ?>' method='post'>
             <center>
 
-                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('Save changes') ?></button>
+                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                 <?php
                 if ($sub_act == 'label') {
                     ?>
@@ -81,7 +81,7 @@
             ?>
             <center>
 
-                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('Save changes') ?></button>
+                <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
                <?php
                 if ($sub_act == 'label') {
                     ?>

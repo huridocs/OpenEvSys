@@ -1,0 +1,714 @@
+FLAG	KEY	EN	FR	ES	IND	KM	AR	TR
+PHP	_CONTROLER_NOT_FOUND_	Controler not found.	Controler pas trouvé	No se encuentran el controler	Pengontrol tidak ditemukan	Controler not found.	لم يتم العثور على المراقب.	Kontrol birimi bulunamadı.
+JS	_DAY_S__	Day(s):	Jour(s):	Día(s):	Hari	Day(s):	يوم (أيام):	Gün(ler):
+JS	_MONTH_S__	Month(s):	Mois:	Mes:	Bulan	Month(s):	شهر (أشهر):	Ay(lar):
+JS	1ST_LEVEL	1st Level	Premier niveau	Primer nivel	Tingkat 1	កំរិតទី ១	المستوى الأول	1. Seviye
+JS	2ND_LEVEL	2nd Level	Deuxième niveau	Segundo nivel	Tingkat 2	កំរិត​ទី ២	المستوى الثاني	2. Seviye
+JS	3RD_LEVEL	3rd Level	Troisième niveau	Tercer nivel	Tingkat 3	កំរិត​ទី​៣	المستوى الثالث	3. Seviye
+PHP	404_ERROR___PAGE_NOT_FOUND	404 Error : Page Not Found	Erreur 404: page non trouvée	Error 404: No se encuentra la página	404 Error: Halaman tidak ditemukan	បញ្ហា​៤០៤៖ មិន​មាន​ទំព័រ​នេះ​ទេ	خطأ رقم 404: الصفحة غير موجودة	404 Hata: Sayfa Bulunamadı
+JS	4TH_LEVEL	4th Level	Quatrième niveau	Cuarto nivel	Tingkat 4	កំរិត​ទី​៤	المستوى الرابع	4. Seviye
+JS	5TH_LEVEL	5th Level	Cinquième niveau	Quinto nivel	Tingkat 5	កំរិត​ទី​៥	المستوى الخامس	5. Seviye
+JS	6TH_LEVEL	6th Level	Sixième niveau	Sexto nivel	Tingkat 6	កំរិត​ទី​៦	المستوى السادس	6. Seviye
+PHP	ACL_MODE	ACL Mode	Mode ACL	Modo ACL	Mode ACL	ទំរង់​ACL	وضع ACL (قائمة التحكم بالوصول)	ACL Modu
+PHP	ACT	Act	Acte	Acto	Tindakan	បទ​រំលោភ	فعل	Fiil
+PHP	ACT_	Act	Acte	Acto	Tindakan	បទ​រំលោភ	فعل	Fiil
+PHP	ACT_DETAILS	Act details	Détails sur l'Acte	Detalles del acto	Rincian Tindakan	ពត៌មាន​លំអិត​អំពី​​បទ​រំលោភ	تفاصيل الفعل	Fiilin detayları
+PHP	ACT_S_	Act(s)	Acte(s)	Acto(s)	Tindakan	បទ​រំលោភ	الفعل (الأفعال)	Fiil(ler)
+PHP	ACT_SEARCH_FORM	Act Search Form	Formulaire de recherche d'actes	Formulario para búsqueda de actos	Form Pencarian Tindakan	ទំរង់​ស្វែង​រក​បទ​រំលោភ	نموذج البحث في الأفعال	Fiil Arama Formu
+PHP	ACTION	Action	Action	Acción	Tindakan	សកម្មភាព	التصرف -الأداء	İşlem
+PHP	ACTIONS	Actions	Actions	Acciones	Tindakan	សកម្មភាព	التصرفات-الأداء	İşlem(ler)
+PHP	ACTIVATED	Activated	Activé	Activado	Aktifkan	សកម្ម	مُفَعَّل 	Etkin
+PHP	ACTS	Acts	Actes	Actos	Tindakan	បទ​រំលោភ	الأفعال	Fiiller
+PHP	ADD_ACT	Add Act	Ajouter l'Acte	Agregar un acto	Tambahkan Tindakan	បន្ថែម​បទ​រំលោភ	إضافة فعل	Fiil Ekle
+PHP	ADD_ADDITIONAL_DETAILS	Add Additional Details	Ajouter Détails supplémentaires	Agregar detalles adicionales	Tambahkan Rincian Tambahan	បន្ថែម​ពត៌មាន​លំអិត​ផ្សេង​ទៀត	إضافة تفاصيل إضافية	Ek Bilgileri Ekle
+PHP	ADD_ADDITIONAL_DETAILS_FOR	Add Additional Details for	Ajouter Détails supplémentaires pour	Agregar detalles adicionales para el acto	Tambahkan Rincian Tambahan untuk	បន្ថែម​ពត៌មាន​លំអិត​​សំរាប់	إضافة تفاصيل إضافية لـ	Ek Bilgileri Ekle
+PHP	ADD_ADDRESS	Add Address	Ajouter Adresse	Agregar una dirección	Alamat	បន្ថែម​អាសយដ្ឋាន	إضافة عنوان	Adres Ekle
+PHP	ADD_BIOGRAPHIC_DETAILS	Add Biographic Details	Ajouter des Détails biographiques	Agregar detalles biográficos	Tambahkan Riwayat Hidup	បញ្ចូល​​ជីវ​ប្រវត្តិ​លំអិត	إضافة تفاصيل ذاتية	Biyografik Detaylar Ekle
+PHP	ADD_CHAIN_OF_EVENTS	Add Chain of Events	Ajouter une Chaîne d'événements	Agregar una cadena de eventos	Tambahkan Rangkaian Peristiwa	បន្ថែម​ចង្វាក់​ព្រឹត្តិការណ៍	إضافة سلسلة أحداث	Olaylar Zinciri Ekle
+PHP	ADD_EVENT_INFORMATION	Add Event Information	Ajouter de l'information sur l'Evénement	Agregar información del evento	Tambahkan Informasi Peristiwa	បន្ថែម​ពត៌មាន​អំពី​ព្រឹត្តិការណ៍	إضافة معلومات حول الحدث	Olay Tanımı Ekle
+PHP	ADD_FIELD	Add field	Ajouter un champ	Agregar un campo	Tambahkan field	បន្ថែម​ខ្ទង់	إضافة خانة	Alan Ekle
+PHP	ADD_FIELD_TO	Add field to	Ajouter un champ à	Agregar un campo a	Masukkan field ke	បន្ថែម​ខ្ទង់​ដល់	إضافة خانة إلى	Alan Ekle
+PHP	ADD_FIELDS_TO_SEARCH_RESULTS	Add fields to search results	Ajouter des champs aux résultats de la recherche	Agregar campos a los resultados de búsqueda	Masukkan field dalam hasil pencarian	បន្ថែម​ខ្ទង់​ដើម្បី​ស្វែង​រក​លទ្ធផល	إضافة خانات إلى نتائج البحث	Arama Sonuçlarına Alan Ekle
+PHP	ADD_INFORMATION	Add Information	Ajouter une Information	Agregar una información	Tambahkan Informasi	បន្ថែម​ពត៌មាន	إضافة معلومات	Bilgi Ekle
+PHP	ADD_INTERVENING_PARTY	Add Intervening Party	Ajouter une Partie Intervenante	Agregar una parte interviniente	Tambahkan Pihak yang Mengintervensi	បន្ថែមភាគី​អន្តរាគមន៍	إضافة طرف متدخل	Müdahil Taraf Ekle
+PHP	ADD_INTERVENTION	Add Intervention	Ajouter une Intervention	Agregar una intervención	Tambahkan Intervensi	បន្ថែម​បទ​អន្តរាគមន៍	إضافة تَدَخُّل 	Müdahale Ekle
+PHP	ADD_INTERVENTIONS	Add Interventions	Ajouter des Interventions	Agregar intervenciones	Tambahkan Intervensi	បន្ថែម​បទ​អន្តរាគមន៍	إضافة تَدَخُّلات 	Müdahaleler Ekle
+PHP	ADD_INVOLVEMENT	Add Involvement	Ajouter l'Implication	Agregar un involucramiento	Tambahkan Keterlibatan	បន្ថែម​បទ​អន្តរាគមន៍	إضافة تورط	Karışma Ekle
+PHP	ADD_LANGUAGE	Add language	Ajouter une langue	Agregar un idioma	Tambahkan Bahasa	បន្ថែម​ភាសា	إضافة لغة	Dil Ekle
+PHP	ADD_MORE_PERPETRATORS	Add More Perpetrators	Ajouter des Auteurs	Agregar más perpetradores	Tambahkan Pelaku	បន្ថែម​ជន​ប្រព្រឹត្តិ	إضافة المزيد من الجناة	Daha Fazla Fail Ekle
+PHP	ADD_NEW	Add new	Ajouter nouvel	Agregar nuevo	Tambahkan	បន្ថែម​ថ្មី	إضافة جديدة	Yeni Ekle
+PHP	ADD_NEW_DOCUMENT	Add New Document	Ajouter un nouveau Document	Agregar un nuevo documento	Masukkan komentar Baru	បន្ថែម​ឯកសារ​ថ្មី​ទៀត	إضافة وثيقة جديدة	Yeni Belge Ekle
+PHP	ADD_NEW_EVENT	Add new Event	Ajouter un nouvel Evénement	Agregar un nuevo evento	Tambahkan Peristiwa baru	បន្ថែម​ព្រឹត្តិការណ៍​ថ្មី	إضافة حدث جديد	Yeni Olay Ekle
+PHP	ADD_NEW_FIELD	Add new field	Ajouter un nouveau champ	Agregar un nuevo campo	Masukkan Field Baru	បន្ថែម​ខ្ទង់​ថ្មី	إضافة خانة جديدة	Yeni Alan Ekle
+PHP	ADD_NEW_PERSON	Add New Person	Ajouter une nouvelle Personne	Agregar una nueva persona	Tambahkan Orang Baru	បន្ថែម​បុគ្គល​ថ្មី	إضافة شخص جديد	Yeni Kişi Ekle
+PHP	ADD_NEW_USER	Add New User	Ajouter un nouvel Utilisateur	Agregar nuevo(a) usuario(a)	Tambah Pengguna	បន្ថែម​អ្នក​ប្រើ​ប្រាស់​ថ្មី	إضافة مستخدم جديد	Yeni Kullanıcı Ekle
+PHP	ADD_PERPETRATOR	Add Perpetrator	Ajouter l'Auteur	Agregar un perpetrador	Tambahkan Pelaku	បន្ថែម​ជន​ប្រព្រឹត្តិ	إضافة جانٍ 	Fail Ekle
+PHP	ADD_PERPETRATOR_S_	Add Perpetrator(s)	Ajouter un Auteur(s)	Agregar un perpetrador	Tambahkan Pelaku	បន្ថែម​ជន​ប្រព្រឹត្តិ	إضافة جانٍ  (جناة)	Fail(ler) Ekle
+PHP	ADD_ROLE	Add Role	Ajouter un Rôle	Agregar actividad	Tambahkan Role	បន្ថែម​តួនាទី	إضافة دور	Rol Ekle
+PHP	ADD_SOURCE	Add Source	Ajouter une Source	Agregar una fuente	Tambahkan Sumber	បន្ថែម​ប្រភព	إضافة مصدر	Kaynak Ekle
+PHP	ADD_SUPPORTING_DOCUMENT_S_	Add Supporting Document(s)	Ajouter Documents de Support	Agregar documentos de apoyo	Tambahkan Dokumen-Dokumen Pendukung	បន្ថែម​ឯកសារ​យោង	إضافة وثيقة (وثائق) داعمة	Destekleyici Belge(ler) Ekle
+PHP	ADD_VICTIM	Add Victim	Ajouter la Victime	Agregar una víctima	Tambahkan Korban	បន្ថែម​ជន​រង​គ្រោះ	إضافة ضحية	Mağdur Ekle
+PHP	ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT	Add Victims and Perpetrators to this Event	Ajouter des Victimes et des Auteurs à cet Evénement	Agregar víctimas y perpetradores a este evento	Tambahkan Korban dan Pelaku dalam Peristiwa ini	បន្ថែម​ជន​រង​គ្រោះ​និង​ជន​ប្រព្រឹត្តិ​ឲ្យ​ព្រឹត្តិការណ៍​នេះ	إضافة ضحايا وجناة إلى هذا الحدث	Olayın Mağdur ve Faillerini Ekle
+PHP	ADDING_ADDRESS___	Adding Address...	Ajouter une adresse...	Se está agregando la dirección...	Menambahkan Alamat	អាស័យ​ដ្ឋានដែល​កំពុង​បន្ថែម...	إضافة عنوان...	Adres Ekleniyor...
+PHP	ADDING_EVENT_INFORMATION	Adding Event Information	Ajouter de l'information à cet Evénement	Agregando información del evento	Menambahkan Informasi Peristiwa	ពត៌មាន​អំពីព្រឹត្តិការណ៍​ដែល​កំពុង​បន្ថែម	إضافة معلومات الحدث	Olay Tanımı Ekleniyor...
+PHP	ADDING_PERSON_ADDRESS____	Adding Person Address ...	Ajouter l'adresse de la Personne...	Se está agregando la dirección de la persona...	Menambahkan Alamat	អាស័យ​​ដ្ឋាន​បុគ្គល​ដែល​កំពុង​បន្ថែម...	إضافة عنوان الشخص	Kişi Adresi Ekleniyor...
+PHP	ADDING_PERSON_INFORMATION____	Adding Person information ...	Ajouter des informations sur la Personne ...	Agregando la información de la persona...	Menambahkan informasi Orang...	ពត៌មាន​បុគ្គល​ដែល​កំពុងបន្ថែម...	إضافة معلومات الشخص	Kişi Bilgisi Ekleniyor...
+PHP	ADDITIONAL_DETAIL_TYPE	Additional Detail Type	Type de Détails supplémentaires	Tipo de detalle adicional	Tipe Detil Tambahan	ប្រភេទ​ពត៌មាន​លំអិត​បន្ថែម	نوع التفاصيل الإضافية	Ek Bilgi Türü
+PHP	ADDITIONAL_DETAILS	Additional Details	Détails supplémentaires	Detalles adicionales	Rincian Tambahan	ពត៌មាន​លំអិត​បន្ថែម	تفاصيل إضافية	Ek Bilgiler 
+PHP	ADDRESS	Address	Adresse	Dirección	Alamat	អាសយដ្ឋាន	عنوان	Adres
+PHP	ADDRESS_OF_A_PERSON_	Address of a person	Adresse d'une personne	Dirección de una persona	Alamat orang	អាសយ​ដ្ឋាន​របស់​បុគ្គល	عنوان الشخص	Kişi Adresi
+PHP	ADDRESS_TYPE	Address Type	Type d'adresse	Tipo de dirección	Tipe Alamat	ប្រភេទ​អាសយ​ដ្ឋាន	نوع العنوان	Adres Türü
+PHP	ADMIN	Admin	Admin	Administración	Admin	ការងារ​រដ្ឋបាល	مسؤول نظام  قاعدة البيانات	Yönetici
+PHP	ADVANCED	Advanced	Avancé	Avanzado	Mutakhir	កាន់តែ​លំអិត​(Advanced)	مُتَقَدِّم	Gelişmiş
+PHP	ADVANCED_SEARCH	Advanced search	Recherche avancée	Búsqueda avanzada	Pencarian sederhana	ការ​ស្វែង​រក​លំអិត	بحث مُتَقَدِّم	Gelişmiş Arama
+JS	AFTER	after	après	after	after	after	بَعْدَ 	Sonra
+PHP	AGAINST	against	contre	en contra de	terhadap	ប្រឆាំង​នឹង	ضد	Karşı
+PHP	ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_	All columns have been reset to their original values.	Toutes les colonnes ont été réinitialisées à leurs valeurs d'origine.	Todas las columnas han sido restauradas a sus parámetros originales	Semua kolom dikembalikan ke nilai awal	តារាងជួរឈរ​ទាំងអស់​ត្រូវ​បាន​កំណត់​ឡើងវិញ​ដូច​តារាងដើម	تم إعادة ضبط كافة الأعمدة إلى قيمها الأصلية.	Tüm sütunlar özgün değerlerine döndü.
+PHP	ANALYSIS	Analysis	Analyse	Análisis	Analisis	ការវិភាគ	التحليل	Analiz
+JS	AND	AND	ET	Y	AND	នឹង	و	VE
+PHP	APPLY_CHANGES_PERMANENTLY	Apply changes permanently	Appliquer les modifications définitivement	Aplicar los cambios permanentemente	Lakukan perubahan permanen	យល់​ព្រម​ឲ្យ​មាន​ការ​ផ្លាស់​ប្តូរ​នេះ​ជា​អចិន្ត្រៃយ៍	تطبيق التغييرات بشكل دائم	Değişiklikleri Kalıcı Olarak Uygula
+PHP	ARREST	Arrest	Arrestation	Arresto, detención o proceso judicial	Penangkapan	ការ​ចាប់​ខ្លួន	اعتقال	Tutuklama
+JS	AT	at	au	a	Tanggal	នៅ	في	tam
+JS	AT_OR_AFTER	at or after	au ou après	at or after	at or after	at or after	في أو بَعْدَ	tam veya sonrasında olan
+JS	AT_OR_BEFORE	at or before	au ou avant	a o antes de	at or before	នៅ​ចំ​ឬ​ពីមុន	في أو قبل	tam veya öncesinde olan
+PHP	AUDIT	Audit	Audit	Revisión	Audit	ត្រូត​ពិនិត្យ​ឡើង​វិញ	تدقيق	Gözden geçirme
+PHP	AUDIT_LOG	Audit log	Carnet d'Audit	Revisar los datos de creación y modificación del registro	Log Audit	តារាងសំរាប់​ធ្វើ​ការ​ត្រួត​ពិនិត្យ​ឡើង​វិញ	سجل التدقيق	Gözden geçirme kayıtları
+PHP	AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT	Audit log details are not available for this Event	Détails audit pas disponibles pour cet Evénement	Los detalles de creación y modificación del registro de este evento no están disponibles	Detil log tidak tersedia untuk Peristiwa ini	បិទ​ពត៌មាន​លំអិត​មិន​ឲ្យ​មើល​ឃើញ​សំរាប់​ព្រឹត្តិការណ៍នេះ	تفاصيل سجل التدقيق غير متوفرة لهذا الحدث	Bu Olay için gözden geçirme kayıtları mevcut değil.
+PHP	BACK	Back	Retour	Atrás	Kembali	ត្រឡប់​ក្រោយ	رجوع	Geri
+PHP	BACK_TO_EVENT_VIEW	Back to Event view	Retour à l'écran Evénement	Volver a la vista del evento	Kembali ke tampilan Peristiwa	ត្រលប់​ទៅ​ទំព័រ​មើល​ព្រឹត្តិការណ៍​វិញ	رجوع إلى عرض الحدث	Olay sayfasına geri dön
+PHP	BACK_TO_PERSON_VIEW	Back to Person view	Retour à l'écran Personne	Volver a la vista de la persona	Kembali ke tampilan Orang	ត្រឡប់​ទៅ​បើកមើល​បុគ្គល​វិញ	رجوع إلى عرض الشخص	Kişi sayfasına geri dön
+PHP	BASIC	Basic	Basique	Básico	Kembali	ធម្មតា	أساسي	Temel
+PHP	BASIC_SEARCH	Basic search	Recherche de base	Búsqueda sencilla	Pencarian sederhana	ការ​ស្វែង​រក​ធម្មតា	بحث أساسي	Temel arama 
+JS	BEFORE	before	avant	antes de	formulir	មុន	قبل	Önce
+PHP	BIOGRAPHIC_DETAIL_S_	Biographic Details	Détails biographiques	Detalles biográficos	Riwayat Hidup	ជីវប្រវត្តិ​លំអិត	تفاصيل ذاتية	Biyografik Detay(lar)
+PHP	BIOGRAPHIC_DETAILS	Biographic Details	Détails biographiques	Detalles biográficos	Riwayat Hidup	ជីវប្រវត្តិ​លំអិត	تفاصيل ذاتية	Biyografik Detaylar
+PHP	BIOGRAPHIC_DETAILS__	Biographic Details.	Détails biographiques	Detalles biográficos	Riwayat Hidup	ជីវប្រវត្តិ​លំអិត	تفاصيل ذاتية	Biyografik detaylar
+PHP	BIOGRAPHY_DETAIL_S_	Biography Details	Détails biographiques	Detalles biográficos	Rincian Riwayat Hidup	ជីវ​ប្រវត្តិ​លំអិត	تفاصيل سيرة ذاتية	Biyografi Detay(ları)
+PHP	BROWSE_DOCUMENTS	Browse Documents	Parcourir les Documents	Revisar los documentos	Telusuri Dokumen	ពិនិត្យ​មើល​ឯកសារ	استعراض الوثائق	Belgelere Gözat
+PHP	BROWSE_EVENT	Browse Event	Parcourir l'Evénement	Revisar el evento	Telusuri Peristiwa	មើល​បញ្ជី​ព្រឹត្តិការណ៍	استعراض الحدث	Olaya Gözat
+PHP	BROWSE_EVENTS	Browse Events	Parcourir les Evénements	Revisar los eventos	Telusuri Peristiwa	មើល​បញ្ជី​ព្រឹត្តិការណ៍	استعراض الأحداث	Olaylara Gözat
+PHP	BROWSE_PERSONS	Browse Persons	Parcourir les Personnes	Revisar las personas	Telusuri Orang	បើក​មើល​បញ្ជី​បុគ្គល	استعراض الأشخاص	Kişilere Gözat
+PHP	BY_WHOM	By whom	Par qui ?	Vinculado por	Oleh siapa	ដោយ​អ្នក​ណា	من قبل من	Kim tarafından
+PHP	CANCEL	Cancel	Annuler	Cancelar	Batal	ចាកចេញ	إلغاء	İptal
+PHP	CELLULAR	Cellular	Mobile	Teléfono móvil	Selular	ទូរស័ព្ទ​ដៃ	هاتف خلوي	Hücresel
+PHP	CHAIN_OF_EVENT	Chain of Events	Chaîne d'événements	Cadena de eventos	Rangkaian Peristiwa	ចង្វាក់​ព្រឹត្តិការណ៍	سلسلة الحدث	Olay Zinciri  
+PHP	CHAIN_OF_EVENT_S_	Chain of Events	Chaîne d'événements	Cadena de eventos	Rangkaian Peristiwa	ចង្វាក់​ព្រឹត្តិការណ៍	سلسلة الحدث (الأحداث)	Olay(lar) Zinciri
+PHP	CHAIN_OF_EVENTS	Chain of Events	Chaîne d'événements	Cadena de eventos	Rangkaian Peristiwa	ចង្វាក់​ព្រឹត្តិការណ៍	سلسلة الأحداث	Olaylar Zinciri  
+PHP	CHAIN_OF_EVENTS_DOES_NOT_EXIST	Chain of Events does not exist	Cette Chaîne d'événements n'existe pas	No existe registro de la cadena de eventos solicitada	Rangkaian Peristiwa tidak tersedia	មិន​មាន​ចង្វាក់​ព្រឹត្តិការណ៍ទេ	سلسلة الأحداث غير موجودة	Olaylar Zinciri bulunmuyor.
+PHP	CHANE_OF_EVENTS	Chain of Events	Chaîne d'événements	Cadena de eventos	Rangkaian Peristiwa	ចង្វាក់​ព្រឹត្តិការណ៍	سلسلة الأحداث	Olaylar Zinciri  
+PHP	CHANE_OF_EVENTS_	Chain of Events	Chaîne d'événements	Cadena de eventos	Rangkaian Peristiwa	Chain of Events	سلسلة الأحداث	Olaylar Zinciri  
+PHP	CHANGE	Change	Changer	Cambiar	Ubah	ប្តូរ	تغيير	Değiştir
+PHP	CHANGE_ADDITIONAL_DETAIL_TYPE	Change Additional Detail type	Changer le type des Détails supplémentaires	Cambiar el tipo de detalle adicional	Ganti tipe Rincian Tambahan	ផ្លាស់​ប្តូរ​ប្រភេទ​ពត៌មាន​លំអិត​បន្ថែម	تغيير نوع التفاصيل الإضافية	Ek Bilgi Türünü değiştir
+PHP	CHANGE_PASSWORD	Change password	Changer le mot de passe	Cambiar la contraseña	Ganti kata sandi	ប្តូរ​លេខ​សំងាត់	تغيير كلمة المرور	Şifreyi değiştir
+PHP	CHANGE_VIEW__	Change View:	Changer de Vue :	Cambiar la vista:	Ubah tampilan	ប្តូររបៀប​បើក​មើល	 تغييرالعرض:	Görüntüyü değiştir:
+PHP	CHOOSE_AN_ACTION	Choose an action	Choisir une action	Seleccione una acción	Pilih tindakan	ជ្រើសរើស​សកម្ម​ភាព	اختيار تصرف-أداء	Bir işlem seçin
+PHP	CHOOSE_FILE_UPLOAD	Choose File Upload	Choisissez le chargement du fichier	Elegir la carga de archivos	Pilih file yang akan diunggah	Choose File Upload	اختيار رفع(تحميل) الملف	Yüklenecek dosyayı seçin
+PHP	CHOSE_STARTING_POINT	Chose starting point	Choisir un point de départ	Seleccionar punto de partida	Pilih titik awal	ធ្វើ​ការ​ជ្រើស​រើស​ចំនុច​ចាប់​ផ្តើម	اختيار نقطة البدء	Başlangıç noktası belirleyin
+JS	CLARIFY	Clarify	Clarifier	Explicar	Klarifikasi	បញ្ជាក់​បន្ថែម	توضيح	Açıklama
+PHP	CLARIFYING_NOTE	Clarifying Note	Note de clarification	Nota aclaratoria	Catatan Klarifikasi	កំណត់​ត្រា​បញ្ជាក់​បន្ថែម	ملاحظة توضيحية	Açıklama notu
+PHP	CLARIFYING_NOTES	Clarifying Notes	Notes de clarification	Notas aclaratorias	Catatan Klarifikasi	កំណត់​ត្រា​បញ្ជាក់​បន្ថែម	ملاحظات توضيحية	Açıklama notları
+PHP	CLEAR	Clear	Effacer	Despejar	Bersihkan	លុប​ចោល	مسح	Temizle
+PHP	CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_	Click to download Events XML file of all records in this OpenEvSys.	Cliquez ici pour télécharger le fichier XML des événements de tous les enregistrements dans ce OpenEvSys.	Haga clic aquí para descargar un archivo en formato XML de todos los registros de eventos en este OpenEvSys	Klik untuk mengunduh semua file Peristiwa dalam bentuk XML	ចុចទីនេះដើម្បី​ទាញ​ព្រឹត្តិការណ៍ក្នុង​ទំរង់XMLទាំង​អស់​ក្នុង​អូផែន​អែវស៊ីស​មក​រក្សាទុក	انقر  لتحميل ملف  Events XMLلكافة السجلات في OpenEvSys	Bu veritabanındaki tüm kayıtları içeren Olaylar XML dosyasını indirmek için tıklayın.
+JS	CLICK_TO_SELECT_AN_OPTION	Click to select an option	Cliquer pour sélectionner une option	Haga clic para seleccionar una opción	Klik untuk memilih pilihan	ចុច​ដើម្បី​ជ្រើស​​យក​ជំរើស	انقر لاختيار خيار	Seçenekler için tıklayın
+PHP	CLOSE	Close	Fermer	Cerrar	Tutup	បិទ	إغلاق	Kapat
+PHP	COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_	Column reset back to original values.	Colonne réinitialisée a ses valeurs d'origine.	Restaurar las columnas a sus parámetros originales	Kolom dikembalikan ke nilai awal	តារាងជួរឈរត្រូវបានកំណត់ឡើងវិញដូចដើម	إعادة ضبط العمود إلى القيم الأصلية.	Sütun orijinal değerine döndürüldü. 
+PHP	COMBINED_SEARCH_FORMS	Combined search forms	Formulaires de recherche combinées	Formularios combinados de búsqueda	Form pencarian kombinasi	ទំរង់​ស្វែង​រក​ប្រមូល​រួមបញ្ចូល​គ្នា	نماذج البحث المجتمعة	Birleşik arama formları
+PHP	COMPILE	Compile	Compiler	Compilar	Kompilasi	ប្រមូល	جَمَعَ 	Sırala
+PHP	CONFIG_VARIABLE	Config Variable	Variable Config	Variable Config	Aturan Variabel	កែអថេរ	متغير التهيئة	Yapılandırma Değişkeni
+PHP	CONFIRM_NEW_PASSWORD	Confirm new password	Confirmer nouvelle mot de passe	Confirme la nueva contraseña	Konfirmasi kata sandi yang baru	សូមបញ្ជាក់​លេខ​សំងាត់​ថ្មី	تأكيد كلمة المرور الجديدة	Yeni Şifreyi Onayla
+PHP	CONFIRM_PASSWORD	Confirm password	Confirmer mot de passe	Confirme la contraseña	Konfirmasi kata sandi	វាយពាក្យ​សំងាត់​បញ្ជាក់ម្តង​ទៀត	تأكيد كلمة المرور	Şifreyi onayla
+JS	CONTAINS	contains	contient	contiene	mengandung	រួម​មាន	يحتوي	içeren
+PHP	CONTEXTUAL_INFORMATION	Contextual Information	Information contextuelle	Información contextual	Informasi Konstekstual	ពត៌មាន​ដែល​អាស្រ័យ​លើ​បរិបទ	معلومات سياقية	Bağlamsal Bilgi
+PHP	CONTINUE	Continue	Continuer	Continuar	Lanjutkan	បន្ត	استمرار	Devam et
+PHP	CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT	Continue editing the details of this Document	Continuer à éditer les détails de ce Document	Continuar la edición de los detalles de este documento	Lanjutkan memperbaharui rincian Dokumen	បន្ត​កែ​សម្រួលពត៌មាន​លំអិត​​របស់​ឯកសារ​នេះ	  استمر بتعديل تفاصيل هذه الوثيقة  	Belgenin detaylarını düzenlemeye devam et
+PHP	CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD	Continue editing this Chain of Events record	Continuer à éditer cette Chaîne d'événements	Continuar la edición de este registro de cadena de eventos	Lanjutkan memperbaharui catatan Rangkaian Peristiwa	បន្ថ​កែ​សម្រួល​​កំណត់​ត្រា​ចង្វាក់​ព្រឹត្តិការណ៍​នេះ	استمر  في تعديل سجل سلسلة الأحداث هذا	Olaylar Zinciri kaydını düzenlemeye devam et
+PHP	CONTINUE_EDITING_THIS_EVENT_RECORD	Continue editing this Event record	Continuer l'édition de cet Evénement	Continuar la edición del registro de este evento	Lanjutkan memperbaharui catatan Peristiwa ini	បន្ត​កែ​សម្រួល​កំណត់​ត្រា​ព្រឹត្តិការណ៍​នេះ	استمر في تعديل سجل الأحداث هذا	Olay kaydını düzenlemeye devam et
+JS	COUNT	Count	Compte	Contar	Hitungan	ការ​រាប់	عد	Listele
+PHP	COUNTRY	Country	Pays	País	Negara	ប្រទេស	الدولة	Ülke
+PHP	CREATE_REPORT_FROM_THESE_RESULTS	Create report from these results	Créer un rapport avec ces résultats	Crear un reporte con estos resultados	Buat laporan dari hasil	បង្កើត​ជា​របាយការណ៍​ពី​លទ្ធផល​ទាំង​នេះ	إنشاء تقرير من خلال هذه النتائج	Sonuçlardan bir rapor oluştur
+PHP	CREATED_BY	Created by	Crée par	Creado por	Dibuat oleh	បង្កើត​ដោយ	اسم من قام بالإنشاء	Oluşturan kişi
+PHP	CREATED_DATE	Created date	Date crée	Fecha de creación	Tanggal dibuat	កាល​បរិច្ឆេទ​ដែល​បាន​បង្កើត	تاريخ الإنشاء	Oluşturma tarihi
+PHP	CREATOR	Creator	Créateur	Creador	Pembuat	Creator	المنشئ	Oluşturan kişi
+PHP	CSV	CSV	CSV	Archivo en formato CSV	CSV	CSV	CSV	CSV
+PHP	CURRENT_PASSWORD	Current Password	Mot de passe actuel	Contraseña actual	Ganti Kata Sandi	លេខ​សំងាត់​​ចាស់	كلمة المرور الحالية	Eski şifre
+PHP	CURRENT_SETTING	Current setting	Positionnement actuel	Posición actual	Setting saat ini	ទំរង់​ទើប​តែ​បង្កើត	الإعدادات الحالية	Şimdiki konum
+PHP	CURRENT_VALUE	Current value	Valeur actuel	Valor actual	Nilai saat ini	តំលៃ​ទើប​តែ​បង្កើត	القيمة الحالية	Şimdiki değer
+PHP	DATA_EXCHANGE	Data exchange	Echange de données	Intercambio de datos	Pertukaran Data	ការ​ដោះ​ដូរ​ទិន្ន​ន័យ	تبادل البيانات	Bilgi paylaşımı
+PHP	DATABASE_ERROR	Database Error	Erreur de bases de données	Error de la base de datos	Kesalahan Database	បញ្ហា​ប្រព័ន្ធ​គ្រប់​គ្រង​ទិន្ន​ន័យ	خطأ في قاعدة البيانات	Veritabanı hatası
+PHP	DATE	Date	Date	Fecha	Tanggal	កាល​បរិច្ឆេទ	التاريخ	Tarih
+PHP	DATE_CREATED	Date Created	Date de création	Fecha de creación	Tanggal pembuatan	Date Created	تاريخ الإنشاء	Oluşturulma Tarihi
+PHP	DATE_FIELD_	Date field	Champs avec date	Campo de fecha	Field tanggal	Date field	خانة التاريخ	Tarih alanı
+PHP	DATE_OF_INTERVENTION	Date of Intervention	Date de l'Intervention	Fecha de la intervención	Tanggal Intervensi	កាល​បរិច្ឆេទ​នៃ​អន្តរាគមន៍	تاريخ التدخل	Müdahale Tarihi
+PHP	DATE_OF_SOURCE_MATERIAL	Date of Source Material	Date de l'Information-Source	Fecha del material fuente	Tanggal Materi Sumber	កាល​បរិច្ឆេទ​ឯកសារ​ដែល​ជា​ប្រភព	تاريخ مادة المصدر	Kaynak Materyalin Tarihi
+PHP	DATE_REQUIRED__INVALID_DATE	Date required, Invalid Date	Date nécessaire, date non valide	Es necesario que ingrese la fecha. Fecha no válida	Tanggal diwajibkan, Tanggal tidak sesuai	ចាំបាច់​ត្រូវ​មាន​កាលបរិច្ឆេទ​ កាល​បរិច្ឆេទ​មិន​ត្រឹម​ត្រូវ	التاريخ مطلوب، تاريخ غير صحيح	Tarih girilmeli, Geçersiz Tarih
+PHP	DATE_SUBMITTED	Date of Entry	Date de saisie	Fecha de registro	Date of entry	Date of entry	تاريخ الادخال	Giriliş tarihi
+PHP	DEFINITION	Definition	Définition	Definición	Definisi	និយម​ន័យ	التعريف	Tanım
+PHP	DEGREE_OF_INVOLVEMENT	Degree of Involvement	Niveau d'implication	Grado de involucramiento	Derajat Keterlibatan	កំរិត​នៃ​ការពាក់​ព័ន្ធ	درجة التورط	Katılım Derecesi
+PHP	DELETE	Delete	Effacer	Borrar	Hapus	លុប​ចោល	حذف	Sil
+PHP	DELETE_ADDITIONAL_DETAILS	Delete Additional Details	Supprimer les Détails supplémentaires	Borrar los detalles adicionales	Hapus Detil Tambahan	លុប​ពត៌មាន​លំអិត​បន្ថែម​ចោល	حذف تفاصيل إضافية	Ek Bilgileri Sil
+PHP	DELETE_DOCUMENT	Delete Document	Supprimer le Document	Borrar este documento	Hapus Dokumen	លុប​ឯកសារ​ចោល	حذف الوثيقة	Belgeyi Sil
+PHP	DELETE_THIS_EVENT	Delete this Event	Supprimer cet Evénement	Borrar este evento	Hapus Peristiwa	លុប​ព្រឹត្តិការណ៍​នេះចោល	حذف هذا الحدث	Olayı Sil
+PHP	DELETE_THIS_PERSON	Delete this Person	Supprimer cette Personne	Borrar a esta persona	Hapus Orang ini	លុប​បុគ្គល​នេះ​ចោល	حذف هذا الشخص	Kişiyi Sil
+PHP	DESCRIPTION	Description	Description	Descripción	Deskripsi	ការ​ពិពត៌នា	الوصف 	Tanım
+PHP	DESIGNATION	Designation	Désignation	Denominación	Jabatan	ការកំណត់សំគាល់	التسمية	Ünvan
+PHP	DESTRUCTION	Destruction	Destruction	Destrucción y pérdida de propiedad	Perusakan	ការ​បំផ្លាញ	تدمير	Tahribat
+JS	DISABLE_HELP	Disable Help	Désactiver l'Aide	Inhabilitar Ayuda	Matikan	មិនដំណើរការ	تعطيل المساعدة	Yardımı Devre Dışı Bırak
+PHP	DISABLE_INTERACTIVE_TRANSLATION	Disable interactive translation	Désactiver la traduction interactive	Inhabilitar la traducción interactiva	Matikan terjemahan interaktif	បិទ​ការបកប្រែ​រស់​រវើក​ចោល	تعطيل الترجمة التفاعلية	İnteraktif çeviriyi devre dışı bırak
+PHP	DISABLED	Disabled	Désactivé	Inhabilitado	Matikan	មិនដំណើរការ	مُعطل	Devre dışı bırakıldı
+PHP	DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__	Do you want to delete Additional details ?	Voulez-vous effacer ces Détails supplémentaires ?	¿Está seguro de querer borrar los detalles adicionales?	Apakah anda ingin menghapus Rincian Tambahan Ini?	តើ​អ្នក​ចង់​លុបពត៌មាន​លំអិត​​នេះ​មែន​ទេ?	هل تود حذف التفاصيل الإضافية؟	Ek Bilgileri silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__	Do you want to delete the selected address(es)?	Voulez-vous supprimer les adresses concernées ?	¿Está seguro de querer borrar los direcciones seleccionadas?	Apakah anda ingin menghapus catatan?	តើ​អ្នក​ចង់​លុប​អាសយដ្ឋាន​ដែល​បាន​ជ្រើសរើស​ចោល​មែន​ទេ?	هل تود حذف العنوان المختار- العناوين  المختارة؟	Seçili adres(leri) silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_	Do you want to delete the selected Biographic Details?	Voulez-vous supprimer les Détails biographiques sélectionnées ?	¿Está seguro de querer borrar los detalles biográficos seleccionados?	Apakah anda ingin menghapus Riwayat Hidup?	តើ​អ្នក​ចង់​លុប​ជីវ​ប្រវត្តិ​ដែល​បាន​ជ្រើស​រើស​ចោល​មែន​ទេ?	هل تود حذف التفاصيل الذاتية المختارة؟	Seçili Biyografik Detayları silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__	Do you want to delete the selected Chain of Events(s)?	Est-ce que vous voulez supprimer la Chaîne d'événements sélectionné ?	¿Está seguro de querer borrar las cadenas de eventos seleccionadas?	Apakah anda ingin menghapus Rangkaian Peristiwa?	តើ​អ្នក​ចង់​លុប​ចង្វាក់​ព្រឹត្តិការណ៍​ដែល​បាន​ជ្រើសរើស​ចោល​មែន​ទេ?	هل تود حذف سلسلة الحدث  أو الأحداث المختارة؟	Seçili Olaylar Zincirini silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__	Do you want to delete the selected Information(s)?	Voulez-vous supprimer l'Information sélectionnée(s) ?	¿Está seguro de querer borrar la información seleccionada?	Anda ingin menghapus Infomasi?	តើ​អ្នក​ចង់​លុប​ពត៌មាន​ដែល​បាន​ជ្រើស​រើស​ចោល​មែន​ទេ?	هل تود حذف المعلومة  أو المعلومات  المختارة؟	Seçili bilgi(leri) silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__	Do you want to delete the selected Intervention(s)?	Voulez-vous supprimer l'Intervention sélectionnée(s) ?	¿Está seguro de querer borrar las intervenciones seleccionadas?	Apakah anda ingin menghapus Intervensi?	តើ​អ្នក​ចង់​លុប​បទ​អន្តរាគមន៍​ដែល​បាន​ជ្រើស​រើស​មែន​ទេ?	هل تود حذف التدخل أو التدخلات المختارة؟	Seçili Müdahale(leri) silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___	Do you want to delete the selected Micro-thesaurus term(s) ?	Voulez-vous supprimer les termes sélectionnés du Micro-thesaurus ?	¿Está seguro de querer borrar los términos seleccionados del micro-tesauro?	Apakah anda ingin menghapus istilah Micro-thesauri?	តើ​អ្នក​ចង់​លុបបច្ចេក​ស័ព្ទ​បញ្ជី​ពាក្យ​តូចៗ​ដែល​បាន​ជ្រើស​រើស​មែន​ទេ?	هل تود حذف مصطلح أو مصطلحات المكنز المصغر المختار/ة ؟	Seçili Mikro-Kavramlar Dizini terim(ler)ini silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__	Do you want to delete the selected Queries ?	Voulez-vous supprimer les requêtes sélectionnées ?	¿Está seguro de querer borrar las consultas seleccionadas?	Anda ingin menghapus pertanyaan?	តើ​អ្នក​ចង់​លុប​សំណួរ​ស្វែង​រក​ដែល​បាន​ជ្រើស​រើសមែន​ទេ?	هل تود حذف الاستفسارات المختارة؟	Seçili Sorguları silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___	Do you want to delete the selected record(s) ?	Voulez-vous supprimer les enregistrements selectionnés ?	¿Está seguro de querer borrar los registros seleccionados?	Apakah anda ingin menghapus catatan?	តើ​អ្នក​ចង់​លុប​កំណត់​ត្រា​ដែល​បាន​ជ្រើសរើស​ចោល​មែន​ទេ?	هل تود حذف السجل  أو السجلات المختارة؟	Seçili kayıt(ları) silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___	Do you want to delete the selected user(s) ?	Voulez-vous supprimer les utilisateurs sélectionné (s) ?	¿Está seguro de querer borrar el o lo(a)s usuario(a)s seleccionado(a)s?	Apakah anda ingin menghapus pengguna?	តើ​អ្នក​ចង់​លុបអ្នក​ប្រើប្រាស់​ដែល​បាន​ជ្រើស​រើស​នេះ​ចេញ​មែន​ទេ?	هل تود حذف المستخدم  المختار أو المستخدمين المختارين؟	Seçili kullanıcı(ları) silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_	Do you want to delete this Document?	Voulez-vous supprimer ce Document ?	¿Está seguro de querer borrar este documento?	Apakah anda ingin menghapus Dokumen ini?	តើ​អ្នក​ចង់​លុប​ឯកសារ​នេះ​ចេញ​​មែន​ទេ?	هل تود حذف هذه الوثيقة؟	Belgeyi silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THIS_EVENT_	Do you want to delete this event?	Voulez-vous supprimer cet Evénement ?	¿Está seguro de querer borrar este evento?	Apakah anda ingin menghapus Peristiwa Ini?	តើ​អ្នក​ចង់​លុបព្រឹត្តិការណ៍​នេះ​មែន​ទេ?	هل تود حذف هذا الحدث؟	Olayı silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_DELETE_THIS_PERSON_	Do you want to delete this Person?	Voulez-vous supprimer cette Personne ?	¿Está seguro de querer borrar a esta persona?	Apakah anda ingin menghapus Orang ini?	តើ​អ្នក​ចង់​លុប​បុគ្គល​នេះ​ចោល​មែន​ទេ?	هل تود حذف هذا الشخص؟	Kişiyi silmek istediğinizden emin misiniz?
+PHP	DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_	Do you want to remove the existing file attachment for this Document?	Voulez-vous supprimer le fichier attaché pour ce Document ?	¿Está seguro de querer borrar el archivo adjunto a este documento?	Anda ingin menyingkirkan lampiran untuk dokumen ini?	តើ​អ្នក​ចង់​ដក​ឯកសារ​ភ្ជាប់ពី​ឯកសារ​នេះ​មែន​ទេ?	هل تود إزالة مرفق الملف الحالي لهذه الوثيقة؟	Bu belgenin ekili dosyasını silmek istediğinizden emin misiniz?
+PHP	DOCUMENT	Document	Document	Documento	Dokumen	ឯកសារ	الوثيقة	Belge
+PHP	DOCUMENT_DETAILS	Document Details	Détails sur le document	Detalles del documento	Detil Dokumen	ពត៌មាន​លំអិត​អំពី​ឯកសារ	تفاصيل الوثيقة	Belge Detayları
+PHP	DOCUMENT_DOES_NOT_EXIST_	Document does not exist.	Document n'existe pas	El documento no existe	Dokumen tidak tersedia	មិន​មាន​ឯកសារ​នេះ​ទេ	الوثيقة غير موجودة.	Belge yok.
+PHP	DOCUMENT_SEARCH_FORM	Document Search Form	Formulaire de recherche de documents	Formulario para búsqueda de documentos	Form Pencarian Dokumen	ទំរង់​ស្វែង​រក​ឯកសារ	نموذج البحث في الوثيقة	Belge Arama Formu
+PHP	DOCUMENT_TITLE	Document Title	Titre du Document	Título del documento	Judul Dokumen	ចំណង​ជើង​ឯកសារ	عنوان الوثيقة	Belge Adı
+PHP	DOCUMENTS	Documents	Documents	Documentos	Dokumen	ឯកសារ	الوثائق	Belgeler 
+PHP	DOWNLOAD	Download	Télécharger	Descargar	Unduh	ទាញយក​រក្សា​ទុក	تنزيل 	İndir
+PHP	DOWNLOAD_DOCUMENT	Download Document	Télécharger le Document	Descargar el documento	Unduh Dokumen	ទាញឯកសារ​មក​រក្សា​ទុក	تنزيل  الوثيقة	Belgeyi İndir
+PHP	DOWNLOAD_ERROR_REPORT	Download Error report	Télécharger le rapport d'erreur	Descargar el informe de errores	Laporan kesalahan pengunduhan	Download Error report	 تنزيل  تقرير الخطأ	Hata raporunu indir
+PHP	E_MAIL	E Mail	Courriel	Correo electrónico	E-mail	អ៊ីមែល	البريد الإلكتروني	e-mail
+JS	EDIT	Edit	Editer	Editar	Edit	កែសម្រួល	تعديل	Düzenle
+PHP	EDIT_ADDITIONAL_DETAILS	Edit Additional Details	Editer les Détails supplémentaires	Editar los detalles adicionales	Edit Detil Tambahan	កែ​សម្រួល​ពត៌មាន​លំអីត​បន្ថែមទៀត	تعديل التفاصيل الإضافية	Ek Bilgileri Düzenle
+PHP	EDIT_BIOGRAPHIC_DETAILS	Edit Biographic Details	Editer les Détails biographiques	Editar los detalles biográficos	Memperbaharui Riwayat Hidup	កែ​សម្រួល​ជីវប្រវត្តិ​លំអិត	تعديل التفاصيل الذاتية	Biyografik Detayları Düzenle
+PHP	EDIT_DETAILS	Edit details	Editer les détails	Editar detalles	Edit Rincian	កែ​ប្រែ​ពត៌មាន​លំអិត	تعديل التفاصيل	Detayları düzenle
+PHP	EDIT_EVENT_SUMMARY	Edit Event Summary	Editer le Résumé de l'Evénement	Editar el resumen del evento	Edit Ringkasan Peristiwa	កែ​សម្រួល​ពត៌មាន​សង្ខេប​អំពី​ព្រឹត្តិការណ៍	تعديل ملخص الحدث	Olay Özetini Düzenle
+PHP	EDIT_PROFILE	Edit profile	Editer le profil	Editar el perfil	Edit Profil	កែ​សំរួលពត៌មាន​លំអិត	تعديل الملف الشخصي	Profili düzenle
+PHP	EDIT_THIS_ACT	Edit this Act	Editer cet Acte	Editar este acto	Edit Tindakan	កែ​សម្រួល​បទ​រំលោភ​នេះ	تعديل هذا الفعل	Fiili Düzenle
+PHP	EDIT_THIS_ADDRESS	Edit this Address	Editer cette Adresse	Editar esta dirección	Edit Alamat	កែ​សម្រួល​អសយ​ដ្ឋាន​នេះ	تعديل هذا العنوان	Adresi Düzenle
+PHP	EDIT_THIS_BIOGRAPHIC_DETAILS	Edit this Biographic Details	Editer les Détails biographiques	Editar este detalle biográfico	Memperbaharui Riwayat Hidup	កែ​សម្រួល​ជីវ​ប្រវត្តិ​សង្ខេប	تعديل التفاصيل الذاتية هذه	Biyografik Detayları Düzenle
+PHP	EDIT_THIS_CHAIN_OF_EVENT	Edit this Chain of Event	Editer cette Chaîne d'événements	Editar esta cadena de eventos	Edit Rangkaian Peristiwa	កែ​សម្រួល​ចង្វាក់​ព្រឹត្តិការណ៍​នេះ	تعديل هذه السلسلة من الأحداث	Olaylar Zincirini Düzenle
+PHP	EDIT_THIS_EVENT	Edit this Event	Editer cet Evénement	Editar los datos de este evento	Edit Peristiwa	កែ​សម្រួល​ព្រឹត្តិកាណ៍រ​នេះ	تعديل هذا الحدث	Olayı Düzenle
+PHP	EDIT_THIS_INFORMATION	Edit this Information	Editer cette Information	Editar los datos de esta información	Edit Informasi	កែ​សម្រួល​ពត៌មាន​នេះ	تعديل هذه المعلومات	Bu Bilgiyi Düzenle
+PHP	EDIT_THIS_INTERVENING_PARTY	Edit this Intervening Party	Editer cette Partie Intervenante	Editar los datos de esta parte interviniente	Edit Pihak Pengintervensi	កែ​សម្រួល​ភាគី​អន្តរាគមន៍	تعديل الطرف المتدخل هذا	Müdahil Tarafı Düzenle
+PHP	EDIT_THIS_INTERVENTION	Edit this Intervention	Editer cette Intervention	Editar los datos de esta intervención	Edit Intervensi	កែ​សម្រួល​បទ​អន្តរាគមន៍​នេះ	تعديل هذا التدخل	Müdahaleyi Düzenle
+PHP	EDIT_THIS_INVOLVEMENT	Edit this Involvement	Editer cette Implication	Editar los datos de este involucramiento	Edit Keterlibatan	កែ​សម្រួល​ការ​ពាក់​ព័ន្ធ​នេះ	تعديل هذ التورط	Katılım Derecesini Düzenle
+PHP	EDIT_THIS_PERPETRATOR	Edit this Perpetrator	Editer ce Auteur	Editar los datos de este perpetrador	Edit Pelaku	កែ​សម្រួល​ជន​ប្រព្រឹត្តិ​នេះ	تعديل هذا الجاني	Fail Bilgisini Düzenle
+PHP	EDIT_THIS_PERSON	Edit this Person	Editer cette Personne	Editar los datos de esta persona	Edit Orang	កែ​សម្រួល​បុគ្គល​នេះ	تعديل هذا الشخص	Kişi Kaydını Düzenle
+PHP	EDIT_THIS_VICTIM	Edit this Victim	Editer cette Victime	Editar los datos de esta víctima	Edit Korban	កែ​សម្រួល​ជន​រង​គ្រោះ​នេះ	تعديل هذه الضحية	Mağdur Kaydını düzenle
+PHP	EDIT_USER	Edit user	Editer ce utilisateur	Editar el o la usuario(a)	Edit Pengguna	កែ​សំរួលអ្នក​ប្រើ​ប្រាស់	تعديل المستخدم	Kullanıcı Bilgisini Düzenle
+PHP	EDITING_PERSON_ADDRESS____	Edit the Person's address ...	Modifier l'adresse d'une personne...	Editar la dirección de esta persona…	Menambahkan Alamat	អាស័យ​ដ្ឋានបុគ្គល​ដែល​​កំពុង​កែ​សម្រួល	تعديل عنوان الشخص	Kişi Adresini Düzenle...
+PHP	EMAIL	Email	Courriel	Correo electrónico	Email	អ៊ីមែល	البريد الإلكتروني	E-mail
+PHP	EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL	Email address required, Invalid Email	Adresse e-mail nécessaire, adresse e-mail non valide	Es necesario que ingrese una cuenta de correo electrónico. Correo electrónico no válido	E-mail diwajibkan, e-mail tidak sesuai	ចាំ​បាច់​ត្រូវ​មាន​អាសយ​ដ្ឋាន​អ៊ី​មែល​ អ៊ី​មែល​មិន​ត្រឹម​ត្រូវ	البريد الإلكتروني مطلوب، البريد الإلكتروني غير صحيح	E-mail adresi gerekli, Geçersiz E-mail
+JS	ENABLE_HELP	Enable Help	Permettre l'Aide	Habilitar Ayuda	Aktifkan bantuan	ជួយ​អោយ​ដំណើរ​ការ	تفعيل المساعدة	Yardımı Etkinleştir
+PHP	ENABLE_INTERACTIVE_TRANSLATION	Enable interactive translation	Activer la traduction interactive	Habilitar la traducción interactiva	Aktifkan Terjemahan Interaktif	ប្រើ​ប្រាស់​ការ​បក​ប្រែ​អន្តរកម្ម	تفعيل الترجمة التفاعلية	İnteraktif çeviriyi etkinleştir
+PHP	END_DATE	End Date	Date finale	Fecha de finalización	Tanggal Akhir	កាល​បរិច្ឆេទ​បញ្ចប់	تاريخ الانتهاء	Bitiş Tarihi
+PHP	ENTITY	Entity	Entité	Entidad	Entitas	ផ្នែក​សំខាន់	كيان	Birim
+PHP	ENTITY_PERMISSIONS	Entity permissions	Permissions niveau entité	Permisos para las entidades	Wewenang entitas	ការ​អនុញ្ញាតិ​របស់ផ្នែក	التصاريح المخولة لللكيان	Birim düzenleme izinleri
+PHP	ENTRY	Entry	Saisie	Ingreso	Tambahkan	ការ​បញ្ចូល	الإدْخال 	Giriş
+JS	ERROR_OCCORED_WHILE_UPDATING_SERVER_	Error occurred while updating server.	Une erreur s'est produite lors de la mise à jour du serveur.	Se produjo un error durante la actualización del servidor.	Terjadi kesalahan saat membuat huriterm	មាន​បញ្ហា​កើត​ឡើង​ពេល​ដែល​Server មាន​ការ​កែ​ប្រែ	حدث خطأ أثناء تحديث  جهاز الخادم	Sunucu güncellenirken hata oluştu.
+PHP	ERROR_OCCURRED_WHILE_CREATING_HURITERM_	Error occurred while creating huriterm.	Une erreur s'est produite lors de la création de huriterm.	Se produjo un error al crear el huriterm	Terjadi kesalahan saat membuat huriterm	មាន​បញ្ហា​កើត​ឡើង​ពេល​ដែល​បង្កើតបញ្ជី​ពាក្យ​យូរីដុក។	حدث خطأ أثناء إنشاء huriterm	Terim oluşturulurken hata oluştu.
+PHP	ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_	Error on file save. Unable to save file.	Erreur de sauvegarde. Impossible d'enregistrer le fichier.	Se produjo un error al guardar el archivo. No se puede guardar el archivo	Kesalahan terjadi penyimpanan Pesan. File tidak tersimpan	មាន​បញ្ហា​លើ​ឯកសារ​រក្សា​ទុក។ មិន​អាច​រក្សា​ទុក​ឯកសារ​នេះ​បាន​ទេ។	خطأ في حفظ الملف. لم يتم حفظ الملف.	Dosya kaydedilirken hata oluştu. Dosya kaydedilemiyor.
+PHP	ERROR_WHILE_CREATING_FIELD_	Error while creating field.	Erreur lors de la création du champ.	Se produjo un error al crear el campo	Terjadi kesalahan saat membuat field	មាន​បញ្ហា​ពេល​បង្កើត​ខ្ទង់	خطأ أثناء إنشاء الخانة	Alan oluştururken hata oluştu.
+PHP	EVENT	Event	Evénement	Evento	Peristiwa	ព្រឹត្តិការណ៍	حدث	Olay
+PHP	EVENT_DESCRIPTION	Event Description	Description de l'Evénement	Descripción del evento	Deskripsi Peristiwa	ការ​ពិពណ៌នា​ព្រឹត្តិការណ៍	بيان الحدث	Olay Tanımı
+PHP	EVENT_DOES_NOT_EXIST_	Event does not exist.	L'événement n'existe pas	El evento no existe	Peristiwa tidak tersedia	មិន​មាន​ព្រឹត្តិការណ៍​នេះ​ទេ	الحدث غير موجود	Böyle bir Olay yok.
+PHP	EVENT_SEARCH_FORM	Event Search Form	Formulaire de recherche d'Evénement	Formulario para búsqueda de eventos	Form Pencarian Peristiwa	ទំរង់ស្វែង​រក​ព្រឹត្តិការណ៍	نموذج البحث في الحدث	Olay Arama Formu
+PHP	EVENT_STANDARD_FORMAT_XML	Event Standard Format XML	XML du format standard Evénement	Formato estándar de evento en archivo XML	Standar Format Peristiwa XML	ទំរង់​ព្រឹត្តិការណ៍XML	الصيغة القياسية للحدث هي XML	Olay Standart Formatı XML
+PHP	EVENT_TITLE	Event Title	Titre de l'événement	Título del evento	Judul Peristiwa	ចំណង​ជើង​ព្រឹត្តិការណ៍	عنوان الحدث	Olay Adı
+PHP	EVENTS	Events	Evénements	Eventos	Peristiwa	ព្រឹត្តិការណ៍	الأحداث	Olaylar
+PHP	EXAMPLE	Example	Exemple	Ejemplo	Contoh	ឧទាហរណ៍	مثال	Örnek
+PHP	EXAMPLES	Examples	Exemples	Ejemplos	Contoh	ឧទាហរណ៍	أمثلة	Örnekler
+PHP	EXISTING_FIELDS	Existing fields	Champs existants	Campos existentes	Fields yang ada	ខ្ទង់​ដែល​មាន​ស្រាប់	الخانات القائمة	Varolan alanlar
+PHP	EXPORT	Export	Exporter	Exportar	Ekspor	នាំ​ចេញ	تصدير	Dışarıya aktar
+PHP	EXPORT__	Export :	Exporter :	Exportar	Ekspor:	នាំ​ចេញ	تصدير:	Dışarıya aktar:
+PHP	EXPORT_DATE	Export Date	Date d'export	Exportar Fecha	Tanggal Ekspor	កាលបរិចេ្ឆទ​នាំចូល​ទិន្នន័យ	تاريخ التصدير	Dışarıya aktarım tarihi
+PHP	EXPORT_EVENTS	Export Events	Exporter des Evénements	Exportar los eventos	Ekspor Peristiwa	នាំ​ព្រឹត្តិការណ៍ចេញក្រៅ	أحداث التصدير	Olayları dışarıya aktar
+PHP	EXPORT_INSTANCE	Export Instance	Instance d'export	Exportar Instancia	Ekspor Peristiwa	ការ​នាំចេញ​ទិន្នន័យ​ភ្លាម	حالة التصدير	Örneği dışarı aktar
+PHP	EXPORT_THIS_TABLE_TO_A_SPREADSHEET	Export this table to a spreadsheet	Exporter cette table vers une tableur	Exportar esta tabla a una hoja de cálculo	Ekspor tabel ini ke lembarkerja	បញ្ជូនតារាងនេះ​ទៅ​កាន់​កម្មវិធីអ៊ិកសែល	تصدير هذا الجدول إلى بيانات مُجَدْوَلَة 	Bu tabloyu çizelgeye aktar
+PHP	EXPORT_TIME	Export Time	Heure d'export	Exportar Hora	Ekspor waktu	ពេល​វេលា​នាំ​ចេញ​ទិន្នន័យ	وقت التصدير	Zamanı dışarı aktar
+PHP	FAILED_TO_WRITE_FILE_TO_DISK_	Failed to write file to disk.	Impossible de enregistrer le fichier sur la disque	No se pudo grabar el archivo en el disco	Tidak bisa mencatat pada cakram	មិនអាចថត​ឯកសារ​បញ្ចូល​ក្នុង​ឌិស​បាន	تعذر النسخ على القرص.	Dosya diske yazılamadı.
+PHP	FALSE	false	faux	falso	false	ខុស	خاطئ	Yanlış
+PHP	FAX	Fax	Fax	Fax	Faks	ទូរសារ	فاكس	Faks
+PHP	FIELD_CREATED_SUCCESSFULLY_	Field created successfully.	Champ créé avec succès	El campo ha sido creado correctamente	Field berhasil dibuat	ខ្ទង់​ត្រូវ​បាន​បង្កើត​ជា​ស្ថាពរ​ហើយ	تم إنشاء الخانة بنجاح	Alan başarıyla oluşturuldu.
+PHP	FIELD_LABEL	Field Label	Etiquette du champ	Etiqueta de campo	Label Field	អក្សរ​សំគាល់​ខ្ទង់	 رموز تعريف الخانة	Alan Etiketi
+PHP	FIELD_NAME	Field name	Nom du champ	Nombre de campo	Field nama	ឈ្មោះ​ខ្ទង់	اسم الخانة	Alan Adı
+PHP	FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES	Field name , field number and field label cannot be empty. Please enter some values	Nom du champ, numéro du champ, et étiquette du champ ne peuvent pas être vides. Veuillez entrer des valeurs.	El nombre, número y etiqueta del campo no pueden quedar vacíos. Por favor, ingrese los valores	Nama, nomor dan label field harus diisi.	ឈ្មោះ​ខ្ទង់​ លេខ​ខ្ទង់​ និង​អក្សរ​សំគាល់​ខ្ទង់​មិន​អាច​ទំនេរ​ទេ	لا يجوز أن يكون اسم الخانة، ورقم الخانة وعلامة الخانة فارغين. يرجى إدخال بعض القيم	Alan adı, alan numarası ve alan etiketi boş olamaz. Lütfen değer giriniz.
+PHP	FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME	Field name already exists. Please give it another name	Nom du champ existe déjà. Veuillez donner un autre nom	Este nombre de campo ya existe. Por favor, ingrese un nombre diferente	Nama pengguna sudah digunakan, silahkan cari nama lain.	ថិេលស	اسم الملف موجود من قبل. يرجى إعطائه اسم آخر.	Bu alan adı zaten var. Lütfen başka bir isim verin.
+PHP	FIELD_NUMBER	Field number	Numéro du champ	Número de campo	Field nomor	លេខខ្ទង់	رقم الخانة	Alan numarası
+PHP	FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER	Field number already exists. Please choose a different number	Numéro de champ existe déjà. Veuillez choisir un numéro différent	Este número de campo ya existe. Por favor, elija otro número	Nomor field sudah digunakan. Silahkan pilih nomor yang lain	លេខ​ខ្ទង់​មាន​រួច​ហើយ។​ សូម​ជ្រើស​រើស​លេខ​ផ្សេងទៀត។	رقم الخانة موجود من قبل. يرجى اختيار رقم آخر.	Bu alan numarası zaten var. Lütfen başka bir numara seçin.
+PHP	FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_	Field numbers ending with 60 to 80 are reserved for management fields. Please use a number which do not falls in this range.	Les champs finissant avec les nombres de 60 à 80 sont réservé pour la gestion. Veuillez choisir un nombre en dehors de cette groupe.	Los números de campos con que termina 60 a 80 están reservados para los campos de gestión. Por favor, use un número que no cae en este rango.	Nomor field dengan akhiran 60 ke 80 telah digunakan untuk field manajemen. Silahkan gunakan angka diluar	ខ្ទង់លេខដែលបញ្ជាប់ពីលេខ៦០ទៅ៨០គឺ​រក្សាទុក​សំរាប់​ខ្ទង់​រដ្ឋបាល​គ្រប់​គ្រង។ សូម​ប្រើ​លេខ​ដែល​មិន​ជាន់​នឹង​លេខ​​ខ្ទង់​ចន្លោះ​នេះ។	أرقام الخانات التي تنتهي بـ 60 إلى 80 مخصصة لخانات الإدارة. يرجى استخدام رقم لا يقع ضمن هذا النطاق	60 ile 80 arasında biten alan numaraları yönetim alanları için ayrılmıştır. Lütfen bu aralık dışında bir numara atayın.
+PHP	FIELD_RESET	Field Reset	Réinitialiser le champ	Restaurar campo	Nama Field	ឈ្មោះ​ខ្ទង់​កំណត់​ឡើង​វិញ	إعادة ضبط الخانة	Alan Sıfırlandı
+PHP	FIELD_S_	Field(s)	Champ(s)	Campo(s)	Field	ខ្ទង់	الخانة (الخانات)	Alan(lar)
+PHP	FIELD_TYPE	Field type	Type de champ	Tipo de campo	Tipe field	ប្រភេទ​ខ្ទង់	نوع الخانة	Alan Türü
+PHP	FILE_IS_NOT_WRITABLE_	File is not writable.	Le fichier n'est pas modifiable.	El archivo no permite escritura	File tidak dapat disalin	ឯកសារ​នេះ​មិន​អាច​ថត​ចំលង​បាន​ទេ។	لا يمكن النسخ على الملف	Alan yazılabilir değil.
+PHP	FILE_UPLOAD_STOPPED_BY_EXTENSION_	File upload stopped by extension.	Chargement de fichier arrêté en cause de son extension	Se detuvo la carga del archivo por su extensión	File yang diunggah dihentikan oleh ekstensi	ការ​ដាក់​បញ្ចូល​ឯកសារ​ត្រូវ​បាន​បញ្ឈប់​ដោយការ​ពង្រីក	تم إيقاف تحميل الملف عن طريق الامتداد	Dosya yüklemesi başka bir program nedeniyle durdu.
+PHP	FILTER	Filter	Filtre	Filtro	Saringan	ច្រោះ​ពត៌មាន	مرشح ـ فلتر	Filtrele
+PHP	FILTER_OPTIONS_AND_RESULTS	filter options and results	Filtres: options et résultats	Filtrar opciones y resultados	Hasil filter dan pilihan	ជំរើស​និង​លទ្ធផល​នៃ​ការ​ច្រោះ​ពត៌មាន	خيارات ونتائج الترشيح 	Filtreleme seçenekleri ve sonuçlar
+PHP	FINAL_DATE	Final Date	Date final	Fecha de finalización	Tanggal Akhir	កាលបរិច្ឆេទ​ចុង​ក្រោយ	التاريخ النهائي	Bitiş Tarihi
+PHP	FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS	Find documents which have been uploaded to OpenEvsys, and see how they have been linked in support of other formats	Trouver les documents qui ont été transférés vers OpenEvsys, et voir comment ils ont été liés à d'autres formats	Buscar documentos cargados en OpenEvSys, y ver cómo se han relacionado con otros formatos	Temukan dokumen yang diunggah ke Openevsys dan lihat keterhubungan dengan format lainnya	ស្វែង​រក​ឯកសារ​ដែល​គេ​បាន​ដាក់​បញ្ចូល​ទៅ​ក្នុង​អូផែន​អែវ​ស៊ីស​ ហើយ​មើល​ថាតើគេ​ភ្ជាប់​គ្នា​ដោយ​ទំរង់​ដទៃ​យ៉ាង​ដូច​ម្តេច	اعثر على الوثائق التي تم تحميلها على OpenEvsys وانظر كيف يمكن ربطها لدعم الصيغ الأخرى	Veritabanına yüklenen belgeleri bul ve nasıl diğer formatları destekleyecek şekilde bağlantılandırıldığını gör.
+PHP	FINISH	Finish	Terminer	Terminar	Selesai	បញ្ចប់	إنهاء	Bitir
+PHP	FINISHED__YOU_CAN_DO_THE_FOLLOWING	Finished! You can do the following	Terminé! Vous pouvez faire ce qui suit :	¡Listo! Ahora puede hacer lo siguiente	Selesai! Anda dapat melakukan	ចប់! អ្នក​អាច​ធ្វើ​កិច្ច​ការខាង​ក្រោម​បាន	انتهى! يمكنك القيام بما يلي	Bitti! Şimdi şunu yapabilirsiniz
+PHP	FINISHED__YOU_CAN_DO_THE_FOLLOWING_	Finished! You can do the following:	Terminé! Vous pouvez faire ce qui suit :	¡Listo! Ahora puede hacer lo siguiente:	Selesai! Anda dapat melakukan:	ចប់! អ្នក​អាច​ធ្វើ​កិច្ច​ការខាង​ក្រោម​បាន	انتهى! يمكنك القيام بما يلي:	Bitti! Şimdi şunu yapabilirsiniz: 
+PHP	FIRST_NAME	First Name	Prénom	Nombre de pila	Nama Depan	នាម​ខ្លួន	الاسم الأول	İsim
+PHP	FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_	Folder already exists! Give it a different name.	Le dossier existe déjà! Donnez-lui un nom différent.	¡Esta carpeta ya existe! Asígnele un nombre diferente	Folder sudah ada. Gunakan nama lain	សំណុំ​ឯកសារ​នេះ​បាន​រួច​មក​ហើយ។​ សូម​ប្រើ​ឈ្មោះ​ផ្សេងទៀត។	المجلد موجود من قبل! امنحه اسما آخر.	Bu isimde bir klasör zaten var! Başka bir isim verin.
+PHP	FOLDER_NAME	Folder name	Nom du dossier	Nombre de carpeta	Nama Folder	ឈ្មោះ​ហ្វូលដឺ	اسم المجلد	Klasör adı
+JS	FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY	The following fields can not be empty	Les champs suivants ne peuvent pas être vide	Las siguientes campos no puede estar vacío	Field ini harus di isi	ខ្ទង់​ខាង​ក្រោម​នេះ​មិន​អាច​ទទេរ​បានទេ។	لا يجوز أن تكون الخانات التالية فارغة	Bu alanlar boş olamaz
+PHP	FOLLOWING_HURITERM_ALREADY_EXIST_	The following huriterm already exist.	Le huriterm suivant existe déjà	El siguiente huriterm ya existe	Huriterm harus di isi	Following huriterm already exist.	مصطلاحات هوريدكس  huriterm   التالية موجودة من قبل 	Bu terim zaten var.
+PHP	FORCE_DELETE	Force Delete	Forcer la suppression	Borrar todos los archivos	Hapus Paksa	លុប​ចោល​ដោយ​បង្ខំ	حذف قسري	Silmeye Zorla
+PHP	FORM	Form	Formulaire	Formulario	Formulir	ទំរង់	نموذج	Form
+PHP	FORM_CUSTOMIZATION	Form customization	Personnalisation des formulaires	Personalización de los formularios	Formulir Kustomisasi	ទំរង់សំរាប់​ធ្វើ​ការ​រៀបចំ	تخصيص النموذج	Formları Düzenle
+PHP	FURTHER_INFORMATION	Further Information	Pour plus d'informations	Más información	Informasi Selanjutnya	ពត៌មាន​បន្ថែម	معلومات إضافية	Diğer Bilgiler
+PHP	GO_TO_PARENT_LEVEL	Go to parent level	Aller au niveau supérieur	Ir al nivel superior de jerarquía	Ke tingkat sebelumnya	ទៅ​កាន់​កំរិត​ធំ​បំផុត	الرجوع إلى مستوى الأصل	Üst seviyeye git
+JS	GROUP_BY_DAY	Group by Day	Grouper par jour	Agrupar por Día	Kelompokkan berdasarkan hari	កំណតក្រុម​តាម​ថ្ងៃ	وضع في مجموعات حسب اليوم	Güne göre grupla
+JS	GROUP_BY_MONTHLY	Group by month	Grouper par mois	Agrupar por Mes	Kelompokkan berdasarkan bulan	កំណត់​ក្រុម​តាម​ខែ	وضع في مجموعات حسب الشهر	Aya göre grupla
+JS	GROUP_BY_YEARLY	Group by year	Grouper par année	Agrupar por Año	Kelompokkan berdasarkan tahun	កំណត់​ក្រុម​តាម​ឆ្នាំ	وضع في مجموعات حسب السنة	Yıla göre grupla
+PHP	GUIDELINES	Guidelines	Lignes directrices	Guía	Acuan	ការ​ណែនាំ	توجيهات	Yönergeler
+PHP	HELP_TEXT	Help Text	Texte d'aide	Texto de ayuda	Teks Bantuan	ជំនួយ	نص المساعدة	Yardım Metni
+PHP	HIDE_ADDRESS_FORM	Hide Address form	Cacher le formulaire des adresses	Ocultar el formulario de direcciones	Sembunyikan form Alamat	លាក់​ទំរង់​អាសយ​ដ្ឋាន	إخفاء نموذج العنوان	Adres formunu gizle
+PHP	HIDE_SEARCH_FORM	Hide search form	Cacher le formulaire de recherches	Ocultar el formulario de búsqueda	Sembunyikan form pencarian	លាក់​ទំរង់​ស្វែង​រក	إخفاء نموذج البحث	Arama formunu gizle
+PHP	HIDE_SUPPORTING_DOCUMENT_S_	Hide Supporting Document(s)	Cacher les Documents de support	Ocultar los documentos de apoyo	Sembunyikan Dokumen-Dokumen Pendukung	លាក់​ឯកសារ​យោង	إخفاء الوثيقة (الوثائق) الداعمة	Destekleyici Belge(leri) Gizle
+JS	HIDE_TREE	Hide Tree	Cacher l'Arbre	Hide Tree	Hide Tree	Hide Tree	اخفاء البنية التسلسلية الشجرية	Kategorileri Gizle
+PHP	HOW_WAS_	How was	Comment était	¿cómo se	Bagaimana	How was	كيف كان	Nasıl
+PHP	HURICODE	Huricode	Huricode	Huricode	Huricode	លេខកូដ​យូរីដុក	Huricodeترميز هوريدكس 	Kod
+PHP	HURITERM_CAN_NOT_BE_EMPTY_	Huriterm can not be empty.	Huriterm ne peut être vide	El huriterm no debe quedar vacío	Huriterm harus di isi	បញ្ជី​ពាក្យ​យូរីដុក​មិន​ត្រូវ​អត់​បំពេញ​ទេ។	لا يمكن أن يكون  مصطلح هوريدكسHuriterm   خاليا.	Terim alanı boş bırakılamaz.
+PHP	IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__	If an Event/Person is Confidential?	Si un Evénement ou une Personne est confidentiel ?	¿Si un evento o una persona es confidencial?	Apakah data Peristiwa/Orang rahasia?	តើព្រឹ្តត្តិការណ៍​/បុគ្គល​នេះរក្សាការសំងាត់​ឬ​?	اذا كان الحدث/الشخص سري؟	Olay/Kişi bilgisi gizli mi?
+PHP	IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_	If you reach this page it means you do not have access to any of the modules in OpenEvsys. Please contact the system administrator for more details.	So vous arrivez sur cette page, vous n'avez pas accès au modules d'OpenEvsys. Veuillez contacter l'administrateur du système pour plus de détails.	Si usted llega a esta página significa que no tienen acceso a cualquiera de los módulos en OpenEvsys. Por favor, póngase en contacto con el administrador del sistema para más detalles.	Jika menemui halaman ini artinya anda tidak memiliki akses ke modul apapun di OpenEvsys. Silahkan hubungi admin untuk informasi lebih jauh.	បើ​អ្នក​មក​ដល់​ទំព័រ​នេះ​ មាន​ន័យ​ថា​អ្នក​មិន​បាន​ចូល​ទៅ​កាន់​ម៉ូឌុល​ណាមួយ​របស់​អូផែនែវ​ស៊ីស​ទេ ។ សូម​ទាក់ទង​​ប្រព័ន្ធ​អ្នក​រដ្ឋបាល​ចំពោះ​ពត៌មាន​បន្ថែម។	إذا وصلت إلى هذه الصفحة، فإن ذلك يعني أنه لا يمكنك الوصول إلى أية وحدات برمجية في  OpenEvsys. يرجى الاتصال بمسؤول النظام لمزيد من التفاصيل.	Bu sayfayı görüyorsanız veritabanındaki hiçbir modüle erişiminiz yok demektir. Lütfen detaylar için sistem yöneticisiyle bağlantıya geçin.
+PHP	IMPACT	Impact	Impact	Impacto sobre la situación	Dampak	ផល​ប៉ះពាល់	الأثر	Etki
+PHP	IMPORT	Import	Importer	Importar	Impor	នាំ​ចូល	جلب	İçeri aktar
+PHP	IMPORT_DATE	Import Date	Date d'importation	Fecha de importación	Tanggal impor	កាលបរិច្ឆេទ​​នាំចូល​ទិន្ន័ន័យ	تاريخ الجلب	Tarihi içeri aktar
+PHP	IMPORT_EVENTS	Import Events	Importer Evénements	Importar eventos	Impor Peristiwa	នាំ​ព្រឹត្តិការណ៍​ចូល	أحداث الجلب	Olayları içeri aktar
+PHP	IMPORT_LOG	Import log	Log d'importation	Log de importación	Daftar impor	បញ្ចី​ពាក្យ​នាំ​ចូល	سجل الجلب	Sistem günlüğünü içeri aktar
+PHP	IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE	Import log details are not available	Les détails sur le log d'importation ne sont pas disponibles	Los detalles del Log de importación no están disponibles	Detil log tidak tersedia untuk Peristiwa ini	មិន​មាន​បញ្ជី​ពាក្យ​នាំ​ចូល​លំអិត​ទេ	تفاصيل سجل الجلب غير متوفرة	Sistem günlüğünü içeri aktarma detayları mevcut değil
+PHP	IMPORT_TIME	Import Time	Heure d'importation	Hora de importación	Impor	ពេល​វេលា​នាំ​ចូល​ទិន្នន័យ	تاريخ الجلب	Zamanı içeri aktar
+JS	IN_BETWEEN	in between	entre	entre	in between	នៅ​ក្នុង​ចន្លោះ	 في وَسَط 	arasında
+PHP	IN_SEARCH_RESULTS	In search results	Incluse dans les résultats	Se muestra en los resultados de búsqueda	Dalam hasil pencarian	នៅ​ក្នុង​លទ្ធផល​នៃ​ការ​ស្វែង​រក	في نتائج البحث	Arama sonuçlarında 
+PHP	INCIDENT_TABLE	Incident Table	Table d'Incidents	Tabla de incidentes	Tabel Kecelakaan	តារាង​ករណី​ដែល​បាន​កើត​ឡើង	جدول الحالة	Vaka Tablosu
+PHP	INFORMATION	Information	Information	Información	Informasi	ពត៌មាន	معلومات	Bilgi
+PHP	INFORMATION_ABOUT	Information about	Informations sur	Información acerca de	Informasi tentang	ពត៌មាន​អំពី	معلومات حول	Hakkında bilgi
+PHP	INFORMATION_S_	Information(s)	Information(s)	Información	Informasi	ពត៌មាន	معلومة (معلومات)	Bilgi(ler)
+PHP	INFORMATION_SEARCH_FORM	Information Search Form	Formulaire de recherche d'Informations	Formulario para búsqueda de información	Form Pencarian Informasi	ទំរង់​ស្វែង​រក​ពត៌មាន	نموذج البحث في المعلومات	Bilgi Arama Formu
+PHP	INITIAL_DATE	Initial date	Date initiale	Fecha de inicio	Tanggal awal	ថ្ងៃ​ចាប់​ផ្តើម​ដំបូង	التاريخ الأولي	Başlangıç tarihi
+PHP	INTERVENING_PARTIES	Intervening Parties	Parties intervenantes	Partes intervinientes	Pihak Yang Mengintervensi	ភាគី​អន្តរាគមន៍	الأطراف المتدخلة	Müdahil Taraflar
+PHP	INTERVENING_PARTY	Intervening Party	Partie intervenante	Parte interviniente	Pihak Pegintervensi	ភាគី​អន្តរាគមន៍	الطرف المتدخل	Müdahil Taraf
+PHP	INTERVENING_PARTY_SEARCH_FORM	Intervening Party Search Form	Formulaire de recherche de Parties intervenantes	Formulario para búsqueda de partes intervinientes	Form Pencarian Pihak Yang Mengintervensi	ទំរង់​ស្វែង​រក​ភាគី​អន្តរាគមន៍	نموذج البحث في الطرف المتدخل	Müdahil Taraf Arama Formu
+PHP	INTERVENTION	Intervention	Intervention	Intervención	Intervensi	ការ​អន្តរាគមន៍	التدخّل 	Müdahale
+PHP	INTERVENTION_S_	Intervention(s)	Intervention(s)	Intervenciones	Intervensi	បទ​អន្តរាគមន៍	التدخّل  (التدخلات)	Müdahale(ler)
+PHP	INTERVENTION_SEARCH_FORM	Intervention Search Form	Formulaire de recherche d'Interventions	Formulario para búsqueda de intervenciones	Form Pencarian Intervensi	ទំរង់​ស្វែង​រក​បទ​អន្តរាគមន៍	نموذج البحث في التدخّل	Müdahale Arama Formu
+PHP	INTERVENTIONS	Interventions	Interventions	Intervenciones	Intervensi	បទ​អន្តរាគមន៍	التدخّلات	Müdahaleler  
+PHP	INVALID_EMAIL	Invalid Email	Email incorrect	Correo electrónico inválido	Email tidak tepat	អ៊ីមែល​មិន​ត្រឹម​ត្រូវ	بريد إلكتروني غير صحيح	Geçersiz e-mail
+PHP	INVALID_EMAIL_ADDRESS	Invalid email address	Adresse e-mail incorrecte	Correo electrónico inválido	Alamat Email tidak valid	អ៊ីមែល​មិន​ត្រឹម​ត្រូវ	عنوان بريد إلكتروني غير صحيح	Geçersiz e-mail adresi
+PHP	INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_	Invalid Huricode, it should be a 12 digit number.	Huricode non valable, il devrait être de 12 chiffres.	Huricode inválido. Debe ser un número de 12 dígitos	Invalid huricode, harus dalam nomor 12 digit	លេខ​សំងាត់មិន​ត្រឹមត្រូវព្រោះ​ថា​គួរ​មាន១២​ខ្ទង់។	ترميزهوريدكس غير صحيح، يجب أن يكون الرقم مكونا من 12 خانة  	Geçersiz kod, 12 basamaklı bir kod girin.
+PHP	INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_	Invalid user id or password, please try again.	Identité de l'utilisateur ou mot de passe non valable! Veuillez essayer de nouveau	La identificación o contraseña de el o la usuario(a) son inválidas. Por favor, intente de nuevo	Nama pengguna atau password tidak sesuai, silahkan coba lagi.	ឈ្មោះ​​អ្នក​ប្រើ​ប្រាស់​និង​លេខ​សំងាត់​​ពុំ​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្តង​ទៀត	اسم المستخدم او كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى	Geçersiz kullanıcı adı ya da şifresi girdiniz, lütfen tekrar deneyin.
+PHP	INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_	Invalid username or password! Please try again.	Nom d'utilisateur ou mot de passe non valable! Veuillez essayer de nouveau.	¡El nombre de usuario(a) o la contraseña son inválidas! Por favor, intente de nuevo	Nama pengguna atau password tidak sesuai, silahkan coba lagi.	ឈ្មោះ​​អ្នក​ប្រើ​ប្រាស់​និង​លេខ​សំងាត់​​ពុំ​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្តង​ទៀត	اسم مستخدم أو كلمة مرور غير صحيحة! يرجى المحاولة مرة أخرى	Geçersiz kullanıcı adı ya da şifresi girdiniz! Lütfen tekrar deneyin.
+PHP	INVOLVED_IN	involved in	Impliqué dans	involucrado en	terlibat dalam	ពាក់​ព័ន្ធនឹង	متورط في	karışma
+PHP	INVOLVEMENT	Involvement	Implication	Involucramiento	Keterlibatan	ការពាក់​ព័ន្ធ	تَوَرُّط 	Katılım
+PHP	INVOLVEMENT_DETAILS	Involvement details	Détails sur l'Implication	Detalles del involucramiento	Rincian Keterlibatan	ពត៌មាន​លំអិត​អំពី​ការ​ពាក់​ព័ន្ធ	تفاصيل التَوَرُّط	Katılım detayları
+PHP	INVOLVEMENT_S_	Involvement(s)	Implication(s)	Involucramiento(s)	Keterlibatan	ការពាក់​ព័ន្ធ	التَوَرُّط -التَوَرُّطات 	Katılım(lar)
+PHP	INVOLVEMENT_SEARCH_FORM	Involvement Search Form	Formulaire de recherche d'Implication	Formulario para búsqueda de involucramientos	Form Pencarian Keterlibatan	ទំរង់​ស្វែង​រក​ការ​ពាក់​ព័ន្ធ	نموذج البحث في المشاركة	Katılım Arama Formu
+PHP	INVOLVEMENTS	Involvements	Implications	Involucramientos	Keterlibatan	ការពាក់​ព័ន្ធ	التَوَرُّط-التَوَرُّطات 	Katılımlar
+JS	IS_A_SUB_ELEMENT_OF	is a sub element of	est un sous-élément de	es un sub elemento de	is a sub element of	គឺ​ជា​ធាតុ​បន្ទាប់​បន្សំ​​នៃ	عنصر فرعي من	alt elemanıdır
+JS	IS_EMPTY	is empty	est vide	es vacío	is empty	ទទេអត់មាន	فارغ	boş
+PHP	IS_REQUIRED	Is required	Obligatoire	Es obligatorio	Wajib	ចាំ​បាច់​ត្រូវ​មាន	مطلوب	Zorunlu
+FLAG	KEY	EN	FR	ES	IND	KM	AR	TR
+PHP	KILLING	Killing	Assassinat	Muertes y asesinatos	Pembunuhan	ការ​សំលាប់	قتل	Öldürme
+PHP	LABEL	Label	Etiquette	Etiqueta	Label	ឈ្មោះ​តំណាង​ខ្ទង់	 رموز التعريف- علامة	Etiket
+PHP	LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_	Label cannot be empty. Enter a value.	L'étiquette ne peut pas être vide. Entrez une valeur.	La etiqueta no puede quedar vacía. Ingrese un valor	Label harus diisi	អក្សរ​សំគាល់ខ្ទង់មិន​អាច​ទុកឲ្យ​ទំនេរ​ទេ	لا يجوز أن تكون  رموز التعريف فارغة. أدخل قيمة	Etiket boş olamaz. Bir değer girin.
+PHP	LABEL_IN_	Label in	Etiquette dans	Etiqueta	Label dalam	Label in	رموز التعريف في	Etiketli
+PHP	LABEL_S_	Label(s)	Etiquette(s)	Etiqueta(s)	Label	ឈ្មោះ​ខ្ទង់	 رمز /رموز التعريف	Etiket(ler)
+PHP	LABELS	Labels	Etiquettes	Etiquetas	Label	ឈ្មោះ​ខ្ទង់	 رموز التعريف	Etiketler
+PHP	LANGUAGE	Language	Langue	Idioma	Bahasa	ភាសា	اللغة	Dil
+PHP	LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_	Language directory is not writable.	Le répertoire des langues n'est pas inscriptible.	El directorio de idiomas no permite escritura	Direktori Bahasa tidak dapat disalin	បញ្ជី​ភាសា​មិន​អាច​ថត​ចំលង​បាន​ទេ។	لا يمكن النسخ على دليل اللغة	Dil dizini yazılabilir değil.
+PHP	LANGUAGE_REMOVED	Language removed	Langue supprimée	Idioma eliminado	Bahasa telah dihapus	ភាសា​ត្រូវ​បាន​ដក​ចេញ​ហើយ	تمت إزالة اللغة	Dil kaldırıldı.
+PHP	LANGUAGE_WAS_CREATED_SUCCESSFULLY_	Language was created successfully.	Langage a été créé avec succès.	Se creó correctamente el idioma	Bahasa telah selesai dibuat	អ្នក​បង្កើត​ភាសា​បាន​ជា​ស្ថាពរហើយ។	لقد تم إنشاء اللغة بنجاح	Dil başarıyla oluşturuldu.
+PHP	LAST_NAME	Last Name	Nom de famille	Apellido	Nama Akhir	នាមត្រកូល	الاسم الأخير	Soyad
+JS	LIKE	like	comme	como	like	ដូច	مثل	benzer
+PHP	LINKED_WHEN	Linked when	Lié quand ?	Fecha de vinculación	Kapan terhubung	បាន​ភ្ជាប់​ពី​ពេល​ណា	ربط عند	Şu durumda bağlantılandırılır
+PHP	LINKS	Links	Liens	Vínculos	Link	ខ្សែរ​ភ្ជាប់	الروابط	Bağlantılar
+PHP	LOCALIZATION	Localization	Localisation	Adaptación local	Melokalisasi	ការធ្វើ​ឲ្យ​ត្រូវ​នឹង​តំរូវ​ការ​ក្នុង​ស្រុក	 التَمَوْضُع المحلي	Yerelleştirme
+PHP	LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON	Log details unavailable for this Person	Pas de détails du carnet d'audit pour cette personne	Los datos de creación y modificación del registro de esta persona no están disponibles	Detail log tidak tersedia untuk orang ini	ទុកពត៌មាន​លំអិតមិន​ឲ្យ​បុគ្គល​នេះ​មើល​បាន	تفاصيل السجل غير متوفرة لهذا الشخص	Bu Kişi için sistem günlüğü detayları mevcut değil
+PHP	MANAGE_LANGUAGES	Manage languages	Gestion des langues	Administrar idiomas	Atur Bahasa	គ្រប់​គ្រង​ភាសា	إدارة اللغات	Dilleri yönet
+PHP	MESSAGES_SAVED_SUCCESSFULLY_	Messages saved successfully.	Les messages ont été enregistrés avec succès.	Los mensajes se guardaron correctamente	Pesan telah disimpan	សារ​ត្រូវ​បាន​រក្សា​ទុក​ជា​ស្ថាពរ	تم حفظ الرسائل بنجاح	Mesajlar başarıyla kaydedildi.
+PHP	MICRO_THESAURI	Micro-thesauri	Micro-thesaurus	Micro-tesauros	Micro-Thesauri	បញ្ជី​ពាក្យ​តូច​ៗ	مكنز مصغر	Mikro-kavramlar dizini
+PHP	MICRO_THESAURI_CUSTOMIZATION	Micro-thesauri customization	Adaptation des Micro-thesaurus	Personalizar los  Micro-tesauros	Kustomisasi Mikro-thesauri	ការ​រៀបចំបញ្ជី​ពាក្យ​តូចៗ	تخصيص المكنز المصغر	Mikro-kavramlar dizinini düzenle
+PHP	MICRO_THESAURI_TERMS	Micro-thesauri terms	Termes des Micro-thesaurus	Términos de los Micro-tesauros	Istilah Micro-thesauri	បច្ចេក​ស័ព្ទ​បញ្ជី​ពាក្យ​តូចៗ	مصطلحات المكنز المصغر	Mikro-kavramlar dizini terimleri
+PHP	MISSING_A_TEMPORARY_FOLDER_	Missing a temporary folder.	Il manque un fichier temporaire	No se encuentra un archivo temporal	Temporary folder tidak ditemukan	បាត់​សំណុំ​ឯកសារ​បណ្តោះ​អាសន្ត	مجلد مؤقت مفقود	Geçiçi bir dosya kayıp
+PHP	MODIFIED_VALUE	Modified Value	Valeur modifié	Valor modificado	Nilai modifikasi	តំលៃ​ដែលកែ​ប្រែ	قيمة معدلة	Değiştirilen değer
+PHP	MODULE	Module	Module	Módulo	Modul	ម៉ូឌុល	وحدة برمجية	Modül
+PHP	MODULES	Modules	Modules	Módulos	Modul	ម៉ូឌុល	وحدات برمجية	Modüller
+PHP	MONITORING_STATUS	Monitoring Status	Statut de surveillance	Estatus de monitoreo	Status Pemantauan	ស្ថានភាព​នៃ​ការ​​ឃ្លាំ​មើល	وضع المراقبة	İzleme Durumu
+PHP	MORE_ABOUT_THIS_EVENT	More about this Event	Pour en savoir plus sur cet Evénement	Ver más acerca de este evento	Lebih lanjut untuk Peristiwa ini	ពត៌មាន​​ច្រើន​ទៀត​អំពី​ព្រឹត្តិការណ៍​នេះ	المزيد عن هذا الحدث	Bu Olay hakkında daha fazla bilgi
+PHP	MORE_ABOUT_THIS_PERSON	More about this Person	Plus sur cette Personne	Ver más acerca de esta persona	Lebih jauh tentang orang ini	ពត៌មាន​ច្រើន​ទៀត​អំពី​បុគ្គល​នេះ	المزيد عن هذا الشخص	Bu Kişi hakkında daha fazla bilgi
+PHP	MY_PREFERENCES	My Preferences	Mes préférences	Mis preferencias	Preferensi	ការជ្រើសរើស​របស់​ខ្ញុំ	تفضيلاتي	Tercihlerim
+PHP	MYSQL_DATA_TYPE	Mysql data type	Type de données Mysql	Tipo de datos Mysql	Jenis data mysql	Mysql data type	نوع بيانات Mysql	Mysql bilgi türü
+PHP	NAME	Name	Nom	Nombre	Nama	ឈ្មោះ	الاسم	İsim
+PHP	NEW	New	Nouveau	Nueva	Baru	New	جديد	Yeni
+PHP	NEW_DOCUMENT	New Document	Nouveau Document	Nuevo documento	Dokumen Baru	ឯកសារ​ថ្មី	وثيقة جديدة	Yeni Belge 
+PHP	NEW_EVENT	New Event	Nouvel Evénement	Nuevo evento	Peristiwa Baru	ព្រឹត្តិការណ៍​ថ្មី	حدث جديد	Yeni Olay
+PHP	NEW_PASSWORD	New Password	Nouvelle mot de passe	Nueva contraseña	Kata Sandi	លេខ​សំងាត់​ថ្មី	كلمة مرور جديدة	Yeni Şifre
+PHP	NEW_PERSON	New Person	Nouvelle Personne	Nueva persona	Orang Baru	បុគ្គល​ថ្មី	شخص جديد	Yeni Kişi  
+PHP	NEW_ROLE_NAME	New Role Name	Nom du nouveau Rôle	Nuevo nombre de actividad	Nama Role Baru	ឈ្មោះ​តួនាទី​ថ្មី	اسم دور جديد	Yeni Rol Adı
+PHP	NEXT	Next	Suivant	Siguiente	Lanjut	បន្ទាប់	التالي	Devam
+PHP	NO	No	Non	No	Tidak	អត់ទេ	لا	Hayır
+PHP	NO_QUERIES_SAVED_YET_	No queries saved yet.	Aucune requête sauvée	Todavía no se guardó ninguna consulta	Tidak ada pertanyaan yang disimpan.	អត់​មានបញ្ជី​សំណួរ​ណា​ត្រូវ​បាន​​រក្សា​ទុក​ទេ	لم يتم حفظ  اية استفسارات بعد	Kaydedilmiş bir sorgu yok.
+PHP	NO_RECORDS_WERE_FOUND_	No records were found.	Aucun enregistrement n'a été trouvée.	No se encontraron registros	Tidak ada catatan ditemukan	រក​មិន​ឃើញ​ករណី​នេះ​ទេ	لم يتم العثور على سجلات	Kayıt bulunamadı.
+PHP	NO_RECORDS_WERE_SELECTED_	No records were selected.	Aucune fiche n'a été sélectionnée.	No se seleccionó ningún registro	Tidak ada catatan yang dipilih	មិនទាន់​ជ្រើស​រើស​កំណត់​ត្រា​នៅ​ឡើយ​ទេ	لم يتم اختيار سجلات	Kayıt seçilmedi.
+JS	NOT_=	not =	pas =	no =	not =	មិន​ស្មើរ​នឹង	لا =	değil =
+PHP	NOT_A_VALID_FIELD_TYPE__TRY_AGAIN	Not a valid field type. Try again	Pas un type de champ valide. Essayez de nouveau	Tipo de campo inválido. Intente nuevamente	Tipe field tidak valid, silahkan coba lagi	មិន​មែន​ជា​ប្រទេភ​ខ្ទង់​ត្រឹម​ត្រូវ​ទេ	نوع الخانة غير صحيح. حاول مرة أخرى	Geçerli bir alan türü değil. Tekrar deneyin.
+JS	NOT_CONTAINS	not contains	ne contient pas	no contiene	not contains	មិនមាន​ផ្ទុក​ដោយ	لا يحتوي على	içermeyen
+JS	NOT_IN_BETWEEN	not in between	n'est pas entre	no entre	not in between	មិន​នៅ​ក្នុង​ចន្លោះ	لا يقع بين	arasında olmayan
+JS	NOT_LIKE	not like	n'est pas comme	no como	not like	មិន​ដូច	لا يشبه	benzer değil
+JS	NOT_ON	not on	pas au	no en	not on	មិន​មែន​ជា	ليس على	olmayan
+PHP	NUMBER_REQUIRED__INVALID_NUMBER	Number required, Invalid Number	Numéro nécessaire, numéro non valide	Es necesario que ingrese un número. Número no válido	Nomor dibutuhkan, Nomor tidak sesuai	ចាំ​បាច់​ត្រូវ​មាន​លេខ​ លេខ​មិន​ត្រឹម​ត្រូវ	الرقم مطلوب، الرقم غير صحيح	Rakam gerekli, Geçersiz Rakam
+PHP	OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_	OpenEvSys has successfully imported the data.	OpenEvSys a réussi à importer les données.	OpenEvSys importó los datos correctamente	OpenEvSys telah sukses mengimpor data	អូផែន​អែវស៊ីស​បាន​នាំ​យក​ទិន្ន​ន័យ​នេះ​មក​ជា​ស្ថាពរ​ហើយ។	قام OpenEvSys بجلب البيانات بنجاح	Veritabanı bilgiyi başarıyla içeri aktardı.
+JS	OR	OR	OU	O	OR	ឬ	او	VEYA
+PHP	ORDER	Order	Ordre	Orden	Aturan	លំដាប់	التَرْتِيب 	Sırala
+PHP	ORGANIZATION	Organization	Organisation	Organización	Organisasi	អង្គការ	التنظيم	Organizasyon
+PHP	ORIGINAL_SEARCH_RESULTS	Original Search Results	Résultats de recherche originaux	Resultados de la búsqueda inicial	Hasil Pencarian Awal	លទ្ធផលនៃ​ការ​ស្វែង​រក​ពី​ដំបូង	نتائج البحث الأصلي	Orijinal Arama Sonuçları
+PHP	PAGE__	Page :	page :	Página:	Halaman:	ទំព័រ	الصفحة:	Sayfa:
+PHP	PAGINATE_RESULTS	Paginate results	Paginer les résultats	Paginar los resultados	Hasil berdasarkan Halaman	ដាក់​លេខ​ទំព័រ​លទ្ធ​ផល	نتائج  أرقام الصفحات	Sonuçları sayfalandır
+PHP	PASSWORD	Password	Mot de passe	Contraseña	Kata Sandi	លេខ​សំងាត់	كلمة المرور	Şifre
+PHP	PASSWORD_INVALID	Password invalid	Mot de passe incorrect	Contraseña inválida	Kata sandi salah	លេខ​សំងាត់មិន​ត្រឹម​ត្រូវ	كلمة المرور غير صحيحة	Şifre geçersiz
+PHP	PASSWORD_MISMATCH	Password mismatch	Mot de passe erroné	No coinciden las contraseñas	Kata sandi tidak sama	លេខ​សំងាត់​មិន​ត្រូវ​គ្នា​ទេ	عدم تطابق كلمة المرور	Şifre uyumsuz
+PHP	PASSWORD_REQUIRED	Password Required	Mot de passe requis	Debe ingresar una contraseña	Sandi diwajibkan	ចាំ​បាច់​ត្រូវ​មាន​លេខ​សំងាត់	كلمة المرور مطلوبة	Şifre Gerekiyor
+PHP	PERMISSION_DENIED	Permission Denied	Autorisation refusée	Permiso denegado	Tidak diperkenankan	ការអនុញ្ញាតិ​ឲ្យ​ចូលត្រូវ​បាន​បដិសេធ	رفض التصريح	İzin Verilmedi
+PHP	PERMISSIONS	Permissions	Permissions	Permisos	Ijin	ការអនុញ្ញាតិ	التصريحات	İzinler
+PHP	PERMISSIONS_OF_	Permissions of	Permissions de	Permisos de	Ijin untuk	Permissions of	التصريحات الخاصة بـ	İzinleri
+PHP	PERMISSONS	Permissions	Permissions	Permisos	Ijin	ការអនុញ្ញាតិ	تصريحات	İzinler
+PHP	PERPETRATOR	Perpetrator	Auteur	Perpetrador	Pelaku	ជន​ប្រព្រឹត្តិ	الجاني	Fail
+PHP	PERPETRATOR_NAME_S_	Perpetrator name(s)	Nom(s) des auteurs	Nombre del perpetrador	Nama pelaku	ឈ្មោះ​ជន​ប្រព្រឹត្តិ	اسم (أسماء) الجاني (الجناة)	Fail isim(ler)i
+PHP	PERPETRATOR_SEARCH_FORM	Perpetrator Search Form	Formulaire de recherche d'auteurs	Formulario para búsqueda de perpetradores	Form Pencarian Pelaku	ទំរង់​ស្វែង​រក​អ្នក​ប្រព្រឹត្តិ	نموذج البحث في الجناة	Fail Arama Formu
+PHP	PERPETRATORS	Perpetrators	Auteurs	Perpetradores	Pelaku	ជន​ប្រព្រឹត្តិ	الجناة	Failler
+PHP	PERSON	Person	Personne	Persona	Orang	បុគ្គល	الشخص	Kişi
+PHP	PERSON_ADDRESS_ES_	Person Address(es)	Adresses des Personnes	Dirección(es) de personas	Rincian Orang	អសយ​ដ្ឋាន​បុគ្គល	عنوان (عناوين) الشخص	Kişi Adres(leri)
+PHP	PERSON_DETAIL_S_	Person Detail(s)	Détails sur la Personne	Detalles de la persona	Rincian Orang	ពត៌មាន​លំអិត​អំពី​បុគ្គល	تفاصيل الشخص	Kişi Detay(ları)
+PHP	PERSON_DOES_NOT_EXIST_	Person does not exist.	La Personne n'existe pas	La persona no existe	Orang tidak tersedia	មិន​មាន​បុគ្គល​នេះ​ទេ	الشخص غير موجود	Böyle bir Kişi yok.
+PHP	PERSON_NAME	Person Name	Nom de la Personne	Nombre de la persona	Nama Orang	ឈ្មោះ​បុគ្គល	اسم الشخص	Kişi Adı
+PHP	PERSON_RECORD_S_	Person record(s)	Enregistrement des Personnes	Registros de personas	Catatan Orang	ពត៌មាន​លំអិត​អំពី​បុគ្គល	سجل (سجلات) الشخص	Kişi kayıt(ları)
+PHP	PERSON_RECORDS_S_	Person records(s)	Enregistrements des Personnes	Registros de personas	Rincian Orang	ពត៌មាន​លំអិត​អំពី​បុគ្គល	سجل (سجلات) الشخص	Kişi kayıt(ları)
+JS	PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_	Person's date of birth is not entered	La date de naissance de la Personne n'est pas enregistré	Fecha de nacimiento de persona no se ha introducido	Tanggal lahir orang tidak dimasukkan	Person's date of birth is not entered	لم يتم إدخال تاريخ ميلاد الشخص	Kişinin doğum tarihi girilmedi
+PHP	PERSON_SEARCH_FORM	Person Search Form	Formulaire de recherche de Personnes	Formulario para búsqueda de personas	Form Pecarian Orang	ទំរង់​ស្វែង​រក​បុគ្គល	نموذج البحث في الأشخاص	Kişi Arama Formu
+PHP	PERSONS	Persons	Personnes	Personas	Orang	បុគ្គល	الأشخاص	Kişiler
+PHP	PHONE	Phone	Téléphone	Teléfono	Telpon	លេខទូរស័ព្ទ	رقم الهاتف	Telefon
+PHP	PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER	Phone number required, invalid phone number	Numéro de téléphone nécessaire, numéro de téléphone non valide	Es necesario que ingrese un número de teléfono. Número de teléfono no válido	Nomor telpon diwajibkan, nomor telpon tidak sesuai	ចាំ​បាច់​ត្រូវ​មាន​លេខ​ទូរស័ព្ទ លេខ​ទូរស័ព្ទ​មិន​ត្រឹម​ត្រូវ	رقم الهاتف مطلوب، رقم الهاتف غير صحيح	Telefon numarası gerekiyor, geçersiz telefon numarası
+PHP	PICTURE	Picture	Image	Ilustración	Foto	រូប​ភាព	صورة	Fotoğraf
+JS	PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_	Please add a condition before search.	Veuillez ajouter une condition avant de chercher.	Por favor, añada una condición antes de buscar.	Silahkan masukkan kondisi sebelum pencarian	សូម​ដាក់​លក្ខខណ្ឌ​មុន​នឹង​ស្វែង​រក	يرجى إضافة شرط قبل البحث.	Arama yapmadan önce bir koşul ekleyin.
+JS	PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_	Please add a condition inside the count box to count.	Veuillez ajouter une condition dans la boîte pour compter pour permettre la compte.	Por favor, añada una condición dentro de la caja contar por contar.	Silahkan masukan kondisi ke dalam kotak hitungan untuk menghitung	សូម​ដាក់​លក្ខខណ្ឌ​នៅ​ក្នុង​ប្រអប់​ដើម្បី​ជ្រើស​រើស	يرجى إضافة شرط داخل مربع العد من أجل القيام بالعد 	Listelemek için listeleme kutusuna bir koşul ekleyin.
+PHP	PLEASE_SELECT_A_USER_TO_DELETE	Please select a user to delete	S'il vous plaît sélectionner un utilisateur à supprimer	Por favor, elija el o la usuario(a) que desea borrar	Silahkan pilih pengguna yang akan dihapus	សូម​ជ្រើសរើស​អ្នក​ប្រើ​ប្រាស់​ដែល​ត្រូវ​លុបចេញ	يرجى اختيار المستخدم المراد حذفه	Lütfen silinecek kullanıcıyı seçin
+PHP	PLEASE_SELECT_A_VALID_USER_	Please select a valid user.	Choisir un utilisateur valide.	Por favor, elija un(a) usuario(a) válido(a)	Silahkan pilih pengguna yang valid	សូម​ជ្រើស​រើស​អ្នក​ប្រើ​ប្រាស់​ដែល​ត្រឹម​ត្រូវ។	يرجى اختيار مستخدم صحيح	Lütfen geçerli bir kullanıcı seçin.
+PHP	PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_	Please upload a valid OpenEvSys XML file.	Veuillez télécharger un fichier XML valide d'OpenEvSys.	Por favor, cargue un archivo OpenEvSys en formato XML válido	Silahkan unggah file OpenEvSys xml yang valid	សូម​ធ្វើ​ការ​ដាក់​បញ្ចូល​សំណុំ​xml​របស់​អូផែន​អែវស៊ីស​ដែល​ត្រឹម​ត្រូវ	يرجى تحميل ملف OpenEvSys XML صحيح	Lütfen geçerli bir OpenEvSys XML dosyası yükleyin.
+PHP	PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_	Please use My Preference option at top right corner to edit your details.	Utilisez l'option Mes Préférences en haut à droite de l'écran pour modifier vos coordonnées.	Para modificar su información personal, por favor ingrese a Mis preferencias en la esquina superior derecha	Silahkan gunakan Preferensi pada di sebelah kanan atas untuk memperbaharui rincian anda	សូម​ជ្រើស​រើស​យក​ជំរើស​របស់​ខ្ញុំ​នៅ​ខាង​ស្តាំ​ដៃ​ផ្នែក​ខាង​លើដើម្បីកែ​ប្រែ​ពត៌មាន​លំអិត។	يرجى استخدام خيار تفضيلاتي في أعلى الزاوية اليمنى من أجل تعديل التفاصيل الخاصة بك.	Detayları düzenlemek için lütfen sağ üst köşedeki Tercihlerim bölümünü kullanın.
+PHP	PREVIOUS	Previous	Précédent	Anterior	Sebelumnya	មុន	السابق	Önceki
+PHP	PRINT_THIS_EVENT	Print this Event	Imprimer cet Evénement	Imprimir este evento	Cetak Peristiwa	បោះ​ពុម្ព​ព្រឹត្តិការណ៍​នេះ	طباعة هذا الحدث	Olayı Yazdır
+PHP	PRINT_THIS_PAGE	Print this page	Imprimer cette page	Imprimir esta página	Cetak Halaman Ini	បោះ​ពុម្ព​ទំព័រ​នេះ	طباعة هذه الصفحة	Sayfayı Yazdır
+PHP	PRINT_THIS_PERSON	Print this Person	Imprimer cette Personne	Imprimir esta persona	Cetak Orang ini	បោះ​ពុម្ព​បុគ្គល​នេះ	طباعة هذا الشخص	Kişiyi Yazdır
+PHP	PRINTABLE_VIEW	Printable view	Version imprimable	Vista de impresión	Lihat hasil Cetak	មើល​អត្ថបទនេះក្នុង​ទំរង់​អាច​បោះ​ពុម្ពបាន	العرض المهيء للطباعة	Yazdırma görüntüsü
+PHP	QUERIES_DELETED_SUCCESSFULLY_	Queries deleted successfully.	Requêtes ont été supprimés.	Las consultas fueron borradas correctamente	Pertanyaan telah dihapus	សំណួរ​ស្វែង​រក​ត្រូវ​បាន​លុប​ចោល​ជា​ស្ថាពរ	تم مسح الاستفسارات بنجاح	Sorgulamalar başarıyla silindi.
+PHP	QUERY_ID	Query ID	ID Requête	Identificación de la consulta	ID Pertanyaan	លេខ​សំគាល់​សំណួរ​ស្វែង​រក	هوية الاستفسار	Sorgulama Kimliği 
+PHP	QUERY_WAS_SAVED_SUCCESSFULLY_	Query was saved successfully.	Requête a été enregistré.	La consulta fue guardada correctamente	Pertanyaan telah disimpan	ការ​ស្វែង​រក​ត្រូវ​បាន​រក្សា​ទុក​រួច​រាល់​ជា​ស្ថាពរ​ហើយ	تم حفظ الاستفسار بنجاح	Sorgu başarıyla kaydedildi.
+PHP	REC_NO	Rec-No	Rec-No	Reg. Nº	Rec-No	Rec-No	رقم السجل	Kayıt-No
+PHP	RECORD_NO	Record No	Enregistrement no.	Registro Nº	No. catatan	លេខ​កំណត់​ត្រា	رقم السجل	Kayıt Numarası
+PHP	RECORD_NUMBER	Record number	Numéro de l'enregistrement	Número de registro	Nomor Catatan	លេខ​កំណត់​ត្រា	رقم السجل	Kayıt Numarası
+PHP	RECORD_TYPE	Record type	Type d'enregistrement	Tipo de registro	Tipe Catatan	ប្រភេត​កំណត់​ត្រា	نوع السجل	Kayıt Türü
+PHP	RECORDS_PER_PAGE	Records per page	Enregistrements par page	Registros por página	Catatan per halaman	កំណត់​ត្រា​ក្នុង​មួយ​ទំព័រ	السجلات لكل صفحة	Sayfa başına kayıt sayısı
+JS	REGEX	regex	regex	regex	regex	ជ្រើស​រើស​ពាក្យ​​ប្រហាក់​ប្រហែល	regex	regex
+PHP	RELATED_EVENT	Related Event	Evénement connexe	Evento relacionado	Peristiwa Terkait	ព្រឹត្តិការណ៍​ដែល​ពាក់​ព័ន្ធ	الحدث ذو الصلة	Bağlantılı Olay
+PHP	RELATED_EVENT_TITLE	Related Event title	Titre de l'Evénement connexe	Título del evento relacionado	Judul Peristiwa Terkait	ចំណង​ជើង​ព្រឹត្តិការណ៍ដែល​ពាក់ព័ន្ធ	عنوان الحدث  ذو الصلة	Bağlantılı Olay adı
+PHP	RELATED_PERSON	Related Person	Personne connexe	Personas relacionadas	Orang terhubung	បុគ្ឡល​ពាក់​ព័ន្ធ	الشخص ذو الصلة	Bağlantılı Kişi
+PHP	REMARKS	Remarks	Remarques	Observaciones	Catatan	សេច​ក្តី​សង្កេត​បន្ថែម	ملاحظات توضيحية	Yorumlar
+JS	REMOVE	Remove	Enlever	Borrar	Hapus	ដក​ចេញ	إزالة	Kaldır
+JS	REMOVE_CLARIFY	Remove Clarify	Enlever Clarifier	Eliminar Explicar	Hapuskan Klarifikasi	លុបចោល​បញ្ជាក់​បន្ថែម	إزالة التوضيح 	Açıklamayı Kaldır
+JS	REMOVE_CONDITION	Remove Condition	Enlever Condition	Eliminar Condición	Hapuskan Kondisi	លុប​ចោល​លក្ខខណ្ឌ	إزالة الحالة  	Koşulu Kaldır
+PHP	REMOVE_LANGUAGE	Remove language	Enlever la langue	Eliminar idioma	Hapus bahasa	ដកភាសា​ចេញ	إزالة اللغة	Dili Kaldır
+JS	REMOVE_SELECTION	Remove Selection	Enlever Sélection	Eliminar Selección	Hapuskan Seleksi	លុប​ចោល​ការ​ជ្រើស​រើស	إزالة الاختيار  	Seçimi Kaldır
+PHP	REPORT	Report	Rapport	Reporte	Laporan	នាំ​ចូល	تقرير	Raporla
+PHP	REQUESTED_ACT_RECORD_DOES_NOT_EXIST_	Requested Act record does not exist.	L'Acte demandé n'existe pas	No existe registro del acto solicitado	Tindakan yang diminta tidak tersedia	មិន​មាន​បទ​រំលោភ​ដែល​​អ្នក​ស្វែង​រក​ទេ	سجل الفعل المطلوب غير موجود.	İstenen Fiil kaydı bulunmuyor.
+PHP	REQUESTED_INFORMATION_DOES_NOT_EXIST	Requested Information does not exist	L'Information demandée n'existe pas	No existe registro de la  información solicitada	Informasi yang diminta tidak tersedia	មិន​មាន​ពត៌មាន​នេះ​ទេ	المعلومات المطلوبة غير موجودة	İstenen Bilgi bulunmuyor.
+PHP	REQUESTED_INTERVENTION_DOES_NOT_EXIST	Requested Intervention does not exist	L'Intervention demandée n'existe pas	No existe registro de la intervención solicitada	Intervensi yang diminta tidak tersedia	មិន​មាន​អន្តរាគមន៍​នេះ​ទេ	التدخل المطلوب غير موجود	İstenen Müdahale bulunmuyor.
+PHP	REQUESTED_INVOLVEMENT_DOES_NOT_EXIST	Requested Involvement does not exist	L'Implication demandée n'existe pas	No existe registro del involucramiento solicitado	Keterlibatan yang diminta tidak tersedia	មិន​មាន​ការ​ពាក់​ព័ន្ធ​នេះ​ទេ	التورط المطلوب غير موجود	İstenen Karışma bulunmuyor.
+PHP	RESET	Reset	Réinitialiser	Restaurar	Reset	កំណត់​ឡើង​វិញ	إعادة ضبط	Sıfırla
+PHP	RESET_ALL	Reset All	Réinitialiser tous	Restaurar todos	Reset semua	កំណត់​ឡើង​វិញ	إعادة ضبط الجميع	Her şeyi sıfırla
+PHP	RESTRICT_FOR_THE_ROLE	Restrict for the role	Restriction pour la rôle	Restringir por la actividad	Terbatas untuk peran	ហាម​ប្រាម​ដល់​តួនាទី	تقيّد للدور	Rol sınırlaması
+PHP	RESTRICT_FOR_THE_USER	Restrict for the user	Restriction pour l'utilisateur	Restringir por el usuario	Terbatas untuk pengguna	ហាម​ប្រាម​ដល់​អ្នក​ប្រើ​ប្រាស់	تقيّد للمستخدم	Kullanıcı sınırlaması
+PHP	ROLE	Role	Rôle	Actividad	Peran	តួនាទី	الدَوْر	Rol
+PHP	ROLE_LIST	Role list	Liste des rôles	Lista de roles	Daftar Peran	បញ្ចី​តួនាទី	قائمة الأدوار	Rol listesi
+PHP	ROLES	Roles	Rôles	Actividades	Roles	តួនាទី	الأدوار	Roller
+PHP	ROLES___MODULE_ACCESS_CONTROL	Roles / Module Access Control	Rôles / Module de contrôle d'accès	Control de acceso a módulos / actividades	Peran / Modul Akses Kontrol	តួនាទី/ការ​គ្រប់​គ្រង​សិទ្ធិ	التحكم بالوصول إلى الأدوار/الوحدات البرمجية	Roller / Modül Erişim Kontrolü
+PHP	ROLES__AMP__MODULE_ACCESS_CONTROL	Roles &amp; Module Access Control	Module d'accès et de contrôle des rôles	Control de acceso a módulos / actividades	Roles dan Modul Akses Kontrol	តួនាទី &amp/; ការ​គ្រប់​គ្រង​សិទ្ធិ	الأدوار وAMP، التحكم بالوصول إلى الوحدة البرمجية	Roller ve amp; Modül Erişim Kontrolü
+PHP	ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT	Roles with permission to access this Event	Rôles qui ont la permission d'accéder à ce Document	Actividades con permiso para ingresar a este evento	Peran dengan wewenang untuk mengakses peristiwa ini	តួនាទី​ដែល​មាន​ការ​អុញ្ញាតិ​ឲ្យ​ប្រើ​ប្រាស់​ព្រឹត្តិការណ៍​នេះ	الأدوار المصرح لها بالوصول إلى هذا الحدث	Bu Olaya erişimi olan roller
+PHP	ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON	Roles with permission to access this Person	Rôles qui ont la permission d'accéder à cette Personne	Actividades con permiso para ingresar a esta Persona	Peran dengan wewenang untuk mengakses Orang ini	តួនាទី​ដែល​មាន​ការ​អុញ្ញាតិ​ឲ្យ​ប្រើ​ប្រាស់ទំរង់​បុគ្គល​នេះ	الأدوار المصرح لها بالوصول إلى هذا الشخص	Bu Kişiye erişimi olan roller
+PHP	SAVE	Save	Sauver	Guardar	Simpan	រក្សាទុក	حفظ	Kaydet
+PHP	SAVE_ADDRESS	Save Address	Sauvegarder l'adresse	Guardar la dirección	Simpan Alamat	Save Address	حفظ العنوان	Adresi Kaydet
+PHP	SAVE_DOCUMENT	Save Document	Sauvegarder le document	Guardar el documento	Simpan Dokumen	Save Document	حفظ الوثيقة	Belgeyi Kaydet
+PHP	SAVE_HELP_TEXT	Save Help Text	Sauver Texte aide	Guardar texto de ayuda	Simpan Teks Bantuan	រក្សា​ទុក​ឯកសារ​ពន្យល់​សំរាប់​ជា​ជំនួយ	حفظ نص المساعدة	Yardım Metnini Kaydet
+PHP	SAVE_NEW_FIELDS	Save new fields	Sauver les nouveaux champs	Guardar los campos nuevos	Simpan field baru	រក្សា​ខ្ទង់​ថ្មី	حفظ خانات جديدة	Yeni alanları kaydet
+PHP	SAVE_QUERY	Save query	Sauver la requête	Guardar la consulta	Simpan pertanyaan	រក្សា​ទុក​បញ្ជី​សំណួរ	حفظ الاستفسار	Sorgu kaydet
+PHP	SAVE_THIS_QUERY	Save this query	Sauver cette requête	Guardar esta consulta	Simpan pertanyaan ini	រក្សាទុកសំណួរ​ស្វែងរក​នេះ	حفظ هذا الاستفسار	Bu sorguyu kaydet
+PHP	SAVE_THIS_QUERY_WITH_THIS_SHUFFLE	Save this query with this shuffle	Enregistrez cette requête avec ce shuffle	Guardar los movimientos en esta consulta	Simpan pertanyaan dengan shuffle	រក្សាទុកសំណួរស្វែង​រក​នេះ​តាម​លំដាប់​នេះ	حفظ هذا الاستفسار مع هذا الترتيب المختلط	Sorguyu bu karışımla kaydet
+PHP	SAVED_QUERIES	Saved queries	Requêtes sauvées	Consultas guardadas	Pertanyaan yang tersimpan	សំណួរ​ស្វែង​រក​ដែល​បាន​រក្សា​ទុក	الاستفسارات المحفوظة	Kayıtlı sorgular
+PHP	SEARCH	Search	Recherches	Buscar	Cari	ស្វែង​រក	بحث	Arama
+PHP	SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_	Search additional information relevant to specific types of acts.	Rechercher des informations supplémentaires pertinentes à des types spécifiques d'actes.	Buscar información adicional pertinente para determinados tipos de actos.	Cari informasi tambahan informasi yang relevan ke jenis tindakan yang spesifik	Search additional information relevant to specific types of acts.	البحث عن معلومات إضافية متعلقة بانوع محددة من الأفعال	Belirli fiil türleri ile ilgili ek bilgi ara
+PHP	SEARCH_CONDITIONS	Search Conditions	Conditions de la recherche	Condiciones de búsqueda	Cari Kondisi	លក្ខខណ្ឌ​ក្នុង​ការ​ស្វែង​រក	شروط البحث	Arama Koşulları
+PHP	SEARCH_FORM	Search form	Formulaire de recherche	Formulario de búsqueda	Formulir pencarian	ទំរង់​ស្វែង​រក	نموذج البحث	Arama formu 
+PHP	SEARCH_IN_DATABASE	Search in database	Rechercher dans la base de données	Buscar en la base de datos	Cari dalam Pangkalan Data	ស្វែង​រក​ក្នុង​ប្រព័ន្ធ​គ្រប់​គ្រង​ទិន្ន​ន័យ	البحث في قواعد البيانات	Veritabanında ara
+PHP	SEARCH_INFORMATION_ABOUT_EVENTS_	Search information about Events.	Recherche d'informations sur des Evénements.	Buscar información sobre eventos	Cari informasi tentang Peristiwa	ពត៌មាន​អំពី​ការស្វែង​រក​អំពី​ព្រឹត្តិការណ៍	بحث عن معلومات حول الأحداث	Olaylar hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_	Search information about Persons who have been Perpetrators of Acts against Victims.	Recherche d'informations sur les Personnes qui ont été les auteurs d'actes contre des victimes.	Buscar información sobre personas que hayan sido perpetradores de actos en contra de las víctimas	Cari informasi mengenai Orang yang menjadi Pelaku dalam tindakan ke korban	ពត៌មានអំពី​ការ​ស្វែង​រក​អំពី​បុគ្គល​ដែល​ជា​អ្នក​ប្រព្រឹត្តិបទ​រំលោភ​លើ​អ្នក​រង​គ្រោះ	البحث عن معلومات حول الأشخاص المقترفين لأفعال ضد الضحايا	Mağdurlara karşı Fiillerin Failleri olan Kişiler hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_	Search information about Persons who have intervened in Events in some way.	Recherche d'informations sur les Personnes qui sont intervenues dans des événements d'une certaine façon.	Buscar información sobre personas que de alguna manera hayan actuado o intervenido sobre los eventos	Cari informasi mengenai Orang yang melakukan intervensi di Peristiwa.	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពី​បុគ្គល​ដែល​បាន​អន្តរាគមន៍​ក្នុង​ព្រឹត្តិការណ៍ក្នុង​កំរិត​ណាមួយ	البحث عن معلومات حول أشخاص تدخلوا في الأحداث بطريقة ما	Olaylara bir şekilde müdahale eden Kişiler hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_	Search information about Persons who have provided information.	Recherche d'informations sur les Personnes qui ont fourni des informations.	Buscar datos sobre personas que hayan proporcionado información	Cari informasi mengenai Orang yang menyediakan informasi	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពី​បុគ្គល​ដែល​ជា​អ្នក​ផ្តល់​ពត៌មាន	البحث عن معلومات حول الأشخاص الذين قدموا معلومات	Bilgi sağlayan Kişiler hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_	Search information on Persons, whether they are individuals, groups or organisations.	Recherche d'informations sur les Personnes, qu'il s'agisse d'individus, de groupes ou d'organisations.	Buscar información sobre personas, ya sean individuos, grupos u organizaciones	Cari informasi pada Orang, baik itu individu, kelompok atau organisasi	ពត៌មាន​អំពីការស្វែង​រក​អំពីបុគ្គល​ថាតើបុគ្គល​នោះ​ជាបុគ្គល​ម្នាក់ ក្រុម​ ឬ​ស្ថាប័ន	البحث عن معلومات حول أشخاص، سواء كانوا أفرادا أو مجموعات او منظمات.	Birey, grup ya da bir örgüt üyesi Kişiler hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_	Search information on Persons who have been Victims.	Recherche des informations sur les Personnes qui ont été victimes.	Buscar información sobre personas que hayan sido víctimas	Cari informasi pada Orang yang menjadi Korban	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពី​បុគ្គល​ដែល​ជា​អ្នក​រង​គ្រោះ	البحث عن معلومات حول الأشخاص الذين أصبحوا ضحايا	Mağdur olan Kişiler hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_	Search information on the Acts committed against Victims.	Recherche des informations sur les Actes commis à l'encontre des victimes.	Buscar información sobre actos cometidos en contra de las víctimas	Cari informasi mengenai Tindakan ke Korban	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពី​បទ​រំលោភ​ដែល​ធ្វើ​ឡើង​លើ​ជន​រង​គ្រោះ	البحث عن معلومات حول الأفعال المرتكبة ضد الضحايا.	Mağdurlara karşı işlenmiş Fiiller hakkında bilgi ara
+PHP	SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_	Search information on the data provided by Sources.	Recherche des informations sur les données fournies par les Sources.	Buscar información sobre los datos proporcionados por las fuentes	Cari informasi dalam data yang disediakan oleh Sumber	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពីទិន្ន​ន័យ​ដែល​ផ្តល់​ដោយ​ប្រភពពត៌មាន	البحث عن معلومات حول البيانات المقدمة من المصادر	Kaynaklar tarafından sağlanan verilere ilişkin bilgi ara
+PHP	SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_	Search information on the ways in which Perpetrators have been involved in specific Acts.	Recherche des informations sur la façon dont les Auteurs ont été impliqués dans des actes spécifiques.	Buscar información sobre cómo los perpetradores se han involucrado en actos específicos	Cari informasi bagaimana Pelaku terlibat dalam Tindakan tertentu	ពត៌មាន​អំពី​ការ​ស្វែង​រក​អំពី​ថាតើអ្នក​ប្រព្រឹត្តិ​ពាក់​ព័ន្ធ​នឹង​បទ​រំលោភ​តាម​របៀប​ណា	البحث عن معلومات حول الطرق التي اشترك فيها الجناة في أفعال محددة.	Faillerin belirli Fiillere katılma yollarıyla ilgili bilgi ara
+PHP	SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_	Search records about how Persons have intervened in Events or on behalf of Victims.	Recherche de documents sur la façon dont les Personnes sont intervenues pour des événements ou pour le compte des victimes.	Buscar información sobre cómo las personas han actuado o intervenido sobre los eventos o a favor de las víctimas	Cari catatan bagaimana Orang mengintervensi ke Peristiwa atas nama Korban	បញ្ជី​ស្វែង​រក​អំពី​ថា​តើ​បុគ្គល​បាន​អន្តរាគមន៍​ក្នុង​ព្រឹត្តិការណ៍​ក្នុង​នាម​ជន​រង​គ្រោះ​តាម​របៀបណា	البحث في السجلات عن الأشخاص الذين تدخلوا في الاحداث أو نيابة عن الضحايا	Kişilerin Olaylara nasıl müdahale ettiklerini ya da Mağdurlar adına nasıl bir müdahalede bulunduklarını içeren kayıtları ara
+PHP	SEARCH_REPORT	Search report	Imprimer le rapport	Reporte de búsqueda	Pencarian laporan	ស្វែង​រក​របាយការណ៍	تقرير البحث	Raporda ara
+PHP	SEARCH_RESULTS	Search results	Résultats de requêtes	Resultados de búsqueda	Hasil pencarian	លទ្ធផល​នៃ​ការ​ស្វែង​រក	نتائج البحث	Sonuçlarda ara
+PHP	SEARCHABLE	Searchable	Inclus dans la recherche	Se puede buscar	Dapat dicari	អាច​ធ្វើ​ការ​ស្វែង​រក​បាន	قابل للبحث	Aranabilir
+PHP	SECTION	Section	Section	Sección	Seksi	ផ្នែក	قِسْم 	Bölüm
+PHP	SEE_FULL_SIZE_IMAGE	See full size image	Voir image en taille réelle	Ver imagen en tamaño completo	Lihat ukuran penuh dari gambar	មើល​រួប​ភាពក្នុង​ទំហំ​ពេញ	انظر الحجم الكامل للصورة	İmajı tam boyutlu olarak göster
+PHP	SELECT	Select	Sélectionner	Seleccionar	Pilih	ជ្រើសរើស	اختيار	Seç 
+PHP	SELECT_A_FORMAT	Select a format	Sélectionnez un format	Seleccione un formato	Pilih format	ជ្រើសរើសផ្នែកណាមួយ	اختر صيغة	Format seç
+PHP	SELECT_A_MICRO_THESAURUS	Select a Micro-thesaurus	Sélectionner un micro-thesaurus	Seleccione un Micro-tesauro	Pilih Micro-thesauri	ជ្រើសរើសបញ្ជីពាក្យតូចៗ	اختر مكنز مصغر	Mikro-kavram seç
+JS	SELECT_ENTITY	Select Entity	Sélectionner une entité	Seleccionar una entidad	Pilih entitas	ជ្រើស​រើស​ផ្នែកសំខាន់​​ទី២	اختر الكيان	Birim seç
+JS	SELECT_FIELD	Select Field	Sélectionner un champ	Seleccionar un campo	Pilih fields	ជ្រើស​រើស​ខ្ទង់​ពី	اختيار الخانة	Alan seç
+PHP	SELECT_FIELDS_FROM_	Select fields from	Sélectionner les champs de	seleccionar los campos de	Pilih dari field	Select fields from	اختيار الخانة من	Bunlar arasından alan seç
+PHP	SELECT_ROLE	Select role	Sélectionner une rôle	Seleccione una actividad	Pilih Peran	ជ្រើស​រើស​តួនាទី	اختيار الدور	Rol seç
+PHP	SELECT_SECONDARY_ENTITY	Select secondary entity	Sélectionner une entité secondaire	Seleccionar una entidad secundaria	Pilih entitas kedua	ជ្រើស​រើស​ផ្នែកសំខាន់​​ទី២	اختيار الكيان الثانوي	İkincil birim seç
+JS	SELECT_TREE_OPTION	Select Tree Option	Sélectionner une option de l'arbre	Seleccionar Opción árbol	Pilih Pohon Pilihan	ជ្រើស​រើស​​ជំរើស​បី	اختيار خيار البنية التسلسلية الشجرية	Kategori seçeneklerini belirle
+PHP	SET	Set	Choisir	Configurar	Atur	កំណត់យក	ضبط	Ayarla
+PHP	SET_ACL_MODE	Set ACL mode	Etablir mode ACL	Establecer modo ACL	Atur mode ACL	បង្កើត​ទំរង់​​ACL	ضبط وضع قائمة التحكم في الوصول	ACL modunu ayarla
+PHP	SET_LANGUAGE	Set language	Choisir la langue	Establecer un idioma	Pilih Bahasa	កំណត់​ភាសា	ضبط اللغة	Dili ayarla
+PHP	SET_SYSTEM_LANGUAGE	Set system language	Choisir votre langue de système	Establecer el idioma del sistema	Pilih Sistem Bahasa	ដាក់ភាសា​របស់​ប្រព័ន្ធ	ضبط لغة النظام	Sistem dilini ayarla
+PHP	SHARE	Share	Partager	Compartir	Berbagi	ចែក​ចាយ	مشاركة	Paylaş
+PHP	SHOW_ADDRESS_FORM	Show Address form	Montrer le formulaire des adresses	Mostrar el formulario de direcciones	Perlihatkan form Alamat	បង្ហាញ​ទំរង់​អាសយដ្ឋាន	إظهار العنوان من	Adres formunu göster
+PHP	SHOW_ALL	Show all	Afficher tout	Mostrar todo	Perlihatkan Semua	បង្ហាញ​ទាំង​អស់	إظهار الجميع	Hepsini göster
+PHP	SHOW_SEARCH_FORM	Show search form	Montrer le formulaire de recherche	Mostrar el formulario de búsqueda	Perlihatkan Formulir Pencarian	បង្ហាញ​ទំរង់​ស្វែង​រក	إظهار نموذج البحث	Arama formunu göster
+PHP	SHOW_SUPPORTING_DOCUMENT_S_	Show Supporting Document(s)	Montrer les Documents de support	Mostrar los documentos de apoyo	Tampilkan Dokumen-Dokumen Pendukung	បង្ហាញ​ឯកសារ​យោង	إظهار الوثيقة (الوثائق) الداعمة	Destekleyici Belge(leri) Göster
+PHP	SIGN_IN	Sign in	Identifiant	Regístrese	Masuk	ចុះ​ឈ្មោះ​ចូល​ប្រើ	تسجيل الدخول	Giriş yap
+PHP	SIGN_IN_TO_OPENEVSYS	Sign in to OpenEvSys	Identifiez-vous à OpenEvsys	Regístrese en OpenEvSys	Masuk ke OpenEvsys	ចុះ​ឈ្មោះ​ចូល​ប្រើ​អូផែន​អែវ​ស៊ីស	تسجيل الدخول في	OpenEvSys'e giriş yap
+PHP	SIGN_OUT	Sign out	Déconnexion	Salir	Keluar	ចាកចេញ	تسجيل الخروج	Çıkış yap
+PHP	SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_	Some errors occurred while importing data:	Certaines erreurs se sont produites lors de l'importation de données:	Se produjeron algunos errores al importar los datos:	Beberapa kesalahan terjadi saat import, periksa laporan kesalahan	មាន​បញ្ហា​កំហុស​ឆ្គង​ខ្លះ​កើតឡើង​ក្នុង​ពេល​​នាំ​ទិន្នន័យ​ចូល	وقعت بعض الأخطاء أثناء جلب البيانات:	İçeri aktarırken hata oluştu:
+JS	SOUND_LIKE	sound like	sonne comme	sonar como	sound like	សម្លេង​ប្រហាក់​ប្រហែល	يشبه	benziyor
+PHP	SOURCE	Source	Source	Fuente	Sumber	ប្រភព	المصدر	Kaynak
+PHP	SOURCE_NAME	Source name	Nom de la Source	Nombre de la fuente	Nama Sumber	ឈ្មោះ​ប្រភព	اسم المصدر	Kaynak adı
+PHP	SOURCE_SEARCH_FORM	Source Search Form	Formulaire de recherche de sources	Formulario para búsqueda de fuentes	Form Pencarian Sumber	ទំរង់​ស្វែង​រក​ប្រភព	نموذج البحث في المصدر	Kaynak Arama Formu
+PHP	SOURCES	Sources	Sources	Fuentes	Sumber	ប្រភព	المصادر	Kaynakalar 
+PHP	SPREADSHEET	Spreadsheet	tableur	Hoja de cálculo	Lembarkerja	Spreadsheet	البيانات مُجَدْوَلَة	Çizelge
+PHP	START_DATE	Start Date	Date initiale	Fecha de inicio	Tanggal Mulai	កាល​បរិច្ឆេទ​ចាប់​ផ្តើម	تاريخ البدء	Başlangıç Tarihi
+PHP	STATUS	Status	Statut	Estatus	Status	ឋានៈ/ស្ថានភាព	الوضع	Durum
+PHP	SUBMIT	Submit	Envoyer	Presentar	Daftarkan	បញ្ជូន	إرسال	Gönder
+PHP	SUPPORTING_DOCUMENTS	Supporting Documents	Documents de Support	Documentos de apoyo	Dokumen Pendukung	ឯកសារ​យោង	الوثائق الداعمة	Destekleyici Belgeler
+PHP	SYSTEM_CONFIGURATION	System configuration	Configuration du système	Configuración del sistema	Konfigurasi sistem	System configuration	تهيئة النظام	Sistem konfigürasyonu
+PHP	SYSTEM_ERROR	System Error	Erreur système	Error del sistema	Kesalahan Sistem	បញ្ហា​ប្រព័ន្ធ	خطأ في النظام	Sistem Hatası
+PHP	TERM_IN	Term in	Terme dans	Término en	Istilah dalam	ពាក្យ​ក្នុង	المدة في	İçinde terim
+PHP	TERM_IN_	Term in	Terme dans	Término en	Istilah dalam	ពាក្យ​ក្នុង	المدة في	İçinde terim
+PHP	TEXT	Text	Texte	Texto	Teks	អត្ថបទ	نص	Metin
+PHP	TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT	Text field with a 200 character limit	Champ de texte de 200 caractères maximum	Campo de texto con un límite de 200 caracteres	Field teks dibatasi 200 karakter	ខ្ទង់អត្ថបទ​កំរិត​ត្រឹម​២០០​តួអក្សរ	حد الأحرف في خانة النص هو 200 حرف	200 karakter sınırlı metin alanı
+PHP	TEXTAREA_WITH_UNLIMITED_TEXT	Text area with unlimited text	Champ de texte sans limite de caractères	Área de texto ilimitado	Wilayah teks tak terbatas	តំបន់អត្ថបទ​ដែល​មិន​កំរិត​ចំនួន​តួអក្សរ	مساحة الصيغة ذات نَصّ غير المحدود	Sınırsız metin alanı
+PHP	THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_	The document uploaded was not a valid XML document.	Le document téléchargé n'est pas un document XML valide.	El documento cargado no era un documento en formato XML válido	Dokumen yang diunggah bukan dokumen xml yang sesuai	ឯកសារ​ដែល​ដាក់​បញ្ចូល​មិន​មែន​ជា​ឯកសារ​xml​ត្រឹម​ត្រូវ​ទេ។	الوثيقة التي نم تحميلها ليست  وثيقة xml سَلِيمة	Yüklenen dosya geçerli bir xml belgesi değil.
+PHP	THE_EVENT_IS_LINKED	The event is linked	Cet Evénement est lié	El evento está relacionado	Peristiwa ini terhubung	ព្រឹត្តិការណ៍​នេះ​ត្រូវ​បាន​ភ្ជាប់គ្នា	الحدث مربوط	Olay bağlantılı
+PHP	THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_	The old file attachment was updated with the new file attachment.	L'ancien fichier joint a été mis à jour avec le nouveau fichier en pièce jointe.	El archivo adjunto anterior fue reemplazado por el nuevo archivo adjunto	File lampiran telah diperbaharui dengan file lampiran baru.	សំណុំឯកសារ​ដែល​មាន​ស្រាប់​ត្រូវ​បានបំពេញ​បន្ថែមដោយ​សំណុំ​ឯកសារ​ថ្មី	لقد تم تحديث مرفق الملف القديم بمرفق الملف الحديث	Eski ekli dosya yeni dosya ile değiştirildi.
+PHP	THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_	The Person does not yet have any roles!	Cette Personne n'a pas encore de rôles	¡La persona aún no tiene roles asignados!	Orang ini belum memiliki peran	បុគ្គល​នេះ​មិន​ទាន់​មាន​តួនាទី​នៅ​ឡើយ​ទេ	لا توجد اي ادوار بعد لهذا الشخص!	Kişinin henüz bir rolü yok!
+PHP	THE_TWO_PASSWORDS_ARE_DIFFERENT	The two passwords are different	Les deux mots de passe sont différents	No coinciden las contraseñas	Dua kata sandi tidak sama	លេខ​សំងាត់​ទាំង​ពីរ​នេះ​ខុស​គ្នា	كلمتا المرور مختلفتان	İki şifre birbirinden farklı
+PHP	THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_	The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.	La taille du fichier à charger est plus large que la directive MAX_FILE_SIZE qui a été spécifié dans le forme HTML	El tamaño del archivo cargado excede el límite establecido en MAX_FILE_SIZE especificado en el formulario HTML	File yang diunggah melebihi MAX_FILE_SIZE yang diperkenankan dalam form HTML	ឯកសារ​ដែល​ដាក់​បញ្ចូល​មាន​ទំហំ​ធំ​ជាង​ទំហំ​អតិបរិមា​ដែល​អនុញ្ញាតិ​ដោយ​ទំរង់​html	الملف الذي تم تحميله يتجاوز توجيه MAX_FILE_SIZE المحدد في نموذج HTML	Yüklenen dosya HTML formunda belirtilen MAX_FILE_SIZE'ı (maksimum dosya büyüklüğünü) aşıyor.
+PHP	THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_	The uploaded file exceeds the upload_max_filesize directive in php.ini.	La taille du fichier à charger est plus large que la directive upload_max_filesize en php.ini	El tamaño del archivo cargado excede el límite establecido en upload_max_filesize de php.ini	File yang diunggah melebihi upload_max_filesize pada php.ini	ឯកសារដែល​ដាក់​បញ្ចូល​មាន​ទំហំ​ធំ​ជាង​ទំហំ​អតិ​បរិមាដែល​អនុញ្ញាតិ	الملف الذي تم تحميله يتجاوز توجيه upload_max_filesize المحدد في نموذج HTMLphp.ini	Yüklenen dosya php.ini yönergesinde belirtilen upload_max_filesize'ı (maksimum dosya büyüklüğünü) aşıyor.
+PHP	THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_	The uploaded file was only partially uploaded.	Seulement un partie du fichier à charger à été chargé	El archivo fue cargado parcialmente	File hanya terunggah sebagian	ឯកសារ​ដែល​ដាក់​បញ្ចូល​ត្រូវ​បាន​បញ្ចូល​តែ​ផ្នែក​ខ្លះ​ប៉ុណ្ណោះ	الملف  تم تحميله جزئيا فقط	Yüklenen dosyanın yalnızca bir kısmı yüklenebildi.
+PHP	THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_	There are no Documents yet. You should add some!	Il n'a pas encore de Documents - vous devriez en rajouter !	No existe ningún documento. ¡Por favor, agregue uno!	Belum ada dokumen tersedia. Silahkan menambahkan!	មិន​ទាន់​មាន​ឯកសារ​នៅ​ឡើយ​ទេ​ ប៉ុន្តែ​អ្នក​គួរ​បញ្ចូល​ខ្លះ	لا توجد وثائق بعد. يجب عليك إضافة بعض الوثائق!	Henüz hiç Belge yok. Eklemeniz gerek!
+PHP	THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_	There are no Supporting documents about Events yet. You should add some!	Il n'a pas encore de Documents de support pour l'Evénement - vous devriez en rajouter !	No existe ningún documento de apoyo por los Eventos. ¡Por favor, agregue uno!	Belum ada Dokumen pendukung mengenai Peristiwa tersedia. Silahkan menambahkan!	មិន​ទាន់​មាន​ឯកសារ​យោង​នៅ​ឡើយ​ទេ អ្នក​គួរ​បញ្ចូល​បន្ថែម	لا توجد وثائق داعمة حول الأحداث بعد. يجب عليك إضافة بعض الوثائق!	Olaylarla ilgili hiç destekleyici belge yok. Eklemeniz gerek!
+PHP	THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_	There is no address added to this Person yet. You should add some!	Ils n'y pas encore une adresse pour cette personne - rajoutez-en !	No existe ninguna dirección por esta persona. ¡Por favor, agregue alguna!	Belum ada alamat pada Orang ini. Silahkan tambahkan!	ពុំ​ទាន់​មាន​អសយ​ដ្ឋាន​បន្ថែមចំពោះ​បុគ្គល​នេះ​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا يوجد عنوان مضاف لهذا الشخص بعد. يجب عليك إضافة بعض العناوين!	Bu Kişi için henüz adres eklenmemiş. Eklemeniz gerek!
+PHP	THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_	There is no biographic Details about this Person yet. You should add some!	Ils n'y pas encore des Détails biographiques pour cette personne - rajoutez-en !	No existen detalles biográficos sobre esta persona. ¡Por favor, agregue alguno!	Belum ada Riwayat Hidup tentang Orang ini. Silahkan tambahkan!	ពុំ​ទាន់​មាន​ពត៌មានអំពី​ជីវ​ប្រវត្តិ​បុគ្គល​នេះ​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا توجد تفاصيل ذاتية حول هذا الشخص بعد. يجب عليك إضافة بعض التفاصيل!	Bu Kişiyle ilgili henüz biyografik detay girilmemiş. Eklemeniz gerek!
+PHP	THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_	There is no Event information yet. You should add some! Click the "Add new Event" button to add a new Event.	Il n'existe pas encore d'information sur l'Evénement. Vous devriez en ajouter ! Cliquez sur le bouton «Ajouter un nouvel événement» pour ajouter un  événement.	No hay información de eventos todavía. Usted debe agregar algo! Haga clic en la opción "Agregar un nuevo evento" para añadir un nuevo evento.	Belum ada informasi Peristiwa. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa.	There is no Event information yet. You should add some!. Click the "Add new Event" button to add a new Event.	لا توجد معلومات حول الحدث بعد. يجب عليك إضافة بعض المعلومات! انقر على مفتاح "إضافة حدث جديد" لإضافة حدث جديد.	Olay bilgisi henüz yok. Eklemeniz gerek! Yeni bir Olay girmek için "Yeni Olay Ekle"yi tıklayın.
+PHP	THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_	There is no information about Chain of Events yet. You should add some!	Il n'y pas encore d'informations sur cette Chaîne d'Evénements - rajoutez-en !	No existe ninguna cadena de eventos. ¡Por favor, agregue una!	Belum ada Rangkaian Peristiwa. Silahkan Tambahkan!	មិន​ទាន់​មាន​ពត៌មាន​អំពី​ចង្វាក់​ព្រឹត្តិការណ៍​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បន្ថែម​ខ្លះ។	لا توجد معلومات حول سلسلة الأحداث بعد. يجب عليك إضافة بعض المعلومات!	Henüz hiç Olaylar Zinciri eklenmemiş. Eklemeniz gerek!
+PHP	THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_	There is no information about Intervening Party and Intervention yet. You should add some!	Il n'y a pas encore de détails sur les Parties Intervenantes - rajoutez-en !	No existe ninguna información sobre parte interviniente o intervención. ¡Por favor, agregue información!	Belum ada informasi tentang Intervensi dan Pihak Pengintervensi. Tambahkan	ពុំ​ទាន់​មាន​ពត៌មាន​អំពី​ភាគី​អន្តរាគមន័​និង​បទ​អន្តរាគមន៍​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا توجد معلومات حول الطرف المتدخل والتدخل بعد. يجب عليك إضافة بعض المعلومات!	Henüz Müdahale Eden Taraf ve Müdahale bilgisi girilmemiş. Eklemeniz gerek!
+PHP	THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_	There is no information about Source and Information yet. You should add some.	Il n'y a pas encore de détails sur les Sources et les Informations - rajoutez-en !	No existe ningún dato sobre fuente o información. !Por favor, agregue datos!	Belum ada informasi Sumber dan Informasi. Silahkan tambahkan!	ពុំ​ទាន់​មាន​ពត៌មាន​អំពី​ប្រភព​និង​ពត៌មាន​នៅ​ឡើយ​ទេ។ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا توجد معلومات حول المصدر والمعلومات بعد. يجب عليك إضافة بعض المعلومات.	Henüz Kaynak ve Bilgi girilmemiş. Eklemeniz gerek!
+PHP	THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME	There is no information about Victims and Perpetrators yet. You should add some	Il n'y a pas encore de détails sur les Victimes et les Auteurs - rajoutez-en !	No existe ninguna información sobre víctimas o perpetradores. !Por favor, agregue información!	Belum ada informasi tentang Korban dan Pelaku. Silahkan tambahkan!	ពុំ​ទាន់​មាន​ពត៌មាន​អំពី​ជន​រង​គ្រោះ​និង​ជន​ប្រព្រឹត្តិ​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا توجد معلومات حول الضحايا والجناة بعد. يجب عليك إضافة بعض المعلومات.	Henüz Mağdur ve Faillerle ilgili bilgi girilmemiş. Eklemeniz gerek.
+PHP	THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_	There is no Person information yet. You should add some!	Il n'y pas encore de Personnes - rajoutez-en !	No existe información de esta persona. ¡Por favor, agregue alguna!	Belum Informasi tentang Orang . Silahkan tambahkan!	ពុំ​ទាន់​មាន​ពត៌មាន​បុគ្ឡល​នៅ​ឡើយ​ទេ។​ អ្នក​គួរ​តែ​បញ្ចូល​ខ្លះ។	لا توجد معلومات حول الشخص بعد. يجب عليك إضافة بعض المعلومات!	Henüz Kişi bilgisi girilmemiş. Eklemeniz gerek.
+PHP	TIMESTAMP	Timestamp	Horodatage	Registro de fecha y hora	Catatan waktu	ម៉ោង​និង​កាល​បរិច្ឆេទ​ជាក់​លាក់	ختم زمني	Tarih bilgisi
+PHP	TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_	To view a Document you have to first select a Document from the Document list.	Pour afficher un Document, vous devez d'abord sélectionner un document de la liste.	Para ver un documento, primero debe seleccionarlo de la lista de documentos	Untuk melihat Dokumen, silahkan pilih satu dokumen dari daftar Dokumen	ដើម្បី​បើក​មើល​ឯកសារ​ណា​មួយ​​ អ្នក​ត្រូវ​ជ្រើស​រើស​ឯកសារ​នោះ​​ពី​បញ្ជីឯកសារ​ជា​មុន​សិន	لعرض الوثيقة، يجب عليك أولا اختيار وثيقة من قائمة الوثائق	Bir Belgeyi görüntüleyebilmek için önce Belge listesinden seçmelisiniz.
+PHP	TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_	To view a Person you have to first select a Person from the Person list.	Pour afficher une Personne, vous devez d'abord sélectionner une personne à partir de la liste de Personnes.	Para ver a una persona, primero debe seleccionarla de la lista	Untuk melihat Orang, silahkan pilih satu Orang dari daftar Orang	ដើម្បី​បើក​មើល​បុគ្គល​ណា​មួយ​ អ្នក​ត្រូវ​ជ្រើសរើស​បុគ្គល​នោះ​នៅ​ក្នុង​បញ្ជី​បុគ្គល​ជា​មុន​សិន	لعرض الشخص، يجب عليك أولا اختيار الشخص من قائمة الأشخاص.	Bir Kişiyi görüntüleyebilmek için önce Kişi listesinden seçmelisiniz.
+PHP	TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_	To view an Event you have to first select an Event from the Event list.	Pour afficher un Evénement, vous devez d'abord sélectionner un Evénement de la liste des Evénements.	Para ver un evento, primero debe seleccionarlo de la lista de eventos	Untuk melihat orang, silahkan pilih satu Peristiwa dari daftar Peristiwa	ដើម្បី​បើក​មើល​​ព្រឹត្តិការណ៍​ណា​មួយ​ អ្នក​ត្រូវ​ជ្រើស​រើស​ព្រឹត្តិការណ៍​នោះ​ពី​បញ្ជី​ព្រឹត្តិការណ៍​ជា​មុន​សិន	لعرض الحدث، يجب عليك أولا اختيار حدث من قائمة الأحداث.	Bir Olayı görüntüleyebilmek için önce Olay listesinden seçmelisiniz.
+PHP	TORTURE	Torture	Torture	Tortura	Penyiksaan	ការ​ធ្វើ​ទារុណកម្ម	تعذيب	İşkence
+PHP	TRANSLATE	Translate	Traduire	Traducir	Terjemahan	បក​ប្រែ	ترجمة	Çevir
+PHP	TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_	Translation not updated! Please give directory and file permission to res/locale folder.	Traduction non mis à jour! Veuillez donner la permission de fichier et répertoire au dossier res / locale.	¡La traducción no ha sido actualizada! Por favor, indique en la carpeta res/locale los permisos para el directorio y el archivo	Terjemahan belum diperbaharui. Silahkan berikan ijin ke direktori dan file ke folder lokal	ការ​បក​ប្រែ​មិន​ទាន់​បានបន្ថែម​ពត៌មាន​ចុង​ក្រោយ​ទេ សូមផ្តល់​ការ​អនុញ្ញាតិ​លើ​ការ​ប្រើ​ប្រាស់​បញ្ជីនិង​ឯកសារ​ទៅ​សំណុំ​res/locale	لم يتم تحديث الترجمة! يرجى إعطاء المجلّد الأم  وتصريح الملف لتحديد المجلد 	Çeviri güncellenmedi! Lütfen res/locale klasörüne dizin ve dosya izinlerini verin.
+PHP	TRANSLATION_UPDATED_SUCCESSFULLY_	Translation updated successfully.	Traduction mise à jour avec succès	Se actualizó correctamente la traducción	Terjemahan telah diperbaharui	ការ​បក​ប្រែ​​ត្រូវ​បាន​បន្ថែម​ពត៌មាន​ថ្មី​ជា​ស្ថាពរ។	تم تحديث الترجمة بنجاح	Çeviri başarıyla güncellendi.
+PHP	TRUE	true	vrai	VERDADERO	true	ពិត	صحيح	doğru
+PHP	TYPE	Type	Type	Tipo	Tipe	ប្រភេទ	النوع	Tür 
+JS	TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_	Type Date of birth in digits only!	Entrer Date de naissance seulement en nombres !	Ingrese Día de nacimiento en dígitos sólo	Jenis tanggal lahir hanya dalam angka	វាយ​បញ្ចូល​​ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត​ជា​​ខ្ទង់​លេខ​ប៉ុណ្ណោះ	أدخل تاريخ الميلاد بالأرقام فقط!	Doğum gününü rakam olarak girin!
+JS	TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_	Type Month of birth in digits only!	Entrer Mois de naissance seulement en nombres !	Ingrese Mes de nacimiento en dígitos sólo	Jenis bulan lahir hanya dalam angka	វាយ​បញ្ចូល​​ខែ​កំណើត​ជា​ខ្ទង់​លេខ​ប៉ុណ្ណោះ	أدخل شهر الميلاد بالأرقام فقط!	Doğum ayını rakam olarak girin!
+PHP	TYPE_OF_ACT	Type of Act	Type d'Acte	Tipo de acto	Jenis Tindakan	ប្រភេទ​បទ​រំលោភ	نوع الفعل	Fiil Türü
+PHP	TYPE_OF_CHAIN_OF_EVENTS	Type of Chain of Events	Type de Chaîne d'événements	Tipo de cadena de eventos	Jenis Rangkaian Peristiwa	ប្រភេទចង្វាក់​ព្រឹត្តិការណ៍	نوع سلسلة الأحداث	Olaylar Zinciri Türü
+PHP	TYPE_OF_INTERVENTION	Type of Intervention	Type d'Intervention	Tipo de intervención	Jenis Intervensi	ប្រភេទ​ពត៌មាន	نوع التدخل	Müdahale Türü
+PHP	TYPE_OF_RELATIONSHIP	Type of Relationship	Type de relation	Tipo de relación	Jenis dari Relasi	ប្រភេទ​ទំនាក់​ទំនង	نوع العلاقة	İlişki Türü
+PHP	TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_	Type the userid in the text box and click share to make this event accessible to a desired user.	Taper l'identité de l'utilisateur dans la boîte texte et cliquez partager pour rendre ce Evénement accessible à l'utilisateur désiré.	Escriba el identificador de usuario en el cuadro de texto y haga clic en Compartir para que este evento accesible para un usuario que desee.	Jenis userid pada kotak teks dan klik berbagi peristiwa untuk memberikan akses pada pengguna yang diinginkan	វាយ​បញ្ចូល​ឈ្មោះ​អ្នក​ប្រើ​​ប្រាស់​នៅ​ក្នុង​ប្រអប់​ហើយ​ចុច​ ចែក​ចាយ​ដើម្បី​​ធ្វើ​អោយ​ព្រឹត្តិការណ៍​នេះ​អាច​ដំណើរ​ការ​ទៅ​បាន​តាមតំរូវការ​​អ្នក​ប្រើ​ប្រាស់	أدخل هوية المستخدم في المربع وانقر على مشاركة لجعل هذا الحدث مُتَاح  للوصول إليه من قبل المستخدم المرغوب.	Bu olayı paylaşmak istediğiniz kullanıcının kullanıcı kimliğini metin kutusuna yazıp paylaşı tıklayın.
+PHP	TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_	Type the userid in the text box and click share to make this person accessible to a desired user.	Taper l'identité de l'utilisateur dans la boîte texte et cliquez partager pour rendre cette Personne accessible à l'utilisateur désiré.	Escriba el identificador de usuario en el cuadro de texto y haga clic en Compartir para que esta persona accesible para un usuario que desee.	Jenis userid pada kotak teks dan klik berbagi orang untuk memberikan akses pada pengguna yang diinginkan	វាយ​បញ្ចូល​ឈ្មោះ​អ្នក​ប្រើប្រាស់​នៅ​ក្នុង​ប្រអប់​​ហើយ​ចុច​ចែក​ចាយ​​ដើម្បី​ធ្វើ​អោយ​បុគ្គល​នេះ​អាច​ដំណើរ​ការ​ទៅ​បាន​តាម​តំរូវការ​អ្នក​ប្រើ​ប្រាស់	أدخل هوية المستخدم في المربع وانقر على مشاركة لجعل هذا الشخص منمُتَاح  للوصول إليه من قبل المستخدم المرغوب.	Bu kişiyi paylaşmak istediğiniz kullanıcının kullanıcı kimliğini metin kutusuna yazıp paylaşı tıklayın.
+JS	TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_	Type Year of birth in digits only!	Entrer Année de naissance seulement en nombres !	Ingrese Año de nacimiento en dígitos sólo	Jenis Tahun kelahiran hanya dalam angka	វាយ​បញ្ចូល​​ឆ្នាំកំណើត​ជា​ខ្ទង់​លេខ​ប៉ុណ្ណោះ	أدخل سنة الميلاد بالأرقام فقط!	Doğum yılını rakam olarak girin!
+JS	TYPE_YEAR_OF_BIRTH_IN_FULL_	Type Year of birth in full!	Entrer Date de naissance complet !	Ingrese Año de nacimiento completo !	Jenis tahun kelahiran secara lengkap	វាយ​បញ្ចូល​ឆ្នាំ​​កំណើត​​ជា​លេខ​ពេញ	أدخل سنة الميلاد بالكامل!	Doğum yılını tam olarak girin!
+PHP	UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_	Unable to remove some Micro-thesaurus terms because they are already used in records.	Impossible de supprimer certains termes du micro-thesaurus car ils sont déjà utilisés dans des enregistrements.	No se pueden eliminar algunos términos del Micro-tesauro porque ya están asignados en los registros	Tidak dapat menghapus beberapa istilah Micro-thesauri karena digunakan dalam catatan	មិនអាចដកពាក្យខ្លះចេញបានទេព្រោះថាពាក្យទាំងនេះ​គេ​ធ្លាប់​ប្រើ​ក្នុង​ការកត់ត្រារួចមកហើយ	تعذر إزالة  بعض مصطلحات المكنز المصغر نظرا لكونها مستخدمة في السجلات.	Bazı mikro-kavramlar terimleri daha önce girilmiş kayıtlarda kullanıldığı için silinemiyor.
+PHP	UNABLE_TO_RESET_FIELD_	Unable to reset field.	Impossible de réinitialiser le champ.	No se puede restaurar el campo	Tidak dapat mengembalikan field	មិនអាចកំណត់ខ្ទង់ឡើងវិញបានទេ	تعذر إعادة ضبط الخانة	Alan sıfırlanamadı.
+PHP	UNABLE_TO_RESET_FIELDS_	Unable to reset fields.	Impossible de réinitialiser les champs.	No se pueden restaurar los campos	Tidak dapat mengembalikan field	មិនអាច​កំណត់ខ្ទង់​ទាំង​នេះ​ម្តងទៀត​បាន​ទេ	تعذر إعادة ضبط الخانات	Alanlar sıfırlanamadı.
+PHP	UNKNOWN_UPLOAD_ERROR_	Unknown upload error.	Erreur de chargement inconnu	Surgió un error desconocido al cargar el archivo	Kesalahan pengunggahan yang tidak diketahui	បញ្ហា​ដាក់​បញ្ចូល​ដែល​មិន​ដឹង​មូល​ហេតុ	خطأ في التحميل غير معروف	Bilinmeyen yükleme hatası.
+PHP	UNTITLED_QUERY	Untitled Query	Interrogation sans titre	Consulta sin título	Pertanyaan tanpa judl	ការស្វែងរក​អត់មាន​ចំណង​ជើង	استفسار غير معنون	İsimsiz Sorgu
+PHP	UPDATE	Update	Mettre à jour	Actualizar	Perbaharui	បញ្ចូល​ពត៌មាន​ចុង​ក្រោយ	تحديث	Güncelle
+PHP	UPDATE_ACCESS_CONTROL_LIST	Update Access Control List	Mettre à jour la liste de contrôle des accès	Actualizar la lista de control de acceso	Mutakhirkan Daftar Akses Kontrol	តារាង​គ្រប់​គ្រង​ការ​បញ្ចូល​ពត៌មាន​ថ្មី	تحديث قائمة التحكم بالوصول	Erişim Kontrol Listesini Güncelle
+PHP	UPDATE_FORM	Update Form	Mettre à jour la forme	Actualizar Forma	Perbaharui Formulir	ទំរង់​បញ្ចូល​ពត៌មាន​ចុង​ក្រោយ	نموذج التحديث	Formu Güncelle
+PHP	UPDATE_PERMISSIONS	Update permissions	Mettre à jour les permissions	Actualizar permisos	Perbaharui wewenang	បន្ថែម​ពត៌មាន​ថ្មី​អំពី​ការអនុញ្ញាតិ	تحديث التصريحات	İzinleri güncelle
+PHP	UPLOAD	Upload	Charger	Cargar	Unggah	ដាក់​បញ្ចូល	تحميل	Yükle
+PHP	UPLOAD_FILE	Upload file	Charger le fichier	Cargar archivo	Unggah File	ដាក់​បញ្ចូលឯកសារ	تحميل ملف	Dosyayı yükle
+PHP	USER	User	Utilisateur	Usuario(a)	Pengguna	អ្នក​ប្រើ​ប្រាស់	المستخدم	Kullanıcı
+PHP	USER_MANAGEMENT	User management	Gestion des utilisateurs	Administración de usuario(a)s	Manajemen pengguna	ការ​គ្រប់​គ្រង​អ្នក​ប្រើ​ប្រាស់	إدارة المستخدم	Kullanıcı yönetimi
+PHP	USER_NAME	User Name	Nom d'utilisateur	Nombre de usuario(a)	Nama Penguna	ឈ្មោះ​អ្នក​ប្រើ	اسم المستخدم	Kullanıcı Adı
+PHP	USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_	User not found! Invalid username or password! Please try again.	L'utilisateur n'a pas trouvé! Nom d'utilisateur ou mot de passe non valables! S'il vous plaît essayez de nouveau.	¡No se encontró el o la usuario(a)! El nombre de usuario(a) o la contraseña son inválidos! Por favor intente de nuevo	Pengguna tidak ditemukan: ID pengguna atau password tidak sah, silahkan coba lagi.	មិន​មាន​អ្នក​ប្រើ​ប្រាស់​នេះ​ទេ។​ ឈ្មោះ និង​លេខ​សំងាត់​មិន​ត្រឹម​ត្រូវ​ទេ។​ សូម​ព្យាយាម​ម្តង​ទៀត!	لم يتم العثور على المستخدم! اسم المستخدم غير صحيح او كلمة المرور غير صحيحة! يرجى المحاولة مرة أخرى.	Kullanıcı bulunamadı! Geçersiz kullanıcı adı ya da parolası! Lütfen tekrar deneyiniz.
+PHP	USERID_DOES_NOT_EXISTS_	Userid does not exists.	L'identité de ce utilisateur n'existe pas	El identificador de usuario no existe	Userid tidak tersedia	មិន​មាន​អ្នក​ប្រើ​ប្រាស់​នេះ​ទេ	هوية المستخدم غير موجودة	Böyle bir kullanıcı kimliği yok.
+PHP	USERNAME	Username	Nom d'utilisateur	Nombre de usuario(a)	Nama Penguna	ឈ្មោះ​អ្នក​ប្រើ	اسم المستخدم	Kullanıcı Adı
+PHP	USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME	Username already exists, Use a different username	Nom d'utilisateur existe déjà, utilisez un autre nom d'utilisateur	Este nombre de usuario(a) ya existe. Utilice un nombre diferente	Nama pengguna sudah ada, gunakan nama pengguna lain	អ្នក​អ្នក​ប្រើប្រាស់​នេះ​មាន​រួច​ហើយ​ សូម​ប្រើ​ឈ្មោះ​ផ្សេង​ទៀត	اسم المستخدم موجود من قبل، استخدم اسم مستخدم مختلف	Bu kullanıcı adı zaten var, başka bir ad kullanın
+PHP	USERNAME_CANNOT_BE_EMPTY	Username cannot be empty	Nom d'utilisateur ne peut pas être vide	El nombre de usuario(a) no puede quedar vacío	Nama pengguna harus diisi	ឈ្មោះ​អ្នក​ប្រើប្រាស់មិន​អាច​ទទេ​បាន​ទេ	لا يجوز ترك اسم المستخدم خاليا	Kullanıcı adı boş bırakılamaz
+PHP	USERS	Users	Utilisateurs	Usuario(a)s	Pengguna	អ្នក​ប្រើ​ប្រាស់	المستخدمون	Kullanıcılar
+PHP	USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT	Users with permission to access this Event	Utilisateurs qui ont la permission d'accéder à ce Evénement	Usuario(a)s con permiso para ingresar a este Evento	Pengguna dengan wewenang untuk mengakses peristiwa ini	អ្នក​ប្រើ​ប្រាស់​ដែល​មាន​កា​រអនុញ្ញាត​អោយ​ប្រើ​ប្រាស់​ព្រឹត្តិការណ៍​នេះ	المستخدمون الذين يملكون التصريح للوصول إلى هذا الحدث	Bu Olaya erişim izni olan kullanıcılar
+PHP	USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON	Users with permission to access this Person	Utilisateurs qui ont la permission d'accéder à cette Personne	Usuario(a)s con permiso para ingresar a esta Persona	Pengguna dengan wewenang untuk mengakses peristiwa ini	អ្នក​ប្រើ​ប្រាស់​ដែល​មាន​ការ​អុញ្ញាតិ​ឲ្យ​ប្រើ​ប្រាស់​​បុគ្គល​នេះ	المستخدمون الذين يملكون التصريح للوصول إلى هذا الشخص	Bu Kişiye erişim izni olan kullanıcılar
+PHP	USERS_WITH_PERMISSIONS	Users with permissions	Utilisateurs avec permissions	Usuario(a)s con permisos	Pengguna dengan wewenang	អ្នក​ប្រើ​ប្រាស់​ដែល​​មាន​ការ​អនុញ្ញាត	المستخدمون الذين يملكون التصريح	İzni olan kullanıcılar
+PHP	VALIDATION	Validation	Validation	Validación	Validasi	ការ​បញ្ជាក់​ឲ្យ​មាន​សុពល​ភាព	المصادقة	Doğrulama
+PHP	VALIDATION_TYPE	Validation type	Type de validation	Tipo de validación	Jenis Validasi	ប្រភេទ​នៃ​ការ​បញ្ជាក់​ថា​មាន​សុភព​ភាព	نوع المصادقة	Doğrulama türü
+PHP	VERSION	Version	Version	Versión	Versi	លំដាប់​សំណេរ	الإصدار	Versiyon
+PHP	VICTIM	Victim	Victime	Víctima	Korban	ជន​រង​គ្រោះ	الضحية	Mağdur
+PHP	VICTIM_NAME	Victim name	Nom de la victime	Nombre de la víctima	Nama Korban	ឈ្មោះ​ជន​រង​គ្រោះ	اسم الضحية	Mağdur adı
+PHP	VICTIM_SEARCH_FORM	Victim Search Form	Formulaire de recherche de victimes	Formulario para búsqueda de víctimas	Form Pencarian Korban	ទំរង់​ស្វែង​រក​ជន​រង​គ្រោះ	نموذج البحث في الضحايا	Mağdur Arama Formu
+PHP	VICTIMS	Victims	Victimes	Víctimas	Korban	ជន​រង​គ្រោះ	الضحايا	Mağdurlar
+PHP	VICTIMS_AND_PERPETRATORS	Victims and Perpetrators	Victimes et Auteurs	Víctimas y perpetradores	Korban dan Pelaku	ជន​រង​គ្រោះ​និង​ជន​ប្រព្រឹត្តិ	الضحايا والجناة	Mağdurlar ve Failler
+PHP	VIEW_ACT_RECORD	View Act record	Afficher l'enregistrement Acte	Ver el registro del acto	Lihat catatan Tindakan	បើកមើល​កំណត់​ត្រា​បទ​រំលោភ	عرض سجل الأفعال	Fiil Kaydını Görüntüle
+PHP	VIEW_ADDRESS	View Address	Afficher l'Adresse	Ver la Dirección	Alamat	បើក​មើល​អាសយដ្ឋាន	عرض العنوان	Adresi Görüntüle
+PHP	VIEW_BIOGRAPHIC_DETAILS	View Biographic Details	Afficher les Détails biographiques	Ver los detalles biográficos	Lihat Riwayat Hidup	បើក​មើលជីវប្រវត្តិ​លំអិត	عرض التفاصيل الذاتية	Biyografik Detayları Görüntüle
+PHP	VIEW_CHAIN_OF_EVENTS_RECORD	View Chain of Events record	Afficher cette Chaîne d'événements	Ver el registro de la cadena de eventos	Lihat catatan Rangkaian Peristiwa	បើក​មើលកំណត់​ត្រា​ចង្វាក់​ព្រឹត្តិការណ៍	عرض سجل سلسلة الأحداث	Olaylar Zinciri Kaydını Görüntüle
+PHP	VIEW_DOCUMENT	View Document	Afficher le Document	Ver el documento	Lihat Dokumen	បើក​មើល​ឯកសារ	عرض الوثيقة	Belgeyi Görüntüle
+PHP	VIEW_EVENT	View Event	Afficher l'Evénement	Ver el evento	Lihat Peristiwa	បើក​មើល​ព្រឹត្តិការណ៍	عرض الحدث	Olayı Görüntüle
+PHP	VIEW_EVENT_RECORD	View Event record	Afficher l'enregistrement Evénement	Ver el registro del evento	Lihat catatan Peristiwa	បើក​មើលកំណត់​ត្រាព្រឹត្តិការណ៍	عرض سجل الحدث	Olay Kaydını Görüntüle
+PHP	VIEW_INFORMATION_RECORD	View Information record	Afficher l'enregistrement  Information	Ver el registro de la información	Lihat catatan Informasi	បើក​មើល​កំណត់​ត្រា​ពត៌មាន	عرض سجل المعلومات	Bilgi Kaydını Görüntüle
+PHP	VIEW_INTERVENTION_PARTY_RECORD	View Intervention Party record	Afficher l'enregistrement Partie Intervenante	Ver el registro de la parte interviniente	Lihat Catatan Pihak yang Mengintervensi	បើក​មើល​កំណត់​ត្រា​អំពី​ភាគី​អន្តរាគមន៍	عرض سجل طرف التدخل	Müdahil Taraf Kaydını Görüntüle
+PHP	VIEW_INTERVENTION_RECORD	View Intervention record	Afficher l'enregistrement Intervention	Ver el registro de intervención	Lihat catatan Intervensi	បើក​មើល​កំណត់​ត្រា​អំពី​បទ​អន្តរាគមន៍	عرض سجل التدخل	Müdahale Kaydını Görüntüle
+PHP	VIEW_INVOLVEMENT_RECORD	View Involvement record	Afficher l'enregistrement Implication	Ver el registro del involucramiento	Lihat catatan Keterlibatan	បើកមើល​កំណត់​ត្រា​ការ​ពាក់​ព័ន្ធ	عرض سجل التورط	Karışma Kaydını Görüntüle
+PHP	VIEW_PERPETRATOR_RECORD	View Perpetrator record	Afficher l'enregistrement Auteur	Ver el registro del perpetrador	Lihat catatan Pelaku	បើកមើល​កំណត់​ត្រា​ជន​ប្រព្រឹត្តិ	عرض سجل الجناة	Fail Kaydını Görüntüle
+PHP	VIEW_PERSON	View Person	Afficher la Personne	Ver la persona	Lihat Orang	បើកមើល​បុគ្គល	عرض الشخص	Kişiyi Görüntüle
+PHP	VIEW_RELATED_PERSON	View Related Person	Afficher la Personne connexe	Ver a la persona relacionada	Lihat Orang yang terhubung	បុគ្ឡល​ពាក់​ព័ន្ធ	عرض الشخص ذات الصلة	İlişkili Kişiyi Görüntüle
+PHP	VIEW_SOURCE_RECORD	View Source record	Afficher l'enregistrement Source	Ver el registro de la fuente	Lihat catatan Sumber	បើក​មើល​កំណត់​ត្រា​ប្រភព	عرض سجل المصدر	Kaynak Kaydını Görüntüle
+PHP	VIEW_VICTIM_RECORD	View Victim record	Afficher l'enregistrement Victime	Ver el registro de la víctima	Lihat catatan Korban	បើក​មើល​កំណត់​ត្រា​ជន​រង​គ្រោះ	عرض سجل الضحايا	Mağdur Kaydını Görüntüle
+PHP	VISIBILITY	Visibility	Visibilité	Visibilidad	Visibilitas	ការ​បង្ហាញ​ឲ្យ​ឃើញ	إمكانيّةُ الرّؤية	Görünürlük
+PHP	VISIBLE	Visible	Visible	Visible	Visibilitas	ការ​បង្ហាញ​ឲ្យ​ឃើញ	مرئي	Görünür 
+PHP	VISIBLE_IN_BROWSE	Visible in browse	Visible dans la vue Parcourir	Visible para revisión	Terlihat di penelusuran	អាច​មើល​ឃើញ​នៅ​ក្នុងបញ្ជី​បើកមើល (​Browse)	مرئي في الاستعراض	Taramada görünür
+PHP	VISIBLE_IN_FORM	Visible in form	Visible dans le formulaire	Visible en el formulario	Terlihat di formulir	អាច​មើល​ឃើញ​នៅ​ក្នុង​ទំរង់	مرئي في الشكل	Formda görünür
+PHP	VISIBLE_IN_VIEW	Visible in view	Visible dans la vue Afficher	Visible en la vista preliminar	Telihat di View	អាច​មើល​ឃើញ​នៅ​ក្នុង​ការ​មើល(View)	مرئي في العرض	Görüntüde görünür
+JS	WEB	Web	web	Sitio de Internet	Situs	គេហរ​ទំព័រ	الشبكة الإلكترونية	Web
+PHP	WEBSITE	Website	Site web	Sitio de Internet	Situs	គេ​ហទំព័រ	الموقع الإلكتروني	Web sitesi
+PHP	WHAT_HAPPENED_TO	What happened to	Qu'est-il arrivé à ?	¿Qué le sucedió a?	Apa yang terjadi pada	តើ​អ្វី​កើត​ឡើង​ចំពោះ	ماذا حدث لـ؟	Ne oldu?
+PHP	WHAT_IS_THE_INTERVENTION_	What is the intervention?	Quelle est l'intervention ?	¿Qué intervención se hizo?	Apa intervensinya?	តើ​បទ​អន្តរាគមន៍​ជា​អ្វី?	ما هو التدخل؟	Müdahale nedir?
+PHP	WHO_IS_RESPONSIBLE_FOR_THE	Who is responsible for the	Qui est responsable de ?	¿Quién es el responsable de	Siapa yang bertanggung jawab atas	តើ​អ្នក​ណា​ទទួល​ខុស​ត្រូវ​ចំពោះ	من هو المسؤول عن	Kim sorumlu?
+PHP	WHO_IS_THE_INTERVENING_PARTY_	Who is the intervening party?	Qui est la partie intervenante ?	¿Quién es la parte interviniente?	Siapa pihak yang mengintervensi?	តើ​អ្នក​ណា​ជា​​ភាគី​អន្តរាគមន៍?	من هو الطرف المتدخل؟	Müdahil taraf kim?
+PHP	WHO_IS_THE_SOURCE_	Who is the source?	Qui est la Source ?	¿Quién es la fuente?	Siapa sumbernya?	តើ​អ្នក​ណា​ជា​ប្រភព?	ما هو المصدر؟	Kaynak kim?
+PHP	WHO_IS_THE_VICTIM__	Who is the victim ?	Qui est la Victime ?	¿Quién es la víctima?	Siapa korbannya?	តើ​អ្នក​ណា​ជា​ជន​រង​គ្រោះ?	من هو الضحية؟	Mağdur kim?
+JS	YEAR_S__	Year(s):	Année(s):	Año(s) :	Tahun:	ឆ្នាំ	سنة (سنوات):	Yaş:
+PHP	YES	Yes	Oui	Si	Ya	បាទ/ចាស	نعم	Evet
+PHP	YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_	You are about to delete an Event. This means you will delete the records listed below. Do you want to continue?	Vous allez supprimer un Evénement. Ceci implique que vous supprimer les enregistrements ci-dessous. Est-ce que vous voulez continuer ?	Usted está a punto de eliminar un evento. Esto significa que se eliminarán los registros que figuran abajo. ¿Desea continuar?	Anda akan menhapus sebuah peristiwa. Artinya anda akan menghapus catatan yang terdaftar di bawah ini. Anda akan melanjutkan?	អ្នក​ប្រុង​នឹង​លុប​ព្រឹត្តិការណ៍នេះ ។​នេះ​មានន័យ​ថា​អ្នក​នឹង​លុបកំណត់ត្រា​ក្នុង​បញ្ជី​ខាង​ក្រោម​។​ តើអ្នកចង់​​បន្តឬទេ?	أنت على وشك حذف حدث. هذا يعني أنك سوف تحذف السجلات المبينة أدناه. هل تود الاستمرار؟	Bir Olayı silmek üzeresiniz. Bu da aşağıdaki listede yer alan kayıtları sileceğiniz anlamına geliyor. Devam etmek istiyor musunuz?
+PHP	YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_	You cannot change the administrator permissions.	Vous ne pouvez pas changer les permissions de l'administrateur.	No puede modificar los permisos de administrador(a)	Anda tidak dapat mengubah wewenang admin	អ្នក​មិន​អាច​ដូរការ​អនុញ្ញាតិ​របស់​រដ្ឋ​បាល​បាន​ទេ	لا يمكنك تغيير تصريحات المسؤول.	Yönetici izinlerini değiştiremezsiniz.
+PHP	YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_	You cannot delete other admin users.	Vous ne pouvez pas supprimer d'autres utilisateurs admin.	No puede borrar a otro(a)s usuario(a)s con estatus de administrador(a)	Anda tidak dapat menghapus pengguna admin lainnya	អ្នក​មិន​អាច​លុប​អ្នក​ប្រើ​ប្រាស់​ដែល​ជា​រដ្ឋ​បាល​ផ្សេង​ទៀត​បាន​ទេ។	لا يمكنك حذف المستخدمين المسؤولين الآخرين.	Diğer yönetici düzeyindeki kullanıcıları silemezsiniz.
+PHP	YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_	You cannot delete the administrator account.	Vous ne pouvez pas supprimer le compte de l'administrateur.	No puede borrar la cuenta de administrador(a)	Akun admin tidak dapat dihapus	មិន​អាច​លុបឈ្មោះ​របស់​រដ្ឋបាល​ចេញ​បាន​ទេ	لا يمكنك حذف حساب المسؤول.	Yönetici hesabını silemezsiniz.
+PHP	YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE	You cannot delete the default language	Vous ne pouvez pas supprimer la langue par défaut	No puede borrar el idioma que está por omisión	Anda tidak dapat menghapus bahasa utama	អ្នក​មិន​អាច​លុប​ភាសា​ដែល​គេ​កំណត់​រួច​ហើយ​នេះ​បាន​ទេ	لا يمكنك حذف اللغة الافتراضية	Varsayılan (default) dili silemezsiniz.
+PHP	YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_	You cannot delete yourself from the list of users.	Vous ne pouvez pas supprimer votre nom de la liste des utilisateurs.	Usted no puede borrarse de la lista de usuario(a)s	Tidak dapat menghapus diri sendiri dari daftar pengguna	មិនអាច​លុបខ្លួន​អ្នក​ចេញ​ពី​បញ្ជី​អ្នក​ប្រើប្រាស់​បាន​ទេ	لا يمكنك حذف نفسك من قائمة المستخدمين	Kendinizi kullanıcı listesinden silemezsiniz.
+PHP	YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_	You do not have permission to edit other admin users details.	Vous n'avez pas la permission d'éditer les détails d'autres utilisateurs admin.	Usted no tiene permitido modificar la información de otro(a)s administradores	Anda tidak memiliki wewenang untuk mengedit rincian admin lainnya	អ្នក​មិន​មាន​ការ​អនុញ្ញាតិ​ដើម្បីកែ​ប្រែ​ពត៌មាន​លំអិត​អ្នក​ប្រើ​ប្រាស់​ដែល​ជា​រដ្ឋ​បាល​ទេ។	لا يوجد لديك تصريح لتعديل تفاصيل المستخدمين المسؤولين	Diğer yönetici düzeyindeki kullanıcıların detaylarını düzenleme iznine sahip değilsiniz.
+PHP	YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_	You have also selected some parent term(s), if you proceed the children's of those terms will also be deleted.	Vous avez sélectionné quelques terme(s) parent, si vous procédez les enfants de ces termes seront aussi effacés.	Usted ha seleccionado también algún término(s) padre, si decides continuar los hijos de esos términos también se eliminarán.	Anda juga akan menghapus sejumlah induk istilah, jika dilanjutkan maka anak dari istilah akan terhapus	បើអ្នកបានជ្រើសរើសពាក្យុកូន​ដែល​នឹង​ត្រូវ​លុប​ចោ អ្នក​ក៏​ត្រូវ​ជ្រើសរើសពាក្យឪពុកម្តាយ​ផង​ដែរ	لقد اخترت بعض المصطلحات الرئيسية، إذا واصَلَت فسوف يتم حذف فروع هذه المصطلحات أيضا.	Bazı üst kategori kavramlarını da seçtiniz, devam ederseniz bu üst kategori terimlerin altında yer alan terimleri de sileceksiniz.
+PHP	YOU_MUST_FILL_IN_THIS_FIELD	You must fill in this field	Vous devez remplir ce champ	Debe completar este campo	Anda harus mengisi field ini	អ្នក​ត្រូវ​តែ​បំពេញ​ខ្ទង់​នេះ។	يجب عليك تعبئة هذه الخانة	Bu alanı doldurmanız gerekli.
+JS	YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING	You need to select an entity before counting	Vous devez sélectionner une entité avant de compter.	Tienes que seleccionar una entidad antes del recuento	Anda perlu memilih entitas sebelum menghitung	អ្នក​ត្រូវ​ជ្រើស​រើស​ផ្នែកសំខាន់Entity មុន​នឹង​រាប់​ចំនួន	يجب عليك اختيار كيان قبل العد	Listelemek için bir birim seçmelisiniz.
+PHP	YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON	Your browser's cookie functionality is turned off! Please turn it on	La fonctionnalité des cookies est désactivé sur votre navigateur ! Veuillez l'activer	¡La funcionalidad de las cookies está desactivada en su navegador! Por favor, actívela	Fungsi cookie browser anda tidak aktif. Silahkan aktifkan	តួនាទីគ្រប់​គ្រង​ប្រតិប័ត្រការ​កុំ​ព្យូទ័រមិន​ដំណើរ​ការ​ទេ។ សូម​បើក​ឧបករណ៍​នេះ	وظيفة الكوكيز للمتصفح غير مفعلة! قم بتفعيلها	Tarayıcınız çerez fonksiyonu kapalı! Lütfen açın.
+PHP	EXTENSIONS	Extensions	Extensions	Extensiones	Ekstensi	Extensions	ملحقات	Sistem Yapılandırması
+	ABOUT_OE	About OpenEvsys	Sur OpenEvsys	Sobre OpenEvsys	About OpenEvsys	About OpenEvsys	عن OpenEvsys	About OpenEvsys
+	AGPL	AGPL v3 licensed	AGPL v3 autorisé	AGPL v3 con licencia	AGPL v3 licensed	AGPL v3 licensed	AGPL v3 licensed	AGPL v3 licensed
+	REMOVE	REMOVE	ENLEVER	ELIMINAR	REMOVE	REMOVE	ازالة	REMOVE
+	REQUIRED	Required	Requis	Necesario	Required	Required	مُتَطلّب 	Required
+	YES_CONFIDENTIALITY	Yes (for Confidentiality)	Oui (pour Confidentialité)	Si (por Confidencialidad)	Yes (for Confidentiality)	Yes (for Confidentiality)	نعم( للسرية )	Yes (for Confidentiality)
+	NO_CONFIDENTIALITY	No (for Confidentiality)	Non (pour Confidentialité)	No (por Confidencialidad)	No (for Confidentiality)	No (for Confidentiality)	لا ( للسرية )	No (for Confidentiality)
+	ERROR_SERVER	An error was returned by the server, please contact system administrator	Une erreur a été renvoyée par le serveur, s'il vous plaît contactez l'administrateur du système	Un error fue devuelto por el servidor, por favor póngase en contacto con el administrador del sistema	An error was returned by the server, please contact system administrator	An error was returned by the server, please contact system administrator	تم إرجاع خطأ من قبل جهاز الخادم، الرجاء الاتصال بمسؤول النظام	An error was returned by the server, please contact system administrator
+	NULL_ROWS	Null Rows	Zéro lignes	Cero líneas	Null Rows	Null Rows	صفوف لاغية	Null Rows
+	PHONE_NO	Phone Number	Numéro de téléphone	Número de teléphono	Phone Number	Phone Number	رقم الهاتف	Phone Number
+	NUMERICAL	Numerical	Numérique	Numérico	Numerical	Numerical	عددي	Numerical
+	ANALYST	Analyst	Analyste	Analista	Analyst	Analyst	مُحَلّلُ	Analyst
+	DATA_ENTRY	Data Entry	Saisie des données	Registro de datos	Data Entry	Data Entry	إدخال البيانات	Data Entry
+	ENTITY_GROUPS	Entity Groups	Groupes d'entités	Grupos de entidades	Entity Groups	Entity Groups	مجموعات الكيان	Entity Groups
+	CREATE	Create	Créer	Crear	Create	Create	إنشاء 	Create
+	READ	read	lire	leer	read	read	اقرأ 	read
+	LINKING	Linking	Lien	Enlace	Linking	Linking	توصيل	Linking
+	PRIMARY	Primary	Primaire	Primario	Primary	Primary	أساسي	Primary
+	SELECT_LANGUAGE	Select language	Sélectionner la langue	Seleccionar el idioma	Select language	Select language	اختر اللغة	Select language
+	NO_ATTACHMENT	No attachment found to this document	Aucun fichier joint trouvé pour ce document.	Ningun archivo encontrado a este documento.	No attachment found to this document	No attachment found to this document	لم يتم العثور على أي مرفق لهذه الوثيقة	No attachment found to this document
+	BROWSE	Browse	Parcourir	Revisar	Browse	Browse	تَصَفّحَ 	Browse
+	ROWS	Row(s)	Ligne(s)	Linea(s)	Row(s)	Row(s)	صف -صفوف	Row(s)
+	ADVANCED_SEARCH_REPORT	Advanced Search Report	Rapport sur recherche avancée	Informe de búsqueda avanzada			تقرير البحث المتقدم	
+PHP	Address	Address	Adresse	Dirección			عنوان	
+PHP	latitude	latitude	latitude	latitud			خط العرض	
+PHP	longitude	longitude	longitude	longitud			 خط الطول	
+PHP	View	View	Afficher	Ver			مشاهدة	
+PHP	Micro-thesauri created successfully	Micro-thesaurus created successfully	Micro-thesaurus créé avec succès	Micro-tesauro creado con éxito			تم انشاء المكنز المصغر بنجاح	
+PHP	Radio field	Radio field	Champ radio	Campo Radio			مجال الإذاعة	
+PHP	Geolocation	Geolocation	Géolocalisation	Geolocalización			التَمَوْضُع المحلي الجغرافي	
+PHP	User Select	User Select	Sélectionner Utilisateur	Seleccionar usuario			اختيار المستخدم	
+PHP	Multivalue User Select	Multivalue User Select	Sélectionner Utilisateur à valeurs multiples				اختيار المستخدم إشارة رقمية متعددة القيم ( منتظمة )	
+PHP	Tree	Tree	Arbre	Árbol			تركيب هيكلي ( شجري ) للبيانات	
+PHP	Multivalue Tree	Multivalue Tree	Arbre à valeurs multiples				تركيب هيكلي ( شجري ) متعددة القيم	
+								
+PHP	Multivalue Select	Multivalue Select	Sélectionner multiples valeurs	Seleccionar varios valores			اختيار إشارة رقمية متعددة القيم ( منتظمة )	
+PHP	Please select items to perform action	Please select items to perform action	Sélectionner termes pour exécuter l'action				يرجى اختيار البنود  لتنفيذ الإجراء	
+PHP	Dashboard	Dashboard	Tableau de bord				لوحة قياس	
+PHP	Micro-thesauri cannot be empty	Micro-thesauri cannot be empty	Micro-thésaurus ne peut pas être vide	Micro-tesauro no puede estar vacío			لا يمكن اخلاء المكنز المصغر	
+PHP	Micro-thesauri name already exists	Micro-thesauri name already exists	Un Micro-thésaurus avec ce nom existe déjà	Nombre del Micro-tesauro ya existe			اسم المكنز المصغر موجود  مسبقاً	
+PHP	Login Information	Login Information	Information sur l'Identification				معلومات الدخول	
+PHP	Profile Information	Profile Information	Information sur le profile	Información sobre el perfil			معلومات عن سجل المستخدم	
+PHP	Print configuration	Printer configuration	Configuration de l'imprimante	Configuración de la impresora			تهيئة نظام الطباعة	
+PHP	Header for report print view	Header for report print view	En-tête pour vue d'impression du rapport	Cabecera de vista preliminar del informe			ترويسة  لمعاينة التقرير قبل الطباعة	
+PHP	Header for event print view	Header for event print view	En-tête pour vue d'impression de l'Evénement	Cabecera de vista preliminar del evento			ترويسة  لمعاينة الحدث قبل الطباعة	
+PHP	Sidebar for event print view	Sidebar for event print view	Barre latérale pour vue d'impression de l'Evénement				شريط جانبى لمعاينة الحدث قبل الطباعة	
+PHP	Header for person print view	Header for person print view	En-tête pour vue d'impression de la Personne	Cabecera de vista preliminar de la persona			ترويسة  لمعاينة  الفرد قبل الطباعة	
+PHP	Sidebar for person print view	Sidebar for person print view	Barre latérale pour vue d'impression de la Personne				شريط جانبى لمعاينة الشخص قبل الطباعة	
+PHP	Details	Details	Détails	Detalles			تفاصيل	
+PHP	Add new term	Add new term	Ajouter un nouveau terme	Añadir nuevo término			إضافة مصطلح جديد	
+PHP	Searchable in Analysis	Searchable in Analysis	Inclus dans la recherche dans Analyse				قابل للبحث في التحليل	
+PHP	Visible in Analysis	Visible in Analysis	Visible dans Analyse	Visible en el Análisis			مرئي في البحث	
+PHP	Add new Micro-thesauri	Add new Micro-thesauri	Ajouter un nouveau Micro-thésaurus	Añadir nueva Micro-tesauros			إضافة مكانز  مصغرة جديدة	
+PHP	Select language	Select language	Sélectionner la langue	Seleccione el idioma			اختر اللغة	
+PHP	Header for login page	Header for login page	En-tête pour la page d'identification	Encabezado de la página de inicio de sesión			ترويسة لصفحة الدخول	
+PHP	Multivalue	Multivalue	Multi-valeur					
+PHP	Enabled	Enabled	Permis	Activado			تم تفعيله	
+PHP	Hide in case of	Hide in case of	Cacher en cas de	Escóndete en caso de			قم بإخفائه في حالة	
+PHP	Set visible 	Set visible	Rendre visible				مرئي 	
+PHP	Disable	Disable	Désactiver	Inhabilitar			تعطيل	
+PHP	Apply	Apply	Appliquer	Aplicar			تطبيق	
+PHP	Vocab number	Vocab number	Numéro vocab	Número vocab			رقم المفردات	
+PHP	disabled	disabled	Désactivé				تم تعطيله	
+PHP	Undefined	Undefined	Indéfini	Indefinido			غير محدد	
+PHP	Load	Load	Charger	Cargar			تحميل المعلومات	
+PHP	Select facets	Select facets	Sélectionner facettes	Seleccione facetas			اختر الجوانب 	
+PHP	Date range	Date range	Intervalle des dates	Periodo			نطاق التاريخ	
+PHP	Timeline type	Timeline type	Type de chronologie	Tipo de línea de tiempo			نوع الإطار زمني 	
+PHP	DAY	DAY	JOUR	DIA			اليوم	
+PHP	MONTH	MONTH	MOIS	MES			الشهىر	
+PHP	YEAR	YEAR	ANNEE	AÑO			السنة	
+PHP	Total Count	Total Count	Compte total	Recuento total			العد الاجمالي	
+PHP	Added in last 30 days	Added in last 30 days	Ajouté les 30 derniers jours	Alta en los últimos 30 días			تمت الاضافة خلال ال30- يوم السابقة	
+PHP	Most active users (new items)	Most active users (new items)	Utilisateurs les plus actifs (saisies nouveaux)	Usarios más activos (nuevos registros) 			المستخدمون الأكثر نشاطا (بنود جديدة)	
+PHP	User activity (edited items)	User activity (edited items)	Activités d'utilisateurs (édition des saisies)	Actividad de usarios (registros editados)			نشاط المستخدم( البنود التي تم تعديلها)	
+PHP	Recently deleted	Recently deleted	Récemment effacé	Recientemente eliminado			تم الحذف مؤخرا 	
+PHP	No data available	No data available	Pas de données disponibles	No hay datos			لا توجد بيانات متاحة	
+PHP	Add Perpetrator later	Add Perpetrator later	Ajouter Auteur plus tard	Añadir autor más tarde			إضافة الجاني لاحقاً	
+PHP	Save and Add More Perpetrators	Save and add more Perpetrators	Sauvegarder et ajouter d'autres Auteurs	Guardar y agregar más autores			قم بالتخزين وإضافة المزيد من الجناة	
+PHP	THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ 	There is no Act information yet, you should add some. Click the Add new Event button to add a new Event	Il n'existe pas encore d'information sur l'Acte. Vous devriez en ajouter ! Cliquez sur le bouton «Ajouter un nouvel événement» pour ajouter un  événement.				لا توجد معلومات حتى الآن عن الفعل، يجب إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد	
+PHP	THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_	There is no Intervention information yet, you should add some. Click the Add new Event button to add a new Event	Il n'existe pas encore d'information sur l'Intervention. Vous devriez en ajouter ! Cliquez sur le bouton «Ajouter un nouvel événement» pour ajouter un  événement.				لا توجد معلومات حتى الآن عن التدخل، يجب،إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد	
+PHP	View person's roles	View person's roles	Voir les rôles de cette Personne	Ver las actividades de la persona			عرض أدوار الشخص	
+PHP	Duplicate	Duplicate	Double	Duplicado			مكرر	
+PHP	Insert folder name:	Insert folder name:	Insérer le nom du dossier :	Insertar nombre de la carpeta			إدراج اسم المجلد:	
+PHP	Return to files list	Return to files list	Retour à la liste des fichiers	Regresar a la lista de archivos			ارجع الى قائمة الملفات	
+PHP	Preview	Preview	Prévisualiser	Preestrenar			عرض مسبق-معاينة	
+PHP	Erase	Erase	Effacer	Borrar			محو	
+PHP	Charts and map	Charts and map	Graphiques et carte	Gráficos y mapa			المخططات و الخرائط	
+JS	Clear this selections	Clear this selections	Effacer cette sélection	Borrar esta selección			ازالة الاختيارات هذة	
+JS	of	of	de	de			من	
+JS	Not found	Not found	Pas trouvé	No se ha encontrado			غير موجود	
+JS	Map	Map	Carte	Mapa			خارطة	
+JS	Charts	Charts	Graphiques	Gráficos			رسم بياني	
+JS	Results	Results	Résultats	Resultados			النتائج	
+JS	Filters	Filters	Filtres				مرشح ـ فلتر	

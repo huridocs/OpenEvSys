@@ -432,7 +432,7 @@ window.onload = function(){
         
         $(this).select2({
             allowClear: true,
-            placeholder: "Select",
+            placeholder: _("SELECT"),
             dropdownCss:dropdownCss,
             containerCss:containerCss
         });
@@ -451,7 +451,7 @@ window.onload = function(){
         
         $(this).select2({
             allowClear: true,
-            placeholder: "Select",
+            placeholder: _("SELECT"),
             dropdownCss:dropdownCss,
             containerCss:containerCss
         });
@@ -469,7 +469,7 @@ window.onload = function(){
         
         $(this).select2({
             allowClear: true,
-            placeholder: "Select",
+            placeholder: _("SELECT"),
             closeOnSelect:false,
             dropdownCss:dropdownCss,
             containerCss:containerCss
@@ -490,7 +490,7 @@ window.onload = function(){
         $(this).select2({       
              
             allowClear: true,
-            placeholder: "Select",
+            placeholder: _("SELECT"),
             closeOnSelect:false,
             formatResult: format_mt_tree,
             formatSelection: format_mt_tree,

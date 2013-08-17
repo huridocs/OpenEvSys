@@ -1,7 +1,8 @@
 <?php
 global $conf;
 ?>
-
+<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));
+$version = $version[1]; ?>
 <script type="text/javascript" src="res/jquery/jquery-ui-map/jquery.ui.map.js"></script>
 <script type="text/javascript" src="res/markerclusterer/markerclusterer_packed.js"></script>
 <script type="text/javascript" src="res/js/jquery.facetsearch.js?v=<?php echo $version?>"></script>
@@ -135,7 +136,7 @@ global $conf;
         $("#entselect").select2({
             width: 'resolve',
             allowClear: true,
-            placeholder: "Select entity"
+            placeholder: "<?php echo _t('SELECT_ENTITY')?>"
         });
         $("#entselect").on("change", function() { 
             $(".fieldsbox").hide();
@@ -147,7 +148,7 @@ global $conf;
             width: 'resolve',
             allowClear: true,
             closeOnSelect:false,
-            placeholder: "Select facets"
+            placeholder: "<?php echo _t('Select facets')?>"
         });
        
  

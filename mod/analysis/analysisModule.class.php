@@ -1815,9 +1815,9 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 if ($val[0]) {
 
                                     if ($val[0] == "y") {
-                                        $vall = _t('Yes');
+                                        $vall = _t('YES');
                                     } elseif ($val[0] == "n") {
-                                        $vall = _t('No');
+                                        $vall = _t('NO');
                                     } else {
                                         $vall = $val[0];
                                     }
@@ -1830,7 +1830,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                 $chart["data"][0][] = $vall;
                                 $chart["data"][1][] = (int) $val[1];
 
-                                $chart2["data"][0] = array($chart["title"], _t("Count"));
+                                $chart2["data"][0] = array($chart["title"], _t("COUNT"));
                                 $chart2["data"][] = array($vall, (int) $val[1]);
 
                                 $facetcounts[$val[2]] = (int) $val[1];
@@ -1847,13 +1847,13 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     switch ($fieldType) {
                         case 'radio':
 
-                            $label = _t('Yes');
+                            $label = _t('YES');
                             if (isset($facetcounts["y"])) {
                                 $label .= " (" . $facetcounts["y"] . ")";
                             }
                             $resp["facets"][$field]["terms"][] = array('term' => 'y', 'label' => $label);
 
-                            $label = _t('No');
+                            $label = _t('NO');
                             if (isset($facetcounts["n"])) {
                                 $label .= " (" . $facetcounts["n"] . ")";
                             }

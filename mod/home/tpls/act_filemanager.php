@@ -1,7 +1,7 @@
 <?php
 global $conf;
 
-$imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
+$imagesfolder = $conf['media_dir'] . "filemanager"; //WWWWROOT . "images" . DS . "uploads" . DS;
 $ext_img = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff');
 $ext_file = array('doc', 'docx', 'pdf', 'xls', 'xlsx', 'txt', 'csv', 'html', 'psd', 'sql', 'php', 'log', 'fla', 'xml', 'ade', 'adp', 'ppt', 'pptx');
 $ext_video = array('mov', 'mpeg', 'mp4', 'avi', 'mpg', 'wma');
@@ -56,7 +56,7 @@ if (!isset($_GET['img_only'])) {
 
 
             <!----- header div start ------->
-            <div class="filters"><button class="btn btn-primary upload-btn" style="margin-left:5px;"><i class="icon-upload icon-white"></i> <?php echo _t('Upload a file') ?></button> 
+            <div class="filters"><button class="btn btn-primary upload-btn" style="margin-left:5px;"><i class="icon-upload icon-white"></i> <?php echo _t('UPLOAD') ?></button> 
             </div>
         </div>
 
@@ -111,10 +111,12 @@ if (!isset($_GET['img_only'])) {
                 }
                 $is_img = false;
                 $file_ext = substr(strrchr($file, '.'), 1);
-
+                $file_url = get_url('home', 'download', null, array('file' => $file), null, true); //"images/uploads/" . $file;
+                $name = $file;
+                $name = substr($name, 0, '-' . (strlen($file_ext) + 1));
                 if (in_array($file_ext, $ext)) {
                     if (in_array($file_ext, $ext_img)) {
-                        $src = "images/uploads/" . $file;
+                        $src = $file_url;
                         $is_img = true;
                     } elseif (file_exists(WWWROOT . 'res/jquery/tinymce/4.0b3/plugins/filemanager/ico/' . strtoupper($file_ext) . ".png")) {
                         $src = 'res/jquery/tinymce/4.0b3/plugins/filemanager/ico/' . strtoupper($file_ext) . ".png";
@@ -136,12 +138,11 @@ if (!isset($_GET['img_only'])) {
                                 ?>
                             <li class="span2 ff-item-type-<?php echo $class_ext; ?>">
                                 <div class="boxes thumbnail">
-                                    <form action="index.php?mod=home&act=forcedownload" method="post" class="download-form">
-                                        <input type="hidden" name="path" value="<?php echo $file ?>"/>
-                                        <input type="hidden" name="name" value="<?php echo $file ?>"/>
+                                    <form action="index.php?mod=home&act=download" method="post" class="download-form">
+                                        <input type="hidden" name="file" value="<?php echo $file ?>"/>
 
                                         <div class="btn-group">
-                                            <button type="submit" title="<?php echo _t('Download') ?>" class="btn"><i class="icon-download"></i></button>
+                                            <button type="submit" title="<?php echo _t('DOWNLOAD') ?>" class="btn"><i class="icon-download"></i></button>
 
                                             <?php if ($is_img) { ?>
                                                 <a class="btn preview" title="<?php echo _t('Preview') ?>" data-url="<?php echo $src; ?>" data-toggle="lightbox" href="#demoLightbox"><i class=" icon-eye-open"></i></a>
@@ -152,9 +153,9 @@ if (!isset($_GET['img_only'])) {
                                         </div>
 
                                     </form>
-                                    <a href="#" title="<?php echo _t('Select') ?>" onclick="<?php echo $apply; ?>('<?php echo $src; ?>')">
+                                    <a href="#" title="<?php echo _t('SELECT') ?>" onclick="<?php echo $apply; ?>('<?php echo $file_url; ?>')">
                                         <img data-src="holder.js/140x100" alt="140x100" src="<?php echo $src; ?>" height="100">
-                                            <h4><?php echo substr($file, 0, '-' . (strlen($file_ext) + 1)); ?></h4></a>
+                                            <h4><?php echo $name; ?></h4></a>
 
 
                                 </div>
@@ -242,7 +243,7 @@ if (!isset($_GET['img_only'])) {
     	
                     fill=$("<img />",{"src":file});
                 }else{
-                    fill=$("<a />").attr("href", file).text(ext_check[0]);
+                    fill=$("<a />").attr("href", file).text(file.replace(/\..+$/, ''));
                 }
                 $(target).contents().find('#tinymce').append(fill);
                 $(closed).find('.mce-close').trigger('click');

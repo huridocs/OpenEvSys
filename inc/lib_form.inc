@@ -34,7 +34,7 @@ function shn_form_extra_opts($extra_opts) {
 
     if (isset($extra_opts['help'])) {
         $id = $extra_opts['help'];
-        echo "<a href='" . get_url('help', 'help_popup', null, array('id' => $id), null, true) . "' class='help' target='_blank' title='" . htmlentities($extra_opts['label']) . "'><i class='icon-question-sign'></i></a>";
+        echo "<a href='" . get_url('help', 'help_popup', null, array('id' => $id), null, true) . "' class='help' target='_blank' title='" . htmlentities($extra_opts['label'],ENT_QUOTES, "UTF-8") . "'><i class='icon-question-sign'></i></a>";
     }
 
     if (isset($extra_opts['error']) && count($extra_opts['error'])) {
@@ -1247,7 +1247,7 @@ function shn_form_address($label, $name, $extra_opts) {
         <br />	
         <fieldset id='address_frm' >
             <div class="box" style="margin-top:10px">
-                <h4 class="box-header round-top"><?php echo _t('Address') ?> </h4>
+                <h4 class="box-header round-top"><?php echo _t('ADDRESS') ?> </h4>
                 <div class="box-container-toggle">
                     <div class="box-content">
                         <?php

@@ -63,8 +63,8 @@ class MtTerms extends ADODB_Active_Record{
                 FROM mt_vocab m 
                 LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
                 $consistancyJoin
-                WHERE TRIM(list_code)='$listCode' AND visible = 'y' ORDER BY term_order";
-        //echo $sql;
+                WHERE TRIM(list_code)='$listCode' AND (visible = 'y' or visible IS NULL) ORDER BY term_order";
+        //echo $sql;exit;
         $browse = new Browse();
         $res = $browse->ExecuteQuery($sql);
         //print_r($res);

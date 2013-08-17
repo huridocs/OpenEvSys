@@ -250,9 +250,9 @@ class dashboardModule extends shnModule {
                         if ($val[0]) {
 
                             if ($val[0] == "y") {
-                                $vall = _t('Yes');
+                                $vall = _t('YES');
                             } elseif ($val[0] == "n") {
-                                $vall = _t('No');
+                                $vall = _t('NO');
                             } else {
                                 $vall = $val[0];
                             }
@@ -262,7 +262,7 @@ class dashboardModule extends shnModule {
                         $chart["data"][0][] = $vall;
                         $chart["data"][1][] = (int) $val[1];
 
-                        $chart2["data"][0] = array($chart["title"], _t("Count"));
+                        $chart2["data"][0] = array($chart["title"], _t("COUNT"));
                         $chart2["data"][] = array($vall, (int) $val[1]);
                         $total +=(int) $val[1];
                     }

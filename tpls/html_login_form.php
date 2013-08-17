@@ -31,7 +31,7 @@
     
   <div class="control-group">
     <div class="controls">
-       <button type="submit" class="btn">Sign in</button>
+       <button type="submit" class="btn"><?php echo _t('SIGN_IN')?></button>
     </div>
   </div>
    

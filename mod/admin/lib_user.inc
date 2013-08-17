@@ -44,6 +44,7 @@ function user_get_form()
     global $global;
     //add the user to acl list
     $options = acl_get_roles();
+    
     $user_form = array(
         'username' => array('type'=>'text','label'=>_t('USERNAME'),'extra_opts'=>array('required'=>true)),
         'password1'=>array('type'=>'password','label'=>_t('PASSWORD')  ,'extra_opts'=>array('required'=>true)  ),

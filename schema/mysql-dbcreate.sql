@@ -9,7 +9,7 @@
 -- if needed to delete -----------------------
 
 
-
+SET foreign_key_checks = 0;
 
 -- -------------------------------------------
 DROP TABLE IF EXISTS  `mlt_intervention_type_of_intervention` ;

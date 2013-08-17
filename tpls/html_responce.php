@@ -25,7 +25,7 @@ $version = $version[1]; ?>
         <link rel="stylesheet" type="text/css" media="screen" href="res/bootstrap/bootstrap-daterangepicker/daterangepicker.css" />
 
 
-        <link href="res/locale/<?php echo $conf['locale'] ?>.json" lang="<?php echo $conf['locale'] ?>" rel="gettext"/>
+        <link href="res/locale/<?php echo $conf['locale'] ?>.json?v=<?php echo $version?>" lang="<?php echo $conf['locale'] ?>" rel="gettext"/>
 
         <script src="res/jquery/jquery-1.9.1.min.js"></script>
 

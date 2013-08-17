@@ -16,7 +16,7 @@
 
             </div></div>
 <fieldset>
-    <legend>Login Information</legend>
+    <legend><?php echo _t('Login Information')?></legend>
 
         <?php  echo $fields['username']  ?>
         <?php  echo $fields['password1']  ?>
@@ -25,7 +25,7 @@
 
 </fieldset>
 <fieldset>
-    <legend>Profile Information</legend>
+    <legend><?php echo _t('Profile Information')?></legend>
         <?php  echo $fields['first_name']  ?>
         <?php  echo $fields['last_name']  ?>
         <?php  echo $fields['organization']  ?>

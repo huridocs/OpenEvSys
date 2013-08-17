@@ -4,7 +4,7 @@
 
         <div class='control-group'>
             <?php
-            shn_form_select('Select language', 'locale', array('options' => $locales, 'value' => $current_locale));
+            shn_form_select(_t('Select language'), 'locale', array('options' => $locales, 'value' => $current_locale));
             ?>
         </div>
         <div class="control-group">

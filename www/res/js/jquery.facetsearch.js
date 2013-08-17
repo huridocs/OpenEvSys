@@ -324,7 +324,7 @@
 					<div class="dropdown" style="display:inline"><a class="box-btn dropdown-toggle" data-toggle="dropdown" \
                       href="#" title=""><span class="caret" style="margin-top:6px;margin-rigth:3px;"></span></a> \
                       <ul class="dropdown-menu"> \
-                        <li><a class="facetsearch_clearfacet" data-entity="{{FILTER_ENTITY}}" data-field="{{FILTER_FIELD}}" rel="{{FILTER_EXACT}}">Clear this selections</a></li> \
+                        <li><a class="facetsearch_clearfacet" data-entity="{{FILTER_ENTITY}}" data-field="{{FILTER_FIELD}}" rel="{{FILTER_EXACT}}">'+_('Clear this selections')+'</a></li> \
                         </ul></div></h4> \
 							<div class="box-container-toggle"><div class="box-content"> \
 							<ul id="facetsearch_{{FILTER_FIELD}}" \
@@ -562,12 +562,12 @@
               <div class="pagination"> \
                 <ul> \
                   <li class="prev"><a id="facetsearch_decrement" href="{{from}}">&laquo; back</a></li> \
-                  <li class="active"><a>{{from}} &ndash; {{to}} of {{total}}</a></li> \
+                  <li class="active"><a>{{from}} &ndash; {{to}} '+_t('of')+' {{total}}</a></li> \
                   <li class="next"><a id="facetsearch_increment" href="{{to}}">next &raquo;</a></li> \
                 </ul> \
               </div> \
               ';
-            $('#facetsearch_metadata').html("Not found...")
+            $('#facetsearch_metadata').html(_t("Not found"))
             if (data.found) {
                 var from = options.paging.from + 1
                 var size = options.paging.size
@@ -717,7 +717,7 @@
                                         height:300
                                     });
                                 }else if(charttype =="editchart"){
-                                    var button = $("<button  class='btn openeditorbtn'  data-editorid='"+i+"_"+j+"' >Edit</button>");
+                                    var button = $("<button  class='btn openeditorbtn'  data-editorid='"+i+"_"+j+"' >"+_('EDIT')+"</button>");
                                     $(div).append(button);
                                     editcharttype = "BarChart";
                                     if(j%2 == 1){
@@ -1202,23 +1202,23 @@
                <div class="span9"> \
 						<div style="clear:both;" id="facetsearch_selectedfilters" ></div> \
 						<div id="mapcontainer" class="box" >\
-							<h4 class="box-header round-top">Map <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
+							<h4 class="box-header round-top">'+_('Map')+' <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
 							<div class="box-container-toggle"> \
 							<div id="mapcanvas"></div> \
 						</div> </div> \
 						<div id="chartscontainer" class="box" >\
-							<h4 class="box-header round-top">Charts <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
+							<h4 class="box-header round-top">'+_('Charts')+' <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
 							<div class="box-container-toggle"> \
 							<div id="chartscanvas"></div> \
 						</div> </div> \<div id="detailscontainer" class="box"> \
-							<h4 class="box-header round-top">Results <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
+							<h4 class="box-header round-top">'+_('Results')+' <a class="box-btn" title="toggle"><i class="icon-minus"></i></a></h4> \
 							<div class="box-container-toggle"><div class="box-content"> \
 							<table class="table table-striped" id="facetsearch_results"></table> \
 							<div id="facetsearch_metadata"></div> \
 						</div> </div></div>\
 			   </div> \
              <div class="span3"> \
-                 <div class="box"><h4 class="box-header round-top">Filters</h4> \
+                 <div class="box"><h4 class="box-header round-top">'+_('Filters')+'</h4> \
 							<div class="box-container-toggle"><div class="box-content"> \
 							<div id="facetsearch_filters" class="box"></div> \
                </div></div></div></div> \

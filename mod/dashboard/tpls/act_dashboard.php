@@ -18,11 +18,11 @@ global $conf;
                 </div>
                 <label><?php echo _t("Timeline type")?>:</label>   
                 <select name="timelinetype" >
-                    <option value="day" <?php if($timelineType == "day")echo "selected='selected'"?> >Day</option>
-              <option value="month" <?php if($timelineType == "month")echo "selected='selected'"?> >Month</option>
-               <option value="year" <?php if($timelineType == "year")echo "selected='selected'"?> >Year</option>
+                    <option value="day" <?php if($timelineType == "day")echo "selected='selected'"?> ><?php echo _t("DAY")?></option>
+              <option value="month" <?php if($timelineType == "month")echo "selected='selected'"?> ><?php echo _t("MONTH")?></option>
+               <option value="year" <?php if($timelineType == "year")echo "selected='selected'"?> ><?php echo _t("YEAR")?></option>
                </select>
-                <button type="submit" class="btn" name="load">Load</button>
+                <button type="submit" class="btn" name="load"><?php echo _t("Load")?></button>
             </div>
             </form>
             <script type="text/javascript">
@@ -60,25 +60,25 @@ global $conf;
                     <div class="span3">
                         <div class="stat primary">
                             <h2><?php echo (int) $response["counts"]["event"]; ?></h2>
-                            <h6><?php echo _t("Events"); ?></h6>
+                            <h6><?php echo _t("EVENTS"); ?></h6>
                         </div>
                     </div>
                     <div class="span3">
                         <div class="stat danger">
                             <h2><?php echo (int) $response["counts"]["person"]; ?></h2>
-                            <h6><?php echo _t("Persons"); ?></h6>
+                            <h6><?php echo _t("PERSONS"); ?></h6>
                         </div>
                     </div>
                     <div class="span3">
                         <div class="stat warning">
                             <h2><?php echo (int) $response["counts"]["act"]; ?></h2>
-                            <h6><?php echo _t("Acts"); ?></h6>
+                            <h6><?php echo _t("ACTS"); ?></h6>
                         </div>
                     </div>
                     <div class="span3">
                         <div class="stat success">
                             <h2><?php echo (int) $response["counts"]["intervention"]; ?></h2>
-                            <h6><?php echo _t("Interventions"); ?></h6>
+                            <h6><?php echo _t("INTERVENTIONS"); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ global $conf;
 
                             foreach ($response["counts30"] as $key => $counts30) {
                                 ?>
-                                <li><?php echo _t(ucfirst($key . "s")) ?><span class="pull-right badge <?php echo $classes[$i] ?>"><?php echo $counts30 ?></span></li>
+                            <li><?php echo _t(strtoupper($key . "S")) ?><span class="pull-right badge <?php echo $classes[$i] ?>"><?php echo $counts30 ?></span></li>
                                 <?php
                                 $i++;
                             }
@@ -230,7 +230,7 @@ global $conf;
                 colors:['#ea494a']
             });
         <?php }else{?>
-            $("#eventtimeline").html("No data available");
+            $("#eventtimeline").html("<?php echo _t("No data available")?>";
         <?php } ?>
             
             <?php if($response["timeline"]["act"]){?>
@@ -245,7 +245,7 @@ global $conf;
                 colors:['#ffa93c']
             });
             <?php }else{?>
-            $("#acttimeline").html("No data available");
+            $("#acttimeline").html("<?php echo _t("No data available")?>");
         <?php } ?>
         
 <?php /* foreach ($response["barchart"] as $bchart) { ?>

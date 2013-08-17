@@ -17,7 +17,7 @@
 </div>
 
 <?php if (isset($entity_select)) { ?>
-    <h3><?php echo _t('CHANGE') . " [ {$entity_select} ] " . _t('FORM'); ?></h3>
+<h3><?php echo _t('CHANGE') . " [ "._t(strtoupper($entity_select))." ] " . _t('FORM'); ?></h3>
     <?php
 
     function print_tab_attr($act, $mod = "a") {

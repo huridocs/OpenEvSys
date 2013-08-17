@@ -20,7 +20,7 @@
                     }
                     ?>
                 </select>
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span>    </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
 
         </div>
@@ -30,7 +30,7 @@
 
             <div class="controls">
                 <input title="field_number" type="text" name="field_number" id="field_number"  value="<?php if(isset($_POST['field_number'])){echo $_POST['field_number'];} ?>"   class='input-large'  />
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span>    </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
         </div>
         <div class='control-group'>	
@@ -38,7 +38,7 @@
 
             <div class="controls">
                 <input title="field_name" type="text" name="field_name" id="field_name"  value="<?php if(isset($_POST['field_name'])){echo $_POST['field_name'];} ?>"   class='input-large'  />
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span>    </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
         </div>
         <div class='control-group'>	
@@ -46,7 +46,7 @@
 
             <div class="controls">
                 <input title="field_label" type="text" name="field_label" id="field_label"  value="<?php if(isset($_POST['field_label'])){echo $_POST['field_label'];} ?>"  class='input-large'  />
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span>    </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
         </div>
         <div class='control-group'>        <label  class="control-label" for="field_type"><?php echo _t('FIELD_TYPE') ?></label>
@@ -75,14 +75,14 @@
                     ?>
                 </select>
 
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span> </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span> </div>
             </div>
         </div> 
         <div class='control-group'>	
             <label  class="control-label" for="required"><?php echo _t('IS_REQUIRED') ?></label>
 
             <div class="controls">
-                <input title="required" type="checkbox" name="required" id="required"  value="y" <?php if(isset($_POST['required']) ){echo " checked='checked' ";} ?>    />
+                <input title="required" type="checkbox" name="required" id="required"  value="y" <?php if(isset($_POST['IS_REQUIRED']) ){echo " checked='checked' ";} ?>    />
             </div>
         </div>
         <div class='control-group'>	

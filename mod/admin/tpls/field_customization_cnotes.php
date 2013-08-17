@@ -20,7 +20,7 @@
                     <td align="center">
                        <?php
                        if (($record['field_type'] == "mt_tree" || $record['field_type'] == "mt_select" || $record['field_type'] == "user_select") && strtolower($record['is_repeat']) == 'y') {
-                        echo _t('Yes');
+                        echo _t('YES');
                     }?>
                         
                     </td>

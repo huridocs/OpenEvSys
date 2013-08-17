@@ -5,8 +5,8 @@
         <select name="bulkaction" class="select">
 
             <option value=""></option>
-            <option value="deleteselected"><?php echo _t('Delete') ?></option>
-            <option value="updateselected"><?php echo _t('Update') ?></option>
+            <option value="deleteselected"><?php echo _t('DELETE') ?></option>
+            <option value="updateselected"><?php echo _t('UPDATE') ?></option>
             <option value="visible"><?php echo _t('Set visible ') ?></option>
             <option value="disable"><?php echo _t('Disable') ?></option>
         </select>

@@ -330,22 +330,22 @@ function get_mod_label($entity, $type = "single") {
         case 'event':
         case 'events':
             if ($type == "single") {
-                return _t('Event');
+                return _t('EVENT');
             } else {
-                return _t('Events');
+                return _t('EVENTS');
             }
         case 'person':
         case 'person':
             if ($type == "single") {
-                return _t('Person');
+                return _t('PERSON');
             } else {
-                return _t('Persons');
+                return _t('PERSONS');
             }
         case 'docu':
             if ($type == "single") {
-                return _t('Document');
+                return _t('DOCUMENT');
             } else {
-                return _t('Documents');
+                return _t('DOCUMENTS');
             }
         default:
             if ($type == "single") {

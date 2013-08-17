@@ -11,7 +11,7 @@
 
             <div class="controls">
                 <input title="term" type="text" name="term" id="term"  value=""   class='input-large'  />
-                <div class="help-inline"><span class="label label-important"><?php echo _t('required') ?></span>    </div>
+                <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
         </div>
         

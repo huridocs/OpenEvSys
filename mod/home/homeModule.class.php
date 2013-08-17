@@ -325,7 +325,8 @@ class homeModule extends shnModule {
     }
 
     function act_filemanager() {
-        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
+        global $conf;
+        $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;
         if (isset($_GET['del_file'])) {
             @unlink($imagesfolder . $_GET['del_file']);
         }
@@ -335,22 +336,33 @@ class homeModule extends shnModule {
         include_once APPROOT . 'inc/lib_uuid.inc';
         include_once APPROOT . 'inc/lib_files.inc';
         $type = null;
-        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
-        $uri = shn_files_store('file', null, $type,$imagesfolder);
+        global $conf;
+        $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;
+        $uri = shn_files_store('file', null, $type, $imagesfolder);
         exit;
     }
 
-    function act_forcedownload() {
-        $path = $_POST['path'];
-        $name = $_POST['name'];
-        $imagesfolder = WWWWROOT . "images" . DS . "uploads" . DS;
-        header('Pragma: private');
-        header('Cache-control: private, must-revalidate');
-        header("Content-Type: application/octet-stream");
-        header("Content-Length: " . (string) (filesize($imagesfolder . $path)));
-        header('Content-Disposition: attachment; filename="' . ($name) . '"');
-        readfile($imagesfolder . $path);
-        exit;
+   
+    public function act_download() {
+        global $conf;
+        $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;
+
+        $file = $_REQUEST['file'];
+        $file = str_replace("/", "", $file);
+        $file = str_replace("\\", "", $file);
+        if ($file && filesize($imagesfolder . $file)) {
+            header('Pragma: private');
+            header('Cache-control: private, must-revalidate');
+            header("Content-Type: application/octet-stream");
+            header("Content-Length: " . (string) (filesize($imagesfolder . $file)));
+            header('Content-Disposition: attachment; filename="' . ($file) . '"');
+            readfile($imagesfolder . $file);
+            exit;
+        } else {
+            //shnMessageQueue::addInformation('No attachment found to this document.');
+            //set_redirect_header('docu', 'view_document', null, null);
+        }
+        exit();
     }
 
 }

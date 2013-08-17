@@ -177,7 +177,7 @@ class adminModule extends shnModule {
             'user_select_multi' => _t('Multivalue User Select'),
             'mt_tree' => _t('Tree'),
             'mt_tree_multi' => _t('Multivalue Tree'),
-            'mt_select' => _t('Select'),
+            'mt_select' => _t('SELECT'),
             'mt_select_multi' => _t('Multivalue Select')
         );
         $mtIndex = new MtIndex();
@@ -479,7 +479,7 @@ class adminModule extends shnModule {
         if (isset($this->mt_select)) {
             //handle delete requests
             		if($_POST['bulkaction'] && !$_POST['vocab_number_list']){
-				shnMessageQueue::addError(_t('Please select items to performa action'));
+				shnMessageQueue::addError(_t('Please select items to perform action'));
 
 			}
             if (isset($_POST['bulkaction']) && $_POST['bulkaction'] == "deleteselected") {
@@ -536,9 +536,9 @@ class adminModule extends shnModule {
             $gacl->add_group($value, $_POST['role_name'], $parent_id, 'ARO');
         }
 
-        $this->modules = array('admin' => 'Admin', 'analysis' => 'Analysis',
-            'events' => 'Events', 'person' => 'Person',
-            'docu' => 'Documents', 'dashboard' => 'Dashboard'/* ,'help'=>'Help','home'=>'Home' */);
+        $this->modules = array('admin' => _t('ADMIN'), 'analysis' => _t('ANALYSIS'),
+            'events' => _t('EVENTS'), 'person' => _t('PERSON'),
+            'docu' => _t('DOCUMENTS'), 'dashboard' => _t('Dashboard')/* ,'help'=>'Help','home'=>'Home' */);
         $modules = $gacl->get_objects('modules', '0', 'AXO');
 
         //add the user to acl list
@@ -596,7 +596,7 @@ class adminModule extends shnModule {
         $gacl = new gacl_api(array('db' => $global['db'], 'db_table_prefix' => 'gacl_'));
         //select role
         $this->roles = acl_get_roles();
-
+        
         if (isset($_REQUEST['role']))
             $this->role = $_REQUEST['role'];
 
@@ -618,7 +618,7 @@ class adminModule extends shnModule {
         $this->entity_groups = array();
         foreach ($entity_groups as $id) {
             $group = $gacl->get_group_data($id, 'AXO');
-            $this->entity_groups[$group[2]] = $group[3];
+            $this->entity_groups[$group[2]] = _t($group[3]);
         }
         //get the deny list
         $acl_list = array();

@@ -106,21 +106,21 @@ function mt_customization_delete($mt_select, $vocab_number_list) {
     }
 }
 
-function get_next_vocab_number(){
+function get_next_vocab_number() {
     global $global;
     $sql = "SELECT CAST(vocab_number AS UNSIGNED) as vocab_number  FROM mt_vocab order by vocab_number desc";
-    
-    while(true){
-        $vocab_number = $global['db']->GetOne($sql)+1;
+
+    while (true) {
+        $vocab_number = $global['db']->GetOne($sql) + 1;
 
         $sql = "SELECT vocab_number FROM mt_vocab WHERE vocab_number='$vocab_number' ";
         $vocab_number2 = $global['db']->GetOne($sql);
-       if (empty($vocab_number2)) {
-           return $vocab_number;
+        if (empty($vocab_number2)) {
+            return $vocab_number;
         }
     }
-    
 }
+
 function mt_customization_add_terms($mt_term) {
     global $global;
 
@@ -130,11 +130,11 @@ function mt_customization_add_terms($mt_term) {
     $fieldValues = array();
     $mtIndex = new MtIndex();
     $mt_table = 'mt_' . $mt_term . '_' . $mtIndex->getTermforCode($mt_term);
-    
-        
+
+
     $mt_term = (strlen($mt_term) == 1) ? '0' . $mt_term : $mt_term;
     if (is_array($_POST['new_term_label'])) {
-        for ($index = 0;$index < count($_POST['new_term_label']['en']);$index++) {
+        for ($index = 0; $index < count($_POST['new_term_label']['en']); $index++) {
             $vocab_number = get_next_vocab_number();
             $huri_term = trim($_POST['new_term_label']['en'][$index]);
 
@@ -145,6 +145,11 @@ function mt_customization_add_terms($mt_term) {
             $fieldValues['vocab_number'] = $vocab_number;
             $fieldValues['list_code'] = $mt_term;
             $fieldValues['english'] = $huri_term;
+            $fieldValues['visible'] = 'y';
+            $fieldValues['parent_vocab_number'] = 0;
+            $fieldValues['term_order'] = 0;
+            $fieldValues['term_level'] = 0;
+            
             if (!mt_customization_validate_mtterm($mt_term, $vocab_number, $huri_term)) {
                 continue;
             }
@@ -182,17 +187,17 @@ function mt_customization_add_new_taxonomy() {
         shnMessageQueue::addError(_t('Micro-thesauri cannot be empty'));
         return false;
     }
-    
+
     $mtIndex = new MtIndex();
     $code = $mtIndex->getCodeforTerm($term);
-    
+
     if ($code) {
         shnMessageQueue::addError(_t('Micro-thesauri name already exists'));
         return false;
     }
     $max = $global['db']->GetOne("select max(no) from mt_index");
     $code = (int) $max + 1;
-    
+
     $dbQuery = new Browse();
     try {
         $dbQuery->ExecuteNonQuery("insert into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')");
