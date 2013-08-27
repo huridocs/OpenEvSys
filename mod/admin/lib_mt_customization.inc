@@ -181,6 +181,7 @@ function mt_customization_add_terms($mt_term) {
 function mt_customization_add_new_taxonomy() {
     global $global;
     $term = str_replace(" ", "", strtolower($_POST['term']));
+    $term = str_replace("-", "_", $term);
     $term = preg_replace('/[^A-Za-z0-9\-_]/', '', $term); // Removes special chars.
     $term = trim($term);
     if (!$term) {
@@ -200,6 +201,7 @@ function mt_customization_add_new_taxonomy() {
 
     $dbQuery = new Browse();
     try {
+        
         $dbQuery->ExecuteNonQuery("insert into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')");
 
         $sql = "CREATE TABLE IF NOT EXISTS mt_" . $code . "_" . $term . "(
