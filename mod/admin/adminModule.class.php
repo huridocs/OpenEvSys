@@ -53,7 +53,7 @@ class adminModule extends shnModule {
         if ($this->entity_select == 'event' || $this->entity_select == 'person' || $this->entity_select == 'supporting_docs_meta') {
             $this->browse_needed = true;
         }
-        if($this->entity_select == 'biographic_details' && $conf['menus']['biography_list']){
+        if ($this->entity_select == 'biographic_details' && $conf['menus']['biography_list']) {
             $this->browse_needed = true;
         }
 
@@ -297,6 +297,36 @@ class adminModule extends shnModule {
         $this->change_password_form = $change_password_form;
     }
 
+    public function act_edit_security() {
+        include_once 'lib_user.inc';
+
+        $user = user_get_selected();
+        $result = $user->getGASk();
+
+        if (isset($_POST['disable'])) {
+            $user->disableTSV();
+        } elseif (isset($_POST['code'])) {
+            $resp = $user->TSVSaveMGA($_POST['code']);
+            if (!$resp) {
+                $this->wrongcode = true;
+            } else {
+                $this->changed = true;
+            }
+        }
+        $cfg = array();
+        if (!empty($user->config)) {
+            $cfg = @json_decode($user->config, true);
+        }
+        if ($cfg['security']['TSV']['method'] == "MGA") {
+            $this->enabled = true;
+        }
+
+
+        $this->url = $result['url'];
+        $this->secret = $result['secret'];
+        $this->user = $user;
+    }
+
     public function act_add_user() {
 
         // var_dump($_POST);
@@ -478,10 +508,9 @@ class adminModule extends shnModule {
 
         if (isset($this->mt_select)) {
             //handle delete requests
-            		if($_POST['bulkaction'] && !$_POST['vocab_number_list']){
-				shnMessageQueue::addError(_t('Please select items to perform action'));
-
-			}
+            if ($_POST['bulkaction'] && !$_POST['vocab_number_list']) {
+                shnMessageQueue::addError(_t('Please select items to perform action'));
+            }
             if (isset($_POST['bulkaction']) && $_POST['bulkaction'] == "deleteselected") {
                 $this->has_children = false;
                 foreach ($_POST['vocab_number_list'] as $vocab_number => $v) {
@@ -521,6 +550,10 @@ class adminModule extends shnModule {
         }
     }
 
+    public function act_menu(){
+        
+        
+    }
     /* }}} */
 
     /* {{{ Acl functions */
@@ -596,7 +629,7 @@ class adminModule extends shnModule {
         $gacl = new gacl_api(array('db' => $global['db'], 'db_table_prefix' => 'gacl_'));
         //select role
         $this->roles = acl_get_roles();
-        
+
         if (isset($_REQUEST['role']))
             $this->role = $_REQUEST['role'];
 
@@ -698,7 +731,7 @@ class adminModule extends shnModule {
     public function act_change_print() {
         global $conf;
         if (isset($_POST["save"])) {
-            $keys = array('print_report_header', 'print_event_header','print_person_header');// 'print_event_sidebar', , 'print_person_sidebar');
+            $keys = array('print_report_header', 'print_event_header', 'print_person_header'); // 'print_event_sidebar', , 'print_person_sidebar');
             foreach ($keys as $key) {
                 $value = $_POST[$key];
                 $conf[$key] = $value;
@@ -885,14 +918,14 @@ class adminModule extends shnModule {
     /* }}} */
 
     public function act_System_configuration() {
-        global $alt_conf;
+        global $alt_conf, $alt_conf_check;
         require_once(APPROOT . 'conf/conf_meta.php');
 
         if (isset($_POST["submit"])) {
             global $conf;
             $this->conf = $conf;
             unset($_POST["submit"]);
-            global $alt_conf_check;
+
             $this->alt_conf_check = $alt_conf_check;
             foreach ($alt_conf_check as $key => $value) {
                 if (!isset($_POST[$key])) {

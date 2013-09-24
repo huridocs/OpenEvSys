@@ -7,22 +7,20 @@
                 <?php
                 global $conf;
                 $action = $_GET['act'];
-                
-
-                    ?>
-                    <li><a href='<?php get_url('admin', 'field_customization') ?>'><?php echo _t('FORM_CUSTOMIZATION') ?></a>
-                    </li>
-                    <li class="subnav <?php if ($action == "field_customization") echo "active" ?>"><a href="<?php get_url('admin', 'field_customization') ?>"><?php echo _t('EXISTING_FIELDS') ?></a></li>
-                    <li class="subnav <?php if ($action == "new_field") echo "active" ?>"><a href="<?php get_url('admin', 'new_field') ?>"><?php echo _t('ADD_NEW_FIELD') ?></a></li>
-                    <!--
-                        <li><a href="<?php get_url('admin', 'shuffel_result') ?>"><?php echo _t('COMBINED_SEARCH_FORMS') ?></a></li>
-                    -->
+                ?>
+                <li><a href='<?php get_url('admin', 'field_customization') ?>'><?php echo _t('FORM_CUSTOMIZATION') ?></a>
+                </li>
+                <li class="subnav <?php if ($action == "field_customization") echo "active" ?>"><a href="<?php get_url('admin', 'field_customization') ?>"><?php echo _t('EXISTING_FIELDS') ?></a></li>
+                <li class="subnav <?php if ($action == "new_field") echo "active" ?>"><a href="<?php get_url('admin', 'new_field') ?>"><?php echo _t('ADD_NEW_FIELD') ?></a></li>
+                <!--
+                    <li><a href="<?php get_url('admin', 'shuffel_result') ?>"><?php echo _t('COMBINED_SEARCH_FORMS') ?></a></li>
+                -->
 
 
 
-                    <li class="<?php if ($action == "mt_customization") echo "active" ?>"><a href="<?php get_url('admin', 'mt_customization') ?>"><?php echo _t('MICRO_THESAURI') ?></a></li>
-                    <li class="subnav <?php if ($action == "new_mt") echo "active" ?>"><a href="<?php get_url('admin', 'new_mt') ?>"><?php echo _t('Add new Micro-thesauri') ?></a></li>
-                  
+                <li class="<?php if ($action == "mt_customization") echo "active" ?>"><a href="<?php get_url('admin', 'mt_customization') ?>"><?php echo _t('MICRO_THESAURI') ?></a></li>
+                <li class="subnav <?php if ($action == "new_mt") echo "active" ?>"><a href="<?php get_url('admin', 'new_mt') ?>"><?php echo _t('Add new Micro-thesauri') ?></a></li>
+
                 <li>
                     <a href="<?php get_url('admin', 'user_management') ?>"><?php echo _t('USER_MANAGEMENT') ?></a>
                 </li>
@@ -33,7 +31,9 @@
                 <!-- 
                 <li><a href="<?php get_url('admin', 'acl_mode') ?>"><?php echo _t('ACL_MODE') ?></a></li> 
                 -->
-
+                <li class="<?php if ($action == "menu") echo "active" ?>">
+                    <a href="<?php get_url('admin', 'menu') ?>"><?php echo _t('Menu') ?></a>
+                </li>
 
                 <li class="<?php if ($action == "set_locale") echo "active" ?>">
                     <a href="<?php get_url('admin', 'set_locale') ?>"><?php echo _t('LOCALIZATION') ?></a>
@@ -56,13 +56,13 @@
                 </li>
                 -->
                 <li class="<?php if ($action == "System_configuration") echo "active" ?>"><a href="<?php get_url('admin', 'System_configuration') ?>"><?php echo _t('SYSTEM_CONFIGURATION') ?></a></li>
-                 <li class="<?php if ($action == "change_print") echo "active" ?>">
+                <li class="<?php if ($action == "change_print") echo "active" ?>">
                     <a href="<?php get_url('admin', 'change_print') ?>"><?php echo _t('Print configuration') ?></a>
                 </li>
-                    <?php
-                global $conf;
-                if (isset($conf['extension'])) {
-                    ?>
+<?php
+global $conf;
+if (isset($conf['extension'])) {
+    ?>
                     <li class="<?php if ($action == "Extensions") echo "active" ?>"><a href="<?php get_url('admin', 'Extensions') ?>"><?php echo _t('EXTENSIONS') ?></a></li>
                 <?php } ?>
             </ul>

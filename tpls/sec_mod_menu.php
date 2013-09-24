@@ -184,6 +184,10 @@ $menus["home"]["edit_password"] = array(
     "url" => get_url('home', 'edit_password', null, null, null, true));
 
 
+$menus["home"]["edit_security"] = array(
+    "title" => _t('Security'),
+    "url" => get_url('home', 'edit_security', null, null, null, true));
+
 
 
 

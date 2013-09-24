@@ -176,6 +176,34 @@ class homeModule extends shnModule {
         $this->change_password_form = $change_password_form;
     }
 
+    public function act_edit_security() {
+
+        $user = UserHelper::loadFromUsername($_SESSION['username']);
+        $result = $user->getGASk();
+
+        if (isset($_POST['disable'])) {
+            $user->disableTSV();
+        }elseif (isset($_POST['code'])) {
+            $resp = $user->TSVSaveMGA($_POST['code']);
+            if (!$resp) {
+                $this->wrongcode = true;
+            }else{
+                $this->changed = true;
+            }
+        }
+         $cfg = array();
+        if (!empty($user->config)) {
+            $cfg = @json_decode($user->config, true);
+        }
+        if ($cfg['security']['TSV']['method'] == "MGA") {
+            $this->enabled = true;
+        }
+
+        
+        $this->url = $result['url'];
+        $this->secret = $result['secret'];
+    }
+
     public function act_test() {
         include(APPROOT . '3rd/phpgacl/gacl_api.class.php');
 //    	$gacl_api = new gacl_api(array('db'=>$global['db'] , 'db_table_prefix'=>'gacl_'));
@@ -342,7 +370,6 @@ class homeModule extends shnModule {
         exit;
     }
 
-   
     public function act_download() {
         global $conf;
         $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;

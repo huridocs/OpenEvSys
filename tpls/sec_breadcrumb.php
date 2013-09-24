@@ -179,8 +179,11 @@ if ($module == "events") {
         case 'edit_user':
             $breadcrumbs->pushCrumb(array('name' => _t('EDIT_PROFILE'), 'mod' => 'home', 'act' => 'edit_user'), 1);
             break;
-        case 'view_homement':
+        case 'edit_password':
             $breadcrumbs->pushCrumb(array('name' => _t('CHANGE_PASSWORD'), 'mod' => 'home', 'act' => 'edit_password'), 1);
+            break;
+        case 'edit_security':
+            $breadcrumbs->pushCrumb(array('name' => _t('Security'), 'mod' => 'home', 'act' => 'edit_security'), 1);
             break;
         default:
             //$breadcrumbs->pushCrumb(array('name' => _t('BROWSE_DOCUMENT'), 'mod' => 'home', 'act' => 'browse'), 1);

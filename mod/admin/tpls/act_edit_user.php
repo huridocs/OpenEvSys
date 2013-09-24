@@ -11,6 +11,8 @@ $username = $user->getUserName();
         </li>
         <li><a href="<?php get_url('admin', 'edit_password', null, array('uid' => $username)); ?> " ><?php echo _t('CHANGE_PASSWORD') ?></a>
         </li>
+         <li ><a  href="<?php get_url('admin', 'edit_security', null, array('uid' => $username)); ?> " ><?php echo _t('Security') ?></a>
+        </li>
     </ul></div> 
 <div class='panel'>
     <?php $fields = shn_form_get_html_fields($user_form); ?>
