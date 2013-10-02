@@ -85,7 +85,7 @@ function get_url($module = 'home', $action = 'default', $view = null, $args = nu
 
             if (is_array($value)) {
                 foreach ($value as $val) {
-                    
+
                     $al .= "&amp;{$id}[]=$val";
                 }
             } else if (isset($value)) {
@@ -577,19 +577,20 @@ function get_chaintype_reverse($type) {
     }
     return $type;
 }
-function get_biography_reverse($type){
-    $types = array("01010300000021"=>"01010400000021",
-        "01010400000021"=>"01010300000021",
-        "01020300000021"=>"01020400000021",
-        "01020400000021"=>"01020300000021",
-        "01040200000021"=>"01040300000021",
-        "01040300000021"=>"01040200000021",
-        "01060100000021"=>"01060200000021",
-        "01060200000021"=>"01060100000021",
-        "01060201000021"=>"01060100000021",
-        "21010000000021"=>"21020000000021",
-        "21020000000021"=>"21010000000021");
-    if($types[$type]){
+
+function get_biography_reverse($type) {
+    $types = array("01010300000021" => "01010400000021",
+        "01010400000021" => "01010300000021",
+        "01020300000021" => "01020400000021",
+        "01020400000021" => "01020300000021",
+        "01040200000021" => "01040300000021",
+        "01040300000021" => "01040200000021",
+        "01060100000021" => "01060200000021",
+        "01060200000021" => "01060100000021",
+        "01060201000021" => "01060100000021",
+        "21010000000021" => "21020000000021",
+        "21020000000021" => "21010000000021");
+    if ($types[$type]) {
         return $types[$type];
     }
     return $type;
@@ -601,4 +602,281 @@ function get_module() {
 
 function get_action() {
     return $_GET['act'];
+}
+
+function getDefaultMenuItems() {
+
+    $module = get_module();
+    $action = get_action();
+
+
+    if ($module == "events") {
+        $id = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
+    } elseif ($module == "person") {
+        $id = (isset($_GET['pid'])) ? $_GET['pid'] : $_SESSION['pid'];
+    } elseif ($module == "docu") {
+        $id = (isset($_GET['doc_id'])) ? $_GET['doc_id'] : $_SESSION['doc_id'];
+    }
+
+    $defaultMenuItems = array(
+        "eventsbrowse" => array("level" => 0, "title" => _t('EVENTS'), "aclmod" => "events", "url" => get_url('events', 'browse', null, null, null, true), "module" => "events", "action" => "browse",
+            "checkactive"=>"checkMenuActiveModule"),
+        "get_event" => array("level" => 1, "title" => _t('EVENT_DESCRIPTION'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'get_event', null, array('eid' => $id), null, true), "module" => "events", "action" => "get_event",
+            "aliases" => array("new_event", "edit_event", "delete_event")),
+        "vp_list" => array("level" => 1, "title" => _t('VICTIMS_AND_PERPETRATORS'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'vp_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "vp_list",
+            "aliases" => array("add_act", "add_ad", "add_involvement", "add_perpetrator", "add_victim",
+                "delete_act", "delete_ad", "edit_act",
+                "edit_ad", "edit_involvement", "edit_perpetrator", "edit_victim")),
+        "src_list" => array("level" => 1, "title" => _t('SOURCES'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'src_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "src_list",
+            "aliases" => array("add_information", "add_source", "delete_information", "edit_information", "edit_source",)),
+        "intv_list" => array("level" => 1, "title" => _t('INTERVENTIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'intv_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "intv_list",
+            "aliases" => array("add_intv", "add_intv_party", "delete_intervention", "edit_intv", "edit_intv_party",
+        )),
+        "coe_list" => array("level" => 1, "title" => _t('CHAIN_OF_EVENTS'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'coe_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "coe_list",
+            "aliases" => array("add_coe", "delete_coe", "edit_coe")),
+        "event_doc_list" => array("level" => 1, "title" => _t('DOCUMENTS'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'doc_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "doc_list",
+            "aliases" => array()),
+        "event_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'audit', null, array('eid' => $id), null, true), "module" => "events", "action" => "audit",
+            "aliases" => array()),
+        "event_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
+            "url" => get_url('events', 'permissions', null, array('eid' => $id), null, true), "module" => "events", "action" => "permissions",
+            "aliases" => array(), "check" => create_function("", 'global $event;
+                
+if ($event->confidentiality == "y") {
+return true;
+}
+return false;')),
+        "personsbrowse" => array("level" => 0, "title" => _t('PERSONS'), "aclmod" => "person", "url" => get_url('person', 'browse', null, null, null, true),
+            "module" => "person", "action" => "browse","checkactive"=>create_function('$menu','$defaultMenuItems = getDefaultMenuItems();
+    $module = get_module();
+    $action = get_action();
+    $mod = $defaultMenuItems[$menu["slug"]]["module"];
+    $act = $defaultMenuItems[$menu["slug"]]["action"];
+    $aliases = array();
+    if ($defaultMenuItems[$menu["slug"]]["aliases"]) {
+        $aliases = $defaultMenuItems[$menu["slug"]]["aliases"];
+    }
+    if ($module == $mod && $action != "browse_biography") {
+        return true;
+    }
+    return false;')),
+        "person" => array("level" => 1, "title" => _t('PERSON_RECORDS_S_'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'person', null, array('pid' => $id), null, true), "module" => "person", "action" => "person",
+            "aliases" => array("new_person", "delete_person", "edit_person")),
+        "person_address_list" => array("level" => 1, "title" => _t('PERSON_ADDRESS_ES_'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'address_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "address_list",
+            "aliases" => array("delete_address",
+                "new_address",
+                "edit_address",)),
+        "person_biography_list" => array("level" => 1, "title" => _t('BIOGRAPHIC_DETAIL_S_'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'biography_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "biography_list",
+            "aliases" => array("delete_biographic",
+                "edit_biography",
+                "new_biography")),
+        "person_role_list" => array("level" => 1, "title" => _t('ROLE_LIST'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'role_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "role_list",
+            "aliases" => array()),
+        "person_audit_log" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'audit_log', null, array('pid' => $id), null, true), "module" => "person", "action" => "audit_log",
+            "aliases" => array()),
+        "person_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "person", "parent" => "personsbrowse",
+            "url" => get_url('person', 'permissions', null, array('pid' => $id), null, true), "module" => "person", "action" => "permissions",
+            "aliases" => array(), "check" => create_function("", 'global $person;
+                
+if ($person->confidentiality == "y") {
+return true;
+}
+return false;')),
+        "documentsbrowse" => array("level" => 0, "title" => _t('DOCUMENTS'), "aclmod" => "docu", "url" => get_url('docu', 'browse', null, null, null, true),
+            "module" => "docu", "action" => "browse","checkactive"=>"checkMenuActiveModule"),
+        "view_document" => array("level" => 1, "title" => _t('DOCUMENT_DETAILS'), "aclmod" => "docu", "parent" => "documentsbrowse",
+            "url" => get_url('docu', 'view_document', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "view_document",
+            "aliases" => array("new_document",
+                "delete_document",
+                "edit_document",)),
+        "document_link" => array("level" => 1, "title" => _t('LINKS'), "aclmod" => "docu", "parent" => "documentsbrowse",
+            "url" => get_url('docu', 'link', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "link",
+            "aliases" => array()),
+        "document_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "docu", "parent" => "documentsbrowse",
+            "url" => get_url('docu', 'audit', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "audit",
+            "aliases" => array()),
+        "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true), 
+            "module" => "person", "action" => "browse_biography",'check'=>create_function('$menu','
+               global $conf;
+if ($conf["menus"]["biography_list"]) {
+return true;
+}
+return false;
+    ')),
+        "addnew" => array("level" => 0, "url" => "#", "title" => _t('ADD_NEW')),
+        "new_event" => array("level" => 1, "title" => _t('ADD_NEW_EVENT'), "aclmod" => "events", "parent" => "addnew",
+            "prefix" => '<i class="icon-plus"></i>',
+            "url" => get_url('events', 'new_event', null, array('eid' => null), null, true), "module" => "events", "action" => "new_event",
+            "aliases" => array()),
+        "add_act_full" => array("level" => 1, "title" => _t('ADD_ACT'), "aclmod" => "events", "parent" => "addnew",
+            "prefix" => '<i class="icon-plus"></i>',
+            "url" => get_url('events', 'add_act_full', null, array('eid' => null), null, true), "module" => "events", "action" => "add_act_full",
+            "aliases" => array()),
+       "new_person" => array("level" => 1, "title" => _t('ADD_NEW_PERSON'), "aclmod" => "person", "parent" => "addnew",
+            "prefix" => '<i class="icon-plus"></i>',
+            "url" => get_url('person', 'new_person', null, array('pid' => null), null, true), "module" => "person", "action" => "new_person",
+            "aliases" => array()),
+        "new_document" => array("level" => 1, "title" => _t('ADD_NEW_DOCUMENT'), "aclmod" => "docu", "parent" => "addnew",
+            "prefix" => '<i class="icon-plus"></i>',
+            "url" => get_url('docu', 'new_document', null, array('doc_id' => null), null, true), "module" => "docu", "action" => "new_document",
+            "aliases" => array()),
+        "add_user" => array("level" => 1, "title" => _t('ADD_NEW_USER'), "aclmod" => "admin", "parent" => "addnew",
+            "prefix" => '<i class="icon-plus"></i>',
+            "url" => get_url('admin', 'add_user', null, null, null, true), "module" => "admin", "action" => "add_user",
+            "aliases" => array()),
+        "dashboard" => array("level" => 0, "title" => _t('Dashboard'), "aclmod" => "dashboard",
+            "url" => get_url('dashboard', 'dashboard', null, null, null, true), "module" => "dashboard", "action" => "dashboard",
+            "aliases" => array(),"checkactive"=>"checkMenuActiveModule"),
+        "analysis" => array("level" => 0, "title" => _t('ANALYSIS'), "aclmod" => "analysis",
+            "url" => get_url('analysis', 'adv_search', null, null, null, true), "module" => "analysis", "action" => "adv_search",
+            "aliases" => array(),"checkactive"=>"checkMenuActiveModule"),
+        "adv_search" => array("level" => 1, "title" => _t('ADVANCED_SEARCH'), "aclmod" => "analysis", "parent" => "analysis",
+            "url" => get_url('analysis', 'adv_search', null, null, null, true), "module" => "analysis", "action" => "adv_search",
+            "aliases" => array()),
+        "search_query" => array("level" => 1, "title" => _t('SAVED_QUERIES'), "aclmod" => "analysis", "parent" => "analysis",
+            "url" => get_url('analysis', 'search_query', null, null, null, true), "module" => "analysis", "action" => "search_query",
+            "aliases" => array()),
+        "facetsearch" => array("level" => 1, "title" => _t('Charts and map'), "aclmod" => "analysis", "parent" => "analysis",
+            "url" => get_url('analysis', 'facetsearch', null, null, null, true), "module" => "analysis", "action" => "facetsearch",
+            "aliases" => array()),
+        "edit_user" => array("level" => 0, "title" => _t('EDIT_PROFILE'), "aclmod" => "",
+            "url" => get_url('home', 'edit_user', null, null, null, true), "module" => "home", "action" => "edit_user",
+            "aliases" => array()),
+        "edit_password" => array("level" => 0, "title" => _t('CHANGE_PASSWORD'), "aclmod" => "",
+            "url" => get_url('home', 'edit_password', null, null, null, true), "module" => "home", "action" => "edit_password",
+            "aliases" => array()),
+        "edit_security" => array("level" => 0, "title" => _t('Security'), "aclmod" => "",
+            "url" => get_url('home', 'edit_security', null, null, null, true), "module" => "home", "action" => "edit_security",
+            "aliases" => array()),
+    );
+    return $defaultMenuItems;
+}
+
+function checkMenuActiveDefault($menu) {
+    $defaultMenuItems = getDefaultMenuItems();
+    $module = get_module();
+    $action = get_action();
+    $mod = $defaultMenuItems[$menu["slug"]]["module"];
+    $act = $defaultMenuItems[$menu["slug"]]["action"];
+    $aliases = array();
+    if ($defaultMenuItems[$menu["slug"]]["aliases"]) {
+        $aliases = $defaultMenuItems[$menu["slug"]]["aliases"];
+    }
+    if (($action == $act && $module == $mod) || (in_array($action, $aliases))) {
+        return true;
+    }
+    return false;
+}
+function checkMenuActiveModule($menu) {
+    $defaultMenuItems = getDefaultMenuItems();
+    $module = get_module();
+    $action = get_action();
+    $mod = $defaultMenuItems[$menu["slug"]]["module"];
+    $act = $defaultMenuItems[$menu["slug"]]["action"];
+    $aliases = array();
+    if ($defaultMenuItems[$menu["slug"]]["aliases"]) {
+        $aliases = $defaultMenuItems[$menu["slug"]]["aliases"];
+    }
+    if ($module == $mod) {
+        return true;
+    }
+    return false;
+}
+function getMenus() {
+    $defaultMenuItems = getDefaultMenuItems();
+    $menuNames = array("top_menu" => array("title" => _t("Top menu"), "depth" => 2,
+            "items" => array("eventsbrowse" => $defaultMenuItems["eventsbrowse"],
+                "personsbrowse" => $defaultMenuItems["personsbrowse"],
+                "documentsbrowse" => $defaultMenuItems["documentsbrowse"],
+                "biographybrowse" => $defaultMenuItems["biographybrowse"],
+                "addnew" => $defaultMenuItems["addnew"],
+                "new_event" => $defaultMenuItems["new_event"],
+                "add_act_full"=> $defaultMenuItems["add_act_full"],
+                "new_person" => $defaultMenuItems["new_person"],
+                "new_document" => $defaultMenuItems["new_document"],
+                "add_user" => $defaultMenuItems["add_user"])),
+        "top_right_menu" => array("title" => _t("Top right menu"), "depth" => 2,
+            "items" => array("dashboard" => $defaultMenuItems["dashboard"],
+                "analysis" => $defaultMenuItems["analysis"])
+        ),
+        "events_menu" => array("title" => _t("Event menu"), "depth" => 1,
+            "items" => array("get_event" => $defaultMenuItems["get_event"],
+                "vp_list" => $defaultMenuItems["vp_list"],
+                "src_list" => $defaultMenuItems["src_list"],
+                "intv_list" => $defaultMenuItems["intv_list"],
+                "coe_list" => $defaultMenuItems["coe_list"],
+                "event_doc_list" => $defaultMenuItems["event_doc_list"],
+                "event_audit" => $defaultMenuItems["event_audit"],
+                "event_permissions" => $defaultMenuItems["event_permissions"])
+        ),
+        "person_menu" => array("title" => _t("Person menu"), "depth" => 1,
+            "items" => array("person" => $defaultMenuItems["person"],
+                "person_address_list" => $defaultMenuItems["person_address_list"],
+                "person_biography_list" => $defaultMenuItems["person_biography_list"],
+                "person_role_list" => $defaultMenuItems["person_role_list"],
+                "person_audit_log" => $defaultMenuItems["person_audit_log"],
+                "person_permissions" => $defaultMenuItems["person_permissions"])
+        ),
+        "docu_menu" => array("title" => _t("Document menu"), "depth" => 1,
+            "items" => array("view_document" => $defaultMenuItems["view_document"],
+                "document_link" => $defaultMenuItems["document_link"],
+                "document_audit" => $defaultMenuItems["document_audit"])
+        ),
+        "analysis_menu" => array("title" => _t("Analysis menu"), "depth" => 1,
+            "items" => array("adv_search" => $defaultMenuItems["adv_search"],
+                "search_query" => $defaultMenuItems["search_query"],
+                "facetsearch" => $defaultMenuItems["facetsearch"])
+        ),
+        "home_menu" => array("title" => _t("Preferences menu"), "depth" => 1,
+            "items" => array("edit_user" => $defaultMenuItems["edit_user"],
+                "edit_password" => $defaultMenuItems["edit_password"],
+                "edit_security" => $defaultMenuItems["edit_security"])
+        )
+    );
+    return $menuNames;
+}
+
+function getMenu($menu) {
+    $menuNames = getMenus();
+    if (!$menuNames[$menu]) {
+        return array();
+    }
+    $activeMenuItems = $menuNames[$menu]['items'];
+    $activeMenuOrdered = array();
+    $order = 0;
+    $slugToID = array();
+    $id = 1;
+    foreach ($activeMenuItems as $key => $value) {
+        $slugToID[$key] = $id;
+        $value['order'] = $order;
+        $value['slug'] = $key;
+        $value['id'] = $id;
+        if ($value['parent'] && $slugToID[$value['parent']]) {
+            $value['parent'] = $slugToID[$value['parent']];
+        } else {
+            $value['parent'] = 0;
+        }
+
+        $activeMenuOrdered[$id] = $value;
+        $order++;
+        $id++;
+    }
+    $menuItemsNew = array();
+    foreach ($activeMenuOrdered as $key => $menu) {
+        $menuItemsNew[] = $menu;
+    }
+    $activeMenuOrdered = $menuItemsNew;
+    return $activeMenuOrdered;
 }

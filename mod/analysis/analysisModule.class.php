@@ -374,7 +374,7 @@ class analysisModule extends shnModule {
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.csv';
             header("Pragma: public");
-            header("Content-Type: application");
+            header("Content-Type: text/csv; charset=UTF-8");
             header("Content-Disposition: attachment; filename=$filename;");
 
             $count = 1;
@@ -459,7 +459,7 @@ class analysisModule extends shnModule {
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.xls';
             header("Pragma: public");
-            header("Content-Type: application/x-msexcel");
+            header("Content-Type: application/x-msexcel; charset=UTF-8");
             header("Content-Disposition: attachment; filename=$filename;");
 
             $count = 1;

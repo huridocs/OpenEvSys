@@ -113,7 +113,7 @@
             }
             ?>";
                     template += "</td></tr>";
-                    $('#mtlist > tbody').prepend(template);
+                    $('#mtlist  tr:last').after(template);
                     /*if($('#mtlist > tbody > tr:first').lenght){
                         $('#mtlist > tbody > tr:first').before(template);
                     }else{

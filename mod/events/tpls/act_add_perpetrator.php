@@ -20,6 +20,7 @@
 
 <br />
 <h2><?php
+
     foreach($acts as $act){
         echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>' ;
     }

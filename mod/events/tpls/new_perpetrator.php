@@ -18,7 +18,12 @@
         </div>
     </div>
     <br />
-    <h2><?php echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act_name . '"</em> ' . _t('AGAINST') . ' <em>"' . $victim->person_name . '"</em> ?' ?></h2>
+    <h2><?php
+
+    foreach($acts as $act){
+        echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>' ;
+    }
+    ?></h2>
     <br />
     <div class="form-container">
         <form class="form-horizontal"  id="person_form" name="person_form" action='<?php echo get_url('events', 'add_perpetrator', 'new_perpetrator', array('eid' => $event_id)) ?>' method='post' enctype='multipart/form-data'>

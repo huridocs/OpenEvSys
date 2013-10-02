@@ -138,7 +138,7 @@ function mt_customization_add_terms($mt_term) {
             $vocab_number = get_next_vocab_number();
             $huri_term = trim($_POST['new_term_label']['en'][$index]);
 
-            if ($vocab_number == '' || $huri_term == '') {
+            if ($vocab_number == '') {
                 continue;
             }
 
@@ -267,10 +267,10 @@ function mt_customization_validate_mtterm($list_code, $vocab_number, $huri_term,
     global $global;
     //check if right length and if it is a number
     //check if the huri term is empty
-    if (isset($huri_term) && $huri_term == '') {
+   /* if (isset($huri_term) && $huri_term == '') {
         shnMessageQueue::addError(_t('HURITERM_CAN_NOT_BE_EMPTY_') . "  [ $vocab_number : $huri_term ]");
         return false;
-    }
+    }*/
     //check if already exist
     $sql = "SELECT vocab_number FROM mt_vocab WHERE vocab_number='$vocab_number' ";
     $vocab_number = $global['db']->GetOne($sql);

@@ -146,7 +146,7 @@ class docuModule extends shnModule {
             $supporting_docs = new SupportingDocs();
             $supporting_docs_meta = new SupportingDocsMeta();
             $type = null;
-            $uri = shn_files_store('choose_file_upload', null, &$type); //"http://test";
+            $uri = shn_files_store('choose_file_upload', null, $type); //"http://test";
 
             if ($uri == null) {
                 $uri = '';
@@ -201,7 +201,7 @@ class docuModule extends shnModule {
 
             $this->fileExist = false;
             $type = null;
-            $uri = shn_files_store('choose_file_upload', null, &$type); //"http://test";
+            $uri = shn_files_store('choose_file_upload', null, $type); //"http://test";
 
             if ($uri == null) {
                 $uri = '';

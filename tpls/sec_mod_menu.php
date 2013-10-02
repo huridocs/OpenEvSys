@@ -1,4 +1,5 @@
 <?php
+global $conf;
 $module = get_module();
 $action = get_action();
 
@@ -9,12 +10,6 @@ if ($module == "events") {
     $id = (isset($_GET['pid'])) ? $_GET['pid'] : $_SESSION['pid'];
 } elseif ($module == "docu") {
     $id = (isset($_GET['doc_id'])) ? $_GET['doc_id'] : $_SESSION['doc_id'];
-} elseif ($module == "analysis") {
-    
-} elseif ($module == "admin") {
-    
-} elseif ($module == "home") {
-    
 }
 
 $menus = array("events" => array(), "person" => array(), "docu" => array(), "analysis" => array(), "home" => array());
@@ -150,7 +145,7 @@ $menus["docu"]["audit"] = array(
     "title" => _t('AUDIT_LOG'),
     "url" => get_url('docu', 'audit', null, array('doc_id' => $id), null, true));
 
- 
+
 //Analysis
 $menus["analysis"]["adv_search"] = array(
     "title" => _t('ADVANCED_SEARCH'),
@@ -190,36 +185,107 @@ $menus["home"]["edit_security"] = array(
 
 
 
+if (in_array($module, array("events", "person", "docu", "analysis", "home"))
+        &&  !in_array($action, array("browse", "browse_act", "browse_intervention", "browse_biography","add_act_full"))) {
+    $defaultMenuItems = getDefaultMenuItems();
+    $activemenu = $module . "_menu";
+    $topMenuItems = getMenu($activemenu);
+    if ($conf[$activemenu]) {
+        $acMenu = @unserialize($conf[$activemenu]);
+        if ($acMenu) {
+            $topMenuItems = $acMenu;
+        }
+    }
 
-if ($module != "admin" && $action != "browse" && !in_array($action,array("browse_act","browse_intervention","browse_biography"))) {
-    ?>
-    <ul class="nav nav-tabs tabnav"> 
-        <?php
-        foreach ($menus[$module] as $menuSec => $menu) {
-
-            $active = false;
-            $title = $menu["title"];
-            $url = $menu["url"];
-            if ($action == $menuSec || (isset($menus[$module][$action]) && isset($menus[$module][$action]["alias"]) && $menus[$module][$action]["alias"] == $menuSec)) {
-                if ($url) {
-                    $active = true;
-                } else {
-                    continue;
+    $menuItems = $topMenuItems;
+    $level = 0;
+    if ($menuItems) {
+        ?>
+        <ul class="nav nav-tabs tabnav"> 
+            <?php
+            foreach ($menuItems as $key => $menu) {
+                $id = $menu['id'];
+                $element1 = $menu;
+                $element2 = $menuItems[$key + 1];
+                //$level = $element1['level'];
+                $url = $defaultMenuItems[$menu['slug']]['url'];
+                $title = $menu['title'];
+                $prefix = '';
+                if ($defaultMenuItems[$menu['slug']]['prefix']) {
+                    $prefix = $defaultMenuItems[$menu['slug']]['prefix'];
                 }
-            }
-            if (!$url) {
-                continue;
+                $mod = $defaultMenuItems[$menu['slug']]['module'];
+                $act = $defaultMenuItems[$menu['slug']]['action'];
+                $aclmod = $defaultMenuItems[$menu['slug']]['aclmod'];
+
+                if ($aclmod) {
+                    if (!acl_is_mod_allowed($aclmod)) {
+                        continue;
+                    }
+                }
+                $check = $defaultMenuItems[$menu['slug']]['check'];
+                if ($check) {
+                    if (!$check()) {
+                        continue;
+                    }
+                }
+                $aliases = array();
+                if ($defaultMenuItems[$menu['slug']]['aliases']) {
+                    $aliases = $defaultMenuItems[$menu['slug']]['aliases'];
+                }
+
+                $checkActive = $defaultMenuItems[$menu['slug']]['checkactive'];
+
+                if (!$checkActive) {
+                   $checkActive = "checkMenuActiveDefault";
+                }
+                
+                $active = '';                
+                if($checkActive($menu)){
+                    $active = 'active';
+                }
+                ?>
+                <li class="<?php if ($active) echo $active ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
+                </li>
+                <?php
             }
             ?>
-            <li class="<?php if ($active) echo "active" ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
-            </li>
-            <?php
-        }
-        ?>
 
-    </ul>
-    <?php
+        </ul>
+        <?php
+    }
 }
+/*
+  if ($module != "admin" && $action != "browse" && !in_array($action, array("browse_act", "browse_intervention", "browse_biography"))) {
+  ?>
+  <ul class="nav nav-tabs tabnav">
+  <?php
+  foreach ($menus[$module] as $menuSec => $menu) {
+
+  $active = false;
+  $title = $menu["title"];
+  $url = $menu["url"];
+  if ($action == $menuSec || (isset($menus[$module][$action]) && isset($menus[$module][$action]["alias"]) && $menus[$module][$action]["alias"] == $menuSec)) {
+  if ($url) {
+  $active = true;
+  } else {
+  continue;
+  }
+  }
+  if (!$url) {
+  continue;
+  }
+  ?>
+  <li class="<?php if ($active) echo "active" ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
+  </li>
+  <?php
+  }
+  ?>
+
+  </ul>
+  <?php
+  }
+ */
 ?>
 
 

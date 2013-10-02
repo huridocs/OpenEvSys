@@ -19,11 +19,12 @@ if (!is_writable(APPROOT . 'media')) {
     $media = '<span class="red">not writable</span>';
     $file_check = true;
 }
+/*
 if (!is_writable(WWWWROOT . "images" . DS . "uploads")) {
     $continue = false;
     $imagesuploads = '<span class="red">not writable</span>';
     $file_check = true;
-}
+}*/
 //check for password match
 
 

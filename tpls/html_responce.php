@@ -23,6 +23,7 @@ $version = $version[1]; ?>
 
         <link rel="stylesheet" type="text/css" media="screen" href="theme/<?php echo $conf['theme'] ?>/css/datepicker.css?v=<?php echo $version?>" />
         <link rel="stylesheet" type="text/css" media="screen" href="res/bootstrap/bootstrap-daterangepicker/daterangepicker.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="res/font-awesome/css/font-awesome.min.css" />
 
 
         <link href="res/locale/<?php echo $conf['locale'] ?>.json?v=<?php echo $version?>" lang="<?php echo $conf['locale'] ?>" rel="gettext"/>

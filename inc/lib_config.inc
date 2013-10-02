@@ -3,7 +3,7 @@
 // update a conf key/value pair in the database
 function shn_config_database_update($key, $value)
 {
-	global $global;
+	global $global,$conf;
 	$sql = "SELECT confkey, value FROM config
                 WHERE confkey = '$key'";
         $value = $global['db']->qstr($value);

@@ -54,7 +54,7 @@ class eventsModule extends shnModule {
         global $messages;
         global $event;
         $this->load_related_event();
-        if (isset($_GET['act']) && !in_array($_GET['act'], array('new_event', 'browse', 'geocode', 'browse_act', 'browse_intervention'))) {
+        if (isset($_GET['act']) && !in_array($_GET['act'], array('new_event', 'browse', 'geocode', 'browse_act', 'browse_intervention','add_act_full'))) {
             $_GET['eid'] = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
             if (!isset($_GET['eid'])) {
                 shnMessageQueue::addInformation($messages['select_event']);
@@ -362,7 +362,7 @@ class eventsModule extends shnModule {
             $status = shn_form_validate($event_form);
             if ($status) {
                 $this->event->LoadRelationships();
-                
+
                 form_objects($event_form, $this->event);
 //var_dump($_POST,$this->event);exit;
                 $this->event->SaveAll();
@@ -585,6 +585,25 @@ class eventsModule extends shnModule {
 
     /* }}} */
 
+    function act_add_act_full() {
+        $events_form = array('related_event' => array(
+                'type' => 'related_event', 'label' => _t('Event'),
+                'field_number' => '2203', 'view_type' => 'new',
+                'map' => array('entity' => 'act', 'field' => 'related_event',
+                    'mt' => '0', 'mlt' => false, 'link_table' => NULL,
+                    'link_field' => NULL,), 'extra_opts' => array(
+                    'label' => _t('Event'), 'clari' => false,
+                    'validation' => array(0 => '', 1 => 'notnull',),
+                    'required' => true, 'help' => '2203',)));
+
+         if (isset($_GET['event_id'])) {
+            $_SESSION['eid'] = $_GET['event_id'];
+            set_redirect_header('events', 'add_victim', null, array('eid' =>  $_SESSION['eid'],'view'=>'search_victim'));
+        }
+
+        $this->events_form = $events_form;
+    }
+
     public function act_add_act() {
         //fetch the victim
         $this->victim = new Person();
@@ -742,7 +761,7 @@ class eventsModule extends shnModule {
             $act_array = array();
             $act_array['act'] = $act;
             $act_array['act_name'] = get_mt_term($act->type_of_act);
-            ;
+
             $act_array['victim'] = $victim;
             $acts_array[] = $act_array;
         }
@@ -906,7 +925,7 @@ class eventsModule extends shnModule {
 
         if (isset($_POST['update'])) {
             $status = shn_form_validate($act_form);
-            
+
             if ($status) {
                 $act = new Act();
                 $act->LoadFromRecordNumber($_REQUEST['act_id']);
@@ -1269,7 +1288,6 @@ class eventsModule extends shnModule {
 
     function act_add_coe() {
         $chain_of_events_form = chain_of_events_form('new');
-
         if (isset($_POST['save'])) {
             $status = shn_form_validate($chain_of_events_form);
             if ($status) {

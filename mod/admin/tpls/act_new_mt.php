@@ -18,7 +18,7 @@
         <br style="clear: both" />
         <div class="control-group">
             <div class="controls">
-                <button  type="submit" class="btn btn-primary"  name='add_new' ><i class="icon-plus icon-white"></i> <?php echo _t('ADD_FIELD') ?></button>
+                <button  type="submit" class="btn btn-primary"  name='add_new' ><i class="icon-plus icon-white"></i> <?php echo _t('Add Micro-thesauri') ?></button>
 
             </div></div>
 

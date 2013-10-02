@@ -288,6 +288,7 @@ function form_customization_add_field($field_type_options) {
         $v = trim($v);
         $fieldValues[$k] = $v;
     }
+    $fieldValues['field_name'] = str_replace(" ", "", $fieldValues['field_name']);
     $fieldValues['field_name'] = str_replace("-", "_", $fieldValues['field_name']);
     
     switch ($fieldValues['field_type']) {

@@ -19,7 +19,11 @@
             </div>
         </div>
         <br />
-        <h2><?php echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act_name . '"</em> ' . _t('AGAINST') . ' <em>"' . $victim->name . '"</em> ?' ?></h2>
+        <h2><?php
+    foreach ($acts as $act) {
+        echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>';
+    }
+        ?></h2>
         <div class="form-container"> 
             <form class="form-horizontal"  action='<?php echo get_url('events', 'add_perpetrator', 'search_perpetrator', array('eid' => $event_id)) ?>' method='post' enctype='multipart/form-data'>
                 <?php
@@ -30,10 +34,10 @@
     <?php } else { ?>
         <br />
         <h2><?php
-    foreach($acts as $act){
-        echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>' ;
-    }
-    ?></h2><div class="form-container"> 
+        foreach ($acts as $act) {
+            echo _t('WHO_IS_RESPONSIBLE_FOR_THE') . ' <em>"' . $act['act_name'] . '"</em> ' . _t('AGAINST') . ' <em>"' . $act['victim']->person_name . '"</em> ?<br/>';
+        }
+        ?></h2><div class="form-container"> 
             <form class="form-horizontal"  action='<?php echo get_url('events', 'add_acts_perpetrator', 'search_perpetrator', array('eid' => $event_id)) ?>' method='post' enctype='multipart/form-data'>
                 <?php
                 shn_form_person_search('events', 'add_acts_perpetrator', null, array('cancel' => 'vp_list'));

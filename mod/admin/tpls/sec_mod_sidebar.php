@@ -20,6 +20,7 @@
 
                 <li class="<?php if ($action == "mt_customization") echo "active" ?>"><a href="<?php get_url('admin', 'mt_customization') ?>"><?php echo _t('MICRO_THESAURI') ?></a></li>
                 <li class="subnav <?php if ($action == "new_mt") echo "active" ?>"><a href="<?php get_url('admin', 'new_mt') ?>"><?php echo _t('Add new Micro-thesauri') ?></a></li>
+                <li class="subnav <?php if ($action == "mt_translate") echo "active" ?>"><a href="<?php get_url('admin', 'mt_translate') ?>"><?php echo _t('Translate Micro-thesauri') ?></a></li>
 
                 <li>
                     <a href="<?php get_url('admin', 'user_management') ?>"><?php echo _t('USER_MANAGEMENT') ?></a>

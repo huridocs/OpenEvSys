@@ -148,6 +148,7 @@ class adminModule extends shnModule {
     }
 
     public function act_new_field() {
+        global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
 
         $entity_select_options = array(
@@ -180,12 +181,20 @@ class adminModule extends shnModule {
             'mt_select' => _t('SELECT'),
             'mt_select_multi' => _t('Multivalue Select')
         );
+        
+        $translations = StringTranslations::getMtTranslations(null, $conf['locale']);
+        
         $mtIndex = new MtIndex();
         $index_terms = $mtIndex->Find('');
         $taxonomies = array();
         $taxonomies[''] = '';
         foreach ($index_terms as $index_term) {
-            $taxonomies[$index_term->no] = $index_term->no . ' - ' . $index_term->term;
+            $label = $index_term->no . ' - ' . $index_term->term;
+            
+            if ($translations[$index_term->no][$conf['locale']]) {
+                $label = $translations[$index_term->no][$conf['locale']]['value'];
+            }
+            $taxonomies[$index_term->no] = $label;
         }
 
         $this->taxonomies = $taxonomies;
@@ -487,6 +496,7 @@ class adminModule extends shnModule {
         include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
         $this->locales = l10n_get_locals();
 
+        $translations = StringTranslations::getMtTranslations(null, $conf['locale']);
 
         //display the mt select from
         $mtIndex = new MtIndex();
@@ -494,7 +504,12 @@ class adminModule extends shnModule {
         $options = array();
         $options[''] = '';
         foreach ($index_terms as $index_term) {
-            $options[$index_term->no] = $index_term->no . ' - ' . $index_term->term;
+            $label = $index_term->no . ' - ' . $index_term->term;
+            
+            if ($translations[$index_term->no][$conf['locale']]) {
+                $label = $translations[$index_term->no][$conf['locale']]['value'];
+            }
+            $options[$index_term->no] = $label;
         }
 
         $this->mt_select = $_GET['mt_select'];
@@ -550,10 +565,122 @@ class adminModule extends shnModule {
         }
     }
 
-    public function act_menu(){
-        
-        
+    public function act_mt_translate() {
+        global $conf, $global;
+        include_once APPROOT . 'inc/lib_form.inc';
+        include_once APPROOT . 'inc/lib_form_util.inc';
+        //if the locale is changed need to display extra column in label customization
+        $this->locale = $conf['locale'];
+
+        include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
+        $locales = l10n_get_locals();
+        $this->locales = $locales;
+        $mtIndex = new MtIndex();
+        $index_terms = $mtIndex->Find('');
+        $mts = array();
+        foreach ($index_terms as $index_term) {
+            $mts[$index_term->no] = $index_term->term;
+        }
+        $this->mts = $mts;
+        if ($_POST['save']) {
+            foreach ($index_terms as $index_term) {
+
+                $no = $index_term->no;
+                $term = $index_term->term;
+                if (isset($_POST['label_' . $no]) && is_array($_POST['label_' . $no])) {
+                    $labels = $_POST['label_' . $no];
+                    foreach ($locales as $code => $loc) {
+                        if (!trim($labels[$code])) {
+                            continue;
+                        }
+                        $l10nValues = array();
+                        $l10nValues['value'] = $global['db']->qstr($labels[$code]);
+                        $l10nValues['name'] = "'mt-" . $no . "-label'";
+                        $l10nValues['context'] = "'mt'";
+                        $l10nValues['language'] = "'{$code}'";
+                        $l10nValues['status'] = "1";
+                        $global['db']->Replace('string_translations', $l10nValues, array('context', 'name', 'language'));
+                    }
+                }
+            }
+        }
+
+
+
+        $this->translations = StringTranslations::getMtTranslations();
     }
+
+    private function normalise_menu_order($itemorders, &$newresult, $parent = 0, $term_level = 0, &$term_order = 0) {
+        if (is_array($itemorders)) {
+            foreach ($itemorders as &$itemorder) {
+                $id = $itemorder['id'];
+                $slug = $itemorder['slug'];
+                $title = $itemorder['title'];
+                $itemorder['title'] = $_POST['menu-item-title'][$id];
+
+                $term_order++;
+                $itemorder['order'] = (int) $term_order;
+                $itemorder['level'] = (int) $term_level;
+                $itemorder['parent'] = $parent;
+                $children = $itemorder["children"];
+                unset($itemorder["children"]);
+                $newresult[$id] = $itemorder;
+                if (is_array($children)) {
+                    $term_order = $this->normalise_menu_order($children, $newresult, $itemorder['id'], $term_level + 1, $term_order);
+                }
+            }
+        }
+    }
+
+    public function act_menu() {
+        global $conf;
+        $activemenu = $_REQUEST['activemenu'];
+
+        $defaultMenuItems = getDefaultMenuItems();
+        $menuNames = getMenus();
+
+        if (!$activemenu || !isset($menuNames[$activemenu])) {
+            $activemenu = "top_menu";
+        }
+        $this->activemenu = $activemenu;
+        $this->menuNames = $menuNames;
+
+
+
+        $defaulMenuItemsOrdered = array();
+        $order = 0;
+        $slugToID = array();
+
+        foreach ($defaultMenuItems as $key => $value) {
+            $value['slug'] = $key;
+            $defaulMenuItemsOrdered[] = $value;
+        }
+
+        $activeMenuItems = getMenu($activemenu);
+
+        if (isset($_POST["save"])) {
+            $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
+            if (is_array($itemorders)) {
+                $newresult = array();
+                $this->normalise_menu_order($itemorders, $newresult);
+                //var_dump($newresult,'<br/><br/><br/><br/><br/>',$itemorders);exit;
+
+                shn_config_database_update($activemenu, serialize($newresult));
+                $conf[$activemenu] = serialize($newresult);
+                shnMessageQueue::addInformation(_t('Menu was saved successfully.'));
+            }
+        }
+        $this->activeMenuItems = $activeMenuItems;
+        if ($conf[$activemenu]) {
+            $acMenu = @unserialize($conf[$activemenu]);
+            if ($acMenu) {
+                $this->activeMenuItems = $acMenu;
+            }
+        }
+        $this->defaultMenuItems = $defaultMenuItems;
+        $this->defaulMenuItemsOrdered = $defaulMenuItemsOrdered;
+    }
+
     /* }}} */
 
     /* {{{ Acl functions */
