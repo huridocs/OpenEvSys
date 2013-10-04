@@ -30,11 +30,14 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
     $user = UserHelper::loadFromUsername($username);
     if ($captchavalid) {
         if ($user == null) {
+            Log::saveLogDetails('login', $_SERVER['REMOTE_ADDR'], "NOTOK", "NOTOK",null,'login',$username);
             $global['nouser'] = _t('USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_');
         } else if ($user->status != 'active') {
+            Log::saveLogDetails('login', $_SERVER['REMOTE_ADDR'], "NOTOK", "NOTOK",null,'login',$username);
             $global['loginerror'] = _t('INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_');
         } else {
             if ($user->isPasswordMatch($password)) {
+                Log::saveLogDetails('login', $_SERVER['REMOTE_ADDR'], "OK", "OK",null,'login',$username);
                 //if so registor the user in the session.
                 //MUST REMEMBER ALLWAYS REGENERATE SESSION ID WHEN PERMISSION LEVEL CHANGES *******
                 if (!isset($_COOKIE['cookie-check'])) {
@@ -52,8 +55,10 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
                     }
                 }
             }
-            else
+            else{
+                Log::saveLogDetails('login', $_SERVER['REMOTE_ADDR'], "NOTOK", "NOTOK",null,'login',$username);
                 $global['loginerror'] = _t('INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_');
+            }
         }
     }
 }elseif( !empty($_SESSION['check_TSV']) && !empty($_POST['code']) ){
@@ -93,7 +98,7 @@ if ($_GET['act'] == 'logout') {
     }
 }
 
-
+if($_GET['mod'] != 'home' || $_GET['act'] !='download' ){
 //check if the user session exists
 if (!isset($_SESSION['username']) || $_SESSION['check_TSV']) {
     //normal auth
@@ -107,5 +112,6 @@ if (!isset($_SESSION['username']) || $_SESSION['check_TSV']) {
 } else {
     //if exists set the global username 
     $global['username'] = $_SESSION['username'];
+}
 }
 ?>

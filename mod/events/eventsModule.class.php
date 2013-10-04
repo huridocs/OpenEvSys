@@ -54,7 +54,7 @@ class eventsModule extends shnModule {
         global $messages;
         global $event;
         $this->load_related_event();
-        if (isset($_GET['act']) && !in_array($_GET['act'], array('new_event', 'browse', 'geocode', 'browse_act', 'browse_intervention','add_act_full'))) {
+        if (isset($_GET['act']) && !in_array($_GET['act'], array('new_event', 'browse', 'geocode', 'browse_act', 'browse_intervention', 'add_act_full'))) {
             $_GET['eid'] = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
             if (!isset($_GET['eid'])) {
                 shnMessageQueue::addInformation($messages['select_event']);
@@ -596,20 +596,35 @@ class eventsModule extends shnModule {
                     'validation' => array(0 => '', 1 => 'notnull',),
                     'required' => true, 'help' => '2203',)));
 
-         if (isset($_GET['event_id'])) {
+        if (isset($_GET['event_id'])) {
             $_SESSION['eid'] = $_GET['event_id'];
-            set_redirect_header('events', 'add_victim', null, array('eid' =>  $_SESSION['eid'],'view'=>'search_victim'));
+            set_redirect_header('events', 'add_victim', null, array('eid' => $_SESSION['eid'], 'view' => 'search_victim'));
         }
 
         $this->events_form = $events_form;
     }
 
     public function act_add_act() {
+       
+        if (isset($_REQUEST['acts'])) {
+            $_SESSION['eid'] = $_GET['eid'];
+            $acts = $_REQUEST['acts'];
+
+            $act_id = $acts[0];
+            $act = new Act();
+            $act->LoadFromRecordNumber($act_id);
+            $act->LoadRelationships();
+            $victim = $act->victim;
+            $_SESSION['vp']['victim'] = $victim;
+            
+        } else {
+            $victim = $_REQUEST['victim'];
+        }
         //fetch the victim
         $this->victim = new Person();
-        $this->victim->LoadFromRecordNumber($_REQUEST['victim']);
+        $this->victim->LoadFromRecordNumber($victim);
 
-        $this->set_victim_dob($_REQUEST['victim']);
+        $this->set_victim_dob($victim);
         //if action is not set
         $this->act_form = act_form('new');
         if (isset($_POST['save']) || isset($_POST['add_ad']) || isset($_POST['save_without'])) {

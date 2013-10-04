@@ -49,11 +49,15 @@ class Log extends ADODB_Active_Record{
         parent::__construct('audit_log', $pkey ,$db , $options);   
     }
     
-    public static function saveLogDetails($entity,  $record_number , $action , $description = null , $query=null ){
+    public static function saveLogDetails($entity,  $record_number , $action , $description = null , $query=null ,$module = null ,$username = null){
         $log = new Log();
         $log->log_record_number = shn_create_uuid('log');
         $log->entity = $entity;
-        $log->module = $_GET['mod'];
+        if($module){
+            $log->module = $module;
+        }else{
+            $log->module = $_GET['mod'];
+        }
         //var_dump($_GET);
         if(  isset($_GET['eid']) ){
             $mrn = $_GET['eid'];
@@ -72,7 +76,11 @@ class Log extends ADODB_Active_Record{
         $log->action = $action;
         $log->description = $description;
         $log->query = $query;
-        $log->username = $_SESSION['username'];
+        if($username){
+            $log->username = $username;
+        }else{
+            $log->username = $_SESSION['username'];
+        }
 
         $log->Save();
     }

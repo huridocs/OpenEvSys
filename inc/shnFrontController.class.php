@@ -1,4 +1,5 @@
 <?php
+
 /**
  * shnFrontController is the main Controler of the system which is 
  * responsible for 
@@ -31,24 +32,20 @@
  * @package Framework
  * 
  */
+class shnFrontController {
 
-class shnFrontController
-{
     //no need to hide the following these should be accessible throughout the system. 
-    public
-    $request = NULL,
-    $module = NULL,
-    $view   = NULL,
-    $action = NULL;
-
+            public
+            $request = NULL,
+            $module = NULL,
+            $view = NULL,
+            $action = NULL;
     //member to hold the instance of controler
     private static $controller;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->request = shnRequest::getRequest();
     }
-
 
     /**
      * getController return an instance of controler class. This function follows singleton
@@ -58,8 +55,7 @@ class shnFrontController
      * @access public
      * @return void
      */
-    static public function getController()
-    {
+    static public function getController() {
         if (!isset(self::$controller)) {
             self::$controller = new shnFrontController();
         }
@@ -74,11 +70,9 @@ class shnFrontController
      * @access public
      * @return void
      */
-    static public function getView()
-    {
-       return self::$controller->view;
+    static public function getView() {
+        return self::$controller->view;
     }
-
 
     /**
      * getModule return an instance of the module 
@@ -87,11 +81,9 @@ class shnFrontController
      * @access public
      * @return void
      */
-    static public function getModule()
-    {
-       return self::$controller->module;
+    static public function getModule() {
+        return self::$controller->module;
     }
-
 
     /**
      * setDefaultModule set the module to default within the controler 
@@ -100,8 +92,7 @@ class shnFrontController
      * @access public
      * @return void
      */
-    static public function loadDefaultModule()
-    {
+    static public function loadDefaultModule() {
         $module = new shnModule();
         self::$controller->module = $module;
     }
@@ -113,15 +104,12 @@ class shnFrontController
      * @access public
      * @return void
      */
-    static public function loadDefaultView()
-    {
+    static public function loadDefaultView() {
         $view = new shnView_HTML();
         self::$controller->view = $view;
     }
 
-
-    public function setAction($action = null)
-    {
+    public function setAction($action = null) {
         $this->action = $action;
     }
 
@@ -131,30 +119,28 @@ class shnFrontController
      * @access public
      * @return void
      */
-    public function loadRequestModule()
-    {
+    public function loadRequestModule() {
         $module = $this->request->module;
-        $file = APPROOT."mod/$module/{$module}Module.class.php";
-        if(!file_exists($file))
+        $file = APPROOT . "mod/$module/{$module}Module.class.php";
+        if (!file_exists($file))
             throw new shn404Exception();
 
         include_once($file);
 
         //check and create an instance of the module action class
-        $class = $module.'Module';
-        if(!class_exists($class))
+        $class = $module . 'Module';
+        if (!class_exists($class))
             throw new shn404Exception();
 
         $instance = new $class();
 
         //check if the module action class is an instance of shnModule
-        if(!($instance instanceof shnModule))
+        if (!($instance instanceof shnModule))
             throw new shn404Exception();
 
         //load the instance to controler
-        $this->module = $instance; 
+        $this->module = $instance;
     }
-
 
     /**
      * _load_view() will load the view object to the controler.
@@ -164,22 +150,21 @@ class shnFrontController
      * @access protected
      * @return void
      */
-    protected function loadRequestView()
-    {
+    protected function loadRequestView() {
         $view = $this->request->view;
         //load the view class to match the stream type
-        $class = "shnView_".strtoupper($view);
-        if(!class_exists($class))
+        $class = "shnView_" . strtoupper($view);
+        if (!class_exists($class))
             throw new shn404Exception();
 
         $instance = new $class($this);
 
         //check if the class is a view instance
-        if(!($instance instanceof shnView))
+        if (!($instance instanceof shnView))
             throw new shn404Exception();
 
         //load the instance to controler
-        $this->view = $instance; 
+        $this->view = $instance;
     }
 
     /**
@@ -188,9 +173,8 @@ class shnFrontController
      * @access public
      * @return void
      */
-    public function dispatch()
-    {
-        global $global ;
+    public function dispatch() {
+        global $global;
 
         //load request module
         $this->loadRequestModule();
@@ -202,17 +186,18 @@ class shnFrontController
         $this->view->setTemplate($this->request->tpl);
 
         //wait a minit before we dispatch lets check for permissions
-		include_once APPROOT.'inc/security/lib_acl.inc';
-        acl_mod_allowed( $this->request->module );
-        
+        include_once APPROOT . 'inc/security/lib_acl.inc';
+
+        if ($this->request->module != 'home' || $this->request->action != 'download') {
+            acl_mod_allowed($this->request->module);
+        }
         $this->sendResponce();
     }
 
-    public function sendResponce()
-    {
-        $action = 'act_'.$this->action;
+    public function sendResponce() {
+        $action = 'act_' . $this->action;
         //check if the method exists
-        if(!method_exists($this->module,$action))
+        if (!method_exists($this->module, $action))
             throw new shn404Exception();
         //execute the action and change the module state
         $this->module->$action();
@@ -223,4 +208,5 @@ class shnFrontController
         //render data
         $this->view->render();
     }
+
 }
