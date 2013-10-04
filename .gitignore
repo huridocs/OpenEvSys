@@ -1,4 +1,5 @@
 /nbproject
-/media
+/media/*
+/media/filemanager/*
 /conf/sysconf.php
 /www/images/uploads

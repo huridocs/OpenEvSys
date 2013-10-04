@@ -611,42 +611,42 @@ function getDefaultMenuItems() {
 
 
     if ($module == "events") {
-        $id = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
+        $eid = (isset($_GET['eid'])) ? $_GET['eid'] : $_SESSION['eid'];
     } elseif ($module == "person") {
-        $id = (isset($_GET['pid'])) ? $_GET['pid'] : $_SESSION['pid'];
+        $pid = (isset($_GET['pid'])) ? $_GET['pid'] : $_SESSION['pid'];
     } elseif ($module == "docu") {
-        $id = (isset($_GET['doc_id'])) ? $_GET['doc_id'] : $_SESSION['doc_id'];
+        $doc_id = (isset($_GET['doc_id'])) ? $_GET['doc_id'] : $_SESSION['doc_id'];
     }
 
     $defaultMenuItems = array(
         "eventsbrowse" => array("level" => 0, "title" => _t('EVENTS'), "aclmod" => "events", "url" => get_url('events', 'browse', null, null, null, true), "module" => "events", "action" => "browse",
             "checkactive"=>"checkMenuActiveModule"),
         "get_event" => array("level" => 1, "title" => _t('EVENT_DESCRIPTION'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'get_event', null, array('eid' => $id), null, true), "module" => "events", "action" => "get_event",
+            "url" => get_url('events', 'get_event', null, array('eid' => $eid), null, true), "module" => "events", "action" => "get_event",
             "aliases" => array("new_event", "edit_event", "delete_event")),
         "vp_list" => array("level" => 1, "title" => _t('VICTIMS_AND_PERPETRATORS'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'vp_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "vp_list",
+            "url" => get_url('events', 'vp_list', null, array('eid' => $eid), null, true), "module" => "events", "action" => "vp_list",
             "aliases" => array("add_act", "add_ad", "add_involvement", "add_perpetrator", "add_victim",
                 "delete_act", "delete_ad", "edit_act",
                 "edit_ad", "edit_involvement", "edit_perpetrator", "edit_victim")),
         "src_list" => array("level" => 1, "title" => _t('SOURCES'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'src_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "src_list",
+            "url" => get_url('events', 'src_list', null, array('eid' => $eid), null, true), "module" => "events", "action" => "src_list",
             "aliases" => array("add_information", "add_source", "delete_information", "edit_information", "edit_source",)),
         "intv_list" => array("level" => 1, "title" => _t('INTERVENTIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'intv_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "intv_list",
+            "url" => get_url('events', 'intv_list', null, array('eid' => $eid), null, true), "module" => "events", "action" => "intv_list",
             "aliases" => array("add_intv", "add_intv_party", "delete_intervention", "edit_intv", "edit_intv_party",
         )),
         "coe_list" => array("level" => 1, "title" => _t('CHAIN_OF_EVENTS'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'coe_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "coe_list",
+            "url" => get_url('events', 'coe_list', null, array('eid' => $eid), null, true), "module" => "events", "action" => "coe_list",
             "aliases" => array("add_coe", "delete_coe", "edit_coe")),
         "event_doc_list" => array("level" => 1, "title" => _t('DOCUMENTS'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'doc_list', null, array('eid' => $id), null, true), "module" => "events", "action" => "doc_list",
+            "url" => get_url('events', 'doc_list', null, array('eid' => $eid), null, true), "module" => "events", "action" => "doc_list",
             "aliases" => array()),
         "event_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'audit', null, array('eid' => $id), null, true), "module" => "events", "action" => "audit",
+            "url" => get_url('events', 'audit', null, array('eid' => $eid), null, true), "module" => "events", "action" => "audit",
             "aliases" => array()),
         "event_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
-            "url" => get_url('events', 'permissions', null, array('eid' => $id), null, true), "module" => "events", "action" => "permissions",
+            "url" => get_url('events', 'permissions', null, array('eid' => $eid), null, true), "module" => "events", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $event;
                 
 if ($event->confidentiality == "y") {
@@ -668,26 +668,26 @@ return false;')),
     }
     return false;')),
         "person" => array("level" => 1, "title" => _t('PERSON_RECORDS_S_'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'person', null, array('pid' => $id), null, true), "module" => "person", "action" => "person",
+            "url" => get_url('person', 'person', null, array('pid' => $pid), null, true), "module" => "person", "action" => "person",
             "aliases" => array("new_person", "delete_person", "edit_person")),
         "person_address_list" => array("level" => 1, "title" => _t('PERSON_ADDRESS_ES_'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'address_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "address_list",
+            "url" => get_url('person', 'address_list', null, array('pid' => $pid), null, true), "module" => "person", "action" => "address_list",
             "aliases" => array("delete_address",
                 "new_address",
                 "edit_address",)),
         "person_biography_list" => array("level" => 1, "title" => _t('BIOGRAPHIC_DETAIL_S_'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'biography_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "biography_list",
+            "url" => get_url('person', 'biography_list', null, array('pid' => $pid), null, true), "module" => "person", "action" => "biography_list",
             "aliases" => array("delete_biographic",
                 "edit_biography",
                 "new_biography")),
         "person_role_list" => array("level" => 1, "title" => _t('ROLE_LIST'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'role_list', null, array('pid' => $id), null, true), "module" => "person", "action" => "role_list",
+            "url" => get_url('person', 'role_list', null, array('pid' => $pid), null, true), "module" => "person", "action" => "role_list",
             "aliases" => array()),
         "person_audit_log" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'audit_log', null, array('pid' => $id), null, true), "module" => "person", "action" => "audit_log",
+            "url" => get_url('person', 'audit_log', null, array('pid' => $pid), null, true), "module" => "person", "action" => "audit_log",
             "aliases" => array()),
         "person_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "person", "parent" => "personsbrowse",
-            "url" => get_url('person', 'permissions', null, array('pid' => $id), null, true), "module" => "person", "action" => "permissions",
+            "url" => get_url('person', 'permissions', null, array('pid' => $pid), null, true), "module" => "person", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $person;
                 
 if ($person->confidentiality == "y") {
@@ -697,15 +697,15 @@ return false;')),
         "documentsbrowse" => array("level" => 0, "title" => _t('DOCUMENTS'), "aclmod" => "docu", "url" => get_url('docu', 'browse', null, null, null, true),
             "module" => "docu", "action" => "browse","checkactive"=>"checkMenuActiveModule"),
         "view_document" => array("level" => 1, "title" => _t('DOCUMENT_DETAILS'), "aclmod" => "docu", "parent" => "documentsbrowse",
-            "url" => get_url('docu', 'view_document', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "view_document",
+            "url" => get_url('docu', 'view_document', null, array('doc_id' => $doc_id), null, true), "module" => "docu", "action" => "view_document",
             "aliases" => array("new_document",
                 "delete_document",
                 "edit_document",)),
         "document_link" => array("level" => 1, "title" => _t('LINKS'), "aclmod" => "docu", "parent" => "documentsbrowse",
-            "url" => get_url('docu', 'link', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "link",
+            "url" => get_url('docu', 'link', null, array('doc_id' => $doc_id), null, true), "module" => "docu", "action" => "link",
             "aliases" => array()),
         "document_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "docu", "parent" => "documentsbrowse",
-            "url" => get_url('docu', 'audit', null, array('doc_id' => $id), null, true), "module" => "docu", "action" => "audit",
+            "url" => get_url('docu', 'audit', null, array('doc_id' => $doc_id), null, true), "module" => "docu", "action" => "audit",
             "aliases" => array()),
         "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true), 
             "module" => "person", "action" => "browse_biography",'check'=>create_function('$menu','

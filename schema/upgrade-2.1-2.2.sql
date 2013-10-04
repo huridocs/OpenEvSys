@@ -1,3 +1,4 @@
+ALTER TABLE `user` ADD `config` text;
 
 CREATE TABLE IF NOT EXISTS `string_translations` (
   `language` varchar(50) NOT NULL,

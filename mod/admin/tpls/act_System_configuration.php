@@ -8,7 +8,10 @@ echo get_url('admin', 'System_configuration')
     <script type="text/javascript" src="res/jquery/tinymce/4.0b3/jquery.tinymce.min.js"></script>
     <script type="text/javascript" src="res/jquery/tinymce/4.0b3/tinymce.min.js"></script>
 
-  
+  <center>
+        <br />
+        <button type="submit" class="btn btn-primary" name='submit' ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
+    </center>
     <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>

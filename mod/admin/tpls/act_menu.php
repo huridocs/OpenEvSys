@@ -7,6 +7,7 @@
            
             <div class="sidebar-nav">
                 <div class="well" style="padding: 8px 5px;">
+                    <label><?php echo _t('Click to add an item to a menu')?></label>
 <?php
 $menuItems = $defaulMenuItemsOrdered;
 $count = count($menuItems);
@@ -21,7 +22,7 @@ foreach ($menuItems as $key => $menu) {
 
     $level = $element1['level'];
     ?>
-                        <label data-id="<?php echo $menu['slug']; ?>" class="menu-item-title checkbox" <?php if($level)echo "style='margin-left:".($level*15)."px'";?>>
+                        <label data-id="<?php echo $menu['slug']; ?>" class="menu-item-title" <?php if($level)echo "style='margin-left:".($level*15)."px'";?>>
                             <a href="#" class="addmenulink has-spinner" data-slug="<?php echo $menu['slug'] ?>" data-title="<?php echo $menu['title'] ?>">
                                 <span class="spinner"><i class="icon-spinner icon-spin"></i></span> <?php echo $menu['title']; ?></a>
                         </label>

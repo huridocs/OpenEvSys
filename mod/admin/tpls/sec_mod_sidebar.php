@@ -21,7 +21,9 @@
                 <li class="<?php if ($action == "mt_customization") echo "active" ?>"><a href="<?php get_url('admin', 'mt_customization') ?>"><?php echo _t('MICRO_THESAURI') ?></a></li>
                 <li class="subnav <?php if ($action == "new_mt") echo "active" ?>"><a href="<?php get_url('admin', 'new_mt') ?>"><?php echo _t('Add new Micro-thesauri') ?></a></li>
                 <li class="subnav <?php if ($action == "mt_translate") echo "active" ?>"><a href="<?php get_url('admin', 'mt_translate') ?>"><?php echo _t('Translate Micro-thesauri') ?></a></li>
-
+                <li class="<?php if ($action == "menu") echo "active" ?>">
+                    <a href="<?php get_url('admin', 'menu') ?>"><?php echo _t('Menu') ?></a>
+                </li>
                 <li>
                     <a href="<?php get_url('admin', 'user_management') ?>"><?php echo _t('USER_MANAGEMENT') ?></a>
                 </li>
@@ -32,12 +34,10 @@
                 <!-- 
                 <li><a href="<?php get_url('admin', 'acl_mode') ?>"><?php echo _t('ACL_MODE') ?></a></li> 
                 -->
-                <li class="<?php if ($action == "menu") echo "active" ?>">
-                    <a href="<?php get_url('admin', 'menu') ?>"><?php echo _t('Menu') ?></a>
-                </li>
+
 
                 <li class="<?php if ($action == "set_locale") echo "active" ?>">
-                    <a href="<?php get_url('admin', 'set_locale') ?>"><?php echo _t('LOCALIZATION') ?></a>
+                    <a href="<?php get_url('admin', 'set_locale') ?>"><?php echo _t('Language') ?></a>
                 </li><!-- 
                 <ul>
                             <li><a href="<?php get_url('admin', 'set_locale') ?>"><?php echo _t('SET_LANGUAGE') ?></a></li>
@@ -60,10 +60,10 @@
                 <li class="<?php if ($action == "change_print") echo "active" ?>">
                     <a href="<?php get_url('admin', 'change_print') ?>"><?php echo _t('Print configuration') ?></a>
                 </li>
-<?php
-global $conf;
-if (isset($conf['extension'])) {
-    ?>
+                <?php
+                global $conf;
+                if (isset($conf['extension'])) {
+                    ?>
                     <li class="<?php if ($action == "Extensions") echo "active" ?>"><a href="<?php get_url('admin', 'Extensions') ?>"><?php echo _t('EXTENSIONS') ?></a></li>
                 <?php } ?>
             </ul>

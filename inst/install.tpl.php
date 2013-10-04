@@ -67,7 +67,7 @@ $version = $version[1]; ?>
                     <ul>
                         <li><?php echo APPROOT?>conf/  &nbsp; <?php echo $conf_dir; ?></li>
                         <li><?php echo APPROOT?>media/ &nbsp; <?php echo $media; ?></li>
-                        <li><?php echo WWWWROOT?>images/uploads/ &nbsp; <?php echo $imagesuploads; ?></li>
+                        <li><?php echo APPROOT?>media/filemanager/ &nbsp; <?php echo $imagesuploads; ?></li>
                        
                     </ul>
                     <br />
