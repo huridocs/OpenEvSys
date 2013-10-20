@@ -266,7 +266,6 @@ function form_customization_add_field($field_type_options) {
     $fieldValues['entity'] = $_POST['entity_select'];
     $fieldValues['field_name'] = str_replace(" ", "", strtolower($_POST['field_name']));
     $fieldValues['field_number'] = $_POST['field_number'];
-    $fieldValues['field_label'] = $_POST['field_label'];
     $fieldValues['field_type'] = $_POST['field_type'];
 
     $fieldValues['required'] = strtolower($_POST['required']) == 'y' ? 'y' : 'n';
@@ -288,6 +287,8 @@ function form_customization_add_field($field_type_options) {
         $v = trim($v);
         $fieldValues[$k] = $v;
     }
+    $fieldValues['field_label'] = addslashes($_POST['field_label']);
+    
     $fieldValues['field_name'] = str_replace(" ", "", $fieldValues['field_name']);
     $fieldValues['field_name'] = str_replace("-", "_", $fieldValues['field_name']);
     
