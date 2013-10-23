@@ -23,7 +23,25 @@ $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.
 
   } */
 
-generate_translations();
+//generate_translations();
+get_newstrings();
+
+function get_newstrings(){
+global $scanned_strings;
+	$dirs = array(APPROOT."data",APPROOT."inc",APPROOT."inst",APPROOT."mod",APPROOT."tpls");
+	foreach($dirs as $dir){
+	$scan_stats_all = scan_files($dir,  0);
+	//echo $scan_stats_all;
+	}
+
+	$msgids = get_existing_msgids();
+	$dif1 = array_diff ($msgids,$scanned_strings);
+
+	$dif2 = array_diff ($scanned_strings,$msgids);
+	foreach($dif2 as $v){
+		echo "PHP\t".$v."\t".$v."<br/>";
+	}
+}
 
 function generate_translations() {
     global $languages;
