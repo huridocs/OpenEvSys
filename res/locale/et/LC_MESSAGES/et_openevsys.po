@@ -1,0 +1,2238 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "Kontrollerit ei leitud"
+#: ----
+msgid "_DAY_S__"
+msgstr "Päev(ad):"
+#: ----
+msgid "_MONTH_S__"
+msgstr "Kuu(d):"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "Esimene tase"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "Teine tase"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "Kolmas tase"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "Viga 404: Lehekülge ei leitud"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "Neljas tase"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "Viies tase"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "Kuues tase"
+#: ----
+msgid "ACL_MODE"
+msgstr "ACL olek"
+#: ----
+msgid "ACT"
+msgstr "Toiming"
+#: ----
+msgid "ACT_"
+msgstr "Toiming"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "Toimingu üksikasjad"
+#: ----
+msgid "ACT_S_"
+msgstr "Toiming(ud)"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "Toimingu Otsingu vorm"
+#: ----
+msgid "ACTION"
+msgstr "Tegevus"
+#: ----
+msgid "ACTIONS"
+msgstr "Tegevused"
+#: ----
+msgid "ACTIVATED"
+msgstr "Aktiveeritud"
+#: ----
+msgid "ACTS"
+msgstr "Toimingud"
+#: ----
+msgid "ADD_ACT"
+msgstr "Lisa Toiming"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "Lisa Täiendavad üksikasjad"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "Lisa Täiendavad üksikasjad ..."
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "Lisa Aadress"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "Lisa Eluloolised üksikasjad"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "Lisa Sündmuste ahel"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "Lisa Sündmuse Informatsioon"
+#: ----
+msgid "ADD_FIELD"
+msgstr "Lisa väli"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "Lisa väli ..."
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "Lisa väljad otsingu tulemustesse"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "Lisa Informatsioon"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "Lisa Sekkuja"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "Lisa Sekkumine"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "Lisa Sekkumised"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "Lisa Osalus"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "Lisa keel"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "Lisa Rohkem Toimepanijaid"
+#: ----
+msgid "ADD_NEW"
+msgstr "Lisa uus"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "Lisa uus Dokument"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "Lisa uus Sündmus"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "Lisa uus väli"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "Lisa uus Isik"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "Lisa uus Kasutaja"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "Lisa toimepanija"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "Lisa Toimepanija(d)"
+#: ----
+msgid "ADD_ROLE"
+msgstr "Lisa Roll"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "Lisa Allikas"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "Lisa Toetav(ad) Dokument/-did"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "Lisa Ohver"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "Lisa Ohvrid ja Toimepanijad sellele Sündmusele"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "Lisan Aadressi ..."
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "Lisan Sündmuse Informatsiooni ..."
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "Lisan Isiku Aadressi ..."
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "Lisan Isiku Informatsiooni ..."
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "Täiendav üksikasja tüüp"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "Täiendavad üksikasjad"
+#: ----
+msgid "ADDRESS"
+msgstr "Aadress"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "Isiku Aadress"
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "Aadressi tüüp"
+#: ----
+msgid "ADMIN"
+msgstr "Administraator"
+#: ----
+msgid "ADVANCED"
+msgstr "Laiendatud"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "Laiendatud otsing"
+#: ----
+msgid "AFTER"
+msgstr "pärast"
+#: ----
+msgid "AGAINST"
+msgstr "vastu"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "Kõik veerud on nullitud algväärtustele"
+#: ----
+msgid "ANALYSIS"
+msgstr "Analüüs"
+#: ----
+msgid "AND"
+msgstr "AND"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "Rakenda muudatused lõplikult"
+#: ----
+msgid "ARREST"
+msgstr "Arest"
+#: ----
+msgid "AT"
+msgstr "... ajal"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "... ajal või pärast ..."
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "... ajal või enne ..."
+#: ----
+msgid "AUDIT"
+msgstr "Audit"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "Auditi logi"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "Auditi logi üksikasjad ei ole saadaval selle Sündmuse jaoks"
+#: ----
+msgid "BACK"
+msgstr "Tagasi"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "Tagasi Sündmuste vaatele"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "Tagasi Isiku vaatele"
+#: ----
+msgid "BASIC"
+msgstr "Liht"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "Lihtotsing"
+#: ----
+msgid "BEFORE"
+msgstr "enne"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "Elulooline/-sed üksikasi/-jad"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "Eluloolised üksikasjad"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "Eluloolised üksikasjad"
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "Eluloo üksikasi/-jad"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "Sirvi Dokumente"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "Sirvi Sündmust"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "Sirvi Sündmusi"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "Sirvi Isikuid"
+#: ----
+msgid "BY_WHOM"
+msgstr "Kelle poolt"
+#: ----
+msgid "CANCEL"
+msgstr "Tühista"
+#: ----
+msgid "CELLULAR"
+msgstr "Mobiilne"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "Sündmuse ahel"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "Sündmus(t)e ahel"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "Sündmuste ahel"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "Sündmuste ahel ei eksisteeri"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "Sündmuste ahel"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "Sündmuste ahel"
+#: ----
+msgid "CHANGE"
+msgstr "Muuda"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "Muuda Täiendava üksikasja tüüpi"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "Muuda parool"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "Muuda vaade"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "Vali tegevus"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "Vali Faili üleslaadimine"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "Vali alguspunkt"
+#: ----
+msgid "CLARIFY"
+msgstr "Täpsusta"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "Täpsustav märkus"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "Täpsustavad märkused"
+#: ----
+msgid "CLEAR"
+msgstr "Tühjenda"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "Kliki et alla laadida Sündmuste XML fail OpenEvSys kõikidest kirjetest."
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "Vajuta et valida suvand"
+#: ----
+msgid "CLOSE"
+msgstr "Sulge"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "Veerg nullitud algväärtustele"
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "Kombineeritud otsingu vormid"
+#: ----
+msgid "COMPILE"
+msgstr "Koosta"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "Konfiguratsiooni muutuja"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "Kinnita uus parool"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "Kinnita parool"
+#: ----
+msgid "CONTAINS"
+msgstr "sisaldab"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "Kontekstiteave"
+#: ----
+msgid "CONTINUE"
+msgstr "Jätka"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "Jätka Dokumendi üksikasjade redigeerimist"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "Jätka selle Sündmusteahela kirje redigeerimist"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "Jätka selle Sündmuse kirje redigeerimist"
+#: ----
+msgid "COUNT"
+msgstr "Loenda"
+#: ----
+msgid "COUNTRY"
+msgstr "Riik"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "Loo aruanne nendest tulemustest"
+#: ----
+msgid "CREATED_BY"
+msgstr "Loodud ..."
+#: ----
+msgid "CREATED_DATE"
+msgstr "Loomise kuupäev"
+#: ----
+msgid "CREATOR"
+msgstr "Looja"
+#: ----
+msgid "CSV"
+msgstr "CSV fail"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "Praegune parool"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "Praegune seadistus"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "Praegune väärtus"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "Andmevahetus"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "Andmebaasi viga"
+#: ----
+msgid "DATE"
+msgstr "Kuupäev"
+#: ----
+msgid "DATE_CREATED"
+msgstr "Loodud kuupäeval"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "Kuupäeva väli"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "Sekkumise kuupäev"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "Allikmaterjali kuupäev"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "Kuupäev nõutav, vigane kuupäev"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "Sissekande kuupäev"
+#: ----
+msgid "DEFINITION"
+msgstr "Definitsioon"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "Seotuse määr"
+#: ----
+msgid "DELETE"
+msgstr "Kustuta"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "Kustuta Täiendavad üksikasjad"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "Kustuta Dokument"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "Kustuta see Sündmus"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "Kustuta see Isik"
+#: ----
+msgid "DESCRIPTION"
+msgstr "Kirjeldus"
+#: ----
+msgid "DESIGNATION"
+msgstr "Nimetus"
+#: ----
+msgid "DESTRUCTION"
+msgstr "Hävitus"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "Lülita välja Abi"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "Lülita interaktiivne tõlge välja"
+#: ----
+msgid "DISABLED"
+msgstr "Välja lülitatud"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "Soovid kustutada Täiendavad üksikasjad?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "Soovid kustutada valitud Aadressi(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "Soovid kustutada valitud Eluloolised üksikasjad?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "Soovid kustutada valitud Sündmus(t)e ahela?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "Soovid kustutada valitud Informatsiooni(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "Soovid kustutada valitud Sekkumise(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "Soovid kustutada valitud Mikrotesauruse termini(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "Soovid kustutada valitud Päringud?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "Soovid kustutada valitud kirje(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "Soovid kustutada valitud kasutaja(d)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "Soovid selle Dokumendi kustutada?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "Soovid selle Sündmuse kustutada?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "Soovid selle Isiku kustutada?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "Soovid eemaldada olemasoleva manuse sellest Dokumendist?"
+#: ----
+msgid "DOCUMENT"
+msgstr "Dokument"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "Dokumendi üksikasjad"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "Dokument ei eksisteeri"
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "Dokumendi Otsingu vorm"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "Dokumendi pealkiri"
+#: ----
+msgid "DOCUMENTS"
+msgstr "Dokumendid"
+#: ----
+msgid "DOWNLOAD"
+msgstr "Lae alla"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "Lae Dokument alla"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "Lae alla vea aruanne"
+#: ----
+msgid "E_MAIL"
+msgstr "E-mail"
+#: ----
+msgid "EDIT"
+msgstr "Redigeeri"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "Redigeeri Täiendavaid üksikasju"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "Redigeeri Eluloolisi üksikasju"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "Redigeeri üksikasjad"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "Redigeeri Sündmuse kokkuvõtet"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "Redigeeri profiili"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "Redigeeri seda Toimingut"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "Redigeeri seda Aadressi"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "Redigeeri neid Eluloolisi üksikasju"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "Redigeeri seda Sündmuse ahelat"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "Redigeeri seda Sündmust"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "Redigeeri seda Infomatsiooni"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "Redigeeri seda Sekkujat"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "Redigeeri seda Sekkumist"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "Redigeeri seda Seotust"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "Redigeeri seda Toimepanijat"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "Redigeeri seda Isikut"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "Redigeeri seda Ohvrit"
+#: ----
+msgid "EDIT_USER"
+msgstr "Redigeeri kasutajat"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "Redigeeri selle Isiku aadressi ..."
+#: ----
+msgid "EMAIL"
+msgstr "E-mail"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "E-maili aadress nõutav, vigane e-mail"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "Aktiveeri Abi"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "Aktiveeri interaktiivne tõlge"
+#: ----
+msgid "END_DATE"
+msgstr "Lõppkuupäev"
+#: ----
+msgid "ENTITY"
+msgstr "Üksus"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "Üksuse load"
+#: ----
+msgid "ENTRY"
+msgstr "Sissekanne"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "Serveri uuendamise jooksul toimus viga."
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "Huritermini loomise jooksul toimus viga."
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "Viga faili salvestamisel. Ei saa faili salvestada."
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "Viga välja loomisel."
+#: ----
+msgid "EVENT"
+msgstr "Sündmus"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "Sündmuse Kirjeldus"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "Sündmust ei eksisteeri"
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "Sündmuse Otsingu vorm"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "Sündmuse standard formaat XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "Sündmuse Pealkiri"
+#: ----
+msgid "EVENTS"
+msgstr "Sündmused"
+#: ----
+msgid "EXAMPLE"
+msgstr "Näide"
+#: ----
+msgid "EXAMPLES"
+msgstr "Näited"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "Olemasolevad väljad"
+#: ----
+msgid "EXPORT"
+msgstr "Ekspordi"
+#: ----
+msgid "EXPORT__"
+msgstr "Ekspordi :"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "Ekspordi Kuupäev"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "Ekspordi Sündmused"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "Ekspordi Juhtum"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "Ekspordi see tabel arvutustabelisse"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "Ekspordi Aeg"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "Faili kirjutamine kettale ebaõnnestus"
+#: ----
+msgid "FALSE"
+msgstr "väär"
+#: ----
+msgid "FAX"
+msgstr "Faks"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "Väli edukalt loodud"
+#: ----
+msgid "FIELD_LABEL"
+msgstr "Välja Sedel"
+#: ----
+msgid "FIELD_NAME"
+msgstr "Välja nimi"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "Välja nimi, välja number ja välja sedel ei tohi olla tühjad. Palun sisesta mõned väärtused."
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "Välja nimi juba eksisteerib. Palun anna sellele uus nimi."
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "Välja number"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "Välja number juba eksisteerib. Palun vali uus number."
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "Välja numbrid mille lõpus on 60 või 80 on reserveeritud haldusväljadele. Palun kasutage numbrit, mis ei lange sellesse kriteeriumisse."
+#: ----
+msgid "FIELD_RESET"
+msgstr "Välja nullimine"
+#: ----
+msgid "FIELD_S_"
+msgstr "Väli/-jad"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "Välja tüüp"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "Väli pole kirjutatav"
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "Faili üles laadimise peatas laiend"
+#: ----
+msgid "FILTER"
+msgstr "Filtreeri"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "filtreeri valikud ja tulemused"
+#: ----
+msgid "FINAL_DATE"
+msgstr "Lõplik kuupäev"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "Leia dokumendid, mis on üles laetud OpenEvsys-i ja vaata kuidas need on seotud teiste vormide toetuseks"
+#: ----
+msgid "FINISH"
+msgstr "Lõpeta"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "Lõpetatud! Nüüd saad toimida järgmiselt"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "Lõpetatud! Nüüd saad toimida järgmiselt:"
+#: ----
+msgid "FIRST_NAME"
+msgstr "Eesnimi"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "Kaust juba eksisteerib! Anna sellele teine nimi."
+#: ----
+msgid "FOLDER_NAME"
+msgstr "Kausta nimi"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "Järgmised väljad ei tohi olla tühjad"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "Järgnev huritermin juba eksisteerib"
+#: ----
+msgid "FORCE_DELETE"
+msgstr "Sunni kustutamine"
+#: ----
+msgid "FORM"
+msgstr "Vorm"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "Vormi kohandamine"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "Lisainformatsioon"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "Mine ematasemele"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "Rühmita päevade järgi"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "Rühmita kuude järgi"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "Rühmita aastate järgi"
+#: ----
+msgid "GUIDELINES"
+msgstr "Juhised"
+#: ----
+msgid "HELP_TEXT"
+msgstr "Abi tekst"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "Peida Aadressi vorm"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "Peida Otsingu vorm"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "Peida Toetav(ad) dokument/-did"
+#: ----
+msgid "HIDE_TREE"
+msgstr "Peida struktuuripuu"
+#: ----
+msgid "HOW_WAS_"
+msgstr "Kuidas oli"
+#: ----
+msgid "HURICODE"
+msgstr "Hurikood"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huritermin ei tohi olla tühi"
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "Kui Sündmus/Isik on konfidentsiaalne?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "Sellele lehele jõudmine tähendab, et sul puudub ligipääs OpenEvsys moodulitele. Kontakteeruge süsteemi administraatoriga, et saada rohkem infot."
+#: ----
+msgid "IMPACT"
+msgstr "Mõju"
+#: ----
+msgid "IMPORT"
+msgstr "Impordi"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "Impordi Kuupäev"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "Impordi Sündmused"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "Impordi logi"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "Logi impordi üksikasjad ei ole saadaval"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "Impordi aeg"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "vahel"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "Otsingutulemustes"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "Vahejuhtumi tabel"
+#: ----
+msgid "INFORMATION"
+msgstr "Informatsioon"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "Informatsioon ..."
+#: ----
+msgid "INFORMATION_S_"
+msgstr "Informatsioon(id)"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "Informatsiooni Otsingu vorm"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "Esialgne kuupäev"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "Sekkujad"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "Sekkuja"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "Sekkuja Otsingu vorm"
+#: ----
+msgid "INTERVENTION"
+msgstr "Sekkumine"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "Sekkumine/-sed"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "Sekkumise Otsingu vorm"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "Sekkumised"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "Vigane e-mail"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "Vigane e-maili aadress"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "Vigane hurikood, see peab olema 12-kohaline number"
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Vigane kasutaja ID või parool! Palun proovi uuesti."
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Vigane kasutajanimi või parool! Palun proovi uuesti."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "seotud ..."
+#: ----
+msgid "INVOLVEMENT"
+msgstr "Seotus"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "Seotuse üksikasjad"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "Seotus(ed)"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "Seotuse Otsingu vorm"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "Seotused"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "on ... alaelement"
+#: ----
+msgid "IS_EMPTY"
+msgstr "on tühi"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "on nõutud"
+#: ----
+msgid "KEY"
+msgstr "ET"
+#: ----
+msgid "KILLING"
+msgstr "Tapmine"
+#: ----
+msgid "LABEL"
+msgstr "Sedel"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "Sedel ei saa tühi olla. Sisesta väärtus."
+#: ----
+msgid "LABEL_IN_"
+msgstr "Sedel ..."
+#: ----
+msgid "LABEL_S_"
+msgstr "Sedel(id)"
+#: ----
+msgid "LABELS"
+msgstr "Sedelid"
+#: ----
+msgid "LANGUAGE"
+msgstr "Keel"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "Keele kataloog ei ole kirjutatav."
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "Keel eemaldatud"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "Keel loodi edukalt."
+#: ----
+msgid "LAST_NAME"
+msgstr "Perekonnanimi"
+#: ----
+msgid "LIKE"
+msgstr "nagu"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "Seotud kui"
+#: ----
+msgid "LINKS"
+msgstr "Lingid"
+#: ----
+msgid "LOCALIZATION"
+msgstr "Lokaliseerimine"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "Logi üksikasjad ei ole saadaval selle Isiku jaoks"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "Halda keeli"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "Sõnumid edukalt salvestatud."
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "Mikrotesaurus"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "Mikrotesauruse kohandamine"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "Mikrotesauruse terminid"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "Puudub ajutine kaust."
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "Muudetud väärtus"
+#: ----
+msgid "MODULE"
+msgstr "Moodul"
+#: ----
+msgid "MODULES"
+msgstr "Moodulid"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "Järelevalve olek"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "Rohkem selle Sündmuse kohta"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "Rohkem selle Isiku kohta"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "Minu eelistused"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "Mysql andmete tüüp"
+#: ----
+msgid "NAME"
+msgstr "Nimi"
+#: ----
+msgid "NEW"
+msgstr "Uus"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "Uus Dokument"
+#: ----
+msgid "NEW_EVENT"
+msgstr "Uus Sündmus"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "Uus parool"
+#: ----
+msgid "NEW_PERSON"
+msgstr "Uus Isik"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "Uue Rolli nimi"
+#: ----
+msgid "NEXT"
+msgstr "Järgmine"
+#: ----
+msgid "NO"
+msgstr "Ei"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "Päringuid ei ole veel salvestatud."
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "Kirjeid ei leitud."
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "Kirjeid ei valitud"
+#: ----
+msgid "NOT_="
+msgstr "mitte ="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "Ei ole lubatud välja tüüp. Proovi uuesti"
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "ei sisalda"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "ei ole vahel"
+#: ----
+msgid "NOT_LIKE"
+msgstr "ei ole nagu"
+#: ----
+msgid "NOT_ON"
+msgstr "ei ole peal"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "Number nõutud, vigane number"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys importis andmed edukalt."
+#: ----
+msgid "OR"
+msgstr "VÕI"
+#: ----
+msgid "ORDER"
+msgstr "Järjesta"
+#: ----
+msgid "ORGANIZATION"
+msgstr "Organisatsioon"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "Esialgsed Otsingu tulemused"
+#: ----
+msgid "PAGE__"
+msgstr "Lehekülg :"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "Pagineeri tulemused"
+#: ----
+msgid "PASSWORD"
+msgstr "Parool"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "Parool on vigane"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "Parool on vale"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "Parool nõutav"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "Luba keelatud"
+#: ----
+msgid "PERMISSIONS"
+msgstr "Load"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "Load"
+#: ----
+msgid "PERMISSONS"
+msgstr "Load"
+#: ----
+msgid "PERPETRATOR"
+msgstr "Toimepanija"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "Toimepanija nimed"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "Toimepanija Otsingu vorm"
+#: ----
+msgid "PERPETRATORS"
+msgstr "Toimepanijad"
+#: ----
+msgid "PERSON"
+msgstr "Isik"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "Isiku Aadress(id)"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "Isiku üksikasi/-jad"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "Isik ei eksisteeri"
+#: ----
+msgid "PERSON_NAME"
+msgstr "Isiku nimi"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "Isiku kirje(d)"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "Isiku kirjed"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "Isiku sünnikuupäev ei ole sisestatud"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "Isiku Otsingu vorm"
+#: ----
+msgid "PERSONS"
+msgstr "Isikud"
+#: ----
+msgid "PHONE"
+msgstr "Telefon"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "Telefoni number nõutud, vigane telefoni number"
+#: ----
+msgid "PICTURE"
+msgstr "Pilt"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "Palun lisage tingimus enne otsingut"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "Palun lisage loendamiseks tingimus loenduskasti"
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "Palun valige kasutaja, keda kustutada"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "Palun valige kehtiv kasutaja."
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "Palun laadige üles sobiv OpenEvSys XML fail."
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "Palun kasutage Minu eelistuste nuppu üleval paremal nurgas, et redigeerida enda üksikasju"
+#: ----
+msgid "PREVIOUS"
+msgstr "Eelmine"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "Prindi see Sündmus"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "Prindi see lehekülg"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "Prindi see Isik"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "Printimise eelvaade"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "Päringud edukalt kustutatud"
+#: ----
+msgid "QUERY_ID"
+msgstr "Päringu ID"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "Päring edukalt salvestatud"
+#: ----
+msgid "REC_NO"
+msgstr "Kir-nr"
+#: ----
+msgid "RECORD_NO"
+msgstr "Kirje nr"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "Kirje number"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "Kirje tüüp"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "Kirjeid lehekülje kohta"
+#: ----
+msgid "REGEX"
+msgstr "regex"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "Seotud Sündmus"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "Seotud Sündmuse Pealkiri"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "Seotud Isik"
+#: ----
+msgid "REMARKS"
+msgstr "Märkused"
+#: ----
+msgid "REMOVE"
+msgstr "Eemalda"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "Eemalda Täpsusta"
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "Eemalda Tingimus"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "Eemalda Keel"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "Eemalda Valik"
+#: ----
+msgid "REPORT"
+msgstr "Aruanne"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "Soovitud Toimingu kirje ei eksisteeri"
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "Soovitud Informatsioon ei eksisteeri"
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "Soovitud Sekkumine ei eksisteeri"
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "Soovitud Seotust ei eksisteeri"
+#: ----
+msgid "RESET"
+msgstr "Nulli"
+#: ----
+msgid "RESET_ALL"
+msgstr "Nulli kõik"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "Piira rolli jaoks"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "Piira kasutaja jaoks"
+#: ----
+msgid "ROLE"
+msgstr "Roll"
+#: ----
+msgid "ROLE_LIST"
+msgstr "Rolli nimekiri"
+#: ----
+msgid "ROLES"
+msgstr "Rollid"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "Rollide / Moodulite juurdepääsu kontroll"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "Rollide &amp; Moodulite juurdepääsu kontroll"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Rollid sissepääsuloaga sellele Sündmusele"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Rollid sissepääsuloaga sellele Isikule"
+#: ----
+msgid "SAVE"
+msgstr "Salvesta"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "Salvesta Aadress"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "Salvesta Dokument"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "Salvesta Abi tekst"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "Salvesta uued väljad"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "Salvesta päring"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "Salvesta see päring"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "Salvesta see päring selle seadistusega"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "Salvestatud päringud"
+#: ----
+msgid "SEARCH"
+msgstr "Otsi"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "Otsi täiendavat informatsiooni, mis on asjakohased konkreetsete toimingute tüüpidele"
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "Otsingu tingimused"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "Otsingu vorm"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "Otsi andmebaasist"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "Otsi informatsiooni Sündmuste kohta"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "Otsi informatsiooni Isikute kohta, kes on Ohvrite vastu toime pandud Toimingute Toimepanijad."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "Otsi informatsiooni Isikute kohta, kes on mingil moel Sündmustesse sekkunud."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "Otsi informatsiooni Isikute kohta, kes on andnud informatsiooni."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "Otsi informatsiooni Isikute kohta, olgu nad indiviidid, grupid või organisatsioonid."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "Otsi informatsiooni Isikute kohta, kes on olnud Ohvrid."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "Otsi informatsiooni Toimingute kohta, mis on Ohvrite vastu toime pandud."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "Otsi informatsiooni andmete kohta, mida Allikad esitanud on."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "Otsi informatsiooni viiside kohta, kuidas Toimepanijad on konkreetsete Toimingutega seotud olnud."
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "Otsi kirjeid selle kohta, kuidas Isikud on sekkunud Sündmustesse või Ohvrite nimel"
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "Otsingu aruanne"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "Otsingu tulemused"
+#: ----
+msgid "SEARCHABLE"
+msgstr "Otsitav"
+#: ----
+msgid "SECTION"
+msgstr "Sektsioon"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "Vaata pilti täissuuruses"
+#: ----
+msgid "SELECT"
+msgstr "Vali"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "Vali formaat"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "Vali Mikrotesaurus"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "Vali Üksus"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "Vali väli"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Vali väljad ..."
+#: ----
+msgid "SELECT_ROLE"
+msgstr "Vali roll"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "Vali sekundaarne üksus"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "Vali struktuuripuu valik"
+#: ----
+msgid "SET"
+msgstr "Määra"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "Seadista ACL olek"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "Määra keel"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "Määra süsteemi keel"
+#: ----
+msgid "SHARE"
+msgstr "Jaga"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "Näita Aadressi vormi"
+#: ----
+msgid "SHOW_ALL"
+msgstr "Näita kõike"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "Näita Otsingu vormi"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "Näita Toetavat/-id dokumenti/-e"
+#: ----
+msgid "SIGN_IN"
+msgstr "Logi sisse"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "Logi OpenEvSys-sse"
+#: ----
+msgid "SIGN_OUT"
+msgstr "Logi välja"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "Mõned vead ilmnesid andmete importimise jooksul:"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "kõlab nagu"
+#: ----
+msgid "SOURCE"
+msgstr "Allikas"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "Allika nimi"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "Allika Otsingu vorm"
+#: ----
+msgid "SOURCES"
+msgstr "Allikad"
+#: ----
+msgid "SPREADSHEET"
+msgstr "Arvutustabel"
+#: ----
+msgid "START_DATE"
+msgstr "Alguskuupäev"
+#: ----
+msgid "STATUS"
+msgstr "Staatus"
+#: ----
+msgid "SUBMIT"
+msgstr "Esita"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "Toetavad dokumendid"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "Süsteemi konfiguratsioon"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "Süsteemi viga"
+#: ----
+msgid "TERM_IN"
+msgstr "Termin ..."
+#: ----
+msgid "TERM_IN_"
+msgstr "Termin ..."
+#: ----
+msgid "TEXT"
+msgstr "Tekst"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "Teksti ala 200 tähemärgi limiidiga"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "Teksti ala piiramatu tekstiga"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "Üleslaetud dokument ei olnud lubatav xml dokument."
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "Sündmus on seotud"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "Vana faili manus uuendati uue faili manusega"
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "Sel Isikul puuduvad veel rollid!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "Need kaks parooli on erinevad"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "Üleslaetud fail ületab MAX_FILE_SIZE juhendit, mis oli täpsustatud HTML formaadis."
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "Üleslaetud fail ületab upload_max_filesize juhendit php.ini.-s"
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "Üleslaetud fail laeti üles vaid osaliselt."
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Dokumente ei ole. Lisa mõni!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Toetavaid dokumente Sündmuste kohta ei ole. Lisa mõni!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Sellele Isikule ei ole ühtegi Aadressi lisatud. Lisa mõni!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Selle Isiku kohta ei ole Eluloolisi üksikasju. Lisa mõni!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Selle Sündmuse kohta ei ole informatsiooni. Lisa! Vajuta \"Lisa uus Sündmus\" nuppu, et lisada uus Sündmus."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Sündmusteahela kohta ei ole informatsiooni lisatud. Lisa!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Sekkuja ja Sekkumise kohta ei ole informatsiooni lisatud. Lisa!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Allika ja Informatsiooni kohta ei ole informatsiooni lisatud. Lisa!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "Ohvrite ja Toimepanijate kohta ei ole informatsiooni lisatud. Lisa!"
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Isiku informatsiooni ei ole. Lisa!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "Ajatempel"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "Et vaadata Dokumenti, on vaja valida Dokument Dokumendi nimekirjast."
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "Et vaadata Isikut, on vaja valida Isik Isikute nimekirjast."
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "Et vaadata Sündmust, on vaja valida Sündmus Sündmuste nimekirjast."
+#: ----
+msgid "TORTURE"
+msgstr "Piina"
+#: ----
+msgid "TRANSLATE"
+msgstr "Tõlgi"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "Tõlge ei ole uuendatud! Palun andke kataloogi ja faili luba res/locale kaustale."
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "Tõlge uuendati edukalt."
+#: ----
+msgid "TRUE"
+msgstr "tõene"
+#: ----
+msgid "TYPE"
+msgstr "Tüüp"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Kirjuta Sünnikuupäev vaid numbritega!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Kirjuta Sünnikuu vaid numbritega!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "Toimingu tüüp"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "Sündmusteahela tüüp"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "Sekkumise tüüp"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "Suhte tüüp"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Kirjuta kasutaja ID tekstikasti ja kliki jaga, et anda soovitud kasutajale juurdepääs sellele sündmusele"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Kirjuta kasutaja ID tekstikasti ja kliki jaga, et anda soovitud kasutajale juurdepääs sellele isikule."
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Kirjuta sünniaasta vaid numbritega!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "Kirjuta sünniaasta välja!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "Ei saa eemaldada Mikrotesauruse termineid, sest need on juba kirjetes kasutusel."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "Ei saa välja nullida"
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "Ei saa välju nullida"
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "Tundmatu üleslaadimise viga"
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "Pealkirjata Päring"
+#: ----
+msgid "UPDATE"
+msgstr "Uuendus"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "Uuenda juurdepääsu kontrolli nimekirja"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "Uuenda vorm"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "Uuenda load"
+#: ----
+msgid "UPLOAD"
+msgstr "Lae üles"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "Lae fail üles"
+#: ----
+msgid "USER"
+msgstr "Kasutaja"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "Kasutaja haldamine"
+#: ----
+msgid "USER_NAME"
+msgstr "Kasutaja nimi"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Kasutajat ei leitud! Vigane kasutajanimi või parool! Palun proovige uuesti."
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "Kasutaja ID ei eksisteeri."
+#: ----
+msgid "USERNAME"
+msgstr "Kasutajanimi"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "Kasutajanimi juba eksisteerib, kasuta teist kasutajanime"
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "Kasutajanimi ei saa olla tühi"
+#: ----
+msgid "USERS"
+msgstr "Kasutajad"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Kasutajad ligipääsuga sellele Sündmusele"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Kasutajad ligipääsuga sellele Isikule"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "Kasutajad ligipääsudega"
+#: ----
+msgid "VALIDATION"
+msgstr "Kinnitus"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "Kinnituse tüüp"
+#: ----
+msgid "VERSION"
+msgstr "Versioon"
+#: ----
+msgid "VICTIM"
+msgstr "Ohver"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "Ohvri nimi"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "Ohvri Otsingu vorm"
+#: ----
+msgid "VICTIMS"
+msgstr "Ohvrid"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "Ohvrid ja Toimepanijad"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "Vaata Toimingu kirjet"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "Vaata Aadressi"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "Vaata Eluloolisi üksikasju"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "Vaata Sündmusteahela kirjet"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "Vaata Dokumenti"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "Vaata Sündmust"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "Vaata Sündmuse kirjet"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "Vaata Informatsiooni kirjet"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "Vaata Sekkuja kirjet"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "Vaata Sekkumise kirjet"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "Vaata Seotuse kirjet"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "Vaata Toimepanija kirjet"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "Vaata Isikut"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "Vaata Seotud isikut"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "Vaata Allika kirjet"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "Vaata Ohvri kirjet"
+#: ----
+msgid "VISIBILITY"
+msgstr "Nähtavus"
+#: ----
+msgid "VISIBLE"
+msgstr "Nähtav"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "Nähtav sirvides"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "Nähtav vormis"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "Nähtav vaates"
+#: ----
+msgid "WEB"
+msgstr "Veeb"
+#: ----
+msgid "WEBSITE"
+msgstr "Veebileht"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "Mis juhtus ..."
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "Mis on sekkumine?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "Kes vastutab ..."
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "Kes on sekkuja?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "Kes on allikas?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "Kes on ohver?"
+#: ----
+msgid "YEAR_S__"
+msgstr "Aasta(d):"
+#: ----
+msgid "YES"
+msgstr "Jah"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "Sa oled seda Sündmust kustutamas. See tähendab, et sa kustutad kõik all olevad kirjed. Soovid jätkata?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "Sa ei saa muuta administraatori õiguseid"
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "Sa ei saa kustutada teisi administraatoreid."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "Sa ei saa kustutada administraatori kontot."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "Sa ei saa kustutada vaikimisikeelt."
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "Sa ei saa kustutada end kasutajate nimekirjast."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "Sul puudub luba teiste administraatorite üksikasjade muutmiseks."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "Sa oled valinud ka mõne(d) ematermini(d). Kui sa jätkad, siis kustutatakse ka nende terminite tütarterminid."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "Sa pead selle välja täitma"
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "Sa pead valima üksuse enne loendamist"
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "Sinu brauseri küpsise funktsioon on välja lülitatud! Palun lülita see sisse"
+#: ----
+msgid "EXTENSIONS"
+msgstr "Laiendused"
+#: ----
+msgid "ABOUT_OE"
+msgstr "Info OpenEvsys kohta"
+#: ----
+msgid "AGPL"
+msgstr "AGPL v3 litsentsitud"
+#: ----
+msgid "REQUIRED"
+msgstr "Nõutud"
+#: ----
+msgid "YES_CONFIDENTIALITY"
+msgstr "Jah (konfidentsiaalsusele)"
+#: ----
+msgid "NO_CONFIDENTIALITY"
+msgstr "Ei (konfidentsiaalsusele)"
+#: ----
+msgid "ERROR_SERVER"
+msgstr "Server saatis veateate, kontakteeru süsteemi administraatoriga"
+#: ----
+msgid "NULL_ROWS"
+msgstr "Kehtetud read"
+#: ----
+msgid "PHONE_NO"
+msgstr "Telefoni number"
+#: ----
+msgid "NUMERICAL"
+msgstr "Arvuline"
+#: ----
+msgid "ANALYST"
+msgstr "Analüütik"
+#: ----
+msgid "DATA_ENTRY"
+msgstr "Andmesisestus"
+#: ----
+msgid "ENTITY_GROUPS"
+msgstr "Üksuse grupid"
+#: ----
+msgid "CREATE"
+msgstr "Loo"
+#: ----
+msgid "READ"
+msgstr "loe"
+#: ----
+msgid "LINKING"
+msgstr "Sidumine"
+#: ----
+msgid "PRIMARY"
+msgstr "Primaarne"
+#: ----
+msgid "SELECT_LANGUAGE"
+msgstr "Vali keel"
+#: ----
+msgid "NO_ATTACHMENT"
+msgstr "Selle dokumendi manust ei leitud"
+#: ----
+msgid "BROWSE"
+msgstr "Sirvi"
+#: ----
+msgid "ROWS"
+msgstr "Rida/Read"
+#: ----
+msgid "ADVANCED_SEARCH_REPORT"
+msgstr "Laiendatud otsingu aruanne"
+#: ----
+msgid "Address"
+msgstr "Aadress"
+#: ----
+msgid "latitude"
+msgstr "laiuskraad"
+#: ----
+msgid "longitude"
+msgstr "pikkuskraad"
+#: ----
+msgid "View"
+msgstr "Vaata"
+#: ----
+msgid "Micro-thesauri created successfully"
+msgstr "Micro-thesauri edukalt loodud"
+#: ----
+msgid "Radio field"
+msgstr "(Raadio)nupuväli"
+#: ----
+msgid "Geolocation"
+msgstr "Geolokatsioon"
+#: ----
+msgid "User Select"
+msgstr "Kasutaja valik"
+#: ----
+msgid "Multivalue User Select"
+msgstr "Mitmikvalik Kasutaja Valik"
+#: ----
+msgid "Tree"
+msgstr "Puu"
+#: ----
+msgid "Multivalue Tree"
+msgstr "Mitmikväärtusega puu"
+#: ----
+msgid ""
+msgstr "Valik"
+#: ----
+msgid "Multivalue Select"
+msgstr "Mitmikväärtusega valik"
+#: ----
+msgid "Please select items to perform action"
+msgstr "Palun vali elemendid, et teostada toiming"
+#: ----
+msgid "Dashboard"
+msgstr "Tahvel"
+#: ----
+msgid "Micro-thesauri cannot be empty"
+msgstr "Micro-thesauri ei saa olla tühi"
+#: ----
+msgid "Micro-thesauri name already exists"
+msgstr "Micro-thesauri nimi on juba olemas"
+#: ----
+msgid "Login Information"
+msgstr "Sisselogimise info"
+#: ----
+msgid "Profile Information"
+msgstr "Profiili info"
+#: ----
+msgid "Print configuration"
+msgstr "Prindi seadistus"
+#: ----
+msgid "Header for report print view"
+msgstr "Päis prindivaatele"
+#: ----
+msgid "Header for event print view"
+msgstr "Päis sündmuste prindivaatele"
+#: ----
+msgid "Sidebar for event print view"
+msgstr "Külgriba sündmuste prindivaatele"
+#: ----
+msgid "Header for person print view"
+msgstr "Päis isiku prindivaatele"
+#: ----
+msgid "Sidebar for person print view"
+msgstr "Külgriba isiku prindivaatele"
+#: ----
+msgid "Details"
+msgstr "Detailid"
+#: ----
+msgid "Add new term"
+msgstr "Lisa uus termin"
+#: ----
+msgid "Searchable in Analysis"
+msgstr "Otsitav analüüsides"
+#: ----
+msgid "Visible in Analysis"
+msgstr "Nähtav analüüsides"
+#: ----
+msgid "Add new Micro-thesauri"
+msgstr "Lisa uus Micro-Thesauri"
+#: ----
+msgid "Select language"
+msgstr "Vali keel"
+#: ----
+msgid "Header for login page"
+msgstr "Päis sisselogimise lehe jaoks"
+#: ----
+msgid "Multivalue"
+msgstr "Mitmikväärtus"
+#: ----
+msgid "Enabled"
+msgstr "Aktiveeritud"
+#: ----
+msgid "Hide in case of"
+msgstr "Varja juhul kui"
+#: ----
+msgid "Set visible"
+msgstr "Märgi nähtavaks"
+#: ----
+msgid "Disable"
+msgstr "Deaktiveeri"
+#: ----
+msgid "Apply"
+msgstr "Rakenda"
+#: ----
+msgid "Vocab number"
+msgstr "Vocab number"
+#: ----
+msgid "disabled"
+msgstr "deaktiveeritud"
+#: ----
+msgid "Undefined"
+msgstr "Defineerimata"
+#: ----
+msgid "Load"
+msgstr "Laadi"
+#: ----
+msgid "Select facets"
+msgstr "Vali tahud"
+#: ----
+msgid "Date range"
+msgstr "Kuupäeva vahemik"
+#: ----
+msgid "Timeline type"
+msgstr "Ajajoone tüüp"
+#: ----
+msgid "DAY"
+msgstr "PÄEV"
+#: ----
+msgid "MONTH"
+msgstr "KUU"
+#: ----
+msgid "YEAR"
+msgstr "AASTA"
+#: ----
+msgid "Total Count"
+msgstr "Kokku loendatud"
+#: ----
+msgid "Added in last 30 days"
+msgstr "Lisatud viimase 30p jooksul"
+#: ----
+msgid "Most active users (new items)"
+msgstr "Aktiivseimad kasutajad (uued kanded)"
+#: ----
+msgid "User activity (edited items)"
+msgstr "Kasutaja aktiivsus (muudetud kanded)"
+#: ----
+msgid "Recently deleted"
+msgstr "Viimati kustutatud"
+#: ----
+msgid "No data available"
+msgstr "Andmeid pole saadaval"
+#: ----
+msgid "Add Perpetrator later"
+msgstr "Lisa kurjategija hiljem"
+#: ----
+msgid "Save and Add More Perpetrators"
+msgstr "Salvesta ja lisa rohkem kurjategijaid"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Tegevuste infot ei ole! Kliki nupul Lisa uus sündmus lisamaks uut sündmust!"
+#: ----
+msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Sekkumise infot pole veel lisatud! Kliki nupul Lisa uus sündmus lisamaks uut sündmust!"
+#: ----
+msgid "View person's roles"
+msgstr "Vaata isiku rolle"
+#: ----
+msgid "Duplicate"
+msgstr "Duplikaat"
+#: ----
+msgid "Insert folder name:"
+msgstr "Sisesta kausta nimi:"
+#: ----
+msgid "Return to files list"
+msgstr "Tagasi failide loetellu"
+#: ----
+msgid "Preview"
+msgstr "Eelvaade"
+#: ----
+msgid "Erase"
+msgstr "Kustuta"
+#: ----
+msgid "Charts and map"
+msgstr "Graafikud ja kaardid"
+#: ----
+msgid "Clear this selections"
+msgstr "Puhasta need valikud"
+#: ----
+msgid "of"
+msgstr "/"
+#: ----
+msgid "Not found"
+msgstr "Ei leitud"
+#: ----
+msgid "Map"
+msgstr "Kaart"
+#: ----
+msgid "Charts"
+msgstr "Graafikud"
+#: ----
+msgid "Results"
+msgstr "Tulemused"
+#: ----
+msgid "Filters"
+msgstr "Filtrid"
+#: ----
+msgid "Security"
+msgstr "Turvalisus"
+#: ----
+msgid "Top menu"
+msgstr "Ülamenüü"
+#: ----
+msgid "Top right menu"
+msgstr "Parem ülamenüü"
+#: ----
+msgid "Event menu"
+msgstr "Sündmuste menüü"
+#: ----
+msgid "Person menu"
+msgstr "Isiku menüü"
+#: ----
+msgid "Document menu"
+msgstr "Dokumendi menüü"
+#: ----
+msgid "Analysis menu"
+msgstr "Analüüsi menüü"
+#: ----
+msgid "Preferences menu"
+msgstr "Eelistuste menüü"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "reCAPTCHA't ei sisestatud korrektselt"
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Vale tuvastuskood, palun sisesta uuesti"
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Menüü salvestati edukalt"
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+#: ----
+msgid "Enabled successfully."
+msgstr "Edukalt aktiveeritud"
+#: ----
+msgid "Code"
+msgstr "Kood"
+#: ----
+msgid "Menu"
+msgstr "Menüü"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Kliki lisamaks menüüelementi menüüsse"
+#: ----
+msgid "Number"
+msgstr "Number"
+#: ----
+msgid "Term"
+msgstr "Termin"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Lisa Micro-thesauri"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Tõlgi Micro-thesauri"
+#: ----
+msgid "Language"
+msgstr "Keel"
+#: ----
+msgid "Event"
+msgstr "Sündmus"
+#: ----
+msgid "Select Event"
+msgstr "Vali sündmus"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Tegevuste infot ei ole veel, kliki nupul Lisa uus sündmus lisamaks uut sündmust!"
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Palun vali mõni märkekast sooritamaks tegevust"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Paigalda Google Authenticator rakendus oma telefoni jaoks"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Ava veebi brauser oma telefonis"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Mine m.google.com/authenticator."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Laadi alla ja paigalda Google Authenticator rakendus."
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Nüüd ava ja seadista Google Authenticator."
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Skaneeri järgnevat ribakoodi et registreerida rakendus automaatselt:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Või kasuta järgmist salavõtit et registreerida rakendus käsitsi:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Olles kord käsitsi sisestanud ja salvestanud oma võtme, sisesta 6-kohaline kontrollkood, mille genereeris Google Authenticator rakendus."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Kood pole korrektne, proovi uuesti!"
