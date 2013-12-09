@@ -13,6 +13,14 @@
                 <input title="term" type="text" name="term" id="term"  value=""   class='input-large'  />
                 <div class="help-inline"><span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>    </div>
             </div>
+            
+        </div>
+         <div class='control-group'>	
+            <label  class="control-label" for="code"><?php echo _t('Number') ?></label>
+
+             <div class="controls">
+                <input title="code" type="text" name="code" id="code"  value=""   class='input-large'  />
+            </div>
         </div>
         
         <br style="clear: both" />

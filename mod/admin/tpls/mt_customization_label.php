@@ -101,7 +101,7 @@
     function add_new_mt()
     {
         var template = "";
-        template += "<tr><td></td><td></td><td>";
+        template += "<tr><td></td><td><input  type='text' name='new_vocab_number[]'  /><span style='font-size:12px;font-style:italic;margin-left:5px;'><?php echo _t('optional') ?></span></td><td>";
         template +="<?php
             foreach ($locales as $code => $loc) {
                 echo "<div class='labelinputdiv labelinputdiv_" . $code . "' ";

@@ -135,7 +135,15 @@ function mt_customization_add_terms($mt_term) {
     $mt_term = (strlen($mt_term) == 1) ? '0' . $mt_term : $mt_term;
     if (is_array($_POST['new_term_label'])) {
         for ($index = 0; $index < count($_POST['new_term_label']['en']); $index++) {
-            $vocab_number = get_next_vocab_number();
+            $vocab_number = 0;
+            if(is_array($_POST['new_vocab_number']) && $_POST['new_vocab_number'][$index]){
+                $vocab_number = $_POST['new_vocab_number'][$index];
+                $vocab_number = str_replace(array('+', '-'), '', filter_var($vocab_number, FILTER_SANITIZE_NUMBER_INT));
+
+            }
+            if(!$vocab_number){
+                $vocab_number = get_next_vocab_number();
+            }
             $huri_term = trim($_POST['new_term_label']['en'][$index]);
 
             if ($vocab_number == '') {
@@ -149,7 +157,7 @@ function mt_customization_add_terms($mt_term) {
             $fieldValues['parent_vocab_number'] = 0;
             $fieldValues['term_order'] = 0;
             $fieldValues['term_level'] = 0;
-            
+
             if (!mt_customization_validate_mtterm($mt_term, $vocab_number, $huri_term)) {
                 continue;
             }
@@ -189,19 +197,30 @@ function mt_customization_add_new_taxonomy() {
         return false;
     }
 
+    $codeUser = (int) $_POST['code'];
     $mtIndex = new MtIndex();
-    $code = $mtIndex->getCodeforTerm($term);
 
+    $code = $mtIndex->getCodeforTerm($term);
     if ($code) {
         shnMessageQueue::addError(_t('Micro-thesauri name already exists'));
         return false;
     }
-    $max = $global['db']->GetOne("select max(no) from mt_index");
-    $code = (int) $max + 1;
 
+    if ($codeUser) {
+        $termE = $mtIndex->getTermforCode($codeUser);
+        if ($termE) {
+            shnMessageQueue::addError(_t('Micro-thesauri code already exists'));
+            return false;
+        }
+    } else {
+        $max = $global['db']->GetOne("select max(no) from mt_index");
+        $codeUser = (int) $max + 1;
+    }
+    $code = $codeUser;
+    
     $dbQuery = new Browse();
     try {
-        
+
         $dbQuery->ExecuteNonQuery("insert into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')");
 
         $sql = "CREATE TABLE IF NOT EXISTS mt_" . $code . "_" . $term . "(
@@ -267,10 +286,10 @@ function mt_customization_validate_mtterm($list_code, $vocab_number, $huri_term,
     global $global;
     //check if right length and if it is a number
     //check if the huri term is empty
-   /* if (isset($huri_term) && $huri_term == '') {
-        shnMessageQueue::addError(_t('HURITERM_CAN_NOT_BE_EMPTY_') . "  [ $vocab_number : $huri_term ]");
-        return false;
-    }*/
+    /* if (isset($huri_term) && $huri_term == '') {
+      shnMessageQueue::addError(_t('HURITERM_CAN_NOT_BE_EMPTY_') . "  [ $vocab_number : $huri_term ]");
+      return false;
+      } */
     //check if already exist
     $sql = "SELECT vocab_number FROM mt_vocab WHERE vocab_number='$vocab_number' ";
     $vocab_number = $global['db']->GetOne($sql);
