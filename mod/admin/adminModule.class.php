@@ -1056,7 +1056,7 @@ class adminModule extends shnModule {
             $this->alt_conf_check = $alt_conf_check;
             foreach ($alt_conf_check as $key => $value) {
                 if (!isset($_POST[$key])) {
-                    $_POST[$key] = _t("FALSE");
+                    $_POST[$key] = false;
                 }
             }
             foreach ($_POST as $key => $value) {

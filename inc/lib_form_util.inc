@@ -332,7 +332,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     if ($valuesArray == null) {                // testing
         $valuesArray = $_POST;
     }
-//var_dump($valuesArray);
 //$formArrayEntry = current($formArray);
 //reset($formArray);
     $recordkeyName = '' . $entity->_table . '_record_number';
@@ -366,6 +365,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     }
 
     foreach ($formArray as $fieldName => $formField) {
+       
         if ($formField['map']['entity'] == $entity->_table) {
 
 
