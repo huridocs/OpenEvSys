@@ -3,10 +3,10 @@ msgid "_CONTROLER_NOT_FOUND_"
 msgstr "Pengontrol tidak ditemukan"
 #: ----
 msgid "_DAY_S__"
-msgstr "Hari"
+msgstr "Hari:"
 #: ----
 msgid "_MONTH_S__"
-msgstr "Bulan"
+msgstr "Bulan:"
 #: ----
 msgid "1ST_LEVEL"
 msgstr "Tingkat 1"
@@ -69,7 +69,7 @@ msgid "ADD_ADDITIONAL_DETAILS_FOR"
 msgstr "Tambahkan Rincian Tambahan untuk"
 #: ----
 msgid "ADD_ADDRESS"
-msgstr "Alamat"
+msgstr "Tambahkan Alamat"
 #: ----
 msgid "ADD_BIOGRAPHIC_DETAILS"
 msgstr "Tambahkan Riwayat Hidup"
@@ -111,22 +111,22 @@ msgid "ADD_MORE_PERPETRATORS"
 msgstr "Tambahkan Pelaku"
 #: ----
 msgid "ADD_NEW"
-msgstr "Tambahkan"
+msgstr "Tambahkan baru"
 #: ----
 msgid "ADD_NEW_DOCUMENT"
-msgstr "Masukkan komentar Baru"
+msgstr "Masukkan Dokumen Baru"
 #: ----
 msgid "ADD_NEW_EVENT"
-msgstr "Tambahkan Peristiwa baru"
+msgstr "Tambah Peristiwa baru"
 #: ----
 msgid "ADD_NEW_FIELD"
-msgstr "Masukkan Field Baru"
+msgstr "Masukkan field baru"
 #: ----
 msgid "ADD_NEW_PERSON"
 msgstr "Tambahkan Orang Baru"
 #: ----
 msgid "ADD_NEW_USER"
-msgstr "Tambah Pengguna"
+msgstr "Tambahkan Pengguna"
 #: ----
 msgid "ADD_PERPETRATOR"
 msgstr "Tambahkan Pelaku"
@@ -135,7 +135,7 @@ msgid "ADD_PERPETRATOR_S_"
 msgstr "Tambahkan Pelaku"
 #: ----
 msgid "ADD_ROLE"
-msgstr "Tambahkan Role"
+msgstr "Tambahkan Peran"
 #: ----
 msgid "ADD_SOURCE"
 msgstr "Tambahkan Sumber"
@@ -150,19 +150,19 @@ msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
 msgstr "Tambahkan Korban dan Pelaku dalam Peristiwa ini"
 #: ----
 msgid "ADDING_ADDRESS___"
-msgstr "Menambahkan Alamat"
+msgstr "Menambahkan Alamat..."
 #: ----
 msgid "ADDING_EVENT_INFORMATION"
 msgstr "Menambahkan Informasi Peristiwa"
 #: ----
 msgid "ADDING_PERSON_ADDRESS____"
-msgstr "Menambahkan Alamat"
+msgstr "Menambahkan Alamat Orang"
 #: ----
 msgid "ADDING_PERSON_INFORMATION____"
 msgstr "Menambahkan informasi Orang..."
 #: ----
 msgid "ADDITIONAL_DETAIL_TYPE"
-msgstr "Tipe Detil Tambahan"
+msgstr "Jenis Rincian Tambahan"
 #: ----
 msgid "ADDITIONAL_DETAILS"
 msgstr "Rincian Tambahan"
@@ -183,10 +183,10 @@ msgid "ADVANCED"
 msgstr "Mutakhir"
 #: ----
 msgid "ADVANCED_SEARCH"
-msgstr "Pencarian sederhana"
+msgstr "Pencarian Mutakhir"
 #: ----
 msgid "AFTER"
-msgstr "after"
+msgstr "setelah"
 #: ----
 msgid "AGAINST"
 msgstr "terhadap"
@@ -198,7 +198,7 @@ msgid "ANALYSIS"
 msgstr "Analisis"
 #: ----
 msgid "AND"
-msgstr "AND"
+msgstr "DAN"
 #: ----
 msgid "APPLY_CHANGES_PERMANENTLY"
 msgstr "Lakukan perubahan permanen"
@@ -207,22 +207,22 @@ msgid "ARREST"
 msgstr "Penangkapan"
 #: ----
 msgid "AT"
-msgstr "Tanggal"
+msgstr "saat"
 #: ----
 msgid "AT_OR_AFTER"
-msgstr "at or after"
+msgstr "saat atau setelah"
 #: ----
 msgid "AT_OR_BEFORE"
-msgstr "at or before"
+msgstr "saat atau sebelum"
 #: ----
 msgid "AUDIT"
 msgstr "Audit"
 #: ----
 msgid "AUDIT_LOG"
-msgstr "Log Audit"
+msgstr "Catatan Audit"
 #: ----
 msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
-msgstr "Detil log tidak tersedia untuk Peristiwa ini"
+msgstr "Catatan Detil tidak tersedia untuk Peristiwa ini"
 #: ----
 msgid "BACK"
 msgstr "Kembali"
@@ -234,13 +234,13 @@ msgid "BACK_TO_PERSON_VIEW"
 msgstr "Kembali ke tampilan Orang"
 #: ----
 msgid "BASIC"
-msgstr "Kembali"
+msgstr "Sederhana"
 #: ----
 msgid "BASIC_SEARCH"
-msgstr "Pencarian sederhana"
+msgstr "Pencarian Sederhana"
 #: ----
 msgid "BEFORE"
-msgstr "formulir"
+msgstr "Sebelum"
 #: ----
 msgid "BIOGRAPHIC_DETAIL_S_"
 msgstr "Riwayat Hidup"
@@ -249,10 +249,10 @@ msgid "BIOGRAPHIC_DETAILS"
 msgstr "Riwayat Hidup"
 #: ----
 msgid "BIOGRAPHIC_DETAILS__"
-msgstr "Riwayat Hidup"
+msgstr "Riwayat Hidup."
 #: ----
 msgid "BIOGRAPHY_DETAIL_S_"
-msgstr "Rincian Riwayat Hidup"
+msgstr "Riwayat Hidup"
 #: ----
 msgid "BROWSE_DOCUMENTS"
 msgstr "Telusuri Dokumen"
@@ -303,7 +303,7 @@ msgid "CHANGE_PASSWORD"
 msgstr "Ganti kata sandi"
 #: ----
 msgid "CHANGE_VIEW__"
-msgstr "Ubah tampilan"
+msgstr "Ubah tampilan:"
 #: ----
 msgid "CHOOSE_AN_ACTION"
 msgstr "Pilih tindakan"
@@ -327,7 +327,7 @@ msgid "CLEAR"
 msgstr "Bersihkan"
 #: ----
 msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
-msgstr "Klik untuk mengunduh semua file Peristiwa dalam bentuk XML"
+msgstr "Klik untuk mengunduh semua catatan dalam bentuk XML"
 #: ----
 msgid "CLICK_TO_SELECT_AN_OPTION"
 msgstr "Klik untuk memilih pilihan"
@@ -363,13 +363,13 @@ msgid "CONTINUE"
 msgstr "Lanjutkan"
 #: ----
 msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
-msgstr "Lanjutkan memperbaharui rincian Dokumen"
+msgstr "Lanjutkan memperbarui rincian Dokumen"
 #: ----
 msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
-msgstr "Lanjutkan memperbaharui catatan Rangkaian Peristiwa"
+msgstr "Lanjutkan memperbarui catatan Rangkaian Peristiwa"
 #: ----
 msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
-msgstr "Lanjutkan memperbaharui catatan Peristiwa ini"
+msgstr "Lanjutkan memperbarui catatan Peristiwa ini"
 #: ----
 msgid "COUNT"
 msgstr "Hitungan"
@@ -393,7 +393,7 @@ msgid "CSV"
 msgstr "CSV"
 #: ----
 msgid "CURRENT_PASSWORD"
-msgstr "Ganti Kata Sandi"
+msgstr "Kata Sandi saat ini"
 #: ----
 msgid "CURRENT_SETTING"
 msgstr "Setting saat ini"
@@ -426,7 +426,7 @@ msgid "DATE_REQUIRED__INVALID_DATE"
 msgstr "Tanggal diwajibkan, Tanggal tidak sesuai"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Date of entry"
+msgstr "Tanggal Entri"
 #: ----
 msgid "DEFINITION"
 msgstr "Definisi"
@@ -438,7 +438,7 @@ msgid "DELETE"
 msgstr "Hapus"
 #: ----
 msgid "DELETE_ADDITIONAL_DETAILS"
-msgstr "Hapus Detil Tambahan"
+msgstr "Hapus Rincian Tambahan"
 #: ----
 msgid "DELETE_DOCUMENT"
 msgstr "Hapus Dokumen"
@@ -459,7 +459,7 @@ msgid "DESTRUCTION"
 msgstr "Perusakan"
 #: ----
 msgid "DISABLE_HELP"
-msgstr "Matikan"
+msgstr "Matikan Bantuan"
 #: ----
 msgid "DISABLE_INTERACTIVE_TRANSLATION"
 msgstr "Matikan terjemahan interaktif"
@@ -471,31 +471,31 @@ msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
 msgstr "Apakah anda ingin menghapus Rincian Tambahan Ini?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
-msgstr "Apakah anda ingin menghapus catatan?"
+msgstr "Apakah anda ingin menghapus catatan alamat yang terpilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
-msgstr "Apakah anda ingin menghapus Riwayat Hidup?"
+msgstr "Apakah anda ingin menghapus Riwayat Hidup yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
-msgstr "Apakah anda ingin menghapus Rangkaian Peristiwa?"
+msgstr "Apakah anda ingin menghapus Rangkaian Peristiwa yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
-msgstr "Anda ingin menghapus Infomasi?"
+msgstr "Anda ingin menghapus Infomasi yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
-msgstr "Apakah anda ingin menghapus Intervensi?"
+msgstr "Apakah anda ingin menghapus Intervensi yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
-msgstr "Apakah anda ingin menghapus istilah Micro-thesauri?"
+msgstr "Apakah anda ingin menghapus istilah Micro-thesauri yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
-msgstr "Anda ingin menghapus pertanyaan?"
+msgstr "Anda ingin menghapus Pertanyaan yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
-msgstr "Apakah anda ingin menghapus catatan?"
+msgstr "Apakah anda ingin menghapus catatan yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
-msgstr "Apakah anda ingin menghapus pengguna?"
+msgstr "Apakah anda ingin menghapus Pengguna yang dipilih?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
 msgstr "Apakah anda ingin menghapus Dokumen ini?"
@@ -540,64 +540,64 @@ msgid "E_MAIL"
 msgstr "E-mail"
 #: ----
 msgid "EDIT"
-msgstr "Edit"
+msgstr "Perbarui"
 #: ----
 msgid "EDIT_ADDITIONAL_DETAILS"
-msgstr "Edit Detil Tambahan"
+msgstr "Perbarui Rincian Tambahan"
 #: ----
 msgid "EDIT_BIOGRAPHIC_DETAILS"
-msgstr "Memperbaharui Riwayat Hidup"
+msgstr "Perbarui Riwayat Hidup"
 #: ----
 msgid "EDIT_DETAILS"
-msgstr "Edit Rincian"
+msgstr "Perbarui Rincian"
 #: ----
 msgid "EDIT_EVENT_SUMMARY"
-msgstr "Edit Ringkasan Peristiwa"
+msgstr "Perbarui Ringkasan Peristiwa"
 #: ----
 msgid "EDIT_PROFILE"
-msgstr "Edit Profil"
+msgstr "Perbarui Profil"
 #: ----
 msgid "EDIT_THIS_ACT"
-msgstr "Edit Tindakan"
+msgstr "Perbarui Tindakan"
 #: ----
 msgid "EDIT_THIS_ADDRESS"
-msgstr "Edit Alamat"
+msgstr "Perbarui Alamat"
 #: ----
 msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
-msgstr "Memperbaharui Riwayat Hidup"
+msgstr "Perbarui Riwayat Hidup"
 #: ----
 msgid "EDIT_THIS_CHAIN_OF_EVENT"
-msgstr "Edit Rangkaian Peristiwa"
+msgstr "Perbarui Rangkaian Peristiwa"
 #: ----
 msgid "EDIT_THIS_EVENT"
-msgstr "Edit Peristiwa"
+msgstr "Perbarui Peristiwa"
 #: ----
 msgid "EDIT_THIS_INFORMATION"
-msgstr "Edit Informasi"
+msgstr "Perbarui Informasi"
 #: ----
 msgid "EDIT_THIS_INTERVENING_PARTY"
-msgstr "Edit Pihak Pengintervensi"
+msgstr "Perbarui Pihak Pengintervensi"
 #: ----
 msgid "EDIT_THIS_INTERVENTION"
-msgstr "Edit Intervensi"
+msgstr "Perbarui Intervensi"
 #: ----
 msgid "EDIT_THIS_INVOLVEMENT"
-msgstr "Edit Keterlibatan"
+msgstr "Perbarui Keterlibatan"
 #: ----
 msgid "EDIT_THIS_PERPETRATOR"
-msgstr "Edit Pelaku"
+msgstr "Perbarui Pelaku"
 #: ----
 msgid "EDIT_THIS_PERSON"
-msgstr "Edit Orang"
+msgstr "Perbarui Orang"
 #: ----
 msgid "EDIT_THIS_VICTIM"
-msgstr "Edit Korban"
+msgstr "Perbarui Korban"
 #: ----
 msgid "EDIT_USER"
-msgstr "Edit Pengguna"
+msgstr "Perbarui Pengguna"
 #: ----
 msgid "EDITING_PERSON_ADDRESS____"
-msgstr "Menambahkan Alamat"
+msgstr "Memperbarui alamat Orang..."
 #: ----
 msgid "EMAIL"
 msgstr "Email"
@@ -624,13 +624,13 @@ msgid "ENTRY"
 msgstr "Tambahkan"
 #: ----
 msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
-msgstr "Terjadi kesalahan saat membuat huriterm"
+msgstr "Terjadi kesalahan saat memutakhirkan server"
 #: ----
 msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
 msgstr "Terjadi kesalahan saat membuat huriterm"
 #: ----
 msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
-msgstr "Kesalahan terjadi penyimpanan Pesan. File tidak tersimpan"
+msgstr "Kesalahan terjadi dalam penyimpanan file. File tidak tersimpan"
 #: ----
 msgid "ERROR_WHILE_CREATING_FIELD_"
 msgstr "Terjadi kesalahan saat membuat field"
@@ -660,7 +660,7 @@ msgid "EXAMPLE"
 msgstr "Contoh"
 #: ----
 msgid "EXAMPLES"
-msgstr "Contoh"
+msgstr "Contoh-contoh"
 #: ----
 msgid "EXISTING_FIELDS"
 msgstr "Fields yang ada"
@@ -681,10 +681,10 @@ msgid "EXPORT_INSTANCE"
 msgstr "Ekspor Peristiwa"
 #: ----
 msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
-msgstr "Ekspor tabel ini ke lembarkerja"
+msgstr "Ekspor tabel ini ke lembar-kerja"
 #: ----
 msgid "EXPORT_TIME"
-msgstr "Ekspor waktu"
+msgstr "Waktu ekspor"
 #: ----
 msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
 msgstr "Tidak bisa mencatat pada cakram"
@@ -702,31 +702,31 @@ msgid "FIELD_LABEL"
 msgstr "Label Field"
 #: ----
 msgid "FIELD_NAME"
-msgstr "Field nama"
+msgstr "Nama Field"
 #: ----
 msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
-msgstr "Nama, nomor dan label field harus diisi."
+msgstr "Nama Field, nomor dan label harus diisi."
 #: ----
 msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
 msgstr "Nama pengguna sudah digunakan, silahkan cari nama lain."
 #: ----
 msgid "FIELD_NUMBER"
-msgstr "Field nomor"
+msgstr "Nomor field"
 #: ----
 msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
 msgstr "Nomor field sudah digunakan. Silahkan pilih nomor yang lain"
 #: ----
 msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
-msgstr "Nomor field dengan akhiran 60 ke 80 telah digunakan untuk field manajemen. Silahkan gunakan angka diluar"
+msgstr "Nomor field dengan akhiran 60 ke 80 telah digunakan untuk field manajemen. Silahkan gunakan angka diluar rentang tersebut"
 #: ----
 msgid "FIELD_RESET"
-msgstr "Nama Field"
+msgstr "Atur ulang Field"
 #: ----
 msgid "FIELD_S_"
 msgstr "Field"
 #: ----
 msgid "FIELD_TYPE"
-msgstr "Tipe field"
+msgstr "Jenis field"
 #: ----
 msgid "FILE_IS_NOT_WRITABLE_"
 msgstr "File tidak dapat disalin"
@@ -738,7 +738,7 @@ msgid "FILTER"
 msgstr "Saringan"
 #: ----
 msgid "FILTER_OPTIONS_AND_RESULTS"
-msgstr "Hasil filter dan pilihan"
+msgstr "Saring Hasil dan Pilihan"
 #: ----
 msgid "FINAL_DATE"
 msgstr "Tanggal Akhir"
@@ -765,10 +765,10 @@ msgid "FOLDER_NAME"
 msgstr "Nama Folder"
 #: ----
 msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
-msgstr "Field ini harus di isi"
+msgstr "Field ini tidak boleh kosong"
 #: ----
 msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
-msgstr "Huriterm harus di isi"
+msgstr "Huriterm sudah ada"
 #: ----
 msgid "FORCE_DELETE"
 msgstr "Hapus Paksa"
@@ -780,13 +780,13 @@ msgid "FORM_CUSTOMIZATION"
 msgstr "Formulir Kustomisasi"
 #: ----
 msgid "FURTHER_INFORMATION"
-msgstr "Informasi Selanjutnya"
+msgstr "Informasi selanjutnya"
 #: ----
 msgid "GO_TO_PARENT_LEVEL"
 msgstr "Ke tingkat sebelumnya"
 #: ----
 msgid "GROUP_BY_DAY"
-msgstr "Kelompokkan berdasarkan hari"
+msgstr "Kelompokkan berdasarkan Hari"
 #: ----
 msgid "GROUP_BY_MONTHLY"
 msgstr "Kelompokkan berdasarkan bulan"
@@ -795,22 +795,22 @@ msgid "GROUP_BY_YEARLY"
 msgstr "Kelompokkan berdasarkan tahun"
 #: ----
 msgid "GUIDELINES"
-msgstr "Acuan"
+msgstr "Panduan"
 #: ----
 msgid "HELP_TEXT"
 msgstr "Teks Bantuan"
 #: ----
 msgid "HIDE_ADDRESS_FORM"
-msgstr "Sembunyikan form Alamat"
+msgstr "Sembunyikan formulir Alamat"
 #: ----
 msgid "HIDE_SEARCH_FORM"
-msgstr "Sembunyikan form pencarian"
+msgstr "Sembunyikan formulir pencarian"
 #: ----
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Sembunyikan Dokumen-Dokumen Pendukung"
 #: ----
 msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgstr "Sembunyikan Pohon"
 #: ----
 msgid "HOW_WAS_"
 msgstr "Bagaimana"
@@ -819,13 +819,13 @@ msgid "HURICODE"
 msgstr "Huricode"
 #: ----
 msgid "HURITERM_CAN_NOT_BE_EMPTY_"
-msgstr "Huriterm harus di isi"
+msgstr "Huriterm tidak boleh kosong"
 #: ----
 msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
-msgstr "Apakah data Peristiwa/Orang rahasia?"
+msgstr "Apakah data Peristiwa/Orang ini bersifat rahasia?"
 #: ----
 msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
-msgstr "Jika menemui halaman ini artinya anda tidak memiliki akses ke modul apapun di OpenEvsys. Silahkan hubungi admin untuk informasi lebih jauh."
+msgstr "Jika menemui halaman ini artinya anda tidak memiliki akses ke modul apapun di OpenEvsys. Silahkan hubungi administrator sistem untuk informasi lebih jauh."
 #: ----
 msgid "IMPACT"
 msgstr "Dampak"
@@ -843,19 +843,19 @@ msgid "IMPORT_LOG"
 msgstr "Daftar impor"
 #: ----
 msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
-msgstr "Detil log tidak tersedia untuk Peristiwa ini"
+msgstr "Rincian catatan tidak tersedia untuk Peristiwa ini"
 #: ----
 msgid "IMPORT_TIME"
 msgstr "Impor"
 #: ----
 msgid "IN_BETWEEN"
-msgstr "in between"
+msgstr "di antara"
 #: ----
 msgid "IN_SEARCH_RESULTS"
 msgstr "Dalam hasil pencarian"
 #: ----
 msgid "INCIDENT_TABLE"
-msgstr "Tabel Kecelakaan"
+msgstr "Tabel kasus"
 #: ----
 msgid "INFORMATION"
 msgstr "Informasi"
@@ -873,13 +873,13 @@ msgid "INITIAL_DATE"
 msgstr "Tanggal awal"
 #: ----
 msgid "INTERVENING_PARTIES"
-msgstr "Pihak Yang Mengintervensi"
+msgstr "Pihak Yang pengintervensi"
 #: ----
 msgid "INTERVENING_PARTY"
-msgstr "Pihak Pegintervensi"
+msgstr "Pihak Pengintervensi"
 #: ----
 msgid "INTERVENING_PARTY_SEARCH_FORM"
-msgstr "Form Pencarian Pihak Yang Mengintervensi"
+msgstr "Formulir Pencarian Pihak Pengintervensi"
 #: ----
 msgid "INTERVENTION"
 msgstr "Intervensi"
@@ -894,16 +894,16 @@ msgid "INTERVENTIONS"
 msgstr "Intervensi"
 #: ----
 msgid "INVALID_EMAIL"
-msgstr "Email tidak tepat"
+msgstr "Email salah"
 #: ----
 msgid "INVALID_EMAIL_ADDRESS"
-msgstr "Alamat Email tidak valid"
+msgstr "Alamat Email salah"
 #: ----
 msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
-msgstr "Invalid huricode, harus dalam nomor 12 digit"
+msgstr "Huricode salah, harus dalam 12 digit nomor"
 #: ----
 msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Nama pengguna atau password tidak sesuai, silahkan coba lagi."
+msgstr "ID pengguna atau password tidak sesuai, silahkan coba lagi."
 #: ----
 msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
 msgstr "Nama pengguna atau password tidak sesuai, silahkan coba lagi."
@@ -927,13 +927,13 @@ msgid "INVOLVEMENTS"
 msgstr "Keterlibatan"
 #: ----
 msgid "IS_A_SUB_ELEMENT_OF"
-msgstr "is a sub element of"
+msgstr "adalah sub-elemen dari"
 #: ----
 msgid "IS_EMPTY"
-msgstr "is empty"
+msgstr "adalah kosong"
 #: ----
 msgid "IS_REQUIRED"
-msgstr "Wajib"
+msgstr "Diwajibkan"
 #: ----
 msgid "KEY"
 msgstr "IND"
@@ -972,25 +972,25 @@ msgid "LAST_NAME"
 msgstr "Nama Akhir"
 #: ----
 msgid "LIKE"
-msgstr "like"
+msgstr "seperti"
 #: ----
 msgid "LINKED_WHEN"
 msgstr "Kapan terhubung"
 #: ----
 msgid "LINKS"
-msgstr "Link"
+msgstr "Tautan"
 #: ----
 msgid "LOCALIZATION"
 msgstr "Melokalisasi"
 #: ----
 msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
-msgstr "Detail log tidak tersedia untuk orang ini"
+msgstr "Rincian catatan untuk orang ini tidak tersedia"
 #: ----
 msgid "MANAGE_LANGUAGES"
 msgstr "Atur Bahasa"
 #: ----
 msgid "MESSAGES_SAVED_SUCCESSFULLY_"
-msgstr "Pesan telah disimpan"
+msgstr "Pesan telah berhasil disimpan"
 #: ----
 msgid "MICRO_THESAURI"
 msgstr "Micro-Thesauri"
@@ -1023,7 +1023,7 @@ msgid "MORE_ABOUT_THIS_PERSON"
 msgstr "Lebih jauh tentang orang ini"
 #: ----
 msgid "MY_PREFERENCES"
-msgstr "Preferensi"
+msgstr "Preferensi saya"
 #: ----
 msgid "MYSQL_DATA_TYPE"
 msgstr "Jenis data mysql"
@@ -1065,22 +1065,22 @@ msgid "NO_RECORDS_WERE_SELECTED_"
 msgstr "Tidak ada catatan yang dipilih"
 #: ----
 msgid "NOT_="
-msgstr "not ="
+msgstr "bukan ="
 #: ----
 msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
-msgstr "Tipe field tidak valid, silahkan coba lagi"
+msgstr "Jenis field tidak sesuai, silahkan coba lagi"
 #: ----
 msgid "NOT_CONTAINS"
-msgstr "not contains"
+msgstr "Tidak mengandung"
 #: ----
 msgid "NOT_IN_BETWEEN"
-msgstr "not in between"
+msgstr "Tidak dalam antara"
 #: ----
 msgid "NOT_LIKE"
-msgstr "not like"
+msgstr "Tidak seperti"
 #: ----
 msgid "NOT_ON"
-msgstr "not on"
+msgstr "Tidak pada"
 #: ----
 msgid "NUMBER_REQUIRED__INVALID_NUMBER"
 msgstr "Nomor dibutuhkan, Nomor tidak sesuai"
@@ -1089,7 +1089,7 @@ msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
 msgstr "OpenEvSys telah sukses mengimpor data"
 #: ----
 msgid "OR"
-msgstr "OR"
+msgstr "ATAU"
 #: ----
 msgid "ORDER"
 msgstr "Aturan"
@@ -1116,7 +1116,7 @@ msgid "PASSWORD_MISMATCH"
 msgstr "Kata sandi tidak sama"
 #: ----
 msgid "PASSWORD_REQUIRED"
-msgstr "Sandi diwajibkan"
+msgstr "Kata kunci diwajibkan"
 #: ----
 msgid "PERMISSION_DENIED"
 msgstr "Tidak diperkenankan"
@@ -1161,7 +1161,7 @@ msgid "PERSON_RECORD_S_"
 msgstr "Catatan Orang"
 #: ----
 msgid "PERSON_RECORDS_S_"
-msgstr "Rincian Orang"
+msgstr "Catatan Orang"
 #: ----
 msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
 msgstr "Tanggal lahir orang tidak dimasukkan"
@@ -1179,7 +1179,7 @@ msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
 msgstr "Nomor telpon diwajibkan, nomor telpon tidak sesuai"
 #: ----
 msgid "PICTURE"
-msgstr "Foto"
+msgstr "Gambar"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
 msgstr "Silahkan masukkan kondisi sebelum pencarian"
@@ -1194,10 +1194,10 @@ msgid "PLEASE_SELECT_A_VALID_USER_"
 msgstr "Silahkan pilih pengguna yang valid"
 #: ----
 msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
-msgstr "Silahkan unggah file OpenEvSys xml yang valid"
+msgstr "Silahkan unggah file OpenEvSys XML yang valid"
 #: ----
 msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
-msgstr "Silahkan gunakan Preferensi pada di sebelah kanan atas untuk memperbaharui rincian anda"
+msgstr "Silahkan gunakan Preferensi Saya di sebelah kanan atas untuk memperbaharui rincian anda"
 #: ----
 msgid "PREVIOUS"
 msgstr "Sebelumnya"
@@ -1233,7 +1233,7 @@ msgid "RECORD_NUMBER"
 msgstr "Nomor Catatan"
 #: ----
 msgid "RECORD_TYPE"
-msgstr "Tipe Catatan"
+msgstr "Jenis Catatan"
 #: ----
 msgid "RECORDS_PER_PAGE"
 msgstr "Catatan per halaman"
@@ -1254,19 +1254,19 @@ msgid "REMARKS"
 msgstr "Catatan"
 #: ----
 msgid "REMOVE"
-msgstr "REMOVE"
+msgstr "Hapus"
 #: ----
 msgid "REMOVE_CLARIFY"
-msgstr "Hapuskan Klarifikasi"
+msgstr "Hapus Klarifikasi"
 #: ----
 msgid "REMOVE_CONDITION"
-msgstr "Hapuskan Kondisi"
+msgstr "Hapus Kondisi"
 #: ----
 msgid "REMOVE_LANGUAGE"
 msgstr "Hapus bahasa"
 #: ----
 msgid "REMOVE_SELECTION"
-msgstr "Hapuskan Seleksi"
+msgstr "Hapus Pilihani"
 #: ----
 msgid "REPORT"
 msgstr "Laporan"
@@ -1305,10 +1305,10 @@ msgid "ROLES"
 msgstr "Roles"
 #: ----
 msgid "ROLES___MODULE_ACCESS_CONTROL"
-msgstr "Peran / Modul Akses Kontrol"
+msgstr "Akses kontrol Peran / Modul"
 #: ----
 msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
-msgstr "Roles dan Modul Akses Kontrol"
+msgstr "Akses kontrol Peran;  Modul"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
 msgstr "Peran dengan wewenang untuk mengakses peristiwa ini"
@@ -1338,7 +1338,7 @@ msgid "SAVE_THIS_QUERY"
 msgstr "Simpan pertanyaan ini"
 #: ----
 msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
-msgstr "Simpan pertanyaan dengan shuffle"
+msgstr "Simpan pertanyaan dengan aval"
 #: ----
 msgid "SAVED_QUERIES"
 msgstr "Pertanyaan yang tersimpan"
@@ -1362,10 +1362,10 @@ msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
 msgstr "Cari informasi tentang Peristiwa"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Orang yang menjadi Pelaku dalam tindakan ke korban"
+msgstr "Cari informasi mengenai Orang yang menjadi Pelaku dalam tindakan kepada korban"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
-msgstr "Cari informasi mengenai Orang yang melakukan intervensi di Peristiwa."
+msgstr "Cari informasi mengenai Orang yang mengintervensi di Peristiwa."
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
 msgstr "Cari informasi mengenai Orang yang menyediakan informasi"
@@ -1377,7 +1377,7 @@ msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
 msgstr "Cari informasi pada Orang yang menjadi Korban"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Tindakan ke Korban"
+msgstr "Cari informasi mengenai Tindakan terhadap Korban"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
 msgstr "Cari informasi dalam data yang disediakan oleh Sumber"
@@ -1398,7 +1398,7 @@ msgid "SEARCHABLE"
 msgstr "Dapat dicari"
 #: ----
 msgid "SECTION"
-msgstr "Seksi"
+msgstr "Bagian"
 #: ----
 msgid "SEE_FULL_SIZE_IMAGE"
 msgstr "Lihat ukuran penuh dari gambar"
@@ -1413,13 +1413,13 @@ msgid "SELECT_A_MICRO_THESAURUS"
 msgstr "Pilih Micro-thesauri"
 #: ----
 msgid "SELECT_ENTITY"
-msgstr "Pilih entitas"
+msgstr "Pilih Entitas"
 #: ----
 msgid "SELECT_FIELD"
-msgstr "Pilih fields"
+msgstr "Pilih Fields"
 #: ----
 msgid "SELECT_FIELDS_FROM_"
-msgstr "Pilih dari field"
+msgstr "Pilih dari Field"
 #: ----
 msgid "SELECT_ROLE"
 msgstr "Pilih Peran"
@@ -1467,10 +1467,10 @@ msgid "SIGN_OUT"
 msgstr "Keluar"
 #: ----
 msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
-msgstr "Beberapa kesalahan terjadi saat import, periksa laporan kesalahan"
+msgstr "Beberapa kesalahan terjadi saat impor:"
 #: ----
 msgid "SOUND_LIKE"
-msgstr "sound like"
+msgstr "terdengar seperti"
 #: ----
 msgid "SOURCE"
 msgstr "Sumber"
@@ -1521,7 +1521,7 @@ msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
 msgstr "Wilayah teks tak terbatas"
 #: ----
 msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
-msgstr "Dokumen yang diunggah bukan dokumen xml yang sesuai"
+msgstr "Dokumen yang diunggah bukan dokumen XML yang sesuai"
 #: ----
 msgid "THE_EVENT_IS_LINKED"
 msgstr "Peristiwa ini terhubung"
@@ -1545,7 +1545,7 @@ msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
 msgstr "File hanya terunggah sebagian"
 #: ----
 msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada dokumen tersedia. Silahkan menambahkan!"
+msgstr "Belum ada dokumen tersedia. Silahkan Tambahkan!"
 #: ----
 msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
 msgstr "Belum ada Dokumen pendukung mengenai Peristiwa tersedia. Silahkan menambahkan!"
@@ -1560,19 +1560,19 @@ msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_N
 msgstr "Belum ada informasi Peristiwa. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada Rangkaian Peristiwa. Silahkan Tambahkan!"
+msgstr "Belum ada informasi tentang Rangkaian Peristiwa. Silahkan Tambahkan!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Intervensi dan Pihak Pengintervensi. Tambahkan"
+msgstr "Belum ada informasi tentang Intervensi dan Pihak Pengintervensi. Silahkan tambahkan!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi Sumber dan Informasi. Silahkan tambahkan!"
+msgstr "Belum ada informasi tentang Sumber dan Informasi. Silahkan tambahkan!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
 msgstr "Belum ada informasi tentang Korban dan Pelaku. Silahkan tambahkan!"
 #: ----
 msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum Informasi tentang Orang . Silahkan tambahkan!"
+msgstr "Belum Informasi tentang Orang. Silahkan tambahkan!"
 #: ----
 msgid "TIMESTAMP"
 msgstr "Catatan waktu"
@@ -1581,7 +1581,7 @@ msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_
 msgstr "Untuk melihat Dokumen, silahkan pilih satu dokumen dari daftar Dokumen"
 #: ----
 msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
-msgstr "Untuk melihat Orang, silahkan pilih satu Orang dari daftar Orang"
+msgstr "Untuk melihat Orang, silahkan pilih satu dari daftar Orang"
 #: ----
 msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
 msgstr "Untuk melihat orang, silahkan pilih satu Peristiwa dari daftar Peristiwa"
@@ -1599,10 +1599,10 @@ msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
 msgstr "Terjemahan telah diperbaharui"
 #: ----
 msgid "TRUE"
-msgstr "true"
+msgstr "benar"
 #: ----
 msgid "TYPE"
-msgstr "Tipe"
+msgstr "Jenis"
 #: ----
 msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
 msgstr "Jenis tanggal lahir hanya dalam angka"
@@ -1623,40 +1623,40 @@ msgid "TYPE_OF_RELATIONSHIP"
 msgstr "Jenis dari Relasi"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Jenis userid pada kotak teks dan klik berbagi peristiwa untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Masukkan ID pengguna pada kotak teks dan klik berbagi peristiwa untuk memberikan akses pada pengguna yang diinginkan"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Jenis userid pada kotak teks dan klik berbagi orang untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Masukkan ID Pengguna pada kotak teks dan klik berbagi orang untuk memberikan akses pada pengguna yang diinginkan"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Jenis Tahun kelahiran hanya dalam angka"
+msgstr "Masukkan Tahun kelahiran hanya dalam angka"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
-msgstr "Jenis tahun kelahiran secara lengkap"
+msgstr "Masukkan tahun kelahiran secara lengkap"
 #: ----
 msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
-msgstr "Tidak dapat menghapus beberapa istilah Micro-thesauri karena digunakan dalam catatan"
+msgstr "Tidak dapat menghapus beberapa istilah Micro-thesauri karena telah digunakan dalam catatan"
 #: ----
 msgid "UNABLE_TO_RESET_FIELD_"
-msgstr "Tidak dapat mengembalikan field"
+msgstr "Tidak dapat mengatur ulang field"
 #: ----
 msgid "UNABLE_TO_RESET_FIELDS_"
-msgstr "Tidak dapat mengembalikan field"
+msgstr "Tidak dapat mengatur ulang field"
 #: ----
 msgid "UNKNOWN_UPLOAD_ERROR_"
 msgstr "Kesalahan pengunggahan yang tidak diketahui"
 #: ----
 msgid "UNTITLED_QUERY"
-msgstr "Pertanyaan tanpa judl"
+msgstr "Pertanyaan tanpa judul"
 #: ----
 msgid "UPDATE"
-msgstr "Perbaharui"
+msgstr "Perbarui"
 #: ----
 msgid "UPDATE_ACCESS_CONTROL_LIST"
-msgstr "Mutakhirkan Daftar Akses Kontrol"
+msgstr "Perbarui Daftar Akses Kontrol"
 #: ----
 msgid "UPDATE_FORM"
-msgstr "Perbaharui Formulir"
+msgstr "Perbarui Formulir"
 #: ----
 msgid "UPDATE_PERMISSIONS"
 msgstr "Perbaharui wewenang"
@@ -1677,16 +1677,16 @@ msgid "USER_NAME"
 msgstr "Nama Penguna"
 #: ----
 msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Pengguna tidak ditemukan: ID pengguna atau password tidak sah, silahkan coba lagi."
+msgstr "Pengguna tidak ditemukan! ID pengguna atau password tidak sesuai! silahkan coba lagi."
 #: ----
 msgid "USERID_DOES_NOT_EXISTS_"
-msgstr "Userid tidak tersedia"
+msgstr "ID Pengguna tidak tersedia"
 #: ----
 msgid "USERNAME"
 msgstr "Nama Penguna"
 #: ----
 msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
-msgstr "Nama pengguna sudah ada, gunakan nama pengguna lain"
+msgstr "Nama pengguna sudah ada, gunakan nama lain"
 #: ----
 msgid "USERNAME_CANNOT_BE_EMPTY"
 msgstr "Nama pengguna harus diisi"
@@ -1728,58 +1728,58 @@ msgid "VICTIMS_AND_PERPETRATORS"
 msgstr "Korban dan Pelaku"
 #: ----
 msgid "VIEW_ACT_RECORD"
-msgstr "Lihat catatan Tindakan"
+msgstr "Tampilkan catatan Tindakan"
 #: ----
 msgid "VIEW_ADDRESS"
-msgstr "Alamat"
+msgstr "Tampilkan Alamat"
 #: ----
 msgid "VIEW_BIOGRAPHIC_DETAILS"
-msgstr "Lihat Riwayat Hidup"
+msgstr "Tampilkan Riwayat Hidup"
 #: ----
 msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
-msgstr "Lihat catatan Rangkaian Peristiwa"
+msgstr "Tampilkan catatan Rangkaian Peristiwa"
 #: ----
 msgid "VIEW_DOCUMENT"
-msgstr "Lihat Dokumen"
+msgstr "Tampilkan Dokumen"
 #: ----
 msgid "VIEW_EVENT"
-msgstr "Lihat Peristiwa"
+msgstr "Tampilkan Peristiwa"
 #: ----
 msgid "VIEW_EVENT_RECORD"
-msgstr "Lihat catatan Peristiwa"
+msgstr "Tampilkan catatan Peristiwa"
 #: ----
 msgid "VIEW_INFORMATION_RECORD"
-msgstr "Lihat catatan Informasi"
+msgstr "Tampilkan catatan Informasi"
 #: ----
 msgid "VIEW_INTERVENTION_PARTY_RECORD"
-msgstr "Lihat Catatan Pihak yang Mengintervensi"
+msgstr "Tampilkan Catatan Pihak yang Mengintervensi"
 #: ----
 msgid "VIEW_INTERVENTION_RECORD"
-msgstr "Lihat catatan Intervensi"
+msgstr "Tampilkan catatan Intervensi"
 #: ----
 msgid "VIEW_INVOLVEMENT_RECORD"
-msgstr "Lihat catatan Keterlibatan"
+msgstr "Tampilkan catatan Keterlibatan"
 #: ----
 msgid "VIEW_PERPETRATOR_RECORD"
-msgstr "Lihat catatan Pelaku"
+msgstr "Tampilkan catatan Pelaku"
 #: ----
 msgid "VIEW_PERSON"
-msgstr "Lihat Orang"
+msgstr "Tampilkan Orang"
 #: ----
 msgid "VIEW_RELATED_PERSON"
-msgstr "Lihat Orang yang terhubung"
+msgstr "Tampilkan Orang yang terhubung"
 #: ----
 msgid "VIEW_SOURCE_RECORD"
-msgstr "Lihat catatan Sumber"
+msgstr "Tampilkan catatan Sumber"
 #: ----
 msgid "VIEW_VICTIM_RECORD"
-msgstr "Lihat catatan Korban"
+msgstr "Tampilkan catatan Korban"
 #: ----
 msgid "VISIBILITY"
 msgstr "Visibilitas"
 #: ----
 msgid "VISIBLE"
-msgstr "Visibilitas"
+msgstr "Terlihat"
 #: ----
 msgid "VISIBLE_IN_BROWSE"
 msgstr "Terlihat di penelusuran"
@@ -1788,13 +1788,13 @@ msgid "VISIBLE_IN_FORM"
 msgstr "Terlihat di formulir"
 #: ----
 msgid "VISIBLE_IN_VIEW"
-msgstr "Telihat di View"
+msgstr "Telihat di Tampilan"
 #: ----
 msgid "WEB"
 msgstr "Situs"
 #: ----
 msgid "WEBSITE"
-msgstr "Situs"
+msgstr "Website"
 #: ----
 msgid "WHAT_HAPPENED_TO"
 msgstr "Apa yang terjadi pada"
@@ -1821,7 +1821,7 @@ msgid "YES"
 msgstr "Ya"
 #: ----
 msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
-msgstr "Anda akan menhapus sebuah peristiwa. Artinya anda akan menghapus catatan yang terdaftar di bawah ini. Anda akan melanjutkan?"
+msgstr "Anda akan menhapus sebuah Peristiwa. Artinya anda akan menghapus catatan yang terdaftar di bawah ini. Anda akan melanjutkan?"
 #: ----
 msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
 msgstr "Anda tidak dapat mengubah wewenang admin"
@@ -1842,7 +1842,7 @@ msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
 msgstr "Anda tidak memiliki wewenang untuk mengedit rincian admin lainnya"
 #: ----
 msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
-msgstr "Anda juga akan menghapus sejumlah induk istilah, jika dilanjutkan maka anak dari istilah akan terhapus"
+msgstr "Anda juga akan menghapus sejumlah induk istilah, jika dilanjutkan maka anak-anak dari istilah akan terhapus"
 #: ----
 msgid "YOU_MUST_FILL_IN_THIS_FIELD"
 msgstr "Anda harus mengisi field ini"
@@ -1851,76 +1851,76 @@ msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
 msgstr "Anda perlu memilih entitas sebelum menghitung"
 #: ----
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
-msgstr "Fungsi cookie browser anda tidak aktif. Silahkan aktifkan"
+msgstr "Fungsi cookie pada browser anda tidak aktif. Silahkan aktifkan"
 #: ----
 msgid "EXTENSIONS"
 msgstr "Ekstensi"
 #: ----
 msgid "ABOUT_OE"
-msgstr "About OpenEvsys"
+msgstr "Tentang OpenEvsys"
 #: ----
 msgid "AGPL"
-msgstr "AGPL v3 licensed"
+msgstr "Berlinsensi AGPL v3"
 #: ----
 msgid "REQUIRED"
-msgstr "Required"
+msgstr "Diwajibkan"
 #: ----
 msgid "YES_CONFIDENTIALITY"
-msgstr "Yes (for Confidentiality)"
+msgstr "Iya (untuk Kerahasiaan)"
 #: ----
 msgid "NO_CONFIDENTIALITY"
-msgstr "No (for Confidentiality)"
+msgstr "Tidak (untuk Kerahasiaan)"
 #: ----
 msgid "ERROR_SERVER"
-msgstr "An error was returned by the server, please contact system administrator"
+msgstr "Kesalahan dikembalikan oleh server, silahkan hubungi administrato sistem"
 #: ----
 msgid "NULL_ROWS"
 msgstr "Null Rows"
 #: ----
 msgid "PHONE_NO"
-msgstr "Phone Number"
+msgstr "Nomor telepon"
 #: ----
 msgid "NUMERICAL"
-msgstr "Numerical"
+msgstr "Angka"
 #: ----
 msgid "ANALYST"
-msgstr "Analyst"
+msgstr "Analis"
 #: ----
 msgid "DATA_ENTRY"
-msgstr "Data Entry"
+msgstr "Data Entri"
 #: ----
 msgid "ENTITY_GROUPS"
-msgstr "Entity Groups"
+msgstr "Entitas Grup"
 #: ----
 msgid "CREATE"
-msgstr "Create"
+msgstr "Buat"
 #: ----
 msgid "READ"
-msgstr "read"
+msgstr "baca"
 #: ----
 msgid "LINKING"
-msgstr "Linking"
+msgstr "Tautan"
 #: ----
 msgid "PRIMARY"
-msgstr "Primary"
+msgstr "Utama"
 #: ----
 msgid "SELECT_LANGUAGE"
-msgstr "Select language"
+msgstr "Pilih Bahasa"
 #: ----
 msgid "NO_ATTACHMENT"
-msgstr "No attachment found to this document"
+msgstr "Dokumen ini tidak memiliki lampiran"
 #: ----
 msgid "BROWSE"
-msgstr "Browse"
+msgstr "Telusur"
 #: ----
 msgid "ROWS"
-msgstr "Row(s)"
+msgstr "Baris"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr "ADVANCED_SEARCH_REPORT"
+msgstr "Laporan pencarian Mutakhir"
 #: ----
 msgid "Address"
-msgstr "Address"
+msgstr "Alamat"
 #: ----
 msgid "latitude"
 msgstr "latitude"
@@ -1929,10 +1929,10 @@ msgid "longitude"
 msgstr "longitude"
 #: ----
 msgid "View"
-msgstr "View"
+msgstr "Lihat"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr "Micro-thesauri created successfully"
+msgstr "Micro-thesaurus berhasil dibuat"
 #: ----
 msgid "Radio field"
 msgstr "Radio field"
@@ -1941,196 +1941,298 @@ msgid "Geolocation"
 msgstr "Geolocation"
 #: ----
 msgid "User Select"
-msgstr "User Select"
+msgstr "Pilih Pengguna"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Multivalue User Select"
+msgstr "Pilih Pengguna Multivalue"
 #: ----
 msgid "Tree"
-msgstr "Tree"
+msgstr "Pohon"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Multivalue Tree"
+msgstr "Pohon Multivalue"
 #: ----
 msgid ""
-msgstr "ind"
+msgstr ""
 #: ----
 msgid "Multivalue Select"
-msgstr "Multivalue Select"
+msgstr "Pilih Multivalue"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Please select items to perform action"
+msgstr "Silahkan pilih item untuk melanjutkan"
 #: ----
 msgid "Dashboard"
 msgstr "Dashboard"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr "Micro-thesauri cannot be empty"
+msgstr "Micro-thesauri tidak boleh kosong"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr "Micro-thesauri name already exists"
+msgstr "Nama Micro-thesauri sudah ada"
 #: ----
 msgid "Login Information"
-msgstr "Login Information"
+msgstr "Informasi Masuk"
 #: ----
 msgid "Profile Information"
-msgstr "Profile Information"
+msgstr "Informasi profil"
 #: ----
 msgid "Print configuration"
-msgstr "Print configuration"
+msgstr "Konfigurasi Printer"
 #: ----
 msgid "Header for report print view"
-msgstr "Header for report print view"
+msgstr "Tampilan header untuk cetakan laporan"
 #: ----
 msgid "Header for event print view"
-msgstr "Header for event print view"
+msgstr "Tampilan header untuk cetakan peristiwa"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Sidebar for event print view"
+msgstr "Tampilan sidebar untuk cetakan peristiwa"
 #: ----
 msgid "Header for person print view"
-msgstr "Header for person print view"
+msgstr "Tampilan header untuk cetakan orang"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Sidebar for person print view"
+msgstr "Tampilan sidebar untuk cetakan orang"
 #: ----
 msgid "Details"
-msgstr "Details"
+msgstr "Rincian"
 #: ----
 msgid "Add new term"
-msgstr "Add new term"
+msgstr "Masukkan istilah baru"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Searchable in Analysis"
+msgstr "Dapat dicari dalam Analisis"
 #: ----
 msgid "Visible in Analysis"
-msgstr "Visible in Analysis"
+msgstr "Terlihat di Analisis"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr "Add new Micro-thesauri"
+msgstr "Masukkan Micro-thesauri baru"
 #: ----
 msgid "Select language"
-msgstr "Select language"
+msgstr "Pilih Bahasa"
 #: ----
 msgid "Header for login page"
-msgstr "Header for login page"
+msgstr "Header untuk halaman masuk"
 #: ----
 msgid "Multivalue"
 msgstr "Multivalue"
 #: ----
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Fungsikan"
 #: ----
 msgid "Hide in case of"
-msgstr "Hide in case of"
+msgstr "Sembunyikan dalam kasus"
 #: ----
-msgid "Set visible "
-msgstr "Set visible "
+msgid "Set visible"
+msgstr "Pasang terlihat"
 #: ----
 msgid "Disable"
-msgstr "Disable"
+msgstr "Tidak difungsikan"
 #: ----
 msgid "Apply"
-msgstr "Apply"
+msgstr "Terapkan"
 #: ----
 msgid "Vocab number"
-msgstr "Vocab number"
+msgstr "Nomor Vocab"
 #: ----
 msgid "disabled"
-msgstr "disabled"
+msgstr "Tidak difungsikan"
 #: ----
 msgid "Undefined"
-msgstr "Undefined"
+msgstr "Belum terdefinisikan"
 #: ----
 msgid "Load"
-msgstr "Load"
+msgstr "Muat"
 #: ----
 msgid "Select facets"
-msgstr "Select facets"
+msgstr "Pilih aspek"
 #: ----
 msgid "Date range"
-msgstr "Date range"
+msgstr "Rentang tanggal"
 #: ----
 msgid "Timeline type"
-msgstr "Timeline type"
+msgstr "Jenis linimasa"
 #: ----
 msgid "DAY"
-msgstr "DAY"
+msgstr "HARI"
 #: ----
 msgid "MONTH"
-msgstr "MONTH"
+msgstr "BULAN"
 #: ----
 msgid "YEAR"
-msgstr "YEAR"
+msgstr "TAHUN"
 #: ----
 msgid "Total Count"
-msgstr "Total Count"
+msgstr "Hitungan Total"
 #: ----
 msgid "Added in last 30 days"
-msgstr "Added in last 30 days"
+msgstr "Dimasukan 30 hari terakhir"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Most active users (new items)"
+msgstr "Pengguna yang paling aktif (item baru)"
 #: ----
 msgid "User activity (edited items)"
-msgstr "User activity (edited items)"
+msgstr "Aktifitas Pengguna (item yang diperbarui)"
 #: ----
 msgid "Recently deleted"
-msgstr "Recently deleted"
+msgstr "Baru saja dihapus"
 #: ----
 msgid "No data available"
-msgstr "No data available"
+msgstr "Tidak ada data yang tersedia"
 #: ----
 msgid "Add Perpetrator later"
-msgstr "Add Perpetrator later"
+msgstr "Menambahkan Pelaku kemudian"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr "Save and Add More Perpetrators"
+msgstr "Simpan dan masukkan Pelaku lainnya"
 #: ----
-msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
-msgstr "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Belum ada informasi Intervensi. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
 #: ----
-msgid "View person\'s roles"
-msgstr "View person's roles"
+msgid "View person's roles"
+msgstr "Tampilkan peran orang"
 #: ----
 msgid "Duplicate"
-msgstr "Duplicate"
+msgstr "Duplikasi"
 #: ----
 msgid "Insert folder name:"
-msgstr "Insert folder name:"
+msgstr "Masukan nama folder:"
 #: ----
 msgid "Return to files list"
-msgstr "Return to files list"
+msgstr "Kembali ke daftar file"
 #: ----
 msgid "Preview"
-msgstr "Preview"
+msgstr "Pratinjau"
 #: ----
 msgid "Erase"
-msgstr "Erase"
+msgstr "Hapus"
 #: ----
 msgid "Charts and map"
-msgstr "Charts and map"
+msgstr "Grafik dan peta"
 #: ----
 msgid "Clear this selections"
-msgstr "Clear this selections"
+msgstr "Bersihkan pilihan"
 #: ----
 msgid "of"
 msgstr "of"
 #: ----
 msgid "Not found"
-msgstr "Not found"
+msgstr "Tidak ditemukan"
 #: ----
 msgid "Map"
-msgstr "Map"
+msgstr "Peta"
 #: ----
 msgid "Charts"
-msgstr "Charts"
+msgstr "Grafik"
 #: ----
 msgid "Results"
-msgstr "Results"
+msgstr "Hasil"
 #: ----
 msgid "Filters"
-msgstr "Filters"
+msgstr "Penyaring"
+#: ----
+msgid "Security"
+msgstr "Keamanan"
+#: ----
+msgid "Top menu"
+msgstr "Menu atas"
+#: ----
+msgid "Top right menu"
+msgstr "Menu kanan atas"
+#: ----
+msgid "Event menu"
+msgstr "Menu Peristiwa"
+#: ----
+msgid "Person menu"
+msgstr "Menu Orang"
+#: ----
+msgid "Document menu"
+msgstr "Menu Dokumen"
+#: ----
+msgid "Analysis menu"
+msgstr "Menu Analisis"
+#: ----
+msgid "Preferences menu"
+msgstr "Menu Preferensi"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "ReCAPTCHA tidak dimasukkan dengan benar"
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Kode verifikasi salah. Silahkan coba lagi"
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Menu telah berhasil disimpan"
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+#: ----
+msgid "Enabled successfully."
+msgstr "Sukses diaktifkan."
+#: ----
+msgid "Code"
+msgstr "Kode"
+#: ----
+msgid "Menu"
+msgstr "Menu"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Klik untuk menambahkan item pada Menu"
+#: ----
+msgid "Number"
+msgstr "Nomor"
+#: ----
+msgid "Term"
+msgstr "Istilah"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Tambahkan Micro-thesauri"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Terjemahkan Micro-thesauri"
+#: ----
+msgid "Language"
+msgstr "Bahasa"
+#: ----
+msgid "Event"
+msgstr "Peristiwa"
+#: ----
+msgid "Select Event"
+msgstr "Pilih Peristiwa"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Silahkan pilih checkbok untuk melanjutkan"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Installl Google Authenticator for your phone"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Buka browser pada telpon anda"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Silahkan ke m.google.com/authenticator."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Unduh dan install aplikasi Google Authenticator"
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Sekarang buka dan atur Google Authenticator"
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Scan barcode untuk mendaftarkan aplikasi secara otomatis"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Atau gunakan kunci rahasia untuk mendaftarkan aplikasi secara manual"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Setelah memasukan secara manual dan menyimpan kunci, masukkan 6 digit kode verifikasi dari aplikasi Authenticator"
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Kode salah. Silahkan coba lagi"

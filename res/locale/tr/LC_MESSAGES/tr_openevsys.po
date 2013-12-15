@@ -3,10 +3,10 @@ msgid "_CONTROLER_NOT_FOUND_"
 msgstr "Kontrol birimi bulunamadı."
 #: ----
 msgid "_DAY_S__"
-msgstr "Gün(ler):"
+msgstr "Gün:"
 #: ----
 msgid "_MONTH_S__"
-msgstr "Ay(lar):"
+msgstr "Ay:"
 #: ----
 msgid "1ST_LEVEL"
 msgstr "1. Seviye"
@@ -63,16 +63,16 @@ msgid "ADD_ACT"
 msgstr "Fiil Ekle"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS"
-msgstr "Ek Bilgileri Ekle"
+msgstr "Ek Bilgi Ekle"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS_FOR"
-msgstr "Ek Bilgileri Ekle"
+msgstr "Ek Bilgi Ekle"
 #: ----
 msgid "ADD_ADDRESS"
 msgstr "Adres Ekle"
 #: ----
 msgid "ADD_BIOGRAPHIC_DETAILS"
-msgstr "Biyografik Detaylar Ekle"
+msgstr "Biyografik Detay Ekle"
 #: ----
 msgid "ADD_CHAIN_OF_EVENTS"
 msgstr "Olaylar Zinciri Ekle"
@@ -99,10 +99,10 @@ msgid "ADD_INTERVENTION"
 msgstr "Müdahale Ekle"
 #: ----
 msgid "ADD_INTERVENTIONS"
-msgstr "Müdahaleler Ekle"
+msgstr "Müdahale Ekle"
 #: ----
 msgid "ADD_INVOLVEMENT"
-msgstr "Karışma Ekle"
+msgstr "Katılım Ekle"
 #: ----
 msgid "ADD_LANGUAGE"
 msgstr "Dil Ekle"
@@ -165,7 +165,7 @@ msgid "ADDITIONAL_DETAIL_TYPE"
 msgstr "Ek Bilgi Türü"
 #: ----
 msgid "ADDITIONAL_DETAILS"
-msgstr "Ek Bilgiler "
+msgstr "Ek Bilgiler"
 #: ----
 msgid "ADDRESS"
 msgstr "Adres"
@@ -237,7 +237,7 @@ msgid "BASIC"
 msgstr "Temel"
 #: ----
 msgid "BASIC_SEARCH"
-msgstr "Temel arama "
+msgstr "Temel arama"
 #: ----
 msgid "BEFORE"
 msgstr "Önce"
@@ -276,22 +276,22 @@ msgid "CELLULAR"
 msgstr "Hücresel"
 #: ----
 msgid "CHAIN_OF_EVENT"
-msgstr "Olay Zinciri  "
+msgstr "Olaylar Zinciri"
 #: ----
 msgid "CHAIN_OF_EVENT_S_"
-msgstr "Olay(lar) Zinciri"
+msgstr "Olaylar Zinciri"
 #: ----
 msgid "CHAIN_OF_EVENTS"
-msgstr "Olaylar Zinciri  "
+msgstr "Olaylar Zinciri"
 #: ----
 msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
 msgstr "Olaylar Zinciri bulunmuyor."
 #: ----
 msgid "CHANE_OF_EVENTS"
-msgstr "Olaylar Zinciri  "
+msgstr "Olaylar Zinciri"
 #: ----
 msgid "CHANE_OF_EVENTS_"
-msgstr "Olaylar Zinciri  "
+msgstr "Olaylar Zinciri"
 #: ----
 msgid "CHANGE"
 msgstr "Değiştir"
@@ -336,7 +336,7 @@ msgid "CLOSE"
 msgstr "Kapat"
 #: ----
 msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
-msgstr "Sütun orijinal değerine döndürüldü. "
+msgstr "Sütun orijinal değerine döndürüldü."
 #: ----
 msgid "COMBINED_SEARCH_FORMS"
 msgstr "Birleşik arama formları"
@@ -525,7 +525,7 @@ msgid "DOCUMENT_TITLE"
 msgstr "Belge Adı"
 #: ----
 msgid "DOCUMENTS"
-msgstr "Belgeler "
+msgstr "Belgeler"
 #: ----
 msgid "DOWNLOAD"
 msgstr "İndir"
@@ -753,7 +753,7 @@ msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
 msgstr "Bitti! Şimdi şunu yapabilirsiniz"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
-msgstr "Bitti! Şimdi şunu yapabilirsiniz: "
+msgstr "Bitti! Şimdi şunu yapabilirsiniz:"
 #: ----
 msgid "FIRST_NAME"
 msgstr "İsim"
@@ -852,7 +852,7 @@ msgid "IN_BETWEEN"
 msgstr "arasında"
 #: ----
 msgid "IN_SEARCH_RESULTS"
-msgstr "Arama sonuçlarında "
+msgstr "Arama sonuçlarında"
 #: ----
 msgid "INCIDENT_TABLE"
 msgstr "Vaka Tablosu"
@@ -891,7 +891,7 @@ msgid "INTERVENTION_SEARCH_FORM"
 msgstr "Müdahale Arama Formu"
 #: ----
 msgid "INTERVENTIONS"
-msgstr "Müdahaleler  "
+msgstr "Müdahaleler"
 #: ----
 msgid "INVALID_EMAIL"
 msgstr "Geçersiz e-mail"
@@ -987,7 +987,7 @@ msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
 msgstr "Bu Kişi için sistem günlüğü detayları mevcut değil"
 #: ----
 msgid "MANAGE_LANGUAGES"
-msgstr "Dilleri yönet"
+msgstr "Dil seçenekleri"
 #: ----
 msgid "MESSAGES_SAVED_SUCCESSFULLY_"
 msgstr "Mesajlar başarıyla kaydedildi."
@@ -1035,7 +1035,7 @@ msgid "NEW"
 msgstr "Yeni"
 #: ----
 msgid "NEW_DOCUMENT"
-msgstr "Yeni Belge "
+msgstr "Yeni Belge"
 #: ----
 msgid "NEW_EVENT"
 msgstr "Yeni Olay"
@@ -1044,7 +1044,7 @@ msgid "NEW_PASSWORD"
 msgstr "Yeni Şifre"
 #: ----
 msgid "NEW_PERSON"
-msgstr "Yeni Kişi  "
+msgstr "Yeni Kişi"
 #: ----
 msgid "NEW_ROLE_NAME"
 msgstr "Yeni Rol Adı"
@@ -1083,7 +1083,7 @@ msgid "NOT_ON"
 msgstr "olmayan"
 #: ----
 msgid "NUMBER_REQUIRED__INVALID_NUMBER"
-msgstr "Rakam gerekli, Geçersiz Rakam"
+msgstr "Rakam girmelisiniz, Geçersiz Rakam"
 #: ----
 msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
 msgstr "Veritabanı bilgiyi başarıyla içeri aktardı."
@@ -1218,7 +1218,7 @@ msgid "QUERIES_DELETED_SUCCESSFULLY_"
 msgstr "Sorgulamalar başarıyla silindi."
 #: ----
 msgid "QUERY_ID"
-msgstr "Sorgulama Kimliği "
+msgstr "Sorgulama Kimliği"
 #: ----
 msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
 msgstr "Sorgu başarıyla kaydedildi."
@@ -1254,7 +1254,7 @@ msgid "REMARKS"
 msgstr "Yorumlar"
 #: ----
 msgid "REMOVE"
-msgstr "REMOVE"
+msgstr "Kaldır"
 #: ----
 msgid "REMOVE_CLARIFY"
 msgstr "Açıklamayı Kaldır"
@@ -1281,7 +1281,7 @@ msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
 msgstr "İstenen Müdahale bulunmuyor."
 #: ----
 msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
-msgstr "İstenen Karışma bulunmuyor."
+msgstr "İstenen Katılım bulunmuyor."
 #: ----
 msgid "RESET"
 msgstr "Sıfırla"
@@ -1353,7 +1353,7 @@ msgid "SEARCH_CONDITIONS"
 msgstr "Arama Koşulları"
 #: ----
 msgid "SEARCH_FORM"
-msgstr "Arama formu "
+msgstr "Arama formu"
 #: ----
 msgid "SEARCH_IN_DATABASE"
 msgstr "Veritabanında ara"
@@ -1404,7 +1404,7 @@ msgid "SEE_FULL_SIZE_IMAGE"
 msgstr "İmajı tam boyutlu olarak göster"
 #: ----
 msgid "SELECT"
-msgstr "Seç "
+msgstr "Seç"
 #: ----
 msgid "SELECT_A_FORMAT"
 msgstr "Format seç"
@@ -1482,7 +1482,7 @@ msgid "SOURCE_SEARCH_FORM"
 msgstr "Kaynak Arama Formu"
 #: ----
 msgid "SOURCES"
-msgstr "Kaynakalar "
+msgstr "Kaynaklar"
 #: ----
 msgid "SPREADSHEET"
 msgstr "Çizelge"
@@ -1602,7 +1602,7 @@ msgid "TRUE"
 msgstr "doğru"
 #: ----
 msgid "TYPE"
-msgstr "Tür "
+msgstr "Tür"
 #: ----
 msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
 msgstr "Doğum gününü rakam olarak girin!"
@@ -1779,7 +1779,7 @@ msgid "VISIBILITY"
 msgstr "Görünürlük"
 #: ----
 msgid "VISIBLE"
-msgstr "Görünür "
+msgstr "Görünür"
 #: ----
 msgid "VISIBLE_IN_BROWSE"
 msgstr "Taramada görünür"
@@ -1851,286 +1851,388 @@ msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
 msgstr "Listelemek için bir birim seçmelisiniz."
 #: ----
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
-msgstr "Tarayıcınız çerez fonksiyonu kapalı! Lütfen açın."
+msgstr "Tarayıcınızın çerez fonksiyonu kapalı! Lütfen açın."
 #: ----
 msgid "EXTENSIONS"
 msgstr "Sistem Yapılandırması"
 #: ----
 msgid "ABOUT_OE"
-msgstr "About OpenEvsys"
+msgstr "OpenEvsys Hakkında"
 #: ----
 msgid "AGPL"
-msgstr "AGPL v3 licensed"
+msgstr "AGPL v3 lisanslı"
 #: ----
 msgid "REQUIRED"
-msgstr "Required"
+msgstr "ZORUNLU"
 #: ----
 msgid "YES_CONFIDENTIALITY"
-msgstr "Yes (for Confidentiality)"
+msgstr "Evet (Gizlilik için)"
 #: ----
 msgid "NO_CONFIDENTIALITY"
-msgstr "No (for Confidentiality)"
+msgstr "Hayır (Gizlilik için)"
 #: ----
 msgid "ERROR_SERVER"
-msgstr "An error was returned by the server, please contact system administrator"
+msgstr "Sunucu hatası, lütfen sistem yöneticinizle iletişime geçin."
 #: ----
 msgid "NULL_ROWS"
-msgstr "Null Rows"
+msgstr "Boş Satırlar"
 #: ----
 msgid "PHONE_NO"
-msgstr "Phone Number"
+msgstr "Telefon Numarası"
 #: ----
 msgid "NUMERICAL"
-msgstr "Numerical"
+msgstr "Sayısal"
 #: ----
 msgid "ANALYST"
-msgstr "Analyst"
+msgstr "Analist"
 #: ----
 msgid "DATA_ENTRY"
-msgstr "Data Entry"
+msgstr "Veri Girişi"
 #: ----
 msgid "ENTITY_GROUPS"
-msgstr "Entity Groups"
+msgstr "Giriş Grupları"
 #: ----
 msgid "CREATE"
-msgstr "Create"
+msgstr "Oluştur"
 #: ----
 msgid "READ"
-msgstr "read"
+msgstr "oku"
 #: ----
 msgid "LINKING"
-msgstr "Linking"
+msgstr "Bağlanıyor"
 #: ----
 msgid "PRIMARY"
-msgstr "Primary"
+msgstr "Birincil"
 #: ----
 msgid "SELECT_LANGUAGE"
-msgstr "Select language"
+msgstr "Dil Seçin"
 #: ----
 msgid "NO_ATTACHMENT"
-msgstr "No attachment found to this document"
+msgstr "Dosya eki bulunamadı"
 #: ----
 msgid "BROWSE"
-msgstr "Browse"
+msgstr "Göz at"
 #: ----
 msgid "ROWS"
-msgstr "Row(s)"
+msgstr "Sıra(lar)"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr "ADVANCED_SEARCH_REPORT"
+msgstr "Gelişmiş Arama Raporu"
 #: ----
 msgid "Address"
-msgstr "Address"
+msgstr "Adres"
 #: ----
 msgid "latitude"
-msgstr "latitude"
+msgstr "genişlik"
 #: ----
 msgid "longitude"
-msgstr "longitude"
+msgstr "uzunluk"
 #: ----
 msgid "View"
-msgstr "View"
+msgstr "Görünüm"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr "Micro-thesauri created successfully"
+msgstr "Micro-kavramlar dizini başarıyla oluşturuldu"
 #: ----
 msgid "Radio field"
-msgstr "Radio field"
+msgstr "Evet/Hayır alanı"
 #: ----
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "Konum belirleme"
 #: ----
 msgid "User Select"
-msgstr "User Select"
+msgstr "Kullanıcı Seçimi"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Multivalue User Select"
+msgstr "Çoklu-değer Kullanıcı Seçimi"
 #: ----
 msgid "Tree"
-msgstr "Tree"
+msgstr "Ağaç"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Multivalue Tree"
+msgstr "Çoklu-değer Ağacı"
 #: ----
 msgid ""
-msgstr "tr"
+msgstr ""
 #: ----
 msgid "Multivalue Select"
-msgstr "Multivalue Select"
+msgstr "Çoklu-değer Seçimi"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Please select items to perform action"
+msgstr "Komutu yerine getirmek için öğe seçin"
 #: ----
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Pano"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr "Micro-thesauri cannot be empty"
+msgstr "Mikro-kavram alanı boş kalamaz"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr "Micro-thesauri name already exists"
+msgstr "Girdiğiniz mikro-kavram zaten var"
 #: ----
 msgid "Login Information"
-msgstr "Login Information"
+msgstr "Giriş Bilgisi"
 #: ----
 msgid "Profile Information"
-msgstr "Profile Information"
+msgstr "Profil Bilgisi"
 #: ----
 msgid "Print configuration"
-msgstr "Print configuration"
+msgstr "Yazıcı kurulumu"
 #: ----
 msgid "Header for report print view"
-msgstr "Header for report print view"
+msgstr "Rapor baskı görüntüsü üstbaşlığı"
 #: ----
 msgid "Header for event print view"
-msgstr "Header for event print view"
+msgstr "Olay baskı görüntüsü üstbaşlığı"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Sidebar for event print view"
+msgstr "Olay baskı görüntüsü kenar çubuğu"
 #: ----
 msgid "Header for person print view"
-msgstr "Header for person print view"
+msgstr "Kişi baskı görüntüsü üstbaşlığı"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Sidebar for person print view"
+msgstr "Kişi baskı görüntüsü kenar çubuğu"
 #: ----
 msgid "Details"
-msgstr "Details"
+msgstr "Detaylar"
 #: ----
 msgid "Add new term"
-msgstr "Add new term"
+msgstr "Yeni terim ekle"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Searchable in Analysis"
+msgstr "Analizde Aratılabilir"
 #: ----
 msgid "Visible in Analysis"
-msgstr "Visible in Analysis"
+msgstr "Analizde Görünür"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr "Add new Micro-thesauri"
+msgstr "Yeni Mikro-kavram ekle"
 #: ----
 msgid "Select language"
-msgstr "Select language"
+msgstr "Dil seç"
 #: ----
 msgid "Header for login page"
-msgstr "Header for login page"
+msgstr "Giriş sayfası üstbaşlığı"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "Çoklu-değer"
 #: ----
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "Etkinleştirilmiş"
 #: ----
 msgid "Hide in case of"
-msgstr "Hide in case of"
+msgstr "Şu durumda gizle"
 #: ----
-msgid "Set visible "
-msgstr "Set visible "
+msgid "Set visible"
+msgstr "Görünür yap"
 #: ----
 msgid "Disable"
-msgstr "Disable"
+msgstr "Devre dışı bırak"
 #: ----
 msgid "Apply"
-msgstr "Apply"
+msgstr "Uygula"
 #: ----
 msgid "Vocab number"
-msgstr "Vocab number"
+msgstr "Terim numarası"
 #: ----
 msgid "disabled"
-msgstr "disabled"
+msgstr "Devre dışı bırakıldı"
 #: ----
 msgid "Undefined"
-msgstr "Undefined"
+msgstr "Tanımsız"
 #: ----
 msgid "Load"
-msgstr "Load"
+msgstr "Yükle"
 #: ----
 msgid "Select facets"
-msgstr "Select facets"
+msgstr "Özellikleri seç"
 #: ----
 msgid "Date range"
-msgstr "Date range"
+msgstr "Tarih aralığı"
 #: ----
 msgid "Timeline type"
-msgstr "Timeline type"
+msgstr "Zaman çizelgesi türü"
 #: ----
 msgid "DAY"
-msgstr "DAY"
+msgstr "GÜN"
 #: ----
 msgid "MONTH"
-msgstr "MONTH"
+msgstr "AY"
 #: ----
 msgid "YEAR"
-msgstr "YEAR"
+msgstr "YIL"
 #: ----
 msgid "Total Count"
-msgstr "Total Count"
+msgstr "Toplam Sayı"
 #: ----
 msgid "Added in last 30 days"
-msgstr "Added in last 30 days"
+msgstr "Son 30 günde eklendi"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Most active users (new items)"
+msgstr "En aktif kullanıcılar (yeni girişler)"
 #: ----
 msgid "User activity (edited items)"
-msgstr "User activity (edited items)"
+msgstr "Kullanıcı aktivitesi (güncellenen girişler)"
 #: ----
 msgid "Recently deleted"
-msgstr "Recently deleted"
+msgstr "Yakın zamanda silindi"
 #: ----
 msgid "No data available"
-msgstr "No data available"
+msgstr "Veri yok"
 #: ----
 msgid "Add Perpetrator later"
-msgstr "Add Perpetrator later"
+msgstr "Faili sonra ekle"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr "Save and Add More Perpetrators"
+msgstr "Kaydet ve yeni fail ekle"
 #: ----
-msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
-msgstr "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Fiil kaydı yok, eklemelisiniz. Yeni Olay Ekle'yi tıklayıp olay ekleyebilirsiniz."
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Müdahale kaydı yok, eklemelisiniz. Yeni Olay Ekle'yi tıklayıp olay ekleyebilirsiniz."
 #: ----
-msgid "View person\'s roles"
-msgstr "View person's roles"
+msgid "View person's roles"
+msgstr "Kişinin rollerine bak"
 #: ----
 msgid "Duplicate"
-msgstr "Duplicate"
+msgstr "Kopyala ve çoğalt"
 #: ----
 msgid "Insert folder name:"
-msgstr "Insert folder name:"
+msgstr "Klasör adı ekle:"
 #: ----
 msgid "Return to files list"
-msgstr "Return to files list"
+msgstr "Dosya listesine dön"
 #: ----
 msgid "Preview"
-msgstr "Preview"
+msgstr "Önizleme"
 #: ----
 msgid "Erase"
-msgstr "Erase"
+msgstr "Sil"
 #: ----
 msgid "Charts and map"
-msgstr "Charts and map"
+msgstr "Grafikler ve harita"
 #: ----
 msgid "Clear this selections"
-msgstr "Clear this selections"
+msgstr "Seçimleri kaldır"
 #: ----
 msgid "of"
-msgstr "of"
+msgstr "nin"
 #: ----
 msgid "Not found"
-msgstr "Not found"
+msgstr "Bulunamadı"
 #: ----
 msgid "Map"
-msgstr "Map"
+msgstr "Harita"
 #: ----
 msgid "Charts"
-msgstr "Charts"
+msgstr "Grafikler"
 #: ----
 msgid "Results"
-msgstr "Results"
+msgstr "Sonuçlar"
 #: ----
 msgid "Filters"
-msgstr "Filters"
+msgstr "Filtreler"
+#: ----
+msgid "Security"
+msgstr "Güvenlik"
+#: ----
+msgid "Top menu"
+msgstr "Üst menü"
+#: ----
+msgid "Top right menu"
+msgstr "Sağ üst menü"
+#: ----
+msgid "Event menu"
+msgstr "Olay menüsü"
+#: ----
+msgid "Person menu"
+msgstr "Kişi menüsü"
+#: ----
+msgid "Document menu"
+msgstr "Belge menüsü"
+#: ----
+msgid "Analysis menu"
+msgstr "Analiz menüsü"
+#: ----
+msgid "Preferences menu"
+msgstr "Tercihler menüsü"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "reCAPTCHA doğru girilmedi."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Doğrulama kodu hatalı. Lütfen tekrar deneyin."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Menü başarıyla kaydedildi."
+#: ----
+msgid "Google Authenticator"
+msgstr "Google kimlik denetleyicisi"
+#: ----
+msgid "Enabled successfully."
+msgstr "Başarıyla aktifleştirildi."
+#: ----
+msgid "Code"
+msgstr "Kod"
+#: ----
+msgid "Menu"
+msgstr "Menü"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Menüye ek yapmak için tıklayın"
+#: ----
+msgid "Number"
+msgstr "Numara"
+#: ----
+msgid "Term"
+msgstr "Terim"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Micro-kavram ekle"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Mikro-kavramı başka bir dile çevir"
+#: ----
+msgid "Language"
+msgstr "Dil"
+#: ----
+msgid "Event"
+msgstr "Olay"
+#: ----
+msgid "Select Event"
+msgstr "Olay Seç"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Fiil kaydı yok, eklemelisiniz. Yeni Olay Ekle'yi tıklayıp olay ekleyebilirsiniz."
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Yapacağınız işlemle ilgili kutuyu işaretleyin."
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Google kimlik denetleyicisi uygulamasını telefonunuza yükleyin"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Telefonunuzdan internet tarayıcısını açın"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "m.google.com/authenticator adresine gidin."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Google kimlik denetleyicisi uygulamasını indirin ve yükleyin."
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Google kimlik doğrulayıcısını açın ve yapılandırın."
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Aşağıdaki barkodu tarayıp uygulamaya kaydınızı otomatik olarak yapın:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Ya da aşağıdaki gizli anahtar kodunu girerek kaydı tamamlayın:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Anahtar kodunu girip kaydettikten sonra kimlik doğrulayıcısının otomatik olarak oluşturduğu altı haneli doğrulama kodunu girin."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Kod hatalı, tekrar deneyin."
