@@ -33,10 +33,10 @@ msgid "ACL_MODE"
 msgstr "وضع ACL (قائمة التحكم بالوصول)"
 #: ----
 msgid "ACT"
-msgstr "فعل"
+msgstr "الفعل"
 #: ----
 msgid "ACT_"
-msgstr "فعل"
+msgstr "الفعل"
 #: ----
 msgid "ACT_DETAILS"
 msgstr "تفاصيل الفعل"
@@ -96,10 +96,10 @@ msgid "ADD_INTERVENING_PARTY"
 msgstr "إضافة طرف متدخل"
 #: ----
 msgid "ADD_INTERVENTION"
-msgstr "إضافة تَدَخُّل "
+msgstr "إضافة تَدَخُّل"
 #: ----
 msgid "ADD_INTERVENTIONS"
-msgstr "إضافة تَدَخُّلات "
+msgstr "إضافة تَدَخُّلات"
 #: ----
 msgid "ADD_INVOLVEMENT"
 msgstr "إضافة تورط"
@@ -129,7 +129,7 @@ msgid "ADD_NEW_USER"
 msgstr "إضافة مستخدم جديد"
 #: ----
 msgid "ADD_PERPETRATOR"
-msgstr "إضافة جانٍ "
+msgstr "إضافة جانٍ"
 #: ----
 msgid "ADD_PERPETRATOR_S_"
 msgstr "إضافة جانٍ  (جناة)"
@@ -165,10 +165,10 @@ msgid "ADDITIONAL_DETAIL_TYPE"
 msgstr "نوع التفاصيل الإضافية"
 #: ----
 msgid "ADDITIONAL_DETAILS"
-msgstr "تفاصيل إضافية"
+msgstr "التفاصيل إضافية"
 #: ----
 msgid "ADDRESS"
-msgstr "عنوان"
+msgstr "العنوان"
 #: ----
 msgid "ADDRESS_OF_A_PERSON_"
 msgstr "عنوان الشخص"
@@ -186,7 +186,7 @@ msgid "ADVANCED_SEARCH"
 msgstr "بحث مُتَقَدِّم"
 #: ----
 msgid "AFTER"
-msgstr "بَعْدَ "
+msgstr "بَعْدَ"
 #: ----
 msgid "AGAINST"
 msgstr "ضد"
@@ -204,7 +204,7 @@ msgid "APPLY_CHANGES_PERMANENTLY"
 msgstr "تطبيق التغييرات بشكل دائم"
 #: ----
 msgid "ARREST"
-msgstr "اعتقال"
+msgstr "الاعتقال"
 #: ----
 msgid "AT"
 msgstr "في"
@@ -243,13 +243,13 @@ msgid "BEFORE"
 msgstr "قبل"
 #: ----
 msgid "BIOGRAPHIC_DETAIL_S_"
-msgstr "تفاصيل ذاتية"
+msgstr "التفاصيل الذاتية"
 #: ----
 msgid "BIOGRAPHIC_DETAILS"
-msgstr "تفاصيل ذاتية"
+msgstr "التفاصيل الذاتية"
 #: ----
 msgid "BIOGRAPHIC_DETAILS__"
-msgstr "تفاصيل ذاتية"
+msgstr "التفاصيل الذاتية"
 #: ----
 msgid "BIOGRAPHY_DETAIL_S_"
 msgstr "تفاصيل سيرة ذاتية"
@@ -342,7 +342,7 @@ msgid "COMBINED_SEARCH_FORMS"
 msgstr "نماذج البحث المجتمعة"
 #: ----
 msgid "COMPILE"
-msgstr "جَمَعَ "
+msgstr "جَمَعَ"
 #: ----
 msgid "CONFIG_VARIABLE"
 msgstr "متغير التهيئة"
@@ -363,16 +363,16 @@ msgid "CONTINUE"
 msgstr "استمرار"
 #: ----
 msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
-msgstr "استمر بتعديل تفاصيل هذه الوثيقة  "
+msgstr "استمر بتعديل تفاصيل هذه الوثيقة"
 #: ----
 msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
-msgstr "استمر  في تعديل سجل سلسلة الأحداث هذا"
+msgstr "استمر   بتعديل سجل سلسلة الأحداث هذا"
 #: ----
 msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
-msgstr "استمر في تعديل سجل الأحداث هذا"
+msgstr "استمر بتعديل سجل الأحداث هذا"
 #: ----
 msgid "COUNT"
-msgstr "عد"
+msgstr "عَدَّ-إِحْصاء"
 #: ----
 msgid "COUNTRY"
 msgstr "الدولة"
@@ -438,7 +438,7 @@ msgid "DELETE"
 msgstr "حذف"
 #: ----
 msgid "DELETE_ADDITIONAL_DETAILS"
-msgstr "حذف تفاصيل إضافية"
+msgstr "حذف التفاصيل الإضافية"
 #: ----
 msgid "DELETE_DOCUMENT"
 msgstr "حذف الوثيقة"
@@ -450,13 +450,13 @@ msgid "DELETE_THIS_PERSON"
 msgstr "حذف هذا الشخص"
 #: ----
 msgid "DESCRIPTION"
-msgstr "الوصف "
+msgstr "الوصف"
 #: ----
 msgid "DESIGNATION"
 msgstr "التسمية"
 #: ----
 msgid "DESTRUCTION"
-msgstr "تدمير"
+msgstr "التدمير"
 #: ----
 msgid "DISABLE_HELP"
 msgstr "تعطيل المساعدة"
@@ -528,13 +528,13 @@ msgid "DOCUMENTS"
 msgstr "الوثائق"
 #: ----
 msgid "DOWNLOAD"
-msgstr "تنزيل "
+msgstr "تنزيل"
 #: ----
 msgid "DOWNLOAD_DOCUMENT"
-msgstr "تنزيل  الوثيقة"
+msgstr "تنزيل الوثيقة"
 #: ----
 msgid "DOWNLOAD_ERROR_REPORT"
-msgstr "تنزيل  تقرير الخطأ"
+msgstr "تنزيل  التقرير حول الخطأ"
 #: ----
 msgid "E_MAIL"
 msgstr "البريد الإلكتروني"
@@ -618,13 +618,13 @@ msgid "ENTITY"
 msgstr "كيان"
 #: ----
 msgid "ENTITY_PERMISSIONS"
-msgstr "التصاريح المخولة لللكيان"
+msgstr "التصاريح المخولة للكيان"
 #: ----
 msgid "ENTRY"
-msgstr "الإدْخال "
+msgstr "الإدْخال"
 #: ----
 msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
-msgstr "حدث خطأ أثناء تحديث  جهاز الخادم"
+msgstr "حدث خطأ أثناء تحديث  جهاز الخادم -السيرفير"
 #: ----
 msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
 msgstr "حدث خطأ أثناء إنشاء huriterm"
@@ -636,7 +636,7 @@ msgid "ERROR_WHILE_CREATING_FIELD_"
 msgstr "خطأ أثناء إنشاء الخانة"
 #: ----
 msgid "EVENT"
-msgstr "حدث"
+msgstr "الحدث"
 #: ----
 msgid "EVENT_DESCRIPTION"
 msgstr "بيان الحدث"
@@ -681,7 +681,7 @@ msgid "EXPORT_INSTANCE"
 msgstr "حالة التصدير"
 #: ----
 msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
-msgstr "تصدير هذا الجدول إلى بيانات مُجَدْوَلَة "
+msgstr "تصدير هذا الجدول إلى بيانات مُجَدْوَلَة"
 #: ----
 msgid "EXPORT_TIME"
 msgstr "وقت التصدير"
@@ -732,13 +732,13 @@ msgid "FILE_IS_NOT_WRITABLE_"
 msgstr "لا يمكن النسخ على الملف"
 #: ----
 msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
-msgstr "تم إيقاف تحميل الملف عن طريق الامتداد"
+msgstr "تم إيقاف تحميل الملف بسبب إمتدادة الملف"
 #: ----
 msgid "FILTER"
 msgstr "مرشح ـ فلتر"
 #: ----
 msgid "FILTER_OPTIONS_AND_RESULTS"
-msgstr "خيارات ونتائج الترشيح "
+msgstr "خيارات ونتائج الترشيح (الفلتر)"
 #: ----
 msgid "FINAL_DATE"
 msgstr "التاريخ النهائي"
@@ -768,7 +768,7 @@ msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
 msgstr "لا يجوز أن تكون الخانات التالية فارغة"
 #: ----
 msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
-msgstr "مصطلاحات هوريدكس  huriterm   التالية موجودة من قبل "
+msgstr "مصطلاحات هوريدكس  huriterm   التالية موجودة من قبل"
 #: ----
 msgid "FORCE_DELETE"
 msgstr "حذف قسري"
@@ -816,7 +816,7 @@ msgid "HOW_WAS_"
 msgstr "كيف كان"
 #: ----
 msgid "HURICODE"
-msgstr "Huricodeترميز هوريدكس "
+msgstr "Huricodeترميز هوريدكس"
 #: ----
 msgid "HURITERM_CAN_NOT_BE_EMPTY_"
 msgstr "لا يمكن أن يكون  مصطلح هوريدكسHuriterm   خاليا."
@@ -834,10 +834,10 @@ msgid "IMPORT"
 msgstr "جلب"
 #: ----
 msgid "IMPORT_DATE"
-msgstr "تاريخ الجلب"
+msgstr "جلب  التاريخ"
 #: ----
 msgid "IMPORT_EVENTS"
-msgstr "أحداث الجلب"
+msgstr "جلب أحداث"
 #: ----
 msgid "IMPORT_LOG"
 msgstr "سجل الجلب"
@@ -846,10 +846,10 @@ msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
 msgstr "تفاصيل سجل الجلب غير متوفرة"
 #: ----
 msgid "IMPORT_TIME"
-msgstr "تاريخ الجلب"
+msgstr "فترة الجلب"
 #: ----
 msgid "IN_BETWEEN"
-msgstr "في وَسَط "
+msgstr "في وَسَط"
 #: ----
 msgid "IN_SEARCH_RESULTS"
 msgstr "في نتائج البحث"
@@ -858,7 +858,7 @@ msgid "INCIDENT_TABLE"
 msgstr "جدول الحالة"
 #: ----
 msgid "INFORMATION"
-msgstr "معلومات"
+msgstr "المعلومات"
 #: ----
 msgid "INFORMATION_ABOUT"
 msgstr "معلومات حول"
@@ -882,7 +882,7 @@ msgid "INTERVENING_PARTY_SEARCH_FORM"
 msgstr "نموذج البحث في الطرف المتدخل"
 #: ----
 msgid "INTERVENTION"
-msgstr "التدخّل "
+msgstr "التدخّل"
 #: ----
 msgid "INTERVENTION_S_"
 msgstr "التدخّل  (التدخلات)"
@@ -900,31 +900,31 @@ msgid "INVALID_EMAIL_ADDRESS"
 msgstr "عنوان بريد إلكتروني غير صحيح"
 #: ----
 msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
-msgstr "ترميزهوريدكس غير صحيح، يجب أن يكون الرقم مكونا من 12 خانة  "
+msgstr "ترميزهوريدكس غير صحيح، يجب أن يكون الرقم مكونا من 12 خانة"
 #: ----
 msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
 msgstr "اسم المستخدم او كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى"
 #: ----
 msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "اسم مستخدم أو كلمة مرور غير صحيحة! يرجى المحاولة مرة أخرى"
+msgstr "اسم المستخدم أو كلمة مرور غير صحيحة! يرجى المحاولة مرة أخرى"
 #: ----
 msgid "INVOLVED_IN"
 msgstr "متورط في"
 #: ----
 msgid "INVOLVEMENT"
-msgstr "تَوَرُّط "
+msgstr "التَوَرُّط"
 #: ----
 msgid "INVOLVEMENT_DETAILS"
 msgstr "تفاصيل التَوَرُّط"
 #: ----
 msgid "INVOLVEMENT_S_"
-msgstr "التَوَرُّط -التَوَرُّطات "
+msgstr "التَوَرُّط -التَوَرُّطات"
 #: ----
 msgid "INVOLVEMENT_SEARCH_FORM"
 msgstr "نموذج البحث في المشاركة"
 #: ----
 msgid "INVOLVEMENTS"
-msgstr "التَوَرُّط-التَوَرُّطات "
+msgstr "التَوَرُّط-التَوَرُّطات"
 #: ----
 msgid "IS_A_SUB_ELEMENT_OF"
 msgstr "عنصر فرعي من"
@@ -939,10 +939,10 @@ msgid "KEY"
 msgstr "AR"
 #: ----
 msgid "KILLING"
-msgstr "قتل"
+msgstr "القتل"
 #: ----
 msgid "LABEL"
-msgstr "رموز التعريف- علامة"
+msgstr "رموز التعريف- العلامة"
 #: ----
 msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
 msgstr "لا يجوز أن تكون  رموز التعريف فارغة. أدخل قيمة"
@@ -975,7 +975,7 @@ msgid "LIKE"
 msgstr "مثل"
 #: ----
 msgid "LINKED_WHEN"
-msgstr "ربط عند"
+msgstr "ربط عندما"
 #: ----
 msgid "LINKS"
 msgstr "الروابط"
@@ -1092,7 +1092,7 @@ msgid "OR"
 msgstr "او"
 #: ----
 msgid "ORDER"
-msgstr "التَرْتِيب "
+msgstr "التَرْتِيب"
 #: ----
 msgid "ORGANIZATION"
 msgstr "التنظيم"
@@ -1185,7 +1185,7 @@ msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
 msgstr "يرجى إضافة شرط قبل البحث."
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
-msgstr "يرجى إضافة شرط داخل مربع العد من أجل القيام بالعد "
+msgstr "يرجى إضافة شرط داخل مربع العد من أجل القيام بالعد"
 #: ----
 msgid "PLEASE_SELECT_A_USER_TO_DELETE"
 msgstr "يرجى اختيار المستخدم المراد حذفه"
@@ -1212,10 +1212,10 @@ msgid "PRINT_THIS_PERSON"
 msgstr "طباعة هذا الشخص"
 #: ----
 msgid "PRINTABLE_VIEW"
-msgstr "العرض المهيء للطباعة"
+msgstr "العرض المهيأ للطباعة"
 #: ----
 msgid "QUERIES_DELETED_SUCCESSFULLY_"
-msgstr "تم مسح الاستفسارات بنجاح"
+msgstr "تم حذف الاستفسارات بنجاح"
 #: ----
 msgid "QUERY_ID"
 msgstr "هوية الاستفسار"
@@ -1254,19 +1254,19 @@ msgid "REMARKS"
 msgstr "ملاحظات توضيحية"
 #: ----
 msgid "REMOVE"
-msgstr "ازالة"
+msgstr "إزالة"
 #: ----
 msgid "REMOVE_CLARIFY"
-msgstr "إزالة التوضيح "
+msgstr "إزالة التوضيح"
 #: ----
 msgid "REMOVE_CONDITION"
-msgstr "إزالة الحالة  "
+msgstr "إزالة الحالة"
 #: ----
 msgid "REMOVE_LANGUAGE"
 msgstr "إزالة اللغة"
 #: ----
 msgid "REMOVE_SELECTION"
-msgstr "إزالة الاختيار  "
+msgstr "إزالة الاختيار"
 #: ----
 msgid "REPORT"
 msgstr "تقرير"
@@ -1344,7 +1344,7 @@ msgid "SAVED_QUERIES"
 msgstr "الاستفسارات المحفوظة"
 #: ----
 msgid "SEARCH"
-msgstr "بحث"
+msgstr "البحث"
 #: ----
 msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
 msgstr "البحث عن معلومات إضافية متعلقة بانوع محددة من الأفعال"
@@ -1398,7 +1398,7 @@ msgid "SEARCHABLE"
 msgstr "قابل للبحث"
 #: ----
 msgid "SECTION"
-msgstr "قِسْم "
+msgstr "القِسْم"
 #: ----
 msgid "SEE_FULL_SIZE_IMAGE"
 msgstr "انظر الحجم الكامل للصورة"
@@ -1407,7 +1407,7 @@ msgid "SELECT"
 msgstr "اختيار"
 #: ----
 msgid "SELECT_A_FORMAT"
-msgstr "اختر صيغة"
+msgstr "اختر الصيغة"
 #: ----
 msgid "SELECT_A_MICRO_THESAURUS"
 msgstr "اختر مكنز مصغر"
@@ -1506,10 +1506,10 @@ msgid "SYSTEM_ERROR"
 msgstr "خطأ في النظام"
 #: ----
 msgid "TERM_IN"
-msgstr "المدة في"
+msgstr "مصطلح في"
 #: ----
 msgid "TERM_IN_"
-msgstr "المدة في"
+msgstr "مصطلح في"
 #: ----
 msgid "TEXT"
 msgstr "نص"
@@ -1518,7 +1518,7 @@ msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
 msgstr "حد الأحرف في خانة النص هو 200 حرف"
 #: ----
 msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
-msgstr "مساحة الصيغة ذات نَصّ غير المحدود"
+msgstr "مساحة الصيغة ذات نَصّ غير محدود"
 #: ----
 msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
 msgstr "الوثيقة التي نم تحميلها ليست  وثيقة xml سَلِيمة"
@@ -1536,10 +1536,10 @@ msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
 msgstr "كلمتا المرور مختلفتان"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
-msgstr "الملف الذي تم تحميله يتجاوز توجيه MAX_FILE_SIZE المحدد في نموذج HTML"
+msgstr "الملف الذي تم تحميله يتجاوز توجيه الحد الاقصى من حجم الملف المحدد في نموذج لغة توصيف النصوص المترابطة - هتمل"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
-msgstr "الملف الذي تم تحميله يتجاوز توجيه upload_max_filesize المحدد في نموذج HTMLphp.ini"
+msgstr "الملف الذي تم تحميله يتجاوز توجيه الحجم الاقصى لتحميل الملف المحدد في نموذج   php.ini"
 #: ----
 msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
 msgstr "الملف  تم تحميله جزئيا فقط"
@@ -1554,25 +1554,25 @@ msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
 msgstr "لا يوجد عنوان مضاف لهذا الشخص بعد. يجب عليك إضافة بعض العناوين!"
 #: ----
 msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "لا توجد تفاصيل ذاتية حول هذا الشخص بعد. يجب عليك إضافة بعض التفاصيل!"
+msgstr "لا يوجد اي تفاصيل ذاتية حول هذا الشخص بعد. يجب عليك إضافة بعض التفاصيل!"
 #: ----
 msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "لا توجد معلومات حول الحدث بعد. يجب عليك إضافة بعض المعلومات! انقر على مفتاح \"إضافة حدث جديد\" لإضافة حدث جديد."
+msgstr "لا يوجد اي معلومات حول الحدث بعد. يجب عليك إضافة بعض المعلومات! انقر على مفتاح \"إضافة حدث جديد\" لإضافة حدث جديد."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "لا توجد معلومات حول سلسلة الأحداث بعد. يجب عليك إضافة بعض المعلومات!"
+msgstr "لا يوجد اي معلومات حول سلسلة الأحداث بعد. يجب عليك إضافة بعض المعلومات!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "لا توجد معلومات حول الطرف المتدخل والتدخل بعد. يجب عليك إضافة بعض المعلومات!"
+msgstr "لا يوجد اي معلومات حول الطرف المتدخل والتدخل بعد. يجب عليك إضافة بعض المعلومات!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "لا توجد معلومات حول المصدر والمعلومات بعد. يجب عليك إضافة بعض المعلومات."
+msgstr "لا يوجد اي معلومات حول المصدر والمعلومات بعد. يجب عليك إضافة بعض المعلومات."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
-msgstr "لا توجد معلومات حول الضحايا والجناة بعد. يجب عليك إضافة بعض المعلومات."
+msgstr "لا يوجد اي معلومات حول الضحايا والجناة بعد. يجب عليك إضافة بعض المعلومات."
 #: ----
 msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "لا توجد معلومات حول الشخص بعد. يجب عليك إضافة بعض المعلومات!"
+msgstr "لا يوجد اي معلومات حول الشخص بعد. يجب عليك إضافة بعض المعلومات!"
 #: ----
 msgid "TIMESTAMP"
 msgstr "ختم زمني"
@@ -1587,13 +1587,13 @@ msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
 msgstr "لعرض الحدث، يجب عليك أولا اختيار حدث من قائمة الأحداث."
 #: ----
 msgid "TORTURE"
-msgstr "تعذيب"
+msgstr "التعذيب"
 #: ----
 msgid "TRANSLATE"
 msgstr "ترجمة"
 #: ----
 msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
-msgstr "لم يتم تحديث الترجمة! يرجى إعطاء المجلّد الأم  وتصريح الملف لتحديد المجلد "
+msgstr "لم يتم تحديث الترجمة! يرجى إعطاء المجلّد الأم  وتصريح الملف لتحديد المجلد"
 #: ----
 msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
 msgstr "تم تحديث الترجمة بنجاح"
@@ -1626,7 +1626,7 @@ msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESS
 msgstr "أدخل هوية المستخدم في المربع وانقر على مشاركة لجعل هذا الحدث مُتَاح  للوصول إليه من قبل المستخدم المرغوب."
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "أدخل هوية المستخدم في المربع وانقر على مشاركة لجعل هذا الشخص منمُتَاح  للوصول إليه من قبل المستخدم المرغوب."
+msgstr "أدخل هوية المستخدم في المربع وانقر على مشاركة لجعل هذا الشخص مُتَاح  للوصول إليه من قبل المستخدم المرغوب."
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
 msgstr "أدخل سنة الميلاد بالأرقام فقط!"
@@ -1893,10 +1893,10 @@ msgid "ENTITY_GROUPS"
 msgstr "مجموعات الكيان"
 #: ----
 msgid "CREATE"
-msgstr "إنشاء "
+msgstr "إنشاء"
 #: ----
 msgid "READ"
-msgstr "اقرأ "
+msgstr "اقرأ"
 #: ----
 msgid "LINKING"
 msgstr "توصيل"
@@ -1911,7 +1911,7 @@ msgid "NO_ATTACHMENT"
 msgstr "لم يتم العثور على أي مرفق لهذه الوثيقة"
 #: ----
 msgid "BROWSE"
-msgstr "تَصَفّحَ "
+msgstr "تَصَفّحَ"
 #: ----
 msgid "ROWS"
 msgstr "صف -صفوف"
@@ -1944,7 +1944,7 @@ msgid "User Select"
 msgstr "اختيار المستخدم"
 #: ----
 msgid "Multivalue User Select"
-msgstr "اختيار المستخدم إشارة رقمية متعددة القيم ( منتظمة )"
+msgstr "اختيار المستخدم لاشارة رقمية متعددة القيم"
 #: ----
 msgid "Tree"
 msgstr "تركيب هيكلي ( شجري ) للبيانات"
@@ -1953,7 +1953,7 @@ msgid "Multivalue Tree"
 msgstr "تركيب هيكلي ( شجري ) متعددة القيم"
 #: ----
 msgid ""
-msgstr "ar"
+msgstr ""
 #: ----
 msgid "Multivalue Select"
 msgstr "اختيار إشارة رقمية متعددة القيم ( منتظمة )"
@@ -2016,7 +2016,7 @@ msgid "Header for login page"
 msgstr "ترويسة لصفحة الدخول"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "متعدد القيم"
 #: ----
 msgid "Enabled"
 msgstr "تم تفعيله"
@@ -2024,7 +2024,7 @@ msgstr "تم تفعيله"
 msgid "Hide in case of"
 msgstr "قم بإخفائه في حالة"
 #: ----
-msgid "Set visible "
+msgid "Set visible"
 msgstr "مرئي "
 #: ----
 msgid "Disable"
@@ -2046,13 +2046,13 @@ msgid "Load"
 msgstr "تحميل المعلومات"
 #: ----
 msgid "Select facets"
-msgstr "اختر الجوانب "
+msgstr "اختر الجوانب"
 #: ----
 msgid "Date range"
 msgstr "نطاق التاريخ"
 #: ----
 msgid "Timeline type"
-msgstr "نوع الإطار زمني "
+msgstr "نوع الإطار زمني"
 #: ----
 msgid "DAY"
 msgstr "اليوم"
@@ -2076,7 +2076,7 @@ msgid "User activity (edited items)"
 msgstr "نشاط المستخدم( البنود التي تم تعديلها)"
 #: ----
 msgid "Recently deleted"
-msgstr "تم الحذف مؤخرا "
+msgstr "تم الحذف مؤخرا"
 #: ----
 msgid "No data available"
 msgstr "لا توجد بيانات متاحة"
@@ -2087,13 +2087,13 @@ msgstr "إضافة الجاني لاحقاً"
 msgid "Save and Add More Perpetrators"
 msgstr "قم بالتخزين وإضافة المزيد من الجناة"
 #: ----
-msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
-msgstr "لا توجد معلومات حتى الآن عن الفعل، يجب إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد"
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "لا يوجد أي معلومات حتى الآن عن الفعل، يجب إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد"
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "لا توجد معلومات حتى الآن عن التدخل، يجب،إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد"
+msgstr "لا بوجد أي معلومات حتى الآن عن التدخل، يجب،إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد"
 #: ----
-msgid "View person\'s roles"
+msgid "View person's roles"
 msgstr "عرض أدوار الشخص"
 #: ----
 msgid "Duplicate"
@@ -2134,3 +2134,105 @@ msgstr "النتائج"
 #: ----
 msgid "Filters"
 msgstr "مرشح ـ فلتر"
+#: ----
+msgid "Security"
+msgstr "الأمن"
+#: ----
+msgid "Top menu"
+msgstr "قائِمَة عليا"
+#: ----
+msgid "Top right menu"
+msgstr "قائِمَة عليا  على اليمين"
+#: ----
+msgid "Event menu"
+msgstr "قائِمَة الحدث"
+#: ----
+msgid "Person menu"
+msgstr "قائِمَة الشخص"
+#: ----
+msgid "Document menu"
+msgstr "قائِمَة الوثائق"
+#: ----
+msgid "Analysis menu"
+msgstr "قائِمَة التحليل"
+#: ----
+msgid "Preferences menu"
+msgstr "قائِمَة التفضيلات"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "لم يتم ادخال reCAPTCHA بشكل صحيح"
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "رمز التحقق خاطِئ. الرجاء المحاولة مرة اخرى"
+#: ----
+msgid "Menu was saved successfully."
+msgstr "تم حَفِظَ القائِمَة بنجاح"
+#: ----
+msgid "Google Authenticator"
+msgstr "أداة مصادقة Google"
+#: ----
+msgid "Enabled successfully."
+msgstr "تم التفعيل بنجاح"
+#: ----
+msgid "Code"
+msgstr "الرمز"
+#: ----
+msgid "Menu"
+msgstr "قائِمَة"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "انقر لاضافة مادة لقائِمَة ما"
+#: ----
+msgid "Number"
+msgstr "الرقم"
+#: ----
+msgid "Term"
+msgstr "المصطلح"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "اضافة مكانز مصغرة"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "تَرْجَمَ  المكانز المصغرة"
+#: ----
+msgid "Language"
+msgstr "اللغة"
+#: ----
+msgid "Event"
+msgstr "الحدث"
+#: ----
+msgid "Select Event"
+msgstr "اختيار الحدث"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "لا يوجد اي معلومات حتى الآن عن الفعل، يجب إضافة بعض المعلومات . انقر على زر اضافة حدث جديد   لإضافة حدث جديد"
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "الرجاء  اختيار   مربع تأشيرمُعَيّن  لاجراء عَمَل"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "تثبيت تطبيق أداة مصادقة Google  على هاتفك"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "على هاتفك ، قم بفتح متصفح انترنت"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "اذهب الى m.google.com/authenticator"
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "تنزيل و تثبيت تطبيق أداة مصادقة Google"
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "الان قم بفتح و ضبط أداة مصادقة Google"
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "مَسَحَ الباركود التالي لتسجيل التطبيق اوتوماتيكيا:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "أو استخدم المفتاح السري التالي لتسجيل التطبيق يدويا:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "بمجرد إدخال  المفتاح الخاص بك يدويا وحفظه، أدخل رمز التحقق من 6 أرقام التي تم إنشاؤه بواسطة تطبيق أداة المصادقة."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "الرمز غير صحيح. حاول مرة اخرى"
