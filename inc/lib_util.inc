@@ -318,6 +318,7 @@ function get_primary_key($entity) {
         case 'intervening_party':
             return "person_record_number";
         case 'supporting_docs_meta':
+        case 'supporting_docs':
             return "doc_id";
         default:
             return $entity . "_record_number";

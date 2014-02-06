@@ -562,12 +562,12 @@
               <div class="pagination"> \
                 <ul> \
                   <li class="prev"><a id="facetsearch_decrement" href="{{from}}">&laquo; back</a></li> \
-                  <li class="active"><a>{{from}} &ndash; {{to}} '+_t('of')+' {{total}}</a></li> \
+                  <li class="active"><a>{{from}} &ndash; {{to}} '+_('of')+' {{total}}</a></li> \
                   <li class="next"><a id="facetsearch_increment" href="{{to}}">next &raquo;</a></li> \
                 </ul> \
               </div> \
               ';
-            $('#facetsearch_metadata').html(_t("Not found"))
+            $('#facetsearch_metadata').html(_("Not found"))
             if (data.found) {
                 var from = options.paging.from + 1
                 var size = options.paging.size

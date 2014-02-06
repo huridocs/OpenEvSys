@@ -1,5 +1,5 @@
 <?php
-class SupportingDocsMeta extends ADODB_Active_Record{
+class SupportingDocsMeta extends DomainEntity{
 
 /**
  * DataObject For Supporting Doc Meta 
@@ -54,7 +54,7 @@ public $subject;
         $this->belongsTo( 'supporting_docs' , 'doc_id' , 'doc_id' ) ;
         
     }
-    
+    /*
     public function LoadfromRecordNumber($doc_id){
         $this->Load("doc_id='$doc_id'");
     }
@@ -76,6 +76,6 @@ public $subject;
     	$saveType = $this->getSaveType() ;
         parent::Save();        
         Log::saveLogDetails($this->_table , $this->doc_id ,  $saveType );
-    }
+    }*/
 
 }

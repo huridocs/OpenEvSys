@@ -334,9 +334,9 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     }
 //$formArrayEntry = current($formArray);
 //reset($formArray);
-    $recordkeyName = '' . $entity->_table . '_record_number';
+    $recordkeyName = get_primary_key($entity->_table);
 //$entity_key_value = $entity->$recordkeyName;
-
+    
     if ($entity->$recordkeyName == null && ($valuesArray[$recordkeyName] == null || $valuesArray[$recordkeyName] == '' )) {
         $entity_key_value = $entity->$recordkeyName = shn_create_uuid($entity->_table);
     } else if ($entity->$recordkeyName != null) {
@@ -352,7 +352,7 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
 
     foreach ($formArray as $fieldName => $formField) {
 
-        $recordkeyName = '' . $formField['map']['entity'] . '_record_number';            //have to change to handle act's child tables which have the act_record_number
+        $recordkeyName = get_primary_key($entity->_table);
         if ($formField['map']['field'] == $recordkeyName) {
             if ($valuesArray[$fieldName] != '') {
                 $entity->LoadFromRecordNumber($valuesArray[$fieldName]);

@@ -1010,6 +1010,7 @@ class adminModule extends shnModule {
         //load document detaild
         $supporting_docs_meta = new SupportingDocsMeta();
         $supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
+        $supporting_docs_meta->LoadRelationships();
 
         $supporting_docs = new SupportingDocs();
         $supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
@@ -1045,11 +1046,11 @@ class adminModule extends shnModule {
     /* }}} */
 
     public function act_System_configuration() {
-        global $alt_conf, $alt_conf_check;
+        global $alt_conf, $alt_conf_check,$conf;
         require_once(APPROOT . 'conf/conf_meta.php');
 
         if (isset($_POST["submit"])) {
-            global $conf;
+           
             $this->conf = $conf;
             unset($_POST["submit"]);
 
@@ -1059,6 +1060,7 @@ class adminModule extends shnModule {
                     $_POST[$key] = false;
                 }
             }
+            
             foreach ($_POST as $key => $value) {
                 $conf[$key] = $value;
                 shn_config_database_update($key, $value);

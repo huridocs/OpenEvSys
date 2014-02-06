@@ -55,7 +55,7 @@ class DomainEntity extends ADODB_Active_Record {
     public function __construct($table = false, $pkeyarr = false, $db = false, $options = array()) {
         parent::__construct($table, $pkey, $db, $options);
         $this->entity = $table;
-        $this->keyName = $this->entity . '_record_number';
+        $this->keyName = get_primary_key($this->entity);//$this->entity . '_record_number';
         $this->loadMTNames();
         $this->loadUserFieldNames();
     }
@@ -93,8 +93,10 @@ class DomainEntity extends ADODB_Active_Record {
 
         $this->Save();
         $this->SaveManagementData();
+      
         foreach ($this->mt as $mtField) {
             if (sizeof($this->$mtField) > 0) {
+               
                 MtFieldWrapper::setMTTermsforEntity($mtField, $this->entity, $this->{$this->keyName}, $this->$mtField);
             }
         }

@@ -6,7 +6,7 @@ $version = $version[1]; ?>
 <script type="text/javascript" src="res/jquery/jquery-ui-map/jquery.ui.map.js"></script>
 <script type="text/javascript" src="res/markerclusterer/markerclusterer_packed.js"></script>
 <script type="text/javascript" src="res/js/jquery.facetsearch.js?v=<?php echo $version?>"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
     google.load('visualization', '1', {packages: ['corechart','charteditor']});
 </script>

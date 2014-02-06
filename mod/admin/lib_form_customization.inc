@@ -294,7 +294,7 @@ function form_customization_add_field($field_type_options) {
     
     switch ($fieldValues['field_type']) {
         case 'text':
-            $field_mysql_type = "VARCHAR(100)";
+            $field_mysql_type = "VARCHAR(250)";
             break;
         case 'textarea':
             $field_mysql_type = "TEXT";
@@ -418,6 +418,7 @@ function form_customization_add_field($field_type_options) {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "` $field_mysql_type ");
         }
     } catch (Exception $e) {
+        var_dump($e,$sql);exit;
         return false;
     }
     return true;

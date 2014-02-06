@@ -58,6 +58,7 @@ class docuModule extends shnModule {
             $this->supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
             $supporting_docs_meta = new SupportingDocsMeta();
             $supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
+            $supporting_docs_meta->LoadRelationships();
             $this->supporting_docs_meta = $supporting_docs_meta;
             //if event does not exists
             if ($this->supporting_docs_meta->doc_id != $_GET['doc_id'] || $this->supporting_docs_meta->doc_id == '') {
@@ -161,7 +162,7 @@ class docuModule extends shnModule {
 
             $supporting_docs_meta->format = $type;
             $supporting_docs->Save();
-            $supporting_docs_meta->Save();
+            $supporting_docs_meta->SaveAll();
 
             $this->supporting_docs = $supporting_docs;
             $this->supporting_docs_meta = $supporting_docs_meta;
@@ -175,7 +176,8 @@ class docuModule extends shnModule {
     public function act_view_document() {
         $this->supporting_docs_meta = new SupportingDocsMeta();
         $this->supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
-
+        $this->supporting_docs_meta->LoadRelationships();
+        
         $this->supporting_docs = new SupportingDocs();
         $this->supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
 
@@ -231,7 +233,7 @@ class docuModule extends shnModule {
 
             form_objects($this->document_form, $this->supporting_docs_meta);
             $this->supporting_docs_meta->format = $type;
-            $this->supporting_docs_meta->Save();
+            $this->supporting_docs_meta->SaveAll();
             unset($_SESSION['type']);
             set_redirect_header('docu', 'view_document', null);
             exit();
@@ -282,6 +284,7 @@ class docuModule extends shnModule {
         if (isset($_GET['doc_id'])) {
             $supporting_docs_meta = new SupportingDocsMeta();
             $supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
+            $supporting_docs_meta->LoadRelationships();
             $this->supporting_docs_meta = $supporting_docs_meta;
 
             $logs = Browse::getAuditLogForDocument($_GET['doc_id']);
@@ -295,7 +298,8 @@ class docuModule extends shnModule {
         //load document detaild
         $supporting_docs_meta = new SupportingDocsMeta();
         $supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
-
+        $supporting_docs_meta->LoadRelationships();
+        
         $supporting_docs = new SupportingDocs();
         $supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
         //set headers
