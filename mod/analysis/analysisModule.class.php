@@ -696,7 +696,6 @@ class analysisModule extends shnModule {
                 break;
         }
 
-
         //var_dump('person address' , $dataArray ) ;
         if (get_table_for_entity($entity_type) == 'person' && isset($dataArray['person_addresses'])) {
 

@@ -987,7 +987,7 @@ function queryBuilder(){
                
                     break;
                 case "mt_select":
-                    var mt_select = $("<select id=\"\" name=\"\" class=\"select searchval\" />");
+                    var mt_select = $("<select id=\"\" name=\"\" class=\"select searchval\" data-val=\""+e.value+"\" />");
                     //$("<option />", {value:  "", text: ""}).appendTo(select);
                     mt_select.qb_mt_select({
                         mt: od.getListCode(field_name, entity_name),
@@ -1003,7 +1003,7 @@ function queryBuilder(){
                     //mt_select.select2("val",e.value);
                     break;
                 case "mt_tree":
-                    var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" />');
+                    var mt_tree = $('<select id=\"\" name=\"\" class=\"mt-tree select searchval\" data-val=\""+e.value+"\" />');
                     mt_tree.qb_mt_tree({
                         mt: od.getListCode(field_name, entity_name),
                         'selected' : e.value
@@ -1356,6 +1356,9 @@ function queryBuilder(){
             c.operator = $(this).find('select.operatorselect:first').val();
             if($(this).find('.searchval').is("select")){
                 c.value = $(this).find('select.searchval:first').val();
+                if(c.value == null){
+                    c.value = $(this).find('select.searchval:first').data('val')
+                }
             }else{
                 c.value = $(this).find('.searchval:first').val();
             }

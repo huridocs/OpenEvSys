@@ -219,7 +219,7 @@ function get_record_url($record_number, $entity, $url_type = "view") {
             case 'supporting_docs_meta':
                 return "index.php?mod=docu&act=edit_document&doc_id=$record_number";
             case 'biographic_details':
-                return "index.php?mod=person&act=biography_list&type=rp&biography_id=$record_number";
+                return "index.php?mod=person&act=biography_list&type=bd&biography_id=$record_number";
             default:
                 return;
         }
@@ -277,7 +277,7 @@ function get_record_url($record_number, $entity, $url_type = "view") {
             case 'supporting_docs_meta':
                 return "index.php?mod=docu&act=view_document&doc_id=$record_number";
             case 'biographic_details':
-                return "index.php?mod=person&act=biography_list&type=rp&biography_id=$record_number";
+                return "index.php?mod=person&act=biography_list&type=bd&biography_id=$record_number";
             default:
                 return;
         }
