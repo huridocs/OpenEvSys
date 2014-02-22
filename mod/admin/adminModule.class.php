@@ -179,7 +179,8 @@ class adminModule extends shnModule {
             'mt_tree' => _t('Tree'),
             'mt_tree_multi' => _t('Multivalue Tree'),
             'mt_select' => _t('SELECT'),
-            'mt_select_multi' => _t('Multivalue Select')
+            'mt_select_multi' => _t('Multivalue Select'),
+            'line' => _t('Line'),
         );
         
         $translations = StringTranslations::getMtTranslations(null, $conf['locale']);

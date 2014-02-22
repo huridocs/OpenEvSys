@@ -30,12 +30,12 @@
                     </td>                   
                     <td align="center">
                         <?php $name = 'required_' . $record['field_number']; ?>
-                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['required']) == 'y') echo "checked='true'"; ?> <?php echo ($record['essential'] == 'y' ? ' disabled="disables"' : "") ?> />
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['required']) == 'y') echo "checked='true'"; ?> <?php if($record['essential'] == 'y' || $record['field_type'] == 'line'){ echo ' disabled="disables"';} ?> />
                     </td>
                     
                     <td align="center">
                         <?php $name = 'clari_' . $record['field_number']; ?>
-                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['clar_note']) == 'y') echo "checked='true'"; ?>/>
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['clar_note']) == 'y') echo "checked='true'"; ?> <?php if($record['field_type'] == 'line'){ echo ' disabled="disables"';} ?>/>
                     </td>
 
 

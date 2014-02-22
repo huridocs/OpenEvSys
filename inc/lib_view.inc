@@ -380,3 +380,13 @@ function shn_view_location($label,$value,$extra_opts)
 <?php
   
 }
+function shn_view_line($label,$value,$extra_opts)
+{
+    $class = "class='{$extra_opts['class']}'";
+?>
+    <tr <?php echo $class ?>>
+        <td class='title' align='right' colspan="2"style="font-weight: bold;"><?php echo $label ?></td>
+       
+    </tr>
+<?php
+}

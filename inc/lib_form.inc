@@ -1437,3 +1437,14 @@ function shn_form_location($label, $name, $extra_opts) {
     <?php
 }
 
+function shn_form_line($label, $name, $extra_opts) {
+    global $shn_tabindex;
+    if ($extra_opts['no_label'] !== true) {
+        ?>
+        <label  class="control-label" for="<?php echo $name ?>" style="font-weight: bold;"><?php echo $label ?></label><br/>
+        <?php
+    }
+    ?>
+    <hr/>
+    <?php
+}

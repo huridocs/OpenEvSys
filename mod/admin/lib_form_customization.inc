@@ -341,6 +341,14 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'user_select';
             break;
+         case 'line' :
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            $fieldValues['required'] = 'n';
+            $fieldValues['clar_note'] = 'n';
+    
+            break;
     }
     $fieldValues['visible_edit'] = $fieldValues['visible_new'];
     $fieldValues['visible_search'] = $fieldValues['visible_browse'];
@@ -414,7 +422,7 @@ function form_customization_add_field($field_type_options) {
                   ON UPDATE CASCADE)ENGINE = InnoDB;";
            $dbQuery->ExecuteNonQuery($sql);
             
-        } else {
+        } elseif($fieldValues['field_type'] != "line") {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "` $field_mysql_type ");
         }
     } catch (Exception $e) {
