@@ -62,42 +62,46 @@ $syncData['entities'] = array();
 $sync['taxonomies'] = array(array('list_code' => 70, 'wp_taxonomy' => 'tipoconflicto'),
     array('list_code' => 71, 'wp_taxonomy' => 'ubicacion'),
     array('list_code' => 4, 'wp_taxonomy' => 'type_of_act'),
-    array('list_code' => 76, 'wp_taxonomy' => 'mediolesion'),
     array('list_code' => 82, 'wp_taxonomy' => 'area_corporal'),
-        /* array('list_code'=>71,'wptaxonomy'=>'ubicacto'), */
+    array('list_code' => 76, 'wp_taxonomy' => 'mediolesion'),
+    array('list_code' => 432343, 'wp_taxonomy' => 'proceso_contra_perp'),
+    array('list_code' => 432342, 'wp_taxonomy' => 'perpetrador'),
 );
 $sync['entities'] = array(
     array('entity' => 'event', 'wp_post_type' => 'event',
         'fields' => array(
-            array('field_name' => 'event_record_number', 'wp_field' => 'oe_id','wptype'=>'meta'),
-            array('field_name' => 'event_title', 'wp_field' => 'post_title','wptype'=>'core'),
-            array('field_name' => 'event_description', 'wp_field' => 'post_content','wptype'=>'core'),
-            array('field_name' => 'tipoconflicto', 'wp_field' => 'tipoconflicto', 'type' => 'taxonomy', 'multiple' => true,'wptype'=>'taxonomy'),
-            array('field_name' => 'ubicacion', 'wp_field' => 'ubicacion', 'type' => 'taxonomy','wptype'=>'taxonomy'),
-            array('field_name' => 'initial_date', 'wp_field' => 'initial_date','wptype'=>'meta'),
-            array('field_name' => 'final_date', 'wp_field' => 'final_date','wptype'=>'meta'),
-            array('field_name' => 'event_location_latitude', 'wp_field' => 'location_latitude','wptype'=>'meta'),
-            array('field_name' => 'event_location_longitude', 'wp_field' => 'location_longitude','wptype'=>'meta'),
-            array('type' => 'count_muerte', 'wp_field' => 'count_muerte','wptype'=>'meta'),
-            array('type' => 'count_herida', 'wp_field' => 'count_herida','wptype'=>'meta'),
+            array('field_name' => 'event_record_number', 'wp_field' => 'oe_id', 'wptype' => 'meta'),
+            array('field_name' => 'event_title', 'wp_field' => 'post_title', 'wptype' => 'core'),
+            array('field_name' => 'event_description', 'wp_field' => 'post_content', 'wptype' => 'core'),
+            array('field_name' => 'tipoconflicto', 'wp_field' => 'tipoconflicto', 'type' => 'taxonomy', 'multiple' => true, 'wptype' => 'taxonomy'),
+            array('field_name' => 'ubicacion', 'wp_field' => 'ubicacion', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
+            array('field_name' => 'initial_date', 'wp_field' => 'initial_date', 'wptype' => 'meta'),
+            array('field_name' => 'final_date', 'wp_field' => 'final_date', 'wptype' => 'meta'),
+            array('field_name' => 'event_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
+            array('field_name' => 'event_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
+            array('type' => 'count_muerte', 'wp_field' => 'count_muerte', 'wptype' => 'meta'),
+            array('type' => 'count_herida', 'wp_field' => 'count_herida', 'wptype' => 'meta'),
+            array('type' => 'radio', 'field_name' => 'judicializacion', 'wp_field' => 'judicializacion', 'wptype' => 'meta'),
         )
     ),
     array('entity' => 'act', 'wp_post_type' => 'act',
         'fields' => array(
-            array('field_name' => 'act_record_number', 'wp_field' => 'oe_id','wptype'=>'meta'),
-            array('type' => 'victimname', 'wp_field' => 'post_title','wptype'=>'core'),
-            array('field_name' => 'descripacto', 'wp_field' => 'post_content','wptype'=>'core'),
-            array('field_name' => 'initial_date', 'wp_field' => 'initial_date','wptype'=>'meta'),
-            array('field_name' => 'final_date', 'wp_field' => 'final_date','wptype'=>'meta'),
-            array('field_name' => 'type_of_act', 'wp_field' => 'type_of_act', 'type' => 'taxonomy','wptype'=>'taxonomy'),
-            array('field_name' => 'area_corporal', 'wp_field' => 'area_corporal', 'type' => 'taxonomy', 'multiple' => true,'wptype'=>'taxonomy'),
-            array('field_name' => 'mediolesion', 'wp_field' => 'mediolesion', 'type' => 'taxonomy', 'multiple' => true,'wptype'=>'taxonomy'),
-            array('field_name' => 'act_location_latitude', 'wp_field' => 'location_latitude','wptype'=>'meta'),
-            array('field_name' => 'act_location_longitude', 'wp_field' => 'location_longitude','wptype'=>'meta'),
-            array('type' => 'victimedadhechos', 'wp_field' => 'edadhechos','wptype'=>'meta'),
-            array('type' => 'eventtitle', 'wp_field' => 'event_title','wptype'=>'meta'),
-            array('field_name' => 'circunstancias', 'wp_field' => 'circunstancias','wptype'=>'meta'),
-            array('field_name' => 'ubicacto', 'wp_field' => 'ubicacion', 'type' => 'taxonomy','wptype'=>'taxonomy'),
+            array('field_name' => 'act_record_number', 'wp_field' => 'oe_id', 'wptype' => 'meta'),
+            array('type' => 'victimname', 'wp_field' => 'post_title', 'wptype' => 'core'),
+            array('field_name' => 'descripacto', 'wp_field' => 'post_content', 'wptype' => 'core'),
+            array('field_name' => 'initial_date', 'wp_field' => 'initial_date', 'wptype' => 'meta'),
+            array('field_name' => 'final_date', 'wp_field' => 'final_date', 'wptype' => 'meta'),
+            array('field_name' => 'type_of_act', 'wp_field' => 'type_of_act', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
+            array('field_name' => 'area_corporal', 'wp_field' => 'area_corporal', 'type' => 'taxonomy', 'multiple' => true, 'wptype' => 'taxonomy'),
+            array('field_name' => 'mediolesion', 'wp_field' => 'mediolesion', 'type' => 'taxonomy', 'multiple' => true, 'wptype' => 'taxonomy'),
+            array('field_name' => 'act_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
+            array('field_name' => 'act_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
+            array('type' => 'victimedadhechos', 'wp_field' => 'edadhechos', 'wptype' => 'meta'),
+            array('type' => 'eventtitle', 'wp_field' => 'event_title', 'wptype' => 'meta'),
+            array('field_name' => 'circunstancias', 'wp_field' => 'circunstancias', 'wptype' => 'meta'),
+            array('field_name' => 'ubicacto', 'wp_field' => 'ubicacion', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
+            array('field_name' => 'proc_contra_perp', 'wp_field' => 'proceso_contra_perp', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
+            array('type' => 'perpetrador', 'field_name' => 'perpetrador', 'wp_field' => 'perpetrador', 'multiple' => true, 'wptype' => 'taxonomy'),
         )
         ));
 
@@ -106,24 +110,25 @@ foreach ($sync['taxonomies'] as $taxonomy) {
     $data['data'] = array();
     $taxonomyData = MtFieldWrapper::getMTList($taxonomy['list_code']);
     foreach ($taxonomyData as $val) {
-        $data['data'][] = array('oe_id' => $val['vocab_number'], 'name' => $val['label'],'parent'=>$val['parent_vocab_number']);
+        $data['data'][] = array('oe_id' => $val['vocab_number'], 'name' => $val['label'], 'parent' => $val['parent_vocab_number']);
     }
     $syncData['taxonomies'][] = $data;
 }
 
 $browse = new Browse();
 foreach ($sync['entities'] as $entity) {
-
+    /* if($entity['entity'] == "event"){
+      continue;
+      } */
     $recordkeyName = get_primary_key($entity['entity']);
     $sql = "select " . $recordkeyName . " from " . $entity['entity'];
     $rows = $browse->ExecuteQuery($sql);
     $classname = ucfirst($entity['entity']);
-
     foreach ($rows as $row) {
+
         $object = new $classname();
         $object->LoadFromRecordNumber($row[$recordkeyName]);
         $object->LoadRelationships();
-
         $data = array();
         $data['post_type'] = $entity['wp_post_type'];
         $data['oe_id'] = $row[$recordkeyName];
@@ -140,13 +145,13 @@ foreach ($sync['entities'] as $entity) {
                 $sql = "SELECT count(*) as count FROM act a WHERE a.type_of_act ='51000000000004' and a.event='" . $row[$recordkeyName] . "'";
                 $count = $browse->ExecuteQuery($sql);
                 if ($count[0]['count']) {
-                    $fieldData = $count[0]['count'];
+                    $fieldData = (int) $count[0]['count'];
                 }
             } elseif ($field['type'] == "count_herida") {
                 $sql = "SELECT count(*) as count FROM act a WHERE a.type_of_act ='54010101000117' and a.event='" . $row[$recordkeyName] . "'";
                 $count = $browse->ExecuteQuery($sql);
                 if ($count[0]['count']) {
-                    $fieldData = $count[0]['count'];
+                    $fieldData = (int) $count[0]['count'];
                 }
             } elseif ($field['type'] == "victimname") {
                 $victim = new Person();
@@ -155,27 +160,47 @@ foreach ($sync['entities'] as $entity) {
             } elseif ($field['type'] == "victimedadhechos") {
                 $victim = new Person();
                 $victim->LoadFromRecordNumber($object->victim);
-                $fieldData = $victim->edadhechos;
+                if ($victim->menoredad == 'y') {
+                    $fieldData = (int) $victim->edadhechos;
+                }
             } elseif ($field['type'] == "eventtitle") {
                 $event = new Event();
                 $event->LoadFromRecordNumber($object->event);
                 $fieldData = $event->event_title;
+            } elseif ($field['type'] == "perpetrador") {
+                $sql = "SELECT involvement_record_number,perpetrator	FROM involvement  WHERE act = '" . $row[$recordkeyName] . "'";
+                $res = $browse->ExecuteQuery($sql);
+                $fieldData = array();
+
+                if ($res) {
+                    foreach ($res as $inv) {
+                        $perpetrator = new Person();
+                        $perpetrator->LoadFromRecordNumber($inv['perpetrator']);
+                        $perpetrator->LoadRelationships();
+                        $fieldVal = $perpetrator->perpetrador;
+                        foreach ($fieldVal as $val) {
+                            $fieldData[] = $val->vocab_number;
+                        }
+                    }
+                }
+            } elseif ($field['type'] == "radio") {
+                if (strtolower($fieldVal) == 'y') {
+                    $fieldData = _t('YES');
+                } elseif (strtolower($fieldVal) == 'n') {
+                    $fieldData = _t('NO');
+                }
             } else {
                 $fieldData = $fieldVal;
             }
             $wptype = $field['wptype'];
-            if(!$data[$wptype]){
+            if (!$data[$wptype]) {
                 $data[$wptype] = array();
-
             }
             $data[$wptype][$field['wp_field']] = $fieldData;
-                
-            
         }
         $syncData['entities'][] = $data;
     }
 }
 
 file_put_contents($dataFile, json_encode($syncData));
-
 ?>

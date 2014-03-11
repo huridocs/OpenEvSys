@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 error_reporting(E_ALL ^ E_NOTICE);
 $scanned_strings = array();
@@ -7,7 +7,6 @@ define('APPROOT', realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRE
 $languages = array(2 => "en", 3 => "fr", 4 => "es", 5 => "ind", 6 => "km", 7 => "ar", 8 => "tr");
 $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.txt";
 
-/*
   ////find missing
   $dirs = array(APPROOT."data",APPROOT."inc",APPROOT."inst",APPROOT."mod",APPROOT."tpls");
   $dirs = array("D:\server\huridocs\casebox\public\module\Application".DIRECTORY_SEPARATOR."view");
@@ -48,7 +47,7 @@ $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.
 
   } 
   }
-  exit;*/
+  exit;
   foreach($dif2 as $v){
   echo "PHP\t".$v."\t".$v."<br/>";
 

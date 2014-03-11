@@ -1219,7 +1219,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         try {
             $res_count = $global['db']->Execute($count_query);
         } catch (Exception $e) {
-            $response->error = "error"; //$e->getMessage();
+            $response->error = "error"; echo $e->getMessage();
             $res_count = null;
         }
 

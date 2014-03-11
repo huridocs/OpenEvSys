@@ -341,7 +341,7 @@ class User extends ADODB_Active_Record {
         }
         $result['secret'] = $cfg['security']['TSV']['secret'];
 
-        $result['url'] = $ga->getQRCodeGoogleUrl($_SERVER['SERVER_NAME'], $result['secret']);
+        $result['url'] = $ga->getQRCodeGoogleUrl($_SERVER['HTTP_HOST'], $result['secret']);
 
 
         return $result;
