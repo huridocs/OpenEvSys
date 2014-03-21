@@ -523,7 +523,7 @@ function is_management_field($formField) {
                 $fld_name == 'date_of_entry' ||
                 $fld_name == 'entered_by' ||
                 $fld_name == 'project_title' ||
-                /* $fld_name=='comments' || */
+                $fld_name == 'comments' || 
                 $fld_name == 'record_grouping' ||
                 $fld_name == 'date_updated' ||
                 $fld_name == 'updated_by' ||
