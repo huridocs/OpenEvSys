@@ -906,15 +906,21 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     }
 
     private function generateCondition($fieldArray, $dataArray, $fieldName, &$sqlArray) {
+        global $conf;
         //var_dump('fieldArray type ' , $fieldArray );
         $dataArray = array_map('addslashes_deep', $dataArray);
         if (is_management_field($fieldArray)) {
             $fieldArray['map']['entity'] = 'management';
         }
-
         switch ($fieldArray['type']) {
             case 'hidden' :
-                $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " LIKE  '%$dataArray[$fieldName]%'";
+                if($conf['subbrowse']['biography_list'] && $fieldArray['map']['entity']=='biographic_details' && $fieldArray['map']['field']=='person') {
+                    $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " = '$dataArray[$fieldName]'";
+                
+                }else{
+                   $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " LIKE  '%$dataArray[$fieldName]%'";
+                 
+                }                
                 //return $condition;
                 break;
             case 'textarea':

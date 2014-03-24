@@ -514,7 +514,7 @@ function is_management_field($formField) {
     if ($formField['field_number'] == "0172") {
         return true;
     }
-    if ($formField['type'] == 'text' || $formField['type'] == 'date' || $formField['type'] == 'hidden') {
+    if ($formField['type'] == 'textarea' || $formField['type'] == 'text' || $formField['type'] == 'date' || $formField['type'] == 'hidden') {
         $fld_name = $formField['map']['field'];
         if (
                 $fld_name == 'entity_type' ||
