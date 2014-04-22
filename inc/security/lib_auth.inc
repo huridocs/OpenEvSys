@@ -52,7 +52,7 @@ function shn_auth_del_code($user_id , $action){
 
 
 
-function shn_auth_add_user($username, $password,$role , UserProfile $userProfile=null,$status = 'disable')
+function shn_auth_add_user($username, $password,$role , UserProfile $userProfile=null,$status = 'disable',$userConfig = array())
 {   
     global $global;
     //validate_new_user()
@@ -81,6 +81,9 @@ function shn_auth_add_user($username, $password,$role , UserProfile $userProfile
     if(isset($status))
         $user->status = $status;
 
+    if($userConfig){
+        $user->config = json_encode($userConfig);
+    }
     $user->Save();
 
    

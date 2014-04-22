@@ -53,6 +53,35 @@ include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_form_util.inc';
 
 $dataFile = APPROOT . "module" . DIRECTORY_SEPARATOR . "oe2wp-data.json";
+$ftpParams = array("host" => "ftp.huriweb.org", "username" => "oe2wp@huriweb.org",
+    'password' => 'r%~okB~Lf?-y');
+$remoteFile = "/wp-content/plugins/oe2wp/data/oe2wp-data.json";
+$remoteImportURL = "http://peru.huriweb.org/wp-content/plugins/oe2wp/oe2wp.php?action=oe2wpimport";
+
+
+function uploadDataFile($ftpParams, $dataFile, $remoteFile) {
+
+    $connection = ftp_connect($ftpParams['host']);
+    $login = ftp_login($connection, $ftpParams['username'], $ftpParams['password']);
+    if (!$login) {
+        echo "couldnt login to ftp\n";
+        return false;
+    }
+    $pathParts = pathinfo($remoteFile);
+    if ($pathParts['dirname'] != ".") {
+        if (!ftp_chdir($connection, $pathParts['dirname'])) {
+            echo "couldnt change dir to " . $pathParts['dirname'];
+            return false;
+        }
+    }
+    if (ftp_put($connection, $pathParts['basename'], $dataFile, FTP_BINARY)) {
+        echo "successfully uploaded $dataFile to $remoteFile\n";
+        return true;
+    } else {
+        echo "There was a problem while uploading $dataFile\n";
+        return false;
+    }
+}
 
 $sync = array();
 $syncData = array();
@@ -77,8 +106,8 @@ $sync['entities'] = array(
             array('field_name' => 'ubicacion', 'wp_field' => 'ubicacion', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
             array('field_name' => 'initial_date', 'wp_field' => 'initial_date', 'wptype' => 'meta'),
             array('field_name' => 'final_date', 'wp_field' => 'final_date', 'wptype' => 'meta'),
-            array('type' => 'location','field_name' => 'event_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
-            array('type' => 'location','field_name' => 'event_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
+            array('type' => 'location', 'field_name' => 'event_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
+            array('type' => 'location', 'field_name' => 'event_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
             array('type' => 'count_muerte', 'wp_field' => 'count_muerte', 'wptype' => 'meta'),
             array('type' => 'count_herida', 'wp_field' => 'count_herida', 'wptype' => 'meta'),
             array('type' => 'radio', 'field_name' => 'judicializacion', 'wp_field' => 'judicializacion', 'wptype' => 'taxonomy'),
@@ -94,8 +123,8 @@ $sync['entities'] = array(
             array('field_name' => 'type_of_act', 'wp_field' => 'type_of_act', 'type' => 'taxonomy', 'wptype' => 'taxonomy'),
             array('field_name' => 'area_corporal', 'wp_field' => 'area_corporal', 'type' => 'taxonomy', 'multiple' => true, 'wptype' => 'taxonomy'),
             array('field_name' => 'mediolesion', 'wp_field' => 'mediolesion', 'type' => 'taxonomy', 'multiple' => true, 'wptype' => 'taxonomy'),
-            array('type' => 'location','field_name' => 'act_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
-            array('type' => 'location','field_name' => 'act_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
+            array('type' => 'location', 'field_name' => 'act_location_latitude', 'wp_field' => 'location_latitude', 'wptype' => 'meta'),
+            array('type' => 'location', 'field_name' => 'act_location_longitude', 'wp_field' => 'location_longitude', 'wptype' => 'meta'),
             array('type' => 'victimedadhechos', 'wp_field' => 'edadhechos', 'wptype' => 'meta'),
             array('type' => 'eventtitle', 'wp_field' => 'event_title', 'wptype' => 'meta'),
             array('field_name' => 'circunstancias', 'wp_field' => 'circunstancias', 'wptype' => 'meta'),
@@ -115,10 +144,10 @@ foreach ($sync['taxonomies'] as $taxonomy) {
     $syncData['taxonomies'][] = $data;
 }
 $data = array('list_code' => 0, 'wp_taxonomy' => 'judicializacion');
-$data['data'] = array( array('oe_id' => 1, 'name' => 'Si'//_t('YES')
-, 'parent' => 0),
-array('oe_id' => 2, 'name' => 'No/ No se sabe'//_t('NO')
-, 'parent' => 0));
+$data['data'] = array(array('oe_id' => 1, 'name' => 'Si'//_t('YES')
+        , 'parent' => 0),
+    array('oe_id' => 2, 'name' => 'No/ No se sabe'//_t('NO')
+        , 'parent' => 0));
 $syncData['taxonomies'][] = $data;
 
 $browse = new Browse();
@@ -130,16 +159,16 @@ foreach ($sync['entities'] as $entity) {
     $sql = "select " . $recordkeyName . " from " . $entity['entity'];
     $rows = $browse->ExecuteQuery($sql);
     $classname = ucfirst($entity['entity']);
-	$markersArray = array();
-	$latitudeFieldname = "";
-		$longitudeFieldname = "";
-		if($entity['entity'] == "event"){
-		$latitudeFieldname = "event_location_latitude";
-		$longitudeFieldname = "event_location_longitude";
-      }elseif($entity['entity'] == "act"){
-	  $latitudeFieldname = "act_location_latitude";
-		$longitudeFieldname = "act_location_longitude";
-	  }
+    $markersArray = array();
+    $latitudeFieldname = "";
+    $longitudeFieldname = "";
+    if ($entity['entity'] == "event") {
+        $latitudeFieldname = "event_location_latitude";
+        $longitudeFieldname = "event_location_longitude";
+    } elseif ($entity['entity'] == "act") {
+        $latitudeFieldname = "act_location_latitude";
+        $longitudeFieldname = "act_location_longitude";
+    }
     foreach ($rows as $row) {
 
         $object = new $classname();
@@ -177,7 +206,6 @@ foreach ($sync['entities'] as $entity) {
                 $victim = new Person();
                 $victim->LoadFromRecordNumber($object->victim);
                 $fieldData = (int) $victim->edadhechos;
-                
             } elseif ($field['type'] == "eventtitle") {
                 $event = new Event();
                 $event->LoadFromRecordNumber($object->event);
@@ -200,50 +228,60 @@ foreach ($sync['entities'] as $entity) {
                 }
             } elseif ($field['type'] == "radio") {
                 if (strtolower($fieldVal) == 'y') {
-                    $fieldData = '1';//_t('YES');
-                }else{//if (strtolower($fieldVal) == 'n') {
-                    $fieldData = '2';//_t('NO');
+                    $fieldData = '1'; //_t('YES');
+                } else {//if (strtolower($fieldVal) == 'n') {
+                    $fieldData = '2'; //_t('NO');
                 }
             } else {
                 $fieldData = $fieldVal;
             }
-			if($fieldName == "proc_contra_perp" && !$fieldData){
-				$fieldData = '54010101002166';
-			}
+            if ($fieldName == "proc_contra_perp" && !$fieldData) {
+                $fieldData = '54010101002166';
+            }
             $wptype = $field['wptype'];
             if (!$data[$wptype]) {
                 $data[$wptype] = array();
             }
             $data[$wptype][$field['wp_field']] = $fieldData;
         }
-		
-	  
-		if($data[$latitudeFieldname] && $data[$longitudeFieldname]){
-				$a = getUniqLat($data[$latitudeFieldname],$data[$longitudeFieldname],$markersArray);
-				$latitude = $a['latitude'];
-				$longitude = $a['longitude'];
-				$data[$latitudeFieldname] = $latitude;
-				$data[$longitudeFieldname] = $longitude;
-				$markersArray[(string)$latitude][] = (string)$longitude;
-			}
+
+
+        if ($data[$latitudeFieldname] && $data[$longitudeFieldname]) {
+            $a = getUniqLat($data[$latitudeFieldname], $data[$longitudeFieldname], $markersArray);
+            $latitude = $a['latitude'];
+            $longitude = $a['longitude'];
+            $data[$latitudeFieldname] = $latitude;
+            $data[$longitudeFieldname] = $longitude;
+            $markersArray[(string) $latitude][] = (string) $longitude;
+        }
         $syncData['entities'][] = $data;
     }
 }
 
 function getUniqLat($latitude, $longitude, $arr) {
-        $latitudeor = $latitude;
-        $longitudeor = $longitude;
-        while (true) {
-            if (isset($arr[(string)$latitude]) && in_array((string)$longitude, $arr[(string)$latitude])) {
-                $rand = rand(-100, 100);
-                $rand2 = rand(-100, 100);
-                $latitude = $latitudeor + ($rand * 0.00001);
-                $longitude = $longitudeor + ($rand2 * 0.00001);
-                //var_dump($latitudeor,$latitude, $rand*0.00001);exit;
-            } else {
-                return array("latitude" => $latitude, "longitude" => $longitude);
-            }
+    $latitudeor = $latitude;
+    $longitudeor = $longitude;
+    while (true) {
+        if (isset($arr[(string) $latitude]) && in_array((string) $longitude, $arr[(string) $latitude])) {
+            $rand = rand(-100, 100);
+            $rand2 = rand(-100, 100);
+            $latitude = $latitudeor + ($rand * 0.00001);
+            $longitude = $longitudeor + ($rand2 * 0.00001);
+            //var_dump($latitudeor,$latitude, $rand*0.00001);exit;
+        } else {
+            return array("latitude" => $latitude, "longitude" => $longitude);
         }
     }
+}
+
 file_put_contents($dataFile, json_encode($syncData));
+echo "imported entities count:" . count($syncData['entities']) . "\n";
+
+
+$uplaod = uploadDataFile($ftpParams, $dataFile, $remoteFile);
+if ($uplaod) {
+    $import = file_get_contents($remoteImportURL);
+    echo "file_get_contents result:$remoteImportURL " . var_dump($import) . "\n";
+    echo "DONE!";
+}
 ?>

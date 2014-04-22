@@ -12,7 +12,7 @@
         <?php  echo $fields['designation']  ?>
         <?php  echo $fields['email']  ?>
         <?php  echo $fields['address']  ?>
-
+    <?php  echo $fields['locale']  ?>
       <div class="control-group">
                 <div class="controls">
 

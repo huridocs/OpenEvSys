@@ -31,6 +31,7 @@ $username = $user->getUserName();
             <?php echo $fields['designation'] ?>
             <?php echo $fields['email'] ?>
             <?php echo $fields['address'] ?>
+            <?php echo $fields['locale'] ?>
             <?php echo $fields['role'] ?>
             <?php echo $fields['status'] ?>      
 

@@ -182,16 +182,16 @@ class adminModule extends shnModule {
             'mt_select_multi' => _t('Multivalue Select'),
             'line' => _t('Line'),
         );
-        
+
         $translations = StringTranslations::getMtTranslations(null, $conf['locale']);
-        
+
         $mtIndex = new MtIndex();
         $index_terms = $mtIndex->Find('');
         $taxonomies = array();
         $taxonomies[''] = '';
         foreach ($index_terms as $index_term) {
             $label = $index_term->no . ' - ' . $index_term->term;
-            
+
             if ($translations[$index_term->no][$conf['locale']]) {
                 $label = $translations[$index_term->no][$conf['locale']]['value'];
             }
@@ -230,7 +230,7 @@ class adminModule extends shnModule {
 
         include_once APPROOT . 'inc/lib_validate.inc';
         include_once APPROOT . 'inc//security/lib_auth.inc';
-
+        
         if (isset($_POST['save'])) {
 
             $valide = true;
@@ -243,7 +243,7 @@ class adminModule extends shnModule {
             $address = $_POST['address'];
             $role = $_POST['role'];
             $status = $_POST['status'];
-
+            $locale = $_POST['locale'];
             if ($email != '' && !shn_valid_email($email)) {
                 //email not valide
                 $this->user_form['email']['extra_opts'] = array();
@@ -258,6 +258,13 @@ class adminModule extends shnModule {
                 $username = $this->user->getUserName();
                 acl_change_user_roles($username, $role);
                 $user->status = $status;
+                $cfg = array();
+                if (!empty($user->config)) {
+                    $cfg = @json_decode($user->config, true);
+                }
+                $cfg['locale'] = $locale;
+                $user->config = json_encode($cfg);
+                
                 $user->Save();
                 $userProfile->username = $username;
                 $userProfile->first_name = $firstName;
@@ -266,6 +273,7 @@ class adminModule extends shnModule {
                 $userProfile->designation = $designation;
                 $userProfile->email = $email;
                 $userProfile->address = $address;
+                
                 $userProfile->Save();
                 set_redirect_header('admin', 'user_management');
             }
@@ -363,7 +371,7 @@ class adminModule extends shnModule {
             $address = $_POST['address'];
             $role = $_POST['role'];
             $status = $_POST['status'];
-
+            $locale = $_POST['locale'];
             $user_form = $this->user_form;
 
             if (trim($username) == '') {
@@ -427,8 +435,11 @@ class adminModule extends shnModule {
                 $userProfile->email = $email;
                 $userProfile->address = $address;
                 //$userProfile->Save();
-
-                shn_auth_add_user($username, $password1, $role, $userProfile, $status);
+                $userConfig = array();
+                $userConfig['locale'] = $locale;
+                
+                
+                shn_auth_add_user($username, $password1, $role, $userProfile, $status,$userConfig);
                 set_redirect_header('admin', 'user_management');
             }
         }
@@ -506,7 +517,7 @@ class adminModule extends shnModule {
         $options[''] = '';
         foreach ($index_terms as $index_term) {
             $label = $index_term->no . ' - ' . $index_term->term;
-            
+
             if ($translations[$index_term->no][$conf['locale']]) {
                 $label = $translations[$index_term->no][$conf['locale']]['value'];
             }
@@ -843,11 +854,16 @@ class adminModule extends shnModule {
     /* {{{ Localization functions */
 
     public function act_set_locale() {
-        global $conf;
+        global $conf,$global;
         include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
         $this->locales = l10n_get_locals();
-        $this->current_locale = $conf['locale'];
-
+        
+	
+        if($results = $global['db']->GetOne("SELECT value FROM config WHERE confkey = 'locale'")) {
+            $this->current_locale = $results;
+        }else{
+            $this->current_locale = $conf['locale'];
+        }
         if (isset($_POST['update_locale'])) {
             $conf['locale'] = $_POST['locale'];
             shn_config_database_update('locale', $_POST['locale']);
@@ -1047,11 +1063,11 @@ class adminModule extends shnModule {
     /* }}} */
 
     public function act_System_configuration() {
-        global $alt_conf, $alt_conf_check,$conf;
+        global $alt_conf, $alt_conf_check, $conf;
         require_once(APPROOT . 'conf/conf_meta.php');
 
         if (isset($_POST["submit"])) {
-           
+
             $this->conf = $conf;
             unset($_POST["submit"]);
 
@@ -1061,7 +1077,7 @@ class adminModule extends shnModule {
                     $_POST[$key] = false;
                 }
             }
-            
+
             foreach ($_POST as $key => $value) {
                 $conf[$key] = $value;
                 shn_config_database_update($key, $value);
@@ -1078,4 +1094,3 @@ class adminModule extends shnModule {
     }
 
 }
-

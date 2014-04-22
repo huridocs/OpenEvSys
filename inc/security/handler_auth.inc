@@ -50,6 +50,10 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
                     if (!empty($user->config)) {
                         $cfg = @json_decode($user->config, true);
                     }
+                    if ($cfg['locale']) {
+                       $conf['locale'] = $cfg['locale'];
+                    }
+    
                     if (!empty($cfg['security']['TSV']['method'])) {
                         $_SESSION['check_TSV'] = time();
                     }

@@ -59,7 +59,7 @@ class homeModule extends shnModule {
             $designation = $_POST['designation'];
             $email = $_POST['email'];
             $address = $_POST['address'];
-
+            $locale = $_POST['locale'];
 
 
 
@@ -77,12 +77,19 @@ class homeModule extends shnModule {
 
             if ($valide == true) {
 
-                //$user= new User();
-                //$user = UserHelper::loadFromUsername($username) ;
+                $user= new User();
+                $user = UserHelper::loadFromUsername($username) ;
                 //$user->loadUserProfile(); 
                 //$user->role = $role;
                 //$user->status =  $status;
-                //$user->Save();
+                $cfg = array();
+                if (!empty($user->config)) {
+                    $cfg = @json_decode($user->config, true);
+                }
+                $cfg['locale'] = $locale;
+                $user->config = json_encode($cfg);
+                
+                $user->Save();
 
                 $userProfile = UserProfileHelper::loadFromUsername($username);
 
@@ -94,15 +101,16 @@ class homeModule extends shnModule {
                 $userProfile->email = $email;
                 $userProfile->address = $address;
                 $userProfile->Save();
+                set_redirect_header('home', 'edit_user');
             }
         }
 
 
         if (isset($_SESSION['username'])) {
-            //$user = new User();
+            $user = new User();
             $userProfile = new UserProfile();
             $username = $_SESSION['username'];
-            //$user->Load("username='" . $username . "'");
+            $user->Load("username='" . $username . "'");
             $userProfile->Load("username='" . $username . "'");
 
             //$user_form['username']['extra_opts']['value'] = $user->getUserName();
@@ -116,6 +124,12 @@ class homeModule extends shnModule {
             $user_form['address']['extra_opts']['value'] = $userProfile->getAddress();
             //$user_form['role']['extra_opts']['value'] = $user->getUserType();
             //$user_form['status']['extra_opts']['value'] = $user->status;
+            if (!empty($user->config)) {
+                $cfg = @json_decode($user->config, true);
+                if ($cfg['locale']) {
+                    $user_form['locale']['extra_opts']['value'] = $cfg['locale'];
+                }
+            }
             $this->user_form = $user_form;
         }
 
@@ -183,15 +197,15 @@ class homeModule extends shnModule {
 
         if (isset($_POST['disable'])) {
             $user->disableTSV();
-        }elseif (isset($_POST['code'])) {
+        } elseif (isset($_POST['code'])) {
             $resp = $user->TSVSaveMGA($_POST['code']);
             if (!$resp) {
                 $this->wrongcode = true;
-            }else{
+            } else {
                 $this->changed = true;
             }
         }
-         $cfg = array();
+        $cfg = array();
         if (!empty($user->config)) {
             $cfg = @json_decode($user->config, true);
         }
@@ -199,7 +213,7 @@ class homeModule extends shnModule {
             $this->enabled = true;
         }
 
-        
+
         $this->url = $result['url'];
         $this->secret = $result['secret'];
     }
@@ -371,6 +385,28 @@ class homeModule extends shnModule {
     }
 
     public function act_download() {
+        global $conf;
+        $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;
+
+        $file = $_REQUEST['file'];
+        $file = str_replace("/", "", $file);
+        $file = str_replace("\\", "", $file);
+        if ($file && filesize($imagesfolder . $file)) {
+            header('Pragma: private');
+            header('Cache-control: private, must-revalidate');
+            header("Content-Type: application/octet-stream");
+            header("Content-Length: " . (string) (filesize($imagesfolder . $file)));
+            header('Content-Disposition: attachment; filename="' . ($file) . '"');
+            readfile($imagesfolder . $file);
+            exit;
+        } else {
+            //shnMessageQueue::addInformation('No attachment found to this document.');
+            //set_redirect_header('docu', 'view_document', null, null);
+        }
+        exit();
+    }
+
+    public function act_oe2wp() {
         global $conf;
         $imagesfolder = $conf['media_dir'] . "filemanager" . DS; //WWWWROOT . "images" . DS . "uploads" . DS;
 

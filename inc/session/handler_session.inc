@@ -61,3 +61,15 @@ if($_SESSION["t2"]+$conf['session_timeout']*60<$t1&&isset($_SESSION['username'])
 
 $_SESSION["t2"]=time();
 
+if(isset($_SESSION['username'])){
+    global $global;
+    $results = $global['db']->GetRow("select * from user where username ='" . $_SESSION['username'] ."'");
+    if (!empty($results['config'])) {
+        $cfg = @json_decode($results['config'], true);
+        if ($cfg['locale']) {
+            $conf['locale'] = $cfg['locale'];
+        }
+    }
+     
+}
+
