@@ -261,31 +261,64 @@ class SearchResultGenerator {
                 switch ($condition['operator']) {
                     case 'sub':
                         //var_dump($value);exit;
-                        
-                        
+
+
                         $sql = "SELECT max(m.term_level) from mt_vocab m WHERE m.list_code = (select m2.list_code from mt_vocab m2 where vocab_number ='$value')";
-    $depth = (int)$global['db']->GetOne($sql);
-    
-    $sql = array();
-    $sqllevel = "'$value'";
-    $vocList = array();
-        
-    if($depth){
-        for ($i = 1; $i <= $depth; $i++) {
-            $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
-            $sql[] = $sqllevel;
-        }
-        //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
-        $sql = "select vocab_number from  (".implode(" union ", $sql).") a ";
-        //$vocList = $global['db']->GetOne($sql);
-        $res = $global['db']->Execute($sql);
-        foreach($res as $v){
-            $vocList[] = "'".$v['vocab_number']."'";
-        }
-    }
-    $vocList[] = "'$value'";
-    $conditionString = " $fieldAlias  in (".implode(",",$vocList).") ";
-                        
+                        $depth = (int) $global['db']->GetOne($sql);
+
+                        $sql = array();
+                        $sqllevel = "'$value'";
+                        $vocList = array();
+
+                        if ($depth) {
+                            for ($i = 1; $i <= $depth; $i++) {
+                                $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
+                                $sql[] = $sqllevel;
+                            }
+                            //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
+                            $sql = "select vocab_number from  (" . implode(" union ", $sql) . ") a ";
+                            //$vocList = $global['db']->GetOne($sql);
+                            $res = $global['db']->Execute($sql);
+                            foreach ($res as $v) {
+                                $vocList[] = "'" . $v['vocab_number'] . "'";
+                            }
+                        }
+                        $vocList[] = "'$value'";
+                        $conditionString = " $fieldAlias  in (" . implode(",", $vocList) . ") ";
+
+                        break;
+                    case 'subin':
+                        //var_dump($value);exit;
+                        $values = explode(",", $value);
+                        $vocList = array();
+                        $sql = array();
+
+                        foreach ($values as $value) {
+                            $sqlq = "SELECT max(m.term_level) from mt_vocab m WHERE m.list_code = (select m2.list_code from mt_vocab m2 where vocab_number ='$value')";
+                            $depth = (int) $global['db']->GetOne($sqlq);
+
+                            $sqllevel = "'$value'";
+
+                            if ($depth) {
+                                for ($i = 1; $i <= $depth; $i++) {
+                                    $sqllevel = "select vocab_number from  mt_vocab mt$i where  mt$i.parent_vocab_number in (" . $sqllevel . ")";
+                                    $sql[] = $sqllevel;
+                                }
+                                //$sql = "select GROUP_CONCAT(DISTINCT vocab_number SEPARATOR \"' , '\") from  (".implode(" union ", $sql).") a ";
+                            }
+                            $vocList[] = "'$value'";
+                        }
+                        if ($sql) {
+                            $sql = "select vocab_number from  (" . implode(" union ", $sql) . ") a ";
+                            //$vocList = $global['db']->GetOne($sql);
+                            $res = $global['db']->Execute($sql);
+                            foreach ($res as $v) {
+                                $vocList[] = "'" . $v['vocab_number'] . "'";
+                            }
+                        }
+                        if ($vocList) {
+                            $conditionString = " $fieldAlias  in (" . implode(",", $vocList) . ") ";
+                        }
                         break;
                     case '=':
                         $conditionString = " $fieldAlias = '$value'";
@@ -298,6 +331,9 @@ class SearchResultGenerator {
                 switch ($condition['operator']) {
                     case '=':
                         $conditionString = " $fieldAlias = '$value'";
+                        break;
+                    case 'in':
+                        $conditionString = " $fieldAlias in($value)";
                         break;
                     default:
                         $conditionString = " $fieldAlias = '$value'";
@@ -422,7 +458,7 @@ class SearchResultGenerator {
             if (isset($_GET['sSortDir_0'])) {
                 $orderDesc = $_GET['sSortDir_0'];
             }
-           
+
             $entity = $orderfield['entity'];
             $fieldName = $orderfield['field'];
             $entityForm = $this->getEntityArray($entity);
@@ -455,7 +491,7 @@ class SearchResultGenerator {
             $formField['map']['entity'] = $entityType;
         }
         $entityField = $formField['map']['entity'];
-        
+
         if ($formField['map']['mlt']) {
             $fieldSqlArray = $this->mtJoin($formField, $type);
             $entityField = $fieldSqlArray['field'];

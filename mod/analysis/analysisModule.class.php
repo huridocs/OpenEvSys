@@ -149,8 +149,6 @@ class analysisModule extends shnModule {
         }
     }
 
-   
-
     /* {{{ Query Functions */
 
     public function act_save_query() {
@@ -914,13 +912,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         switch ($fieldArray['type']) {
             case 'hidden' :
-                if($conf['subbrowse']['biography_list'] && $fieldArray['map']['entity']=='biographic_details' && $fieldArray['map']['field']=='person') {
+                if ($conf['subbrowse']['biography_list'] && $fieldArray['map']['entity'] == 'biographic_details' && $fieldArray['map']['field'] == 'person') {
                     $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " = '$dataArray[$fieldName]'";
-                
-                }else{
-                   $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " LIKE  '%$dataArray[$fieldName]%'";
-                 
-                }                
+                } else {
+                    $condition = $fieldArray['map']['entity'] . '.' . $fieldArray['map']['field'] . " LIKE  '%$dataArray[$fieldName]%'";
+                }
                 //return $condition;
                 break;
             case 'textarea':
@@ -1218,14 +1214,15 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         $searchSql = new SearchResultGenerator();
         $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-       //var_dump($_GET['query'],$sqlArray['result']);exit;
+        //var_dump($_GET['query'],$sqlArray['result']);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
         //var_dump($sqlArray['result']);exit;
         try {
             $res_count = $global['db']->Execute($count_query);
         } catch (Exception $e) {
-            $response->error = "error"; echo $e->getMessage();
+            $response->error = "error";
+            echo $e->getMessage();
             $res_count = null;
         }
 
@@ -1448,37 +1445,35 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $ents = array();
             $additionalFields = array();
             if (count((array) $searchparams->selected_terms)) {
+                $fieldCounts = array();
                 foreach ($searchparams->selected_terms as $entity => $fields) {
                     foreach ($fields as $field => $terms) {
-                        $i = 1;
-                        foreach ($terms as $term) {
-                            $ents[] = $entity;
-                            $condition = new stdClass;
-                            $condition->entity = $entity;
-                            $condition->field = $field;
-                            if ($domaindata->$entity->ac_type) {
-                                $selEntity2 = $domaindata->$entity->ac_type;
-                            }else{
-                                $selEntity2 = $entity;
-                            }
-                            if($domaindata->$selEntity2->fields->$field->field_type == "mt_tree"){
-                                $condition->operator = "sub";
-                            }else{
-                                $condition->operator = "=";
-                            }
-                            $condition->value = $term;
-                            if ($i == count($terms)) {
-                                $condition->link = "and";
-                            } else {
-                                $condition->link = "or";
-                            }
-                            $query->conditions[] = $condition;
-                            $i++;
+                        if (!$terms) {
+                            continue;
                         }
+                        $ents[] = $entity;
+                        if ($domaindata->$entity->ac_type) {
+                            $selEntity2 = $domaindata->$entity->ac_type;
+                        } else {
+                            $selEntity2 = $entity;
+                        }
+                        $condition = new stdClass;
+                        $condition->entity = $entity;
+                        $condition->field = $field;
+
+                        $condition->operator = "in";
+                        $condition->value = implode(",", $terms);
+                        $condition->link = "and";
+
+                        if ($domaindata->$selEntity2->fields->$field->field_type == "mt_tree") {
+                            $condition->operator = "subin";
+                        } else {
+                            $condition->operator = "in";
+                        }
+                        $query->conditions[] = $condition;
                     }
                 }
             }
-
             $selEntity = $selEntityOriginal = $searchparams->entities[0];
             //var_dump($selEntity);exit;
             if ($domaindata->$selEntity->ac_type) {
@@ -1523,8 +1518,15 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     if ($domaindata->$entt->ac_type) {
                         $selEntt = $domaindata->$entt->ac_type;
                     }
+                    $fields = (array) $domaindata->$selEntt;
                     $f = (array) $domaindata->$selEntt->fields;
-                    $f = array_shift($f);
+                    $pkey = get_primary_key($selEntt);
+                    if ($f[$pkey]) {
+                        $f = $f[$pkey];
+                    } else {
+                        $f = array_shift($f);
+                    }
+
                     $condition->entity = $entt;
                     $condition->field = $f->value;
                     $condition->operator = "contains";
@@ -1532,6 +1534,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     $query->conditions[] = $condition;
                 }
             }
+
             foreach ($ents as $ent) {
                 $recField = get_primary_key($ent);
                 $sel = new stdClass;
@@ -1608,7 +1611,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
 
             $records[0] = $fieldTitles;
-//var_dump($query->select);exit;
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
             
@@ -1886,7 +1888,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                             $count = count($data_array);
                             for ($i = 0; $i < $count;) {
                                 $element1 = $data_array[$i];
-                                
+
                                 $label = $element1['label'];
                                 if (isset($facetcounts[$element1['vocab_number']])) {
                                     $label .= " (" . $facetcounts[$element1['vocab_number']] . ")";
@@ -1896,7 +1898,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                                     'label' => $label,
                                     'level' => (int) $element1["term_level"]);
 
-                               $i++;
+                                $i++;
                             }
 
 
