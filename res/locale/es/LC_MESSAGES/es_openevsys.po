@@ -935,9 +935,6 @@ msgstr "es vacío"
 msgid "IS_REQUIRED"
 msgstr "Es obligatorio"
 #: ----
-msgid "KEY"
-msgstr "ES"
-#: ----
 msgid "KILLING"
 msgstr "Muertes y asesinatos"
 #: ----
@@ -1951,9 +1948,6 @@ msgstr "Árbol"
 #: ----
 msgid "Multivalue Tree"
 msgstr "Árbol de varios valores"
-#: ----
-msgid ""
-msgstr ""
 #: ----
 msgid "Multivalue Select"
 msgstr "Seleccionar varios valores"

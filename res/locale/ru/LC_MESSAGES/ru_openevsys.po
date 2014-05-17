@@ -1,0 +1,2232 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "Контроллер не найден"
+#: ----
+msgid "_DAY_S__"
+msgstr "День (дни):"
+#: ----
+msgid "_MONTH_S__"
+msgstr "Месяц(ы):"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "1-й уровень"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "2-й уровень"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "3-й уровень"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "Ошибка 404: Страница не найдена"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "4-й уровень"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "5-й уровень"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "6-й уровень"
+#: ----
+msgid "ACL_MODE"
+msgstr "Режим списка управления доступом"
+#: ----
+msgid "ACT"
+msgstr "Акт"
+#: ----
+msgid "ACT_"
+msgstr "Акт"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "Данные об акте"
+#: ----
+msgid "ACT_S_"
+msgstr "Акт(ы)"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "Форма поиска акта"
+#: ----
+msgid "ACTION"
+msgstr "Действие"
+#: ----
+msgid "ACTIONS"
+msgstr "Действия"
+#: ----
+msgid "ACTIVATED"
+msgstr "Активированные"
+#: ----
+msgid "ACTS"
+msgstr "Акты"
+#: ----
+msgid "ADD_ACT"
+msgstr "Добавить акт"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "Добавить дополнительные данные"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "Добавить дополнительные данные для"
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "Добавить адрес"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "Добавить биографические данные"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "Добавить цепочку событий"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "Добавить информацию о событии"
+#: ----
+msgid "ADD_FIELD"
+msgstr "Добавить поле"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "Добавить поле в"
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "Добавить поля в результаты поиска"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "Добавить информацию"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "Добавить вмешивающуюся сторону"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "Добавить вмешательство"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "Добавить вмешательства"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "Добавить участие"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "Добавить язык"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "Добавить других правонарушителей"
+#: ----
+msgid "ADD_NEW"
+msgstr "Добавить новый"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "Добавить новый документ"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "Добавить новое событие"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "Добавить новое поле"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "Добавить нового человека"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "Добавить нового пользователя"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "Добавить правонарушителя"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "Добавить правонарушителей"
+#: ----
+msgid "ADD_ROLE"
+msgstr "Добавить роль"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "Добавить источник"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "Добавить подтверждающий(е) документ(ы)"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "Добавить жертву"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "Добавить жертв и правонарушителей к этому событию"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "Добавляется адрес…"
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "Добавляется информация о событии"
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "Добавляется адрес человека…"
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "Добавляется информация о человеке…"
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "Тип дополнительной информации"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "Дополнительная информация"
+#: ----
+msgid "ADDRESS"
+msgstr "Адрес"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "Адрес человека"
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "Тип адреса"
+#: ----
+msgid "ADMIN"
+msgstr "Админ"
+#: ----
+msgid "ADVANCED"
+msgstr "Расширенный"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "Расширенный поиск"
+#: ----
+msgid "AFTER"
+msgstr "после"
+#: ----
+msgid "AGAINST"
+msgstr "против"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "Все колонки были сброшены до их первоначальных значений."
+#: ----
+msgid "ANALYSIS"
+msgstr "Анализ"
+#: ----
+msgid "AND"
+msgstr "И"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "Применить изменения без возможности восстановления"
+#: ----
+msgid "ARREST"
+msgstr "Арест"
+#: ----
+msgid "AT"
+msgstr "в"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "в или после"
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "в или до"
+#: ----
+msgid "AUDIT"
+msgstr "Аудит"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "Журнал аудита"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "Подробности журнала аудита не доступны для данного события"
+#: ----
+msgid "BACK"
+msgstr "Назад"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "Назад к просмотру события"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "Назад к просмотру человека"
+#: ----
+msgid "BASIC"
+msgstr "Обычный"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "Обычный поиск"
+#: ----
+msgid "BEFORE"
+msgstr "до"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "Биографические данные"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "Биографические данные"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "Биографические данные."
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "Биографические данные"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "Выбрать документ(ы)"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "Выбрать событие"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "Выбрать события"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "Выбрать человека (людей)"
+#: ----
+msgid "BY_WHOM"
+msgstr "Кем"
+#: ----
+msgid "CANCEL"
+msgstr "Отменить"
+#: ----
+msgid "CELLULAR"
+msgstr "Мобильный телефон"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "Цепочка событий"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "Цепочка событий"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "Цепочка событий"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "Цепочка событий не существует"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "Цепочка событий"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "Цепочка событий"
+#: ----
+msgid "CHANGE"
+msgstr "Изменить"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "Изменить тип дополнительных данных"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "Изменить пароль"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "Изменить просмотр"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "Выберите действие"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "Выберите файл для загрузки"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "Выберите начальную точку"
+#: ----
+msgid "CLARIFY"
+msgstr "Пояснить"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "Поясняющая заметка"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "Поясняющие заметки"
+#: ----
+msgid "CLEAR"
+msgstr "Очистить"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "Нажмите, чтобы загрузить файл событий XML, содержащий все записи в этой OpenEvSys."
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "Нажмите, чтобы выбрать вариант"
+#: ----
+msgid "CLOSE"
+msgstr "Закрыть"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "Столбец сброшен до начального состояния."
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "Формы комбинированного поиска"
+#: ----
+msgid "COMPILE"
+msgstr "Составить"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "Настроить переменную"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "Подтвердить новый пароль"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "Подтвердить пароль"
+#: ----
+msgid "CONTAINS"
+msgstr "содержит"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "Контекстная информация"
+#: ----
+msgid "CONTINUE"
+msgstr "Продолжить"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "Продолжить редактирование данных этого документа"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "Продолжить редактирование записи этой цепочки событий"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "Продолжить редактирование записи этого события"
+#: ----
+msgid "COUNT"
+msgstr "Посчитать"
+#: ----
+msgid "COUNTRY"
+msgstr "Страна"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "Создать отчет из этих результатов"
+#: ----
+msgid "CREATED_BY"
+msgstr "Создан"
+#: ----
+msgid "CREATED_DATE"
+msgstr "Дата создания"
+#: ----
+msgid "CREATOR"
+msgstr "Создатель"
+#: ----
+msgid "CSV"
+msgstr "CSV"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "Текущий пароль"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "Текущие настройки"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "Текущее значение"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "Обмен данными"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "Ошибка базы данных"
+#: ----
+msgid "DATE"
+msgstr "Дата"
+#: ----
+msgid "DATE_CREATED"
+msgstr "Дата создания"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "Поле даты"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "Дата вмешательства"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "Дата материалов источника"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "Необходима дата, Неверная дата"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "Дата добавления"
+#: ----
+msgid "DEFINITION"
+msgstr "Определение"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "Степень участия"
+#: ----
+msgid "DELETE"
+msgstr "Удалить"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "Удалить дополнительную информацию"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "Удалить документ"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "Удалить это событие"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "Удалить этого человека"
+#: ----
+msgid "DESCRIPTION"
+msgstr "Описание"
+#: ----
+msgid "DESIGNATION"
+msgstr "Обозначение"
+#: ----
+msgid "DESTRUCTION"
+msgstr "Уничтожение"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "Отключить помощь"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "Отключить интерактивный перевод"
+#: ----
+msgid "DISABLED"
+msgstr "Отключено"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "Вы хотите удалить дополнительные данные?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "Вы хотите удалить выделенный(е) адрес(а)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "Вы хотите удалить выделенные биографические данные?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "Вы хотите удалить выделенную цепочку событий?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "Вы хотите удалить выделенную информацию?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "Вы хотите удалить выделенное(ые) вмешательства?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "Вы хотите удалить выделенный(ые) термин(ы) микро-тезауруса?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "Вы хотите удалить выделенные запросы?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "Вы хотите удалить выделенную(ые) запись(и)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "Вы хотите удалить выделенного(ых) пользователя(ей)?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "Вы хотите удалить этот документ?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "Вы хотите удалить это событие?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "Вы хотите удалить этого человека?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "Вы хотите удалить существующее вложение для этого документа?"
+#: ----
+msgid "DOCUMENT"
+msgstr "Документ"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "Данные документов"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "Документ не существует"
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "Форма поиска документа"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "Название документа"
+#: ----
+msgid "DOCUMENTS"
+msgstr "Документы"
+#: ----
+msgid "DOWNLOAD"
+msgstr "Скачать"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "Скачать документ"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "Скачать отчет об ошибках"
+#: ----
+msgid "E_MAIL"
+msgstr "E-mail"
+#: ----
+msgid "EDIT"
+msgstr "Редактировать"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "Редактировать дополнительные данные"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "Редактировать биографические данные"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "Редактировать данные"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "Редактировать короткое описание события"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "Редактировать профиль"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "Редактировать этот акт"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "Редактировать этот адрес"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "Редактировать эти биографические данные"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "Редактировать эту цепочку событий"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "Редактировать это событие"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "Редактировать эту информацию"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "Редактировать эту вмешивающуюся сторону"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "Редактировать это вмешательство"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "Редактировать это участие"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "Редактировать этого правонарушителя"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "Редактировать этого человека"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "Редактировать эту жертву"
+#: ----
+msgid "EDIT_USER"
+msgstr "Редактировать пользователя"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "Редактировать адрес человека…"
+#: ----
+msgid "EMAIL"
+msgstr "E-mail"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "Необходимо указать  правильный E-mail, неправильный адрес электронной почты"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "Включить помощь"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "Включить интерактивный перевод"
+#: ----
+msgid "END_DATE"
+msgstr "Дата окончания"
+#: ----
+msgid "ENTITY"
+msgstr "Объект"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "Права по объектам"
+#: ----
+msgid "ENTRY"
+msgstr "Добавление"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "Ошибка при обновлении сервера."
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "Ошибка при создании huriterm."
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "Ошибка при сохранении файла. Не удается сохранить файл."
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "Ошибка при создании поля."
+#: ----
+msgid "EVENT"
+msgstr "Событие"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "Описание события"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "Событие не существует."
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "Форма поиска событий"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "Стандартный формат событий XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "Название события"
+#: ----
+msgid "EVENTS"
+msgstr "События"
+#: ----
+msgid "EXAMPLE"
+msgstr "Пример"
+#: ----
+msgid "EXAMPLES"
+msgstr "Примеры"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "Существующие поля"
+#: ----
+msgid "EXPORT"
+msgstr "Экспорт"
+#: ----
+msgid "EXPORT__"
+msgstr "Экспорт :"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "Дата экспорта"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "Экспортировать события"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "Экспортировать экземпляр"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "Экспортировать эту таблицу"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "Время экспорта"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "Не удалось записать файл на диск."
+#: ----
+msgid "FALSE"
+msgstr "ложь"
+#: ----
+msgid "FAX"
+msgstr "Факс"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "Поле успешно создано."
+#: ----
+msgid "FIELD_LABEL"
+msgstr "Метка поля"
+#: ----
+msgid "FIELD_NAME"
+msgstr "Название поля"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "Имя поля, номер поля, а метка поля не могут быть пустыми. Пожалуйста, введите несколько значений"
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "Такое название поля уже существует. Поажлуйста, введите другое имя"
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "Номер поля"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "Номер поля уже существует. Пожалуйста, выберите другое число"
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "Номера полей, заканчивающиеся на цифры от 60 до 80 зарезервированы для полей управления. Используйте номер вне этого диапазона."
+#: ----
+msgid "FIELD_RESET"
+msgstr "Сброс поля"
+#: ----
+msgid "FIELD_S_"
+msgstr "Поле(я)"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "Тип поля"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "Файл недоступен для записи."
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "Загрузка файла остановлена расширением."
+#: ----
+msgid "FILTER"
+msgstr "Фильтр"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "опции и результаты фильтра"
+#: ----
+msgid "FINAL_DATE"
+msgstr "Дата окончания"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "Найти документы, загруженные на OpenEvsys, и посмотреть, как они были связаны в поддержку других форматов"
+#: ----
+msgid "FINISH"
+msgstr "Закончить"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "Готово! Вы можете сделать следующее"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "Готово! Вы можете сделать следующее:"
+#: ----
+msgid "FIRST_NAME"
+msgstr "Имя"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "Папка уже существует! Дайте ей другое имя."
+#: ----
+msgid "FOLDER_NAME"
+msgstr "Имя папки"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "Следующие поля не могут быть пустыми"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "Следующий huriterm уже существует."
+#: ----
+msgid "FORCE_DELETE"
+msgstr "Принудительное удаление"
+#: ----
+msgid "FORM"
+msgstr "Форма"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "Настройки формы"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "Дополнительная информация"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "Перейти к верхнему уровню"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "Группировать по дням"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "Группировать по месяцам"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "Группировать по годам"
+#: ----
+msgid "GUIDELINES"
+msgstr "Указания"
+#: ----
+msgid "HELP_TEXT"
+msgstr "Текст подсказки"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "Свернуть форму адреса"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "Свернуть форму поиска"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "Скрыть подтверждающий(е) документ(ы)"
+#: ----
+msgid "HIDE_TREE"
+msgstr "Скрыть дерево"
+#: ----
+msgid "HOW_WAS_"
+msgstr "Как был"
+#: ----
+msgid "HURICODE"
+msgstr "Huricode"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huriterm не может быть пустым."
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "Если событие/личность не подлежат разглашению (конфиденциально)?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "Если Вы достигли этой страницы, значит Вы не имеете доступа к любому из модулей в OpenEvsys. Пожалуйста, обратитесь к системному администратору для более подробной информации."
+#: ----
+msgid "IMPACT"
+msgstr "Последствия"
+#: ----
+msgid "IMPORT"
+msgstr "Импортировать"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "Импортировать дату"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "Импортировать события"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "Импортировать журнал"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "Подробности журнала импорта недоступны"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "Импортировать время"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "в интервале"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "В результатах поиска"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "Таблица происшествий"
+#: ----
+msgid "INFORMATION"
+msgstr "Информация"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "Информация о"
+#: ----
+msgid "INFORMATION_S_"
+msgstr "Информация(и)"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "Форма поиска информации"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "Начальная дата"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "Вмешивающиеся стороны"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "Вмешивающаяся сторона"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "Форма поиска вмешивающейся стороны"
+#: ----
+msgid "INTERVENTION"
+msgstr "Вмешательство"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "Вмешательство(а)"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "Форма посика вмешательств"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "Вмешательства"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "Неправильный E-mail"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "Неправильный адрес электронной почты"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "Неверный Huricode, это должен быть 12-значный номер."
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Неверный идентификатор пользователя или пароль, попробуйте еще раз."
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Неверное имя пользователя или пароль! Пожалуйста, попробуйте еще раз."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "участвовал в"
+#: ----
+msgid "INVOLVEMENT"
+msgstr "Участие"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "Данные об участии"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "Участие(я)"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "Форма поиска участия"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "Участия"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "является элементом"
+#: ----
+msgid "IS_EMPTY"
+msgstr "пустой"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "Обязательно"
+#: ----
+msgid "KILLING"
+msgstr "Убийство"
+#: ----
+msgid "LABEL"
+msgstr "Метка"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "Метка не может быть пустой. Введите значение."
+#: ----
+msgid "LABEL_IN_"
+msgstr "Метка в"
+#: ----
+msgid "LABEL_S_"
+msgstr "Метка(и)"
+#: ----
+msgid "LABELS"
+msgstr "Метки"
+#: ----
+msgid "LANGUAGE"
+msgstr "Язык"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "Папка языка не доступна для записи."
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "Язык удален"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "Язык успешно создан."
+#: ----
+msgid "LAST_NAME"
+msgstr "Фамилия"
+#: ----
+msgid "LIKE"
+msgstr "как"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "Связан когда"
+#: ----
+msgid "LINKS"
+msgstr "связи"
+#: ----
+msgid "LOCALIZATION"
+msgstr "Локализация"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "Журнал изменений данных для этого человека недоступен"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "Управление языками"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "Сообщения сохранены успешно."
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "Микро-тезаурусы"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "Настройки микро-тезаурусов"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "Термины микро-тезаурусов"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "Отсутствует папка временных файлов."
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "Измененное значение"
+#: ----
+msgid "MODULE"
+msgstr "Модуль"
+#: ----
+msgid "MODULES"
+msgstr "Модули"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "Статус наблюдения"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "Еще об этом событии"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "Еще об этом человеке"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "Мои настройки"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "Тип данных mysql"
+#: ----
+msgid "NAME"
+msgstr "Имя"
+#: ----
+msgid "NEW"
+msgstr "Новый"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "Новый документ"
+#: ----
+msgid "NEW_EVENT"
+msgstr "Новое событие"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "Новый пароль"
+#: ----
+msgid "NEW_PERSON"
+msgstr "Новый человек"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "Новое название роли"
+#: ----
+msgid "NEXT"
+msgstr "Следующий"
+#: ----
+msgid "NO"
+msgstr "Нет"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "Пока что нет сохраненных запросов."
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "Не найдено ни одной записи."
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "Ни одна запись не была выбрана."
+#: ----
+msgid "NOT_="
+msgstr "не ="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "Неправильный тип поля. Попробуйте снова"
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "не содержит"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "не в интервале"
+#: ----
+msgid "NOT_LIKE"
+msgstr "не как"
+#: ----
+msgid "NOT_ON"
+msgstr "не в"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "Необходимо ввести число, Неправильное число"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys успешно импортировал данные."
+#: ----
+msgid "OR"
+msgstr "ИЛИ"
+#: ----
+msgid "ORDER"
+msgstr "Упорядочить"
+#: ----
+msgid "ORGANIZATION"
+msgstr "Организация"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "Исходные результаты поиска"
+#: ----
+msgid "PAGE__"
+msgstr "Страница :"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "Вывод результатов по страницам"
+#: ----
+msgid "PASSWORD"
+msgstr "Пароль"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "Неправильный пароль"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "Пароль не совпадает"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "Необходим пароль"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "В доступе отказано"
+#: ----
+msgid "PERMISSIONS"
+msgstr "Права"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "Права"
+#: ----
+msgid "PERMISSONS"
+msgstr "Права"
+#: ----
+msgid "PERPETRATOR"
+msgstr "Правонарушитель"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "Имя (имена) правонарушителя(й)"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "Форма поиска правонарушителей"
+#: ----
+msgid "PERPETRATORS"
+msgstr "Правонарушители"
+#: ----
+msgid "PERSON"
+msgstr "Человек"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "Адрес(а) человека"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "Данные человека"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "Человек не существует."
+#: ----
+msgid "PERSON_NAME"
+msgstr "Имя человека"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "Запись(и) человека"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "Записи человека"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "Не введена дата рождения человека"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "Форма поиска человека"
+#: ----
+msgid "PERSONS"
+msgstr "Люди"
+#: ----
+msgid "PHONE"
+msgstr "Телефон"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "Необходим номер телефона, Неверный номер телефона"
+#: ----
+msgid "PICTURE"
+msgstr "Картинка"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "Пожалуйста, добавить условие перед поиском."
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "Пожалуйста, добавить условие в поле счетчика для подсчета."
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "Пожалуйста, выберите пользователя для удаления"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "Пожалуйста, введите существующего пользователя."
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "Пожалуйста, загрузите корректный файл формата OpenEvSys XML."
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "Пожалуйста, используйте меню \"Мои настройки\" в верхнем правом углу, чтобы редактировать свои данные."
+#: ----
+msgid "PREVIOUS"
+msgstr "Предыдущий"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "Распечатать это событие"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "Распечатать эту страницу"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "Распечатать этого человека"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "Версия для печати"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "Запросы успешно удалены."
+#: ----
+msgid "QUERY_ID"
+msgstr "Идентификатор запроса"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "Запрос успешно сохранен."
+#: ----
+msgid "REC_NO"
+msgstr "№ п/п"
+#: ----
+msgid "RECORD_NO"
+msgstr "№ записи"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "Номер записи"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "Тип записи"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "Записей на страницу"
+#: ----
+msgid "REGEX"
+msgstr "регулярные выражения (regex)"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "Связанное событие"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "Название связанного события"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "Контактное лицо"
+#: ----
+msgid "REMARKS"
+msgstr "Пометки"
+#: ----
+msgid "REMOVE"
+msgstr "Удалить"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "Удалить \"Пояснить\""
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "Удалить условие"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "Удалить язык"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "Убрать выделение"
+#: ----
+msgid "REPORT"
+msgstr "Отчет"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "Запрашиваемая запись об акте не существует."
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "Запрашиваемая информация не существует."
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "Запрашиваемое вмешательство не существует."
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "Запрашиваемое участие не существует."
+#: ----
+msgid "RESET"
+msgstr "Обнулить"
+#: ----
+msgid "RESET_ALL"
+msgstr "Обнулить все"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "Только для роли"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "Только для пользователя"
+#: ----
+msgid "ROLE"
+msgstr "Роль"
+#: ----
+msgid "ROLE_LIST"
+msgstr "Список ролей"
+#: ----
+msgid "ROLES"
+msgstr "Роли"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "Роли / Права доступа по модулям"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "Роли &amp; Права доступа по модулям"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Роли с правами доступа к этому событию"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Роли с правами доступа к этому человеку"
+#: ----
+msgid "SAVE"
+msgstr "Сохранить"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "Сохранить адрес"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "Сохранить документ"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "Сохранить текст подсказки"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "Сохранить новые поля"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "Сохранить запрос"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "Сохранить это запрос"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "Сохранить это запрос в таком порядке"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "Сохраненные запросы"
+#: ----
+msgid "SEARCH"
+msgstr "Поиск"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "Поиск дополнительной информации, относящейся к конкретным видам актов."
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "Условия поиска"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "Форма поиска"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "Поиск в базе данных"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "Поиск информации по событиям"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "Поиск информации о лицах, которые совершили акты направленные против жертв."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "Поиск информации о лицах, которые тем или иным способом вмешались в события."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "Поиск информации о лицах, которые предоставили информацию."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "Поиск информации о лицах, как отдельных, так и группах или организациях."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "Поиск информации о лицах, которые стали жертвами."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "Поиск информации об актах совершенных в отношении жертв."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "Поиск информации о данных, предоставленных источниками."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "Поиск информации о том, каким образом правонарушители участвовали в конкретных актах"
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "Поиск записей о том, как люди вмешалися в события или от имени жертв."
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "Отчет о поиске"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "Результаты поиска"
+#: ----
+msgid "SEARCHABLE"
+msgstr "С возможностью поиска"
+#: ----
+msgid "SECTION"
+msgstr "Секция"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "Смотреть полный размер"
+#: ----
+msgid "SELECT"
+msgstr "Выбрать"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "Выбрать формат"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "Выбрать микро-тезаурус"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "Выбрать объект"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "Выбрать поле"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Выбрать поля из"
+#: ----
+msgid "SELECT_ROLE"
+msgstr "Выбрать роль"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "Выбрать дополнительный объект"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "Выбрать варианты дерева"
+#: ----
+msgid "SET"
+msgstr "Задать"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "Применить режим ACL"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "Задать язык"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "Задать системный язык"
+#: ----
+msgid "SHARE"
+msgstr "Поделиться"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "Показать форму адреса"
+#: ----
+msgid "SHOW_ALL"
+msgstr "Показать все"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "Показать форму поиска"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "Показать подтверждающий(е) документ(ы)"
+#: ----
+msgid "SIGN_IN"
+msgstr "Войти"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "Войти в OpenEvSys"
+#: ----
+msgid "SIGN_OUT"
+msgstr "Выйти"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "Возникли ошибки при импорте данных:"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "подобные"
+#: ----
+msgid "SOURCE"
+msgstr "Источник"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "Название источника"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "Форма поиска источников"
+#: ----
+msgid "SOURCES"
+msgstr "Источники"
+#: ----
+msgid "SPREADSHEET"
+msgstr "Таблица"
+#: ----
+msgid "START_DATE"
+msgstr "Дата начала"
+#: ----
+msgid "STATUS"
+msgstr "Состояние"
+#: ----
+msgid "SUBMIT"
+msgstr "Отправить"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "Подтверждающие документы"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "Конфигурация системы"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "Системная ошибка"
+#: ----
+msgid "TERM_IN"
+msgstr "Срок в"
+#: ----
+msgid "TERM_IN_"
+msgstr "Срок в"
+#: ----
+msgid "TEXT"
+msgstr "Текст"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "Текстовое поле с ограничением в 200 символов"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "Область текста без ограничений"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "Загруженный документ не был корректным документом XML."
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "Событие связано с"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "Старое вложение было обновлено с новым вложением файла."
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "У этого человека еще нет ролей!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "Два пароля отличаются"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "Размер загруженного файла превышает директиву MAX_FILE_SIZE, которая была указана в HTML форме."
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "Размер загруженного файла превышает директиву upload_max_filesize в php.ini."
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "Загруженный файл был загружен лишь частично."
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Пока еще нет документов. Вы должны их добавить!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Пока еще нет подтверждающих документов о событиях. Вы должны их добавить!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "К этому человеку еще не добавлен адрес. Вы должны его добавить!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "У этого человека еще нет биографических данных. Вы должны их добавить!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Еще нет информации о событии. Вы должны ее добавить! Нажмите кнопку \"Добавить новое событие\", чтобы добавить событие."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Еще нет информации о цепочки событий. Вы должны ее добавить!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Еще нет информации о вмешивающейся стороне. Вы должны ее добавить!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Еще нет информации об источнике и информации. Вы должны ее добавить!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "Еще нет информации о жертвах и правонарушителях. Вы должны ее добавить!"
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Еще нет информации о человеке. Вы должны ее добавить!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "Отметка времени"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "Для просмотра документа Вы должны сначала выбрать документ из списка документов."
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "Для просмотра человека Вы должны сначала выбрать человека из списка людей."
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "Для просмотра события Вы должны сначала выбрать событие из списка событий."
+#: ----
+msgid "TORTURE"
+msgstr "Пытки"
+#: ----
+msgid "TRANSLATE"
+msgstr "Перевести"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "Перевод не обновлен! Пожалуйста, дайте права доступа к каталогу и файлу в папке res/locale."
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "Перевод успешно обновлен."
+#: ----
+msgid "TRUE"
+msgstr "верно"
+#: ----
+msgid "TYPE"
+msgstr "Тип"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Напишите дату рождения только с помощью цифр!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Напишите месяц рождения только с помощью цифр!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "Тип акта"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "Тип цепочки событий"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "Тип вмешательства"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "Тип отношений"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Введите идентификатор пользователя в текстовом поле и нажмите \"Поделиться\", чтобы сделать это событие доступным для нужного пользователя."
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Введите идентификатор пользователя в текстовом поле и нажмите \"Поделиться\", чтобы сделать этого человека доступным для нужного пользователя."
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Напишите год рождения только с помощью цифр!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "Напишите год рождения полностью!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "Не удается удалить некоторые термины микро-тезауруса, потому что они уже используются в записях."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "Невозможно обнулить поле."
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "Невозможно обнулить поля."
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "Неизвестная ошибка загрузки."
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "Отсутствует имя запроса"
+#: ----
+msgid "UPDATE"
+msgstr "Обновить"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "Обновить список прав доступа"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "Обновить форму"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "Обновить права"
+#: ----
+msgid "UPLOAD"
+msgstr "Загрузить"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "Загрузить файл"
+#: ----
+msgid "USER"
+msgstr "Пользователь"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "Управление пользователями"
+#: ----
+msgid "USER_NAME"
+msgstr "Имя пользователя"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Пользователь не найден! Неверное имя пользователя или пароль! Пожалуйста, попробуйте еще раз."
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "Идентификатор пользователя не существует."
+#: ----
+msgid "USERNAME"
+msgstr "Имя пользователя"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "Имя пользователя уже существует, Используйте другое имя пользователя"
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "Имя пользователя не может быть пустым"
+#: ----
+msgid "USERS"
+msgstr "Пользователи"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Пользователи с правом доступа к этому событию"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Пользователи с правом доступа к этому человеку"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "Пользователи с правами"
+#: ----
+msgid "VALIDATION"
+msgstr "Подтверждение"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "Тип подтверждения"
+#: ----
+msgid "VERSION"
+msgstr "Версия"
+#: ----
+msgid "VICTIM"
+msgstr "Жертва"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "Имя жертвы"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "Форма поиска жертвы"
+#: ----
+msgid "VICTIMS"
+msgstr "Жертвы"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "Жертвы и правонарушители"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "Просмотреть запись об акте"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "Просмотреть адрес"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "Просмотреть биографические данные"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "Просмотреть запись о цепочке событий"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "Просмотреть документ"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "Просмотреть событие"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "Просмотреть запись о событии"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "Просмотреть запись об информации"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "Просмотреть запись о вмешивающейся стороне"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "Просмотреть запись о вмешательстве"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "Просмотреть запись о вмешательстве"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "Просмотреть запись о правонарушителе"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "Просмотреть человека"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "Просмотреть контактное лицо"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "Просмотреть запись об источнике"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "Просмотреть запись о жертве"
+#: ----
+msgid "VISIBILITY"
+msgstr "Видимость"
+#: ----
+msgid "VISIBLE"
+msgstr "Видимый"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "Видимый при выборе"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "Видимый в форме"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "Видимый в виде"
+#: ----
+msgid "WEB"
+msgstr "Интернет"
+#: ----
+msgid "WEBSITE"
+msgstr "Сайт"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "Что произошло с"
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "В чем заключается вмешательство?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "Кто несет ответственность за"
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "Кто является вмешивающейся стороной?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "Кто является источником?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "Кто является жертвой?"
+#: ----
+msgid "YEAR_S__"
+msgstr "Год(ы):"
+#: ----
+msgid "YES"
+msgstr "Да"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "Вы собираетесь удалить событие. Это означает, что вы удалите перечисленные ниже записи. Хотите продолжить?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "Вы не можете изменить права администратора."
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "Вы не можете удалять других пользователей с правами администратора."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "Вы не можете удалить учетную запись администратора."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "Вы не можете удалить язык по умолчанию"
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "Вы не можете удалить себя из списка пользователей."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "Вы не имеете прав для редактирования информации о других пользователях с правами администратора."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "Вы также выбрали некоторые термин(ы) верхнего уровня. Если Вы продолжите, зависимые от них термины также будут удалены."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "Вы должны заполнить это поле"
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "Вам необходимо выбрать объект перед подсчетом"
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "У вашего браузера отключены cookie! Пожалуйста, включите их"
+#: ----
+msgid "EXTENSIONS"
+msgstr "Расширения"
+#: ----
+msgid "ABOUT_OE"
+msgstr "Об OpenEvsys"
+#: ----
+msgid "AGPL"
+msgstr "лицензировано под AGPL v3"
+#: ----
+msgid "REQUIRED"
+msgstr "Обязательно"
+#: ----
+msgid "YES_CONFIDENTIALITY"
+msgstr "Да (для конфиденциальности)"
+#: ----
+msgid "NO_CONFIDENTIALITY"
+msgstr "Нет (для конфиденциальности)"
+#: ----
+msgid "ERROR_SERVER"
+msgstr "Сервер вернул ошибку, пожалуйста свяжитесь с администратором"
+#: ----
+msgid "NULL_ROWS"
+msgstr "Нулевые строки"
+#: ----
+msgid "PHONE_NO"
+msgstr "Номер телефона"
+#: ----
+msgid "NUMERICAL"
+msgstr "Числовое"
+#: ----
+msgid "ANALYST"
+msgstr "Аналитик"
+#: ----
+msgid "DATA_ENTRY"
+msgstr "Дата добавления"
+#: ----
+msgid "ENTITY_GROUPS"
+msgstr "Группы объектов"
+#: ----
+msgid "CREATE"
+msgstr "Создать"
+#: ----
+msgid "READ"
+msgstr "читать"
+#: ----
+msgid "LINKING"
+msgstr "Связующий"
+#: ----
+msgid "PRIMARY"
+msgstr "Первичный"
+#: ----
+msgid "SELECT_LANGUAGE"
+msgstr "Выберите язык"
+#: ----
+msgid "NO_ATTACHMENT"
+msgstr "Для этого документа нет прикрепленных файлов"
+#: ----
+msgid "BROWSE"
+msgstr "Обзор"
+#: ----
+msgid "ROWS"
+msgstr "Строка(и)"
+#: ----
+msgid "ADVANCED_SEARCH_REPORT"
+msgstr "Расширенный поиск отчетов"
+#: ----
+msgid "Address"
+msgstr "Адрес"
+#: ----
+msgid "latitude"
+msgstr "широта"
+#: ----
+msgid "longitude"
+msgstr "долгота"
+#: ----
+msgid "View"
+msgstr "Вид"
+#: ----
+msgid "Micro-thesauri created successfully"
+msgstr "Микро-тезаурус успешно создан"
+#: ----
+msgid "Radio field"
+msgstr "Радиокнопка"
+#: ----
+msgid "Geolocation"
+msgstr "Геолокация"
+#: ----
+msgid "User Select"
+msgstr "Выбор пользователя"
+#: ----
+msgid "Multivalue User Select"
+msgstr "Выбор пользователя по нескольким значениям"
+#: ----
+msgid "Tree"
+msgstr "Дерево"
+#: ----
+msgid "Multivalue Tree"
+msgstr "Дерево по нескольким значениям"
+#: ----
+msgid "Multivalue Select"
+msgstr "Выбор из нескольких значений"
+#: ----
+msgid "Please select items to perform action"
+msgstr "Пожалуйста, выберите что-нибудь, чтобы совершить действие."
+#: ----
+msgid "Dashboard"
+msgstr "Панель"
+#: ----
+msgid "Micro-thesauri cannot be empty"
+msgstr "Микротезаурусы не могут быть пустыми"
+#: ----
+msgid "Micro-thesauri name already exists"
+msgstr "Имя микротезаурусов уже существует"
+#: ----
+msgid "Login Information"
+msgstr "Информация для входа"
+#: ----
+msgid "Profile Information"
+msgstr "Информация о профиле"
+#: ----
+msgid "Print configuration"
+msgstr "Конфигурация принтера"
+#: ----
+msgid "Header for report print view"
+msgstr "Заголовок для просмотра печати отчета"
+#: ----
+msgid "Header for event print view"
+msgstr "Заголовок для просмотра печати события"
+#: ----
+msgid "Sidebar for event print view"
+msgstr "Боковая панель для просмотра печати события"
+#: ----
+msgid "Header for person print view"
+msgstr "Заголовок для просмотра печати человека"
+#: ----
+msgid "Sidebar for person print view"
+msgstr "Боковая панель для просмотра печати человека"
+#: ----
+msgid "Details"
+msgstr "Дополнительная информация"
+#: ----
+msgid "Add new term"
+msgstr "Добавить новый термин"
+#: ----
+msgid "Searchable in Analysis"
+msgstr "С возможностью поиска в анализе"
+#: ----
+msgid "Visible in Analysis"
+msgstr "Видимый в анализе"
+#: ----
+msgid "Add new Micro-thesauri"
+msgstr "Добавить новый микротезаурус"
+#: ----
+msgid "Select language"
+msgstr "Выберите язык"
+#: ----
+msgid "Header for login page"
+msgstr "Заголовок для страницы входа"
+#: ----
+msgid "Multivalue"
+msgstr "Несколько значений"
+#: ----
+msgid "Enabled"
+msgstr "Включено"
+#: ----
+msgid "Hide in case of"
+msgstr "Скрыть в случае"
+#: ----
+msgid "Set visible"
+msgstr "Сделать видимым"
+#: ----
+msgid "Disable"
+msgstr "Выключить"
+#: ----
+msgid "Apply"
+msgstr "Применить"
+#: ----
+msgid "Vocab number"
+msgstr "Номер в словаре"
+#: ----
+msgid "disabled"
+msgstr "выключено"
+#: ----
+msgid "Undefined"
+msgstr "Не определено"
+#: ----
+msgid "Load"
+msgstr "Загрузить"
+#: ----
+msgid "Select facets"
+msgstr "Выберите ячейки"
+#: ----
+msgid "Date range"
+msgstr "Диапазон дат"
+#: ----
+msgid "Timeline type"
+msgstr "Тип хронологии"
+#: ----
+msgid "DAY"
+msgstr "ДЕНЬ"
+#: ----
+msgid "MONTH"
+msgstr "МЕСЯЦ"
+#: ----
+msgid "YEAR"
+msgstr "ГОД"
+#: ----
+msgid "Total Count"
+msgstr "Всего"
+#: ----
+msgid "Added in last 30 days"
+msgstr "Добавлено за последние 30 дней"
+#: ----
+msgid "Most active users (new items)"
+msgstr "Самые активные пользователи (новые элементы)"
+#: ----
+msgid "User activity (edited items)"
+msgstr "Активность пользователя (редактированные элементы)"
+#: ----
+msgid "Recently deleted"
+msgstr "Недавно удаленные"
+#: ----
+msgid "No data available"
+msgstr "Данные отсутствуют"
+#: ----
+msgid "Add Perpetrator later"
+msgstr "Добавить правонарушителя позже"
+#: ----
+msgid "Save and Add More Perpetrators"
+msgstr "Сохранить и добавить еще правонарушителей"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Нет информации об акте Вы должны добавить ее. Нажмите кнопку \"Добавить новое событие\", чтобы добавить новое событие"
+#: ----
+msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Нет информации о вмешательстве, Вы должны добавить ее. Нажмите кнопку \"Добавить новое событие\", чтобы добавить новое событие"
+#: ----
+msgid "View person's roles"
+msgstr "Посмотреть роли человека"
+#: ----
+msgid "Duplicate"
+msgstr "Продублировать"
+#: ----
+msgid "Insert folder name:"
+msgstr "Вставьте имя папки:"
+#: ----
+msgid "Return to files list"
+msgstr "Вернуться к списку файлов"
+#: ----
+msgid "Preview"
+msgstr "Предварительный просмотр"
+#: ----
+msgid "Erase"
+msgstr "Удалить"
+#: ----
+msgid "Charts and map"
+msgstr "Графики и карта"
+#: ----
+msgid "Clear this selections"
+msgstr "Снимите этот выбор"
+#: ----
+msgid "of"
+msgstr "из"
+#: ----
+msgid "Not found"
+msgstr "Не найдено"
+#: ----
+msgid "Map"
+msgstr "Карта"
+#: ----
+msgid "Charts"
+msgstr "Графики"
+#: ----
+msgid "Results"
+msgstr "Результаты"
+#: ----
+msgid "Filters"
+msgstr "Фильтры"
+#: ----
+msgid "Security"
+msgstr "Безопасность"
+#: ----
+msgid "Top menu"
+msgstr "Главное меню"
+#: ----
+msgid "Top right menu"
+msgstr "Главное меню справа"
+#: ----
+msgid "Event menu"
+msgstr "Меню событий"
+#: ----
+msgid "Person menu"
+msgstr "Меню людей"
+#: ----
+msgid "Document menu"
+msgstr "Меню документов"
+#: ----
+msgid "Analysis menu"
+msgstr "Меню анализа"
+#: ----
+msgid "Preferences menu"
+msgstr "Меню предпочтений"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "reCAPTCHA введена неправильно."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Неправильный проверочный код. Пожалуйста, попробуйте еще раз."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Меню успешно сохранено."
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+#: ----
+msgid "Enabled successfully."
+msgstr "Успешно включено."
+#: ----
+msgid "Code"
+msgstr "Код"
+#: ----
+msgid "Menu"
+msgstr "Меню"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Нажмите, чтобы добавить пункт в меню"
+#: ----
+msgid "Number"
+msgstr "Номер"
+#: ----
+msgid "Term"
+msgstr "Термин"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Добавить микротезаурусы"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Перевести микротезаурусы"
+#: ----
+msgid "Language"
+msgstr "Язык"
+#: ----
+msgid "Event"
+msgstr "Событие"
+#: ----
+msgid "Select Event"
+msgstr "Выберите событие"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Интформации относительно акта ещё нет. Вам следует её добавить. Нажмите кнопку \"Добавить новое событие\""
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Пожалуйста, отметьте хотя бы одну галочку, чтобы совершить действие."
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Установите приложение Google Authenticator на свой телефон"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Откройте веб-браузер на своем телефоне."
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Перейти к m.google.com/authenticator"
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Скачайте и установите приложение Google Authenticator"
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Теперь откройте и настройте Google Authenticator."
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Отсканируйте нижеприведённый штрихкод, чтобы автоматически зарегистрировать приложение:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Или используйте нижеприведенный секретный ключ, чтобы зарегистрировать приложение вручную:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "После того как Вы вручную ввели и сохранили ключ, введите 6-значный код подтверждения из приложения Google Authenticator"
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Неправильный код. Попробуйте еще раз"

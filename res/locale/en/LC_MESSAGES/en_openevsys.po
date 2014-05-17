@@ -935,9 +935,6 @@ msgstr "is empty"
 msgid "IS_REQUIRED"
 msgstr "Is required"
 #: ----
-msgid "KEY"
-msgstr "EN"
-#: ----
 msgid "KILLING"
 msgstr "Killing"
 #: ----
@@ -1952,9 +1949,6 @@ msgstr "Tree"
 msgid "Multivalue Tree"
 msgstr "Multivalue Tree"
 #: ----
-msgid ""
-msgstr ""
-#: ----
 msgid "Multivalue Select"
 msgstr "Multivalue Select"
 #: ----
@@ -2205,7 +2199,7 @@ msgid "Select Event"
 msgstr "Select Event"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr ""
+msgstr "There is no Act information yet, you should add some. Click the Add new Event button to add a new Event."
 #: ----
 msgid "Please select some checkbox to perform action."
 msgstr "Please select some checkbox to perform action."

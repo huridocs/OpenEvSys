@@ -935,9 +935,6 @@ msgstr "on tühi"
 msgid "IS_REQUIRED"
 msgstr "on nõutud"
 #: ----
-msgid "KEY"
-msgstr "ET"
-#: ----
 msgid "KILLING"
 msgstr "Tapmine"
 #: ----
@@ -1951,9 +1948,6 @@ msgstr "Puu"
 #: ----
 msgid "Multivalue Tree"
 msgstr "Mitmikväärtusega puu"
-#: ----
-msgid ""
-msgstr "Valik"
 #: ----
 msgid "Multivalue Select"
 msgstr "Mitmikväärtusega valik"

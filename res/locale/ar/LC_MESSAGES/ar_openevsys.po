@@ -935,9 +935,6 @@ msgstr "فارغ"
 msgid "IS_REQUIRED"
 msgstr "مطلوب"
 #: ----
-msgid "KEY"
-msgstr "AR"
-#: ----
 msgid "KILLING"
 msgstr "القتل"
 #: ----
@@ -1951,9 +1948,6 @@ msgstr "تركيب هيكلي ( شجري ) للبيانات"
 #: ----
 msgid "Multivalue Tree"
 msgstr "تركيب هيكلي ( شجري ) متعددة القيم"
-#: ----
-msgid ""
-msgstr ""
 #: ----
 msgid "Multivalue Select"
 msgstr "اختيار إشارة رقمية متعددة القيم ( منتظمة )"

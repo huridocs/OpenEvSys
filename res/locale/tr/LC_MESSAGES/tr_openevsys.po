@@ -935,9 +935,6 @@ msgstr "boş"
 msgid "IS_REQUIRED"
 msgstr "Zorunlu"
 #: ----
-msgid "KEY"
-msgstr "TR"
-#: ----
 msgid "KILLING"
 msgstr "Öldürme"
 #: ----
@@ -1951,9 +1948,6 @@ msgstr "Ağaç"
 #: ----
 msgid "Multivalue Tree"
 msgstr "Çoklu-değer Ağacı"
-#: ----
-msgid ""
-msgstr ""
 #: ----
 msgid "Multivalue Select"
 msgstr "Çoklu-değer Seçimi"

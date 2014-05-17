@@ -1,0 +1,2232 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "მარეგულირებელი არ არის ნაპოვნი"
+#: ----
+msgid "_DAY_S__"
+msgstr "დღე (ები)"
+#: ----
+msgid "_MONTH_S__"
+msgstr "თვე (ები)"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "1-ლი დონე"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "მე-2 დონე"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "მე-3 დონე"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "404 შეცდომა: გვერდი არ არის ნაპოვნი"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "მე-4 დონე"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "მე-5 დონე"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "მე-6 დონე"
+#: ----
+msgid "ACL_MODE"
+msgstr "ACL რეჟიმი"
+#: ----
+msgid "ACT"
+msgstr "აქტი"
+#: ----
+msgid "ACT_"
+msgstr "აქტი"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "აქტის დეტალები"
+#: ----
+msgid "ACT_S_"
+msgstr "აქტი (ები)"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "აქტის  ძიების ფორმა"
+#: ----
+msgid "ACTION"
+msgstr "მოქმედება"
+#: ----
+msgid "ACTIONS"
+msgstr "მოქმედებები"
+#: ----
+msgid "ACTIVATED"
+msgstr "აქტივირებული"
+#: ----
+msgid "ACTS"
+msgstr "აქტები"
+#: ----
+msgid "ADD_ACT"
+msgstr "დაამატეთ აქტი"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "დაამატეთ დამატებითი დეტალები"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "დაამატეთ  დამატებითი დეტალები"
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "დაამატეთ მისამართი"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "დაამატეთ ბიოგრაფიული დეტალები"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "დაამატეთ შემთხვევათა  თანამიმდევრობა"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "დაამატეთ ინფორმაცია შემთხვევის  შესახებ"
+#: ----
+msgid "ADD_FIELD"
+msgstr "დაამატეთ მინდორი"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "დაუმატეთ მინდორი (რაღაცას)"
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "დაუმატეთ მინდვრები ძიების შედეგებს"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "დაამატეთ ინფორმაცია"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "დაამატეთ ჩართული მხარე"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "დაამატეთ ინტერვენცია"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "დაამატეთ ინტერვენციები"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "დაამატეთ ჩართულობა"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "დაამატეთ ენა"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "დაამატეთ უფრო მეტი სამართალდამრღვევი მხარე"
+#: ----
+msgid "ADD_NEW"
+msgstr "დაამატეთ ახალი"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "დაამატეთ ახალი დოკუმენტი"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "დაამატეთ ახალი შემთხვევა"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "დაამატეთ ახალი მინდორი"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "დაამატეთ ახალი პირი"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "დაამატეთ ახალი მომხმარებელი"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "დაამატეთ სამართალდამრღვევი მხარე"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "დაამატეთ სამართალდამრღვევი მხარე (ები)"
+#: ----
+msgid "ADD_ROLE"
+msgstr "დაამატეთ როლი"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "დაამატეთ წყარო"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "დაამატეთ დამადასტურებელი დოკუმენტი (ები)"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "დაამატეთ მსხვერპლი"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "დაამატეთ მოცემული შემთხვევის მსხვერპლი და სამართალდამრღვევი მხარე"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "დაამატეთ მისამართი…"
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "დაამატეთ ინფორმაცია შემთხვევის  შესახებ"
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "დაამატეთ პირის მისამართი..."
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "დაამატეთ ინფორმაცია პირის შესახებ..."
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "დამატებითი დეტალის ტიპი"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "დამატებითი დეტალები"
+#: ----
+msgid "ADDRESS"
+msgstr "მისამართი"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "პირის მისამართი"
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "მისამართის ტიპი"
+#: ----
+msgid "ADMIN"
+msgstr "ადმინისტრირება"
+#: ----
+msgid "ADVANCED"
+msgstr "დაჩქარებული"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "დაჩქარებული ძიება"
+#: ----
+msgid "AFTER"
+msgstr "შემდეგ"
+#: ----
+msgid "AGAINST"
+msgstr "წინააღმდეგ"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "ყველა სვეტი განულებულია თავის პირველად მაჩვენებლებზე"
+#: ----
+msgid "ANALYSIS"
+msgstr "ანალიზი"
+#: ----
+msgid "AND"
+msgstr "და"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "გამოიყენეთ ცვლილებები მუდმივად"
+#: ----
+msgid "ARREST"
+msgstr "დაკავება"
+#: ----
+msgid "AT"
+msgstr "როდის"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "როდის და შემდეგ"
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "როდის და წინ"
+#: ----
+msgid "AUDIT"
+msgstr "აუდიტი"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "აუდიტის ჟურნალი"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "აუდიტის ჟურნალის დეტალები არ არის ხელმისაწვდომი მოცემული შემთხვევისთვის"
+#: ----
+msgid "BACK"
+msgstr "უკან"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "დააბრუნეთ უკან, რათა იხილოთ  შემთხვევა"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "დააბრუნეთ უკან, რათა იხილოთ პირი"
+#: ----
+msgid "BASIC"
+msgstr "ბაზისური"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "ბაზისური ძიება"
+#: ----
+msgid "BEFORE"
+msgstr "მანამდე"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "ბიოგრაფიული დეტალები"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "ბიოგრაფიული დეტალები"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "ბიოგრაფიული დეტალები."
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "ბიოგრაფიული დეტალები"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "დოკუმენტების არჩევა"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "შემთხვევის არჩევა"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "შემთხვევების არჩევა"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "პირების არჩევა"
+#: ----
+msgid "BY_WHOM"
+msgstr "ვისგან"
+#: ----
+msgid "CANCEL"
+msgstr "გაუქმება"
+#: ----
+msgid "CELLULAR"
+msgstr "მობილური"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "შემთხვევათა თანამიმდევრობა"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "შემთხვევათა თანამიმდევრობა"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "შემთხვევათა თანამიმდევრობა"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "შემთხვევათა თანამიმდევრობა არ არსებობს"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "შემთხვევათა თანამიმდევრობა"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "შემთხვევათა თანამიმდევრობა"
+#: ----
+msgid "CHANGE"
+msgstr "ცვლილება"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "შეცვალეთ დამატებითი დეტალის ტიპი"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "შეცვალეთ პაროლი"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "შეცვალეთ ხედი :"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "აირჩიეთ მოქმედება"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "აირჩიეთ  ფაილის ჩატვირთვა"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "აირჩიეთ საწყისი წერტილი"
+#: ----
+msgid "CLARIFY"
+msgstr "დააზუსტეთ"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "შენიშვნა"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "შენიშვნები"
+#: ----
+msgid "CLEAR"
+msgstr "დაზუსტებული"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "დააკლიკეთ შემთხვევათა ჩამოსატვირთად ყველა ჩანაწერის XML ფაილი  OpenEvSys.-ში"
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "დააკლიკეთ, რათა შეარჩიოთ ვარიანტი"
+#: ----
+msgid "CLOSE"
+msgstr "დახურვა"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "სვეტის გადატვირთვა და დაბრუნება საწყის მნიშვნელობებზე"
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "კომბინირებული ძიების ფორმები"
+#: ----
+msgid "COMPILE"
+msgstr "შეგროვება"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "კონფიგურაციის ცვლადი"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "დაადასტურეთ ახალი ფასვორდი"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "დაადასტურეთ პაროლი"
+#: ----
+msgid "CONTAINS"
+msgstr "შემცველობა"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "კონტექსტუალური ინფორმაცია"
+#: ----
+msgid "CONTINUE"
+msgstr "გაგრძელება"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "გააგრძელეთ მოცემული დოკუმენტის დეტალების რედაქტირება"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "გააგრძელეთ შემთხვევათა თანმიმდევრობის შესახებ ჩანაწერების რედაქტირება"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "გააგრძელეთ შემთხვევათა  შესახებ ჩანაწერების რედაქტირება"
+#: ----
+msgid "COUNT"
+msgstr "დათვლა"
+#: ----
+msgid "COUNTRY"
+msgstr "ქვეყანა"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "მოამზადეთ ანგარიში აღნიშნული შედეგებიდან"
+#: ----
+msgid "CREATED_BY"
+msgstr "მომზადებულია  ...მიერ"
+#: ----
+msgid "CREATED_DATE"
+msgstr "მომზადების  თარიღი"
+#: ----
+msgid "CREATOR"
+msgstr "პირი, რომელმაც მოამზადა ანგარიში"
+#: ----
+msgid "CSV"
+msgstr "CSV"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "მიმდინარე პაროლი"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "დაყენების მიმდინარე პარამეტრები"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "მიმდინარე მაჩვენებელი"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "მონაცემთა გაცვლის თარიღი"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "შეცდომა მონაცემთა ბაზაში"
+#: ----
+msgid "DATE"
+msgstr "თარიღი"
+#: ----
+msgid "DATE_CREATED"
+msgstr "შედგენის თარიღი"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "თარიღის ადგილი"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "ინტერვენციის თარიღი"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "წყაროს მასალის თარიღი"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "მოთხოვნილი თარიღი, არავალიდური თარიღი"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "შეყვანის თარიღი"
+#: ----
+msgid "DEFINITION"
+msgstr "განსაზღვრება"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "ჩართულობის ხარისხი"
+#: ----
+msgid "DELETE"
+msgstr "წაშლა"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "წაშალეთ დამატებითი დეტალები"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "წაშალეთ დოკუმენტი"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "წაშალეთ მოცემული შემთხვევა"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "წაშალეთ აღნიშნული პირი"
+#: ----
+msgid "DESCRIPTION"
+msgstr "აღწერა"
+#: ----
+msgid "DESIGNATION"
+msgstr "დანიშნულება"
+#: ----
+msgid "DESTRUCTION"
+msgstr "დესტრუქცია"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "მიუწვდომებლი დახმარება"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "აკრძალული ინტერაქტიული თარგმანი"
+#: ----
+msgid "DISABLED"
+msgstr "დეაქტივირებული"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "გსურთ  დამატებითი დეტალების წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "გსურთ  შერჩეული მისამართის  (მისამართები) წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "გსურთ  ბიოგრაფიული მონაცემების წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "გსურთ  შერჩეული შემთხვევის ( შემთხვევათა) თანმიმდევრობის წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "გსურთ  შერჩეული ინფორმაციის წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "გსურთ  შერჩეული ინტერვენციის (ინტერვენციები) წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "გსურთ  მიკრო-თეზაურუსის ტერმინის (ტერმინები) წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "გსურთ  შერჩეული შეკითხვების წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "გსურთ  შერჩეული ჩანაწერის (ჩანაწერები) წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "გსურთ  შერჩეული მომხმარებელის (მომხმარებლები) წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "გსურთ  მოცემული დოკუმენტის წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "გსურთ  მოცემული შემთხვევის წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "გსურთ  აღნიშნული პირის წაშლა?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "გსურთ მოაცილოთ მოცემულ დოკუმენტს არსებული ფაილის ეთეჩმენტი?"
+#: ----
+msgid "DOCUMENT"
+msgstr "დოკუმენტი"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "დოკუმენტის შესახებ დეტალები"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "დოკუმენტი არ არსებობს"
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "დოკუმენტი ძიების ფორმა"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "დოკუმენტის დასახელება"
+#: ----
+msgid "DOCUMENTS"
+msgstr "დოკუმენტები"
+#: ----
+msgid "DOWNLOAD"
+msgstr "ჩამოტვირთვა"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "ჩამოტვირთვეთ დოკუმენტი"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "ჩამოტვირთეთ ინფორმაცია შეცდომების შესახებ"
+#: ----
+msgid "E_MAIL"
+msgstr "ელექტრონული ფოსტა"
+#: ----
+msgid "EDIT"
+msgstr "რედაქტირება"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "დამატებითი დეტალების რედაქტირება"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "ბიოგრაფიული დეტალების რედაქტირება"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "დეტალების რედაქტირება"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "შემთხვევის საბოლოო ვარიანტის რედაქტირება"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "პროფილის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "აღნიშნული აქტის  რედაქტირება"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "მოცემული მისამართის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "მოცემული ბიოგრაფიული დეტალების რედაქტირება"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "შემთხვევის თანამიმდევრობის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "მოცემული შემთხვევის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "აღნიშნული ინფორმაციის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "მოცემული  ჩართული მხარის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "მოცემული ინტერვენციის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "მოცემული ჩართულობის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "მოცემული  სამართალდამრღვევი მხარის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "მოცემული  პირის რედაქტირება"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "მოცემული მსხვერპლის რედაქტირება"
+#: ----
+msgid "EDIT_USER"
+msgstr "მომხმარებლის რედაქტირება"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "პირის მისამართის რედაქტირება..."
+#: ----
+msgid "EMAIL"
+msgstr "ელექტრონული ფოსტა"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "მოთხოვნილი ელექტრონული ფოსტა, არასწორი ელექტორნული ფოსტა"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "დახმარების შესაძლებლობა"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "ინტერაქტიული თარგმანის შესაძლებლობა"
+#: ----
+msgid "END_DATE"
+msgstr "საბოლოო თარიღი"
+#: ----
+msgid "ENTITY"
+msgstr "სტრუქტურა"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "სტრუქტურის ნებართვები"
+#: ----
+msgid "ENTRY"
+msgstr "შეყვანა"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "სერვერის განახლებისას დაშვებული შეცდომა"
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "huriterm-ის შექმნისას დაშვებული შეცდომა"
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "ფაილის შენახვისას დაშვებული შეცდომა. შეუძლებელია ფაილის შენახვა"
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "მინდვრის შექმნისას დაშვებული შეცდომა"
+#: ----
+msgid "EVENT"
+msgstr "შემთხვევა"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "შემთხვევის აღწერა"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "შემთხვევას ადგილი არ ჰქონია"
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "შემთხვევის ძიების ფორმა"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "შემთხვევის სტანდარტული ფორმატი XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "შემთხვევის დასახელება"
+#: ----
+msgid "EVENTS"
+msgstr "შემთხვევები"
+#: ----
+msgid "EXAMPLE"
+msgstr "მაგალითი"
+#: ----
+msgid "EXAMPLES"
+msgstr "მაგალითები"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "არსებული მინდვრები"
+#: ----
+msgid "EXPORT"
+msgstr "ექსპორტი"
+#: ----
+msgid "EXPORT__"
+msgstr "ექსპორტი:"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "ექსპორტის თარიღი"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "ექსპორტის შემთხვევები"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "ექსპორტის მაგალითი"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "გადაიტანეთ აღნიშნული ცხრილი ცხრილის პროგრამაში"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "ექსპორტის დრო"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "ფაილის დისკზე ვერ ჩაწერა"
+#: ----
+msgid "FALSE"
+msgstr "არასწორი"
+#: ----
+msgid "FAX"
+msgstr "ფაქსი"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "მინდვრის შექმნა წარმატებით"
+#: ----
+msgid "FIELD_LABEL"
+msgstr "მინდვრის მონიშვნა"
+#: ----
+msgid "FIELD_NAME"
+msgstr "მინდვრის დასახელება"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "მინდვრის სახელი,მინდვრის ნომერი, მინდვრის მონიშვნა არ შეიძლება იყოს ცარიელი, გთხოვთ შეიყვანეთ მაჩვენებლები"
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "მინდვრის სახელი უკვე არსებობს. გთხოვთ მიანიჭეთ სხვა სახელი"
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "მინდვრის ნომერი"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "მინდვრის ნომერი უკვე არსებობს. გთხოვთ აირჩიოთ სხვა ნომერი"
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "მინდვრის ნომრების დაბოლოება 60-დან 80-მდე შენახულია მინდვრების მართვისთვის. გთხოვთ გამოიყენეთ ნომერი, რომელიც არ შედის ამ საზღვრებში"
+#: ----
+msgid "FIELD_RESET"
+msgstr "მინდვრის აღდგენა"
+#: ----
+msgid "FIELD_S_"
+msgstr "მინდორი (მინდვრები)"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "მინდვრის ტიპი"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "ფაილში ჩაწერა შეუძლებელია"
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "ფაილის ჩატვირთვა შეჩერებულია პროგრამული გაფართოების გამო"
+#: ----
+msgid "FILTER"
+msgstr "ფილტრი"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "გაფილვრის ვარიანტები და შედეგები"
+#: ----
+msgid "FINAL_DATE"
+msgstr "საბოლოო თარიღი"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "იპოვეთ დოკუმენტები, რომელიც ჩაიტვირთა   OpenEvsys-ში და შეამოწმეთ თუ როგორ არის ისინი დაკავშირებული სხვა ფორმატებთან"
+#: ----
+msgid "FINISH"
+msgstr "დასრულება"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "დასრულებულია! თქვენ შეგიძლიათ გააკეთოთ შემდეგი"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "დასრულებულია! თქვენ შეგიძლიათ გააკეთოთ შემდეგი"
+#: ----
+msgid "FIRST_NAME"
+msgstr "სახელი"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "ფოლდერი უკვე არსებობს! მიანიჭეთ მას სხვა სახელი"
+#: ----
+msgid "FOLDER_NAME"
+msgstr "ფოლდერის სახელი"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "შემდეგი მინდვრები არ შეიძლება იყოს ცარიელი"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "შემდეგი huriterm უკვე არსებობს"
+#: ----
+msgid "FORCE_DELETE"
+msgstr "იძულებითი წაშლა"
+#: ----
+msgid "FORM"
+msgstr "ფორმა"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "ფორმის  აწყობა (დაყენება)"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "შემდგომი ინფორმაცია"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "გადადით ძირითად დონეზე"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "დაჯგუფება დღის მიხედვით"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "დაჯგუფება თვის მიხედვით"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "დაჯგუფება წლის მიხედვით"
+#: ----
+msgid "GUIDELINES"
+msgstr "გაიდლაინები"
+#: ----
+msgid "HELP_TEXT"
+msgstr "ტესქტის მხრივ დახმარება"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "მისამართის ფორმის დამარვა"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "ძიების ფორმის დამალვა"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "დამადასტურებელი დოკუმენტის (დოკუმენტების) დამალვა"
+#: ----
+msgid "HIDE_TREE"
+msgstr "ხის მსგავსი სქემის დამალვა"
+#: ----
+msgid "HOW_WAS_"
+msgstr "How was"
+#: ----
+msgid "HURICODE"
+msgstr "Huricode"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huriterm არ შეიძლება იყოს ცარიელი"
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "შემთხვევა/პირი კონფიდენციალურია?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "თუ თქვენ მიხვედით აღნიშნულ გვერდამდე, ეს იმას ნიშნავს, რომ თქვენ არ გაქვთ წვდომა არცერთ მოდულზე OpenEvsys-ში. გთხოვთ დაეკონტაქტეთ სისტემის ადმინისტრატორს უფრო მეტი ინფორმაციისთვის."
+#: ----
+msgid "IMPACT"
+msgstr "დატვირთვა"
+#: ----
+msgid "IMPORT"
+msgstr "იმპორტი"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "იმპორტის თარიღი"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "იმპორტის შემთხვევები"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "იმპორტის ჟურნალი"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "იმპორტის ჟურნალის დეტალები არ არის ხელმისაწვდომი"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "იმპორტის დრო"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "შორის"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "ძიების შედეგებში"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "ინციდენტის ცხრილი"
+#: ----
+msgid "INFORMATION"
+msgstr "ინფორმაცია"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "ინფორმაცია რაღაცის შესახებ"
+#: ----
+msgid "INFORMATION_S_"
+msgstr "ინფორმაცია (ინფორმაციები)"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "ინფორმაციის ძიების ფორმა"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "საწყისი თარიღი"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "ჩართული მხარეები"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "ჩართული მხარე"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "ჩართული მხარის ძიების ფორმა"
+#: ----
+msgid "INTERVENTION"
+msgstr "ინტერვენცია"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "ინტერვენცია (ინტერვენციები)"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "ინტერვენციის ძიების ფორმაა"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "ინტერვენციები"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "არასწორი ელექტრონული ფოსტა"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "არასწორი ელექტრონული ფოსტის მისამართი"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "არასწორი Huricode, ის უნდა იყოს 12-ციფრიანი ნომერი"
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "მომხმარებლის არასწორი იდენტიფიკატორი ან პასვორდი, გთხოვთ თავიდან სცადეთ"
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "მომხმარებლის არასწორი სახელი ან პაროლი! გთხოვთ თავიდან სცადეთ."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "ჩართულია რაღაცაში"
+#: ----
+msgid "INVOLVEMENT"
+msgstr "ჩართულობა"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "ჩართულობის დეტალები"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "ჩართულობა (ჩართულობები)"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "ჩართულობის ძიების ფორმა"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "ჩართულობები"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "არის რაღაცის ქვეელემენტი"
+#: ----
+msgid "IS_EMPTY"
+msgstr "ცარიელია"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "მოითხოვება"
+#: ----
+msgid "KILLING"
+msgstr "განადგურება"
+#: ----
+msgid "LABEL"
+msgstr "მონიშვნა"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "მონიშვნა არ შეიძლება იყოს ცარიელი. შეიყვანეთ მაჩვენებელი"
+#: ----
+msgid "LABEL_IN_"
+msgstr "მონიშნულია"
+#: ----
+msgid "LABEL_S_"
+msgstr "მონიშვნა (მონიშვნები)"
+#: ----
+msgid "LABELS"
+msgstr "მონიშვნები"
+#: ----
+msgid "LANGUAGE"
+msgstr "ენა"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "ენის კატალოგში ჩაწერა არ ხდება."
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "ენა მოშორებულია"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "ენა შეიქმნა წარმატებით."
+#: ----
+msgid "LAST_NAME"
+msgstr "გვარი"
+#: ----
+msgid "LIKE"
+msgstr "მოწონება"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "დაკავშირებულია როდის"
+#: ----
+msgid "LINKS"
+msgstr "კავშირები"
+#: ----
+msgid "LOCALIZATION"
+msgstr "ლოკალიზაცია"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "ჟურნალის დეტალები არ არის ხელმისაწვდომი მოცემული პირისთვის"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "ენების მენეჯმენტი"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "შეტყობინების შენახვა განხორციელდა წარმატებით."
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "მიკტო-თეზაურუსი"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "მიკრო-თეზაურუსის დაყენება"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "მიკრო-თეზაურუსის ტერმინები"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "დროებითი ფოლდერის დაკარგვა."
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "მოდიფიცირებული მაჩვენებელი"
+#: ----
+msgid "MODULE"
+msgstr "მოდული"
+#: ----
+msgid "MODULES"
+msgstr "მოდულები"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "მონიტორინგის სტატუსი"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "მოცემული შემთხევევის შესახებ უფრო მეტი ინფორმაცია"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "მოცემული პირის  შესახებ უფრო მეტი ინფორმაცია"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "ჩემი პრეფერენციები"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "Mysql მონაცემთა ტიპი"
+#: ----
+msgid "NAME"
+msgstr "სახელი"
+#: ----
+msgid "NEW"
+msgstr "ახალი"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "ახალი დოკუმენტი"
+#: ----
+msgid "NEW_EVENT"
+msgstr "ახალი შემთხვევა"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "ახალი პაროლი"
+#: ----
+msgid "NEW_PERSON"
+msgstr "ახალი პირი"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "ახალი როლის სახელი"
+#: ----
+msgid "NEXT"
+msgstr "შემდეგი"
+#: ----
+msgid "NO"
+msgstr "არა"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "კითხვები ჯერჯერობით არ არის შენახული"
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "ჩანაწერები არ იქნა ნაპოვნი"
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "ჩანაწერები არ შერჩეულა"
+#: ----
+msgid "NOT_="
+msgstr "არა="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "არასწორი მინდვრის ტიპი. სცადეთ თავიდან"
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "არ შეიცავს"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "არა შორის"
+#: ----
+msgid "NOT_LIKE"
+msgstr "არ მოწონება"
+#: ----
+msgid "NOT_ON"
+msgstr "არა ზე"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "მოთხოვნილი ნომერი, არასწორი ნომერი"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys-მა წარმატებით შეიყვანა მონაცემები."
+#: ----
+msgid "OR"
+msgstr "ან"
+#: ----
+msgid "ORDER"
+msgstr "შეკვეთა"
+#: ----
+msgid "ORGANIZATION"
+msgstr "ორგანიზაცია"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "საწყისი ძიების შედეგები"
+#: ----
+msgid "PAGE__"
+msgstr "გვერდი:"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "შედეგების დანომვრა"
+#: ----
+msgid "PASSWORD"
+msgstr "პაროლი"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "არასწორი პაროლი"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "პაროლის არდამთხვევა"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "მოთხოვნილი  პაროლი"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "ნებართვაზე უარი"
+#: ----
+msgid "PERMISSIONS"
+msgstr "ნებართვები"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "რაღაცის ნებართვა"
+#: ----
+msgid "PERMISSONS"
+msgstr "ნებართვები"
+#: ----
+msgid "PERPETRATOR"
+msgstr "სამართალდამრღვევი მხარე"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "სამართალდამრღვევი მხარის სახელი (სახელები)"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "სამართალდამრღვევი მხარის ძიების ფორმა"
+#: ----
+msgid "PERPETRATORS"
+msgstr "სამართალდამრღვევი მხარეები"
+#: ----
+msgid "PERSON"
+msgstr "პირი"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "პირის მისამართი (მისამართები)"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "პირის დეტალი (დეტალები)"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "პირი არ არსებობს."
+#: ----
+msgid "PERSON_NAME"
+msgstr "პირის სახელი"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "პირის შესახებ ჩანაწერი (ჩანაწერები)"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "პირის შესახებ ჩანაწერი (ჩანაწერები)"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "პირის დაბადების თარიღი არ არის შეყვანილი"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "პირის ძიების ფორმა"
+#: ----
+msgid "PERSONS"
+msgstr "პირები"
+#: ----
+msgid "PHONE"
+msgstr "ტელეფონი"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "პირის მოთხოვნილი ნომერი, არასწორი ტელეფონის ნომერი"
+#: ----
+msgid "PICTURE"
+msgstr "სურათი"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "გთხოვთ დაამატეთ პირობა ძიების წინ."
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "გთხოვთ დაამატეთ პირობა თვლის ყუთში დასათვლელად."
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "გთხოვთ შეარჩიეთ მომხმარებელი წასაშლელად"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "გთხოვთ შეარჩიეთ ზუსტი მომხმარებელი."
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "გთხოვთ ჩატვირთეთ ვალიდური OpenEvSys XML ფაილი"
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "გთხოვთ გამოიყენეთ ჩემი პრეფერნციის ვარიანტი მარჯვენა ზედა კუთხეში თქვენი დეტალების რედაქტირებისთვის."
+#: ----
+msgid "PREVIOUS"
+msgstr "წინა"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "დაბეჭდეთ მოცემული შემთხვევა"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "დაბეჭდეთ მოცემული გვერდი"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "დაბეჭდეთ მოცემული პირი"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "დასაბეჭდი ხედი"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "კითხვები წაშლილია წარმატებით."
+#: ----
+msgid "QUERY_ID"
+msgstr "შეკითხვის  იდენტიფიკატორი"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "შეკითხვა შენახული წარმატებით."
+#: ----
+msgid "REC_NO"
+msgstr "Rec-No"
+#: ----
+msgid "RECORD_NO"
+msgstr "ჩანაწერის ნომერი"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "ჩანაწერის რიცხვი"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "ჩანაწერის ტიპი"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "ჩანაწერები გვერდის მიხედვით"
+#: ----
+msgid "REGEX"
+msgstr "რეგულარული გამოხატვა"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "დაკავშირებული შემთხვევა"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "დაკავშირებული შემთხვევის დასახელება"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "დაკავშირებული პირი"
+#: ----
+msgid "REMARKS"
+msgstr "შენიშვნები"
+#: ----
+msgid "REMOVE"
+msgstr "მოცილება"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "მოცილება განმარტება"
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "მოცილების პირობა"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "მოაცილეთ ენა"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "მოაცილეთ შერჩევა"
+#: ----
+msgid "REPORT"
+msgstr "ანგარიში"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "მოთხოვნილი აქტის ჩანაწერი არ არსებობს."
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "მოთხოვნილი ინფორმაცია არ არსებობს"
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "მოთხოვნილი ინტერვენცია  არ არსებობს"
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "მოთხოვნილი ჩართულობა არ არსებობს"
+#: ----
+msgid "RESET"
+msgstr "დაყენება"
+#: ----
+msgid "RESET_ALL"
+msgstr "დააყენეთ ყველა პარამეტრი"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "შეზღუდვა როლისთვის"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "შეზღუდვა მომხმარებლისთვის"
+#: ----
+msgid "ROLE"
+msgstr "როლი"
+#: ----
+msgid "ROLE_LIST"
+msgstr "როლის სია"
+#: ----
+msgid "ROLES"
+msgstr "როლები"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "როლის/მოდულის წვდომის კონტროლი"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "როლი &გამაძლიერებელი; მოდული წვდომის კონტროლი"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "როლები ნებართვით, რათა იყოს წვდმობა მოცემულ შემთხვევაზე"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "როლები ნებართვით, რათა იყოს წვდმობა მოცემულ პირზე"
+#: ----
+msgid "SAVE"
+msgstr "შენახვა"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "მისამართის შენახვა"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "დოკუმენტის შენახვა"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "ინსტრუქციის სენახვა"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "ახალი მინდვრების შენახვა"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "შეკითხვის შენახვა"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "მოცემული შეკითხვის შენახვა"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "შეინახეთ აღნიშნული შეკითხვა გადანაცვლებით"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "შეინახეთ შეკითხვები"
+#: ----
+msgid "SEARCH"
+msgstr "ძიება"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "მოიძიეთ დამატებითი ინფორმაცია, რომელიც რელევანტურია აქტების სპეციფიური ტიპების მიმართ."
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "მოიძიეთ პირობები"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "ძიების ფორმა"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "ძიება მონაცემთა ბაზაში"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "მოიძიეთ ინფორმაცია შემთხვევების შესახებ."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "მოიძიეთ ინფორმაცია იმ პირების შესახებ, რომლებიც არიან სამართალდამრღვევი მხარეები მსხვერპლების წინააღმდეგ."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "მოიძიეთ ინფორმაცია იმ პირების შესახებ, რომლებიც რაღაც ფორმით იყვნენ  ჩარეული  შემთხვევებში."
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "მოიძიეთ ინფორმაცია იმ პირების შესახებ, რომლებმაც მიაწოდეს ინფორმაცია."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "მოიძიეთ ინფორმაცია  პირების შესახებ, მიუხედავად იმისა არიან თუ არა ისინი ინდივიდუალური პირები, ჯგუფები ან ორგანიზაციები."
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "მოიძიეთ ინფორმაცია იმ პირების შესახებ, რომლებიც არიან მსხვერპლები."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "მოიძიეთ ინფორმაცია იმ აქტების შესახებ, რომელიც ჩადენილ იქნა მსხვერპლების წინააღმდეგ."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "მოიძიეთ ინფორმაცია წყაროების მიერ მოწოდებული ფაქტების შესახებ."
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "მოიძიეთ ინფორმაცია იმ გზების შესახებ, რომლითაც სამართალდამრღვევი მხარეები ჩართული არიან სპეციალურ აქტებში."
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "მოიძიეთ ჩანაწერები იმის შესახებ თუ როგორ ჩაერივნენ პირები შემთხვევებში მსხვერპლების სასარგებლოდ."
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "ძიების შესახებ ანგარიში"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "ძიების შედეგები"
+#: ----
+msgid "SEARCHABLE"
+msgstr "მოძიებადი"
+#: ----
+msgid "SECTION"
+msgstr "სექცია"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "იხილეთ გამოსახულება სრული ზომით"
+#: ----
+msgid "SELECT"
+msgstr "შერჩევა"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "ფორმატის შერჩევა"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "მიკრო-თეზაურუსის შერჩევა"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "სტრუქტურის შერჩევა"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "მინდვრის შერჩევა"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Select fields from"
+#: ----
+msgid "SELECT_ROLE"
+msgstr "როლის შერჩევა"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "მეორადი სტრუქტურის შერჩევა"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "სამი ვარიანტის შერჩევა"
+#: ----
+msgid "SET"
+msgstr "დაყენება"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "რეჟიმის დაყენება"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "ენის დაყენება"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "სისტემური პროგრამირების ენის დაყენება"
+#: ----
+msgid "SHARE"
+msgstr "გაზიარება"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "აჩვენეთ მისამართის ფორმა"
+#: ----
+msgid "SHOW_ALL"
+msgstr "აჩვენეთ ყველაფერი"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "აჩვენეთ ძიების ფორმა"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "აჩვენეთ დამადასტურებელი დოკუმენტი (დოკუმენტები)"
+#: ----
+msgid "SIGN_IN"
+msgstr "რეგისტრაცია"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "რეგისტრაცია  OpenEvSys-ში"
+#: ----
+msgid "SIGN_OUT"
+msgstr "გამოსვლა"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "რამდენიმე შეცდომა მოხდა მონაცემთა შეყვანისას:"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "მსგავსება"
+#: ----
+msgid "SOURCE"
+msgstr "წყარო"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "წყაროს დასახელება"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "წყაროს ძიების ფორმა"
+#: ----
+msgid "SOURCES"
+msgstr "წყაროები"
+#: ----
+msgid "SPREADSHEET"
+msgstr "ცხრილის პროგრამა"
+#: ----
+msgid "START_DATE"
+msgstr "სამუშაოს დაწყების თარიღი"
+#: ----
+msgid "STATUS"
+msgstr "სტატუსი"
+#: ----
+msgid "SUBMIT"
+msgstr "წარდგენა"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "დამადასტურებელი დოკუმენტები"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "სისტემის კონფიგურაცია"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "სისტემის შეცდომა"
+#: ----
+msgid "TERM_IN"
+msgstr "ტერმინი"
+#: ----
+msgid "TERM_IN_"
+msgstr "ტერმინი"
+#: ----
+msgid "TEXT"
+msgstr "ტექსტი"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "ტექსტის მინდორი 200 სიმბოლოთი"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "ტექსტის ადგილი შეუზღუდავი ტექსტით"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "ჩატვირთული დოკუმენტი არ შეესაბამებოდა  XML-ის დოკუმენტს."
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "შემთხვევა დაკავშირებულია"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "ძველი ფაილის დანართი განახლებულ იქნა ახალი ფაილის ეთეჩმენთით."
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "პირს ჯერ კიდევ არ აქვს როლი!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "ორი პაროლი განსხვავებულია"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "ჩატვირთული ფაილი აჭარბებს MAX ფაილის ზომას, რომელიც მითითებული იყო HTML ფორმაში."
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "ჩატვირთული ფაილი აჭარბებს MAX ფაილის ზომას php.ini.-ში."
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "ჩატვირთული ფაილი მხოლოდ ნაწილობრივ ჩაიტვირთა."
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "დოკუმენტები ჯერჯერობით არ არის. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "შემთხვევების დამადასტურებელი დოკუმენტები არ არის ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "მოცემული პირისთვის არ არის მითითებული მისამართი ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "მოცემული პირისთვის არ არის მითითებული ბიოგრაფიული დეტალები ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "შემთხვევის შესახებ ინფორმაცია არ არის მოცემული. თქვენ უნდა დაამატოთ! დააკლიკეთ \"დაამატეთ ახალი შემთხვევა\" ღილაკს ახალი შემთხვევის დამატების მიზნით."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "შემთხვევათა თანამიმდევრობის შესახებ ინფორმაცია არ არის მოცემული ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "ჩართული მხარისა და ჩარევის  შესახებ ინფორმაცია არ არის მოცემული ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "წყარო და ინფორმაცია არ არის მითითებული. ტქვენ უნდა დაამატოთ."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "მსხვერპლისა და სამართალდამრღვევი მხარის შესახებ ინფორმაცია არ არის მოცემული ჯერჯერობით. თქვენ უნდა დაამატოთ"
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "პირის შესახებ ინფორმაცია არ არის მოცემული ჯერჯერობით. თქვენ უნდა დაამატოთ!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "დროის აღნიშვნა"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "დოკუმენტის ნახვა თქვენ  უნდა შეარჩიოთ პირველად დოკუმენტი დოკუმენტების სიიდან."
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "პირის ნახვა თქვენ უნდა შეარჩიოთ პირველად პირი პირთა სიიდან."
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "შემთხვევის ნახვა თქვენ უნდა შეარჩიოთ შემთხვევა შემთხვევატა სიიდან."
+#: ----
+msgid "TORTURE"
+msgstr "წამება"
+#: ----
+msgid "TRANSLATE"
+msgstr "თარგმნა"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "თარგმნა არ არის განახლებული ! გთხოვთ მიანიჭეთ კატალოგისა და ფაილის ნებართვა, რათა თავიდან მოხდეს დაყენება/ადგილი მიეცეს ფოლდერს."
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "თარგმნის განახლება მოხდა წარმატებით."
+#: ----
+msgid "TRUE"
+msgstr "ნამდვილი"
+#: ----
+msgid "TYPE"
+msgstr "დაბეჭდვა"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "დაბეჭდეტ დაბადების თარიღი მხოლოდ ციფრებით!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "დაბეჭდეთ დაბადების თვე მხოლოდ ციფრებით!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "აქტის ტიპი"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "შემთხვევათა თანამიმდევრობის ტიპი"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "ინტერვენციის ტიპი"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "ურთიერთობის ტიპი"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "დაბეჭდეთ მომხმარებლის იდენტიფიკატორი ტექსტის ყუთში და დააკლიკეთ გაზიარებას, რათა მოცემული შემთხვევა ხელმისაწვდომი გახდეს სასურველი მომხმარებლისთვის."
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "დაბეჭდეთ მომხმარებლის იდენტიფიკატორი ტექსტის ყუთში და დააკლიკეთ გაზიარებას, რათა მოცემული შემთხვევა ხელმისაწვდომი გახდეს სასურველი მომხმარებლისთვის."
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "დაბეჭდეთ დაბადების წელი მხოლოდ ციფრებით!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "დაბეჭდეთ დაბადების წელი სრულად!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "შეუძლებელია მიკრო-თეზაურუსის ტერმინების მოშორება, რადგან ისინი უკვე გამოყენებულია ჩანაწერებში."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "შეუძლებელია მინდვრის თავიდან აღდგენა."
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "შეუძლებელია მინდვრის თავიდან აღდგენა."
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "დაუდგენელი ჩატვირთვისას დაშვეული შეცდომა."
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "უსახელო შეკითხვა"
+#: ----
+msgid "UPDATE"
+msgstr "განახლება"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "წვდომის კონტროლის სიის განახლება"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "ფორმის განახლება"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "ნებართვების განახლება"
+#: ----
+msgid "UPLOAD"
+msgstr "ჩატვირთვა"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "ფაილის ჩატვირთვა"
+#: ----
+msgid "USER"
+msgstr "მომხმარებელი"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "მომხმარებლის მენეჯმენტი"
+#: ----
+msgid "USER_NAME"
+msgstr "მომხმარებლის სახელი"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "მომხმარებელი არ იქნა ნაპოვნი! არასწორი მომხმარებლის სახელი ან პაროლი! გთხოვთ სცადეთ თავიდან."
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "მომხმარებლის იდენტიფიკატორი არ არსებობს."
+#: ----
+msgid "USERNAME"
+msgstr "მომხმარებლის სახელი"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "მომხმარებლის სახელი უკვე არსებობს, გამოიყენეთ სხვა სახელი"
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "მომხმარებლის სახელი არ შეიძლება იყოს ცარიელი"
+#: ----
+msgid "USERS"
+msgstr "მომხმარებლები"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "მომხმარებლები მოცემულ შემთხვევაზე წვდომის ნებართვით"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "მომხმარებლები მოცემულ პირზე წვდომის ნებართვით"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "მომხმარებლები ნებართვებით"
+#: ----
+msgid "VALIDATION"
+msgstr "ვალიდაცია"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "ვალიდაციის ტიპი"
+#: ----
+msgid "VERSION"
+msgstr "ვერსია"
+#: ----
+msgid "VICTIM"
+msgstr "მსხვერპლი"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "მსხვერპლის სახელი"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "მსხვერპლის ძიების ფორმა"
+#: ----
+msgid "VICTIMS"
+msgstr "მსხვერპლები"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "მსხვერპლები და სამართალდამრღვევი მხარეები"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "იხილეთ აქტის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "იხილეთ მისამართი"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "იხილეთ ბიოგრაფიული დეტალები"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "იხილეთ შემთხვევათა თანამიმდევრობის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "იხილეთ დოკუმენტი"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "იხილეთ შემთხვევა"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "იხილეთ შემთხვევის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "იხილეთ ინფორმაციის ჩანაწერი"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "იხილეთ ჩართული მხარის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "იხილეთ ინტერვენციის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "იხილეთ ჩართულობის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "იხილეთ სამართალდამრღვევი მხარის შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "იხილეთ პირი"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "იხილეთ დაკავშირებული პირი"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "იხილეთ წყაროს შესახებ ჩანაწერი"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "იხილეთ მსხვერპლის შესახებ ჩანაწერი"
+#: ----
+msgid "VISIBILITY"
+msgstr "დათვალიერება"
+#: ----
+msgid "VISIBLE"
+msgstr "ექვემდებარება დათვალიერებას"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "ექვემდებარება დათვალიერებას არჩევისას"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "ექვემდებარება დათვალიერებას ფორმით"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "ექვემდებარება დათვალიერებას რაკურსში"
+#: ----
+msgid "WEB"
+msgstr "ვებ-გვერდი"
+#: ----
+msgid "WEBSITE"
+msgstr "ვებსაიტი"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "რა მოხდა"
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "რა არის ინტერვენცია?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "ვინ არის პასუხისმგებელი რაღაცისთვის"
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "ვინ არის ჩართული მხარე?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "ვინ არის წყარო?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "ვინ არის მსხვერპლი?"
+#: ----
+msgid "YEAR_S__"
+msgstr "წელი (წლები):"
+#: ----
+msgid "YES"
+msgstr "დიახ"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "თქვენ აპირებთ შემთხვევის წაშლას. ეს ნიშნავს რომ თქვენ წაშლით ქვემოთ მოცემულ ჩანაწერებს. გსურთ გაგრძელება?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "თქვენ ვერ შეძლებთ ადმინისტრატორის ნებართვების შეცვლას."
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "თქვენ ვერ შეძლებთ სხვა მომხმარებელი- ადმინისტრატორის წაშლას."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "თქვენ ვერ შეძლებთ ადმინისტრატორის ანგარიშის წაშლას."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "თქვენ ვერ შეძლებთ დაფარული ენის წაშლას"
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "თქვენ ვერ წაშლით თქვენს თავს მომხმარებელთა სიიდან."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "თქვენ არ გაქვთ სხვა  მომხმარებელი- ადმინისტრატორების დეტალების  რედაქტირების ნებართვა."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "თქვენ აგრეთვე შერჩეული გაქვთ რამდენიმე ძირითადი ტერმინი (ტერმინები), თუ თქვენ გააგრძელებთ, ამ ტერმინების შვილობილები აგრეთვე წაიშლება."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "თქვენ უნდა შეავსოთ მოცემული მინდორი"
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "თქვენ უნდა შეარჩიოთ სტრუქტურა დათვლამდე"
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "თქვენი ბრაუზერის ტიპი ფუნქციურად გამორთულია! გთხოვთ ჩართეთ"
+#: ----
+msgid "EXTENSIONS"
+msgstr "პროგრამული გაფართოება"
+#: ----
+msgid "ABOUT_OE"
+msgstr "OpenEvsys-ის შესახებ"
+#: ----
+msgid "AGPL"
+msgstr "AGPL v3 licensed"
+#: ----
+msgid "REQUIRED"
+msgstr "მოთხოვნილი"
+#: ----
+msgid "YES_CONFIDENTIALITY"
+msgstr "დიახ (კონფიდენციალური)"
+#: ----
+msgid "NO_CONFIDENTIALITY"
+msgstr "არა (კონფიდენციალური)"
+#: ----
+msgid "ERROR_SERVER"
+msgstr "შეცდომა დაბრუნებულ იქნა სერვერის მიერ, გთხოვთ დაეკონტაქტეთ სისტემის ადმინისტრატორს"
+#: ----
+msgid "NULL_ROWS"
+msgstr "ნულოვანი რიგები"
+#: ----
+msgid "PHONE_NO"
+msgstr "ტელეფონის ნომერი"
+#: ----
+msgid "NUMERICAL"
+msgstr "რიცხობრივი"
+#: ----
+msgid "ANALYST"
+msgstr "ანალიტიკოსი"
+#: ----
+msgid "DATA_ENTRY"
+msgstr "მონაცემთა შეყვანა"
+#: ----
+msgid "ENTITY_GROUPS"
+msgstr "სტრუქტურის ჯგუფები"
+#: ----
+msgid "CREATE"
+msgstr "შექმნა"
+#: ----
+msgid "READ"
+msgstr "წაკითხვა"
+#: ----
+msgid "LINKING"
+msgstr "კავშირი"
+#: ----
+msgid "PRIMARY"
+msgstr "საწყისი"
+#: ----
+msgid "SELECT_LANGUAGE"
+msgstr "ენის შერჩევა"
+#: ----
+msgid "NO_ATTACHMENT"
+msgstr "დოკუმენტს არ ახლავს ეთეჩმენთი"
+#: ----
+msgid "BROWSE"
+msgstr "შერჩევა"
+#: ----
+msgid "ROWS"
+msgstr "რიგი (რიგები)"
+#: ----
+msgid "ADVANCED_SEARCH_REPORT"
+msgstr "დაჩქარებული ძიების ანგარიში"
+#: ----
+msgid "Address"
+msgstr "მისამართი"
+#: ----
+msgid "latitude"
+msgstr "ინტერვალი"
+#: ----
+msgid "longitude"
+msgstr "ხანგრძლივობა"
+#: ----
+msgid "View"
+msgstr "რაკურსი"
+#: ----
+msgid "Micro-thesauri created successfully"
+msgstr "მიკრო-თეზაურუსი შეიქმნა წარმატებით"
+#: ----
+msgid "Radio field"
+msgstr "რადიო სიხშირის მინდორი"
+#: ----
+msgid "Geolocation"
+msgstr "გეოლოკაცია"
+#: ----
+msgid "User Select"
+msgstr "მომხმარებლის შერჩევა"
+#: ----
+msgid "Multivalue User Select"
+msgstr "მრავალი მნიშვნელობის მქონე მომხმარებლის შერჩევა"
+#: ----
+msgid "Tree"
+msgstr "ხის სქემა"
+#: ----
+msgid "Multivalue Tree"
+msgstr "მრავალი მნიშვნელობის მქონე ხის სქემა"
+#: ----
+msgid "Multivalue Select"
+msgstr "მრავალმნიშვნელობიანი შერჩევა"
+#: ----
+msgid "Please select items to perform action"
+msgstr "გთხოვთ შეარჩიეთ  საშუალებები ქმედების განსახორციელებლად"
+#: ----
+msgid "Dashboard"
+msgstr "მონიტორინგის პანელი"
+#: ----
+msgid "Micro-thesauri cannot be empty"
+msgstr "მიკრო-თეზაურუსი არ შეიძლება იყოს ცარიელი"
+#: ----
+msgid "Micro-thesauri name already exists"
+msgstr "მიკრო-თეზაურუსის სახელი უკვე არსებობს"
+#: ----
+msgid "Login Information"
+msgstr "სისტემაში შესვლის შესახებ ინფორმაცია"
+#: ----
+msgid "Profile Information"
+msgstr "პროფილის ინფორმაცია"
+#: ----
+msgid "Print configuration"
+msgstr "პრინტერის კონფიგურაცია"
+#: ----
+msgid "Header for report print view"
+msgstr "სათაური ანგარიშის წარმოსადგენად ბეჭდვის წინ"
+#: ----
+msgid "Header for event print view"
+msgstr "სათაური შემთხვევის წარმოსადგენად ბეჭდვის წინ"
+#: ----
+msgid "Sidebar for event print view"
+msgstr "გვერდითი პანელი შემთხვევის წარმოსადგენად ბეჭდვის წინ"
+#: ----
+msgid "Header for person print view"
+msgstr "სათაური პირის  წარმოსადგენად ბეჭდვის წინ"
+#: ----
+msgid "Sidebar for person print view"
+msgstr "გვერდითი პანელი პირის  წარმოსადგენად ბეჭდვის წინ"
+#: ----
+msgid "Details"
+msgstr "დეტალები"
+#: ----
+msgid "Add new term"
+msgstr "დაამატეთ ახალი ტერმინი"
+#: ----
+msgid "Searchable in Analysis"
+msgstr "ექვემდებარება ძიებას ანალიზისას"
+#: ----
+msgid "Visible in Analysis"
+msgstr "ექვემდებარება დათვალიერებას ანალიზისას"
+#: ----
+msgid "Add new Micro-thesauri"
+msgstr "დაამატეთ ახალი მიკრო-თეზაურუსი"
+#: ----
+msgid "Select language"
+msgstr "აირჩიეთ ენა"
+#: ----
+msgid "Header for login page"
+msgstr "სათაური სისტემაში შეყვანის გვერდისთვის"
+#: ----
+msgid "Multivalue"
+msgstr "მრავალი მნიშვნელობის მქონე"
+#: ----
+msgid "Enabled"
+msgstr "შესაძლებელია"
+#: ----
+msgid "Hide in case of"
+msgstr "დამალვა რაღაცის შემთხვევაში"
+#: ----
+msgid "Set visible"
+msgstr "დააყენეთ რომ ექვემდებარებოდეს დათვალიერებას"
+#: ----
+msgid "Disable"
+msgstr "გამორთვა"
+#: ----
+msgid "Apply"
+msgstr "გამოყენება"
+#: ----
+msgid "Vocab number"
+msgstr "ლექსიკონის ნომერი"
+#: ----
+msgid "disabled"
+msgstr "შეუძლებელია"
+#: ----
+msgid "Undefined"
+msgstr "არ არის განსაზღვრული"
+#: ----
+msgid "Load"
+msgstr "ჩატვირთვა"
+#: ----
+msgid "Select facets"
+msgstr "ფასეტების შერჩევა"
+#: ----
+msgid "Date range"
+msgstr "თარიღის საზღვრები"
+#: ----
+msgid "Timeline type"
+msgstr "სამონტაჟო მწკრივის ტიპი"
+#: ----
+msgid "DAY"
+msgstr "დღე"
+#: ----
+msgid "MONTH"
+msgstr "თვე"
+#: ----
+msgid "YEAR"
+msgstr "წელი"
+#: ----
+msgid "Total Count"
+msgstr "მთლიანი რაოდენობა"
+#: ----
+msgid "Added in last 30 days"
+msgstr "დამატებულია ბოლო 30 დღეში"
+#: ----
+msgid "Most active users (new items)"
+msgstr "ყველაზე აქტიური მომხმარებლები (ახალი საშუალებები)"
+#: ----
+msgid "User activity (edited items)"
+msgstr "მომხმარებლს საქმიანობა (რედაქტირებული საშუალებები)"
+#: ----
+msgid "Recently deleted"
+msgstr "ახლახანს წაშლილი"
+#: ----
+msgid "No data available"
+msgstr "მონაცემები ხელმისაწვდომი არ არის"
+#: ----
+msgid "Add Perpetrator later"
+msgstr "დაამატეთ სამართალდამრღვევი მხარე მოგვიანებით"
+#: ----
+msgid "Save and Add More Perpetrators"
+msgstr "შეინახეთ დადაამატეთ უფრო მეტი სამართალდამრღვევი მხარე"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "აქტის შესახებ ინფორმაცია ჯერ ჯერჯერობით არ არის მითითებული, თქვენ უნდა დაამატოთ. დააკლიკეთ \"ახალი შემთხვევის დამატების\" ღილაკს, რათა შეიყვანოთ ახალი შემთხვევა"
+#: ----
+msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "ინტერვენციის სესახებ ინფორმაცია არ არის მოცემული ჯერჯერობით, თქვენ უნდა დაამატოთ.დააკლიკეთ \"ახალი შემთხვევის დამატების\" ღილაკს, რათა შეიყვანოთ ახალი შემთხვევა"
+#: ----
+msgid "View person's roles"
+msgstr "იხილეთ პირის როლები"
+#: ----
+msgid "Duplicate"
+msgstr "დუპლიკაცია"
+#: ----
+msgid "Insert folder name:"
+msgstr "ჩასვით ფოლდერის სახელწოდება:"
+#: ----
+msgid "Return to files list"
+msgstr "დაუბრუნდით ფაილების სიას"
+#: ----
+msgid "Preview"
+msgstr "წინასწარი დათვალიერება"
+#: ----
+msgid "Erase"
+msgstr "წაშლა"
+#: ----
+msgid "Charts and map"
+msgstr "სქემები და რუკა"
+#: ----
+msgid "Clear this selections"
+msgstr "წაშალეთ მოცემული შერჩევა"
+#: ----
+msgid "of"
+msgstr "რაღაცის"
+#: ----
+msgid "Not found"
+msgstr "არ არის ნაპოვნი"
+#: ----
+msgid "Map"
+msgstr "რუკა"
+#: ----
+msgid "Charts"
+msgstr "სქემები"
+#: ----
+msgid "Results"
+msgstr "შედეგების დანომვრა"
+#: ----
+msgid "Filters"
+msgstr "ფილტრები"
+#: ----
+msgid "Security"
+msgstr "უსაფრთხოება"
+#: ----
+msgid "Top menu"
+msgstr "ტოპ მენიუ"
+#: ----
+msgid "Top right menu"
+msgstr "მარჯვენა ტოპ მენიუ"
+#: ----
+msgid "Event menu"
+msgstr "შემთხვევის მენიუ"
+#: ----
+msgid "Person menu"
+msgstr "პირის მენიუ"
+#: ----
+msgid "Document menu"
+msgstr "დოკუმენტის მენიუ"
+#: ----
+msgid "Analysis menu"
+msgstr "ანალიზის მენიუ"
+#: ----
+msgid "Preferences menu"
+msgstr "პრეფერენციების მენიუ"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "reCAPTCHA არ იქნა შეყვანილი სწორად."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "არაზუსტი სესამოწმებელი კოდი. გთხოვთ სცადეთ თავიდან."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "მენიუ შეინახა წარმატებით."
+#: ----
+msgid "Google Authenticator"
+msgstr "გუგლის აუტენტიფიკატორი"
+#: ----
+msgid "Enabled successfully."
+msgstr "განხორციელდა წარმატებით."
+#: ----
+msgid "Code"
+msgstr "კოდი არასწორია, სცადეთ თავიდან"
+#: ----
+msgid "Menu"
+msgstr "მენიუ"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "დააკლიკეთ, რათა დაამატოთ პუნქტი მენიუს"
+#: ----
+msgid "Number"
+msgstr "ნომერი"
+#: ----
+msgid "Term"
+msgstr "ტერმინი"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "დაამატეთ მიკრო-თეზაურუსი"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "თარგმნეთ მიკრო-თეზაურუსი"
+#: ----
+msgid "Language"
+msgstr "ენა"
+#: ----
+msgid "Event"
+msgstr "შემთხვევა"
+#: ----
+msgid "Select Event"
+msgstr "შეარჩიეთ შემთხვევა"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "აქტის შესახებ ინფორმაცია ჯერ ჯერჯერობით არ არის მითითებული, თქვენ უნდა დაამატოთ. დააკლიკეთ \"ახალი შემთხვევის დამატების\" ღილაკს, რათა შეიყვანოთ ახალი შემთხვევა"
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "შეარჩიეთ ჩექბოქსი ქმედების შესასრულებლად."
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "დაამონტაჟეთ გუგლის აუტენტიფიკატორის გამოყენებითი პროგრამა  თქვენი ტელეფონისთვის"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "ტქვენს ტელეფონზე, გახსენით ვებ ბრაუზერი"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "შედით  m.google.com/authenticator."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "ჩამოტვირთეთ და დაამონტაჟეთ გუგლის აუტენტიფიკატორის გამოყენებითი პროგრამა."
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "გახსენით და კონფიგურაცია მიეცით გუგლის აუტენტიფიკატორს"
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "მოახდინეთ მოცემული შტრიხკოდის სკანირება პროგრამის ავტომატური რეგისტრაციისთვის"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "ან გამოიყენეთ მოცემული საიდუმლო გასაღები პროგრამის ხელით რეგისტრაციისთვის"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "მას შემდეგ რაც ხელით დაარეგისტრირებთ  და შეინახავთ საიდუმლო გასაღებს, შეიყვანეთ 6-ციფრინი დასამოწმებელი კოდი, რომელიც წარმოიქმნება   აუტენტიფიკატორის გამოყენებითი პროგრამის მიერ."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "კოდი არასწორია, სცადეთ თავიდან"

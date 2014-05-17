@@ -935,9 +935,6 @@ msgstr "adalah kosong"
 msgid "IS_REQUIRED"
 msgstr "Diwajibkan"
 #: ----
-msgid "KEY"
-msgstr "IND"
-#: ----
 msgid "KILLING"
 msgstr "Pembunuhan"
 #: ----
@@ -1951,9 +1948,6 @@ msgstr "Pohon"
 #: ----
 msgid "Multivalue Tree"
 msgstr "Pohon Multivalue"
-#: ----
-msgid ""
-msgstr ""
 #: ----
 msgid "Multivalue Select"
 msgstr "Pilih Multivalue"

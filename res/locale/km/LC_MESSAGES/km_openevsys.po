@@ -935,9 +935,6 @@ msgstr "ទទេអត់មាន"
 msgid "IS_REQUIRED"
 msgstr "ចាំ​បាច់​ត្រូវ​មាន"
 #: ----
-msgid "KEY"
-msgstr "KM"
-#: ----
 msgid "KILLING"
 msgstr "ការ​សំលាប់"
 #: ----
@@ -1950,9 +1947,6 @@ msgid "Tree"
 msgstr ""
 #: ----
 msgid "Multivalue Tree"
-msgstr ""
-#: ----
-msgid ""
 msgstr ""
 #: ----
 msgid "Multivalue Select"
