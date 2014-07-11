@@ -319,26 +319,28 @@ class adminModule extends shnModule {
         include_once 'lib_user.inc';
 
         $user = user_get_selected();
-        $result = $user->getGASk();
 
-        if (isset($_POST['disable'])) {
+        if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
-        } elseif (isset($_POST['code'])) {
+        } 
+
+        if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
             $resp = $user->TSVSaveMGA($_POST['code']);
             if (!$resp) {
                 $this->wrongcode = true;
-            } else {
-                $this->changed = true;
             }
         }
+
         $cfg = array();
-        if (!empty($user->config)) {
+        if(!empty($user->config)) {
             $cfg = @json_decode($user->config, true);
         }
-        if ($cfg['security']['TSV']['method'] == "MGA") {
+
+        if($cfg['security']['TSV']['method'] == "MGA") {
             $this->enabled = true;
         }
 
+        $result = $user->getGASk();
 
         $this->url = $result['url'];
         $this->secret = $result['secret'];

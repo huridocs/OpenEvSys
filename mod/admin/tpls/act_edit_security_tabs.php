@@ -9,6 +9,8 @@
       <button type="button" class="btn btn-default" data="MGA"><?php echo _t('Google Authenticator') ?></button>
       <button type="button" class="btn btn-default" data="yubikey"><?php echo _t('YubiKey') ?></button>
     </div>
+
+    <input type="hidden" name="desiredMethod" />
 </div>
 
 <?php 
@@ -20,6 +22,7 @@
 
 <script>
     var currentMethod = "<?php echo $currentMethod ?>";
+    var desiredMethod = "<?php echo $_POST['desiredMethod'] ?>";
 
     $('#auth-method button').click(function() {
         var authMethod = this.getAttribute('data');
@@ -31,9 +34,11 @@
         $("#auth-method button[data='"+method+"']").addClass('active');
         $(".auth-method-form").hide();
         $('#' + method).show();
+        $("input[name='desiredMethod']").val(method);
     }
 
     $(document).ready( function() {
-        showMethod(currentMethod)
+        var defaultMethod = desiredMethod != "" ? desiredMethod : currentMethod;
+        showMethod(defaultMethod)
     });
 </script>
