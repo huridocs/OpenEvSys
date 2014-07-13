@@ -323,6 +323,7 @@ class adminModule extends shnModule {
         $result = $user->getGASk();
         $this->url = $result['url'];
         $this->secret = $result['secret'];
+        $this->isYubikeyAPIConfigured = $this->isYubikeyAPIConfigured();
 
         if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
@@ -339,11 +340,23 @@ class adminModule extends shnModule {
             return true;
         }
 
-        if($_POST['desiredMethod'] == "yubikey") {
+        if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
             $user->TSVSaveYubiKey();
 
             return true;
         }
+    }
+
+    protected function isYubikeyAPIConfigured() {
+        global $conf;
+
+        $hasClientKey = (isset($conf["YubiKeyClientKey"]) && $conf["YubiKeyClientKey"] != "");
+        $hasClientId = (isset($conf["YubiKeyClientId"]) && $conf["YubiKeyClientId"] != "");
+
+        if($hasClientId && $hasClientKey)
+            return true;
+
+        return false;
     }
 
     public function act_add_user() {

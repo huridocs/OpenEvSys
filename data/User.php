@@ -299,7 +299,6 @@ class User extends ADODB_Active_Record {
 
     public function TSVSaveYubiKey() {
         $this->saveTSVMethod('yubikey');
-
         return true;
     }
 

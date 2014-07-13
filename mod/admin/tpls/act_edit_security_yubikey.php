@@ -1,6 +1,12 @@
 <div id="yubikey" class="auth-method-form control-group" style="display:none;">
 	
-	<?php if($currentMethod == "yubikey") { ?>
+	<?php if(!$isYubikeyAPIConfigured) { ?>
+        <p class="text-warning">
+            <?php echo _t("This system does not currently support Yubico authenticantion. Contact your system administrator.") ?>
+        </p>
+    <?php } ?>
+
+    <?php if($currentMethod == "yubikey") { ?>
 		<p class="text-info">
 			<?php echo _t("YubiKey is currently enabled for your account.") ?>
 		</p>

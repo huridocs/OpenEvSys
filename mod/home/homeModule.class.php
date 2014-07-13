@@ -214,7 +214,7 @@ class homeModule extends shnModule {
             return true;
         }
 
-        if($_POST['desiredMethod'] == "yubikey") {
+        if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
             $user->TSVSaveYubiKey();
 
             return true;
