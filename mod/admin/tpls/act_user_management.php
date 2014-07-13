@@ -1,4 +1,7 @@
-<?php global $conf; ?>
+<?php 
+    global $conf; 
+    require_once "TwoStepColumnDecorator.php";
+?>
 <h2><?php echo _t('USERS')?></h2>
 <br />
   <?php if (acl_is_mod_allowed('admin')) { ?>
@@ -23,6 +26,7 @@
 <!--            <th><?php echo(_t('ADDRESS')); ?></th> --> 
             <th><?php echo(_t('ROLE')); ?></th>
             <th><?php echo(_t('STATUS')); ?></th>
+            <th><?php echo(_t('2-Step auth')); ?></th>
             <th><?php echo(_t('ACTION')); ?></th>
             
             
@@ -42,6 +46,7 @@
 <!--            <td> <?php  echo $user['address'];  ?>  </td>-->
             <td> <?php  array_to_list(acl_get_user_roles( $user['username'] )) ?>  </td>
             <td> <?php  echo $user['status'];  ?>  </td>
+            <td> <?php  echo TwoStepColumnDecorator::decorate($user['config']);  ?>  </td>
             <td>     
                 <a href="<?php get_url('admin','edit_user',null, array('uid'=>$user['username'] ) );?> " class="btn btn-info btn-mini"><i class="icon-edit icon-white"></i> <?php echo _t('EDIT') ?></a>
             </td>
