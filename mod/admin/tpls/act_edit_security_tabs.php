@@ -1,7 +1,6 @@
 <div id="auth-method" class="control-group">
     <p>
-        2-Step Verification adds an extra layer of security to your account, 
-        drastically reducing the chances of having the information in your account stolen.
+        <?php echo _t("2-Step Verification adds an extra layer of security to your account, drastically reducing the chances of having the information in your account stolen.") ?>
     </p>
 
     <div class="btn-group">
