@@ -7,9 +7,6 @@ define(ANONYMOUS_USER, 0);
 include_once APPROOT . '/inc/security/lib_auth.inc';
 include_once APPROOT . '/inc/security/lib_acl_cas.inc';
 
-
-
-
 if (isset($_POST['login']) && 'login' == $_POST['login']) {
     $captchavalid = true;
     if ($conf['use_recaptcha']) {
@@ -54,8 +51,8 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
                        $conf['locale'] = $cfg['locale'];
                     }
     
-                    if (!empty($cfg['security']['TSV']['method'])) {
-                        $_SESSION['check_TSV'] = time();
+                    if(isset($cfg['security']['TSV']['method'])) {
+                        $_SESSION['check_TSV'] = $cfg['security']['TSV']['method'];
                     }
                 }
             }
@@ -65,15 +62,40 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
             }
         }
     }
-}elseif( !empty($_SESSION['check_TSV']) && !empty($_POST['code']) ){
-	$user = UserHelper::loadFromUsername($_SESSION['username']);
-	if( $user->verifyGACode($_POST['code']) ){
-		unset($_SESSION['check_TSV']);
-	}else{
-            $global['loginerror'] = _t('Wrong verification code. Please try again.');
-        }
-}else {
+} elseif( !empty($_SESSION['check_TSV']) && !empty($_POST['code']) ) {
+    if($_SESSION['check_TSV'] == "MGA")
+        $TSVResult = checkMGAAuth($global['loginerror']);
+    
+    if($_SESSION['check_TSV'] == "yubikey")
+        $TSVResult = checkYubikeyAuth($global['loginerror']);
+} else {
     setcookie("cookie-check", "some-value");
+}
+
+function checkMGAAuth(&$error) {
+    $user = UserHelper::loadFromUsername($_SESSION['username']);
+    if($user->verifyGACode($_POST['code'])){
+        unset($_SESSION['check_TSV']);
+        return true;
+    }
+
+    $error = _t('Wrong verification code. Please try again.');
+}
+
+function checkYubikeyAuth(&$error) {
+    global $conf;
+
+    require_once APPROOT . "3rd/yubico/Yubico.php";
+    
+    $yubi = new Auth_Yubico($conf['YubiKeyClientId'], $conf['YubiKeyClientKey']);
+    $auth = $yubi->verify($_POST['code']);
+
+    if($auth == 0) {
+        unset($_SESSION['check_TSV']);
+        return true;
+    }
+
+    $error = _t($auth->getMessage());
 }
 
 //check if a remember key is set
@@ -87,9 +109,6 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
 
 //check if the action is log out
 if ($_GET['act'] == 'logout') {
-
-
-
     //remove any remember key if exists     
     shn_auth_del_code($_SESSION['username'], 'remember');
 
@@ -103,19 +122,18 @@ if ($_GET['act'] == 'logout') {
 }
 
 if($_GET['mod'] != 'home' || $_GET['act'] !='download' ){
-//check if the user session exists
-if (!isset($_SESSION['username']) || $_SESSION['check_TSV']) {
-    //normal auth
-    include_once APPROOT . '/tpls/html_login.php';
-    exit(0);
+    //check if the user session exists
+    if (!isset($_SESSION['username']) || $_SESSION['check_TSV']) {
+        //normal auth
+        include_once APPROOT . '/tpls/html_login.php';
+        exit(0);
 
-
-    //if not set the user as anonymous
-    //$_SESSION['username']=ANONYMOUS_USER;
-    //$global['username']=ANONYMOUS_USER;
-} else {
-    //if exists set the global username 
-    $global['username'] = $_SESSION['username'];
-}
+        //if not set the user as anonymous
+        //$_SESSION['username']=ANONYMOUS_USER;
+        //$global['username']=ANONYMOUS_USER;
+    } else {
+        //if exists set the global username 
+        $global['username'] = $_SESSION['username'];
+    }
 }
 ?>
