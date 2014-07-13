@@ -1,7 +1,7 @@
 <div id="MGA" class="auth-method-form control-group" style="display:none;">
-    <?php if ($enabled) { ?>
-        <p> Google Authenticator is currently enabled for your account. </p>
     
+    <?php if ($currentMethod == "MGA") { ?>
+        <p class="text-info"> Google Authenticator is currently enabled for your account. </p>
     <?php } else { ?>
         <div class="control-group">
             <p class="fwB"> Install the Google Authenticator app for your phone </p>

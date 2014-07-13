@@ -319,9 +319,15 @@ class adminModule extends shnModule {
         include_once 'lib_user.inc';
 
         $user = user_get_selected();
+        $this->user = $user;
+        $result = $user->getGASk();
+        $this->url = $result['url'];
+        $this->secret = $result['secret'];
 
         if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
+
+            return true;
         } 
 
         if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
@@ -329,22 +335,15 @@ class adminModule extends shnModule {
             if (!$resp) {
                 $this->wrongcode = true;
             }
+
+            return true;
         }
 
-        $cfg = array();
-        if(!empty($user->config)) {
-            $cfg = @json_decode($user->config, true);
+        if($_POST['desiredMethod'] == "yubikey") {
+            $user->TSVSaveYubiKey();
+
+            return true;
         }
-
-        if($cfg['security']['TSV']['method'] == "MGA") {
-            $this->enabled = true;
-        }
-
-        $result = $user->getGASk();
-
-        $this->url = $result['url'];
-        $this->secret = $result['secret'];
-        $this->user = $user;
     }
 
     public function act_add_user() {

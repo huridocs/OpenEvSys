@@ -14,7 +14,7 @@
 </div>
 
 <?php 
-    $userConfig = @json_decode($user->config, true);
+    $userConfig = $user->getConfig();
 
     $currentMethod = (isset($userConfig["security"]["TSV"]["method"])) 
                 ? $userConfig["security"]["TSV"]["method"] : "none";
