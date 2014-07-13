@@ -191,31 +191,34 @@ class homeModule extends shnModule {
     }
 
     public function act_edit_security() {
+        include_once 'lib_user.inc';
 
         $user = UserHelper::loadFromUsername($_SESSION['username']);
+        $this->user = $user;
         $result = $user->getGASk();
+        $this->url = $result['url'];
+        $this->secret = $result['secret'];
 
-        if (isset($_POST['disable'])) {
+        if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
-        } elseif (isset($_POST['code'])) {
+
+            return true;
+        } 
+
+        if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
             $resp = $user->TSVSaveMGA($_POST['code']);
             if (!$resp) {
                 $this->wrongcode = true;
-            } else {
-                $this->changed = true;
             }
-        }
-        $cfg = array();
-        if (!empty($user->config)) {
-            $cfg = @json_decode($user->config, true);
-        }
-        if ($cfg['security']['TSV']['method'] == "MGA") {
-            $this->enabled = true;
+
+            return true;
         }
 
+        if($_POST['desiredMethod'] == "yubikey") {
+            $user->TSVSaveYubiKey();
 
-        $this->url = $result['url'];
-        $this->secret = $result['secret'];
+            return true;
+        }
     }
 
     public function act_test() {
