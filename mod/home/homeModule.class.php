@@ -198,6 +198,7 @@ class homeModule extends shnModule {
         $result = $user->getGASk();
         $this->url = $result['url'];
         $this->secret = $result['secret'];
+        $this->isYubikeyAPIConfigured = $this->isYubikeyAPIConfigured();
 
         if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
@@ -219,6 +220,18 @@ class homeModule extends shnModule {
 
             return true;
         }
+    }
+
+    protected function isYubikeyAPIConfigured() {
+        global $conf;
+
+        $hasClientKey = (isset($conf["YubiKeyClientKey"]) && $conf["YubiKeyClientKey"] != "");
+        $hasClientId = (isset($conf["YubiKeyClientId"]) && $conf["YubiKeyClientId"] != "");
+
+        if($hasClientId && $hasClientKey)
+            return true;
+
+        return false;
     }
 
     public function act_test() {
