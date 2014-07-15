@@ -87,15 +87,32 @@ function checkYubikeyAuth(&$error) {
 
     require_once APPROOT . "3rd/yubico/Yubico.php";
     
-    $yubi = new Auth_Yubico($conf['YubiKeyClientId'], $conf['YubiKeyClientKey']);
+    $yubi = new Auth_Yubico($conf['YubiKeyClientId'], $conf['YubiKeyClientKey'], 1, 1);
+
+    $parsedCode = $yubi->parsePasswordOTP($_POST['code']);
+    
+    if(!$parsedCode) {
+        $error = _t("Could not parse a valid yubikey code");
+        return false;
+    }    
+
+    $userConfig = UserHelper::loadFromUsername($_SESSION['username'])->getConfig();
+    $keyIdMatches = ($parsedCode['prefix'] == $userConfig['security']['TSV']['keyId']);
+
+    if(!$keyIdMatches) {
+        $error = _t("OTP does not match user's paired YubiKey.");
+        return false;
+    }
+
     $auth = $yubi->verify($_POST['code']);
 
-    if($auth == 0) {
+    if (PEAR::isError($auth)) {
+        $error = _t($auth->getMessage());
+        return false;
+    } else {
         unset($_SESSION['check_TSV']);
         return true;
     }
-
-    $error = _t($auth->getMessage());
 }
 
 //check if a remember key is set

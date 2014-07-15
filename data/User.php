@@ -289,7 +289,12 @@ class User extends ADODB_Active_Record {
 
     public function TSVSaveMGA($code) {
         if ($this->verifyGACode($code)) {
-            $this->saveTSVMethod('MGA');
+
+            $cfg = $this->getConfig();
+            $cfg['security']['TSV']['method'] = "MGA";
+
+            $this->setConfig($cfg);
+            $this->Save();
 
             return true;
         }
@@ -297,17 +302,15 @@ class User extends ADODB_Active_Record {
         return false;
     }
 
-    public function TSVSaveYubiKey() {
-        $this->saveTSVMethod('yubikey');
-        return true;
-    }
-
-    protected function saveTSVMethod($method) {
+    public function TSVSaveYubiKey($keyId) {
         $cfg = $this->getConfig();
-        $cfg['security']['TSV']['method'] = $method;
+        $cfg['security']['TSV']['method'] = "yubikey";
+        $cfg['security']['TSV']['keyId'] = $keyId;
 
         $this->setConfig($cfg);
         $this->Save();
+
+        return true;
     }
 
     public function getConfig() {

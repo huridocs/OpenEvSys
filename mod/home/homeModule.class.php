@@ -1,5 +1,7 @@
 <?php
+
 include_once APPROOT . 'inc/lib_uuid.inc';
+require_once APPROOT . '3rd/yubico/Yubico.php';
 
 class homeModule extends shnModule {
 
@@ -216,10 +218,25 @@ class homeModule extends shnModule {
         }
 
         if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
-            $user->TSVSaveYubiKey();
+            if(isset($_POST['code'])) {
+                $parsedCode = $this->parseYubicoCode($_POST['code']);
 
-            return true;
+                if($parsedCode) {
+                    $user->TSVSaveYubiKey($parsedCode['prefix']);
+                    return true;
+                }
+            }
+
+            $this->wrongcode = true;
+            return false;
         }
+    }
+
+    protected function parseYubicoCode($code) {
+        $yubi = new Auth_Yubico();
+        $result = $yubi->parsePasswordOTP($code);
+
+        return $result;
     }
 
     protected function isYubikeyAPIConfigured() {
