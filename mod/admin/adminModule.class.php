@@ -332,8 +332,8 @@ class adminModule extends shnModule {
             return true;
         } 
 
-        if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
-            $resp = $user->TSVSaveMGA($_POST['code']);
+        if($_POST['desiredMethod'] == "MGA" && isset($_POST['GACode'])) {
+            $resp = $user->TSVSaveMGA($_POST['GACode']);
             if (!$resp) {
                 $this->wrongcode = true;
             }
@@ -342,9 +342,8 @@ class adminModule extends shnModule {
         }
 
         if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
-            if(isset($_POST['code'])) {
-                $parsedCode = $this->parseYubicoCode($_POST['code']);
-
+            if(isset($_POST['YubiKeyCode'])) {
+                $parsedCode = $this->parseYubicoCode($_POST['YubiKeyCode']);
                 if($parsedCode) {
                     $user->TSVSaveYubiKey($parsedCode['prefix']);
                     return true;

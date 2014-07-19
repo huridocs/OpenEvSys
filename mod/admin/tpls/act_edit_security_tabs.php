@@ -1,7 +1,28 @@
+<?php 
+    $userConfig = $user->getConfig();
+
+    $currentMethod = (isset($userConfig["security"]["TSV"]["method"])) 
+                ? $userConfig["security"]["TSV"]["method"] : "none";
+?>
+
 <div id="auth-method" class="control-group">
     <p>
         <?php echo _t("2-Step Verification adds an extra layer of security to your account, drastically reducing the chances of having the information in your account stolen.") ?>
     </p>
+
+    <?php 
+        $currentMethodFeedback = "This account is not currently configured to use any 2-Step authentication method.";
+
+        if($currentMethod == "MGA") { 
+            $currentMethodFeedback = "Google Authenticator is currently enabled for this account.";
+        }
+
+        if($currentMethod == "yubikey") {
+            $currentMethodFeedback = "YubiKey is currently enabled for this account.";
+        }
+    ?>
+
+    <p class="text-info"> <?php echo _t($currentMethodFeedback) ?> </p>
 
     <div class="btn-group">
       <button type="button" class="btn btn-default active" data="none"><?php echo _t('None') ?></button>
@@ -11,13 +32,6 @@
 
     <input type="hidden" name="desiredMethod" />
 </div>
-
-<?php 
-    $userConfig = $user->getConfig();
-
-    $currentMethod = (isset($userConfig["security"]["TSV"]["method"])) 
-                ? $userConfig["security"]["TSV"]["method"] : "none";
-?>
 
 <script>
     var currentMethod = "<?php echo $currentMethod ?>";

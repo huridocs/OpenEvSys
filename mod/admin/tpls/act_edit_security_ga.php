@@ -1,8 +1,6 @@
 <div id="MGA" class="auth-method-form control-group" style="display:none;">
     
-    <?php if ($currentMethod == "MGA") { ?>
-        <p class="text-info"> Google Authenticator is currently enabled for your account. </p>
-    <?php } else { ?>
+    <?php if ($currentMethod != "MGA") { ?>
         <div class="control-group">
             <p class="fwB"> Install the Google Authenticator app for your phone </p>
             <ol class="ol p10">
@@ -23,16 +21,18 @@
         </div>
         
         <div class='control-group <?php if ($wrongcode) { echo ' error'; } ?>'> 
-            <label  class="control-label" for="code"><?php echo _t('Code') ?></label>
+            <label class="control-label" for="code"><?php echo _t('Code') ?></label>
 
             <div class="controls">
-                <input  type="text" name="code"  value=""   class='input-large <?php if ($wrongcode) { echo ' error'; } ?>'  />
+                <input type="text" name="GACode" class='input-large <?php if ($wrongcode) { echo ' error'; } ?>'  />
                 <div class="help-inline">
                     <span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>  
-                    <?php if ($wrongcode) { ?> 
-                        <span class="help-inline">The code is incorrect. Check "settings > time correction for codes" in your client app and try again.</span>
-                    <?php } ?>
                 </div>
+                <?php if ($wrongcode) { ?> 
+                    <div class="help-inline">
+                        Invalid code. Check "settings > time correction for codes" in your client app and try again.
+                    </div>
+                <?php } ?>
             </div>
         </div>
     <?php } ?>

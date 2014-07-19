@@ -6,11 +6,7 @@
         </p>
     <?php } ?>
 
-    <?php if($currentMethod == "yubikey") { ?>
-		<p class="text-info">
-			<?php echo _t("YubiKey is currently enabled for your account.") ?>
-		</p>
-	<?php } else { ?>
+    <?php if($currentMethod != "yubikey") { ?>
         <div class='control-group <?php if ($wrongcode) { echo ' error'; } ?>'> 
             
             <ol>
@@ -23,7 +19,7 @@
             <label  class="control-label" for="code"><?php echo _t('Code') ?></label>
 
             <div class="controls">
-                <input  type="text" name="code" value="" class='input-large <?php if ($wrongcode) { echo ' error'; } ?>' />
+                <input  type="text" name="YubiKeyCode" value="" class='input-large <?php if ($wrongcode) { echo ' error'; } ?>' />
                 <div class="help-inline">
                     <span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>  
                     <?php if ($wrongcode) { ?> 
