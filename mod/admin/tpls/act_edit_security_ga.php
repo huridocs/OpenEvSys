@@ -30,7 +30,7 @@
                 <div class="help-inline">
                     <span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>  
                     <?php if ($wrongcode) { ?> 
-                        <span class="help-inline">The code is incorrect. Try again</span>
+                        <span class="help-inline">The code is incorrect. Check "settings > time correction for codes" in your client app and try again.</span>
                     <?php } ?>
                 </div>
             </div>
