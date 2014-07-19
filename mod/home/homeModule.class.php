@@ -1,5 +1,7 @@
 <?php
+
 include_once APPROOT . 'inc/lib_uuid.inc';
+require_once APPROOT . '3rd/yubico/Yubico.php';
 
 class homeModule extends shnModule {
 
@@ -191,31 +193,62 @@ class homeModule extends shnModule {
     }
 
     public function act_edit_security() {
+        include_once 'lib_user.inc';
 
         $user = UserHelper::loadFromUsername($_SESSION['username']);
+        $this->user = $user;
         $result = $user->getGASk();
+        $this->url = $result['url'];
+        $this->secret = $result['secret'];
+        $this->isYubikeyAPIConfigured = $this->isYubikeyAPIConfigured();
 
-        if (isset($_POST['disable'])) {
+        if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
-        } elseif (isset($_POST['code'])) {
+
+            return true;
+        } 
+
+        if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
             $resp = $user->TSVSaveMGA($_POST['code']);
             if (!$resp) {
                 $this->wrongcode = true;
-            } else {
-                $this->changed = true;
             }
-        }
-        $cfg = array();
-        if (!empty($user->config)) {
-            $cfg = @json_decode($user->config, true);
-        }
-        if ($cfg['security']['TSV']['method'] == "MGA") {
-            $this->enabled = true;
+
+            return true;
         }
 
+        if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
+            if(isset($_POST['code'])) {
+                $parsedCode = $this->parseYubicoCode($_POST['code']);
 
-        $this->url = $result['url'];
-        $this->secret = $result['secret'];
+                if($parsedCode) {
+                    $user->TSVSaveYubiKey($parsedCode['prefix']);
+                    return true;
+                }
+            }
+
+            $this->wrongcode = true;
+            return false;
+        }
+    }
+
+    protected function parseYubicoCode($code) {
+        $yubi = new Auth_Yubico();
+        $result = $yubi->parsePasswordOTP($code);
+
+        return $result;
+    }
+
+    protected function isYubikeyAPIConfigured() {
+        global $conf;
+
+        $hasClientKey = (isset($conf["YubiKeyClientKey"]) && $conf["YubiKeyClientKey"] != "");
+        $hasClientId = (isset($conf["YubiKeyClientId"]) && $conf["YubiKeyClientId"] != "");
+
+        if($hasClientId && $hasClientKey)
+            return true;
+
+        return false;
     }
 
     public function act_test() {

@@ -289,31 +289,52 @@ class User extends ADODB_Active_Record {
 
     public function TSVSaveMGA($code) {
         if ($this->verifyGACode($code)) {
-            $cfg = array();
-            if (!empty($this->config)) {
-                $cfg = @json_decode($this->config, true);
-            }
-            $cfg['security']['TSV']['method'] = 'MGA';
 
-            $this->config = json_encode($cfg);
+            $cfg = $this->getConfig();
+            $cfg['security']['TSV']['method'] = "MGA";
+
+            $this->setConfig($cfg);
             $this->Save();
-        } else {
-            return false;
+
+            return true;
         }
+
+        return false;
+    }
+
+    public function TSVSaveYubiKey($keyId) {
+        $cfg = $this->getConfig();
+        $cfg['security']['TSV']['method'] = "yubikey";
+        $cfg['security']['TSV']['keyId'] = $keyId;
+
+        $this->setConfig($cfg);
+        $this->Save();
 
         return true;
     }
 
-    public function disableTSV() {
-        $cfg = array();
-        if (!empty($this->config)) {
-            $cfg = @json_decode($this->config, true);
-        }
+    public function getConfig() {
+        $config = array();
         
-        unset($cfg['security']['TSV']['method']);
-        unset($cfg['security']['TSV']['secret']);
-        $this->config = json_encode($cfg);
+        if (!empty($this->config)) {
+            $config = @json_decode($this->config, true);
+        }
+
+        return $config;
+    }
+
+    public function setConfig($config) {
+        $this->config = json_encode($config);
+    }
+
+    public function disableTSV() {
+        $cfg = $this->getConfig();
+        
+        unset($cfg['security']);
+
+        $this->setConfig($cfg);
         $this->Save();
+        
         return true;
     }
 

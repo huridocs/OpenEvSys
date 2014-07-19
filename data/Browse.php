@@ -565,14 +565,14 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getUserList() {
-        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
+        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status, config FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
         //filter options
 
         $pager = new shnPager($sql);
         return $pager;
     }
        public static function getUserListAll() {
-        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
+        $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status, config FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
         
         $browse = new Browse();
         $res = $browse->ExecuteQuery($sql);

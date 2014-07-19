@@ -132,3 +132,7 @@ $conf['media_mode'] = 0777;
 
 //session timeout in minuts
 $conf['session_timeout']= 60;
+
+# YubiKey API
+$conf["YubiKeyClientKey"] = "";
+$conf["YubiKeyClientId"] = "";

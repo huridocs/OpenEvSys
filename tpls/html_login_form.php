@@ -73,34 +73,29 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-
                 <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=<?php echo $publickey ?>"></script>
-
 
                 <?php
             }
         }
-        ?>
-
-
-       
-        <?php
-    } else {
+    } elseif(!empty($_SESSION['check_TSV'])) {
+        $message = "Your account is configured to use Google Authentication";
+        if($_SESSION['check_TSV'] == "yubikey")
+            $message = "Your account is configured to use YubiKey authentication";
         ?>
         <div class="control-group">
-
+            <p style="text-align: center;"><?php echo $message ?></p>
             <label class="control-label" for="code"><?php echo _t('Code') ?></label>
             <div class="controls">
-                <input type="text" id="code" name="code"  autocomplete="off">
+                <input type="text" id="code" name="code" autocomplete="off">
             </div>
         </div>
         <?php
     }
     ?>
-                 <div class="control-group">
+        <div class="control-group">
             <div class="controls">
                 <button type="submit" class="btn"><?php echo _t('SIGN_IN') ?></button>
             </div>
