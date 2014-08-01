@@ -830,10 +830,11 @@ function get_sort_heading($field) {
             $newGet['sortorder'] = 'asc';
     }
 
+    $newGet['request_page'] = (int) Reform::HtmlAttributeEncode($newGet['request_page']);
+    $newGet['rpp'] = (int) Reform::HtmlAttributeEncode($newGet['rpp']);
 
     $newGet['sort'] = $field;
     $url = get_url($_GET['mod'], $_GET['act'], $_GET['view'], $newGet, null, true);
-
 
     return $url;
 }
