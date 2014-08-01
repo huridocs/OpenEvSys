@@ -16,6 +16,10 @@ class SearchQuery {
     public function initFromJson($queryJsonString) {
 
         $queryArray = json_decode($queryJsonString, true);
+
+        if($queryArray === NULL) {
+            throw new Exception("Error Processing Request", 1);
+        }
         /*usort($queryArray['select'], array("SearchQuery","entitySort"));
         usort($queryArray['condition'], array("SearchQuery","entitySort"));*/
         $this->queryArray = $queryArray;
