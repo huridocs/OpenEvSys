@@ -123,6 +123,9 @@ class shnPager implements BrowseStrategy
         $args = $_GET;
         unset($args['mod']);
         unset($args['act']);
+
+        $args['request_page'] = (int) Reform::HtmlAttributeEncode($args['request_page']);
+        $args['rpp'] = (int) Reform::HtmlAttributeEncode($args['rpp']);
 ?>
 <div class="row" style="margin-left:0px;">
         <?php if($this->show_all){ ?>

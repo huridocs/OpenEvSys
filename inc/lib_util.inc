@@ -49,6 +49,9 @@ class AutoLoadClass {
         if (file_exists(APPROOT . 'data/' . $class_name . '.php')) {
             require_once(APPROOT . 'data/' . $class_name . '.php');
         }
+        if (file_exists(APPROOT . '3rd/' . $class_name . '.php')) {
+            require_once(APPROOT . '3rd/' . $class_name . '.php');
+        }
     }
 
 }
