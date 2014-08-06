@@ -1,4 +1,9 @@
-<?php global $conf; ?>
+<?php 
+  global $conf; 
+  $request_sub_act = Reform::HtmlEncode($_REQUEST['sub_act']);
+  $request_mt_select = Reform::HtmlEncode($_REQUEST['mt_select']);  
+?>
+
 <h2><?php echo _t('MICRO_THESAURI_CUSTOMIZATION') ?></h2>
 <div class="form-container"> 
     <form class="form-horizontal"  action="<?php get_url('admin', 'mt_customization') ?>" method='get'>
@@ -24,10 +29,10 @@
         global $mt_select;
         if ($mod == "a") {
             ?>
-            href="<?php get_url('admin', 'mt_customization', null, array('sub_act' => $act, 'mt_select' => $_REQUEST['mt_select'])) ?>";
+            href="<?php get_url('admin', 'mt_customization', null, array('sub_act' => $act, 'mt_select' => $request_mt_select)) ?>";
             <?php
         } else {
-            if ($act == $_REQUEST['sub_act'])
+            if ($act == $request_sub_act)
                 echo " class='active'";
         }
     }
@@ -44,7 +49,7 @@
         </ul>
     </div>
     <div class="panel">
-        <form class="form-horizontal"  action='<?php echo get_url('admin', 'mt_customization', null, array('sub_act' => $_REQUEST['sub_act'], 'mt_select' => $mt_select)) ?>' method='post'>
+        <form class="form-horizontal"  action='<?php echo get_url('admin', 'mt_customization', null, array('sub_act' => $request_sub_act, 'mt_select' => $request_mt_select)) ?>' method='post'>
             <center>
 
                 <button type="submit" name="update" class='btn  btn-primary'  ><i class="icon-ok icon-white"></i> <?php echo _t('SAVE') ?></button>
