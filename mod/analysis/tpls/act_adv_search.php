@@ -88,7 +88,7 @@
         </div>
 </div>
 <script language="javascript">
-    var query = '<?php echo $_GET['query'] ?>';
+    var query = '<?php echo $query->query ?>';
         
     var as = advSearch.getInstance();
     as.init();
