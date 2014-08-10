@@ -31,10 +31,13 @@ include_once APPROOT . 'inc/lib_entity_forms.inc';
 include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_files.inc';
+require_once APPROOT . 'inc/ArgumentEncoder.php';
 
 include_once 'messages.inc';
 
 class personModule extends shnModule {
+
+    public $argumentEncoder;
 
     function act_default() {
         set_redirect_header('person', 'browse');
@@ -76,6 +79,15 @@ class personModule extends shnModule {
         }
         global $person; //hack for the permission card list; need to replaced with proper code
         $person = $this->person;
+    }
+
+    public function createArgumentEncoder() {
+        $whiteList = Array(
+            'request_page', 'rpp', 'person_record_number', 'counting_unit',
+            'person_name', 'date_of_birth', 'sex', 'filter', 'sort', 'sortorder'
+        );
+        
+        $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
     private function load_related_person() {
@@ -297,7 +309,10 @@ class personModule extends shnModule {
             // Generates the view's Label list
             $htmlFields[$field_name] = $entity_fields_html[$field_name];
         }
+        
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->result_pager->setArgumentEncoder($this->argumentEncoder);
+
         $this->columnValues = $this->result_pager->get_page_data();
 
         $this->columnValues = set_links_in_recordset($this->columnValues, 'person');
