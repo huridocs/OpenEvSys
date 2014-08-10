@@ -79,6 +79,8 @@ class personModule extends shnModule {
         }
         global $person; //hack for the permission card list; need to replaced with proper code
         $person = $this->person;
+
+        $this->createArgumentEncoder();
     }
 
     public function createArgumentEncoder() {
