@@ -131,6 +131,8 @@ class docuModule extends shnModule {
         }
 
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->result_pager->setArgumentEncoder($this->argumentEncoder);
+        
         $this->columnValues = $this->result_pager->get_page_data();
 
         $this->columnValues = set_links_in_recordset($this->columnValues, 'supporting_docs_meta');
