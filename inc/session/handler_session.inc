@@ -48,7 +48,7 @@ session_name($conf['session_name']);
 
 global $conf;
 
-//start the session
+session_set_cookie_params(0, "/", "", false, true);
 session_start();
 
 $t1=time();
