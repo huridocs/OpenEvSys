@@ -1,2232 +1,2232 @@
 #: ----
 msgid "_CONTROLER_NOT_FOUND_"
-msgstr "Pengontrol tidak ditemukan"
+msgstr "Controler nem található"
 #: ----
 msgid "_DAY_S__"
-msgstr "Hari:"
+msgstr "Nap(ok):"
 #: ----
 msgid "_MONTH_S__"
-msgstr "Bulan:"
+msgstr "Hónap(ok):"
 #: ----
 msgid "1ST_LEVEL"
-msgstr "Tingkat 1"
+msgstr "1. szint"
 #: ----
 msgid "2ND_LEVEL"
-msgstr "Tingkat 2"
+msgstr "2. szint"
 #: ----
 msgid "3RD_LEVEL"
-msgstr "Tingkat 3"
+msgstr "3. szint"
 #: ----
 msgid "404_ERROR___PAGE_NOT_FOUND"
-msgstr "404 Error: Halaman tidak ditemukan"
+msgstr "404-es hiba: az oldal nem található"
 #: ----
 msgid "4TH_LEVEL"
-msgstr "Tingkat 4"
+msgstr "4. szint"
 #: ----
 msgid "5TH_LEVEL"
-msgstr "Tingkat 5"
+msgstr "5. szint"
 #: ----
 msgid "6TH_LEVEL"
-msgstr "Tingkat 6"
+msgstr "6. szint"
 #: ----
 msgid "ACL_MODE"
-msgstr "Mode ACL"
+msgstr "ACL mód"
 #: ----
 msgid "ACT"
-msgstr "Tindakan"
+msgstr "Cselekmény"
 #: ----
 msgid "ACT_"
-msgstr "Tindakan"
+msgstr "Cselekmény"
 #: ----
 msgid "ACT_DETAILS"
-msgstr "Rincian Tindakan"
+msgstr "Cselekmény részletei"
 #: ----
 msgid "ACT_S_"
-msgstr "Tindakan"
+msgstr "Cselekmény(ek)"
 #: ----
 msgid "ACT_SEARCH_FORM"
-msgstr "Form Pencarian Tindakan"
+msgstr "Cselekmény kereső"
 #: ----
 msgid "ACTION"
-msgstr "Tindakan"
+msgstr "Akció"
 #: ----
 msgid "ACTIONS"
-msgstr "Tindakan"
+msgstr "Akciók"
 #: ----
 msgid "ACTIVATED"
-msgstr "Aktifkan"
+msgstr "Aktivált"
 #: ----
 msgid "ACTS"
-msgstr "Tindakan"
+msgstr "Cselekmény"
 #: ----
 msgid "ADD_ACT"
-msgstr "Tambahkan Tindakan"
+msgstr "Cselekmény hozzáadása"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS"
-msgstr "Tambahkan Rincian Tambahan"
+msgstr "Részletek hozzáadása"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS_FOR"
-msgstr "Tambahkan Rincian Tambahan untuk"
+msgstr "Részletek hozzáadása"
 #: ----
 msgid "ADD_ADDRESS"
-msgstr "Tambahkan Alamat"
+msgstr "Cím hozzáadása"
 #: ----
 msgid "ADD_BIOGRAPHIC_DETAILS"
-msgstr "Tambahkan Riwayat Hidup"
+msgstr "Életrajzi adatok hozzáadása"
 #: ----
 msgid "ADD_CHAIN_OF_EVENTS"
-msgstr "Tambahkan Rangkaian Peristiwa"
+msgstr "Eseménysorozat hozzáadása"
 #: ----
 msgid "ADD_EVENT_INFORMATION"
-msgstr "Tambahkan Informasi Peristiwa"
+msgstr "Esemény információ hozzáadása"
 #: ----
 msgid "ADD_FIELD"
-msgstr "Tambahkan field"
+msgstr "Mező hozzáadása"
 #: ----
 msgid "ADD_FIELD_TO"
-msgstr "Masukkan field ke"
+msgstr "Mező hozzáadása"
 #: ----
 msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
-msgstr "Masukkan field dalam hasil pencarian"
+msgstr "Mező hozzáadása a keresési eredményekhez"
 #: ----
 msgid "ADD_INFORMATION"
-msgstr "Tambahkan Informasi"
+msgstr "Információ hozzáadása"
 #: ----
 msgid "ADD_INTERVENING_PARTY"
-msgstr "Tambahkan Pihak yang Mengintervensi"
+msgstr "Beavatkozó fél hozzáadása"
 #: ----
 msgid "ADD_INTERVENTION"
-msgstr "Tambahkan Intervensi"
+msgstr "Beavatkozás hozzáadása"
 #: ----
 msgid "ADD_INTERVENTIONS"
-msgstr "Tambahkan Intervensi"
+msgstr "Beavatkozások  hozzáadása"
 #: ----
 msgid "ADD_INVOLVEMENT"
-msgstr "Tambahkan Keterlibatan"
+msgstr "Bevonás hozzáadása"
 #: ----
 msgid "ADD_LANGUAGE"
-msgstr "Tambahkan Bahasa"
+msgstr "Nyelv hozzáadása"
 #: ----
 msgid "ADD_MORE_PERPETRATORS"
-msgstr "Tambahkan Pelaku"
+msgstr "Elkövető hozzáadása"
 #: ----
 msgid "ADD_NEW"
-msgstr "Tambahkan baru"
+msgstr "Hozzáadás"
 #: ----
 msgid "ADD_NEW_DOCUMENT"
-msgstr "Masukkan Dokumen Baru"
+msgstr "Dokumentum hozzáadása"
 #: ----
 msgid "ADD_NEW_EVENT"
-msgstr "Tambah Peristiwa baru"
+msgstr "Esemény hozzáadása"
 #: ----
 msgid "ADD_NEW_FIELD"
-msgstr "Masukkan field baru"
+msgstr "Mező hozzáadása"
 #: ----
 msgid "ADD_NEW_PERSON"
-msgstr "Tambahkan Orang Baru"
+msgstr "Személy hozzáadása"
 #: ----
 msgid "ADD_NEW_USER"
-msgstr "Tambahkan Pengguna"
+msgstr "Felhasználó hozzáadása"
 #: ----
 msgid "ADD_PERPETRATOR"
-msgstr "Tambahkan Pelaku"
+msgstr "Elkövető hozzáadása"
 #: ----
 msgid "ADD_PERPETRATOR_S_"
-msgstr "Tambahkan Pelaku"
+msgstr "Elkövető(k) hozzáadása"
 #: ----
 msgid "ADD_ROLE"
-msgstr "Tambahkan Peran"
+msgstr "Szerep hozzáadása"
 #: ----
 msgid "ADD_SOURCE"
-msgstr "Tambahkan Sumber"
+msgstr "Forrás hozzáadása"
 #: ----
 msgid "ADD_SUPPORTING_DOCUMENT_S_"
-msgstr "Tambahkan Dokumen-Dokumen Pendukung"
+msgstr "Igazoló dokumentum(ok) hozzáadása"
 #: ----
 msgid "ADD_VICTIM"
-msgstr "Tambahkan Korban"
+msgstr "Áldozat hozzáadása"
 #: ----
 msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
-msgstr "Tambahkan Korban dan Pelaku dalam Peristiwa ini"
+msgstr "Áldozat és elkövető hozzáadása"
 #: ----
 msgid "ADDING_ADDRESS___"
-msgstr "Menambahkan Alamat..."
+msgstr "Cím hozzáadása…"
 #: ----
 msgid "ADDING_EVENT_INFORMATION"
-msgstr "Menambahkan Informasi Peristiwa"
+msgstr "Esemény információ hozzáadása"
 #: ----
 msgid "ADDING_PERSON_ADDRESS____"
-msgstr "Menambahkan Alamat Orang"
+msgstr "Személy címének hozzáadása"
 #: ----
 msgid "ADDING_PERSON_INFORMATION____"
-msgstr "Menambahkan informasi Orang..."
+msgstr "Információ hozzáadása a személyről"
 #: ----
 msgid "ADDITIONAL_DETAIL_TYPE"
-msgstr "Jenis Rincian Tambahan"
+msgstr "Egyéb részlet típus"
 #: ----
 msgid "ADDITIONAL_DETAILS"
-msgstr "Rincian Tambahan"
+msgstr "Egyéb részlet"
 #: ----
 msgid "ADDRESS"
-msgstr "Alamat"
+msgstr "Cím"
 #: ----
 msgid "ADDRESS_OF_A_PERSON_"
-msgstr "Alamat orang"
+msgstr "Személy címe"
 #: ----
 msgid "ADDRESS_TYPE"
-msgstr "Tipe Alamat"
+msgstr "Cím típusa"
 #: ----
 msgid "ADMIN"
 msgstr "Admin"
 #: ----
 msgid "ADVANCED"
-msgstr "Mutakhir"
+msgstr "Részletes"
 #: ----
 msgid "ADVANCED_SEARCH"
-msgstr "Pencarian Mutakhir"
+msgstr "Részletes keresés"
 #: ----
 msgid "AFTER"
-msgstr "setelah"
+msgstr "után"
 #: ----
 msgid "AGAINST"
-msgstr "terhadap"
+msgstr "ellen"
 #: ----
 msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
-msgstr "Semua kolom dikembalikan ke nilai awal"
+msgstr "Minden oszlop az eredeti értékre visszaállítva."
 #: ----
 msgid "ANALYSIS"
-msgstr "Analisis"
+msgstr "Elemzés"
 #: ----
 msgid "AND"
-msgstr "DAN"
+msgstr "ÉS"
 #: ----
 msgid "APPLY_CHANGES_PERMANENTLY"
-msgstr "Lakukan perubahan permanen"
+msgstr "Változtatások véglegesítése"
 #: ----
 msgid "ARREST"
-msgstr "Penangkapan"
+msgstr "Letartóztatás"
 #: ----
 msgid "AT"
-msgstr "saat"
+msgstr "itt:"
 #: ----
 msgid "AT_OR_AFTER"
-msgstr "saat atau setelah"
+msgstr "itt vagy után"
 #: ----
 msgid "AT_OR_BEFORE"
-msgstr "saat atau sebelum"
+msgstr "itt vagy előtt"
 #: ----
 msgid "AUDIT"
-msgstr "Audit"
+msgstr "Vizsgálat"
 #: ----
 msgid "AUDIT_LOG"
-msgstr "Catatan Audit"
+msgstr "Vizsgálat log"
 #: ----
 msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
-msgstr "Catatan Detil tidak tersedia untuk Peristiwa ini"
+msgstr "Vizsgálat log nem elérhető ehhez az eseményhez"
 #: ----
 msgid "BACK"
-msgstr "Kembali"
+msgstr "Vissza"
 #: ----
 msgid "BACK_TO_EVENT_VIEW"
-msgstr "Kembali ke tampilan Peristiwa"
+msgstr "Vissza az esemény nézethez"
 #: ----
 msgid "BACK_TO_PERSON_VIEW"
-msgstr "Kembali ke tampilan Orang"
+msgstr "Vissza a személy nézethez"
 #: ----
 msgid "BASIC"
-msgstr "Sederhana"
+msgstr "Egyszerű"
 #: ----
 msgid "BASIC_SEARCH"
-msgstr "Pencarian Sederhana"
+msgstr "Egyszerű keresés"
 #: ----
 msgid "BEFORE"
-msgstr "Sebelum"
+msgstr "előtt"
 #: ----
 msgid "BIOGRAPHIC_DETAIL_S_"
-msgstr "Riwayat Hidup"
+msgstr "Életrajzi adatok"
 #: ----
 msgid "BIOGRAPHIC_DETAILS"
-msgstr "Riwayat Hidup"
+msgstr "Életrajzi adatok"
 #: ----
 msgid "BIOGRAPHIC_DETAILS__"
-msgstr "Riwayat Hidup."
+msgstr "Életrajzi adatok"
 #: ----
 msgid "BIOGRAPHY_DETAIL_S_"
-msgstr "Riwayat Hidup"
+msgstr "Életrajzi adatok"
 #: ----
 msgid "BROWSE_DOCUMENTS"
-msgstr "Telusuri Dokumen"
+msgstr "Keresés a dokumentmokban"
 #: ----
 msgid "BROWSE_EVENT"
-msgstr "Telusuri Peristiwa"
+msgstr "Keresés az eseményben"
 #: ----
 msgid "BROWSE_EVENTS"
-msgstr "Telusuri Peristiwa"
+msgstr "Keresés az eseményekben"
 #: ----
 msgid "BROWSE_PERSONS"
-msgstr "Telusuri Orang"
+msgstr "Keresés a személyekben"
 #: ----
 msgid "BY_WHOM"
-msgstr "Oleh siapa"
+msgstr "Ki által"
 #: ----
 msgid "CANCEL"
-msgstr "Batal"
+msgstr "Mégse"
 #: ----
 msgid "CELLULAR"
-msgstr "Selular"
+msgstr "Sejtes"
 #: ----
 msgid "CHAIN_OF_EVENT"
-msgstr "Rangkaian Peristiwa"
+msgstr "Eseménysorozat"
 #: ----
 msgid "CHAIN_OF_EVENT_S_"
-msgstr "Rangkaian Peristiwa"
+msgstr "Eseménysorozat"
 #: ----
 msgid "CHAIN_OF_EVENTS"
-msgstr "Rangkaian Peristiwa"
+msgstr "Eseménysorozat"
 #: ----
 msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
-msgstr "Rangkaian Peristiwa tidak tersedia"
+msgstr "Eseménysorozat nem létezik"
 #: ----
 msgid "CHANE_OF_EVENTS"
-msgstr "Rangkaian Peristiwa"
+msgstr "Eseménysorozat"
 #: ----
 msgid "CHANE_OF_EVENTS_"
-msgstr "Rangkaian Peristiwa"
+msgstr "Eseménysorozat"
 #: ----
 msgid "CHANGE"
-msgstr "Ubah"
+msgstr "Módosítás"
 #: ----
 msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
-msgstr "Ganti tipe Rincian Tambahan"
+msgstr "Egyéb részlet típus módosítása"
 #: ----
 msgid "CHANGE_PASSWORD"
-msgstr "Ganti kata sandi"
+msgstr "Jelszó változtatás"
 #: ----
 msgid "CHANGE_VIEW__"
-msgstr "Ubah tampilan:"
+msgstr "Nézet módosítás:"
 #: ----
 msgid "CHOOSE_AN_ACTION"
-msgstr "Pilih tindakan"
+msgstr "Válassz egy akciót"
 #: ----
 msgid "CHOOSE_FILE_UPLOAD"
-msgstr "Pilih file yang akan diunggah"
+msgstr "Feltöltendő fájl kiválasztása"
 #: ----
 msgid "CHOSE_STARTING_POINT"
-msgstr "Pilih titik awal"
+msgstr "Kezdőpont választása"
 #: ----
 msgid "CLARIFY"
-msgstr "Klarifikasi"
+msgstr "Magyarázat"
 #: ----
 msgid "CLARIFYING_NOTE"
-msgstr "Catatan Klarifikasi"
+msgstr "Magyarázó megjegyzés"
 #: ----
 msgid "CLARIFYING_NOTES"
-msgstr "Catatan Klarifikasi"
+msgstr "Magyarázó megjegyzések"
 #: ----
 msgid "CLEAR"
-msgstr "Bersihkan"
+msgstr "Törlés"
 #: ----
 msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
-msgstr "Klik untuk mengunduh semua catatan dalam bentuk XML"
+msgstr "Kattintsaz OpenEvSysben szereplő minden bejegyzésének letöltéséhez  Események XML fájlként"
 #: ----
 msgid "CLICK_TO_SELECT_AN_OPTION"
-msgstr "Klik untuk memilih pilihan"
+msgstr "Válassz egy opciót"
 #: ----
 msgid "CLOSE"
-msgstr "Tutup"
+msgstr "Bezár"
 #: ----
 msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
-msgstr "Kolom dikembalikan ke nilai awal"
+msgstr "Oszlop visszaállítása az eredeti értékekre."
 #: ----
 msgid "COMBINED_SEARCH_FORMS"
-msgstr "Form pencarian kombinasi"
+msgstr "Kombinált keresési űrlapok"
 #: ----
 msgid "COMPILE"
-msgstr "Kompilasi"
+msgstr "Összeállít"
 #: ----
 msgid "CONFIG_VARIABLE"
-msgstr "Aturan Variabel"
+msgstr "Konfigurációs változó"
 #: ----
 msgid "CONFIRM_NEW_PASSWORD"
-msgstr "Konfirmasi kata sandi yang baru"
+msgstr "Új jelszó megerősítése"
 #: ----
 msgid "CONFIRM_PASSWORD"
-msgstr "Konfirmasi kata sandi"
+msgstr "Jelszó megerősítése"
 #: ----
 msgid "CONTAINS"
-msgstr "mengandung"
+msgstr "tartalmazza"
 #: ----
 msgid "CONTEXTUAL_INFORMATION"
-msgstr "Informasi Konstekstual"
+msgstr "Háttér információ"
 #: ----
 msgid "CONTINUE"
-msgstr "Lanjutkan"
+msgstr "Tovább"
 #: ----
 msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
-msgstr "Lanjutkan memperbarui rincian Dokumen"
+msgstr "Tovább a Dokumentum szerkesztééshez"
 #: ----
 msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
-msgstr "Lanjutkan memperbarui catatan Rangkaian Peristiwa"
+msgstr "Tovább az Eseménysorozat szerkesztééshez"
 #: ----
 msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
-msgstr "Lanjutkan memperbarui catatan Peristiwa ini"
+msgstr "Tovább az Esemény szerkesztééshez"
 #: ----
 msgid "COUNT"
-msgstr "Hitungan"
+msgstr "Számolás"
 #: ----
 msgid "COUNTRY"
-msgstr "Negara"
+msgstr "Ország"
 #: ----
 msgid "CREATE_REPORT_FROM_THESE_RESULTS"
-msgstr "Buat laporan dari hasil"
+msgstr "Jelentés készítése ezekből az eredményekből"
 #: ----
 msgid "CREATED_BY"
-msgstr "Dibuat oleh"
+msgstr "Létrehozta"
 #: ----
 msgid "CREATED_DATE"
-msgstr "Tanggal dibuat"
+msgstr "Létrehozás időpontja"
 #: ----
 msgid "CREATOR"
-msgstr "Pembuat"
+msgstr "Szerző"
 #: ----
 msgid "CSV"
 msgstr "CSV"
 #: ----
 msgid "CURRENT_PASSWORD"
-msgstr "Kata Sandi saat ini"
+msgstr "Jelenlegi jelszó"
 #: ----
 msgid "CURRENT_SETTING"
-msgstr "Setting saat ini"
+msgstr "Jelenlegi beállítás"
 #: ----
 msgid "CURRENT_VALUE"
-msgstr "Nilai saat ini"
+msgstr "Jelenlegi érték"
 #: ----
 msgid "DATA_EXCHANGE"
-msgstr "Pertukaran Data"
+msgstr "Adat csere"
 #: ----
 msgid "DATABASE_ERROR"
-msgstr "Kesalahan Database"
+msgstr "Adatbázis hiba"
 #: ----
 msgid "DATE"
-msgstr "Tanggal"
+msgstr "Dátum"
 #: ----
 msgid "DATE_CREATED"
-msgstr "Tanggal pembuatan"
+msgstr "Létrehozás dátuma"
 #: ----
 msgid "DATE_FIELD_"
-msgstr "Field tanggal"
+msgstr "Adatmező"
 #: ----
 msgid "DATE_OF_INTERVENTION"
-msgstr "Tanggal Intervensi"
+msgstr "Beavatkozás ideje"
 #: ----
 msgid "DATE_OF_SOURCE_MATERIAL"
-msgstr "Tanggal Materi Sumber"
+msgstr "Forrásanyag dátuma"
 #: ----
 msgid "DATE_REQUIRED__INVALID_DATE"
-msgstr "Tanggal diwajibkan, Tanggal tidak sesuai"
+msgstr "Dátum kötelező, nem érvényes adat"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Tanggal Entri"
+msgstr "Bejegyzés időpontja"
 #: ----
 msgid "DEFINITION"
-msgstr "Definisi"
+msgstr "Meghatározás"
 #: ----
 msgid "DEGREE_OF_INVOLVEMENT"
-msgstr "Derajat Keterlibatan"
+msgstr "Részvétel szintje"
 #: ----
 msgid "DELETE"
-msgstr "Hapus"
+msgstr "Törlés"
 #: ----
 msgid "DELETE_ADDITIONAL_DETAILS"
-msgstr "Hapus Rincian Tambahan"
+msgstr "Egyéb adatok törlése"
 #: ----
 msgid "DELETE_DOCUMENT"
-msgstr "Hapus Dokumen"
+msgstr "Dokumentum törlése"
 #: ----
 msgid "DELETE_THIS_EVENT"
-msgstr "Hapus Peristiwa"
+msgstr "Esemény törlése"
 #: ----
 msgid "DELETE_THIS_PERSON"
-msgstr "Hapus Orang ini"
+msgstr "Személy törlése"
 #: ----
 msgid "DESCRIPTION"
-msgstr "Deskripsi"
+msgstr "Leírás"
 #: ----
 msgid "DESIGNATION"
-msgstr "Jabatan"
+msgstr "Kijelölés"
 #: ----
 msgid "DESTRUCTION"
-msgstr "Perusakan"
+msgstr "Megsemmísités"
 #: ----
 msgid "DISABLE_HELP"
-msgstr "Matikan Bantuan"
+msgstr "Súgó kikapcsolása"
 #: ----
 msgid "DISABLE_INTERACTIVE_TRANSLATION"
-msgstr "Matikan terjemahan interaktif"
+msgstr "Interaktív fordítás kikapcsolása"
 #: ----
 msgid "DISABLED"
-msgstr "Matikan"
+msgstr "Kikapcsolva"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
-msgstr "Apakah anda ingin menghapus Rincian Tambahan Ini?"
+msgstr "Törölni szeretnéd az Egyéb részleteket?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
-msgstr "Apakah anda ingin menghapus catatan alamat yang terpilih?"
+msgstr "Törölni szeretnéd a kiválasztott cím(ek)et?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
-msgstr "Apakah anda ingin menghapus Riwayat Hidup yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott Életrajzi adatokat?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
-msgstr "Apakah anda ingin menghapus Rangkaian Peristiwa yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott Eseménysorozat(ok)at?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
-msgstr "Anda ingin menghapus Infomasi yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott Információ(ka)t?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
-msgstr "Apakah anda ingin menghapus Intervensi yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott Beavatkozás(oka)t?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
-msgstr "Apakah anda ingin menghapus istilah Micro-thesauri yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott kifejezés(eke)t?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
-msgstr "Anda ingin menghapus Pertanyaan yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott Lekérdezéseket?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
-msgstr "Apakah anda ingin menghapus catatan yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott bejegyzés(eke)t?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
-msgstr "Apakah anda ingin menghapus Pengguna yang dipilih?"
+msgstr "Törölni szeretnéd a kiválasztott felhasználó(ka)t?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
-msgstr "Apakah anda ingin menghapus Dokumen ini?"
+msgstr "Törölni szeretnéd ezt a Dokumentumot?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
-msgstr "Apakah anda ingin menghapus Peristiwa Ini?"
+msgstr "Törölni szeretnéd ezt az eseményt?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
-msgstr "Apakah anda ingin menghapus Orang ini?"
+msgstr "Törölni szeretnéd ezt a Személyt?"
 #: ----
 msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
-msgstr "Anda ingin menyingkirkan lampiran untuk dokumen ini?"
+msgstr "Törölni szeretnéd az ehhez a Dokumentumhoz tartozó csatolmányt?"
 #: ----
 msgid "DOCUMENT"
-msgstr "Dokumen"
+msgstr "Dokumentum"
 #: ----
 msgid "DOCUMENT_DETAILS"
-msgstr "Detil Dokumen"
+msgstr "Dokumentum részletei"
 #: ----
 msgid "DOCUMENT_DOES_NOT_EXIST_"
-msgstr "Dokumen tidak tersedia"
+msgstr "A Dokumentum nem létezik"
 #: ----
 msgid "DOCUMENT_SEARCH_FORM"
-msgstr "Form Pencarian Dokumen"
+msgstr "Dokumentum kereső űrlap"
 #: ----
 msgid "DOCUMENT_TITLE"
-msgstr "Judul Dokumen"
+msgstr "Dokumentum címe"
 #: ----
 msgid "DOCUMENTS"
-msgstr "Dokumen"
+msgstr "Dokumentumok"
 #: ----
 msgid "DOWNLOAD"
-msgstr "Unduh"
+msgstr "Letöltés"
 #: ----
 msgid "DOWNLOAD_DOCUMENT"
-msgstr "Unduh Dokumen"
+msgstr "Dokumentum letöltése"
 #: ----
 msgid "DOWNLOAD_ERROR_REPORT"
-msgstr "Laporan kesalahan pengunduhan"
+msgstr "Hibajelentés letöltése"
 #: ----
 msgid "E_MAIL"
-msgstr "E-mail"
+msgstr "E Mail"
 #: ----
 msgid "EDIT"
-msgstr "Perbarui"
+msgstr "Szerkesztés"
 #: ----
 msgid "EDIT_ADDITIONAL_DETAILS"
-msgstr "Perbarui Rincian Tambahan"
+msgstr "Egyéb részletek szerkesztése"
 #: ----
 msgid "EDIT_BIOGRAPHIC_DETAILS"
-msgstr "Perbarui Riwayat Hidup"
+msgstr "Életrajzi adatok szerkesztése"
 #: ----
 msgid "EDIT_DETAILS"
-msgstr "Perbarui Rincian"
+msgstr "Részletek szerkesztése"
 #: ----
 msgid "EDIT_EVENT_SUMMARY"
-msgstr "Perbarui Ringkasan Peristiwa"
+msgstr "Esemény összefoglaló szerkesztése"
 #: ----
 msgid "EDIT_PROFILE"
-msgstr "Perbarui Profil"
+msgstr "Profil szerkesztése"
 #: ----
 msgid "EDIT_THIS_ACT"
-msgstr "Perbarui Tindakan"
+msgstr "Cselekmény szerkesztése"
 #: ----
 msgid "EDIT_THIS_ADDRESS"
-msgstr "Perbarui Alamat"
+msgstr "Cím szerkesztése"
 #: ----
 msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
-msgstr "Perbarui Riwayat Hidup"
+msgstr "Életrajzi adat szerkesztése"
 #: ----
 msgid "EDIT_THIS_CHAIN_OF_EVENT"
-msgstr "Perbarui Rangkaian Peristiwa"
+msgstr "Eseménysorozat szerkesztése"
 #: ----
 msgid "EDIT_THIS_EVENT"
-msgstr "Perbarui Peristiwa"
+msgstr "Esemény szerkesztése"
 #: ----
 msgid "EDIT_THIS_INFORMATION"
-msgstr "Perbarui Informasi"
+msgstr "Információ szerkesztése"
 #: ----
 msgid "EDIT_THIS_INTERVENING_PARTY"
-msgstr "Perbarui Pihak Pengintervensi"
+msgstr "Beavatkozó fél szerkesztése"
 #: ----
 msgid "EDIT_THIS_INTERVENTION"
-msgstr "Perbarui Intervensi"
+msgstr "Beavatkozás szerkesztése"
 #: ----
 msgid "EDIT_THIS_INVOLVEMENT"
-msgstr "Perbarui Keterlibatan"
+msgstr "Bevonás szerkesztése"
 #: ----
 msgid "EDIT_THIS_PERPETRATOR"
-msgstr "Perbarui Pelaku"
+msgstr "Elkövető szerkesztése"
 #: ----
 msgid "EDIT_THIS_PERSON"
-msgstr "Perbarui Orang"
+msgstr "Személy szerkesztése"
 #: ----
 msgid "EDIT_THIS_VICTIM"
-msgstr "Perbarui Korban"
+msgstr "Áldozat szerkesztése"
 #: ----
 msgid "EDIT_USER"
-msgstr "Perbarui Pengguna"
+msgstr "Felhasználó szerkesztése"
 #: ----
 msgid "EDITING_PERSON_ADDRESS____"
-msgstr "Memperbarui alamat Orang..."
+msgstr "Személy címének szerkesztése…"
 #: ----
 msgid "EMAIL"
 msgstr "Email"
 #: ----
 msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
-msgstr "E-mail diwajibkan, e-mail tidak sesuai"
+msgstr "Email cím kötelező, Érvénytelen Email"
 #: ----
 msgid "ENABLE_HELP"
-msgstr "Aktifkan bantuan"
+msgstr "Súgó bekapcsolása"
 #: ----
 msgid "ENABLE_INTERACTIVE_TRANSLATION"
-msgstr "Aktifkan Terjemahan Interaktif"
+msgstr "Interaktív fordítás bekapcsolása"
 #: ----
 msgid "END_DATE"
-msgstr "Tanggal Akhir"
+msgstr "Befejezés dátuma"
 #: ----
 msgid "ENTITY"
-msgstr "Entitas"
+msgstr "Entitás"
 #: ----
 msgid "ENTITY_PERMISSIONS"
-msgstr "Wewenang entitas"
+msgstr "Entitás engedélyek"
 #: ----
 msgid "ENTRY"
-msgstr "Tambahkan"
+msgstr "Bejegyzés"
 #: ----
 msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
-msgstr "Terjadi kesalahan saat memutakhirkan server"
+msgstr "A szerver frissítése közben hiba lépett fel."
 #: ----
 msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
-msgstr "Terjadi kesalahan saat membuat huriterm"
+msgstr "A huriterm létrehozás közben hiba lépett fel."
 #: ----
 msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
-msgstr "Kesalahan terjadi dalam penyimpanan file. File tidak tersimpan"
+msgstr "Hiba történt a fájl mentésekor. Nem sikerült elmenteni."
 #: ----
 msgid "ERROR_WHILE_CREATING_FIELD_"
-msgstr "Terjadi kesalahan saat membuat field"
+msgstr "Hiba történt a mező létrehozása közben."
 #: ----
 msgid "EVENT"
-msgstr "Peristiwa"
+msgstr "Esemény"
 #: ----
 msgid "EVENT_DESCRIPTION"
-msgstr "Deskripsi Peristiwa"
+msgstr "Esemény leírása"
 #: ----
 msgid "EVENT_DOES_NOT_EXIST_"
-msgstr "Peristiwa tidak tersedia"
+msgstr "Az esemény nem létezik."
 #: ----
 msgid "EVENT_SEARCH_FORM"
-msgstr "Form Pencarian Peristiwa"
+msgstr "Esemény keresési űrlap"
 #: ----
 msgid "EVENT_STANDARD_FORMAT_XML"
-msgstr "Standar Format Peristiwa XML"
+msgstr "Esemény szabvány formátum XML"
 #: ----
 msgid "EVENT_TITLE"
-msgstr "Judul Peristiwa"
+msgstr "Esemény címe"
 #: ----
 msgid "EVENTS"
-msgstr "Peristiwa"
+msgstr "Események"
 #: ----
 msgid "EXAMPLE"
-msgstr "Contoh"
+msgstr "Példa"
 #: ----
 msgid "EXAMPLES"
-msgstr "Contoh-contoh"
+msgstr "Példák"
 #: ----
 msgid "EXISTING_FIELDS"
-msgstr "Fields yang ada"
+msgstr "Meglévő mezők"
 #: ----
 msgid "EXPORT"
-msgstr "Ekspor"
+msgstr "Exportálás"
 #: ----
 msgid "EXPORT__"
-msgstr "Ekspor:"
+msgstr "Exportálás:"
 #: ----
 msgid "EXPORT_DATE"
-msgstr "Tanggal Ekspor"
+msgstr "Exportálás dátuma"
 #: ----
 msgid "EXPORT_EVENTS"
-msgstr "Ekspor Peristiwa"
+msgstr "Események exportálása/Exportálási események"
 #: ----
 msgid "EXPORT_INSTANCE"
-msgstr "Ekspor Peristiwa"
+msgstr "Elsőfokú exportálás"
 #: ----
 msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
-msgstr "Ekspor tabel ini ke lembar-kerja"
+msgstr "Táblázat exportálása táblázatkezelőbe"
 #: ----
 msgid "EXPORT_TIME"
-msgstr "Waktu ekspor"
+msgstr "Exportálás ideje"
 #: ----
 msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
-msgstr "Tidak bisa mencatat pada cakram"
+msgstr "Nem sikerült a lemezre írni."
 #: ----
 msgid "FALSE"
-msgstr "flase"
+msgstr "hibás"
 #: ----
 msgid "FAX"
-msgstr "Faks"
+msgstr "Fax"
 #: ----
 msgid "FIELD_CREATED_SUCCESSFULLY_"
-msgstr "Field berhasil dibuat"
+msgstr "Mező sikeresen létrehozva."
 #: ----
 msgid "FIELD_LABEL"
-msgstr "Label Field"
+msgstr "Mező címke"
 #: ----
 msgid "FIELD_NAME"
-msgstr "Nama Field"
+msgstr "Mező neve"
 #: ----
 msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
-msgstr "Nama Field, nomor dan label harus diisi."
+msgstr "Mezőnév, mezőszám és mezőcímke nem lehet üres. Kérlek töltsd ki!"
 #: ----
 msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
-msgstr "Nama pengguna sudah digunakan, silahkan cari nama lain."
+msgstr "A mezőnév már létezik. Kérlek adj neki más nevet!"
 #: ----
 msgid "FIELD_NUMBER"
-msgstr "Nomor field"
+msgstr "Mezőszám"
 #: ----
 msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
-msgstr "Nomor field sudah digunakan. Silahkan pilih nomor yang lain"
+msgstr "A mezőszám már létezik. Kérlek válassz más számot!"
 #: ----
 msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
-msgstr "Nomor field dengan akhiran 60 ke 80 telah digunakan untuk field manajemen. Silahkan gunakan angka diluar rentang tersebut"
+msgstr "A 60-ra és 80-ra végződő mezőszámok a kezelési mezők számára vannak fenntartva. Kérlek válassz olyan számot ami nem ilyen formátumú."
 #: ----
 msgid "FIELD_RESET"
-msgstr "Atur ulang Field"
+msgstr "Mező visszaállítása"
 #: ----
 msgid "FIELD_S_"
-msgstr "Field"
+msgstr "Mező(k)"
 #: ----
 msgid "FIELD_TYPE"
-msgstr "Jenis field"
+msgstr "Mező típusa"
 #: ----
 msgid "FILE_IS_NOT_WRITABLE_"
-msgstr "File tidak dapat disalin"
+msgstr "Mező nem írható"
 #: ----
 msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
-msgstr "File yang diunggah dihentikan oleh ekstensi"
+msgstr "A fájl feltöltését megakadályozta egy kiegészítő."
 #: ----
 msgid "FILTER"
-msgstr "Saringan"
+msgstr "Szűrés"
 #: ----
 msgid "FILTER_OPTIONS_AND_RESULTS"
-msgstr "Saring Hasil dan Pilihan"
+msgstr "szűrési opciók és eredmények"
 #: ----
 msgid "FINAL_DATE"
-msgstr "Tanggal Akhir"
+msgstr "Végső dátum"
 #: ----
 msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
-msgstr "Temukan dokumen yang diunggah ke Openevsys dan lihat keterhubungan dengan format lainnya"
+msgstr "OpenEvsysbe feltöltött dokumentumok keresése és annak megtekintése, hogyan kapcsolódnak más formátumokhoz."
 #: ----
 msgid "FINISH"
-msgstr "Selesai"
+msgstr "Befejezés"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
-msgstr "Selesai! Anda dapat melakukan"
+msgstr "Befejezve! A következő lehetőségeid vannak"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
-msgstr "Selesai! Anda dapat melakukan:"
+msgstr "Befejezve! A következő lehetőségeid vannak:"
 #: ----
 msgid "FIRST_NAME"
-msgstr "Nama Depan"
+msgstr "Keresztnév"
 #: ----
 msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
-msgstr "Folder sudah ada. Gunakan nama lain"
+msgstr "A mappa már létezik. Válassz másik nevet!"
 #: ----
 msgid "FOLDER_NAME"
-msgstr "Nama Folder"
+msgstr "Mappa neve"
 #: ----
 msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
-msgstr "Field ini tidak boleh kosong"
+msgstr "A következő mezők nem lehetnek üresek"
 #: ----
 msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
-msgstr "Huriterm sudah ada"
+msgstr "A következő huriterm már létezik."
 #: ----
 msgid "FORCE_DELETE"
-msgstr "Hapus Paksa"
+msgstr "Törlés kényszerítése"
 #: ----
 msgid "FORM"
-msgstr "Formulir"
+msgstr "Űrlap"
 #: ----
 msgid "FORM_CUSTOMIZATION"
-msgstr "Formulir Kustomisasi"
+msgstr "Űrlap testreszabása"
 #: ----
 msgid "FURTHER_INFORMATION"
-msgstr "Informasi selanjutnya"
+msgstr "További információ"
 #: ----
 msgid "GO_TO_PARENT_LEVEL"
-msgstr "Ke tingkat sebelumnya"
+msgstr "Szülő szintre ugrás"
 #: ----
 msgid "GROUP_BY_DAY"
-msgstr "Kelompokkan berdasarkan Hari"
+msgstr "Nap szerinti csoportosítás"
 #: ----
 msgid "GROUP_BY_MONTHLY"
-msgstr "Kelompokkan berdasarkan bulan"
+msgstr "Hónap szerinti csoportosítás"
 #: ----
 msgid "GROUP_BY_YEARLY"
-msgstr "Kelompokkan berdasarkan tahun"
+msgstr "Év szerinti csoportosítás"
 #: ----
 msgid "GUIDELINES"
-msgstr "Panduan"
+msgstr "Irányelvek"
 #: ----
 msgid "HELP_TEXT"
-msgstr "Teks Bantuan"
+msgstr "Súgó szövege"
 #: ----
 msgid "HIDE_ADDRESS_FORM"
-msgstr "Sembunyikan formulir Alamat"
+msgstr "Cím űrlap elrejtése"
 #: ----
 msgid "HIDE_SEARCH_FORM"
-msgstr "Sembunyikan formulir pencarian"
+msgstr "Keresési űrlap elrejtése"
 #: ----
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
-msgstr "Sembunyikan Dokumen-Dokumen Pendukung"
+msgstr "Igazoló Dokumentum(ok) elrejtése"
 #: ----
 msgid "HIDE_TREE"
-msgstr "Sembunyikan Pohon"
+msgstr "Fa elrejtése"
 #: ----
 msgid "HOW_WAS_"
-msgstr "Bagaimana"
+msgstr "Milyen volt"
 #: ----
 msgid "HURICODE"
-msgstr "Huricode"
+msgstr "Hurikód"
 #: ----
 msgid "HURITERM_CAN_NOT_BE_EMPTY_"
-msgstr "Huriterm tidak boleh kosong"
+msgstr "Huriterm nem lehet üres"
 #: ----
 msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
-msgstr "Apakah data Peristiwa/Orang ini bersifat rahasia?"
+msgstr "Ha az Esemény/Személy Bizalmas?"
 #: ----
 msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
-msgstr "Jika menemui halaman ini artinya anda tidak memiliki akses ke modul apapun di OpenEvsys. Silahkan hubungi administrator sistem untuk informasi lebih jauh."
+msgstr "Ha ezt az oldalt látod, nincs hozzáférésed az OpenEvSys moduljaihoz. Kérlek lépj kapcsolatba a rendszeradminisztrátorral további információért."
 #: ----
 msgid "IMPACT"
-msgstr "Dampak"
+msgstr "Hatás"
 #: ----
 msgid "IMPORT"
-msgstr "Impor"
+msgstr "Importálás"
 #: ----
 msgid "IMPORT_DATE"
-msgstr "Tanggal impor"
+msgstr "Importálás dátuma"
 #: ----
 msgid "IMPORT_EVENTS"
-msgstr "Impor Peristiwa"
+msgstr "Események importálása"
 #: ----
 msgid "IMPORT_LOG"
-msgstr "Daftar impor"
+msgstr "Importálás log"
 #: ----
 msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
-msgstr "Rincian catatan tidak tersedia untuk Peristiwa ini"
+msgstr "Importálás log részletek nem elérhetőek"
 #: ----
 msgid "IMPORT_TIME"
-msgstr "Impor"
+msgstr "Importálási idő"
 #: ----
 msgid "IN_BETWEEN"
-msgstr "di antara"
+msgstr "közben"
 #: ----
 msgid "IN_SEARCH_RESULTS"
-msgstr "Dalam hasil pencarian"
+msgstr "A keresési találatokban"
 #: ----
 msgid "INCIDENT_TABLE"
-msgstr "Tabel kasus"
+msgstr "Eset táblázat"
 #: ----
 msgid "INFORMATION"
-msgstr "Informasi"
+msgstr "Információ"
 #: ----
 msgid "INFORMATION_ABOUT"
-msgstr "Informasi tentang"
+msgstr "Információ róla:"
 #: ----
 msgid "INFORMATION_S_"
-msgstr "Informasi"
+msgstr "Információ(k)"
 #: ----
 msgid "INFORMATION_SEARCH_FORM"
-msgstr "Form Pencarian Informasi"
+msgstr "Információ keresési űrlap"
 #: ----
 msgid "INITIAL_DATE"
-msgstr "Tanggal awal"
+msgstr "Kezdő dátum"
 #: ----
 msgid "INTERVENING_PARTIES"
-msgstr "Pihak Yang pengintervensi"
+msgstr "Beavatkozó felek"
 #: ----
 msgid "INTERVENING_PARTY"
-msgstr "Pihak Pengintervensi"
+msgstr "Beavatkozó fél"
 #: ----
 msgid "INTERVENING_PARTY_SEARCH_FORM"
-msgstr "Formulir Pencarian Pihak Pengintervensi"
+msgstr "Beavatkozó fél keresési mező"
 #: ----
 msgid "INTERVENTION"
-msgstr "Intervensi"
+msgstr "Beavatkozás"
 #: ----
 msgid "INTERVENTION_S_"
-msgstr "Intervensi"
+msgstr "Beavatkozás(ok)"
 #: ----
 msgid "INTERVENTION_SEARCH_FORM"
-msgstr "Form Pencarian Intervensi"
+msgstr "Beavatkozás kereső űrlap"
 #: ----
 msgid "INTERVENTIONS"
-msgstr "Intervensi"
+msgstr "Beavatkozások"
 #: ----
 msgid "INVALID_EMAIL"
-msgstr "Email salah"
+msgstr "Érvénytelen email"
 #: ----
 msgid "INVALID_EMAIL_ADDRESS"
-msgstr "Alamat Email salah"
+msgstr "Érvénytelen email cím"
 #: ----
 msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
-msgstr "Huricode salah, harus dalam 12 digit nomor"
+msgstr "Érvénytelen Huricode, 12 számjegyből kell álljon."
 #: ----
 msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "ID pengguna atau password tidak sesuai, silahkan coba lagi."
+msgstr "Érvénytelen felhasználói azonosító vagy jelszó, kérlek próbáld újra."
 #: ----
 msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Nama pengguna atau password tidak sesuai, silahkan coba lagi."
+msgstr "Érvénytelen felhasználónév vagy jelszó! Kérlek próbáld újra."
 #: ----
 msgid "INVOLVED_IN"
-msgstr "terlibat dalam"
+msgstr "bevonva"
 #: ----
 msgid "INVOLVEMENT"
-msgstr "Keterlibatan"
+msgstr "Bevonás"
 #: ----
 msgid "INVOLVEMENT_DETAILS"
-msgstr "Rincian Keterlibatan"
+msgstr "Bevonás részletei"
 #: ----
 msgid "INVOLVEMENT_S_"
-msgstr "Keterlibatan"
+msgstr "Bevonás(ok)"
 #: ----
 msgid "INVOLVEMENT_SEARCH_FORM"
-msgstr "Form Pencarian Keterlibatan"
+msgstr "Bevonás keresési űrlap"
 #: ----
 msgid "INVOLVEMENTS"
-msgstr "Keterlibatan"
+msgstr "Bevonások"
 #: ----
 msgid "IS_A_SUB_ELEMENT_OF"
-msgstr "adalah sub-elemen dari"
+msgstr "aleleme ennek:"
 #: ----
 msgid "IS_EMPTY"
-msgstr "adalah kosong"
+msgstr "üres"
 #: ----
 msgid "IS_REQUIRED"
-msgstr "Diwajibkan"
+msgstr "Kötelező"
 #: ----
 msgid "KILLING"
-msgstr "Pembunuhan"
+msgstr "Gyilkosság"
 #: ----
 msgid "LABEL"
-msgstr "Label"
+msgstr "Címke"
 #: ----
 msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
-msgstr "Label harus diisi"
+msgstr "A címke nem lehet üres. Írj be valamit."
 #: ----
 msgid "LABEL_IN_"
-msgstr "Label dalam"
+msgstr "Címke"
 #: ----
 msgid "LABEL_S_"
-msgstr "Label"
+msgstr "Címke(k)"
 #: ----
 msgid "LABELS"
-msgstr "Label"
+msgstr "Címkék"
 #: ----
 msgid "LANGUAGE"
-msgstr "Bahasa"
+msgstr "Nyelv"
 #: ----
 msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
-msgstr "Direktori Bahasa tidak dapat disalin"
+msgstr "A nyelvi könyvtár nem írható."
 #: ----
 msgid "LANGUAGE_REMOVED"
-msgstr "Bahasa telah dihapus"
+msgstr "Nyelv eltávolítva"
 #: ----
 msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
-msgstr "Bahasa telah selesai dibuat"
+msgstr "A nyelvet sikersen hozzáadtuk."
 #: ----
 msgid "LAST_NAME"
-msgstr "Nama Akhir"
+msgstr "Vezetéknév"
 #: ----
 msgid "LIKE"
-msgstr "seperti"
+msgstr "mint"
 #: ----
 msgid "LINKED_WHEN"
-msgstr "Kapan terhubung"
+msgstr "Kapcsolódik, ha"
 #: ----
 msgid "LINKS"
-msgstr "Tautan"
+msgstr "Kapcsolódók"
 #: ----
 msgid "LOCALIZATION"
-msgstr "Melokalisasi"
+msgstr "Honosítás"
 #: ----
 msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
-msgstr "Rincian catatan untuk orang ini tidak tersedia"
+msgstr "Log adatok nem elérhetőek ezzel a Személlyel kapcsolatban"
 #: ----
 msgid "MANAGE_LANGUAGES"
-msgstr "Atur Bahasa"
+msgstr "Nyelvek kezelése"
 #: ----
 msgid "MESSAGES_SAVED_SUCCESSFULLY_"
-msgstr "Pesan telah berhasil disimpan"
+msgstr "Az üzeneteket sikeresen mentettük"
 #: ----
 msgid "MICRO_THESAURI"
-msgstr "Micro-Thesauri"
+msgstr "Micro-thesauri"
 #: ----
 msgid "MICRO_THESAURI_CUSTOMIZATION"
-msgstr "Kustomisasi Mikro-thesauri"
+msgstr "Micro-thesauri testreszabása"
 #: ----
 msgid "MICRO_THESAURI_TERMS"
-msgstr "Istilah Micro-thesauri"
+msgstr "Micro-thesauri kifejezések"
 #: ----
 msgid "MISSING_A_TEMPORARY_FOLDER_"
-msgstr "Temporary folder tidak ditemukan"
+msgstr "Egy ideiglenes mappa hiányzik"
 #: ----
 msgid "MODIFIED_VALUE"
-msgstr "Nilai modifikasi"
+msgstr "Módosított érték"
 #: ----
 msgid "MODULE"
 msgstr "Modul"
 #: ----
 msgid "MODULES"
-msgstr "Modul"
+msgstr "Modulok"
 #: ----
 msgid "MONITORING_STATUS"
-msgstr "Status Pemantauan"
+msgstr "Monitoring állapot"
 #: ----
 msgid "MORE_ABOUT_THIS_EVENT"
-msgstr "Lebih lanjut untuk Peristiwa ini"
+msgstr "Esemény részletei"
 #: ----
 msgid "MORE_ABOUT_THIS_PERSON"
-msgstr "Lebih jauh tentang orang ini"
+msgstr "Személy részletei"
 #: ----
 msgid "MY_PREFERENCES"
-msgstr "Preferensi saya"
+msgstr "Beállításaim"
 #: ----
 msgid "MYSQL_DATA_TYPE"
-msgstr "Jenis data mysql"
+msgstr "MYSQL adattípus"
 #: ----
 msgid "NAME"
-msgstr "Nama"
+msgstr "Név"
 #: ----
 msgid "NEW"
-msgstr "Baru"
+msgstr "Új"
 #: ----
 msgid "NEW_DOCUMENT"
-msgstr "Dokumen Baru"
+msgstr "Új dokumentum"
 #: ----
 msgid "NEW_EVENT"
-msgstr "Peristiwa Baru"
+msgstr "Új esemény"
 #: ----
 msgid "NEW_PASSWORD"
-msgstr "Kata Sandi"
+msgstr "Új jelszó"
 #: ----
 msgid "NEW_PERSON"
-msgstr "Orang Baru"
+msgstr "Új személy"
 #: ----
 msgid "NEW_ROLE_NAME"
-msgstr "Nama Role Baru"
+msgstr "Új szerep név"
 #: ----
 msgid "NEXT"
-msgstr "Lanjut"
+msgstr "Következő"
 #: ----
 msgid "NO"
-msgstr "Tidak"
+msgstr "Nem"
 #: ----
 msgid "NO_QUERIES_SAVED_YET_"
-msgstr "Tidak ada pertanyaan yang disimpan."
+msgstr "Nincsenek mentett lekérdezések."
 #: ----
 msgid "NO_RECORDS_WERE_FOUND_"
-msgstr "Tidak ada catatan ditemukan"
+msgstr "Nincs adat."
 #: ----
 msgid "NO_RECORDS_WERE_SELECTED_"
-msgstr "Tidak ada catatan yang dipilih"
+msgstr "Nincs kiválasztott adat."
 #: ----
 msgid "NOT_="
-msgstr "bukan ="
+msgstr "nem ="
 #: ----
 msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
-msgstr "Jenis field tidak sesuai, silahkan coba lagi"
+msgstr "Érvénytelen fájltípus. Próbáld újra."
 #: ----
 msgid "NOT_CONTAINS"
-msgstr "Tidak mengandung"
+msgstr "nem tartalmazza"
 #: ----
 msgid "NOT_IN_BETWEEN"
-msgstr "Tidak dalam antara"
+msgstr "nem közte"
 #: ----
 msgid "NOT_LIKE"
-msgstr "Tidak seperti"
+msgstr "nem úgy, mint"
 #: ----
 msgid "NOT_ON"
-msgstr "Tidak pada"
+msgstr "nem"
 #: ----
 msgid "NUMBER_REQUIRED__INVALID_NUMBER"
-msgstr "Nomor dibutuhkan, Nomor tidak sesuai"
+msgstr "Szám kötelező, érvénytelen szám"
 #: ----
 msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
-msgstr "OpenEvSys telah sukses mengimpor data"
+msgstr "OpenEvSys sikeresen importálta az adatot."
 #: ----
 msgid "OR"
-msgstr "ATAU"
+msgstr "OR"
 #: ----
 msgid "ORDER"
-msgstr "Aturan"
+msgstr "Sorrend"
 #: ----
 msgid "ORGANIZATION"
-msgstr "Organisasi"
+msgstr "Szervezet"
 #: ----
 msgid "ORIGINAL_SEARCH_RESULTS"
-msgstr "Hasil Pencarian Awal"
+msgstr "Eredeti keresési eredmények"
 #: ----
 msgid "PAGE__"
-msgstr "Halaman:"
+msgstr "Oldal:"
 #: ----
 msgid "PAGINATE_RESULTS"
-msgstr "Hasil berdasarkan Halaman"
+msgstr "Oldalszámozási eredmények"
 #: ----
 msgid "PASSWORD"
-msgstr "Kata Sandi"
+msgstr "Jelszó"
 #: ----
 msgid "PASSWORD_INVALID"
-msgstr "Kata sandi salah"
+msgstr "A jelszó érvénytelen"
 #: ----
 msgid "PASSWORD_MISMATCH"
-msgstr "Kata sandi tidak sama"
+msgstr "A jelszó nem egyezik"
 #: ----
 msgid "PASSWORD_REQUIRED"
-msgstr "Kata kunci diwajibkan"
+msgstr "Jelszó kötelező"
 #: ----
 msgid "PERMISSION_DENIED"
-msgstr "Tidak diperkenankan"
+msgstr "Hozzáférés megtagadva"
 #: ----
 msgid "PERMISSIONS"
-msgstr "Ijin"
+msgstr "Engedélyek"
 #: ----
 msgid "PERMISSIONS_OF_"
-msgstr "Ijin untuk"
+msgstr "Engedélyei"
 #: ----
 msgid "PERMISSONS"
-msgstr "Ijin"
+msgstr "Engedélyek"
 #: ----
 msgid "PERPETRATOR"
-msgstr "Pelaku"
+msgstr "Elkövető szerkesztése"
 #: ----
 msgid "PERPETRATOR_NAME_S_"
-msgstr "Nama pelaku"
+msgstr "Elkövető(k) neve"
 #: ----
 msgid "PERPETRATOR_SEARCH_FORM"
-msgstr "Form Pencarian Pelaku"
+msgstr "Elkövető kereső"
 #: ----
 msgid "PERPETRATORS"
-msgstr "Pelaku"
+msgstr "Elkövetők"
 #: ----
 msgid "PERSON"
-msgstr "Orang"
+msgstr "Személy"
 #: ----
 msgid "PERSON_ADDRESS_ES_"
-msgstr "Rincian Orang"
+msgstr "Személy cím(ei)"
 #: ----
 msgid "PERSON_DETAIL_S_"
-msgstr "Rincian Orang"
+msgstr "Személy adata(i)"
 #: ----
 msgid "PERSON_DOES_NOT_EXIST_"
-msgstr "Orang tidak tersedia"
+msgstr "Személy nem létezik."
 #: ----
 msgid "PERSON_NAME"
-msgstr "Nama Orang"
+msgstr "Személy neve"
 #: ----
 msgid "PERSON_RECORD_S_"
-msgstr "Catatan Orang"
+msgstr "Személy adata(i)"
 #: ----
 msgid "PERSON_RECORDS_S_"
-msgstr "Catatan Orang"
+msgstr "Személy adata(i)"
 #: ----
 msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
-msgstr "Tanggal lahir orang tidak dimasukkan"
+msgstr "A személy születési időpontja nincs beírva"
 #: ----
 msgid "PERSON_SEARCH_FORM"
-msgstr "Form Pecarian Orang"
+msgstr "Személy keresési űrlap"
 #: ----
 msgid "PERSONS"
-msgstr "Orang"
+msgstr "Személyek"
 #: ----
 msgid "PHONE"
-msgstr "Telpon"
+msgstr "Telefon"
 #: ----
 msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
-msgstr "Nomor telpon diwajibkan, nomor telpon tidak sesuai"
+msgstr "Telefonszám kötelező, érvénytelen telefonszám"
 #: ----
 msgid "PICTURE"
-msgstr "Gambar"
+msgstr "Kép"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
-msgstr "Silahkan masukkan kondisi sebelum pencarian"
+msgstr "Határozz meg egy feltételt keresés előtt!"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
-msgstr "Silahkan masukan kondisi ke dalam kotak hitungan untuk menghitung"
+msgstr "Határozz meg egy feltételt a számláló dobozban a számoláshoz!"
 #: ----
 msgid "PLEASE_SELECT_A_USER_TO_DELETE"
-msgstr "Silahkan pilih pengguna yang akan dihapus"
+msgstr "Válaszd ki a törlendő felhazsnálót!"
 #: ----
 msgid "PLEASE_SELECT_A_VALID_USER_"
-msgstr "Silahkan pilih pengguna yang valid"
+msgstr "Válassz érvényes felhasználót!"
 #: ----
 msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
-msgstr "Silahkan unggah file OpenEvSys XML yang valid"
+msgstr "Érvényes OpenEcSys XML fájlt tölts fel."
 #: ----
 msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
-msgstr "Silahkan gunakan Preferensi Saya di sebelah kanan atas untuk memperbaharui rincian anda"
+msgstr "Használd a Tulajdonságaim opciót a jobb felső sarokban az adataid szerkesztéséhez."
 #: ----
 msgid "PREVIOUS"
-msgstr "Sebelumnya"
+msgstr "Előző"
 #: ----
 msgid "PRINT_THIS_EVENT"
-msgstr "Cetak Peristiwa"
+msgstr "Esemény nyomtatása"
 #: ----
 msgid "PRINT_THIS_PAGE"
-msgstr "Cetak Halaman Ini"
+msgstr "Oldal nyomtatása"
 #: ----
 msgid "PRINT_THIS_PERSON"
-msgstr "Cetak Orang ini"
+msgstr "Személy nyomtatása"
 #: ----
 msgid "PRINTABLE_VIEW"
-msgstr "Lihat hasil Cetak"
+msgstr "Nyomtatási nézet"
 #: ----
 msgid "QUERIES_DELETED_SUCCESSFULLY_"
-msgstr "Pertanyaan telah dihapus"
+msgstr "A lekérdezések törölve."
 #: ----
 msgid "QUERY_ID"
-msgstr "ID Pertanyaan"
+msgstr "Lekérdezés azonosító"
 #: ----
 msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
-msgstr "Pertanyaan telah disimpan"
+msgstr "A lekérdezést mentettük."
 #: ----
 msgid "REC_NO"
-msgstr "Rec-No"
+msgstr "Adat-szám"
 #: ----
 msgid "RECORD_NO"
-msgstr "No. catatan"
+msgstr "Adatszám"
 #: ----
 msgid "RECORD_NUMBER"
-msgstr "Nomor Catatan"
+msgstr "Adatszám"
 #: ----
 msgid "RECORD_TYPE"
-msgstr "Jenis Catatan"
+msgstr "Adattípus"
 #: ----
 msgid "RECORDS_PER_PAGE"
-msgstr "Catatan per halaman"
+msgstr "Adat oldalanként"
 #: ----
 msgid "REGEX"
 msgstr "regex"
 #: ----
 msgid "RELATED_EVENT"
-msgstr "Peristiwa Terkait"
+msgstr "Kapcsolódó esemény"
 #: ----
 msgid "RELATED_EVENT_TITLE"
-msgstr "Judul Peristiwa Terkait"
+msgstr "Kapcsolódó esemény címe"
 #: ----
 msgid "RELATED_PERSON"
-msgstr "Orang terhubung"
+msgstr "Kapcsolódó személy"
 #: ----
 msgid "REMARKS"
-msgstr "Catatan"
+msgstr "Megjegyzések"
 #: ----
 msgid "REMOVE"
-msgstr "Hapus"
+msgstr "Eltávolítás"
 #: ----
 msgid "REMOVE_CLARIFY"
-msgstr "Hapus Klarifikasi"
+msgstr "Magyarázat eltávolítása"
 #: ----
 msgid "REMOVE_CONDITION"
-msgstr "Hapus Kondisi"
+msgstr "Feltétel eltávolítása"
 #: ----
 msgid "REMOVE_LANGUAGE"
-msgstr "Hapus bahasa"
+msgstr "Nyelv eltávolítása"
 #: ----
 msgid "REMOVE_SELECTION"
-msgstr "Hapus Pilihani"
+msgstr "Kiválasztás törlése"
 #: ----
 msgid "REPORT"
-msgstr "Laporan"
+msgstr "Jelentés"
 #: ----
 msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
-msgstr "Tindakan yang diminta tidak tersedia"
+msgstr "A keresett cselekmény nem létezik."
 #: ----
 msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
-msgstr "Informasi yang diminta tidak tersedia"
+msgstr "A keresett információ nem létezik."
 #: ----
 msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
-msgstr "Intervensi yang diminta tidak tersedia"
+msgstr "A keresett beavatkozás nem létezik."
 #: ----
 msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
-msgstr "Keterlibatan yang diminta tidak tersedia"
+msgstr "A keresett bevonás nem létezik."
 #: ----
 msgid "RESET"
-msgstr "Reset"
+msgstr "Visszaállítás"
 #: ----
 msgid "RESET_ALL"
-msgstr "Reset semua"
+msgstr "Minden visszaállítása"
 #: ----
 msgid "RESTRICT_FOR_THE_ROLE"
-msgstr "Terbatas untuk peran"
+msgstr "Rang alapján korlátozás"
 #: ----
 msgid "RESTRICT_FOR_THE_USER"
-msgstr "Terbatas untuk pengguna"
+msgstr "Felhasználó korlátozása"
 #: ----
 msgid "ROLE"
-msgstr "Peran"
+msgstr "Rang"
 #: ----
 msgid "ROLE_LIST"
-msgstr "Daftar Peran"
+msgstr "Rang lista"
 #: ----
 msgid "ROLES"
-msgstr "Roles"
+msgstr "Rangok"
 #: ----
 msgid "ROLES___MODULE_ACCESS_CONTROL"
-msgstr "Akses kontrol Peran / Modul"
+msgstr "Rang / Modul hozzáférési beállítások"
 #: ----
 msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
-msgstr "Akses kontrol Peran;  Modul"
+msgstr "Rang és modul hozzáférési beállítások"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Peran dengan wewenang untuk mengakses peristiwa ini"
+msgstr "Rangok melyekkel megtekinthető az esemény"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Peran dengan wewenang untuk mengakses Orang ini"
+msgstr "Rangok melyekkel megtekinthető a személy"
 #: ----
 msgid "SAVE"
-msgstr "Simpan"
+msgstr "Mentés"
 #: ----
 msgid "SAVE_ADDRESS"
-msgstr "Simpan Alamat"
+msgstr "Cím mentése"
 #: ----
 msgid "SAVE_DOCUMENT"
-msgstr "Simpan Dokumen"
+msgstr "Dokumentum mentése"
 #: ----
 msgid "SAVE_HELP_TEXT"
-msgstr "Simpan Teks Bantuan"
+msgstr "Súgó szöveg mentése"
 #: ----
 msgid "SAVE_NEW_FIELDS"
-msgstr "Simpan field baru"
+msgstr "Új mezők mentése"
 #: ----
 msgid "SAVE_QUERY"
-msgstr "Simpan pertanyaan"
+msgstr "Lekérdezés mentése"
 #: ----
 msgid "SAVE_THIS_QUERY"
-msgstr "Simpan pertanyaan ini"
+msgstr "Lekérdezés mentése"
 #: ----
 msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
-msgstr "Simpan pertanyaan dengan aval"
+msgstr "Lekérdezés mentése keveréssel"
 #: ----
 msgid "SAVED_QUERIES"
-msgstr "Pertanyaan yang tersimpan"
+msgstr "Mentett lekérdezések"
 #: ----
 msgid "SEARCH"
-msgstr "Cari"
+msgstr "Keresés"
 #: ----
 msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
-msgstr "Cari informasi tambahan informasi yang relevan ke jenis tindakan yang spesifik"
+msgstr "Bizonyos cselekményekhez kapcsolódó informácókban keresés"
 #: ----
 msgid "SEARCH_CONDITIONS"
-msgstr "Cari Kondisi"
+msgstr "Feltétel keresése"
 #: ----
 msgid "SEARCH_FORM"
-msgstr "Formulir pencarian"
+msgstr "Űrlap keresése"
 #: ----
 msgid "SEARCH_IN_DATABASE"
-msgstr "Cari dalam Pangkalan Data"
+msgstr "Keresés az adatbázisban"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
-msgstr "Cari informasi tentang Peristiwa"
+msgstr "Információ keresése eseményekről"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Orang yang menjadi Pelaku dalam tindakan kepada korban"
+msgstr "Információ keresése személyről, aki elkövető volt áldozat ellen elkövetett cselekmény során"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
-msgstr "Cari informasi mengenai Orang yang mengintervensi di Peristiwa."
+msgstr "Információ keresése személyről, aki beavatkozott eseményekbe"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
-msgstr "Cari informasi mengenai Orang yang menyediakan informasi"
+msgstr "Információ keresése személyről, aki információt szolgáltatott"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
-msgstr "Cari informasi pada Orang, baik itu individu, kelompok atau organisasi"
+msgstr "Információ keresése személyekről, akár egyén, csoport vagy szervezet"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
-msgstr "Cari informasi pada Orang yang menjadi Korban"
+msgstr "Információ keresése személyekről akik áldozatok voltak"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Tindakan terhadap Korban"
+msgstr "Információ keresése a cselekményekben melyeket áldozatok ellen követtek el"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
-msgstr "Cari informasi dalam data yang disediakan oleh Sumber"
+msgstr "Információ keresése azokban az adatokban melyet források szolgáltattak"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
-msgstr "Cari informasi bagaimana Pelaku terlibat dalam Tindakan tertentu"
+msgstr "Információ keresése az alapján ahogyan elkövetők részt vettek bizonyos cselekményekben"
 #: ----
 msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
-msgstr "Cari catatan bagaimana Orang mengintervensi ke Peristiwa atas nama Korban"
+msgstr "Információ keresése személyekről akik beavatkoztak akár az áldozat oldalán"
 #: ----
 msgid "SEARCH_REPORT"
-msgstr "Pencarian laporan"
+msgstr "Jelentés keresése"
 #: ----
 msgid "SEARCH_RESULTS"
-msgstr "Hasil pencarian"
+msgstr "Találatok"
 #: ----
 msgid "SEARCHABLE"
-msgstr "Dapat dicari"
+msgstr "Kereshető"
 #: ----
 msgid "SECTION"
-msgstr "Bagian"
+msgstr "Szekció"
 #: ----
 msgid "SEE_FULL_SIZE_IMAGE"
-msgstr "Lihat ukuran penuh dari gambar"
+msgstr "Teljes méretű kép megtekintése"
 #: ----
 msgid "SELECT"
-msgstr "Pilih"
+msgstr "Kiválasztás"
 #: ----
 msgid "SELECT_A_FORMAT"
-msgstr "Pilih format"
+msgstr "Formátum választás"
 #: ----
 msgid "SELECT_A_MICRO_THESAURUS"
-msgstr "Pilih Micro-thesauri"
+msgstr "Válassz agy Micro-thesarust"
 #: ----
 msgid "SELECT_ENTITY"
-msgstr "Pilih Entitas"
+msgstr "Entitás választás"
 #: ----
 msgid "SELECT_FIELD"
-msgstr "Pilih Fields"
+msgstr "Mező választás"
 #: ----
 msgid "SELECT_FIELDS_FROM_"
-msgstr "Pilih dari Field"
+msgstr "Mező választása"
 #: ----
 msgid "SELECT_ROLE"
-msgstr "Pilih Peran"
+msgstr "Szerep választása"
 #: ----
 msgid "SELECT_SECONDARY_ENTITY"
-msgstr "Pilih entitas kedua"
+msgstr "Másodlagos entitás választása"
 #: ----
 msgid "SELECT_TREE_OPTION"
-msgstr "Pilih Pohon Pilihan"
+msgstr "Fa opció választása"
 #: ----
 msgid "SET"
-msgstr "Atur"
+msgstr "Beállítás"
 #: ----
 msgid "SET_ACL_MODE"
-msgstr "Atur mode ACL"
+msgstr "ACL mode beállítása"
 #: ----
 msgid "SET_LANGUAGE"
-msgstr "Pilih Bahasa"
+msgstr "Nyelv beállítása"
 #: ----
 msgid "SET_SYSTEM_LANGUAGE"
-msgstr "Pilih Sistem Bahasa"
+msgstr "Rendszernyelv beállítása"
 #: ----
 msgid "SHARE"
-msgstr "Berbagi"
+msgstr "Megosztás"
 #: ----
 msgid "SHOW_ADDRESS_FORM"
-msgstr "Perlihatkan form Alamat"
+msgstr "Cím űrlap mutatása"
 #: ----
 msgid "SHOW_ALL"
-msgstr "Perlihatkan Semua"
+msgstr "Összes mutatása"
 #: ----
 msgid "SHOW_SEARCH_FORM"
-msgstr "Perlihatkan Formulir Pencarian"
+msgstr "Keresési űrlap mutatása"
 #: ----
 msgid "SHOW_SUPPORTING_DOCUMENT_S_"
-msgstr "Tampilkan Dokumen-Dokumen Pendukung"
+msgstr "Támogató dokumentum(ok) mutatása"
 #: ----
 msgid "SIGN_IN"
-msgstr "Masuk"
+msgstr "Bejelentkezés"
 #: ----
 msgid "SIGN_IN_TO_OPENEVSYS"
-msgstr "Masuk ke OpenEvsys"
+msgstr "Bejelentkezés az OpenEvSysbe"
 #: ----
 msgid "SIGN_OUT"
-msgstr "Keluar"
+msgstr "Kijelentkezés"
 #: ----
 msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
-msgstr "Beberapa kesalahan terjadi saat impor:"
+msgstr "Hiba lépett fel az adat importálása közben:"
 #: ----
 msgid "SOUND_LIKE"
-msgstr "terdengar seperti"
+msgstr "hangzik"
 #: ----
 msgid "SOURCE"
-msgstr "Sumber"
+msgstr "Forrás"
 #: ----
 msgid "SOURCE_NAME"
-msgstr "Nama Sumber"
+msgstr "Forrás neve"
 #: ----
 msgid "SOURCE_SEARCH_FORM"
-msgstr "Form Pencarian Sumber"
+msgstr "Forrás keresési űrlap"
 #: ----
 msgid "SOURCES"
-msgstr "Sumber"
+msgstr "Források"
 #: ----
 msgid "SPREADSHEET"
-msgstr "Lembarkerja"
+msgstr "Táblázat"
 #: ----
 msgid "START_DATE"
-msgstr "Tanggal Mulai"
+msgstr "Kezdő időpont"
 #: ----
 msgid "STATUS"
-msgstr "Status"
+msgstr "Állapot"
 #: ----
 msgid "SUBMIT"
-msgstr "Daftarkan"
+msgstr "Beküldés"
 #: ----
 msgid "SUPPORTING_DOCUMENTS"
-msgstr "Dokumen Pendukung"
+msgstr "Támogató dokumentum(ok)"
 #: ----
 msgid "SYSTEM_CONFIGURATION"
-msgstr "Konfigurasi sistem"
+msgstr "Rendszer beállítása"
 #: ----
 msgid "SYSTEM_ERROR"
-msgstr "Kesalahan Sistem"
+msgstr "Rendzserhiba"
 #: ----
 msgid "TERM_IN"
-msgstr "Istilah dalam"
+msgstr "Kifejezés"
 #: ----
 msgid "TERM_IN_"
-msgstr "Istilah dalam"
+msgstr "Kifejezés"
 #: ----
 msgid "TEXT"
-msgstr "Teks"
+msgstr "Szöveg"
 #: ----
 msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
-msgstr "Field teks dibatasi 200 karakter"
+msgstr "Szövegmező 200 karakteres limittel"
 #: ----
 msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
-msgstr "Wilayah teks tak terbatas"
+msgstr "Szövegmező limit nélkül"
 #: ----
 msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
-msgstr "Dokumen yang diunggah bukan dokumen XML yang sesuai"
+msgstr "A feltöltött dokumentum nem volt érvényes XML formátumú"
 #: ----
 msgid "THE_EVENT_IS_LINKED"
-msgstr "Peristiwa ini terhubung"
+msgstr "Az esemény kapcsolódik"
 #: ----
 msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
-msgstr "File lampiran telah diperbaharui dengan file lampiran baru."
+msgstr "A régi csatolmányt az újra frissítettük."
 #: ----
 msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
-msgstr "Orang ini belum memiliki peran"
+msgstr "A személynek nincs semmilyen rangja!"
 #: ----
 msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
-msgstr "Dua kata sandi tidak sama"
+msgstr "A két jelszó különböző"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
-msgstr "File yang diunggah melebihi MAX_FILE_SIZE yang diperkenankan dalam form HTML"
+msgstr "A feltöltött fájl mérete meghaladja a MAX_FILE_SIZE előírást a HTML fájlban."
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
-msgstr "File yang diunggah melebihi upload_max_filesize pada php.ini"
+msgstr "A feltöltött fájl mérete meghaladja az upload_max_filesize méretet a php.ini-ben."
 #: ----
 msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
-msgstr "File hanya terunggah sebagian"
+msgstr "A fájl csak részben töltődött fel."
 #: ----
 msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada dokumen tersedia. Silahkan Tambahkan!"
+msgstr "Nincsenek még dokumentumok. Adj hozzá néhányat!"
 #: ----
 msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada Dokumen pendukung mengenai Peristiwa tersedia. Silahkan menambahkan!"
+msgstr "Nincsenek még támogató dokumentumok. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada alamat pada Orang ini. Silahkan tambahkan!"
+msgstr "Nincs még cím megadva ehhez a személyhez. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada Riwayat Hidup tentang Orang ini. Silahkan tambahkan!"
+msgstr "Nincsenek életrajzi adatok erről a személyről még. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Peristiwa. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Nincs információ az eseményről még. Adj hozzá! Kattints az \"Esemény hozzáadása\" gombra új esemény hozzáadásához."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Rangkaian Peristiwa. Silahkan Tambahkan!"
+msgstr "Nincs információ az eseménysorozatról még. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Intervensi dan Pihak Pengintervensi. Silahkan tambahkan!"
+msgstr "Nincs információ a beavatkozó félről és a beavatkozásról még. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Sumber dan Informasi. Silahkan tambahkan!"
+msgstr "Nincs információ a forrásról és az információról még. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
-msgstr "Belum ada informasi tentang Korban dan Pelaku. Silahkan tambahkan!"
+msgstr "Nincs információ az áldozatról és az elkövetőről még. Adj hozzá!"
 #: ----
 msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum Informasi tentang Orang. Silahkan tambahkan!"
+msgstr "Nincs személy információ még. Adj hozzá!"
 #: ----
 msgid "TIMESTAMP"
-msgstr "Catatan waktu"
+msgstr "Időbélyegző"
 #: ----
 msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
-msgstr "Untuk melihat Dokumen, silahkan pilih satu dokumen dari daftar Dokumen"
+msgstr "Dokumentum megtekintéséhez ki kell azt választanod a dokumentumok listájából."
 #: ----
 msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
-msgstr "Untuk melihat Orang, silahkan pilih satu dari daftar Orang"
+msgstr "Egy személy megtekintéséhez ki kell azt választanod a személyek listájából."
 #: ----
 msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
-msgstr "Untuk melihat orang, silahkan pilih satu Peristiwa dari daftar Peristiwa"
+msgstr "Egy esemény megtekintéséhez ki kell azt választanod az események listájából."
 #: ----
 msgid "TORTURE"
-msgstr "Penyiksaan"
+msgstr "Kínzás"
 #: ----
 msgid "TRANSLATE"
-msgstr "Terjemahan"
+msgstr "Fordítás"
 #: ----
 msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
-msgstr "Terjemahan belum diperbaharui. Silahkan berikan ijin ke direktori dan file ke folder lokal"
+msgstr "A fordítás nem frissült! Kérlek adj megfelelő engedélyt az érintett fájloknak és mappáknak!"
 #: ----
 msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
-msgstr "Terjemahan telah diperbaharui"
+msgstr "A fordítás frissítve."
 #: ----
 msgid "TRUE"
-msgstr "benar"
+msgstr "igaz"
 #: ----
 msgid "TYPE"
-msgstr "Jenis"
+msgstr "Típus"
 #: ----
 msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Jenis tanggal lahir hanya dalam angka"
+msgstr "A születés napja csak szám lehet!"
 #: ----
 msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Jenis bulan lahir hanya dalam angka"
+msgstr "A születési hónap csak szám lehet!"
 #: ----
 msgid "TYPE_OF_ACT"
-msgstr "Jenis Tindakan"
+msgstr "Cselekmény típusa"
 #: ----
 msgid "TYPE_OF_CHAIN_OF_EVENTS"
-msgstr "Jenis Rangkaian Peristiwa"
+msgstr "Cselekménysorozat típusa"
 #: ----
 msgid "TYPE_OF_INTERVENTION"
-msgstr "Jenis Intervensi"
+msgstr "Beavatkozás típusa"
 #: ----
 msgid "TYPE_OF_RELATIONSHIP"
-msgstr "Jenis dari Relasi"
+msgstr "Kapcsolat típusa"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Masukkan ID pengguna pada kotak teks dan klik berbagi peristiwa untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Gépeld a felhasználói azonosítót a szövegdobozba és kattints a megosztásra, hogy az esenényt elérhetővé tedd a kívánt felhasználó számára."
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Masukkan ID Pengguna pada kotak teks dan klik berbagi orang untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Gépeld a felhasználói azonosítót a szövegdobozba és kattints a megosztásra, hogy az személyt elérhetővé tedd a kívánt felhasználó számára."
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Masukkan Tahun kelahiran hanya dalam angka"
+msgstr "A születési év csak szám lehet!"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
-msgstr "Masukkan tahun kelahiran secara lengkap"
+msgstr "A születési évet teljesen írd ki!"
 #: ----
 msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
-msgstr "Tidak dapat menghapus beberapa istilah Micro-thesauri karena telah digunakan dalam catatan"
+msgstr "Nem lehet eltávolítani a Micr-thesarus kifejezéseket mert használatban vannak a bejegyzésekben."
 #: ----
 msgid "UNABLE_TO_RESET_FIELD_"
-msgstr "Tidak dapat mengatur ulang field"
+msgstr "Nem lehet visszaállítani a mezőt."
 #: ----
 msgid "UNABLE_TO_RESET_FIELDS_"
-msgstr "Tidak dapat mengatur ulang field"
+msgstr "Nem lehet visszaállítani a mezőket."
 #: ----
 msgid "UNKNOWN_UPLOAD_ERROR_"
-msgstr "Kesalahan pengunggahan yang tidak diketahui"
+msgstr "Ismeretlen feltöltési hiba."
 #: ----
 msgid "UNTITLED_QUERY"
-msgstr "Pertanyaan tanpa judul"
+msgstr "Cím nélküli lekérdezés"
 #: ----
 msgid "UPDATE"
-msgstr "Perbarui"
+msgstr "Frissítés"
 #: ----
 msgid "UPDATE_ACCESS_CONTROL_LIST"
-msgstr "Perbarui Daftar Akses Kontrol"
+msgstr "Hozzáférési lista frissítése"
 #: ----
 msgid "UPDATE_FORM"
-msgstr "Perbarui Formulir"
+msgstr "Űrlap frissítése"
 #: ----
 msgid "UPDATE_PERMISSIONS"
-msgstr "Perbaharui wewenang"
+msgstr "Engedélyek frissítése"
 #: ----
 msgid "UPLOAD"
-msgstr "Unggah"
+msgstr "Feltöltés"
 #: ----
 msgid "UPLOAD_FILE"
-msgstr "Unggah File"
+msgstr "Fájl feltöltése"
 #: ----
 msgid "USER"
-msgstr "Pengguna"
+msgstr "Felhasználó"
 #: ----
 msgid "USER_MANAGEMENT"
-msgstr "Manajemen pengguna"
+msgstr "Felhasználó kezelése"
 #: ----
 msgid "USER_NAME"
-msgstr "Nama Penguna"
+msgstr "Felhasználónév"
 #: ----
 msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Pengguna tidak ditemukan! ID pengguna atau password tidak sesuai! silahkan coba lagi."
+msgstr "Felhasználó nem található! Érvénytelen felhasználónév vagy jelszó! Próbáld újra!"
 #: ----
 msgid "USERID_DOES_NOT_EXISTS_"
-msgstr "ID Pengguna tidak tersedia"
+msgstr "Felhazsnálói azonosító nem létezik."
 #: ----
 msgid "USERNAME"
-msgstr "Nama Penguna"
+msgstr "Felhasználónév"
 #: ----
 msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
-msgstr "Nama pengguna sudah ada, gunakan nama lain"
+msgstr "A felhasználónév foglalt, válassz másikat"
 #: ----
 msgid "USERNAME_CANNOT_BE_EMPTY"
-msgstr "Nama pengguna harus diisi"
+msgstr "A felhasználónév nem lehet üres"
 #: ----
 msgid "USERS"
-msgstr "Pengguna"
+msgstr "Felhasználók"
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Pengguna dengan wewenang untuk mengakses peristiwa ini"
+msgstr "Felhasználók akiknek engedélyezett a hozzáférés ehhez az eseményhez"
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Pengguna dengan wewenang untuk mengakses peristiwa ini"
+msgstr "Felhasználók akiknek engedélyezett a hozzáférés ehhez a személyhez"
 #: ----
 msgid "USERS_WITH_PERMISSIONS"
-msgstr "Pengguna dengan wewenang"
+msgstr "Engedéllyel rendelkező felhasználók"
 #: ----
 msgid "VALIDATION"
-msgstr "Validasi"
+msgstr "Érvényesítés"
 #: ----
 msgid "VALIDATION_TYPE"
-msgstr "Jenis Validasi"
+msgstr "Érvényesítés típusa"
 #: ----
 msgid "VERSION"
-msgstr "Versi"
+msgstr "Verzió"
 #: ----
 msgid "VICTIM"
-msgstr "Korban"
+msgstr "Áldozat"
 #: ----
 msgid "VICTIM_NAME"
-msgstr "Nama Korban"
+msgstr "Áldozat neve"
 #: ----
 msgid "VICTIM_SEARCH_FORM"
-msgstr "Form Pencarian Korban"
+msgstr "Áldozat keresési űrlap"
 #: ----
 msgid "VICTIMS"
-msgstr "Korban"
+msgstr "Áldozatok"
 #: ----
 msgid "VICTIMS_AND_PERPETRATORS"
-msgstr "Korban dan Pelaku"
+msgstr "Áldozatok és elkövetők"
 #: ----
 msgid "VIEW_ACT_RECORD"
-msgstr "Tampilkan catatan Tindakan"
+msgstr "Cselekmény bejegyzések megtekintése"
 #: ----
 msgid "VIEW_ADDRESS"
-msgstr "Tampilkan Alamat"
+msgstr "Cím megtekintése"
 #: ----
 msgid "VIEW_BIOGRAPHIC_DETAILS"
-msgstr "Tampilkan Riwayat Hidup"
+msgstr "Életrajzi adatok megtekintése"
 #: ----
 msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
-msgstr "Tampilkan catatan Rangkaian Peristiwa"
+msgstr "Eseménysorozat megtekintése"
 #: ----
 msgid "VIEW_DOCUMENT"
-msgstr "Tampilkan Dokumen"
+msgstr "Dokumentum megtekintése"
 #: ----
 msgid "VIEW_EVENT"
-msgstr "Tampilkan Peristiwa"
+msgstr "Esemény megtekintése"
 #: ----
 msgid "VIEW_EVENT_RECORD"
-msgstr "Tampilkan catatan Peristiwa"
+msgstr "Esemény bejegyzések megtekintése"
 #: ----
 msgid "VIEW_INFORMATION_RECORD"
-msgstr "Tampilkan catatan Informasi"
+msgstr "Információ bejegyzések megtekintése"
 #: ----
 msgid "VIEW_INTERVENTION_PARTY_RECORD"
-msgstr "Tampilkan Catatan Pihak yang Mengintervensi"
+msgstr "Beavatkozó felek bejegyzések megtekintése"
 #: ----
 msgid "VIEW_INTERVENTION_RECORD"
-msgstr "Tampilkan catatan Intervensi"
+msgstr "Beavatkozás bejegyzések megtekintése"
 #: ----
 msgid "VIEW_INVOLVEMENT_RECORD"
-msgstr "Tampilkan catatan Keterlibatan"
+msgstr "Bevonás bejegyzések megtekintése"
 #: ----
 msgid "VIEW_PERPETRATOR_RECORD"
-msgstr "Tampilkan catatan Pelaku"
+msgstr "Elkövető bejegyzések megtekintése"
 #: ----
 msgid "VIEW_PERSON"
-msgstr "Tampilkan Orang"
+msgstr "Személy megtekintése"
 #: ----
 msgid "VIEW_RELATED_PERSON"
-msgstr "Tampilkan Orang yang terhubung"
+msgstr "Kapcsolódó személyek megtekintése"
 #: ----
 msgid "VIEW_SOURCE_RECORD"
-msgstr "Tampilkan catatan Sumber"
+msgstr "Forrás bejegyzések megtekintése"
 #: ----
 msgid "VIEW_VICTIM_RECORD"
-msgstr "Tampilkan catatan Korban"
+msgstr "Áldozat bejegyzések megtekintése"
 #: ----
 msgid "VISIBILITY"
-msgstr "Visibilitas"
+msgstr "Láthatóság"
 #: ----
 msgid "VISIBLE"
-msgstr "Terlihat"
+msgstr "Látható"
 #: ----
 msgid "VISIBLE_IN_BROWSE"
-msgstr "Terlihat di penelusuran"
+msgstr "Látható a böngészés során"
 #: ----
 msgid "VISIBLE_IN_FORM"
-msgstr "Terlihat di formulir"
+msgstr "Látható az űrlapon"
 #: ----
 msgid "VISIBLE_IN_VIEW"
-msgstr "Telihat di Tampilan"
+msgstr "Látható a nézetben"
 #: ----
 msgid "WEB"
-msgstr "Situs"
+msgstr "Web"
 #: ----
 msgid "WEBSITE"
-msgstr "Website"
+msgstr "Weboldal"
 #: ----
 msgid "WHAT_HAPPENED_TO"
-msgstr "Apa yang terjadi pada"
+msgstr "Mi történt vele"
 #: ----
 msgid "WHAT_IS_THE_INTERVENTION_"
-msgstr "Apa intervensinya?"
+msgstr "Mi a bevatkozás?"
 #: ----
 msgid "WHO_IS_RESPONSIBLE_FOR_THE"
-msgstr "Siapa yang bertanggung jawab atas"
+msgstr "Ki felelős ezért:"
 #: ----
 msgid "WHO_IS_THE_INTERVENING_PARTY_"
-msgstr "Siapa pihak yang mengintervensi?"
+msgstr "Ki a beavatkozó fél?"
 #: ----
 msgid "WHO_IS_THE_SOURCE_"
-msgstr "Siapa sumbernya?"
+msgstr "Ki a forrás?"
 #: ----
 msgid "WHO_IS_THE_VICTIM__"
-msgstr "Siapa korbannya?"
+msgstr "Ki az áldozat?"
 #: ----
 msgid "YEAR_S__"
-msgstr "Tahun:"
+msgstr "Év(ek)."
 #: ----
 msgid "YES"
-msgstr "Ya"
+msgstr "Igen"
 #: ----
 msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
-msgstr "Anda akan menhapus sebuah Peristiwa. Artinya anda akan menghapus catatan yang terdaftar di bawah ini. Anda akan melanjutkan?"
+msgstr "Esemény törlésére készülsz. Ez azt jelenti az alábbi bejegyzések is törlődnek. Folytatod?"
 #: ----
 msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
-msgstr "Anda tidak dapat mengubah wewenang admin"
+msgstr "Nem változtathatod meg az adminisztrátor engedélyeit."
 #: ----
 msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
-msgstr "Anda tidak dapat menghapus pengguna admin lainnya"
+msgstr "Nem törölhetsz admin felhasználókat."
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
-msgstr "Akun admin tidak dapat dihapus"
+msgstr "Nem törölhetsz adminisztrátori fókokat."
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
-msgstr "Anda tidak dapat menghapus bahasa utama"
+msgstr "Nem törölheted az alapértelmezett nyelvet."
 #: ----
 msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
-msgstr "Tidak dapat menghapus diri sendiri dari daftar pengguna"
+msgstr "Nem törölheted magad a felhasználók közül."
 #: ----
 msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
-msgstr "Anda tidak memiliki wewenang untuk mengedit rincian admin lainnya"
+msgstr "Nincs jogosultságod más admin felhasználó adatait szerkeszteni."
 #: ----
 msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
-msgstr "Anda juga akan menghapus sejumlah induk istilah, jika dilanjutkan maka anak-anak dari istilah akan terhapus"
+msgstr "Néhány szülő kifejezést is kiválasztottál ha folytatod a gyermekeik is törlésre kerülnek."
 #: ----
 msgid "YOU_MUST_FILL_IN_THIS_FIELD"
-msgstr "Anda harus mengisi field ini"
+msgstr "Ki kell töltened ezt a mezőt"
 #: ----
 msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
-msgstr "Anda perlu memilih entitas sebelum menghitung"
+msgstr "Ki kell választanod egy entitást a folytatás előtt"
 #: ----
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
-msgstr "Fungsi cookie pada browser anda tidak aktif. Silahkan aktifkan"
+msgstr "A böngésződben ki van kapcsolva a cookie-k fogadása! Kapcsold be kérlek!"
 #: ----
 msgid "EXTENSIONS"
-msgstr "Ekstensi"
+msgstr "Kiegészítők"
 #: ----
 msgid "ABOUT_OE"
-msgstr "Tentang OpenEvsys"
+msgstr "Az OpenEvSys-ről"
 #: ----
 msgid "AGPL"
-msgstr "Berlinsensi AGPL v3"
+msgstr "AGPL v3 licensz"
 #: ----
 msgid "REQUIRED"
-msgstr "Diwajibkan"
+msgstr "Kötelező"
 #: ----
 msgid "YES_CONFIDENTIALITY"
-msgstr "Iya (untuk Kerahasiaan)"
+msgstr "Igen (bizalmas kezelésre)"
 #: ----
 msgid "NO_CONFIDENTIALITY"
-msgstr "Tidak (untuk Kerahasiaan)"
+msgstr "Nem (bizalmas kezelésre)"
 #: ----
 msgid "ERROR_SERVER"
-msgstr "Kesalahan dikembalikan oleh server, silahkan hubungi administrato sistem"
+msgstr "Hibát jelzett a szerver, lépj kapcsolatba a rendszeradminisztrátorral!"
 #: ----
 msgid "NULL_ROWS"
-msgstr "Null Rows"
+msgstr "Sorok ürítése"
 #: ----
 msgid "PHONE_NO"
-msgstr "Nomor telepon"
+msgstr "Telefonszám"
 #: ----
 msgid "NUMERICAL"
-msgstr "Angka"
+msgstr "Számszerű"
 #: ----
 msgid "ANALYST"
-msgstr "Analis"
+msgstr "Elemző"
 #: ----
 msgid "DATA_ENTRY"
-msgstr "Data Entri"
+msgstr "Adatbevitel"
 #: ----
 msgid "ENTITY_GROUPS"
-msgstr "Entitas Grup"
+msgstr "Entitás csoportok"
 #: ----
 msgid "CREATE"
-msgstr "Buat"
+msgstr "Létrehozás"
 #: ----
 msgid "READ"
-msgstr "baca"
+msgstr "olvasás"
 #: ----
 msgid "LINKING"
-msgstr "Tautan"
+msgstr "Kapcsolódás"
 #: ----
 msgid "PRIMARY"
-msgstr "Utama"
+msgstr "Elsődleges"
 #: ----
 msgid "SELECT_LANGUAGE"
-msgstr "Pilih Bahasa"
+msgstr "Nyelv választása"
 #: ----
 msgid "NO_ATTACHMENT"
-msgstr "Dokumen ini tidak memiliki lampiran"
+msgstr "Nincsenek csatolmányok ehhez a dokumentumhoz"
 #: ----
 msgid "BROWSE"
-msgstr "Telusur"
+msgstr "Böngészés"
 #: ----
 msgid "ROWS"
-msgstr "Baris"
+msgstr "Sor(ok)"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr "Laporan pencarian Mutakhir"
+msgstr "Részletes keresési jelentés"
 #: ----
 msgid "Address"
-msgstr "Alamat"
+msgstr "Cím"
 #: ----
 msgid "latitude"
-msgstr "latitude"
+msgstr "szélesség"
 #: ----
 msgid "longitude"
-msgstr "longitude"
+msgstr "hosszúság"
 #: ----
 msgid "View"
-msgstr "Lihat"
+msgstr "Nézet"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr "Micro-thesaurus berhasil dibuat"
+msgstr "Micro-thesarus sikeresen létrehozva"
 #: ----
 msgid "Radio field"
-msgstr "Radio field"
+msgstr "Rádió gomb"
 #: ----
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "Helymeghatározás"
 #: ----
 msgid "User Select"
-msgstr "Pilih Pengguna"
+msgstr "Felhasználó választás"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Pilih Pengguna Multivalue"
+msgstr "Többszempontú felhasználóválasztás"
 #: ----
 msgid "Tree"
-msgstr "Pohon"
+msgstr "Fa"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Pohon Multivalue"
+msgstr "Többszempontú fa"
 #: ----
 msgid "Multivalue Select"
-msgstr "Pilih Multivalue"
+msgstr "Többszempontú választás"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Silahkan pilih item untuk melanjutkan"
+msgstr "Válassz tételeket az akció végrehajtásához"
 #: ----
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Műszerfal"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr "Micro-thesauri tidak boleh kosong"
+msgstr "A Micro-thesauri nem lehet üres"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr "Nama Micro-thesauri sudah ada"
+msgstr "A Micro-thesauri már létezik"
 #: ----
 msgid "Login Information"
-msgstr "Informasi Masuk"
+msgstr "Bejelentkezési információ"
 #: ----
 msgid "Profile Information"
-msgstr "Informasi profil"
+msgstr "Profil információ"
 #: ----
 msgid "Print configuration"
-msgstr "Konfigurasi Printer"
+msgstr "Nyomtatási információ"
 #: ----
 msgid "Header for report print view"
-msgstr "Tampilan header untuk cetakan laporan"
+msgstr "Fejléc jelentés nyomtatási nézetéhez"
 #: ----
 msgid "Header for event print view"
-msgstr "Tampilan header untuk cetakan peristiwa"
+msgstr "Fejléc esemény nyomtatási nézetéhez"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Tampilan sidebar untuk cetakan peristiwa"
+msgstr "Oldalsávesemény nyomtatási nézetéhez"
 #: ----
 msgid "Header for person print view"
-msgstr "Tampilan header untuk cetakan orang"
+msgstr "Fejléc személy nyomtatási nézetéhez"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Tampilan sidebar untuk cetakan orang"
+msgstr "Oldalsáv személy nyomtatási nézetéhez"
 #: ----
 msgid "Details"
-msgstr "Rincian"
+msgstr "Részletek"
 #: ----
 msgid "Add new term"
-msgstr "Masukkan istilah baru"
+msgstr "Új kifejezés hozzáadása"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Dapat dicari dalam Analisis"
+msgstr "Elemzéskor kereshető"
 #: ----
 msgid "Visible in Analysis"
-msgstr "Terlihat di Analisis"
+msgstr "Elemzéskor látható"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr "Masukkan Micro-thesauri baru"
+msgstr "Új Micro-thesauri hozzáadása"
 #: ----
 msgid "Select language"
-msgstr "Pilih Bahasa"
+msgstr "Nyelv választása"
 #: ----
 msgid "Header for login page"
-msgstr "Header untuk halaman masuk"
+msgstr "Bejelentkezési oldal fejléce"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "Többértékű"
 #: ----
 msgid "Enabled"
-msgstr "Fungsikan"
+msgstr "Engedélyezett"
 #: ----
 msgid "Hide in case of"
-msgstr "Sembunyikan dalam kasus"
+msgstr "Elrejtés"
 #: ----
 msgid "Set visible"
-msgstr "Pasang terlihat"
+msgstr "Láthatóvá tétel"
 #: ----
 msgid "Disable"
-msgstr "Tidak difungsikan"
+msgstr "Kikapcsol"
 #: ----
 msgid "Apply"
-msgstr "Terapkan"
+msgstr "Alkalmazás"
 #: ----
 msgid "Vocab number"
-msgstr "Nomor Vocab"
+msgstr "Vocab szám"
 #: ----
 msgid "disabled"
-msgstr "Tidak difungsikan"
+msgstr "kikapcsolt"
 #: ----
 msgid "Undefined"
-msgstr "Belum terdefinisikan"
+msgstr "Meghatározatlan"
 #: ----
 msgid "Load"
-msgstr "Muat"
+msgstr "Töltés"
 #: ----
 msgid "Select facets"
-msgstr "Pilih aspek"
+msgstr "Oldalak választása"
 #: ----
 msgid "Date range"
-msgstr "Rentang tanggal"
+msgstr "Dátum időszak"
 #: ----
 msgid "Timeline type"
-msgstr "Jenis linimasa"
+msgstr "Idővonal típusa"
 #: ----
 msgid "DAY"
-msgstr "HARI"
+msgstr "NAP"
 #: ----
 msgid "MONTH"
-msgstr "BULAN"
+msgstr "HÓNAP"
 #: ----
 msgid "YEAR"
-msgstr "TAHUN"
+msgstr "ÉV"
 #: ----
 msgid "Total Count"
-msgstr "Hitungan Total"
+msgstr "Összes"
 #: ----
 msgid "Added in last 30 days"
-msgstr "Dimasukan 30 hari terakhir"
+msgstr "Az elmúlt 30 napban hozzáadott"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Pengguna yang paling aktif (item baru)"
+msgstr "Legaktívabb felhasználók (új tételek)"
 #: ----
 msgid "User activity (edited items)"
-msgstr "Aktifitas Pengguna (item yang diperbarui)"
+msgstr "Felhazsnálói aktivitás (szerkesztett tételek)"
 #: ----
 msgid "Recently deleted"
-msgstr "Baru saja dihapus"
+msgstr "Nemrég törölt"
 #: ----
 msgid "No data available"
-msgstr "Tidak ada data yang tersedia"
+msgstr "Nincs elérhető adat"
 #: ----
 msgid "Add Perpetrator later"
-msgstr "Menambahkan Pelaku kemudian"
+msgstr "Elkövetőt késöbb adom hozzá"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr "Simpan dan masukkan Pelaku lainnya"
+msgstr "Mentés és több elkövető hozzáadása"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Nincs még információ a cselekményről, adj hozzá! Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Intervensi. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Nincs még információ a beavatkozásról, adj hozzá! Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
 #: ----
 msgid "View person's roles"
-msgstr "Tampilkan peran orang"
+msgstr "Személy szerepeinek megtekintése"
 #: ----
 msgid "Duplicate"
-msgstr "Duplikasi"
+msgstr "Duplikálás"
 #: ----
 msgid "Insert folder name:"
-msgstr "Masukan nama folder:"
+msgstr "Mappa neve:"
 #: ----
 msgid "Return to files list"
-msgstr "Kembali ke daftar file"
+msgstr "Vissza a fájlok listájához"
 #: ----
 msgid "Preview"
-msgstr "Pratinjau"
+msgstr "Előnézet"
 #: ----
 msgid "Erase"
-msgstr "Hapus"
+msgstr "Törlés"
 #: ----
 msgid "Charts and map"
-msgstr "Grafik dan peta"
+msgstr "Diagramok és térképek"
 #: ----
 msgid "Clear this selections"
-msgstr "Bersihkan pilihan"
+msgstr "Kiválasztás eltávolítása"
 #: ----
 msgid "of"
-msgstr "of"
+msgstr "nak/nek"
 #: ----
 msgid "Not found"
-msgstr "Tidak ditemukan"
+msgstr "Nem található"
 #: ----
 msgid "Map"
-msgstr "Peta"
+msgstr "Térkép"
 #: ----
 msgid "Charts"
-msgstr "Grafik"
+msgstr "Diagramok"
 #: ----
 msgid "Results"
-msgstr "Hasil"
+msgstr "Eredmények"
 #: ----
 msgid "Filters"
-msgstr "Penyaring"
+msgstr "Szűrők"
 #: ----
 msgid "Security"
-msgstr "Keamanan"
+msgstr "Biztonság"
 #: ----
 msgid "Top menu"
-msgstr "Menu atas"
+msgstr "Felső menü"
 #: ----
 msgid "Top right menu"
-msgstr "Menu kanan atas"
+msgstr "Jobb felső menü"
 #: ----
 msgid "Event menu"
-msgstr "Menu Peristiwa"
+msgstr "Esemény menü"
 #: ----
 msgid "Person menu"
-msgstr "Menu Orang"
+msgstr "Személy menü"
 #: ----
 msgid "Document menu"
-msgstr "Menu Dokumen"
+msgstr "Dokumentum menü"
 #: ----
 msgid "Analysis menu"
-msgstr "Menu Analisis"
+msgstr "Elemzés menü"
 #: ----
 msgid "Preferences menu"
-msgstr "Menu Preferensi"
+msgstr "Tulajdonságok menü"
 #: ----
 msgid "The reCAPTCHA wasn't entered correctly."
-msgstr "ReCAPTCHA tidak dimasukkan dengan benar"
+msgstr "A reCAPTCHA nem helyesen lett megadva."
 #: ----
 msgid "Wrong verification code. Please try again."
-msgstr "Kode verifikasi salah. Silahkan coba lagi"
+msgstr "Rossz igazoló kód. Próbáld újra."
 #: ----
 msgid "Menu was saved successfully."
-msgstr "Menu telah berhasil disimpan"
+msgstr "A menü sikeresen mentve."
 #: ----
 msgid "Google Authenticator"
-msgstr "Google Authenticator"
+msgstr "Google hitelesítő"
 #: ----
 msgid "Enabled successfully."
-msgstr "Sukses diaktifkan."
+msgstr "Sikeresen engedélyezve"
 #: ----
 msgid "Code"
-msgstr "Kode"
+msgstr "Kód"
 #: ----
 msgid "Menu"
-msgstr "Menu"
+msgstr "Menü"
 #: ----
 msgid "Click to add an item to a menu"
-msgstr "Klik untuk menambahkan item pada Menu"
+msgstr "Kattints új menü hozzásadásához"
 #: ----
 msgid "Number"
-msgstr "Nomor"
+msgstr "Szám"
 #: ----
 msgid "Term"
-msgstr "Istilah"
+msgstr "Kifejezés"
 #: ----
 msgid "Add Micro-thesauri"
-msgstr "Tambahkan Micro-thesauri"
+msgstr "Micro-thesauri hozzáadása"
 #: ----
 msgid "Translate Micro-thesauri"
-msgstr "Terjemahkan Micro-thesauri"
+msgstr "Micro-thesauri fordítása"
 #: ----
 msgid "Language"
-msgstr "Bahasa"
+msgstr "Nyelv"
 #: ----
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Esemény"
 #: ----
 msgid "Select Event"
-msgstr "Pilih Peristiwa"
+msgstr "Esemény választása"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Nincs még információ a cslekméynről, adj hozzá. Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
 #: ----
 msgid "Please select some checkbox to perform action."
-msgstr "Silahkan pilih checkbok untuk melanjutkan"
+msgstr "Válassz ki jelölőnégyzeteket, hogy végrehajtható legyen egy akció"
 #: ----
 msgid "Install the Google Authenticator app for your phone"
-msgstr "Installl Google Authenticator for your phone"
+msgstr "Telepítsd a Google hitelesítő alkalmazást a telefonodra"
 #: ----
 msgid "On your phone, open a web browser."
-msgstr "Buka browser pada telpon anda"
+msgstr "Nyiss web böngészőt a telefonodon."
 #: ----
 msgid "Go to m.google.com/authenticator."
-msgstr "Silahkan ke m.google.com/authenticator."
+msgstr "Navigálj ide: m.google.com/authenticator"
 #: ----
 msgid "Download and install the Google Authenticator application."
-msgstr "Unduh dan install aplikasi Google Authenticator"
+msgstr "Töltsd le és telepítsd a Google hitelesítő alkalmazást."
 #: ----
 msgid "Now open and configure Google Authenticator."
-msgstr "Sekarang buka dan atur Google Authenticator"
+msgstr "Nyisd meg és állítsd be a Google hitelesítőt."
 #: ----
 msgid "Scan following Barcode to register the application automaticly:"
-msgstr "Scan barcode untuk mendaftarkan aplikasi secara otomatis"
+msgstr "Szkenneld be ezt a vonalkódot, hogy automatikusan regisztráld az alkalmazást:"
 #: ----
 msgid "Or use the following secret key to register the application manually:"
-msgstr "Atau gunakan kunci rahasia untuk mendaftarkan aplikasi secara manual"
+msgstr "Használd a következő titkos kulcsot, hogy manuálisan regisztráld az alkalmazást:"
 #: ----
 msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
-msgstr "Setelah memasukan secara manual dan menyimpan kunci, masukkan 6 digit kode verifikasi dari aplikasi Authenticator"
+msgstr "Amikor manuálisan beírtad a kulcsot és elmentetted, írd be a 6jegyű igazoló kódot amit a hitelesítő alkalmazás generált."
 #: ----
 msgid "The code is incorrect. Try again"
-msgstr "Kode salah. Silahkan coba lagi"
+msgstr "A kód nem megfeleleő, próbáld újra!"

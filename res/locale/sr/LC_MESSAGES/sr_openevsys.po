@@ -1,2232 +1,2232 @@
 #: ----
 msgid "_CONTROLER_NOT_FOUND_"
-msgstr "Pengontrol tidak ditemukan"
+msgstr "Kontrolor nije pronađen"
 #: ----
 msgid "_DAY_S__"
-msgstr "Hari:"
+msgstr "Dan/i"
 #: ----
 msgid "_MONTH_S__"
-msgstr "Bulan:"
+msgstr "Mesec/i"
 #: ----
 msgid "1ST_LEVEL"
-msgstr "Tingkat 1"
+msgstr "Prvi nivo"
 #: ----
 msgid "2ND_LEVEL"
-msgstr "Tingkat 2"
+msgstr "Drugi nivo"
 #: ----
 msgid "3RD_LEVEL"
-msgstr "Tingkat 3"
+msgstr "Treći nivo"
 #: ----
 msgid "404_ERROR___PAGE_NOT_FOUND"
-msgstr "404 Error: Halaman tidak ditemukan"
+msgstr "Greška 404: stranica nije pronađena"
 #: ----
 msgid "4TH_LEVEL"
-msgstr "Tingkat 4"
+msgstr "Četvrti nivo"
 #: ----
 msgid "5TH_LEVEL"
-msgstr "Tingkat 5"
+msgstr "Peti nivo"
 #: ----
 msgid "6TH_LEVEL"
-msgstr "Tingkat 6"
+msgstr "Šesti nivo"
 #: ----
 msgid "ACL_MODE"
-msgstr "Mode ACL"
+msgstr "ACL način"
 #: ----
 msgid "ACT"
-msgstr "Tindakan"
+msgstr "Radnja"
 #: ----
 msgid "ACT_"
-msgstr "Tindakan"
+msgstr "Radnja"
 #: ----
 msgid "ACT_DETAILS"
-msgstr "Rincian Tindakan"
+msgstr "Uradi detalj"
 #: ----
 msgid "ACT_S_"
-msgstr "Tindakan"
+msgstr "Radnja"
 #: ----
 msgid "ACT_SEARCH_FORM"
-msgstr "Form Pencarian Tindakan"
+msgstr "Obrazac za pretragu radnji"
 #: ----
 msgid "ACTION"
-msgstr "Tindakan"
+msgstr "Akcija"
 #: ----
 msgid "ACTIONS"
-msgstr "Tindakan"
+msgstr "Akcije"
 #: ----
 msgid "ACTIVATED"
-msgstr "Aktifkan"
+msgstr "Aktivirano"
 #: ----
 msgid "ACTS"
-msgstr "Tindakan"
+msgstr "Radnje"
 #: ----
 msgid "ADD_ACT"
-msgstr "Tambahkan Tindakan"
+msgstr "Dodaj radnju"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS"
-msgstr "Tambahkan Rincian Tambahan"
+msgstr "Dodaj dodatne detalje"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS_FOR"
-msgstr "Tambahkan Rincian Tambahan untuk"
+msgstr "Dodaj dodatne detalje za"
 #: ----
 msgid "ADD_ADDRESS"
-msgstr "Tambahkan Alamat"
+msgstr "Dodaj adresu"
 #: ----
 msgid "ADD_BIOGRAPHIC_DETAILS"
-msgstr "Tambahkan Riwayat Hidup"
+msgstr "Dodaj biografske podatke"
 #: ----
 msgid "ADD_CHAIN_OF_EVENTS"
-msgstr "Tambahkan Rangkaian Peristiwa"
+msgstr "Dodaj lanac događaja"
 #: ----
 msgid "ADD_EVENT_INFORMATION"
-msgstr "Tambahkan Informasi Peristiwa"
+msgstr "Dodaj informacije o događaju"
 #: ----
 msgid "ADD_FIELD"
-msgstr "Tambahkan field"
+msgstr "Dodaj polje"
 #: ----
 msgid "ADD_FIELD_TO"
-msgstr "Masukkan field ke"
+msgstr "Dodaj polje..."
 #: ----
 msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
-msgstr "Masukkan field dalam hasil pencarian"
+msgstr "Dodaj polja kako bi pretražio/la rezultate"
 #: ----
 msgid "ADD_INFORMATION"
-msgstr "Tambahkan Informasi"
+msgstr "Dodaj informaciju"
 #: ----
 msgid "ADD_INTERVENING_PARTY"
-msgstr "Tambahkan Pihak yang Mengintervensi"
+msgstr "Dodaj intervenišuću stranu"
 #: ----
 msgid "ADD_INTERVENTION"
-msgstr "Tambahkan Intervensi"
+msgstr "Dodaj intervenciju"
 #: ----
 msgid "ADD_INTERVENTIONS"
-msgstr "Tambahkan Intervensi"
+msgstr "Dodaj intervencije"
 #: ----
 msgid "ADD_INVOLVEMENT"
-msgstr "Tambahkan Keterlibatan"
+msgstr "Dodaj uključivanje"
 #: ----
 msgid "ADD_LANGUAGE"
-msgstr "Tambahkan Bahasa"
+msgstr "Dodaj jezik"
 #: ----
 msgid "ADD_MORE_PERPETRATORS"
-msgstr "Tambahkan Pelaku"
+msgstr "Dodaj još počinilaca"
 #: ----
 msgid "ADD_NEW"
-msgstr "Tambahkan baru"
+msgstr "Dodaj novo"
 #: ----
 msgid "ADD_NEW_DOCUMENT"
-msgstr "Masukkan Dokumen Baru"
+msgstr "Dodaj novi dokument"
 #: ----
 msgid "ADD_NEW_EVENT"
-msgstr "Tambah Peristiwa baru"
+msgstr "Dodaj novi događaj"
 #: ----
 msgid "ADD_NEW_FIELD"
-msgstr "Masukkan field baru"
+msgstr "Dodaj novo polje"
 #: ----
 msgid "ADD_NEW_PERSON"
-msgstr "Tambahkan Orang Baru"
+msgstr "Dodaj novu osobu"
 #: ----
 msgid "ADD_NEW_USER"
-msgstr "Tambahkan Pengguna"
+msgstr "Dodaj novog korisnika/cu"
 #: ----
 msgid "ADD_PERPETRATOR"
-msgstr "Tambahkan Pelaku"
+msgstr "Dodaj počinioca"
 #: ----
 msgid "ADD_PERPETRATOR_S_"
-msgstr "Tambahkan Pelaku"
+msgstr "Dodaj počinioca/e"
 #: ----
 msgid "ADD_ROLE"
-msgstr "Tambahkan Peran"
+msgstr "Dodaj ulogu"
 #: ----
 msgid "ADD_SOURCE"
-msgstr "Tambahkan Sumber"
+msgstr "Dodaj izvor"
 #: ----
 msgid "ADD_SUPPORTING_DOCUMENT_S_"
-msgstr "Tambahkan Dokumen-Dokumen Pendukung"
+msgstr "Dodaj prateći/e dokument/e"
 #: ----
 msgid "ADD_VICTIM"
-msgstr "Tambahkan Korban"
+msgstr "Dodaj žrtvu"
 #: ----
 msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
-msgstr "Tambahkan Korban dan Pelaku dalam Peristiwa ini"
+msgstr "Dodaj žrtve i počinioce za ovaj događaj"
 #: ----
 msgid "ADDING_ADDRESS___"
-msgstr "Menambahkan Alamat..."
+msgstr "Dodaj adresu"
 #: ----
 msgid "ADDING_EVENT_INFORMATION"
-msgstr "Menambahkan Informasi Peristiwa"
+msgstr "Dodaj informaciju o događaju"
 #: ----
 msgid "ADDING_PERSON_ADDRESS____"
-msgstr "Menambahkan Alamat Orang"
+msgstr "Dodaj adresu osobe"
 #: ----
 msgid "ADDING_PERSON_INFORMATION____"
-msgstr "Menambahkan informasi Orang..."
+msgstr "Dodaj informacije o osobi"
 #: ----
 msgid "ADDITIONAL_DETAIL_TYPE"
-msgstr "Jenis Rincian Tambahan"
+msgstr "Dodatna vrsta podataka"
 #: ----
 msgid "ADDITIONAL_DETAILS"
-msgstr "Rincian Tambahan"
+msgstr "Dodatni podaci"
 #: ----
 msgid "ADDRESS"
-msgstr "Alamat"
+msgstr "Adresa"
 #: ----
 msgid "ADDRESS_OF_A_PERSON_"
-msgstr "Alamat orang"
+msgstr "Adresa osobe"
 #: ----
 msgid "ADDRESS_TYPE"
-msgstr "Tipe Alamat"
+msgstr "Vrsta adrese"
 #: ----
 msgid "ADMIN"
 msgstr "Admin"
 #: ----
 msgid "ADVANCED"
-msgstr "Mutakhir"
+msgstr "Napredni"
 #: ----
 msgid "ADVANCED_SEARCH"
-msgstr "Pencarian Mutakhir"
+msgstr "Napredna pretraga"
 #: ----
 msgid "AFTER"
-msgstr "setelah"
+msgstr "Posle"
 #: ----
 msgid "AGAINST"
-msgstr "terhadap"
+msgstr "Nasuprot"
 #: ----
 msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
-msgstr "Semua kolom dikembalikan ke nilai awal"
+msgstr "Sve kolone su resetovane na prvobitne vrednosti"
 #: ----
 msgid "ANALYSIS"
-msgstr "Analisis"
+msgstr "Analiza"
 #: ----
 msgid "AND"
-msgstr "DAN"
+msgstr "I"
 #: ----
 msgid "APPLY_CHANGES_PERMANENTLY"
-msgstr "Lakukan perubahan permanen"
+msgstr "Trajno primeni promene"
 #: ----
 msgid "ARREST"
-msgstr "Penangkapan"
+msgstr "Zaustavi"
 #: ----
 msgid "AT"
-msgstr "saat"
+msgstr "Na"
 #: ----
 msgid "AT_OR_AFTER"
-msgstr "saat atau setelah"
+msgstr "Na ili nakon"
 #: ----
 msgid "AT_OR_BEFORE"
-msgstr "saat atau sebelum"
+msgstr "Na ili pre"
 #: ----
 msgid "AUDIT"
 msgstr "Audit"
 #: ----
 msgid "AUDIT_LOG"
-msgstr "Catatan Audit"
+msgstr "Audit log"
 #: ----
 msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
-msgstr "Catatan Detil tidak tersedia untuk Peristiwa ini"
+msgstr "Podaci o audit log nisu dostupni za ovaj događaj"
 #: ----
 msgid "BACK"
-msgstr "Kembali"
+msgstr "Nazad"
 #: ----
 msgid "BACK_TO_EVENT_VIEW"
-msgstr "Kembali ke tampilan Peristiwa"
+msgstr "Nazad na pregled događaja"
 #: ----
 msgid "BACK_TO_PERSON_VIEW"
-msgstr "Kembali ke tampilan Orang"
+msgstr "Nazad na pregled osoba"
 #: ----
 msgid "BASIC"
-msgstr "Sederhana"
+msgstr "Osnovno"
 #: ----
 msgid "BASIC_SEARCH"
-msgstr "Pencarian Sederhana"
+msgstr "Osnovna pretraga"
 #: ----
 msgid "BEFORE"
-msgstr "Sebelum"
+msgstr "Pre"
 #: ----
 msgid "BIOGRAPHIC_DETAIL_S_"
-msgstr "Riwayat Hidup"
+msgstr "Biografski podaci"
 #: ----
 msgid "BIOGRAPHIC_DETAILS"
-msgstr "Riwayat Hidup"
+msgstr "Biografski podaci"
 #: ----
 msgid "BIOGRAPHIC_DETAILS__"
-msgstr "Riwayat Hidup."
+msgstr "Biografski podaci"
 #: ----
 msgid "BIOGRAPHY_DETAIL_S_"
-msgstr "Riwayat Hidup"
+msgstr "Biografski podaci"
 #: ----
 msgid "BROWSE_DOCUMENTS"
-msgstr "Telusuri Dokumen"
+msgstr "Pretraži dokument"
 #: ----
 msgid "BROWSE_EVENT"
-msgstr "Telusuri Peristiwa"
+msgstr "Pretraži događaj"
 #: ----
 msgid "BROWSE_EVENTS"
-msgstr "Telusuri Peristiwa"
+msgstr "Pretraži događaje"
 #: ----
 msgid "BROWSE_PERSONS"
-msgstr "Telusuri Orang"
+msgstr "Pretraži osobe"
 #: ----
 msgid "BY_WHOM"
-msgstr "Oleh siapa"
+msgstr "Od strane koga"
 #: ----
 msgid "CANCEL"
-msgstr "Batal"
+msgstr "Odustani"
 #: ----
 msgid "CELLULAR"
-msgstr "Selular"
+msgstr "Mobilni"
 #: ----
 msgid "CHAIN_OF_EVENT"
-msgstr "Rangkaian Peristiwa"
+msgstr "Lanac događaja"
 #: ----
 msgid "CHAIN_OF_EVENT_S_"
-msgstr "Rangkaian Peristiwa"
+msgstr "Lanac događaja"
 #: ----
 msgid "CHAIN_OF_EVENTS"
-msgstr "Rangkaian Peristiwa"
+msgstr "Lanac događaja"
 #: ----
 msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
-msgstr "Rangkaian Peristiwa tidak tersedia"
+msgstr "Lanac događaja ne postoji"
 #: ----
 msgid "CHANE_OF_EVENTS"
-msgstr "Rangkaian Peristiwa"
+msgstr "Lanac događaja"
 #: ----
 msgid "CHANE_OF_EVENTS_"
-msgstr "Rangkaian Peristiwa"
+msgstr "Lanac događaja"
 #: ----
 msgid "CHANGE"
-msgstr "Ubah"
+msgstr "Promeni"
 #: ----
 msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
-msgstr "Ganti tipe Rincian Tambahan"
+msgstr "Promeni vrstu dodatnih podataka"
 #: ----
 msgid "CHANGE_PASSWORD"
-msgstr "Ganti kata sandi"
+msgstr "Promeni lozinku"
 #: ----
 msgid "CHANGE_VIEW__"
-msgstr "Ubah tampilan:"
+msgstr "Promeni pregled"
 #: ----
 msgid "CHOOSE_AN_ACTION"
-msgstr "Pilih tindakan"
+msgstr "Izaberi akciju"
 #: ----
 msgid "CHOOSE_FILE_UPLOAD"
-msgstr "Pilih file yang akan diunggah"
+msgstr "Izaberi otpremanje podataka"
 #: ----
 msgid "CHOSE_STARTING_POINT"
-msgstr "Pilih titik awal"
+msgstr "Izaberi početnu tačku"
 #: ----
 msgid "CLARIFY"
-msgstr "Klarifikasi"
+msgstr "Pojasni"
 #: ----
 msgid "CLARIFYING_NOTE"
-msgstr "Catatan Klarifikasi"
+msgstr "Napomena za pojašnjenje"
 #: ----
 msgid "CLARIFYING_NOTES"
-msgstr "Catatan Klarifikasi"
+msgstr "Napomene za pojašnjenje"
 #: ----
 msgid "CLEAR"
-msgstr "Bersihkan"
+msgstr "Izbriši"
 #: ----
 msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
-msgstr "Klik untuk mengunduh semua catatan dalam bentuk XML"
+msgstr "Klikni da preuzmeš XML fajl Događaji za sve beleške u ovom OpenEvSys"
 #: ----
 msgid "CLICK_TO_SELECT_AN_OPTION"
-msgstr "Klik untuk memilih pilihan"
+msgstr "Klikni da izabereš opciju"
 #: ----
 msgid "CLOSE"
-msgstr "Tutup"
+msgstr "Zatvori"
 #: ----
 msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
-msgstr "Kolom dikembalikan ke nilai awal"
+msgstr "Kolona resetovana na prvobitne vrednosti"
 #: ----
 msgid "COMBINED_SEARCH_FORMS"
-msgstr "Form pencarian kombinasi"
+msgstr "Kombinovano pretraživanje"
 #: ----
 msgid "COMPILE"
-msgstr "Kompilasi"
+msgstr "Kompiliraj"
 #: ----
 msgid "CONFIG_VARIABLE"
-msgstr "Aturan Variabel"
+msgstr "Konfig varijable"
 #: ----
 msgid "CONFIRM_NEW_PASSWORD"
-msgstr "Konfirmasi kata sandi yang baru"
+msgstr "Potvrdi novu lozinku"
 #: ----
 msgid "CONFIRM_PASSWORD"
-msgstr "Konfirmasi kata sandi"
+msgstr "Potvrdi lozinku"
 #: ----
 msgid "CONTAINS"
-msgstr "mengandung"
+msgstr "Sadrži"
 #: ----
 msgid "CONTEXTUAL_INFORMATION"
-msgstr "Informasi Konstekstual"
+msgstr "Kontekstualne informacije"
 #: ----
 msgid "CONTINUE"
-msgstr "Lanjutkan"
+msgstr "Nastavi"
 #: ----
 msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
-msgstr "Lanjutkan memperbarui rincian Dokumen"
+msgstr "Nastavi izmenu podataka u ovom dokumentu"
 #: ----
 msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
-msgstr "Lanjutkan memperbarui catatan Rangkaian Peristiwa"
+msgstr "Nastavi izmenu lanca događaja u ovoj belešci"
 #: ----
 msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
-msgstr "Lanjutkan memperbarui catatan Peristiwa ini"
+msgstr "Nastavi"
 #: ----
 msgid "COUNT"
-msgstr "Hitungan"
+msgstr "Prebroj"
 #: ----
 msgid "COUNTRY"
-msgstr "Negara"
+msgstr "Zemlja"
 #: ----
 msgid "CREATE_REPORT_FROM_THESE_RESULTS"
-msgstr "Buat laporan dari hasil"
+msgstr "Kreiraj izveštaj na osnovu ovih rezultata"
 #: ----
 msgid "CREATED_BY"
-msgstr "Dibuat oleh"
+msgstr "Kreirao/la"
 #: ----
 msgid "CREATED_DATE"
-msgstr "Tanggal dibuat"
+msgstr "Datum kreiranja"
 #: ----
 msgid "CREATOR"
-msgstr "Pembuat"
+msgstr "Osoba koja je kreirala"
 #: ----
 msgid "CSV"
 msgstr "CSV"
 #: ----
 msgid "CURRENT_PASSWORD"
-msgstr "Kata Sandi saat ini"
+msgstr "Trenutna lozinka"
 #: ----
 msgid "CURRENT_SETTING"
-msgstr "Setting saat ini"
+msgstr "Trenutna podešavanja"
 #: ----
 msgid "CURRENT_VALUE"
-msgstr "Nilai saat ini"
+msgstr "Trenutna vrednost"
 #: ----
 msgid "DATA_EXCHANGE"
-msgstr "Pertukaran Data"
+msgstr "Razmena podataka"
 #: ----
 msgid "DATABASE_ERROR"
-msgstr "Kesalahan Database"
+msgstr "Greška u bazi podataka"
 #: ----
 msgid "DATE"
-msgstr "Tanggal"
+msgstr "Datum"
 #: ----
 msgid "DATE_CREATED"
-msgstr "Tanggal pembuatan"
+msgstr "Datum kreiranja"
 #: ----
 msgid "DATE_FIELD_"
-msgstr "Field tanggal"
+msgstr "Polje datum"
 #: ----
 msgid "DATE_OF_INTERVENTION"
-msgstr "Tanggal Intervensi"
+msgstr "Datum intervencije"
 #: ----
 msgid "DATE_OF_SOURCE_MATERIAL"
-msgstr "Tanggal Materi Sumber"
+msgstr "Datum materijala iz izvora"
 #: ----
 msgid "DATE_REQUIRED__INVALID_DATE"
-msgstr "Tanggal diwajibkan, Tanggal tidak sesuai"
+msgstr "Potreban datum; nevalidan datum"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Tanggal Entri"
+msgstr "Datum unosa"
 #: ----
 msgid "DEFINITION"
-msgstr "Definisi"
+msgstr "Definisanje"
 #: ----
 msgid "DEGREE_OF_INVOLVEMENT"
-msgstr "Derajat Keterlibatan"
+msgstr "Stepen učešća"
 #: ----
 msgid "DELETE"
-msgstr "Hapus"
+msgstr "Obriši"
 #: ----
 msgid "DELETE_ADDITIONAL_DETAILS"
-msgstr "Hapus Rincian Tambahan"
+msgstr "Obriši dodatne podatke"
 #: ----
 msgid "DELETE_DOCUMENT"
-msgstr "Hapus Dokumen"
+msgstr "Obriši dokument"
 #: ----
 msgid "DELETE_THIS_EVENT"
-msgstr "Hapus Peristiwa"
+msgstr "Obriši ovaj događaj"
 #: ----
 msgid "DELETE_THIS_PERSON"
-msgstr "Hapus Orang ini"
+msgstr "Obriši ovu osobu"
 #: ----
 msgid "DESCRIPTION"
-msgstr "Deskripsi"
+msgstr "Opis"
 #: ----
 msgid "DESIGNATION"
-msgstr "Jabatan"
+msgstr "Imenovanje"
 #: ----
 msgid "DESTRUCTION"
-msgstr "Perusakan"
+msgstr "Destrukcija"
 #: ----
 msgid "DISABLE_HELP"
-msgstr "Matikan Bantuan"
+msgstr "Onemogući pomoć"
 #: ----
 msgid "DISABLE_INTERACTIVE_TRANSLATION"
-msgstr "Matikan terjemahan interaktif"
+msgstr "Onemogući interaktivni prevod"
 #: ----
 msgid "DISABLED"
-msgstr "Matikan"
+msgstr "Onemogućeno"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
-msgstr "Apakah anda ingin menghapus Rincian Tambahan Ini?"
+msgstr "Da li želite da obrišete dodatne detalje?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
-msgstr "Apakah anda ingin menghapus catatan alamat yang terpilih?"
+msgstr "Da li želite da obrišete izabranu/e adresu/e?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
-msgstr "Apakah anda ingin menghapus Riwayat Hidup yang dipilih?"
+msgstr "Da li želite da obrišete izabrane biografske podatke?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
-msgstr "Apakah anda ingin menghapus Rangkaian Peristiwa yang dipilih?"
+msgstr "Da li želite da obrišete izabrani lanac događaja?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
-msgstr "Anda ingin menghapus Infomasi yang dipilih?"
+msgstr "Da li želite da izbrišete odabrane informacije?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
-msgstr "Apakah anda ingin menghapus Intervensi yang dipilih?"
+msgstr "Da li želite da izbrišete odabrane intervencije?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
-msgstr "Apakah anda ingin menghapus istilah Micro-thesauri yang dipilih?"
+msgstr "Da li želite da obrišete odabrane izraze iz mikro-leksikona sinonima?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
-msgstr "Anda ingin menghapus Pertanyaan yang dipilih?"
+msgstr "Da li želite da obrišete odabrane Upite?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
-msgstr "Apakah anda ingin menghapus catatan yang dipilih?"
+msgstr "Da li želite da obrišete izabrane beleške?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
-msgstr "Apakah anda ingin menghapus Pengguna yang dipilih?"
+msgstr "Da li želite da obrišete izabrane korisnike?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
-msgstr "Apakah anda ingin menghapus Dokumen ini?"
+msgstr "Da li želite da obrišete ovaj dokument?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
-msgstr "Apakah anda ingin menghapus Peristiwa Ini?"
+msgstr "Da li želite da obrišete ovaj događaj?"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
-msgstr "Apakah anda ingin menghapus Orang ini?"
+msgstr "Da li želite da obrišete ovu osobu?"
 #: ----
 msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
-msgstr "Anda ingin menyingkirkan lampiran untuk dokumen ini?"
+msgstr "Da li želite da premestite postojeći prilog za ovaj dokument?"
 #: ----
 msgid "DOCUMENT"
-msgstr "Dokumen"
+msgstr "Dokument"
 #: ----
 msgid "DOCUMENT_DETAILS"
-msgstr "Detil Dokumen"
+msgstr "Podaci o dokumentu"
 #: ----
 msgid "DOCUMENT_DOES_NOT_EXIST_"
-msgstr "Dokumen tidak tersedia"
+msgstr "Dokument ne postoji"
 #: ----
 msgid "DOCUMENT_SEARCH_FORM"
-msgstr "Form Pencarian Dokumen"
+msgstr "Forma za pretragu dokumenta"
 #: ----
 msgid "DOCUMENT_TITLE"
-msgstr "Judul Dokumen"
+msgstr "Naslov dokumenta"
 #: ----
 msgid "DOCUMENTS"
-msgstr "Dokumen"
+msgstr "Dokumenti"
 #: ----
 msgid "DOWNLOAD"
-msgstr "Unduh"
+msgstr "Preuzmi"
 #: ----
 msgid "DOWNLOAD_DOCUMENT"
-msgstr "Unduh Dokumen"
+msgstr "Preuzmi dokument"
 #: ----
 msgid "DOWNLOAD_ERROR_REPORT"
-msgstr "Laporan kesalahan pengunduhan"
+msgstr "Izveštaj o grešci pri preuzimanju"
 #: ----
 msgid "E_MAIL"
-msgstr "E-mail"
+msgstr "Imejl"
 #: ----
 msgid "EDIT"
-msgstr "Perbarui"
+msgstr "Izmeni"
 #: ----
 msgid "EDIT_ADDITIONAL_DETAILS"
-msgstr "Perbarui Rincian Tambahan"
+msgstr "Izmeni dodatne podatke"
 #: ----
 msgid "EDIT_BIOGRAPHIC_DETAILS"
-msgstr "Perbarui Riwayat Hidup"
+msgstr "Izmeni biografske podatke"
 #: ----
 msgid "EDIT_DETAILS"
-msgstr "Perbarui Rincian"
+msgstr "Izmeni podatke"
 #: ----
 msgid "EDIT_EVENT_SUMMARY"
-msgstr "Perbarui Ringkasan Peristiwa"
+msgstr "Izmeni sažetak događaja"
 #: ----
 msgid "EDIT_PROFILE"
-msgstr "Perbarui Profil"
+msgstr "Izmeni profil"
 #: ----
 msgid "EDIT_THIS_ACT"
-msgstr "Perbarui Tindakan"
+msgstr "Izmeni ovu radnju"
 #: ----
 msgid "EDIT_THIS_ADDRESS"
-msgstr "Perbarui Alamat"
+msgstr "Izmeni ovu adresu"
 #: ----
 msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
-msgstr "Perbarui Riwayat Hidup"
+msgstr "Izmeni biografske podatke"
 #: ----
 msgid "EDIT_THIS_CHAIN_OF_EVENT"
-msgstr "Perbarui Rangkaian Peristiwa"
+msgstr "Izmeni lanac događaja"
 #: ----
 msgid "EDIT_THIS_EVENT"
-msgstr "Perbarui Peristiwa"
+msgstr "Izmeni ovaj događaj"
 #: ----
 msgid "EDIT_THIS_INFORMATION"
-msgstr "Perbarui Informasi"
+msgstr "Izmeni ovu informaciju"
 #: ----
 msgid "EDIT_THIS_INTERVENING_PARTY"
-msgstr "Perbarui Pihak Pengintervensi"
+msgstr "Izmeni intervenišuću stranu"
 #: ----
 msgid "EDIT_THIS_INTERVENTION"
-msgstr "Perbarui Intervensi"
+msgstr "Izmeni ovu intervenciju"
 #: ----
 msgid "EDIT_THIS_INVOLVEMENT"
-msgstr "Perbarui Keterlibatan"
+msgstr "Izmeni ovo učešće"
 #: ----
 msgid "EDIT_THIS_PERPETRATOR"
-msgstr "Perbarui Pelaku"
+msgstr "Izmeni ovog počinioca"
 #: ----
 msgid "EDIT_THIS_PERSON"
-msgstr "Perbarui Orang"
+msgstr "Izmeni ovu osobu"
 #: ----
 msgid "EDIT_THIS_VICTIM"
-msgstr "Perbarui Korban"
+msgstr "Izmeni ovu žrtvu"
 #: ----
 msgid "EDIT_USER"
-msgstr "Perbarui Pengguna"
+msgstr "Izmeni korisnika/cu"
 #: ----
 msgid "EDITING_PERSON_ADDRESS____"
-msgstr "Memperbarui alamat Orang..."
+msgstr "Izmeni adresu osobe"
 #: ----
 msgid "EMAIL"
-msgstr "Email"
+msgstr "Imejl"
 #: ----
 msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
-msgstr "E-mail diwajibkan, e-mail tidak sesuai"
+msgstr "Neophodna imejl adresa; imejl adresa nevalidna"
 #: ----
 msgid "ENABLE_HELP"
-msgstr "Aktifkan bantuan"
+msgstr "Omogući pomoć"
 #: ----
 msgid "ENABLE_INTERACTIVE_TRANSLATION"
-msgstr "Aktifkan Terjemahan Interaktif"
+msgstr "Omogući interaktivni prevod"
 #: ----
 msgid "END_DATE"
-msgstr "Tanggal Akhir"
+msgstr "Datum završetka"
 #: ----
 msgid "ENTITY"
-msgstr "Entitas"
+msgstr "Entitet"
 #: ----
 msgid "ENTITY_PERMISSIONS"
-msgstr "Wewenang entitas"
+msgstr "Dozvola entiteta"
 #: ----
 msgid "ENTRY"
-msgstr "Tambahkan"
+msgstr "Unos"
 #: ----
 msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
-msgstr "Terjadi kesalahan saat memutakhirkan server"
+msgstr "Greška se pojavila tokom ažuriranja servera"
 #: ----
 msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
-msgstr "Terjadi kesalahan saat membuat huriterm"
+msgstr "Greška se pojavila tokom kreiranja huriterma"
 #: ----
 msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
-msgstr "Kesalahan terjadi dalam penyimpanan file. File tidak tersimpan"
+msgstr "Greška prilikom čuvanja fajla. Onemogućeno čuvanje fajla."
 #: ----
 msgid "ERROR_WHILE_CREATING_FIELD_"
-msgstr "Terjadi kesalahan saat membuat field"
+msgstr "Greška prilikom stvaranja fajla."
 #: ----
 msgid "EVENT"
-msgstr "Peristiwa"
+msgstr "Događaj"
 #: ----
 msgid "EVENT_DESCRIPTION"
-msgstr "Deskripsi Peristiwa"
+msgstr "Opis događaja"
 #: ----
 msgid "EVENT_DOES_NOT_EXIST_"
-msgstr "Peristiwa tidak tersedia"
+msgstr "Događaj ne postoji"
 #: ----
 msgid "EVENT_SEARCH_FORM"
-msgstr "Form Pencarian Peristiwa"
+msgstr "Format za pretragu događaja"
 #: ----
 msgid "EVENT_STANDARD_FORMAT_XML"
-msgstr "Standar Format Peristiwa XML"
+msgstr "Standardni format događaja XML"
 #: ----
 msgid "EVENT_TITLE"
-msgstr "Judul Peristiwa"
+msgstr "Naslov događaja"
 #: ----
 msgid "EVENTS"
-msgstr "Peristiwa"
+msgstr "Događaji"
 #: ----
 msgid "EXAMPLE"
-msgstr "Contoh"
+msgstr "Primer"
 #: ----
 msgid "EXAMPLES"
-msgstr "Contoh-contoh"
+msgstr "Primeri"
 #: ----
 msgid "EXISTING_FIELDS"
-msgstr "Fields yang ada"
+msgstr "Postojeća polja"
 #: ----
 msgid "EXPORT"
-msgstr "Ekspor"
+msgstr "Izvezi"
 #: ----
 msgid "EXPORT__"
-msgstr "Ekspor:"
+msgstr "Izvezi:"
 #: ----
 msgid "EXPORT_DATE"
-msgstr "Tanggal Ekspor"
+msgstr "Datum izvoza"
 #: ----
 msgid "EXPORT_EVENTS"
-msgstr "Ekspor Peristiwa"
+msgstr "Izvezi događaje"
 #: ----
 msgid "EXPORT_INSTANCE"
-msgstr "Ekspor Peristiwa"
+msgstr "Izvezi primere (export instance)"
 #: ----
 msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
-msgstr "Ekspor tabel ini ke lembar-kerja"
+msgstr "Izvezi ovu tabelu u spreadsheet"
 #: ----
 msgid "EXPORT_TIME"
-msgstr "Waktu ekspor"
+msgstr "Vreme izvoza"
 #: ----
 msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
-msgstr "Tidak bisa mencatat pada cakram"
+msgstr "Neuspeh pri prepisivanju fajla na disk"
 #: ----
 msgid "FALSE"
-msgstr "flase"
+msgstr "Netačno"
 #: ----
 msgid "FAX"
 msgstr "Faks"
 #: ----
 msgid "FIELD_CREATED_SUCCESSFULLY_"
-msgstr "Field berhasil dibuat"
+msgstr "Polje uspešno kreirano"
 #: ----
 msgid "FIELD_LABEL"
-msgstr "Label Field"
+msgstr "Etiketa polja"
 #: ----
 msgid "FIELD_NAME"
-msgstr "Nama Field"
+msgstr "Ime polja"
 #: ----
 msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
-msgstr "Nama Field, nomor dan label harus diisi."
+msgstr "Ime, broj I etiketa polja ne mogu biti prazni. Molimo dodajte neke vrednosti"
 #: ----
 msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
-msgstr "Nama pengguna sudah digunakan, silahkan cari nama lain."
+msgstr "Ime polja već postoji. Molimo dodelite polju drugo ime"
 #: ----
 msgid "FIELD_NUMBER"
-msgstr "Nomor field"
+msgstr "Broj polja"
 #: ----
 msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
-msgstr "Nomor field sudah digunakan. Silahkan pilih nomor yang lain"
+msgstr "Broj polja već postoji. Molimo izaberite drugi broj."
 #: ----
 msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
-msgstr "Nomor field dengan akhiran 60 ke 80 telah digunakan untuk field manajemen. Silahkan gunakan angka diluar rentang tersebut"
+msgstr "Brojevi polja od 60 do 80 rezervisani su za polja za upravljanje. Molimo upotrebite broj koji se ne nalazi u ovom opsegu."
 #: ----
 msgid "FIELD_RESET"
-msgstr "Atur ulang Field"
+msgstr "Resetovanje polja"
 #: ----
 msgid "FIELD_S_"
-msgstr "Field"
+msgstr "Polje/a"
 #: ----
 msgid "FIELD_TYPE"
-msgstr "Jenis field"
+msgstr "Vrsta polja"
 #: ----
 msgid "FILE_IS_NOT_WRITABLE_"
-msgstr "File tidak dapat disalin"
+msgstr "Upisivanje u fajl onemogućeno"
 #: ----
 msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
-msgstr "File yang diunggah dihentikan oleh ekstensi"
+msgstr "Otpremanje fajla zaustavljeno zbog ekstenzije"
 #: ----
 msgid "FILTER"
-msgstr "Saringan"
+msgstr "Filter"
 #: ----
 msgid "FILTER_OPTIONS_AND_RESULTS"
-msgstr "Saring Hasil dan Pilihan"
+msgstr "Filter opcije i rezultati"
 #: ----
 msgid "FINAL_DATE"
-msgstr "Tanggal Akhir"
+msgstr "Konačni datum"
 #: ----
 msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
-msgstr "Temukan dokumen yang diunggah ke Openevsys dan lihat keterhubungan dengan format lainnya"
+msgstr "Otvori OpenEvsys i vidi kako su povezani kao podrška drugim formatima"
 #: ----
 msgid "FINISH"
-msgstr "Selesai"
+msgstr "Završeno"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
-msgstr "Selesai! Anda dapat melakukan"
+msgstr "Završeno! Možete da uradite sledeće"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
-msgstr "Selesai! Anda dapat melakukan:"
+msgstr "Završeno! Možete da uradite sledeće:"
 #: ----
 msgid "FIRST_NAME"
-msgstr "Nama Depan"
+msgstr "Ime"
 #: ----
 msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
-msgstr "Folder sudah ada. Gunakan nama lain"
+msgstr "Folder već postoji! Dajte folderu drugo ime."
 #: ----
 msgid "FOLDER_NAME"
-msgstr "Nama Folder"
+msgstr "Ime foldera"
 #: ----
 msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
-msgstr "Field ini tidak boleh kosong"
+msgstr "Ova polja ne mogu ostati prazna"
 #: ----
 msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
-msgstr "Huriterm sudah ada"
+msgstr "Ovaj huritem već postoji."
 #: ----
 msgid "FORCE_DELETE"
-msgstr "Hapus Paksa"
+msgstr "Naredi brisanje"
 #: ----
 msgid "FORM"
-msgstr "Formulir"
+msgstr "Obrazac"
 #: ----
 msgid "FORM_CUSTOMIZATION"
-msgstr "Formulir Kustomisasi"
+msgstr "Prilagođavanje obrasca"
 #: ----
 msgid "FURTHER_INFORMATION"
-msgstr "Informasi selanjutnya"
+msgstr "Dodatne informacije"
 #: ----
 msgid "GO_TO_PARENT_LEVEL"
-msgstr "Ke tingkat sebelumnya"
+msgstr "Idi na parent nivo"
 #: ----
 msgid "GROUP_BY_DAY"
-msgstr "Kelompokkan berdasarkan Hari"
+msgstr "Grupiši prema danu"
 #: ----
 msgid "GROUP_BY_MONTHLY"
-msgstr "Kelompokkan berdasarkan bulan"
+msgstr "Grupiši prema mesecu"
 #: ----
 msgid "GROUP_BY_YEARLY"
-msgstr "Kelompokkan berdasarkan tahun"
+msgstr "Grupiši prema godini"
 #: ----
 msgid "GUIDELINES"
-msgstr "Panduan"
+msgstr "Smernice"
 #: ----
 msgid "HELP_TEXT"
-msgstr "Teks Bantuan"
+msgstr "Pomoćni tekst"
 #: ----
 msgid "HIDE_ADDRESS_FORM"
-msgstr "Sembunyikan formulir Alamat"
+msgstr "Sakrij obrazac za adresu"
 #: ----
 msgid "HIDE_SEARCH_FORM"
-msgstr "Sembunyikan formulir pencarian"
+msgstr "Sakrij obrazac za pretraživanje"
 #: ----
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
-msgstr "Sembunyikan Dokumen-Dokumen Pendukung"
+msgstr "Sakrij prateće dokumente"
 #: ----
 msgid "HIDE_TREE"
-msgstr "Sembunyikan Pohon"
+msgstr "Sakrij drvo"
 #: ----
 msgid "HOW_WAS_"
-msgstr "Bagaimana"
+msgstr "Kakav je…"
 #: ----
 msgid "HURICODE"
-msgstr "Huricode"
+msgstr "Hurikod"
 #: ----
 msgid "HURITERM_CAN_NOT_BE_EMPTY_"
-msgstr "Huriterm tidak boleh kosong"
+msgstr "Huritem ne može da ostane prazan"
 #: ----
 msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
-msgstr "Apakah data Peristiwa/Orang ini bersifat rahasia?"
+msgstr "Ukoliko je događaj/osoba poverljiv?"
 #: ----
 msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
-msgstr "Jika menemui halaman ini artinya anda tidak memiliki akses ke modul apapun di OpenEvsys. Silahkan hubungi administrator sistem untuk informasi lebih jauh."
+msgstr "Ukoliko ste na ovoj stranici, to znači da nemate pristup nijednom modulu u OpenEvsys. Molimo kontaktirajte sistem administratora za više detalja."
 #: ----
 msgid "IMPACT"
-msgstr "Dampak"
+msgstr "Uticaj"
 #: ----
 msgid "IMPORT"
-msgstr "Impor"
+msgstr "Uvezi"
 #: ----
 msgid "IMPORT_DATE"
-msgstr "Tanggal impor"
+msgstr "Uvezi datum"
 #: ----
 msgid "IMPORT_EVENTS"
-msgstr "Impor Peristiwa"
+msgstr "Uvezi događaje"
 #: ----
 msgid "IMPORT_LOG"
-msgstr "Daftar impor"
+msgstr "Uvezi log"
 #: ----
 msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
-msgstr "Rincian catatan tidak tersedia untuk Peristiwa ini"
+msgstr "Podaci o uvozu loga nisu dostupni"
 #: ----
 msgid "IMPORT_TIME"
-msgstr "Impor"
+msgstr "Uvezi vreme"
 #: ----
 msgid "IN_BETWEEN"
-msgstr "di antara"
+msgstr "Između"
 #: ----
 msgid "IN_SEARCH_RESULTS"
-msgstr "Dalam hasil pencarian"
+msgstr "U rezultatima pretrage"
 #: ----
 msgid "INCIDENT_TABLE"
-msgstr "Tabel kasus"
+msgstr "Tabela incidenata"
 #: ----
 msgid "INFORMATION"
-msgstr "Informasi"
+msgstr "Informacija"
 #: ----
 msgid "INFORMATION_ABOUT"
-msgstr "Informasi tentang"
+msgstr "Informacija o"
 #: ----
 msgid "INFORMATION_S_"
-msgstr "Informasi"
+msgstr "Informacija/e"
 #: ----
 msgid "INFORMATION_SEARCH_FORM"
-msgstr "Form Pencarian Informasi"
+msgstr "Obrazac za pretragu informacija"
 #: ----
 msgid "INITIAL_DATE"
-msgstr "Tanggal awal"
+msgstr "Prvobitni datum"
 #: ----
 msgid "INTERVENING_PARTIES"
-msgstr "Pihak Yang pengintervensi"
+msgstr "Drugi učesnici"
 #: ----
 msgid "INTERVENING_PARTY"
-msgstr "Pihak Pengintervensi"
+msgstr "Drugi učesnik/ca"
 #: ----
 msgid "INTERVENING_PARTY_SEARCH_FORM"
-msgstr "Formulir Pencarian Pihak Pengintervensi"
+msgstr "Format za pretragu drugih učesnika/ca"
 #: ----
 msgid "INTERVENTION"
-msgstr "Intervensi"
+msgstr "Intervencija"
 #: ----
 msgid "INTERVENTION_S_"
-msgstr "Intervensi"
+msgstr "Intervencije"
 #: ----
 msgid "INTERVENTION_SEARCH_FORM"
-msgstr "Form Pencarian Intervensi"
+msgstr "Obrazac za pretragu intevencija"
 #: ----
 msgid "INTERVENTIONS"
-msgstr "Intervensi"
+msgstr "Intervencije"
 #: ----
 msgid "INVALID_EMAIL"
-msgstr "Email salah"
+msgstr "Neispravan imejl"
 #: ----
 msgid "INVALID_EMAIL_ADDRESS"
-msgstr "Alamat Email salah"
+msgstr "Neispravna imejl adresa"
 #: ----
 msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
-msgstr "Huricode salah, harus dalam 12 digit nomor"
+msgstr "Neispravan hurikod, trebalo bi da ima 12 cifara"
 #: ----
 msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "ID pengguna atau password tidak sesuai, silahkan coba lagi."
+msgstr "Neispravno korisnička identifikacija ili lozinka, molimo pokušajte ponovo."
 #: ----
 msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Nama pengguna atau password tidak sesuai, silahkan coba lagi."
+msgstr "Neispravno korisničko ime ili lozinka! Molimo pokušajte ponovo."
 #: ----
 msgid "INVOLVED_IN"
-msgstr "terlibat dalam"
+msgstr "uključen u"
 #: ----
 msgid "INVOLVEMENT"
-msgstr "Keterlibatan"
+msgstr "ukljupčenost"
 #: ----
 msgid "INVOLVEMENT_DETAILS"
-msgstr "Rincian Keterlibatan"
+msgstr "detalji o uključenosti"
 #: ----
 msgid "INVOLVEMENT_S_"
-msgstr "Keterlibatan"
+msgstr "uključenosti/i"
 #: ----
 msgid "INVOLVEMENT_SEARCH_FORM"
-msgstr "Form Pencarian Keterlibatan"
+msgstr "obrazac za pretragu uključenosti"
 #: ----
 msgid "INVOLVEMENTS"
-msgstr "Keterlibatan"
+msgstr "uključenosti/i"
 #: ----
 msgid "IS_A_SUB_ELEMENT_OF"
-msgstr "adalah sub-elemen dari"
+msgstr "je podelement..."
 #: ----
 msgid "IS_EMPTY"
-msgstr "adalah kosong"
+msgstr "je prazno"
 #: ----
 msgid "IS_REQUIRED"
-msgstr "Diwajibkan"
+msgstr "neophodno je"
 #: ----
 msgid "KILLING"
-msgstr "Pembunuhan"
+msgstr "ubistivo"
 #: ----
 msgid "LABEL"
-msgstr "Label"
+msgstr "oznaka"
 #: ----
 msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
-msgstr "Label harus diisi"
+msgstr "Oznaka ne može biti prazna. Unesi vrednost."
 #: ----
 msgid "LABEL_IN_"
-msgstr "Label dalam"
+msgstr "Oznaka u"
 #: ----
 msgid "LABEL_S_"
-msgstr "Label"
+msgstr "Oznake"
 #: ----
 msgid "LABELS"
-msgstr "Label"
+msgstr "Oznake"
 #: ----
 msgid "LANGUAGE"
-msgstr "Bahasa"
+msgstr "Jezik"
 #: ----
 msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
-msgstr "Direktori Bahasa tidak dapat disalin"
+msgstr "Nije moguće izvršiti upis u jezik direktorijuma"
 #: ----
 msgid "LANGUAGE_REMOVED"
-msgstr "Bahasa telah dihapus"
+msgstr "Jezik uklonjen"
 #: ----
 msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
-msgstr "Bahasa telah selesai dibuat"
+msgstr "Jezik uspešno kreiran"
 #: ----
 msgid "LAST_NAME"
-msgstr "Nama Akhir"
+msgstr "Prezime"
 #: ----
 msgid "LIKE"
-msgstr "seperti"
+msgstr "Kao"
 #: ----
 msgid "LINKED_WHEN"
-msgstr "Kapan terhubung"
+msgstr "Povezano kad"
 #: ----
 msgid "LINKS"
-msgstr "Tautan"
+msgstr "Veze"
 #: ----
 msgid "LOCALIZATION"
-msgstr "Melokalisasi"
+msgstr "Lokalizacija"
 #: ----
 msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
-msgstr "Rincian catatan untuk orang ini tidak tersedia"
+msgstr "Podaci o logu nedostupni za ovu osobu"
 #: ----
 msgid "MANAGE_LANGUAGES"
-msgstr "Atur Bahasa"
+msgstr "Upravljaj jezicima"
 #: ----
 msgid "MESSAGES_SAVED_SUCCESSFULLY_"
-msgstr "Pesan telah berhasil disimpan"
+msgstr "Poruka uspešno sačuvana"
 #: ----
 msgid "MICRO_THESAURI"
-msgstr "Micro-Thesauri"
+msgstr "Mikro-rečnik"
 #: ----
 msgid "MICRO_THESAURI_CUSTOMIZATION"
-msgstr "Kustomisasi Mikro-thesauri"
+msgstr "Prilagođavanje mikro-rečnika"
 #: ----
 msgid "MICRO_THESAURI_TERMS"
-msgstr "Istilah Micro-thesauri"
+msgstr "Izrazi mikro-rečnika"
 #: ----
 msgid "MISSING_A_TEMPORARY_FOLDER_"
-msgstr "Temporary folder tidak ditemukan"
+msgstr "Nedostaje privremeni folder"
 #: ----
 msgid "MODIFIED_VALUE"
-msgstr "Nilai modifikasi"
+msgstr "Izmenjena vrednost"
 #: ----
 msgid "MODULE"
 msgstr "Modul"
 #: ----
 msgid "MODULES"
-msgstr "Modul"
+msgstr "Moduli"
 #: ----
 msgid "MONITORING_STATUS"
-msgstr "Status Pemantauan"
+msgstr "Status monitoringa"
 #: ----
 msgid "MORE_ABOUT_THIS_EVENT"
-msgstr "Lebih lanjut untuk Peristiwa ini"
+msgstr "Više o ovom događaju"
 #: ----
 msgid "MORE_ABOUT_THIS_PERSON"
-msgstr "Lebih jauh tentang orang ini"
+msgstr "Više o ovoj osobi"
 #: ----
 msgid "MY_PREFERENCES"
-msgstr "Preferensi saya"
+msgstr "Moje preferencije"
 #: ----
 msgid "MYSQL_DATA_TYPE"
-msgstr "Jenis data mysql"
+msgstr "Vrsta Mysql podataka"
 #: ----
 msgid "NAME"
-msgstr "Nama"
+msgstr "Ime"
 #: ----
 msgid "NEW"
-msgstr "Baru"
+msgstr "Novo"
 #: ----
 msgid "NEW_DOCUMENT"
-msgstr "Dokumen Baru"
+msgstr "Novi dokument"
 #: ----
 msgid "NEW_EVENT"
-msgstr "Peristiwa Baru"
+msgstr "Novi događaj"
 #: ----
 msgid "NEW_PASSWORD"
-msgstr "Kata Sandi"
+msgstr "Nova lozinka"
 #: ----
 msgid "NEW_PERSON"
-msgstr "Orang Baru"
+msgstr "Nova osoba"
 #: ----
 msgid "NEW_ROLE_NAME"
-msgstr "Nama Role Baru"
+msgstr "Novo ime uloge"
 #: ----
 msgid "NEXT"
-msgstr "Lanjut"
+msgstr "Sledeće"
 #: ----
 msgid "NO"
-msgstr "Tidak"
+msgstr "Ne"
 #: ----
 msgid "NO_QUERIES_SAVED_YET_"
-msgstr "Tidak ada pertanyaan yang disimpan."
+msgstr "Ne postoji sačuvana pretraga."
 #: ----
 msgid "NO_RECORDS_WERE_FOUND_"
-msgstr "Tidak ada catatan ditemukan"
+msgstr "Nije postoji sačuvana beleška."
 #: ----
 msgid "NO_RECORDS_WERE_SELECTED_"
-msgstr "Tidak ada catatan yang dipilih"
+msgstr "Niste izabrali belešku"
 #: ----
 msgid "NOT_="
-msgstr "bukan ="
+msgstr "nije="
 #: ----
 msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
-msgstr "Jenis field tidak sesuai, silahkan coba lagi"
+msgstr "Neispravna vrsta polja. Pokušajte ponovo"
 #: ----
 msgid "NOT_CONTAINS"
-msgstr "Tidak mengandung"
+msgstr "ne sadrži"
 #: ----
 msgid "NOT_IN_BETWEEN"
-msgstr "Tidak dalam antara"
+msgstr "ne između"
 #: ----
 msgid "NOT_LIKE"
-msgstr "Tidak seperti"
+msgstr "ne kao"
 #: ----
 msgid "NOT_ON"
-msgstr "Tidak pada"
+msgstr "ne na"
 #: ----
 msgid "NUMBER_REQUIRED__INVALID_NUMBER"
-msgstr "Nomor dibutuhkan, Nomor tidak sesuai"
+msgstr "Potreban broj, nevalidan broj"
 #: ----
 msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
-msgstr "OpenEvSys telah sukses mengimpor data"
+msgstr "OpenEvSys je uspešno uvezao podatke"
 #: ----
 msgid "OR"
-msgstr "ATAU"
+msgstr "ILI"
 #: ----
 msgid "ORDER"
-msgstr "Aturan"
+msgstr "Uredi"
 #: ----
 msgid "ORGANIZATION"
-msgstr "Organisasi"
+msgstr "Organizacija"
 #: ----
 msgid "ORIGINAL_SEARCH_RESULTS"
-msgstr "Hasil Pencarian Awal"
+msgstr "Prvobitni rezultati pretrage"
 #: ----
 msgid "PAGE__"
-msgstr "Halaman:"
+msgstr "Stranica:"
 #: ----
 msgid "PAGINATE_RESULTS"
-msgstr "Hasil berdasarkan Halaman"
+msgstr "Obeleži stranice u rezultatima"
 #: ----
 msgid "PASSWORD"
-msgstr "Kata Sandi"
+msgstr "Lozinka"
 #: ----
 msgid "PASSWORD_INVALID"
-msgstr "Kata sandi salah"
+msgstr "Neispravna lozinka"
 #: ----
 msgid "PASSWORD_MISMATCH"
-msgstr "Kata sandi tidak sama"
+msgstr "Lozinka se ne podudara"
 #: ----
 msgid "PASSWORD_REQUIRED"
-msgstr "Kata kunci diwajibkan"
+msgstr "Neophodna lozinka"
 #: ----
 msgid "PERMISSION_DENIED"
-msgstr "Tidak diperkenankan"
+msgstr "Zabranjen pristup"
 #: ----
 msgid "PERMISSIONS"
-msgstr "Ijin"
+msgstr "Dozvole/pristupi"
 #: ----
 msgid "PERMISSIONS_OF_"
-msgstr "Ijin untuk"
+msgstr "Dozvola/pristup..."
 #: ----
 msgid "PERMISSONS"
-msgstr "Ijin"
+msgstr "Dozvola/pristup"
 #: ----
 msgid "PERPETRATOR"
-msgstr "Pelaku"
+msgstr "Počinilac"
 #: ----
 msgid "PERPETRATOR_NAME_S_"
-msgstr "Nama pelaku"
+msgstr "Ime/na počinioca/laca"
 #: ----
 msgid "PERPETRATOR_SEARCH_FORM"
-msgstr "Form Pencarian Pelaku"
+msgstr "Obrazac za pretragu počinioca"
 #: ----
 msgid "PERPETRATORS"
-msgstr "Pelaku"
+msgstr "Počinioci"
 #: ----
 msgid "PERSON"
-msgstr "Orang"
+msgstr "Osoba"
 #: ----
 msgid "PERSON_ADDRESS_ES_"
-msgstr "Rincian Orang"
+msgstr "Adresa osobe"
 #: ----
 msgid "PERSON_DETAIL_S_"
-msgstr "Rincian Orang"
+msgstr "Podaci o osobi"
 #: ----
 msgid "PERSON_DOES_NOT_EXIST_"
-msgstr "Orang tidak tersedia"
+msgstr "Osoba ne postoji"
 #: ----
 msgid "PERSON_NAME"
-msgstr "Nama Orang"
+msgstr "Ime osobe"
 #: ----
 msgid "PERSON_RECORD_S_"
-msgstr "Catatan Orang"
+msgstr "Beleška o osobi"
 #: ----
 msgid "PERSON_RECORDS_S_"
-msgstr "Catatan Orang"
+msgstr "Beleške o osobi"
 #: ----
 msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
-msgstr "Tanggal lahir orang tidak dimasukkan"
+msgstr "Datum rođenja osobe nije unet"
 #: ----
 msgid "PERSON_SEARCH_FORM"
-msgstr "Form Pecarian Orang"
+msgstr "Obrazac za pretraživanje osoba"
 #: ----
 msgid "PERSONS"
-msgstr "Orang"
+msgstr "Osobe"
 #: ----
 msgid "PHONE"
-msgstr "Telpon"
+msgstr "Telefon"
 #: ----
 msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
-msgstr "Nomor telpon diwajibkan, nomor telpon tidak sesuai"
+msgstr "Potreban broj telefona; neispravan broj telefona"
 #: ----
 msgid "PICTURE"
-msgstr "Gambar"
+msgstr "Fotografija"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
-msgstr "Silahkan masukkan kondisi sebelum pencarian"
+msgstr "Molimo dodajte stanje pre pretrage"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
-msgstr "Silahkan masukan kondisi ke dalam kotak hitungan untuk menghitung"
+msgstr "Molimo dodajte stanje unutar polja za brojanje radi brojanja"
 #: ----
 msgid "PLEASE_SELECT_A_USER_TO_DELETE"
-msgstr "Silahkan pilih pengguna yang akan dihapus"
+msgstr "Molimo izaberite korisnika za brisanje"
 #: ----
 msgid "PLEASE_SELECT_A_VALID_USER_"
-msgstr "Silahkan pilih pengguna yang valid"
+msgstr "Molimo izaberite validnog korisnika"
 #: ----
 msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
-msgstr "Silahkan unggah file OpenEvSys XML yang valid"
+msgstr "Molimo otpremite validan OpenEvSys XML fajl"
 #: ----
 msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
-msgstr "Silahkan gunakan Preferensi Saya di sebelah kanan atas untuk memperbaharui rincian anda"
+msgstr "Molimo koristite opciju Moje preferencije u gornjem desnom uglu kako biste izmenili svoje podatke"
 #: ----
 msgid "PREVIOUS"
-msgstr "Sebelumnya"
+msgstr "Prethodno"
 #: ----
 msgid "PRINT_THIS_EVENT"
-msgstr "Cetak Peristiwa"
+msgstr "Odštampaj ovaj događaj"
 #: ----
 msgid "PRINT_THIS_PAGE"
-msgstr "Cetak Halaman Ini"
+msgstr "Odštampaj ovu stranu"
 #: ----
 msgid "PRINT_THIS_PERSON"
-msgstr "Cetak Orang ini"
+msgstr "Odštampaju ovu osobu"
 #: ----
 msgid "PRINTABLE_VIEW"
-msgstr "Lihat hasil Cetak"
+msgstr "Pregled za štampu"
 #: ----
 msgid "QUERIES_DELETED_SUCCESSFULLY_"
-msgstr "Pertanyaan telah dihapus"
+msgstr "Upit uspešno obrisan"
 #: ----
 msgid "QUERY_ID"
-msgstr "ID Pertanyaan"
+msgstr "Upit ID"
 #: ----
 msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
-msgstr "Pertanyaan telah disimpan"
+msgstr "Upit uspešno sačuvan"
 #: ----
 msgid "REC_NO"
-msgstr "Rec-No"
+msgstr "Beleška broj"
 #: ----
 msgid "RECORD_NO"
-msgstr "No. catatan"
+msgstr "Beleška broj"
 #: ----
 msgid "RECORD_NUMBER"
-msgstr "Nomor Catatan"
+msgstr "Broj beleške"
 #: ----
 msgid "RECORD_TYPE"
-msgstr "Jenis Catatan"
+msgstr "Vrsta belešle"
 #: ----
 msgid "RECORDS_PER_PAGE"
-msgstr "Catatan per halaman"
+msgstr "Beleški po strani"
 #: ----
 msgid "REGEX"
-msgstr "regex"
+msgstr "Regex"
 #: ----
 msgid "RELATED_EVENT"
-msgstr "Peristiwa Terkait"
+msgstr "Povezani događaj"
 #: ----
 msgid "RELATED_EVENT_TITLE"
-msgstr "Judul Peristiwa Terkait"
+msgstr "Naslov povezanog događaja"
 #: ----
 msgid "RELATED_PERSON"
-msgstr "Orang terhubung"
+msgstr "Povezana osoba"
 #: ----
 msgid "REMARKS"
-msgstr "Catatan"
+msgstr "Napomene"
 #: ----
 msgid "REMOVE"
-msgstr "Hapus"
+msgstr "Ukloni"
 #: ----
 msgid "REMOVE_CLARIFY"
-msgstr "Hapus Klarifikasi"
+msgstr "Ukloni pojašnjenje"
 #: ----
 msgid "REMOVE_CONDITION"
-msgstr "Hapus Kondisi"
+msgstr "Ukloni uslove"
 #: ----
 msgid "REMOVE_LANGUAGE"
-msgstr "Hapus bahasa"
+msgstr "Ukloni jezik"
 #: ----
 msgid "REMOVE_SELECTION"
-msgstr "Hapus Pilihani"
+msgstr "Ukloni selekciju"
 #: ----
 msgid "REPORT"
-msgstr "Laporan"
+msgstr "Prijavi"
 #: ----
 msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
-msgstr "Tindakan yang diminta tidak tersedia"
+msgstr "Tražena beleška o postupku/aktu ne postoji"
 #: ----
 msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
-msgstr "Informasi yang diminta tidak tersedia"
+msgstr "Tražena informacija ne postoji"
 #: ----
 msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
-msgstr "Intervensi yang diminta tidak tersedia"
+msgstr "Tražena intervencija ne postoji"
 #: ----
 msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
-msgstr "Keterlibatan yang diminta tidak tersedia"
+msgstr "Tražena uključenost ne postoji"
 #: ----
 msgid "RESET"
-msgstr "Reset"
+msgstr "Resetuj"
 #: ----
 msgid "RESET_ALL"
-msgstr "Reset semua"
+msgstr "Resetuj sve"
 #: ----
 msgid "RESTRICT_FOR_THE_ROLE"
-msgstr "Terbatas untuk peran"
+msgstr "Ograniči za ulogu"
 #: ----
 msgid "RESTRICT_FOR_THE_USER"
-msgstr "Terbatas untuk pengguna"
+msgstr "Ograniči za korisnika"
 #: ----
 msgid "ROLE"
-msgstr "Peran"
+msgstr "Uloga"
 #: ----
 msgid "ROLE_LIST"
-msgstr "Daftar Peran"
+msgstr "Lista uloga"
 #: ----
 msgid "ROLES"
-msgstr "Roles"
+msgstr "Uloge"
 #: ----
 msgid "ROLES___MODULE_ACCESS_CONTROL"
-msgstr "Akses kontrol Peran / Modul"
+msgstr "Uloge / Modul kontrole pristupa"
 #: ----
 msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
-msgstr "Akses kontrol Peran;  Modul"
+msgstr "Uloge & amp; modul kontrole pristupa"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Peran dengan wewenang untuk mengakses peristiwa ini"
+msgstr "uloge sa dozvolom pristupa ovom događaju"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Peran dengan wewenang untuk mengakses Orang ini"
+msgstr "Uloge sa dozvolom pristupa ovoj osobi"
 #: ----
 msgid "SAVE"
-msgstr "Simpan"
+msgstr "Sačuvaj"
 #: ----
 msgid "SAVE_ADDRESS"
-msgstr "Simpan Alamat"
+msgstr "Sačuvaj adresu"
 #: ----
 msgid "SAVE_DOCUMENT"
-msgstr "Simpan Dokumen"
+msgstr "Sačuvaj dokument"
 #: ----
 msgid "SAVE_HELP_TEXT"
-msgstr "Simpan Teks Bantuan"
+msgstr "Sačuvaj tekst pomoći"
 #: ----
 msgid "SAVE_NEW_FIELDS"
-msgstr "Simpan field baru"
+msgstr "Sačuvaj nova polja"
 #: ----
 msgid "SAVE_QUERY"
-msgstr "Simpan pertanyaan"
+msgstr "Sačuvaj upit"
 #: ----
 msgid "SAVE_THIS_QUERY"
-msgstr "Simpan pertanyaan ini"
+msgstr "Sačuvaj ovaj upit"
 #: ----
 msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
-msgstr "Simpan pertanyaan dengan aval"
+msgstr "Sačuvaj ovaj upit s ovim mešanjem"
 #: ----
 msgid "SAVED_QUERIES"
-msgstr "Pertanyaan yang tersimpan"
+msgstr "Sačuvaj upite"
 #: ----
 msgid "SEARCH"
-msgstr "Cari"
+msgstr "Pretraga"
 #: ----
 msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
-msgstr "Cari informasi tambahan informasi yang relevan ke jenis tindakan yang spesifik"
+msgstr "Pretraži dodatne informacije od značaja za određene vrste radnji"
 #: ----
 msgid "SEARCH_CONDITIONS"
-msgstr "Cari Kondisi"
+msgstr "Kriterijumi pretrage"
 #: ----
 msgid "SEARCH_FORM"
-msgstr "Formulir pencarian"
+msgstr "Obrazac za pretragu"
 #: ----
 msgid "SEARCH_IN_DATABASE"
-msgstr "Cari dalam Pangkalan Data"
+msgstr "Pretraži u bazi podataka"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
-msgstr "Cari informasi tentang Peristiwa"
+msgstr "Pretraži informacije o događajima"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Orang yang menjadi Pelaku dalam tindakan kepada korban"
+msgstr "Pretraži informacije o osobama koje su počinioci radnji protiv žrtve"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
-msgstr "Cari informasi mengenai Orang yang mengintervensi di Peristiwa."
+msgstr "Pretraga informacija o osobama koji"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
-msgstr "Cari informasi mengenai Orang yang menyediakan informasi"
+msgstr "Pretraži informacije o osobama koje su dale informaciju"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
-msgstr "Cari informasi pada Orang, baik itu individu, kelompok atau organisasi"
+msgstr "Pretraži informacije o osobama, bez obzira na to da li su u pitanju pojedinci, grupe ili organizacijama"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
-msgstr "Cari informasi pada Orang yang menjadi Korban"
+msgstr "Pretraži informacije o osobama koje su bile žrtve"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
-msgstr "Cari informasi mengenai Tindakan terhadap Korban"
+msgstr "Pretraga informacija o radnji počinjenoj protiv žrtve"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
-msgstr "Cari informasi dalam data yang disediakan oleh Sumber"
+msgstr "Pretraga informacija o podacima koje su dali Izvori"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
-msgstr "Cari informasi bagaimana Pelaku terlibat dalam Tindakan tertentu"
+msgstr "Pretraga informacija o načinima na koje su počinioci bili uključeni u određenu radnju"
 #: ----
 msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
-msgstr "Cari catatan bagaimana Orang mengintervensi ke Peristiwa atas nama Korban"
+msgstr "Pretraga beleški o tome kako su osobe intervenisale u događaju u ime žrtava"
 #: ----
 msgid "SEARCH_REPORT"
-msgstr "Pencarian laporan"
+msgstr "Pretraži izveštaj"
 #: ----
 msgid "SEARCH_RESULTS"
-msgstr "Hasil pencarian"
+msgstr "Rezultati pretrage"
 #: ----
 msgid "SEARCHABLE"
-msgstr "Dapat dicari"
+msgstr "Pretraživo"
 #: ----
 msgid "SECTION"
-msgstr "Bagian"
+msgstr "Sekcija"
 #: ----
 msgid "SEE_FULL_SIZE_IMAGE"
-msgstr "Lihat ukuran penuh dari gambar"
+msgstr "Vidi sliku u punoj veličini"
 #: ----
 msgid "SELECT"
-msgstr "Pilih"
+msgstr "Izaberi"
 #: ----
 msgid "SELECT_A_FORMAT"
-msgstr "Pilih format"
+msgstr "Izaberi format"
 #: ----
 msgid "SELECT_A_MICRO_THESAURUS"
-msgstr "Pilih Micro-thesauri"
+msgstr "Izaberi mikro-leksikon sinonima"
 #: ----
 msgid "SELECT_ENTITY"
-msgstr "Pilih Entitas"
+msgstr "Izaberi entitet"
 #: ----
 msgid "SELECT_FIELD"
-msgstr "Pilih Fields"
+msgstr "Izaberi polje"
 #: ----
 msgid "SELECT_FIELDS_FROM_"
-msgstr "Pilih dari Field"
+msgstr "Izaberi polje iz"
 #: ----
 msgid "SELECT_ROLE"
-msgstr "Pilih Peran"
+msgstr "Izaberi ulogu"
 #: ----
 msgid "SELECT_SECONDARY_ENTITY"
-msgstr "Pilih entitas kedua"
+msgstr "Izaberi sekundarni entitet"
 #: ----
 msgid "SELECT_TREE_OPTION"
-msgstr "Pilih Pohon Pilihan"
+msgstr "Izaberi drvo mogućnosti"
 #: ----
 msgid "SET"
-msgstr "Atur"
+msgstr "Podesi"
 #: ----
 msgid "SET_ACL_MODE"
-msgstr "Atur mode ACL"
+msgstr "Podesi ACL modalitet"
 #: ----
 msgid "SET_LANGUAGE"
-msgstr "Pilih Bahasa"
+msgstr "Podesi jezik"
 #: ----
 msgid "SET_SYSTEM_LANGUAGE"
-msgstr "Pilih Sistem Bahasa"
+msgstr "Podesi jezik sistema"
 #: ----
 msgid "SHARE"
-msgstr "Berbagi"
+msgstr "Podeli"
 #: ----
 msgid "SHOW_ADDRESS_FORM"
-msgstr "Perlihatkan form Alamat"
+msgstr "Pokaži obrazac za adrese"
 #: ----
 msgid "SHOW_ALL"
-msgstr "Perlihatkan Semua"
+msgstr "Prikaži sve"
 #: ----
 msgid "SHOW_SEARCH_FORM"
-msgstr "Perlihatkan Formulir Pencarian"
+msgstr "Prikaži obrazac za pretragu"
 #: ----
 msgid "SHOW_SUPPORTING_DOCUMENT_S_"
-msgstr "Tampilkan Dokumen-Dokumen Pendukung"
+msgstr "Prikaži prateći/e dokumenti/e"
 #: ----
 msgid "SIGN_IN"
-msgstr "Masuk"
+msgstr "Prijavi se"
 #: ----
 msgid "SIGN_IN_TO_OPENEVSYS"
-msgstr "Masuk ke OpenEvsys"
+msgstr "Prijavi se u OpenEvSys"
 #: ----
 msgid "SIGN_OUT"
-msgstr "Keluar"
+msgstr "Odjavi se"
 #: ----
 msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
-msgstr "Beberapa kesalahan terjadi saat impor:"
+msgstr "Neke greške su se pojavile tokom uvoza podataka"
 #: ----
 msgid "SOUND_LIKE"
-msgstr "terdengar seperti"
+msgstr "Zvuči kao"
 #: ----
 msgid "SOURCE"
-msgstr "Sumber"
+msgstr "Izvor"
 #: ----
 msgid "SOURCE_NAME"
-msgstr "Nama Sumber"
+msgstr "Ime izvora"
 #: ----
 msgid "SOURCE_SEARCH_FORM"
-msgstr "Form Pencarian Sumber"
+msgstr "Obrazac za pretragu izvora"
 #: ----
 msgid "SOURCES"
-msgstr "Sumber"
+msgstr "Izvori"
 #: ----
 msgid "SPREADSHEET"
-msgstr "Lembarkerja"
+msgstr "Tabelarni prikaz/spreadsheet"
 #: ----
 msgid "START_DATE"
-msgstr "Tanggal Mulai"
+msgstr "Započni datum"
 #: ----
 msgid "STATUS"
-msgstr "Status"
+msgstr "Statu"
 #: ----
 msgid "SUBMIT"
-msgstr "Daftarkan"
+msgstr "Podnesi"
 #: ----
 msgid "SUPPORTING_DOCUMENTS"
-msgstr "Dokumen Pendukung"
+msgstr "Prateći dokumenti"
 #: ----
 msgid "SYSTEM_CONFIGURATION"
-msgstr "Konfigurasi sistem"
+msgstr "Konfiguracija sistema"
 #: ----
 msgid "SYSTEM_ERROR"
-msgstr "Kesalahan Sistem"
+msgstr "Sistemska greška"
 #: ----
 msgid "TERM_IN"
-msgstr "Istilah dalam"
+msgstr "Pojam u"
 #: ----
 msgid "TERM_IN_"
-msgstr "Istilah dalam"
+msgstr "Pojam u"
 #: ----
 msgid "TEXT"
-msgstr "Teks"
+msgstr "Tekst"
 #: ----
 msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
-msgstr "Field teks dibatasi 200 karakter"
+msgstr "Polje za tekst sa ograničenjem od 200 karaktera"
 #: ----
 msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
-msgstr "Wilayah teks tak terbatas"
+msgstr "Oblast za tekst neograničene dužine"
 #: ----
 msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
-msgstr "Dokumen yang diunggah bukan dokumen XML yang sesuai"
+msgstr "Otpremljeni dokument nije validni XML dokument"
 #: ----
 msgid "THE_EVENT_IS_LINKED"
-msgstr "Peristiwa ini terhubung"
+msgstr "Događaj je povezan"
 #: ----
 msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
-msgstr "File lampiran telah diperbaharui dengan file lampiran baru."
+msgstr "Stari prilog uz fajl je apdejtovan novim prilogom"
 #: ----
 msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
-msgstr "Orang ini belum memiliki peran"
+msgstr "Osoba još uvek nema ni jednu ulogu!"
 #: ----
 msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
-msgstr "Dua kata sandi tidak sama"
+msgstr "Dve lozinke se razlikuju!"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
-msgstr "File yang diunggah melebihi MAX_FILE_SIZE yang diperkenankan dalam form HTML"
+msgstr "Otpremljeni fajl premašuje maksimalnu veličinu fajla koja je navedena u html formatu"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
-msgstr "File yang diunggah melebihi upload_max_filesize pada php.ini"
+msgstr "Otpremljeni fajl premašuje maksimalnu veličinu fajla koja je navedena u php.ini"
 #: ----
 msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
-msgstr "File hanya terunggah sebagian"
+msgstr "Otpremljeni fajl je samo delimično otpremljen"
 #: ----
 msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada dokumen tersedia. Silahkan Tambahkan!"
+msgstr "Dokument još uvek ne postoji. Trebalo bi da dodate dokument!"
 #: ----
 msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada Dokumen pendukung mengenai Peristiwa tersedia. Silahkan menambahkan!"
+msgstr "Prateći dokumenti o događaju još uvek ne postoje. Trebalo bi da ih dodate!"
 #: ----
 msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada alamat pada Orang ini. Silahkan tambahkan!"
+msgstr "Za ovu osobu još uvek nije dodata adresa. Trebalo bi da dodate adresu!"
 #: ----
 msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada Riwayat Hidup tentang Orang ini. Silahkan tambahkan!"
+msgstr "O ovoj osobi još uvek ne postoje nikakvi biografski podaci. Trebalo bi da ih dodate!"
 #: ----
 msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Peristiwa. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Informacije o događaju još uvek ne postoje! Trebalo bi da ih dodate! Kliknite na dugme „Dodaj novi događaj“ kako biste dodali novi događaj."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Rangkaian Peristiwa. Silahkan Tambahkan!"
+msgstr "Informacije o lancu događaja još uvek ne postoje. Trebalo bi da ih dodate!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Intervensi dan Pihak Pengintervensi. Silahkan tambahkan!"
+msgstr "Informacije o intervenišućim stranama i intervencijama još uvek ne postoje. Trebalo bi da ih dodate!"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum ada informasi tentang Sumber dan Informasi. Silahkan tambahkan!"
+msgstr "Informacije o izvoru i informacijama još uvek ne postoje. Trebalo bi da ih dodate."
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
-msgstr "Belum ada informasi tentang Korban dan Pelaku. Silahkan tambahkan!"
+msgstr "Informacije o žrtvama i počiniocima još uvek ne postoje. Trebalo bi da ih dodate."
 #: ----
 msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "Belum Informasi tentang Orang. Silahkan tambahkan!"
+msgstr "Informacije o osobi još uvek ne postoje. Trebalo bi da ih dodate!"
 #: ----
 msgid "TIMESTAMP"
-msgstr "Catatan waktu"
+msgstr "Vremenski kod"
 #: ----
 msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
-msgstr "Untuk melihat Dokumen, silahkan pilih satu dokumen dari daftar Dokumen"
+msgstr "Da biste videli dokument najpre morate da odaberete dokument iz liste dokumenata"
 #: ----
 msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
-msgstr "Untuk melihat Orang, silahkan pilih satu dari daftar Orang"
+msgstr "Da biste videli osobu najpre morate da odaberete osobu iz liste osoba"
 #: ----
 msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
-msgstr "Untuk melihat orang, silahkan pilih satu Peristiwa dari daftar Peristiwa"
+msgstr "Da biste videli događaj najpre morate da odaberete događaj iz liste događaja."
 #: ----
 msgid "TORTURE"
-msgstr "Penyiksaan"
+msgstr "Mučenje"
 #: ----
 msgid "TRANSLATE"
-msgstr "Terjemahan"
+msgstr "Prevedi"
 #: ----
 msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
-msgstr "Terjemahan belum diperbaharui. Silahkan berikan ijin ke direktori dan file ke folder lokal"
+msgstr "Prevod nije ažuriran! Molimo dajte dozvolu direktorijumu i fajlu da re/lociraju folder."
 #: ----
 msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
-msgstr "Terjemahan telah diperbaharui"
+msgstr "Prevod uspešno ažuriran"
 #: ----
 msgid "TRUE"
-msgstr "benar"
+msgstr "Tačno."
 #: ----
 msgid "TYPE"
-msgstr "Jenis"
+msgstr "Ukucaj/vrsta"
 #: ----
 msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Jenis tanggal lahir hanya dalam angka"
+msgstr "Ukucaj datum rođenja u brojevima!"
 #: ----
 msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Jenis bulan lahir hanya dalam angka"
+msgstr "Ukucaj mesec rođenja u brojevima!"
 #: ----
 msgid "TYPE_OF_ACT"
-msgstr "Jenis Tindakan"
+msgstr "Vrsta radnje"
 #: ----
 msgid "TYPE_OF_CHAIN_OF_EVENTS"
-msgstr "Jenis Rangkaian Peristiwa"
+msgstr "Vrsta lanca događaja"
 #: ----
 msgid "TYPE_OF_INTERVENTION"
-msgstr "Jenis Intervensi"
+msgstr "Vrsta intervencije"
 #: ----
 msgid "TYPE_OF_RELATIONSHIP"
-msgstr "Jenis dari Relasi"
+msgstr "Vrsta odnosa"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Masukkan ID pengguna pada kotak teks dan klik berbagi peristiwa untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Ukucaj id korisnika u polje za tekst i klikni na Podeli kako bi ovaj događaj bio dostupan željenom korisniku"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Masukkan ID Pengguna pada kotak teks dan klik berbagi orang untuk memberikan akses pada pengguna yang diinginkan"
+msgstr "Ukucaj id korisnika u polje za tekst i klikni na Podeli kako bi ova osoba bila dostupna željenom korisniku"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Masukkan Tahun kelahiran hanya dalam angka"
+msgstr "Ukucaj godinu rođenja u brojevima!"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
-msgstr "Masukkan tahun kelahiran secara lengkap"
+msgstr "Ukucaj celu godinu rođenja!"
 #: ----
 msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
-msgstr "Tidak dapat menghapus beberapa istilah Micro-thesauri karena telah digunakan dalam catatan"
+msgstr "Nije moguće ukloniti neke pojmove iz mikro-leksikona sinonima zato što ih već koriste u izveštajima."
 #: ----
 msgid "UNABLE_TO_RESET_FIELD_"
-msgstr "Tidak dapat mengatur ulang field"
+msgstr "Nije moguće resetovati polje."
 #: ----
 msgid "UNABLE_TO_RESET_FIELDS_"
-msgstr "Tidak dapat mengatur ulang field"
+msgstr "Nije moguće resetovati polja."
 #: ----
 msgid "UNKNOWN_UPLOAD_ERROR_"
-msgstr "Kesalahan pengunggahan yang tidak diketahui"
+msgstr "Nepoznata greška pri otpremanju."
 #: ----
 msgid "UNTITLED_QUERY"
-msgstr "Pertanyaan tanpa judul"
+msgstr "Nenaslovljen upit"
 #: ----
 msgid "UPDATE"
-msgstr "Perbarui"
+msgstr "Ažuriraj"
 #: ----
 msgid "UPDATE_ACCESS_CONTROL_LIST"
-msgstr "Perbarui Daftar Akses Kontrol"
+msgstr "Ažuriraj listu kontrole pristupa"
 #: ----
 msgid "UPDATE_FORM"
-msgstr "Perbarui Formulir"
+msgstr "Ažuriraj obrazac"
 #: ----
 msgid "UPDATE_PERMISSIONS"
-msgstr "Perbaharui wewenang"
+msgstr "Ažuriraj dozvole"
 #: ----
 msgid "UPLOAD"
-msgstr "Unggah"
+msgstr "Otpremi"
 #: ----
 msgid "UPLOAD_FILE"
-msgstr "Unggah File"
+msgstr "Otpremi fajl"
 #: ----
 msgid "USER"
-msgstr "Pengguna"
+msgstr "Korisnik"
 #: ----
 msgid "USER_MANAGEMENT"
-msgstr "Manajemen pengguna"
+msgstr "Korisničko upravljanje"
 #: ----
 msgid "USER_NAME"
-msgstr "Nama Penguna"
+msgstr "Ime korisnika"
 #: ----
 msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Pengguna tidak ditemukan! ID pengguna atau password tidak sesuai! silahkan coba lagi."
+msgstr "Korisnik nije pronađen! Neispravno korisničko ime ili lozinka! Molimo pokušajte ponovo."
 #: ----
 msgid "USERID_DOES_NOT_EXISTS_"
-msgstr "ID Pengguna tidak tersedia"
+msgstr "Korisnički id ne postoji."
 #: ----
 msgid "USERNAME"
-msgstr "Nama Penguna"
+msgstr "Korisničko ime"
 #: ----
 msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
-msgstr "Nama pengguna sudah ada, gunakan nama lain"
+msgstr "Korisničko ime već postoji, upotrebite drugo korisničko ime."
 #: ----
 msgid "USERNAME_CANNOT_BE_EMPTY"
-msgstr "Nama pengguna harus diisi"
+msgstr "Korisničko ime ne može biti prazno"
 #: ----
 msgid "USERS"
-msgstr "Pengguna"
+msgstr "Korisnici"
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Pengguna dengan wewenang untuk mengakses peristiwa ini"
+msgstr "Korisnici s dozvolom da pristupe ovom događaju."
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Pengguna dengan wewenang untuk mengakses peristiwa ini"
+msgstr "Korisnici s dozvolom da pristupe ovoj osobi"
 #: ----
 msgid "USERS_WITH_PERMISSIONS"
-msgstr "Pengguna dengan wewenang"
+msgstr "Korisnici s dozvolom"
 #: ----
 msgid "VALIDATION"
-msgstr "Validasi"
+msgstr "Validacija"
 #: ----
 msgid "VALIDATION_TYPE"
-msgstr "Jenis Validasi"
+msgstr "Vrsta validacije"
 #: ----
 msgid "VERSION"
-msgstr "Versi"
+msgstr "Verzija"
 #: ----
 msgid "VICTIM"
-msgstr "Korban"
+msgstr "Žrtva"
 #: ----
 msgid "VICTIM_NAME"
-msgstr "Nama Korban"
+msgstr "Ime žrtve"
 #: ----
 msgid "VICTIM_SEARCH_FORM"
-msgstr "Form Pencarian Korban"
+msgstr "Obrazac za pretragu žrtve"
 #: ----
 msgid "VICTIMS"
-msgstr "Korban"
+msgstr "Žrtva"
 #: ----
 msgid "VICTIMS_AND_PERPETRATORS"
-msgstr "Korban dan Pelaku"
+msgstr "Žrtve i počinioci"
 #: ----
 msgid "VIEW_ACT_RECORD"
-msgstr "Tampilkan catatan Tindakan"
+msgstr "Vidi belešku o radnji"
 #: ----
 msgid "VIEW_ADDRESS"
-msgstr "Tampilkan Alamat"
+msgstr "Vidi adresu"
 #: ----
 msgid "VIEW_BIOGRAPHIC_DETAILS"
-msgstr "Tampilkan Riwayat Hidup"
+msgstr "Vidi biografske detalje"
 #: ----
 msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
-msgstr "Tampilkan catatan Rangkaian Peristiwa"
+msgstr "Vidi belešku o lancu događaja"
 #: ----
 msgid "VIEW_DOCUMENT"
-msgstr "Tampilkan Dokumen"
+msgstr "Vidi dokument"
 #: ----
 msgid "VIEW_EVENT"
-msgstr "Tampilkan Peristiwa"
+msgstr "Vidi događaj"
 #: ----
 msgid "VIEW_EVENT_RECORD"
-msgstr "Tampilkan catatan Peristiwa"
+msgstr "Vidi belešku o događaju"
 #: ----
 msgid "VIEW_INFORMATION_RECORD"
-msgstr "Tampilkan catatan Informasi"
+msgstr "Vidi belešku o informaciji"
 #: ----
 msgid "VIEW_INTERVENTION_PARTY_RECORD"
-msgstr "Tampilkan Catatan Pihak yang Mengintervensi"
+msgstr "Vidi belešku o uključenim stranama"
 #: ----
 msgid "VIEW_INTERVENTION_RECORD"
-msgstr "Tampilkan catatan Intervensi"
+msgstr "Vidi belešku o intervencijama"
 #: ----
 msgid "VIEW_INVOLVEMENT_RECORD"
-msgstr "Tampilkan catatan Keterlibatan"
+msgstr "Vidi belešku o učešću"
 #: ----
 msgid "VIEW_PERPETRATOR_RECORD"
-msgstr "Tampilkan catatan Pelaku"
+msgstr "Vidi belešku o počiniocu"
 #: ----
 msgid "VIEW_PERSON"
-msgstr "Tampilkan Orang"
+msgstr "Vidi osobu"
 #: ----
 msgid "VIEW_RELATED_PERSON"
-msgstr "Tampilkan Orang yang terhubung"
+msgstr "Vidi sa njom povezanu osobu"
 #: ----
 msgid "VIEW_SOURCE_RECORD"
-msgstr "Tampilkan catatan Sumber"
+msgstr "Vidi belešku o izvoru"
 #: ----
 msgid "VIEW_VICTIM_RECORD"
-msgstr "Tampilkan catatan Korban"
+msgstr "Vidi belešku o žrtvi"
 #: ----
 msgid "VISIBILITY"
-msgstr "Visibilitas"
+msgstr "Vidljivost"
 #: ----
 msgid "VISIBLE"
-msgstr "Terlihat"
+msgstr "Vidljiv"
 #: ----
 msgid "VISIBLE_IN_BROWSE"
-msgstr "Terlihat di penelusuran"
+msgstr "Vidljivo u pretrazi"
 #: ----
 msgid "VISIBLE_IN_FORM"
-msgstr "Terlihat di formulir"
+msgstr "Vidljivo u obrascu"
 #: ----
 msgid "VISIBLE_IN_VIEW"
-msgstr "Telihat di Tampilan"
+msgstr "Vidljivo u pregledu"
 #: ----
 msgid "WEB"
-msgstr "Situs"
+msgstr "Veb"
 #: ----
 msgid "WEBSITE"
-msgstr "Website"
+msgstr "Vebsajt"
 #: ----
 msgid "WHAT_HAPPENED_TO"
-msgstr "Apa yang terjadi pada"
+msgstr "Šta se desilo..."
 #: ----
 msgid "WHAT_IS_THE_INTERVENTION_"
-msgstr "Apa intervensinya?"
+msgstr "Koja intervencija je u pitanju?"
 #: ----
 msgid "WHO_IS_RESPONSIBLE_FOR_THE"
-msgstr "Siapa yang bertanggung jawab atas"
+msgstr "Ko je odgovoran za..."
 #: ----
 msgid "WHO_IS_THE_INTERVENING_PARTY_"
-msgstr "Siapa pihak yang mengintervensi?"
+msgstr "Koj je intervenišuća strana?"
 #: ----
 msgid "WHO_IS_THE_SOURCE_"
-msgstr "Siapa sumbernya?"
+msgstr "Ko je izvor?"
 #: ----
 msgid "WHO_IS_THE_VICTIM__"
-msgstr "Siapa korbannya?"
+msgstr "Ko je žrtva?"
 #: ----
 msgid "YEAR_S__"
-msgstr "Tahun:"
+msgstr "Godina/e:"
 #: ----
 msgid "YES"
-msgstr "Ya"
+msgstr "Da"
 #: ----
 msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
-msgstr "Anda akan menhapus sebuah Peristiwa. Artinya anda akan menghapus catatan yang terdaftar di bawah ini. Anda akan melanjutkan?"
+msgstr "Izabrali ste da želite da obrišete Događaj. To znači da ćete obrisati belešle koje se nalaze u nastavku. Da li želite da nastavite?"
 #: ----
 msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
-msgstr "Anda tidak dapat mengubah wewenang admin"
+msgstr "Ne možete da promenite dozvolu administratora."
 #: ----
 msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
-msgstr "Anda tidak dapat menghapus pengguna admin lainnya"
+msgstr "Ne možete obrisati druge admin korisnike."
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
-msgstr "Akun admin tidak dapat dihapus"
+msgstr "Ne možete obrisati nalog administratora."
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
-msgstr "Anda tidak dapat menghapus bahasa utama"
+msgstr "Ne možete obrisati podrazumevani jezik."
 #: ----
 msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
-msgstr "Tidak dapat menghapus diri sendiri dari daftar pengguna"
+msgstr "Ne možete izbrisati sebe iz liste korisnika."
 #: ----
 msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
-msgstr "Anda tidak memiliki wewenang untuk mengedit rincian admin lainnya"
+msgstr "Nemate dozvolu da izmenite podatke o drugim admin korisnicima."
 #: ----
 msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
-msgstr "Anda juga akan menghapus sejumlah induk istilah, jika dilanjutkan maka anak-anak dari istilah akan terhapus"
+msgstr "Izabrali ste i neke nadređene pojmove; ukoliko nastavite, njima podređeni pojmovi će takođe biti obrisani."
 #: ----
 msgid "YOU_MUST_FILL_IN_THIS_FIELD"
-msgstr "Anda harus mengisi field ini"
+msgstr "Morate da popunite ova polja."
 #: ----
 msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
-msgstr "Anda perlu memilih entitas sebelum menghitung"
+msgstr "Morate da izaberete entitet pre brojanja."
 #: ----
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
-msgstr "Fungsi cookie pada browser anda tidak aktif. Silahkan aktifkan"
+msgstr "Cookie funkcija vašeg pretraživača je isključena! Molimo da je uključite."
 #: ----
 msgid "EXTENSIONS"
-msgstr "Ekstensi"
+msgstr "Proširenja/ekstenzije."
 #: ----
 msgid "ABOUT_OE"
-msgstr "Tentang OpenEvsys"
+msgstr "O OpenEvsys-u"
 #: ----
 msgid "AGPL"
-msgstr "Berlinsensi AGPL v3"
+msgstr "AGPL v3 odobreno"
 #: ----
 msgid "REQUIRED"
-msgstr "Diwajibkan"
+msgstr "Zahtevano"
 #: ----
 msgid "YES_CONFIDENTIALITY"
-msgstr "Iya (untuk Kerahasiaan)"
+msgstr "Da (za poverljivost)"
 #: ----
 msgid "NO_CONFIDENTIALITY"
-msgstr "Tidak (untuk Kerahasiaan)"
+msgstr "Ne (za poverljivost)"
 #: ----
 msgid "ERROR_SERVER"
-msgstr "Kesalahan dikembalikan oleh server, silahkan hubungi administrato sistem"
+msgstr "Server je vratio grešku; molimo kontaktirajte administatora sistema."
 #: ----
 msgid "NULL_ROWS"
-msgstr "Null Rows"
+msgstr "Prazni redovi"
 #: ----
 msgid "PHONE_NO"
-msgstr "Nomor telepon"
+msgstr "Broj telefona"
 #: ----
 msgid "NUMERICAL"
-msgstr "Angka"
+msgstr "Numerički"
 #: ----
 msgid "ANALYST"
-msgstr "Analis"
+msgstr "Analitičar"
 #: ----
 msgid "DATA_ENTRY"
-msgstr "Data Entri"
+msgstr "Unos podataka"
 #: ----
 msgid "ENTITY_GROUPS"
-msgstr "Entitas Grup"
+msgstr "Grupe entiteta"
 #: ----
 msgid "CREATE"
-msgstr "Buat"
+msgstr "Kreiraj"
 #: ----
 msgid "READ"
-msgstr "baca"
+msgstr "Čitaj"
 #: ----
 msgid "LINKING"
-msgstr "Tautan"
+msgstr "Povezivanje"
 #: ----
 msgid "PRIMARY"
-msgstr "Utama"
+msgstr "Primarno"
 #: ----
 msgid "SELECT_LANGUAGE"
-msgstr "Pilih Bahasa"
+msgstr "Odaberi jezik"
 #: ----
 msgid "NO_ATTACHMENT"
-msgstr "Dokumen ini tidak memiliki lampiran"
+msgstr "Ovaj dokument nema priloge"
 #: ----
 msgid "BROWSE"
-msgstr "Telusur"
+msgstr "Pretraži"
 #: ----
 msgid "ROWS"
-msgstr "Baris"
+msgstr "Red/ovi"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr "Laporan pencarian Mutakhir"
+msgstr "Obrazac napredne pretrage"
 #: ----
 msgid "Address"
-msgstr "Alamat"
+msgstr "Adresa osobe"
 #: ----
 msgid "latitude"
-msgstr "latitude"
+msgstr "Geografska širina"
 #: ----
 msgid "longitude"
-msgstr "longitude"
+msgstr "Geografska dužina"
 #: ----
 msgid "View"
-msgstr "Lihat"
+msgstr "Pregled"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr "Micro-thesaurus berhasil dibuat"
+msgstr "Mikro-leksikon sinonima uspešno kreiran"
 #: ----
 msgid "Radio field"
-msgstr "Radio field"
+msgstr "Radio polje"
 #: ----
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "Geolokacija"
 #: ----
 msgid "User Select"
-msgstr "Pilih Pengguna"
+msgstr "Odabir korisnika"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Pilih Pengguna Multivalue"
+msgstr "Viševrednosni odabir korisnika"
 #: ----
 msgid "Tree"
-msgstr "Pohon"
+msgstr "Drvo"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Pohon Multivalue"
+msgstr "Viševrednosno drvo"
 #: ----
 msgid "Multivalue Select"
-msgstr "Pilih Multivalue"
+msgstr "Viševrednosti odabir"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Silahkan pilih item untuk melanjutkan"
+msgstr "Molimo odaberite stavke da biste izvršili akciju"
 #: ----
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Komandna tabla"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr "Micro-thesauri tidak boleh kosong"
+msgstr "Mikro-leksikon sinonima ne može biti prazan"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr "Nama Micro-thesauri sudah ada"
+msgstr "Ime mikro-leksikona sinonima već postoji"
 #: ----
 msgid "Login Information"
-msgstr "Informasi Masuk"
+msgstr "Informacije o loginu"
 #: ----
 msgid "Profile Information"
-msgstr "Informasi profil"
+msgstr "Informacije o profilu"
 #: ----
 msgid "Print configuration"
-msgstr "Konfigurasi Printer"
+msgstr "Konfiguracija štampača"
 #: ----
 msgid "Header for report print view"
-msgstr "Tampilan header untuk cetakan laporan"
+msgstr "Zaglavlje za štampani pregled izveštaja"
 #: ----
 msgid "Header for event print view"
-msgstr "Tampilan header untuk cetakan peristiwa"
+msgstr "Zaglavlje za štampani pregled događaja"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Tampilan sidebar untuk cetakan peristiwa"
+msgstr "Bočni pregled za pregled štampe događaja"
 #: ----
 msgid "Header for person print view"
-msgstr "Tampilan header untuk cetakan orang"
+msgstr "Zaglavlje za štampani pregled osobe"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Tampilan sidebar untuk cetakan orang"
+msgstr "Bočni pregled za štampani pregled osobe"
 #: ----
 msgid "Details"
-msgstr "Rincian"
+msgstr "Detalji"
 #: ----
 msgid "Add new term"
-msgstr "Masukkan istilah baru"
+msgstr "Dodaj novi termin"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Dapat dicari dalam Analisis"
+msgstr "Pretraživo u analizi"
 #: ----
 msgid "Visible in Analysis"
-msgstr "Terlihat di Analisis"
+msgstr "Vidljivo u analizi"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr "Masukkan Micro-thesauri baru"
+msgstr "Dodaj novi mikro-leksikon sinonima"
 #: ----
 msgid "Select language"
-msgstr "Pilih Bahasa"
+msgstr "Odaberi jezik"
 #: ----
 msgid "Header for login page"
-msgstr "Header untuk halaman masuk"
+msgstr "Zaglavlje na stranici za logovanje"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "Viševrednosni"
 #: ----
 msgid "Enabled"
-msgstr "Fungsikan"
+msgstr "Omogućeno"
 #: ----
 msgid "Hide in case of"
-msgstr "Sembunyikan dalam kasus"
+msgstr "Sakrij u slučaju"
 #: ----
 msgid "Set visible"
-msgstr "Pasang terlihat"
+msgstr "Podesi da bude vidljivo"
 #: ----
 msgid "Disable"
-msgstr "Tidak difungsikan"
+msgstr "Onemogući"
 #: ----
 msgid "Apply"
-msgstr "Terapkan"
+msgstr "Primeni"
 #: ----
 msgid "Vocab number"
-msgstr "Nomor Vocab"
+msgstr "Vocab broj"
 #: ----
 msgid "disabled"
-msgstr "Tidak difungsikan"
+msgstr "Onemogućeno"
 #: ----
 msgid "Undefined"
-msgstr "Belum terdefinisikan"
+msgstr "Nedefinisano"
 #: ----
 msgid "Load"
-msgstr "Muat"
+msgstr "Učitaj"
 #: ----
 msgid "Select facets"
-msgstr "Pilih aspek"
+msgstr "Odaberi"
 #: ----
 msgid "Date range"
-msgstr "Rentang tanggal"
+msgstr "Opseg datuma"
 #: ----
 msgid "Timeline type"
-msgstr "Jenis linimasa"
+msgstr "Vrsta vremenske linije"
 #: ----
 msgid "DAY"
-msgstr "HARI"
+msgstr "DAN"
 #: ----
 msgid "MONTH"
-msgstr "BULAN"
+msgstr "MESEC"
 #: ----
 msgid "YEAR"
-msgstr "TAHUN"
+msgstr "GODINA"
 #: ----
 msgid "Total Count"
-msgstr "Hitungan Total"
+msgstr "Ukupan broj"
 #: ----
 msgid "Added in last 30 days"
-msgstr "Dimasukan 30 hari terakhir"
+msgstr "Dodato u prethodnih 30 dana"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Pengguna yang paling aktif (item baru)"
+msgstr "Najaktivniji korisnici (nove stavke)"
 #: ----
 msgid "User activity (edited items)"
-msgstr "Aktifitas Pengguna (item yang diperbarui)"
+msgstr "Aktivnost korisnika (izmenjene stavke)"
 #: ----
 msgid "Recently deleted"
-msgstr "Baru saja dihapus"
+msgstr "Nedavno obrisano"
 #: ----
 msgid "No data available"
-msgstr "Tidak ada data yang tersedia"
+msgstr "Nema dostupnih podataka"
 #: ----
 msgid "Add Perpetrator later"
-msgstr "Menambahkan Pelaku kemudian"
+msgstr "Dodaj Počinioca kasnije"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr "Simpan dan masukkan Pelaku lainnya"
+msgstr "Sačuvaj i dodaj još počinilaca"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Ne postoje podaci o radnji; trebalo bi da ih upišete. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj"
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Intervensi. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Ne postoji informacija o intervencijama, trebalo bi da je dodate. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj."
 #: ----
 msgid "View person's roles"
-msgstr "Tampilkan peran orang"
+msgstr "Vidi uloge osobe"
 #: ----
 msgid "Duplicate"
-msgstr "Duplikasi"
+msgstr "Dupliciraj"
 #: ----
 msgid "Insert folder name:"
-msgstr "Masukan nama folder:"
+msgstr "Ubaci ime foldera"
 #: ----
 msgid "Return to files list"
-msgstr "Kembali ke daftar file"
+msgstr "Povratak na listu fajlova"
 #: ----
 msgid "Preview"
-msgstr "Pratinjau"
+msgstr "Pregled"
 #: ----
 msgid "Erase"
-msgstr "Hapus"
+msgstr "Obriši"
 #: ----
 msgid "Charts and map"
-msgstr "Grafik dan peta"
+msgstr "Grafikoni i tabele"
 #: ----
 msgid "Clear this selections"
-msgstr "Bersihkan pilihan"
+msgstr "Obriši izbor"
 #: ----
 msgid "of"
-msgstr "of"
+msgstr "od"
 #: ----
 msgid "Not found"
-msgstr "Tidak ditemukan"
+msgstr "Nije pronađeno"
 #: ----
 msgid "Map"
-msgstr "Peta"
+msgstr "Mape"
 #: ----
 msgid "Charts"
-msgstr "Grafik"
+msgstr "Grafikoni"
 #: ----
 msgid "Results"
-msgstr "Hasil"
+msgstr "Rezultati"
 #: ----
 msgid "Filters"
-msgstr "Penyaring"
+msgstr "Filteri"
 #: ----
 msgid "Security"
-msgstr "Keamanan"
+msgstr "Bezbednost"
 #: ----
 msgid "Top menu"
-msgstr "Menu atas"
+msgstr "Gornji meni"
 #: ----
 msgid "Top right menu"
-msgstr "Menu kanan atas"
+msgstr "Gornji desni meni"
 #: ----
 msgid "Event menu"
-msgstr "Menu Peristiwa"
+msgstr "Meni za događaje"
 #: ----
 msgid "Person menu"
-msgstr "Menu Orang"
+msgstr "Meni za osobe"
 #: ----
 msgid "Document menu"
-msgstr "Menu Dokumen"
+msgstr "Meni za dokumente"
 #: ----
 msgid "Analysis menu"
-msgstr "Menu Analisis"
+msgstr "Meni za analizu"
 #: ----
 msgid "Preferences menu"
-msgstr "Menu Preferensi"
+msgstr "Meni za preferencije"
 #: ----
 msgid "The reCAPTCHA wasn't entered correctly."
-msgstr "ReCAPTCHA tidak dimasukkan dengan benar"
+msgstr "ReCAPTHCA nije ispravno unet."
 #: ----
 msgid "Wrong verification code. Please try again."
-msgstr "Kode verifikasi salah. Silahkan coba lagi"
+msgstr "Pogrešan verifikacioni kod. Molimo pokušajte opet."
 #: ----
 msgid "Menu was saved successfully."
-msgstr "Menu telah berhasil disimpan"
+msgstr "Meni je uspešno sačuvan."
 #: ----
 msgid "Google Authenticator"
-msgstr "Google Authenticator"
+msgstr "Google Authenticator."
 #: ----
 msgid "Enabled successfully."
-msgstr "Sukses diaktifkan."
+msgstr "Uspešno omogućeno."
 #: ----
 msgid "Code"
-msgstr "Kode"
+msgstr "Kod"
 #: ----
 msgid "Menu"
-msgstr "Menu"
+msgstr "Meni"
 #: ----
 msgid "Click to add an item to a menu"
-msgstr "Klik untuk menambahkan item pada Menu"
+msgstr "Kliknite da biste dodali stavku u meni"
 #: ----
 msgid "Number"
-msgstr "Nomor"
+msgstr "Broj"
 #: ----
 msgid "Term"
-msgstr "Istilah"
+msgstr "Izraz"
 #: ----
 msgid "Add Micro-thesauri"
-msgstr "Tambahkan Micro-thesauri"
+msgstr "Dodaj mikro-rečnik"
 #: ----
 msgid "Translate Micro-thesauri"
-msgstr "Terjemahkan Micro-thesauri"
+msgstr "Prevedi mikro-rečnik"
 #: ----
 msgid "Language"
-msgstr "Bahasa"
+msgstr "Jezik"
 #: ----
 msgid "Event"
-msgstr "Peristiwa"
+msgstr "Događaj"
 #: ----
 msgid "Select Event"
-msgstr "Pilih Peristiwa"
+msgstr "Odaberi događaj"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "Belum ada informasi Tindakan. Silahkan tambahkan. Klik tombol “Masukkan Peristiwa baru” untuk menambahkan Peristiwa."
+msgstr "Ne postoji informacija za radnju, trebalo bi da je dodate. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj"
 #: ----
 msgid "Please select some checkbox to perform action."
-msgstr "Silahkan pilih checkbok untuk melanjutkan"
+msgstr "Molimo izaberite neko polje da biste izvršili akciju"
 #: ----
 msgid "Install the Google Authenticator app for your phone"
-msgstr "Installl Google Authenticator for your phone"
+msgstr "Instaliraj google authenticator aplikaciju na telefon"
 #: ----
 msgid "On your phone, open a web browser."
-msgstr "Buka browser pada telpon anda"
+msgstr "Otvorite internet pretraživač na vašem telefonu"
 #: ----
 msgid "Go to m.google.com/authenticator."
-msgstr "Silahkan ke m.google.com/authenticator."
+msgstr "Idi na m.google.com/authenticator."
 #: ----
 msgid "Download and install the Google Authenticator application."
-msgstr "Unduh dan install aplikasi Google Authenticator"
+msgstr "Preuzmi i instaliraj aplikaciju Google Authenticator"
 #: ----
 msgid "Now open and configure Google Authenticator."
-msgstr "Sekarang buka dan atur Google Authenticator"
+msgstr "Sad otvori i konfiguriši Google Authenticator"
 #: ----
 msgid "Scan following Barcode to register the application automaticly:"
-msgstr "Scan barcode untuk mendaftarkan aplikasi secara otomatis"
+msgstr "Skeniraj sledeći barkod da automatski registruješ aplikaciju"
 #: ----
 msgid "Or use the following secret key to register the application manually:"
-msgstr "Atau gunakan kunci rahasia untuk mendaftarkan aplikasi secara manual"
+msgstr "Ili koristi sledeći tajni ključ za ručnu registraciju aplikacije"
 #: ----
 msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
-msgstr "Setelah memasukan secara manual dan menyimpan kunci, masukkan 6 digit kode verifikasi dari aplikasi Authenticator"
+msgstr "Nakon što si ručno uneo i sačuvao svoj ključ, unesi šestocifreni verifikacioni kod koji je proizvela aplikacija"
 #: ----
 msgid "The code is incorrect. Try again"
-msgstr "Kode salah. Silahkan coba lagi"
+msgstr "Kod je neispravan. Pokušaj ponovo."
