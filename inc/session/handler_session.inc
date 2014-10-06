@@ -48,6 +48,8 @@ session_name($conf['session_name']);
 
 global $conf;
 
+session_set_cookie_params(0, "/", "", false, true);
+
 //sanitize session name to avoid SQL injection
 $_COOKIE[$conf['session_name']] = htmlspecialchars($_COOKIE[$conf['session_name']]);
 
