@@ -1,6 +1,7 @@
 <?php
 
 include_once APPROOT . 'inc/lib_entity_forms.inc';
+require_once APPROOT . 'inc/ArgumentEncoder.php';
 include_once 'lib_analysis.inc';
 
 /**
@@ -8,6 +9,8 @@ include_once 'lib_analysis.inc';
  *
  */
 class analysisModule extends shnModule {
+
+    public $argumentEncoder;
 
     function section_mod_menu() {
         $data['breadcrumbs'] = shnBreadcrumbs::getBreadcrumbs();
@@ -24,6 +27,18 @@ class analysisModule extends shnModule {
         $this->main_entity = (isset($_POST['main_entity'])) ? $_POST['main_entity'] : $_GET['main_entity'];
 
         $this->search_entity = (isset($_GET['shuffle_results']) && $_GET['shuffle_results'] != 'all') ? $_GET['shuffle_results'] : $this->main_entity;
+
+        $this->createArgumentEncoder();
+    }
+
+    public function createArgumentEncoder() {
+        $whiteList = Array(
+            'request_page', 'rpp', 'save_query_record_number', 'name',
+            'description', 'created_date', 'created_by', 'query_type', 'sq', 
+            'filter', 'sort', 'sortorder'
+        );
+        
+        $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
     public function _act_search() {
@@ -158,8 +173,8 @@ class analysisModule extends shnModule {
         if (isset($_GET['query_save'])) {
             $saveQuery = new SaveQuery();
             $saveQuery->save_query_record_number = shn_create_uuid('query');
-            $saveQuery->name = $_GET['query_name'];
-            $saveQuery->description = $_GET['query_desc'];
+            $saveQuery->name = Reform::HtmlEncode($_GET['query_name']);
+            $saveQuery->description = Reform::HtmlEncode($_GET['query_desc']);
             $saveQuery->created_date = date("Y-m-d");
             $saveQuery->created_by = $_SESSION['username'];
             $query = (isset($_GET['query'])) ? $_GET['query'] : analysis_get_query();
@@ -182,6 +197,8 @@ class analysisModule extends shnModule {
 
         include_once APPROOT . 'inc/lib_form.inc';
         $this->query_result_pager = Browse::getSaveQueryList($_GET);
+        $this->query_result_pager->setArgumentEncoder($this->argumentEncoder);
+
         $this->query_list = $this->query_result_pager->get_page_data();
     }
 

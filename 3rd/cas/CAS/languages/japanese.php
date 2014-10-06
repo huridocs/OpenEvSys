@@ -1,27 +1,113 @@
 <?php
 
 /**
- * @file languages/japanese.php
- * @author fnorif (fnorif@yahoo.co.jp)
- * 
- * Now Encoding is EUC-JP and LF
+ * Licensed to Jasig under one or more contributor license
+ * agreements. See the NOTICE file distributed with this work for
+ * additional information regarding copyright ownership.
+ *
+ * Jasig licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * PHP Version 5
+ *
+ * @file     CAS/Language/Japanese.php
+ * @category Authentication
+ * @package  PhpCAS
+ * @author   fnorif <fnorif@yahoo.co.jp>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @link     https://wiki.jasig.org/display/CASC/phpCAS
+ */
+
+/**
+ * Japanese language class. Now Encoding is EUC-JP and LF
+ *
+ * @class    CAS_Languages_Japanese
+ * @category Authentication
+ * @package  PhpCAS
+ * @author   fnorif <fnorif@yahoo.co.jp>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @link     https://wiki.jasig.org/display/CASC/phpCAS
+ *
  **/
+class CAS_Languages_Japanese implements CAS_Languages_LanguageInterface
+{
+    /**
+     * Get the using server string
+     *
+     * @return string using server
+     */
+    public function getUsingServer()
+    {
+        return 'using server';
+    }
 
-$this->_strings = array(
- CAS_STR_USING_SERVER 
- => 'using server',
- CAS_STR_AUTHENTICATION_WANTED 
- => 'CAS¤Ë¤è¤ëÇ§¾Ú¤ò¹Ô¤¤¤Þ¤¹',
- CAS_STR_LOGOUT 
- => 'CAS¤«¤é¥í¥°¥¢¥¦¥È¤·¤Þ¤¹!',
- CAS_STR_SHOULD_HAVE_BEEN_REDIRECTED 
- => 'CAS¥µ¡¼¥Ð¤Ë¹Ô¤¯É¬Í×¤¬¤¢¤ê¤Þ¤¹¡£¼«Æ°Åª¤ËÅ¾Á÷¤µ¤ì¤Ê¤¤¾ì¹ç¤Ï <a href="%s">¤³¤Á¤é</a> ¤ò¥¯¥ê¥Ã¥¯¤·¤ÆÂ³¹Ô¤·¤Þ¤¹¡£',
- CAS_STR_AUTHENTICATION_FAILED 
- => 'CAS¤Ë¤è¤ëÇ§¾Ú¤Ë¼ºÇÔ¤·¤Þ¤·¤¿',
- CAS_STR_YOU_WERE_NOT_AUTHENTICATED 
- => '<p>Ç§¾Ú¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿.</p><p>¤â¤¦°ìÅÙ¥ê¥¯¥¨¥¹¥È¤òÁ÷¿®¤¹¤ë¾ì¹ç¤Ï<a href="%s">¤³¤Á¤é</a>¤ò¥¯¥ê¥Ã¥¯.</p><p>ÌäÂê¤¬²ò·è¤·¤Ê¤¤¾ì¹ç¤Ï <a href="mailto:%s">¤³¤Î¥µ¥¤¥È¤Î´ÉÍý¼Ô</a>¤ËÌä¤¤¹ç¤ï¤»¤Æ¤¯¤À¤µ¤¤.</p>',
- CAS_STR_SERVICE_UNAVAILABLE
- => '¥µ¡¼¥Ó¥¹ `<b>%s</b>\' ¤ÏÍøÍÑ¤Ç¤­¤Þ¤»¤ó (<b>%s</b>).'
-);
+    /**
+     * Get authentication wanted string
+     *
+     * @return string authentication wanted
+     */
+    public function getAuthenticationWanted()
+    {
+        return 'CASï¿½Ë¤ï¿½ï¿½Ç§ï¿½Ú¤ï¿½Ô¤ï¿½ï¿½Þ¤ï¿½';
+    }
 
+    /**
+     * Get logout string
+     *
+     * @return string logout
+     */
+    public function getLogout()
+    {
+        return 'CASï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½È¤ï¿½ï¿½Þ¤ï¿½!';
+    }
+
+    /**
+     * Get the should have been redirected string
+     *
+     * @return string should habe been redirected
+     */
+    public function getShouldHaveBeenRedirected()
+    {
+        return 'CASï¿½ï¿½ï¿½ï¿½ï¿½Ð¤Ë¹Ô¤ï¿½É¬ï¿½×¤ï¿½ï¿½ï¿½ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½ï¿½ï¿½Æ°Åªï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¤ï¿½ï¿½ï¿½ï¿½ï¿½ <a href="%s">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a> ï¿½ò¥¯¥ï¿½Ã¥ï¿½ï¿½ï¿½ï¿½ï¿½Â³ï¿½Ô¤ï¿½ï¿½Þ¤ï¿½ï¿½';
+    }
+
+    /**
+     * Get authentication failed string
+     *
+     * @return string authentication failed
+     */
+    public function getAuthenticationFailed()
+    {
+        return 'CASï¿½Ë¤ï¿½ï¿½Ç§ï¿½Ú¤Ë¼ï¿½ï¿½Ô¤ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½';
+    }
+
+    /**
+     * Get the your were not authenticated string
+     *
+     * @return string not authenticated
+     */
+    public function getYouWereNotAuthenticated()
+    {
+        return '<p>Ç§ï¿½Ú¤Ç¤ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½Ç¤ï¿½ï¿½ï¿½.</p><p>ï¿½â¤¦ï¿½ï¿½ï¿½Ù¥ê¥¯ï¿½ï¿½ï¿½ï¿½ï¿½È¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<a href="%s">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a>ï¿½ò¥¯¥ï¿½Ã¥ï¿½.</p><p>ï¿½ï¿½ï¿½ê¤¬ï¿½ï¿½è¤·ï¿½Ê¤ï¿½ï¿½ï¿½ï¿½ï¿½ <a href="mailto:%s">ï¿½ï¿½ï¿½Î¥ï¿½ï¿½ï¿½ï¿½È¤Î´ï¿½ï¿½ï¿½ï¿½</a>ï¿½ï¿½ï¿½ä¤¤ï¿½ï¿½ï¤»ï¿½Æ¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.</p>';
+    }
+
+    /**
+     * Get the service unavailable string
+     *
+     * @return string service unavailable
+     */
+    public function getServiceUnavailable()
+    {
+        return 'ï¿½ï¿½ï¿½ï¿½ï¿½Ó¥ï¿½ `<b>%s</b>\' ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¤Ç¤ï¿½ï¿½Þ¤ï¿½ï¿½ï¿½ (<b>%s</b>).';
+    }
+}
 ?>

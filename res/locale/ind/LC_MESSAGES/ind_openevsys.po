@@ -690,7 +690,7 @@ msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
 msgstr "Tidak bisa mencatat pada cakram"
 #: ----
 msgid "FALSE"
-msgstr "false"
+msgstr "flase"
 #: ----
 msgid "FAX"
 msgstr "Faks"

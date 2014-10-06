@@ -1,0 +1,2232 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "Kontrolor nije pronađen"
+#: ----
+msgid "_DAY_S__"
+msgstr "Dan/i"
+#: ----
+msgid "_MONTH_S__"
+msgstr "Mesec/i"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "Prvi nivo"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "Drugi nivo"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "Treći nivo"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "Greška 404: stranica nije pronađena"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "Četvrti nivo"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "Peti nivo"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "Šesti nivo"
+#: ----
+msgid "ACL_MODE"
+msgstr "ACL način"
+#: ----
+msgid "ACT"
+msgstr "Radnja"
+#: ----
+msgid "ACT_"
+msgstr "Radnja"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "Uradi detalj"
+#: ----
+msgid "ACT_S_"
+msgstr "Radnja"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "Obrazac za pretragu radnji"
+#: ----
+msgid "ACTION"
+msgstr "Akcija"
+#: ----
+msgid "ACTIONS"
+msgstr "Akcije"
+#: ----
+msgid "ACTIVATED"
+msgstr "Aktivirano"
+#: ----
+msgid "ACTS"
+msgstr "Radnje"
+#: ----
+msgid "ADD_ACT"
+msgstr "Dodaj radnju"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "Dodaj dodatne detalje"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "Dodaj dodatne detalje za"
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "Dodaj adresu"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "Dodaj biografske podatke"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "Dodaj lanac događaja"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "Dodaj informacije o događaju"
+#: ----
+msgid "ADD_FIELD"
+msgstr "Dodaj polje"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "Dodaj polje..."
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "Dodaj polja kako bi pretražio/la rezultate"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "Dodaj informaciju"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "Dodaj intervenišuću stranu"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "Dodaj intervenciju"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "Dodaj intervencije"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "Dodaj uključivanje"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "Dodaj jezik"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "Dodaj još počinilaca"
+#: ----
+msgid "ADD_NEW"
+msgstr "Dodaj novo"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "Dodaj novi dokument"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "Dodaj novi događaj"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "Dodaj novo polje"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "Dodaj novu osobu"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "Dodaj novog korisnika/cu"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "Dodaj počinioca"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "Dodaj počinioca/e"
+#: ----
+msgid "ADD_ROLE"
+msgstr "Dodaj ulogu"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "Dodaj izvor"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "Dodaj prateći/e dokument/e"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "Dodaj žrtvu"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "Dodaj žrtve i počinioce za ovaj događaj"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "Dodaj adresu"
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "Dodaj informaciju o događaju"
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "Dodaj adresu osobe"
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "Dodaj informacije o osobi"
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "Dodatna vrsta podataka"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "Dodatni podaci"
+#: ----
+msgid "ADDRESS"
+msgstr "Adresa"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "Adresa osobe"
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "Vrsta adrese"
+#: ----
+msgid "ADMIN"
+msgstr "Admin"
+#: ----
+msgid "ADVANCED"
+msgstr "Napredni"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "Napredna pretraga"
+#: ----
+msgid "AFTER"
+msgstr "Posle"
+#: ----
+msgid "AGAINST"
+msgstr "Nasuprot"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "Sve kolone su resetovane na prvobitne vrednosti"
+#: ----
+msgid "ANALYSIS"
+msgstr "Analiza"
+#: ----
+msgid "AND"
+msgstr "I"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "Trajno primeni promene"
+#: ----
+msgid "ARREST"
+msgstr "Zaustavi"
+#: ----
+msgid "AT"
+msgstr "Na"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "Na ili nakon"
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "Na ili pre"
+#: ----
+msgid "AUDIT"
+msgstr "Audit"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "Audit log"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "Podaci o audit log nisu dostupni za ovaj događaj"
+#: ----
+msgid "BACK"
+msgstr "Nazad"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "Nazad na pregled događaja"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "Nazad na pregled osoba"
+#: ----
+msgid "BASIC"
+msgstr "Osnovno"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "Osnovna pretraga"
+#: ----
+msgid "BEFORE"
+msgstr "Pre"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "Biografski podaci"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "Biografski podaci"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "Biografski podaci"
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "Biografski podaci"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "Pretraži dokument"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "Pretraži događaj"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "Pretraži događaje"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "Pretraži osobe"
+#: ----
+msgid "BY_WHOM"
+msgstr "Od strane koga"
+#: ----
+msgid "CANCEL"
+msgstr "Odustani"
+#: ----
+msgid "CELLULAR"
+msgstr "Mobilni"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "Lanac događaja"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "Lanac događaja"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "Lanac događaja"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "Lanac događaja ne postoji"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "Lanac događaja"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "Lanac događaja"
+#: ----
+msgid "CHANGE"
+msgstr "Promeni"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "Promeni vrstu dodatnih podataka"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "Promeni lozinku"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "Promeni pregled"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "Izaberi akciju"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "Izaberi otpremanje podataka"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "Izaberi početnu tačku"
+#: ----
+msgid "CLARIFY"
+msgstr "Pojasni"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "Napomena za pojašnjenje"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "Napomene za pojašnjenje"
+#: ----
+msgid "CLEAR"
+msgstr "Izbriši"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "Klikni da preuzmeš XML fajl Događaji za sve beleške u ovom OpenEvSys"
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "Klikni da izabereš opciju"
+#: ----
+msgid "CLOSE"
+msgstr "Zatvori"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "Kolona resetovana na prvobitne vrednosti"
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "Kombinovano pretraživanje"
+#: ----
+msgid "COMPILE"
+msgstr "Kompiliraj"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "Konfig varijable"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "Potvrdi novu lozinku"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "Potvrdi lozinku"
+#: ----
+msgid "CONTAINS"
+msgstr "Sadrži"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "Kontekstualne informacije"
+#: ----
+msgid "CONTINUE"
+msgstr "Nastavi"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "Nastavi izmenu podataka u ovom dokumentu"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "Nastavi izmenu lanca događaja u ovoj belešci"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "Nastavi"
+#: ----
+msgid "COUNT"
+msgstr "Prebroj"
+#: ----
+msgid "COUNTRY"
+msgstr "Zemlja"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "Kreiraj izveštaj na osnovu ovih rezultata"
+#: ----
+msgid "CREATED_BY"
+msgstr "Kreirao/la"
+#: ----
+msgid "CREATED_DATE"
+msgstr "Datum kreiranja"
+#: ----
+msgid "CREATOR"
+msgstr "Osoba koja je kreirala"
+#: ----
+msgid "CSV"
+msgstr "CSV"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "Trenutna lozinka"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "Trenutna podešavanja"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "Trenutna vrednost"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "Razmena podataka"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "Greška u bazi podataka"
+#: ----
+msgid "DATE"
+msgstr "Datum"
+#: ----
+msgid "DATE_CREATED"
+msgstr "Datum kreiranja"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "Polje datum"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "Datum intervencije"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "Datum materijala iz izvora"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "Potreban datum; nevalidan datum"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "Datum unosa"
+#: ----
+msgid "DEFINITION"
+msgstr "Definisanje"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "Stepen učešća"
+#: ----
+msgid "DELETE"
+msgstr "Obriši"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "Obriši dodatne podatke"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "Obriši dokument"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "Obriši ovaj događaj"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "Obriši ovu osobu"
+#: ----
+msgid "DESCRIPTION"
+msgstr "Opis"
+#: ----
+msgid "DESIGNATION"
+msgstr "Imenovanje"
+#: ----
+msgid "DESTRUCTION"
+msgstr "Destrukcija"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "Onemogući pomoć"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "Onemogući interaktivni prevod"
+#: ----
+msgid "DISABLED"
+msgstr "Onemogućeno"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "Da li želite da obrišete dodatne detalje?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "Da li želite da obrišete izabranu/e adresu/e?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "Da li želite da obrišete izabrane biografske podatke?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "Da li želite da obrišete izabrani lanac događaja?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "Da li želite da izbrišete odabrane informacije?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "Da li želite da izbrišete odabrane intervencije?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "Da li želite da obrišete odabrane izraze iz mikro-leksikona sinonima?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "Da li želite da obrišete odabrane Upite?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "Da li želite da obrišete izabrane beleške?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "Da li želite da obrišete izabrane korisnike?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "Da li želite da obrišete ovaj dokument?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "Da li želite da obrišete ovaj događaj?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "Da li želite da obrišete ovu osobu?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "Da li želite da premestite postojeći prilog za ovaj dokument?"
+#: ----
+msgid "DOCUMENT"
+msgstr "Dokument"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "Podaci o dokumentu"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "Dokument ne postoji"
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "Forma za pretragu dokumenta"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "Naslov dokumenta"
+#: ----
+msgid "DOCUMENTS"
+msgstr "Dokumenti"
+#: ----
+msgid "DOWNLOAD"
+msgstr "Preuzmi"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "Preuzmi dokument"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "Izveštaj o grešci pri preuzimanju"
+#: ----
+msgid "E_MAIL"
+msgstr "Imejl"
+#: ----
+msgid "EDIT"
+msgstr "Izmeni"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "Izmeni dodatne podatke"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "Izmeni biografske podatke"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "Izmeni podatke"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "Izmeni sažetak događaja"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "Izmeni profil"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "Izmeni ovu radnju"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "Izmeni ovu adresu"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "Izmeni biografske podatke"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "Izmeni lanac događaja"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "Izmeni ovaj događaj"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "Izmeni ovu informaciju"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "Izmeni intervenišuću stranu"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "Izmeni ovu intervenciju"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "Izmeni ovo učešće"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "Izmeni ovog počinioca"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "Izmeni ovu osobu"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "Izmeni ovu žrtvu"
+#: ----
+msgid "EDIT_USER"
+msgstr "Izmeni korisnika/cu"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "Izmeni adresu osobe"
+#: ----
+msgid "EMAIL"
+msgstr "Imejl"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "Neophodna imejl adresa; imejl adresa nevalidna"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "Omogući pomoć"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "Omogući interaktivni prevod"
+#: ----
+msgid "END_DATE"
+msgstr "Datum završetka"
+#: ----
+msgid "ENTITY"
+msgstr "Entitet"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "Dozvola entiteta"
+#: ----
+msgid "ENTRY"
+msgstr "Unos"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "Greška se pojavila tokom ažuriranja servera"
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "Greška se pojavila tokom kreiranja huriterma"
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "Greška prilikom čuvanja fajla. Onemogućeno čuvanje fajla."
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "Greška prilikom stvaranja fajla."
+#: ----
+msgid "EVENT"
+msgstr "Događaj"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "Opis događaja"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "Događaj ne postoji"
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "Format za pretragu događaja"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "Standardni format događaja XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "Naslov događaja"
+#: ----
+msgid "EVENTS"
+msgstr "Događaji"
+#: ----
+msgid "EXAMPLE"
+msgstr "Primer"
+#: ----
+msgid "EXAMPLES"
+msgstr "Primeri"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "Postojeća polja"
+#: ----
+msgid "EXPORT"
+msgstr "Izvezi"
+#: ----
+msgid "EXPORT__"
+msgstr "Izvezi:"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "Datum izvoza"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "Izvezi događaje"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "Izvezi primere (export instance)"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "Izvezi ovu tabelu u spreadsheet"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "Vreme izvoza"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "Neuspeh pri prepisivanju fajla na disk"
+#: ----
+msgid "FALSE"
+msgstr "Netačno"
+#: ----
+msgid "FAX"
+msgstr "Faks"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "Polje uspešno kreirano"
+#: ----
+msgid "FIELD_LABEL"
+msgstr "Etiketa polja"
+#: ----
+msgid "FIELD_NAME"
+msgstr "Ime polja"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "Ime, broj I etiketa polja ne mogu biti prazni. Molimo dodajte neke vrednosti"
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "Ime polja već postoji. Molimo dodelite polju drugo ime"
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "Broj polja"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "Broj polja već postoji. Molimo izaberite drugi broj."
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "Brojevi polja od 60 do 80 rezervisani su za polja za upravljanje. Molimo upotrebite broj koji se ne nalazi u ovom opsegu."
+#: ----
+msgid "FIELD_RESET"
+msgstr "Resetovanje polja"
+#: ----
+msgid "FIELD_S_"
+msgstr "Polje/a"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "Vrsta polja"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "Upisivanje u fajl onemogućeno"
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "Otpremanje fajla zaustavljeno zbog ekstenzije"
+#: ----
+msgid "FILTER"
+msgstr "Filter"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "Filter opcije i rezultati"
+#: ----
+msgid "FINAL_DATE"
+msgstr "Konačni datum"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "Otvori OpenEvsys i vidi kako su povezani kao podrška drugim formatima"
+#: ----
+msgid "FINISH"
+msgstr "Završeno"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "Završeno! Možete da uradite sledeće"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "Završeno! Možete da uradite sledeće:"
+#: ----
+msgid "FIRST_NAME"
+msgstr "Ime"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "Folder već postoji! Dajte folderu drugo ime."
+#: ----
+msgid "FOLDER_NAME"
+msgstr "Ime foldera"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "Ova polja ne mogu ostati prazna"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "Ovaj huritem već postoji."
+#: ----
+msgid "FORCE_DELETE"
+msgstr "Naredi brisanje"
+#: ----
+msgid "FORM"
+msgstr "Obrazac"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "Prilagođavanje obrasca"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "Dodatne informacije"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "Idi na parent nivo"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "Grupiši prema danu"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "Grupiši prema mesecu"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "Grupiši prema godini"
+#: ----
+msgid "GUIDELINES"
+msgstr "Smernice"
+#: ----
+msgid "HELP_TEXT"
+msgstr "Pomoćni tekst"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "Sakrij obrazac za adresu"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "Sakrij obrazac za pretraživanje"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "Sakrij prateće dokumente"
+#: ----
+msgid "HIDE_TREE"
+msgstr "Sakrij drvo"
+#: ----
+msgid "HOW_WAS_"
+msgstr "Kakav je…"
+#: ----
+msgid "HURICODE"
+msgstr "Hurikod"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huritem ne može da ostane prazan"
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "Ukoliko je događaj/osoba poverljiv?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "Ukoliko ste na ovoj stranici, to znači da nemate pristup nijednom modulu u OpenEvsys. Molimo kontaktirajte sistem administratora za više detalja."
+#: ----
+msgid "IMPACT"
+msgstr "Uticaj"
+#: ----
+msgid "IMPORT"
+msgstr "Uvezi"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "Uvezi datum"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "Uvezi događaje"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "Uvezi log"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "Podaci o uvozu loga nisu dostupni"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "Uvezi vreme"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "Između"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "U rezultatima pretrage"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "Tabela incidenata"
+#: ----
+msgid "INFORMATION"
+msgstr "Informacija"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "Informacija o"
+#: ----
+msgid "INFORMATION_S_"
+msgstr "Informacija/e"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "Obrazac za pretragu informacija"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "Prvobitni datum"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "Drugi učesnici"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "Drugi učesnik/ca"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "Format za pretragu drugih učesnika/ca"
+#: ----
+msgid "INTERVENTION"
+msgstr "Intervencija"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "Intervencije"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "Obrazac za pretragu intevencija"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "Intervencije"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "Neispravan imejl"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "Neispravna imejl adresa"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "Neispravan hurikod, trebalo bi da ima 12 cifara"
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Neispravno korisnička identifikacija ili lozinka, molimo pokušajte ponovo."
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Neispravno korisničko ime ili lozinka! Molimo pokušajte ponovo."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "uključen u"
+#: ----
+msgid "INVOLVEMENT"
+msgstr "ukljupčenost"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "detalji o uključenosti"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "uključenosti/i"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "obrazac za pretragu uključenosti"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "uključenosti/i"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "je podelement..."
+#: ----
+msgid "IS_EMPTY"
+msgstr "je prazno"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "neophodno je"
+#: ----
+msgid "KILLING"
+msgstr "ubistivo"
+#: ----
+msgid "LABEL"
+msgstr "oznaka"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "Oznaka ne može biti prazna. Unesi vrednost."
+#: ----
+msgid "LABEL_IN_"
+msgstr "Oznaka u"
+#: ----
+msgid "LABEL_S_"
+msgstr "Oznake"
+#: ----
+msgid "LABELS"
+msgstr "Oznake"
+#: ----
+msgid "LANGUAGE"
+msgstr "Jezik"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "Nije moguće izvršiti upis u jezik direktorijuma"
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "Jezik uklonjen"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "Jezik uspešno kreiran"
+#: ----
+msgid "LAST_NAME"
+msgstr "Prezime"
+#: ----
+msgid "LIKE"
+msgstr "Kao"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "Povezano kad"
+#: ----
+msgid "LINKS"
+msgstr "Veze"
+#: ----
+msgid "LOCALIZATION"
+msgstr "Lokalizacija"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "Podaci o logu nedostupni za ovu osobu"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "Upravljaj jezicima"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "Poruka uspešno sačuvana"
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "Mikro-rečnik"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "Prilagođavanje mikro-rečnika"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "Izrazi mikro-rečnika"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "Nedostaje privremeni folder"
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "Izmenjena vrednost"
+#: ----
+msgid "MODULE"
+msgstr "Modul"
+#: ----
+msgid "MODULES"
+msgstr "Moduli"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "Status monitoringa"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "Više o ovom događaju"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "Više o ovoj osobi"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "Moje preferencije"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "Vrsta Mysql podataka"
+#: ----
+msgid "NAME"
+msgstr "Ime"
+#: ----
+msgid "NEW"
+msgstr "Novo"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "Novi dokument"
+#: ----
+msgid "NEW_EVENT"
+msgstr "Novi događaj"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "Nova lozinka"
+#: ----
+msgid "NEW_PERSON"
+msgstr "Nova osoba"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "Novo ime uloge"
+#: ----
+msgid "NEXT"
+msgstr "Sledeće"
+#: ----
+msgid "NO"
+msgstr "Ne"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "Ne postoji sačuvana pretraga."
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "Nije postoji sačuvana beleška."
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "Niste izabrali belešku"
+#: ----
+msgid "NOT_="
+msgstr "nije="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "Neispravna vrsta polja. Pokušajte ponovo"
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "ne sadrži"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "ne između"
+#: ----
+msgid "NOT_LIKE"
+msgstr "ne kao"
+#: ----
+msgid "NOT_ON"
+msgstr "ne na"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "Potreban broj, nevalidan broj"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys je uspešno uvezao podatke"
+#: ----
+msgid "OR"
+msgstr "ILI"
+#: ----
+msgid "ORDER"
+msgstr "Uredi"
+#: ----
+msgid "ORGANIZATION"
+msgstr "Organizacija"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "Prvobitni rezultati pretrage"
+#: ----
+msgid "PAGE__"
+msgstr "Stranica:"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "Obeleži stranice u rezultatima"
+#: ----
+msgid "PASSWORD"
+msgstr "Lozinka"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "Neispravna lozinka"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "Lozinka se ne podudara"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "Neophodna lozinka"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "Zabranjen pristup"
+#: ----
+msgid "PERMISSIONS"
+msgstr "Dozvole/pristupi"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "Dozvola/pristup..."
+#: ----
+msgid "PERMISSONS"
+msgstr "Dozvola/pristup"
+#: ----
+msgid "PERPETRATOR"
+msgstr "Počinilac"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "Ime/na počinioca/laca"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "Obrazac za pretragu počinioca"
+#: ----
+msgid "PERPETRATORS"
+msgstr "Počinioci"
+#: ----
+msgid "PERSON"
+msgstr "Osoba"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "Adresa osobe"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "Podaci o osobi"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "Osoba ne postoji"
+#: ----
+msgid "PERSON_NAME"
+msgstr "Ime osobe"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "Beleška o osobi"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "Beleške o osobi"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "Datum rođenja osobe nije unet"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "Obrazac za pretraživanje osoba"
+#: ----
+msgid "PERSONS"
+msgstr "Osobe"
+#: ----
+msgid "PHONE"
+msgstr "Telefon"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "Potreban broj telefona; neispravan broj telefona"
+#: ----
+msgid "PICTURE"
+msgstr "Fotografija"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "Molimo dodajte stanje pre pretrage"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "Molimo dodajte stanje unutar polja za brojanje radi brojanja"
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "Molimo izaberite korisnika za brisanje"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "Molimo izaberite validnog korisnika"
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "Molimo otpremite validan OpenEvSys XML fajl"
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "Molimo koristite opciju Moje preferencije u gornjem desnom uglu kako biste izmenili svoje podatke"
+#: ----
+msgid "PREVIOUS"
+msgstr "Prethodno"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "Odštampaj ovaj događaj"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "Odštampaj ovu stranu"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "Odštampaju ovu osobu"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "Pregled za štampu"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "Upit uspešno obrisan"
+#: ----
+msgid "QUERY_ID"
+msgstr "Upit ID"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "Upit uspešno sačuvan"
+#: ----
+msgid "REC_NO"
+msgstr "Beleška broj"
+#: ----
+msgid "RECORD_NO"
+msgstr "Beleška broj"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "Broj beleške"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "Vrsta belešle"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "Beleški po strani"
+#: ----
+msgid "REGEX"
+msgstr "Regex"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "Povezani događaj"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "Naslov povezanog događaja"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "Povezana osoba"
+#: ----
+msgid "REMARKS"
+msgstr "Napomene"
+#: ----
+msgid "REMOVE"
+msgstr "Ukloni"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "Ukloni pojašnjenje"
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "Ukloni uslove"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "Ukloni jezik"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "Ukloni selekciju"
+#: ----
+msgid "REPORT"
+msgstr "Prijavi"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "Tražena beleška o postupku/aktu ne postoji"
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "Tražena informacija ne postoji"
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "Tražena intervencija ne postoji"
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "Tražena uključenost ne postoji"
+#: ----
+msgid "RESET"
+msgstr "Resetuj"
+#: ----
+msgid "RESET_ALL"
+msgstr "Resetuj sve"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "Ograniči za ulogu"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "Ograniči za korisnika"
+#: ----
+msgid "ROLE"
+msgstr "Uloga"
+#: ----
+msgid "ROLE_LIST"
+msgstr "Lista uloga"
+#: ----
+msgid "ROLES"
+msgstr "Uloge"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "Uloge / Modul kontrole pristupa"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "Uloge & amp; modul kontrole pristupa"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "uloge sa dozvolom pristupa ovom događaju"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Uloge sa dozvolom pristupa ovoj osobi"
+#: ----
+msgid "SAVE"
+msgstr "Sačuvaj"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "Sačuvaj adresu"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "Sačuvaj dokument"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "Sačuvaj tekst pomoći"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "Sačuvaj nova polja"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "Sačuvaj upit"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "Sačuvaj ovaj upit"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "Sačuvaj ovaj upit s ovim mešanjem"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "Sačuvaj upite"
+#: ----
+msgid "SEARCH"
+msgstr "Pretraga"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "Pretraži dodatne informacije od značaja za određene vrste radnji"
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "Kriterijumi pretrage"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "Obrazac za pretragu"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "Pretraži u bazi podataka"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "Pretraži informacije o događajima"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "Pretraži informacije o osobama koje su počinioci radnji protiv žrtve"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "Pretraga informacija o osobama koji"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "Pretraži informacije o osobama koje su dale informaciju"
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "Pretraži informacije o osobama, bez obzira na to da li su u pitanju pojedinci, grupe ili organizacijama"
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "Pretraži informacije o osobama koje su bile žrtve"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "Pretraga informacija o radnji počinjenoj protiv žrtve"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "Pretraga informacija o podacima koje su dali Izvori"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "Pretraga informacija o načinima na koje su počinioci bili uključeni u određenu radnju"
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "Pretraga beleški o tome kako su osobe intervenisale u događaju u ime žrtava"
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "Pretraži izveštaj"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "Rezultati pretrage"
+#: ----
+msgid "SEARCHABLE"
+msgstr "Pretraživo"
+#: ----
+msgid "SECTION"
+msgstr "Sekcija"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "Vidi sliku u punoj veličini"
+#: ----
+msgid "SELECT"
+msgstr "Izaberi"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "Izaberi format"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "Izaberi mikro-leksikon sinonima"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "Izaberi entitet"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "Izaberi polje"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Izaberi polje iz"
+#: ----
+msgid "SELECT_ROLE"
+msgstr "Izaberi ulogu"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "Izaberi sekundarni entitet"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "Izaberi drvo mogućnosti"
+#: ----
+msgid "SET"
+msgstr "Podesi"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "Podesi ACL modalitet"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "Podesi jezik"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "Podesi jezik sistema"
+#: ----
+msgid "SHARE"
+msgstr "Podeli"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "Pokaži obrazac za adrese"
+#: ----
+msgid "SHOW_ALL"
+msgstr "Prikaži sve"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "Prikaži obrazac za pretragu"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "Prikaži prateći/e dokumenti/e"
+#: ----
+msgid "SIGN_IN"
+msgstr "Prijavi se"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "Prijavi se u OpenEvSys"
+#: ----
+msgid "SIGN_OUT"
+msgstr "Odjavi se"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "Neke greške su se pojavile tokom uvoza podataka"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "Zvuči kao"
+#: ----
+msgid "SOURCE"
+msgstr "Izvor"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "Ime izvora"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "Obrazac za pretragu izvora"
+#: ----
+msgid "SOURCES"
+msgstr "Izvori"
+#: ----
+msgid "SPREADSHEET"
+msgstr "Tabelarni prikaz/spreadsheet"
+#: ----
+msgid "START_DATE"
+msgstr "Započni datum"
+#: ----
+msgid "STATUS"
+msgstr "Statu"
+#: ----
+msgid "SUBMIT"
+msgstr "Podnesi"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "Prateći dokumenti"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "Konfiguracija sistema"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "Sistemska greška"
+#: ----
+msgid "TERM_IN"
+msgstr "Pojam u"
+#: ----
+msgid "TERM_IN_"
+msgstr "Pojam u"
+#: ----
+msgid "TEXT"
+msgstr "Tekst"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "Polje za tekst sa ograničenjem od 200 karaktera"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "Oblast za tekst neograničene dužine"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "Otpremljeni dokument nije validni XML dokument"
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "Događaj je povezan"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "Stari prilog uz fajl je apdejtovan novim prilogom"
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "Osoba još uvek nema ni jednu ulogu!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "Dve lozinke se razlikuju!"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "Otpremljeni fajl premašuje maksimalnu veličinu fajla koja je navedena u html formatu"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "Otpremljeni fajl premašuje maksimalnu veličinu fajla koja je navedena u php.ini"
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "Otpremljeni fajl je samo delimično otpremljen"
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Dokument još uvek ne postoji. Trebalo bi da dodate dokument!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Prateći dokumenti o događaju još uvek ne postoje. Trebalo bi da ih dodate!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Za ovu osobu još uvek nije dodata adresa. Trebalo bi da dodate adresu!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "O ovoj osobi još uvek ne postoje nikakvi biografski podaci. Trebalo bi da ih dodate!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Informacije o događaju još uvek ne postoje! Trebalo bi da ih dodate! Kliknite na dugme „Dodaj novi događaj“ kako biste dodali novi događaj."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Informacije o lancu događaja još uvek ne postoje. Trebalo bi da ih dodate!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Informacije o intervenišućim stranama i intervencijama još uvek ne postoje. Trebalo bi da ih dodate!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Informacije o izvoru i informacijama još uvek ne postoje. Trebalo bi da ih dodate."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "Informacije o žrtvama i počiniocima još uvek ne postoje. Trebalo bi da ih dodate."
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Informacije o osobi još uvek ne postoje. Trebalo bi da ih dodate!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "Vremenski kod"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "Da biste videli dokument najpre morate da odaberete dokument iz liste dokumenata"
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "Da biste videli osobu najpre morate da odaberete osobu iz liste osoba"
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "Da biste videli događaj najpre morate da odaberete događaj iz liste događaja."
+#: ----
+msgid "TORTURE"
+msgstr "Mučenje"
+#: ----
+msgid "TRANSLATE"
+msgstr "Prevedi"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "Prevod nije ažuriran! Molimo dajte dozvolu direktorijumu i fajlu da re/lociraju folder."
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "Prevod uspešno ažuriran"
+#: ----
+msgid "TRUE"
+msgstr "Tačno."
+#: ----
+msgid "TYPE"
+msgstr "Ukucaj/vrsta"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Ukucaj datum rođenja u brojevima!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Ukucaj mesec rođenja u brojevima!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "Vrsta radnje"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "Vrsta lanca događaja"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "Vrsta intervencije"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "Vrsta odnosa"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Ukucaj id korisnika u polje za tekst i klikni na Podeli kako bi ovaj događaj bio dostupan željenom korisniku"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Ukucaj id korisnika u polje za tekst i klikni na Podeli kako bi ova osoba bila dostupna željenom korisniku"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "Ukucaj godinu rođenja u brojevima!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "Ukucaj celu godinu rođenja!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "Nije moguće ukloniti neke pojmove iz mikro-leksikona sinonima zato što ih već koriste u izveštajima."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "Nije moguće resetovati polje."
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "Nije moguće resetovati polja."
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "Nepoznata greška pri otpremanju."
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "Nenaslovljen upit"
+#: ----
+msgid "UPDATE"
+msgstr "Ažuriraj"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "Ažuriraj listu kontrole pristupa"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "Ažuriraj obrazac"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "Ažuriraj dozvole"
+#: ----
+msgid "UPLOAD"
+msgstr "Otpremi"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "Otpremi fajl"
+#: ----
+msgid "USER"
+msgstr "Korisnik"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "Korisničko upravljanje"
+#: ----
+msgid "USER_NAME"
+msgstr "Ime korisnika"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Korisnik nije pronađen! Neispravno korisničko ime ili lozinka! Molimo pokušajte ponovo."
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "Korisnički id ne postoji."
+#: ----
+msgid "USERNAME"
+msgstr "Korisničko ime"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "Korisničko ime već postoji, upotrebite drugo korisničko ime."
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "Korisničko ime ne može biti prazno"
+#: ----
+msgid "USERS"
+msgstr "Korisnici"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Korisnici s dozvolom da pristupe ovom događaju."
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Korisnici s dozvolom da pristupe ovoj osobi"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "Korisnici s dozvolom"
+#: ----
+msgid "VALIDATION"
+msgstr "Validacija"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "Vrsta validacije"
+#: ----
+msgid "VERSION"
+msgstr "Verzija"
+#: ----
+msgid "VICTIM"
+msgstr "Žrtva"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "Ime žrtve"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "Obrazac za pretragu žrtve"
+#: ----
+msgid "VICTIMS"
+msgstr "Žrtva"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "Žrtve i počinioci"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "Vidi belešku o radnji"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "Vidi adresu"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "Vidi biografske detalje"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "Vidi belešku o lancu događaja"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "Vidi dokument"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "Vidi događaj"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "Vidi belešku o događaju"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "Vidi belešku o informaciji"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "Vidi belešku o uključenim stranama"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "Vidi belešku o intervencijama"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "Vidi belešku o učešću"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "Vidi belešku o počiniocu"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "Vidi osobu"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "Vidi sa njom povezanu osobu"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "Vidi belešku o izvoru"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "Vidi belešku o žrtvi"
+#: ----
+msgid "VISIBILITY"
+msgstr "Vidljivost"
+#: ----
+msgid "VISIBLE"
+msgstr "Vidljiv"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "Vidljivo u pretrazi"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "Vidljivo u obrascu"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "Vidljivo u pregledu"
+#: ----
+msgid "WEB"
+msgstr "Veb"
+#: ----
+msgid "WEBSITE"
+msgstr "Vebsajt"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "Šta se desilo..."
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "Koja intervencija je u pitanju?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "Ko je odgovoran za..."
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "Koj je intervenišuća strana?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "Ko je izvor?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "Ko je žrtva?"
+#: ----
+msgid "YEAR_S__"
+msgstr "Godina/e:"
+#: ----
+msgid "YES"
+msgstr "Da"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "Izabrali ste da želite da obrišete Događaj. To znači da ćete obrisati belešle koje se nalaze u nastavku. Da li želite da nastavite?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "Ne možete da promenite dozvolu administratora."
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "Ne možete obrisati druge admin korisnike."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "Ne možete obrisati nalog administratora."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "Ne možete obrisati podrazumevani jezik."
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "Ne možete izbrisati sebe iz liste korisnika."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "Nemate dozvolu da izmenite podatke o drugim admin korisnicima."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "Izabrali ste i neke nadređene pojmove; ukoliko nastavite, njima podređeni pojmovi će takođe biti obrisani."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "Morate da popunite ova polja."
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "Morate da izaberete entitet pre brojanja."
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "Cookie funkcija vašeg pretraživača je isključena! Molimo da je uključite."
+#: ----
+msgid "EXTENSIONS"
+msgstr "Proširenja/ekstenzije."
+#: ----
+msgid "ABOUT_OE"
+msgstr "O OpenEvsys-u"
+#: ----
+msgid "AGPL"
+msgstr "AGPL v3 odobreno"
+#: ----
+msgid "REQUIRED"
+msgstr "Zahtevano"
+#: ----
+msgid "YES_CONFIDENTIALITY"
+msgstr "Da (za poverljivost)"
+#: ----
+msgid "NO_CONFIDENTIALITY"
+msgstr "Ne (za poverljivost)"
+#: ----
+msgid "ERROR_SERVER"
+msgstr "Server je vratio grešku; molimo kontaktirajte administatora sistema."
+#: ----
+msgid "NULL_ROWS"
+msgstr "Prazni redovi"
+#: ----
+msgid "PHONE_NO"
+msgstr "Broj telefona"
+#: ----
+msgid "NUMERICAL"
+msgstr "Numerički"
+#: ----
+msgid "ANALYST"
+msgstr "Analitičar"
+#: ----
+msgid "DATA_ENTRY"
+msgstr "Unos podataka"
+#: ----
+msgid "ENTITY_GROUPS"
+msgstr "Grupe entiteta"
+#: ----
+msgid "CREATE"
+msgstr "Kreiraj"
+#: ----
+msgid "READ"
+msgstr "Čitaj"
+#: ----
+msgid "LINKING"
+msgstr "Povezivanje"
+#: ----
+msgid "PRIMARY"
+msgstr "Primarno"
+#: ----
+msgid "SELECT_LANGUAGE"
+msgstr "Odaberi jezik"
+#: ----
+msgid "NO_ATTACHMENT"
+msgstr "Ovaj dokument nema priloge"
+#: ----
+msgid "BROWSE"
+msgstr "Pretraži"
+#: ----
+msgid "ROWS"
+msgstr "Red/ovi"
+#: ----
+msgid "ADVANCED_SEARCH_REPORT"
+msgstr "Obrazac napredne pretrage"
+#: ----
+msgid "Address"
+msgstr "Adresa osobe"
+#: ----
+msgid "latitude"
+msgstr "Geografska širina"
+#: ----
+msgid "longitude"
+msgstr "Geografska dužina"
+#: ----
+msgid "View"
+msgstr "Pregled"
+#: ----
+msgid "Micro-thesauri created successfully"
+msgstr "Mikro-leksikon sinonima uspešno kreiran"
+#: ----
+msgid "Radio field"
+msgstr "Radio polje"
+#: ----
+msgid "Geolocation"
+msgstr "Geolokacija"
+#: ----
+msgid "User Select"
+msgstr "Odabir korisnika"
+#: ----
+msgid "Multivalue User Select"
+msgstr "Viševrednosni odabir korisnika"
+#: ----
+msgid "Tree"
+msgstr "Drvo"
+#: ----
+msgid "Multivalue Tree"
+msgstr "Viševrednosno drvo"
+#: ----
+msgid "Multivalue Select"
+msgstr "Viševrednosti odabir"
+#: ----
+msgid "Please select items to perform action"
+msgstr "Molimo odaberite stavke da biste izvršili akciju"
+#: ----
+msgid "Dashboard"
+msgstr "Komandna tabla"
+#: ----
+msgid "Micro-thesauri cannot be empty"
+msgstr "Mikro-leksikon sinonima ne može biti prazan"
+#: ----
+msgid "Micro-thesauri name already exists"
+msgstr "Ime mikro-leksikona sinonima već postoji"
+#: ----
+msgid "Login Information"
+msgstr "Informacije o loginu"
+#: ----
+msgid "Profile Information"
+msgstr "Informacije o profilu"
+#: ----
+msgid "Print configuration"
+msgstr "Konfiguracija štampača"
+#: ----
+msgid "Header for report print view"
+msgstr "Zaglavlje za štampani pregled izveštaja"
+#: ----
+msgid "Header for event print view"
+msgstr "Zaglavlje za štampani pregled događaja"
+#: ----
+msgid "Sidebar for event print view"
+msgstr "Bočni pregled za pregled štampe događaja"
+#: ----
+msgid "Header for person print view"
+msgstr "Zaglavlje za štampani pregled osobe"
+#: ----
+msgid "Sidebar for person print view"
+msgstr "Bočni pregled za štampani pregled osobe"
+#: ----
+msgid "Details"
+msgstr "Detalji"
+#: ----
+msgid "Add new term"
+msgstr "Dodaj novi termin"
+#: ----
+msgid "Searchable in Analysis"
+msgstr "Pretraživo u analizi"
+#: ----
+msgid "Visible in Analysis"
+msgstr "Vidljivo u analizi"
+#: ----
+msgid "Add new Micro-thesauri"
+msgstr "Dodaj novi mikro-leksikon sinonima"
+#: ----
+msgid "Select language"
+msgstr "Odaberi jezik"
+#: ----
+msgid "Header for login page"
+msgstr "Zaglavlje na stranici za logovanje"
+#: ----
+msgid "Multivalue"
+msgstr "Viševrednosni"
+#: ----
+msgid "Enabled"
+msgstr "Omogućeno"
+#: ----
+msgid "Hide in case of"
+msgstr "Sakrij u slučaju"
+#: ----
+msgid "Set visible"
+msgstr "Podesi da bude vidljivo"
+#: ----
+msgid "Disable"
+msgstr "Onemogući"
+#: ----
+msgid "Apply"
+msgstr "Primeni"
+#: ----
+msgid "Vocab number"
+msgstr "Vocab broj"
+#: ----
+msgid "disabled"
+msgstr "Onemogućeno"
+#: ----
+msgid "Undefined"
+msgstr "Nedefinisano"
+#: ----
+msgid "Load"
+msgstr "Učitaj"
+#: ----
+msgid "Select facets"
+msgstr "Odaberi"
+#: ----
+msgid "Date range"
+msgstr "Opseg datuma"
+#: ----
+msgid "Timeline type"
+msgstr "Vrsta vremenske linije"
+#: ----
+msgid "DAY"
+msgstr "DAN"
+#: ----
+msgid "MONTH"
+msgstr "MESEC"
+#: ----
+msgid "YEAR"
+msgstr "GODINA"
+#: ----
+msgid "Total Count"
+msgstr "Ukupan broj"
+#: ----
+msgid "Added in last 30 days"
+msgstr "Dodato u prethodnih 30 dana"
+#: ----
+msgid "Most active users (new items)"
+msgstr "Najaktivniji korisnici (nove stavke)"
+#: ----
+msgid "User activity (edited items)"
+msgstr "Aktivnost korisnika (izmenjene stavke)"
+#: ----
+msgid "Recently deleted"
+msgstr "Nedavno obrisano"
+#: ----
+msgid "No data available"
+msgstr "Nema dostupnih podataka"
+#: ----
+msgid "Add Perpetrator later"
+msgstr "Dodaj Počinioca kasnije"
+#: ----
+msgid "Save and Add More Perpetrators"
+msgstr "Sačuvaj i dodaj još počinilaca"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Ne postoje podaci o radnji; trebalo bi da ih upišete. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj"
+#: ----
+msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Ne postoji informacija o intervencijama, trebalo bi da je dodate. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj."
+#: ----
+msgid "View person's roles"
+msgstr "Vidi uloge osobe"
+#: ----
+msgid "Duplicate"
+msgstr "Dupliciraj"
+#: ----
+msgid "Insert folder name:"
+msgstr "Ubaci ime foldera"
+#: ----
+msgid "Return to files list"
+msgstr "Povratak na listu fajlova"
+#: ----
+msgid "Preview"
+msgstr "Pregled"
+#: ----
+msgid "Erase"
+msgstr "Obriši"
+#: ----
+msgid "Charts and map"
+msgstr "Grafikoni i tabele"
+#: ----
+msgid "Clear this selections"
+msgstr "Obriši izbor"
+#: ----
+msgid "of"
+msgstr "od"
+#: ----
+msgid "Not found"
+msgstr "Nije pronađeno"
+#: ----
+msgid "Map"
+msgstr "Mape"
+#: ----
+msgid "Charts"
+msgstr "Grafikoni"
+#: ----
+msgid "Results"
+msgstr "Rezultati"
+#: ----
+msgid "Filters"
+msgstr "Filteri"
+#: ----
+msgid "Security"
+msgstr "Bezbednost"
+#: ----
+msgid "Top menu"
+msgstr "Gornji meni"
+#: ----
+msgid "Top right menu"
+msgstr "Gornji desni meni"
+#: ----
+msgid "Event menu"
+msgstr "Meni za događaje"
+#: ----
+msgid "Person menu"
+msgstr "Meni za osobe"
+#: ----
+msgid "Document menu"
+msgstr "Meni za dokumente"
+#: ----
+msgid "Analysis menu"
+msgstr "Meni za analizu"
+#: ----
+msgid "Preferences menu"
+msgstr "Meni za preferencije"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "ReCAPTHCA nije ispravno unet."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Pogrešan verifikacioni kod. Molimo pokušajte opet."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Meni je uspešno sačuvan."
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator."
+#: ----
+msgid "Enabled successfully."
+msgstr "Uspešno omogućeno."
+#: ----
+msgid "Code"
+msgstr "Kod"
+#: ----
+msgid "Menu"
+msgstr "Meni"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Kliknite da biste dodali stavku u meni"
+#: ----
+msgid "Number"
+msgstr "Broj"
+#: ----
+msgid "Term"
+msgstr "Izraz"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Dodaj mikro-rečnik"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Prevedi mikro-rečnik"
+#: ----
+msgid "Language"
+msgstr "Jezik"
+#: ----
+msgid "Event"
+msgstr "Događaj"
+#: ----
+msgid "Select Event"
+msgstr "Odaberi događaj"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Ne postoji informacija za radnju, trebalo bi da je dodate. Kliknite na dugme Dodaj novi događaj kako biste dodali novi događaj"
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Molimo izaberite neko polje da biste izvršili akciju"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Instaliraj google authenticator aplikaciju na telefon"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Otvorite internet pretraživač na vašem telefonu"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Idi na m.google.com/authenticator."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Preuzmi i instaliraj aplikaciju Google Authenticator"
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Sad otvori i konfiguriši Google Authenticator"
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Skeniraj sledeći barkod da automatski registruješ aplikaciju"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Ili koristi sledeći tajni ključ za ručnu registraciju aplikacije"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Nakon što si ručno uneo i sačuvao svoj ključ, unesi šestocifreni verifikacioni kod koji je proizvela aplikacija"
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Kod je neispravan. Pokušaj ponovo."

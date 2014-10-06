@@ -55,9 +55,6 @@ function exception_handler($e)
     }
     else if($e instanceof ADODB_Exception){
         
-        $controller = shnFrontController::getController();
-        $controller->setAction('db_error');
-        $controller->sendResponce();
         error_log("----------------------------",0);
         error_log("                            ",0);
         error_log("MSG:".$e->getMessage(), 0);
@@ -75,6 +72,9 @@ function exception_handler($e)
         error_log("SQL:".$e->sql, 0);
         error_log("                            ",0);
         error_log("----------------------------",0);
+        $controller = shnFrontController::getController();
+        $controller->setAction('db_error');
+        $controller->sendResponce();
        
         
     }

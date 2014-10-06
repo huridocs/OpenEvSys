@@ -31,9 +31,12 @@ include_once APPROOT . 'inc/lib_entity_forms.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_files.inc';
+require_once APPROOT . 'inc/ArgumentEncoder.php';
 include_once 'messages.inc';
 
 class docuModule extends shnModule {
+
+    public $argumentEncoder;
 
     function section_mod_menu() {
         if ($_GET['act'] == 'new_document')
@@ -70,6 +73,18 @@ class docuModule extends shnModule {
             $_SESSION['type'] = $this->supporting_docs_meta->format;
             set_url_args('doc_id', $_SESSION['doc_id']);
         }
+
+        $this->createArgumentEncoder();
+    }
+
+    public function createArgumentEncoder() {
+        $whiteList = Array(
+            'request_page', 'rpp', 'doc_id', 'title',
+            'datecreated', 'datesubmitted', 'type', 'format', 
+            'filter', 'sort', 'sortorder'
+        );
+        
+        $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
     public function act_browse() {
@@ -116,6 +131,8 @@ class docuModule extends shnModule {
         }
 
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->result_pager->setArgumentEncoder($this->argumentEncoder);
+        
         $this->columnValues = $this->result_pager->get_page_data();
 
         $this->columnValues = set_links_in_recordset($this->columnValues, 'supporting_docs_meta');

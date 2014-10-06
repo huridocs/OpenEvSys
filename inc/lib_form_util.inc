@@ -682,7 +682,9 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
         echo "</table>";
     }
 
-    function shn_form_get_html_filter_table($columnNames = null, $columnValues = null, $htmlFilterFields = null) {
+    function shn_form_get_html_filter_table(
+        $columnNames = null, $columnValues = null, $htmlFilterFields = null, $argumentEncoder = null) {
+        
         $requestObj = new shnRequest();
         $mod = $requestObj->getRequestModule();
         $action = $requestObj->getRequestAction();
@@ -701,7 +703,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                 <tr> 
                     <?php
                     foreach ($columnNames as $field => $value) {
-                        $url = get_sort_heading($field);
+                        $url = get_sort_heading($field, $argumentEncoder);
 
                         $columnId = get_column_sort_id($field);
 
@@ -814,7 +816,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
     <?php
 }
 
-function get_sort_heading($field) {
+function get_sort_heading($field, $argumentEncoder = null) {
     $newGet = $_GET;
 
     if ($newGet['sort'] != $field) {
@@ -830,10 +832,11 @@ function get_sort_heading($field) {
             $newGet['sortorder'] = 'asc';
     }
 
-    $newGet['request_page'] = (int) Reform::HtmlAttributeEncode($newGet['request_page']);
-    $newGet['rpp'] = (int) Reform::HtmlAttributeEncode($newGet['rpp']);
+    if($argumentEncoder)
+        $newGet = $argumentEncoder->encode($newGet);
 
     $newGet['sort'] = $field;
+
     $url = get_url($_GET['mod'], $_GET['act'], $_GET['view'], $newGet, null, true);
 
     return $url;

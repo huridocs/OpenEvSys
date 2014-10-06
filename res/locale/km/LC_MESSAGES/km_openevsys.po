@@ -1914,319 +1914,319 @@ msgid "ROWS"
 msgstr "Row(s)"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr ""
+msgstr "Advanced Search Report"
 #: ----
 msgid "Address"
-msgstr ""
+msgstr "Address"
 #: ----
 msgid "latitude"
-msgstr ""
+msgstr "latitude"
 #: ----
 msgid "longitude"
-msgstr ""
+msgstr "longitude"
 #: ----
 msgid "View"
-msgstr ""
+msgstr "View"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr ""
+msgstr "Micro-thesaurus created successfully"
 #: ----
 msgid "Radio field"
-msgstr ""
+msgstr "Radio field"
 #: ----
 msgid "Geolocation"
-msgstr ""
+msgstr "Geolocation"
 #: ----
 msgid "User Select"
-msgstr ""
+msgstr "User Select"
 #: ----
 msgid "Multivalue User Select"
-msgstr ""
+msgstr "Multivalue User Select"
 #: ----
 msgid "Tree"
-msgstr ""
+msgstr "Tree"
 #: ----
 msgid "Multivalue Tree"
-msgstr ""
+msgstr "Multivalue Tree"
 #: ----
 msgid "Multivalue Select"
-msgstr ""
+msgstr "Multivalue Select"
 #: ----
 msgid "Please select items to perform action"
-msgstr ""
+msgstr "Please select items to perform action"
 #: ----
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr ""
+msgstr "Micro-thesauri cannot be empty"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr ""
+msgstr "Micro-thesauri name already exists"
 #: ----
 msgid "Login Information"
-msgstr ""
+msgstr "Login Information"
 #: ----
 msgid "Profile Information"
-msgstr ""
+msgstr "Profile Information"
 #: ----
 msgid "Print configuration"
-msgstr ""
+msgstr "Printer configuration"
 #: ----
 msgid "Header for report print view"
-msgstr ""
+msgstr "Header for report print view"
 #: ----
 msgid "Header for event print view"
-msgstr ""
+msgstr "Header for event print view"
 #: ----
 msgid "Sidebar for event print view"
-msgstr ""
+msgstr "Sidebar for event print view"
 #: ----
 msgid "Header for person print view"
-msgstr ""
+msgstr "Header for person print view"
 #: ----
 msgid "Sidebar for person print view"
-msgstr ""
+msgstr "Sidebar for person print view"
 #: ----
 msgid "Details"
-msgstr ""
+msgstr "Details"
 #: ----
 msgid "Add new term"
-msgstr ""
+msgstr "Add new term"
 #: ----
 msgid "Searchable in Analysis"
-msgstr ""
+msgstr "Searchable in Analysis"
 #: ----
 msgid "Visible in Analysis"
-msgstr ""
+msgstr "Visible in Analysis"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr ""
+msgstr "Add new Micro-thesauri"
 #: ----
 msgid "Select language"
-msgstr ""
+msgstr "Select language"
 #: ----
 msgid "Header for login page"
-msgstr ""
+msgstr "Header for login page"
 #: ----
 msgid "Multivalue"
-msgstr ""
+msgstr "Multivalue"
 #: ----
 msgid "Enabled"
-msgstr ""
+msgstr "Enabled"
 #: ----
 msgid "Hide in case of"
-msgstr ""
+msgstr "Hide in case of"
 #: ----
 msgid "Set visible"
-msgstr ""
+msgstr "Set visible"
 #: ----
 msgid "Disable"
-msgstr ""
+msgstr "Disable"
 #: ----
 msgid "Apply"
-msgstr ""
+msgstr "Apply"
 #: ----
 msgid "Vocab number"
-msgstr ""
+msgstr "Vocab number"
 #: ----
 msgid "disabled"
-msgstr ""
+msgstr "disabled"
 #: ----
 msgid "Undefined"
-msgstr ""
+msgstr "Undefined"
 #: ----
 msgid "Load"
-msgstr ""
+msgstr "Load"
 #: ----
 msgid "Select facets"
-msgstr ""
+msgstr "Select facets"
 #: ----
 msgid "Date range"
-msgstr ""
+msgstr "Date range"
 #: ----
 msgid "Timeline type"
-msgstr ""
+msgstr "Timeline type"
 #: ----
 msgid "DAY"
-msgstr ""
+msgstr "DAY"
 #: ----
 msgid "MONTH"
-msgstr ""
+msgstr "MONTH"
 #: ----
 msgid "YEAR"
-msgstr ""
+msgstr "YEAR"
 #: ----
 msgid "Total Count"
-msgstr ""
+msgstr "Total Count"
 #: ----
 msgid "Added in last 30 days"
-msgstr ""
+msgstr "Added in last 30 days"
 #: ----
 msgid "Most active users (new items)"
-msgstr ""
+msgstr "Most active users (new items)"
 #: ----
 msgid "User activity (edited items)"
-msgstr ""
+msgstr "User activity (edited items)"
 #: ----
 msgid "Recently deleted"
-msgstr ""
+msgstr "Recently deleted"
 #: ----
 msgid "No data available"
-msgstr ""
+msgstr "No data available"
 #: ----
 msgid "Add Perpetrator later"
-msgstr ""
+msgstr "Add Perpetrator later"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr ""
+msgstr "Save and add more Perpetrators"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr ""
+msgstr "There is no Act information yet, you should add some. Click the Add new Event button to add a new Event"
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr ""
+msgstr "There is no Intervention information yet, you should add some. Click the Add new Event button to add a new Event"
 #: ----
 msgid "View person's roles"
-msgstr ""
+msgstr "View person's roles"
 #: ----
 msgid "Duplicate"
-msgstr ""
+msgstr "Duplicate"
 #: ----
 msgid "Insert folder name:"
-msgstr ""
+msgstr "Insert folder name:"
 #: ----
 msgid "Return to files list"
-msgstr ""
+msgstr "Return to files list"
 #: ----
 msgid "Preview"
-msgstr ""
+msgstr "Preview"
 #: ----
 msgid "Erase"
-msgstr ""
+msgstr "Erase"
 #: ----
 msgid "Charts and map"
-msgstr ""
+msgstr "Charts and map"
 #: ----
 msgid "Clear this selections"
-msgstr ""
+msgstr "Clear this selection"
 #: ----
 msgid "of"
-msgstr ""
+msgstr "of"
 #: ----
 msgid "Not found"
-msgstr ""
+msgstr "Not found"
 #: ----
 msgid "Map"
-msgstr ""
+msgstr "Map"
 #: ----
 msgid "Charts"
-msgstr ""
+msgstr "Charts"
 #: ----
 msgid "Results"
-msgstr ""
+msgstr "Results"
 #: ----
 msgid "Filters"
-msgstr ""
+msgstr "Filters"
 #: ----
 msgid "Security"
-msgstr ""
+msgstr "Security"
 #: ----
 msgid "Top menu"
-msgstr ""
+msgstr "Top menu"
 #: ----
 msgid "Top right menu"
-msgstr ""
+msgstr "Top right menu"
 #: ----
 msgid "Event menu"
-msgstr ""
+msgstr "Event menu"
 #: ----
 msgid "Person menu"
-msgstr ""
+msgstr "Person menu"
 #: ----
 msgid "Document menu"
-msgstr ""
+msgstr "Document menu"
 #: ----
 msgid "Analysis menu"
-msgstr ""
+msgstr "Analysis menu"
 #: ----
 msgid "Preferences menu"
-msgstr ""
+msgstr "Preferences menu"
 #: ----
 msgid "The reCAPTCHA wasn't entered correctly."
-msgstr ""
+msgstr "The reCAPTCHA wasn't entered correctly."
 #: ----
 msgid "Wrong verification code. Please try again."
-msgstr ""
+msgstr "Wrong verification code. Please try again."
 #: ----
 msgid "Menu was saved successfully."
-msgstr ""
+msgstr "Menu was saved successfully."
 #: ----
 msgid "Google Authenticator"
-msgstr ""
+msgstr "Google Authenticator"
 #: ----
 msgid "Enabled successfully."
-msgstr ""
+msgstr "Enabled successfully."
 #: ----
 msgid "Code"
-msgstr ""
+msgstr "Code"
 #: ----
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 #: ----
 msgid "Click to add an item to a menu"
-msgstr ""
+msgstr "Click to add an item to a menu"
 #: ----
 msgid "Number"
-msgstr ""
+msgstr "Number"
 #: ----
 msgid "Term"
-msgstr ""
+msgstr "Term"
 #: ----
 msgid "Add Micro-thesauri"
-msgstr ""
+msgstr "Add Micro-thesauri"
 #: ----
 msgid "Translate Micro-thesauri"
-msgstr ""
+msgstr "Translate Micro-thesauri"
 #: ----
 msgid "Language"
-msgstr ""
+msgstr "Language"
 #: ----
 msgid "Event"
-msgstr ""
+msgstr "Event"
 #: ----
 msgid "Select Event"
-msgstr ""
+msgstr "Select Event"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr ""
+msgstr "There is no Act information yet, you should add some. Click the Add new Event button to add a new Event."
 #: ----
 msgid "Please select some checkbox to perform action."
-msgstr ""
+msgstr "Please select some checkbox to perform action."
 #: ----
 msgid "Install the Google Authenticator app for your phone"
-msgstr ""
+msgstr "Install the Google Authenticator app for your phone"
 #: ----
 msgid "On your phone, open a web browser."
-msgstr ""
+msgstr "On your phone, open a web browser."
 #: ----
 msgid "Go to m.google.com/authenticator."
-msgstr ""
+msgstr "Go to m.google.com/authenticator."
 #: ----
 msgid "Download and install the Google Authenticator application."
-msgstr ""
+msgstr "Download and install the Google Authenticator application."
 #: ----
 msgid "Now open and configure Google Authenticator."
-msgstr ""
+msgstr "Now open and configure Google Authenticator."
 #: ----
 msgid "Scan following Barcode to register the application automaticly:"
-msgstr ""
+msgstr "Scan the following Barcode to register the application automatically:"
 #: ----
 msgid "Or use the following secret key to register the application manually:"
-msgstr ""
+msgstr "Or use the following secret key to register the application manually:"
 #: ----
 msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
-msgstr ""
+msgstr "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
 #: ----
 msgid "The code is incorrect. Try again"
-msgstr ""
+msgstr "The code is incorrect. Try again"
