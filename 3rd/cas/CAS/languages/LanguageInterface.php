@@ -19,96 +19,78 @@
  *
  * PHP Version 5
  *
- * @file     CAS/Language/English.php
+ * @file     CAS/Language/LanguageInterface.php
  * @category Authentication
  * @package  PhpCAS
- * @author   Pascal Aubry <pascal.aubry@univ-rennes1.fr>
+ * @author   Joachim Fritschi <jfritschi@freenet.de>
  * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link     https://wiki.jasig.org/display/CASC/phpCAS
  */
 
 /**
- * English language class
+ * Language Interface class for all internationalization files
  *
- * @class    CAS_Languages_English
+ * @class    CAS_Languages_LanguageInterface
  * @category Authentication
  * @package  PhpCAS
- * @author   Pascal Aubry <pascal.aubry@univ-rennes1.fr>
+ * @author   Joachim Fritschi <jfritschi@freenet.de>
  * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
  * @link     https://wiki.jasig.org/display/CASC/phpCAS
  *
  * @sa @link internalLang Internationalization @endlink
  * @ingroup internalLang
  */
-class CAS_Languages_English implements CAS_Languages_LanguageInterface
+
+interface CAS_Languages_LanguageInterface
 {
     /**
      * Get the using server string
      *
      * @return string using server
      */
-    public function getUsingServer()
-    {
-        return 'using server';
-    }
+    public function getUsingServer();
 
     /**
      * Get authentication wanted string
      *
      * @return string authentication wanted
      */
-    public function getAuthenticationWanted()
-    {
-        return 'CAS Authentication wanted!';
-    }
+    public function getAuthenticationWanted();
 
     /**
      * Get logout string
      *
      * @return string logout
      */
-    public function getLogout()
-    {
-        return 'CAS logout wanted!';
-    }
+    public function getLogout();
 
     /**
      * Get the should have been redirected string
      *
      * @return string should habe been redirected
      */
-    public function getShouldHaveBeenRedirected()
-    {
-        return 'You should already have been redirected to the CAS server. Click <a href="%s">here</a> to continue.';
-    }
+    public function getShouldHaveBeenRedirected();
 
     /**
-    * Get authentication failed string
-    *
-    * @return string authentication failed
-    */
-    public function getAuthenticationFailed()
-    {
-        return 'CAS Authentication failed!';
-    }
+     * Get authentication failed string
+     *
+     * @return string authentication failed
+     */
+    public function getAuthenticationFailed();
 
     /**
-    * Get the your were not authenticated string
-    *
-    * @return string not authenticated
-    */
-    public function getYouWereNotAuthenticated()
-    {
-        return '<p>You were not authenticated.</p><p>You may submit your request again by clicking <a href="%s">here</a>.</p><p>If the problem persists, you may contact <a href="mailto:%s">the administrator of this site</a>.</p>';
-    }
+     * Get the your were not authenticated string
+     *
+     * @return string not authenticated
+     */
+    public function getYouWereNotAuthenticated();
 
     /**
-    * Get the service unavailable string
-    *
-    * @return string service unavailable
-    */
-    public function getServiceUnavailable()
-    {
-        return 'The service `<b>%s</b>\' is not available (<b>%s</b>).';
-    }
+     * Get the service unavailable string
+     *
+     * @return string service unavailable
+     */
+    public function getServiceUnavailable();
+
 }
+?>
