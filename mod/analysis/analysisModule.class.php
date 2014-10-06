@@ -173,8 +173,8 @@ class analysisModule extends shnModule {
         if (isset($_GET['query_save'])) {
             $saveQuery = new SaveQuery();
             $saveQuery->save_query_record_number = shn_create_uuid('query');
-            $saveQuery->name = $_GET['query_name'];
-            $saveQuery->description = $_GET['query_desc'];
+            $saveQuery->name = Reform::HtmlEncode($_GET['query_name']);
+            $saveQuery->description = Reform::HtmlEncode($_GET['query_desc']);
             $saveQuery->created_date = date("Y-m-d");
             $saveQuery->created_by = $_SESSION['username'];
             $query = (isset($_GET['query'])) ? $_GET['query'] : analysis_get_query();
