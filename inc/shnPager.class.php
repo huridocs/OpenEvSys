@@ -33,8 +33,9 @@ class shnPager implements BrowseStrategy
     protected $show_all = false;
     protected $request_page = 1;
     protected $res = null;
-    protected $last_page ;
+    protected $last_page;
     protected $ppp = 10;
+    protected $argumentEncoder;
 
     function __construct($query=null)
     { 
@@ -108,8 +109,9 @@ class shnPager implements BrowseStrategy
         return $this->res;
     }
 
-
-
+    public function setArgumentEncoder(ArgumentEncoder $encoder) {
+        $this->argumentEncoder = $encoder;
+    }
 
     /**
      * render_pages will render page links in html 
@@ -124,8 +126,8 @@ class shnPager implements BrowseStrategy
         unset($args['mod']);
         unset($args['act']);
 
-        $args['request_page'] = (int) Reform::HtmlAttributeEncode($args['request_page']);
-        $args['rpp'] = (int) Reform::HtmlAttributeEncode($args['rpp']);
+        if($this->argumentEncoder instanceof ArgumentEncoder)
+            $args = $this->argumentEncoder->encode($args);
 ?>
 <div class="row" style="margin-left:0px;">
         <?php if($this->show_all){ ?>

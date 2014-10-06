@@ -13,7 +13,7 @@
 		$result_pager->render_pages();
 	}
 
-	shn_form_get_html_filter_table($columnNames, $columnValues, $htmlFields);	
+	shn_form_get_html_filter_table($columnNames, $columnValues, $htmlFields, $argumentEncoder);	
 		
 	if($columnValues != null && count($columnValues) ){		
 		$result_pager->render_pages();
