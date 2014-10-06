@@ -33,9 +33,12 @@ include_once APPROOT . 'inc/lib_entity_forms.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_files.inc';
+require_once APPROOT . 'inc/ArgumentEncoder.php';
 include_once 'messages.inc';
 
 class eventsModule extends shnModule {
+
+    public $argumentEncoder;
 
     function act_default() {
         set_redirect_header('events', 'browse');
@@ -74,6 +77,18 @@ class eventsModule extends shnModule {
             $_SESSION['eid'] = $_GET['eid'];
             set_url_args('eid', $this->event->event_record_number);
         }
+
+        $this->createArgumentEncoder();
+    }
+
+    public function createArgumentEncoder() {
+        $whiteList = Array(
+            'request_page', 'rpp', 'event_record_number', 'event_title',
+            'initial_date', 'final_date', 'impact_of_event', 'project_title', 'filter', 
+            'sort', 'sortorder'
+        );
+        
+        $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
     private function load_related_event() {
@@ -154,6 +169,8 @@ class eventsModule extends shnModule {
 
         //var_dump($sqlStatement);
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+        $this->result_pager->setArgumentEncoder($this->argumentEncoder);
+
         $this->columnValues = $this->result_pager->get_page_data();
         $this->columnValues = set_links_in_recordset($this->columnValues, 'event');
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);

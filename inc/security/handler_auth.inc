@@ -37,7 +37,7 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
                 Log::saveLogDetails('login', $_SERVER['REMOTE_ADDR'], "OK", "OK",null,'login',$username);
                 //if so registor the user in the session.
                 //MUST REMEMBER ALLWAYS REGENERATE SESSION ID WHEN PERMISSION LEVEL CHANGES *******
-                if (!isset($_COOKIE['cookie-check'])) {
+                if (!isset($_COOKIE[$conf['session_name']])) {
                     // cookies disabled
                     $global['loginerror'] = _t("YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON");
                 } else {
@@ -68,8 +68,6 @@ if (isset($_POST['login']) && 'login' == $_POST['login']) {
     
     if($_SESSION['check_TSV'] == "yubikey")
         $TSVResult = checkYubikeyAuth($global['loginerror']);
-} else {
-    setcookie("cookie-check", "some-value");
 }
 
 function checkMGAAuth(&$error) {

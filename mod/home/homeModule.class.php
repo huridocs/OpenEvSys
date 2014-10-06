@@ -208,8 +208,8 @@ class homeModule extends shnModule {
             return true;
         } 
 
-        if($_POST['desiredMethod'] == "MGA" && isset($_POST['code'])) {
-            $resp = $user->TSVSaveMGA($_POST['code']);
+        if($_POST['desiredMethod'] == "MGA" && isset($_POST['GACode'])) {
+            $resp = $user->TSVSaveMGA($_POST['GACode']);
             if (!$resp) {
                 $this->wrongcode = true;
             }
@@ -218,13 +218,13 @@ class homeModule extends shnModule {
         }
 
         if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
-            if(isset($_POST['code'])) {
-                $parsedCode = $this->parseYubicoCode($_POST['code']);
+            if(isset($_POST['YubiKeyCode'])) {
+                $parsedCode = $this->parseYubicoCode($_POST['YubiKeyCode']);
 
-                if($parsedCode) {
+                if($parsedCode && !PEAR::isError($this->getYubiClient()->verify($_POST['YubiKeyCode']))) {
                     $user->TSVSaveYubiKey($parsedCode['prefix']);
                     return true;
-                }
+                }                
             }
 
             $this->wrongcode = true;
@@ -232,9 +232,14 @@ class homeModule extends shnModule {
         }
     }
 
+    protected function getYubiClient() {
+        global $conf;
+
+        return new Auth_Yubico($conf['YubiKeyClientId'], $conf['YubiKeyClientKey'], true, true);
+    }
+
     protected function parseYubicoCode($code) {
-        $yubi = new Auth_Yubico();
-        $result = $yubi->parsePasswordOTP($code);
+        $result = $this->getYubiClient()->parsePasswordOTP($code);
 
         return $result;
     }

@@ -1,27 +1,115 @@
 <?php
 
 /**
- * @file languages/greek.php
- * @author Vangelis Haniotakis <haniotak at ucnet.uoc.gr>
+ * Licensed to Jasig under one or more contributor license
+ * agreements. See the NOTICE file distributed with this work for
+ * additional information regarding copyright ownership.
+ *
+ * Jasig licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * PHP Version 5
+ *
+ * @file     CAS/Language/Greek.php
+ * @category Authentication
+ * @package  PhpCAS
+ * @author   Vangelis Haniotakis <haniotak@ucnet.uoc.gr>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @link     https://wiki.jasig.org/display/CASC/phpCAS
+ */
+
+/**
+ * Greek language class
+ *
+ * @class    CAS_Languages_Greek
+ * @category Authentication
+ * @package  PhpCAS
+ * @author   Vangelis Haniotakis <haniotak@ucnet.uoc.gr>
+ * @license  http://www.apache.org/licenses/LICENSE-2.0  Apache License 2.0
+ * @link     https://wiki.jasig.org/display/CASC/phpCAS
+ *
  * @sa @link internalLang Internationalization @endlink
  * @ingroup internalLang
  */
+class CAS_Languages_Greek implements CAS_Languages_LanguageInterface
+{
+    /**
+     * Get the using server string
+     *
+     * @return string using server
+     */
+    public function getUsingServer()
+    {
+        return 'Γ·Γ±Γ§Γ³Γ©Γ¬Γ―Γ°Γ―Γ©Γ¥ΓΓ΄Γ΅Γ© Γ― Γ¥Γ®ΓµΓ°Γ§Γ±Γ¥Γ΄Γ§Γ΄ΓΓ²';
+    }
 
-$this->_strings = array(
- CAS_STR_USING_SERVER 
- => 'χρησιμοποιείται ο εξυπηρετητής',
- CAS_STR_AUTHENTICATION_WANTED 
- => 'Απαιτείται η ταυτοποίηση CAS!',
- CAS_STR_LOGOUT 
- => 'Απαιτείται η αποσύνδεση από CAS!',
- CAS_STR_SHOULD_HAVE_BEEN_REDIRECTED 
- => 'Θα έπρεπε να είχατε ανακατευθυνθεί στον εξυπηρετητή CAS. Κάντε κλίκ <a href="%s">εδώ</a> για να συνεχίσετε.',
- CAS_STR_AUTHENTICATION_FAILED 
- => 'Η ταυτοποίηση CAS απέτυχε!',
- CAS_STR_YOU_WERE_NOT_AUTHENTICATED 
- => '<p>Δεν ταυτοποιηθήκατε.</p><p>Μπορείτε να ξαναπροσπαθήσετε, κάνοντας κλίκ <a href="%s">εδώ</a>.</p><p>Εαν το πρόβλημα επιμείνει, ελάτε σε επαφή με τον <a href="mailto:%s">διαχειριστή</a>.</p>',
- CAS_STR_SERVICE_UNAVAILABLE
- => 'Η υπηρεσία `<b>%s</b>\' δεν είναι διαθέσιμη (<b>%s</b>).'
-);
+    /**
+     * Get authentication wanted string
+     *
+     * @return string authentication wanted
+     */
+    public function getAuthenticationWanted()
+    {
+        return 'ΓΓ°Γ΅Γ©Γ΄Γ¥ΓΓ΄Γ΅Γ© Γ§ Γ΄Γ΅ΓµΓ΄Γ―Γ°Γ―ΓΓ§Γ³Γ§ CAS!';
+    }
 
+    /**
+     * Get logout string
+     *
+     * @return string logout
+     */
+    public function getLogout()
+    {
+        return 'ΓΓ°Γ΅Γ©Γ΄Γ¥ΓΓ΄Γ΅Γ© Γ§ Γ΅Γ°Γ―Γ³Γ½Γ­Γ¤Γ¥Γ³Γ§ Γ΅Γ°ΓΌ CAS!';
+    }
+
+    /**
+     * Get the should have been redirected string
+     *
+     * @return string should habe been redirected
+     */
+    public function getShouldHaveBeenRedirected()
+    {
+        return 'ΓΓ΅ ΓΓ°Γ±Γ¥Γ°Γ¥ Γ­Γ΅ Γ¥ΓΓ·Γ΅Γ΄Γ¥ Γ΅Γ­Γ΅ΓªΓ΅Γ΄Γ¥ΓµΓ¨ΓµΓ­Γ¨Γ¥Γ Γ³Γ΄Γ―Γ­ Γ¥Γ®ΓµΓ°Γ§Γ±Γ¥Γ΄Γ§Γ΄Γ CAS. ΓΓΓ­Γ΄Γ¥ ΓªΓ«ΓΓª <a href="%s">Γ¥Γ¤ΓΎ</a> Γ£Γ©Γ΅ Γ­Γ΅ Γ³ΓµΓ­Γ¥Γ·ΓΓ³Γ¥Γ΄Γ¥.';
+    }
+
+    /**
+     * Get authentication failed string
+     *
+     * @return string authentication failed
+     */
+    public function getAuthenticationFailed()
+    {
+        return 'Γ‡ Γ΄Γ΅ΓµΓ΄Γ―Γ°Γ―ΓΓ§Γ³Γ§ CAS Γ΅Γ°ΓΓ΄ΓµΓ·Γ¥!';
+    }
+
+    /**
+     * Get the your were not authenticated string
+     *
+     * @return string not authenticated
+     */
+    public function getYouWereNotAuthenticated()
+    {
+        return '<p>Γ„Γ¥Γ­ Γ΄Γ΅ΓµΓ΄Γ―Γ°Γ―Γ©Γ§Γ¨ΓΓªΓ΅Γ΄Γ¥.</p><p>ΓΓ°Γ―Γ±Γ¥ΓΓ΄Γ¥ Γ­Γ΅ Γ®Γ΅Γ­Γ΅Γ°Γ±Γ―Γ³Γ°Γ΅Γ¨ΓΓ³Γ¥Γ΄Γ¥, ΓªΓΓ­Γ―Γ­Γ΄Γ΅Γ² ΓªΓ«ΓΓª <a href="%s">Γ¥Γ¤ΓΎ</a>.</p><p>Γ…Γ΅Γ­ Γ΄Γ― Γ°Γ±ΓΌΓΆΓ«Γ§Γ¬Γ΅ Γ¥Γ°Γ©Γ¬Γ¥ΓΓ­Γ¥Γ©, Γ¥Γ«ΓΓ΄Γ¥ Γ³Γ¥ Γ¥Γ°Γ΅Γ¶Γ Γ¬Γ¥ Γ΄Γ―Γ­ <a href="mailto:%s">Γ¤Γ©Γ΅Γ·Γ¥Γ©Γ±Γ©Γ³Γ΄Γ</a>.</p>';
+    }
+
+    /**
+     * Get the service unavailable string
+     *
+     * @return string service unavailable
+     */
+    public function getServiceUnavailable()
+    {
+        return 'Γ‡ ΓµΓ°Γ§Γ±Γ¥Γ³ΓΓ΅ `<b>%s</b>\' Γ¤Γ¥Γ­ Γ¥ΓΓ­Γ΅Γ© Γ¤Γ©Γ΅Γ¨ΓΓ³Γ©Γ¬Γ§ (<b>%s</b>).';
+    }
+}
 ?>

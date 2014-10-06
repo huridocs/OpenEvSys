@@ -1,0 +1,2232 @@
+#: ----
+msgid "_CONTROLER_NOT_FOUND_"
+msgstr "Controler nem található"
+#: ----
+msgid "_DAY_S__"
+msgstr "Nap(ok):"
+#: ----
+msgid "_MONTH_S__"
+msgstr "Hónap(ok):"
+#: ----
+msgid "1ST_LEVEL"
+msgstr "1. szint"
+#: ----
+msgid "2ND_LEVEL"
+msgstr "2. szint"
+#: ----
+msgid "3RD_LEVEL"
+msgstr "3. szint"
+#: ----
+msgid "404_ERROR___PAGE_NOT_FOUND"
+msgstr "404-es hiba: az oldal nem található"
+#: ----
+msgid "4TH_LEVEL"
+msgstr "4. szint"
+#: ----
+msgid "5TH_LEVEL"
+msgstr "5. szint"
+#: ----
+msgid "6TH_LEVEL"
+msgstr "6. szint"
+#: ----
+msgid "ACL_MODE"
+msgstr "ACL mód"
+#: ----
+msgid "ACT"
+msgstr "Cselekmény"
+#: ----
+msgid "ACT_"
+msgstr "Cselekmény"
+#: ----
+msgid "ACT_DETAILS"
+msgstr "Cselekmény részletei"
+#: ----
+msgid "ACT_S_"
+msgstr "Cselekmény(ek)"
+#: ----
+msgid "ACT_SEARCH_FORM"
+msgstr "Cselekmény kereső"
+#: ----
+msgid "ACTION"
+msgstr "Akció"
+#: ----
+msgid "ACTIONS"
+msgstr "Akciók"
+#: ----
+msgid "ACTIVATED"
+msgstr "Aktivált"
+#: ----
+msgid "ACTS"
+msgstr "Cselekmény"
+#: ----
+msgid "ADD_ACT"
+msgstr "Cselekmény hozzáadása"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS"
+msgstr "Részletek hozzáadása"
+#: ----
+msgid "ADD_ADDITIONAL_DETAILS_FOR"
+msgstr "Részletek hozzáadása"
+#: ----
+msgid "ADD_ADDRESS"
+msgstr "Cím hozzáadása"
+#: ----
+msgid "ADD_BIOGRAPHIC_DETAILS"
+msgstr "Életrajzi adatok hozzáadása"
+#: ----
+msgid "ADD_CHAIN_OF_EVENTS"
+msgstr "Eseménysorozat hozzáadása"
+#: ----
+msgid "ADD_EVENT_INFORMATION"
+msgstr "Esemény információ hozzáadása"
+#: ----
+msgid "ADD_FIELD"
+msgstr "Mező hozzáadása"
+#: ----
+msgid "ADD_FIELD_TO"
+msgstr "Mező hozzáadása"
+#: ----
+msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
+msgstr "Mező hozzáadása a keresési eredményekhez"
+#: ----
+msgid "ADD_INFORMATION"
+msgstr "Információ hozzáadása"
+#: ----
+msgid "ADD_INTERVENING_PARTY"
+msgstr "Beavatkozó fél hozzáadása"
+#: ----
+msgid "ADD_INTERVENTION"
+msgstr "Beavatkozás hozzáadása"
+#: ----
+msgid "ADD_INTERVENTIONS"
+msgstr "Beavatkozások  hozzáadása"
+#: ----
+msgid "ADD_INVOLVEMENT"
+msgstr "Bevonás hozzáadása"
+#: ----
+msgid "ADD_LANGUAGE"
+msgstr "Nyelv hozzáadása"
+#: ----
+msgid "ADD_MORE_PERPETRATORS"
+msgstr "Elkövető hozzáadása"
+#: ----
+msgid "ADD_NEW"
+msgstr "Hozzáadás"
+#: ----
+msgid "ADD_NEW_DOCUMENT"
+msgstr "Dokumentum hozzáadása"
+#: ----
+msgid "ADD_NEW_EVENT"
+msgstr "Esemény hozzáadása"
+#: ----
+msgid "ADD_NEW_FIELD"
+msgstr "Mező hozzáadása"
+#: ----
+msgid "ADD_NEW_PERSON"
+msgstr "Személy hozzáadása"
+#: ----
+msgid "ADD_NEW_USER"
+msgstr "Felhasználó hozzáadása"
+#: ----
+msgid "ADD_PERPETRATOR"
+msgstr "Elkövető hozzáadása"
+#: ----
+msgid "ADD_PERPETRATOR_S_"
+msgstr "Elkövető(k) hozzáadása"
+#: ----
+msgid "ADD_ROLE"
+msgstr "Szerep hozzáadása"
+#: ----
+msgid "ADD_SOURCE"
+msgstr "Forrás hozzáadása"
+#: ----
+msgid "ADD_SUPPORTING_DOCUMENT_S_"
+msgstr "Igazoló dokumentum(ok) hozzáadása"
+#: ----
+msgid "ADD_VICTIM"
+msgstr "Áldozat hozzáadása"
+#: ----
+msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
+msgstr "Áldozat és elkövető hozzáadása"
+#: ----
+msgid "ADDING_ADDRESS___"
+msgstr "Cím hozzáadása…"
+#: ----
+msgid "ADDING_EVENT_INFORMATION"
+msgstr "Esemény információ hozzáadása"
+#: ----
+msgid "ADDING_PERSON_ADDRESS____"
+msgstr "Személy címének hozzáadása"
+#: ----
+msgid "ADDING_PERSON_INFORMATION____"
+msgstr "Információ hozzáadása a személyről"
+#: ----
+msgid "ADDITIONAL_DETAIL_TYPE"
+msgstr "Egyéb részlet típus"
+#: ----
+msgid "ADDITIONAL_DETAILS"
+msgstr "Egyéb részlet"
+#: ----
+msgid "ADDRESS"
+msgstr "Cím"
+#: ----
+msgid "ADDRESS_OF_A_PERSON_"
+msgstr "Személy címe"
+#: ----
+msgid "ADDRESS_TYPE"
+msgstr "Cím típusa"
+#: ----
+msgid "ADMIN"
+msgstr "Admin"
+#: ----
+msgid "ADVANCED"
+msgstr "Részletes"
+#: ----
+msgid "ADVANCED_SEARCH"
+msgstr "Részletes keresés"
+#: ----
+msgid "AFTER"
+msgstr "után"
+#: ----
+msgid "AGAINST"
+msgstr "ellen"
+#: ----
+msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
+msgstr "Minden oszlop az eredeti értékre visszaállítva."
+#: ----
+msgid "ANALYSIS"
+msgstr "Elemzés"
+#: ----
+msgid "AND"
+msgstr "ÉS"
+#: ----
+msgid "APPLY_CHANGES_PERMANENTLY"
+msgstr "Változtatások véglegesítése"
+#: ----
+msgid "ARREST"
+msgstr "Letartóztatás"
+#: ----
+msgid "AT"
+msgstr "itt:"
+#: ----
+msgid "AT_OR_AFTER"
+msgstr "itt vagy után"
+#: ----
+msgid "AT_OR_BEFORE"
+msgstr "itt vagy előtt"
+#: ----
+msgid "AUDIT"
+msgstr "Vizsgálat"
+#: ----
+msgid "AUDIT_LOG"
+msgstr "Vizsgálat log"
+#: ----
+msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
+msgstr "Vizsgálat log nem elérhető ehhez az eseményhez"
+#: ----
+msgid "BACK"
+msgstr "Vissza"
+#: ----
+msgid "BACK_TO_EVENT_VIEW"
+msgstr "Vissza az esemény nézethez"
+#: ----
+msgid "BACK_TO_PERSON_VIEW"
+msgstr "Vissza a személy nézethez"
+#: ----
+msgid "BASIC"
+msgstr "Egyszerű"
+#: ----
+msgid "BASIC_SEARCH"
+msgstr "Egyszerű keresés"
+#: ----
+msgid "BEFORE"
+msgstr "előtt"
+#: ----
+msgid "BIOGRAPHIC_DETAIL_S_"
+msgstr "Életrajzi adatok"
+#: ----
+msgid "BIOGRAPHIC_DETAILS"
+msgstr "Életrajzi adatok"
+#: ----
+msgid "BIOGRAPHIC_DETAILS__"
+msgstr "Életrajzi adatok"
+#: ----
+msgid "BIOGRAPHY_DETAIL_S_"
+msgstr "Életrajzi adatok"
+#: ----
+msgid "BROWSE_DOCUMENTS"
+msgstr "Keresés a dokumentmokban"
+#: ----
+msgid "BROWSE_EVENT"
+msgstr "Keresés az eseményben"
+#: ----
+msgid "BROWSE_EVENTS"
+msgstr "Keresés az eseményekben"
+#: ----
+msgid "BROWSE_PERSONS"
+msgstr "Keresés a személyekben"
+#: ----
+msgid "BY_WHOM"
+msgstr "Ki által"
+#: ----
+msgid "CANCEL"
+msgstr "Mégse"
+#: ----
+msgid "CELLULAR"
+msgstr "Sejtes"
+#: ----
+msgid "CHAIN_OF_EVENT"
+msgstr "Eseménysorozat"
+#: ----
+msgid "CHAIN_OF_EVENT_S_"
+msgstr "Eseménysorozat"
+#: ----
+msgid "CHAIN_OF_EVENTS"
+msgstr "Eseménysorozat"
+#: ----
+msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
+msgstr "Eseménysorozat nem létezik"
+#: ----
+msgid "CHANE_OF_EVENTS"
+msgstr "Eseménysorozat"
+#: ----
+msgid "CHANE_OF_EVENTS_"
+msgstr "Eseménysorozat"
+#: ----
+msgid "CHANGE"
+msgstr "Módosítás"
+#: ----
+msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
+msgstr "Egyéb részlet típus módosítása"
+#: ----
+msgid "CHANGE_PASSWORD"
+msgstr "Jelszó változtatás"
+#: ----
+msgid "CHANGE_VIEW__"
+msgstr "Nézet módosítás:"
+#: ----
+msgid "CHOOSE_AN_ACTION"
+msgstr "Válassz egy akciót"
+#: ----
+msgid "CHOOSE_FILE_UPLOAD"
+msgstr "Feltöltendő fájl kiválasztása"
+#: ----
+msgid "CHOSE_STARTING_POINT"
+msgstr "Kezdőpont választása"
+#: ----
+msgid "CLARIFY"
+msgstr "Magyarázat"
+#: ----
+msgid "CLARIFYING_NOTE"
+msgstr "Magyarázó megjegyzés"
+#: ----
+msgid "CLARIFYING_NOTES"
+msgstr "Magyarázó megjegyzések"
+#: ----
+msgid "CLEAR"
+msgstr "Törlés"
+#: ----
+msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
+msgstr "Kattintsaz OpenEvSysben szereplő minden bejegyzésének letöltéséhez  Események XML fájlként"
+#: ----
+msgid "CLICK_TO_SELECT_AN_OPTION"
+msgstr "Válassz egy opciót"
+#: ----
+msgid "CLOSE"
+msgstr "Bezár"
+#: ----
+msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
+msgstr "Oszlop visszaállítása az eredeti értékekre."
+#: ----
+msgid "COMBINED_SEARCH_FORMS"
+msgstr "Kombinált keresési űrlapok"
+#: ----
+msgid "COMPILE"
+msgstr "Összeállít"
+#: ----
+msgid "CONFIG_VARIABLE"
+msgstr "Konfigurációs változó"
+#: ----
+msgid "CONFIRM_NEW_PASSWORD"
+msgstr "Új jelszó megerősítése"
+#: ----
+msgid "CONFIRM_PASSWORD"
+msgstr "Jelszó megerősítése"
+#: ----
+msgid "CONTAINS"
+msgstr "tartalmazza"
+#: ----
+msgid "CONTEXTUAL_INFORMATION"
+msgstr "Háttér információ"
+#: ----
+msgid "CONTINUE"
+msgstr "Tovább"
+#: ----
+msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
+msgstr "Tovább a Dokumentum szerkesztééshez"
+#: ----
+msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
+msgstr "Tovább az Eseménysorozat szerkesztééshez"
+#: ----
+msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
+msgstr "Tovább az Esemény szerkesztééshez"
+#: ----
+msgid "COUNT"
+msgstr "Számolás"
+#: ----
+msgid "COUNTRY"
+msgstr "Ország"
+#: ----
+msgid "CREATE_REPORT_FROM_THESE_RESULTS"
+msgstr "Jelentés készítése ezekből az eredményekből"
+#: ----
+msgid "CREATED_BY"
+msgstr "Létrehozta"
+#: ----
+msgid "CREATED_DATE"
+msgstr "Létrehozás időpontja"
+#: ----
+msgid "CREATOR"
+msgstr "Szerző"
+#: ----
+msgid "CSV"
+msgstr "CSV"
+#: ----
+msgid "CURRENT_PASSWORD"
+msgstr "Jelenlegi jelszó"
+#: ----
+msgid "CURRENT_SETTING"
+msgstr "Jelenlegi beállítás"
+#: ----
+msgid "CURRENT_VALUE"
+msgstr "Jelenlegi érték"
+#: ----
+msgid "DATA_EXCHANGE"
+msgstr "Adat csere"
+#: ----
+msgid "DATABASE_ERROR"
+msgstr "Adatbázis hiba"
+#: ----
+msgid "DATE"
+msgstr "Dátum"
+#: ----
+msgid "DATE_CREATED"
+msgstr "Létrehozás dátuma"
+#: ----
+msgid "DATE_FIELD_"
+msgstr "Adatmező"
+#: ----
+msgid "DATE_OF_INTERVENTION"
+msgstr "Beavatkozás ideje"
+#: ----
+msgid "DATE_OF_SOURCE_MATERIAL"
+msgstr "Forrásanyag dátuma"
+#: ----
+msgid "DATE_REQUIRED__INVALID_DATE"
+msgstr "Dátum kötelező, nem érvényes adat"
+#: ----
+msgid "DATE_SUBMITTED"
+msgstr "Bejegyzés időpontja"
+#: ----
+msgid "DEFINITION"
+msgstr "Meghatározás"
+#: ----
+msgid "DEGREE_OF_INVOLVEMENT"
+msgstr "Részvétel szintje"
+#: ----
+msgid "DELETE"
+msgstr "Törlés"
+#: ----
+msgid "DELETE_ADDITIONAL_DETAILS"
+msgstr "Egyéb adatok törlése"
+#: ----
+msgid "DELETE_DOCUMENT"
+msgstr "Dokumentum törlése"
+#: ----
+msgid "DELETE_THIS_EVENT"
+msgstr "Esemény törlése"
+#: ----
+msgid "DELETE_THIS_PERSON"
+msgstr "Személy törlése"
+#: ----
+msgid "DESCRIPTION"
+msgstr "Leírás"
+#: ----
+msgid "DESIGNATION"
+msgstr "Kijelölés"
+#: ----
+msgid "DESTRUCTION"
+msgstr "Megsemmísités"
+#: ----
+msgid "DISABLE_HELP"
+msgstr "Súgó kikapcsolása"
+#: ----
+msgid "DISABLE_INTERACTIVE_TRANSLATION"
+msgstr "Interaktív fordítás kikapcsolása"
+#: ----
+msgid "DISABLED"
+msgstr "Kikapcsolva"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
+msgstr "Törölni szeretnéd az Egyéb részleteket?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
+msgstr "Törölni szeretnéd a kiválasztott cím(ek)et?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
+msgstr "Törölni szeretnéd a kiválasztott Életrajzi adatokat?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
+msgstr "Törölni szeretnéd a kiválasztott Eseménysorozat(ok)at?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
+msgstr "Törölni szeretnéd a kiválasztott Információ(ka)t?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
+msgstr "Törölni szeretnéd a kiválasztott Beavatkozás(oka)t?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
+msgstr "Törölni szeretnéd a kiválasztott kifejezés(eke)t?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
+msgstr "Törölni szeretnéd a kiválasztott Lekérdezéseket?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
+msgstr "Törölni szeretnéd a kiválasztott bejegyzés(eke)t?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
+msgstr "Törölni szeretnéd a kiválasztott felhasználó(ka)t?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
+msgstr "Törölni szeretnéd ezt a Dokumentumot?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
+msgstr "Törölni szeretnéd ezt az eseményt?"
+#: ----
+msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
+msgstr "Törölni szeretnéd ezt a Személyt?"
+#: ----
+msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
+msgstr "Törölni szeretnéd az ehhez a Dokumentumhoz tartozó csatolmányt?"
+#: ----
+msgid "DOCUMENT"
+msgstr "Dokumentum"
+#: ----
+msgid "DOCUMENT_DETAILS"
+msgstr "Dokumentum részletei"
+#: ----
+msgid "DOCUMENT_DOES_NOT_EXIST_"
+msgstr "A Dokumentum nem létezik"
+#: ----
+msgid "DOCUMENT_SEARCH_FORM"
+msgstr "Dokumentum kereső űrlap"
+#: ----
+msgid "DOCUMENT_TITLE"
+msgstr "Dokumentum címe"
+#: ----
+msgid "DOCUMENTS"
+msgstr "Dokumentumok"
+#: ----
+msgid "DOWNLOAD"
+msgstr "Letöltés"
+#: ----
+msgid "DOWNLOAD_DOCUMENT"
+msgstr "Dokumentum letöltése"
+#: ----
+msgid "DOWNLOAD_ERROR_REPORT"
+msgstr "Hibajelentés letöltése"
+#: ----
+msgid "E_MAIL"
+msgstr "E Mail"
+#: ----
+msgid "EDIT"
+msgstr "Szerkesztés"
+#: ----
+msgid "EDIT_ADDITIONAL_DETAILS"
+msgstr "Egyéb részletek szerkesztése"
+#: ----
+msgid "EDIT_BIOGRAPHIC_DETAILS"
+msgstr "Életrajzi adatok szerkesztése"
+#: ----
+msgid "EDIT_DETAILS"
+msgstr "Részletek szerkesztése"
+#: ----
+msgid "EDIT_EVENT_SUMMARY"
+msgstr "Esemény összefoglaló szerkesztése"
+#: ----
+msgid "EDIT_PROFILE"
+msgstr "Profil szerkesztése"
+#: ----
+msgid "EDIT_THIS_ACT"
+msgstr "Cselekmény szerkesztése"
+#: ----
+msgid "EDIT_THIS_ADDRESS"
+msgstr "Cím szerkesztése"
+#: ----
+msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
+msgstr "Életrajzi adat szerkesztése"
+#: ----
+msgid "EDIT_THIS_CHAIN_OF_EVENT"
+msgstr "Eseménysorozat szerkesztése"
+#: ----
+msgid "EDIT_THIS_EVENT"
+msgstr "Esemény szerkesztése"
+#: ----
+msgid "EDIT_THIS_INFORMATION"
+msgstr "Információ szerkesztése"
+#: ----
+msgid "EDIT_THIS_INTERVENING_PARTY"
+msgstr "Beavatkozó fél szerkesztése"
+#: ----
+msgid "EDIT_THIS_INTERVENTION"
+msgstr "Beavatkozás szerkesztése"
+#: ----
+msgid "EDIT_THIS_INVOLVEMENT"
+msgstr "Bevonás szerkesztése"
+#: ----
+msgid "EDIT_THIS_PERPETRATOR"
+msgstr "Elkövető szerkesztése"
+#: ----
+msgid "EDIT_THIS_PERSON"
+msgstr "Személy szerkesztése"
+#: ----
+msgid "EDIT_THIS_VICTIM"
+msgstr "Áldozat szerkesztése"
+#: ----
+msgid "EDIT_USER"
+msgstr "Felhasználó szerkesztése"
+#: ----
+msgid "EDITING_PERSON_ADDRESS____"
+msgstr "Személy címének szerkesztése…"
+#: ----
+msgid "EMAIL"
+msgstr "Email"
+#: ----
+msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
+msgstr "Email cím kötelező, Érvénytelen Email"
+#: ----
+msgid "ENABLE_HELP"
+msgstr "Súgó bekapcsolása"
+#: ----
+msgid "ENABLE_INTERACTIVE_TRANSLATION"
+msgstr "Interaktív fordítás bekapcsolása"
+#: ----
+msgid "END_DATE"
+msgstr "Befejezés dátuma"
+#: ----
+msgid "ENTITY"
+msgstr "Entitás"
+#: ----
+msgid "ENTITY_PERMISSIONS"
+msgstr "Entitás engedélyek"
+#: ----
+msgid "ENTRY"
+msgstr "Bejegyzés"
+#: ----
+msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
+msgstr "A szerver frissítése közben hiba lépett fel."
+#: ----
+msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
+msgstr "A huriterm létrehozás közben hiba lépett fel."
+#: ----
+msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
+msgstr "Hiba történt a fájl mentésekor. Nem sikerült elmenteni."
+#: ----
+msgid "ERROR_WHILE_CREATING_FIELD_"
+msgstr "Hiba történt a mező létrehozása közben."
+#: ----
+msgid "EVENT"
+msgstr "Esemény"
+#: ----
+msgid "EVENT_DESCRIPTION"
+msgstr "Esemény leírása"
+#: ----
+msgid "EVENT_DOES_NOT_EXIST_"
+msgstr "Az esemény nem létezik."
+#: ----
+msgid "EVENT_SEARCH_FORM"
+msgstr "Esemény keresési űrlap"
+#: ----
+msgid "EVENT_STANDARD_FORMAT_XML"
+msgstr "Esemény szabvány formátum XML"
+#: ----
+msgid "EVENT_TITLE"
+msgstr "Esemény címe"
+#: ----
+msgid "EVENTS"
+msgstr "Események"
+#: ----
+msgid "EXAMPLE"
+msgstr "Példa"
+#: ----
+msgid "EXAMPLES"
+msgstr "Példák"
+#: ----
+msgid "EXISTING_FIELDS"
+msgstr "Meglévő mezők"
+#: ----
+msgid "EXPORT"
+msgstr "Exportálás"
+#: ----
+msgid "EXPORT__"
+msgstr "Exportálás:"
+#: ----
+msgid "EXPORT_DATE"
+msgstr "Exportálás dátuma"
+#: ----
+msgid "EXPORT_EVENTS"
+msgstr "Események exportálása/Exportálási események"
+#: ----
+msgid "EXPORT_INSTANCE"
+msgstr "Elsőfokú exportálás"
+#: ----
+msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
+msgstr "Táblázat exportálása táblázatkezelőbe"
+#: ----
+msgid "EXPORT_TIME"
+msgstr "Exportálás ideje"
+#: ----
+msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
+msgstr "Nem sikerült a lemezre írni."
+#: ----
+msgid "FALSE"
+msgstr "hibás"
+#: ----
+msgid "FAX"
+msgstr "Fax"
+#: ----
+msgid "FIELD_CREATED_SUCCESSFULLY_"
+msgstr "Mező sikeresen létrehozva."
+#: ----
+msgid "FIELD_LABEL"
+msgstr "Mező címke"
+#: ----
+msgid "FIELD_NAME"
+msgstr "Mező neve"
+#: ----
+msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
+msgstr "Mezőnév, mezőszám és mezőcímke nem lehet üres. Kérlek töltsd ki!"
+#: ----
+msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
+msgstr "A mezőnév már létezik. Kérlek adj neki más nevet!"
+#: ----
+msgid "FIELD_NUMBER"
+msgstr "Mezőszám"
+#: ----
+msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
+msgstr "A mezőszám már létezik. Kérlek válassz más számot!"
+#: ----
+msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
+msgstr "A 60-ra és 80-ra végződő mezőszámok a kezelési mezők számára vannak fenntartva. Kérlek válassz olyan számot ami nem ilyen formátumú."
+#: ----
+msgid "FIELD_RESET"
+msgstr "Mező visszaállítása"
+#: ----
+msgid "FIELD_S_"
+msgstr "Mező(k)"
+#: ----
+msgid "FIELD_TYPE"
+msgstr "Mező típusa"
+#: ----
+msgid "FILE_IS_NOT_WRITABLE_"
+msgstr "Mező nem írható"
+#: ----
+msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
+msgstr "A fájl feltöltését megakadályozta egy kiegészítő."
+#: ----
+msgid "FILTER"
+msgstr "Szűrés"
+#: ----
+msgid "FILTER_OPTIONS_AND_RESULTS"
+msgstr "szűrési opciók és eredmények"
+#: ----
+msgid "FINAL_DATE"
+msgstr "Végső dátum"
+#: ----
+msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
+msgstr "OpenEvsysbe feltöltött dokumentumok keresése és annak megtekintése, hogyan kapcsolódnak más formátumokhoz."
+#: ----
+msgid "FINISH"
+msgstr "Befejezés"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
+msgstr "Befejezve! A következő lehetőségeid vannak"
+#: ----
+msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
+msgstr "Befejezve! A következő lehetőségeid vannak:"
+#: ----
+msgid "FIRST_NAME"
+msgstr "Keresztnév"
+#: ----
+msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
+msgstr "A mappa már létezik. Válassz másik nevet!"
+#: ----
+msgid "FOLDER_NAME"
+msgstr "Mappa neve"
+#: ----
+msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
+msgstr "A következő mezők nem lehetnek üresek"
+#: ----
+msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
+msgstr "A következő huriterm már létezik."
+#: ----
+msgid "FORCE_DELETE"
+msgstr "Törlés kényszerítése"
+#: ----
+msgid "FORM"
+msgstr "Űrlap"
+#: ----
+msgid "FORM_CUSTOMIZATION"
+msgstr "Űrlap testreszabása"
+#: ----
+msgid "FURTHER_INFORMATION"
+msgstr "További információ"
+#: ----
+msgid "GO_TO_PARENT_LEVEL"
+msgstr "Szülő szintre ugrás"
+#: ----
+msgid "GROUP_BY_DAY"
+msgstr "Nap szerinti csoportosítás"
+#: ----
+msgid "GROUP_BY_MONTHLY"
+msgstr "Hónap szerinti csoportosítás"
+#: ----
+msgid "GROUP_BY_YEARLY"
+msgstr "Év szerinti csoportosítás"
+#: ----
+msgid "GUIDELINES"
+msgstr "Irányelvek"
+#: ----
+msgid "HELP_TEXT"
+msgstr "Súgó szövege"
+#: ----
+msgid "HIDE_ADDRESS_FORM"
+msgstr "Cím űrlap elrejtése"
+#: ----
+msgid "HIDE_SEARCH_FORM"
+msgstr "Keresési űrlap elrejtése"
+#: ----
+msgid "HIDE_SUPPORTING_DOCUMENT_S_"
+msgstr "Igazoló Dokumentum(ok) elrejtése"
+#: ----
+msgid "HIDE_TREE"
+msgstr "Fa elrejtése"
+#: ----
+msgid "HOW_WAS_"
+msgstr "Milyen volt"
+#: ----
+msgid "HURICODE"
+msgstr "Hurikód"
+#: ----
+msgid "HURITERM_CAN_NOT_BE_EMPTY_"
+msgstr "Huriterm nem lehet üres"
+#: ----
+msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
+msgstr "Ha az Esemény/Személy Bizalmas?"
+#: ----
+msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
+msgstr "Ha ezt az oldalt látod, nincs hozzáférésed az OpenEvSys moduljaihoz. Kérlek lépj kapcsolatba a rendszeradminisztrátorral további információért."
+#: ----
+msgid "IMPACT"
+msgstr "Hatás"
+#: ----
+msgid "IMPORT"
+msgstr "Importálás"
+#: ----
+msgid "IMPORT_DATE"
+msgstr "Importálás dátuma"
+#: ----
+msgid "IMPORT_EVENTS"
+msgstr "Események importálása"
+#: ----
+msgid "IMPORT_LOG"
+msgstr "Importálás log"
+#: ----
+msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
+msgstr "Importálás log részletek nem elérhetőek"
+#: ----
+msgid "IMPORT_TIME"
+msgstr "Importálási idő"
+#: ----
+msgid "IN_BETWEEN"
+msgstr "közben"
+#: ----
+msgid "IN_SEARCH_RESULTS"
+msgstr "A keresési találatokban"
+#: ----
+msgid "INCIDENT_TABLE"
+msgstr "Eset táblázat"
+#: ----
+msgid "INFORMATION"
+msgstr "Információ"
+#: ----
+msgid "INFORMATION_ABOUT"
+msgstr "Információ róla:"
+#: ----
+msgid "INFORMATION_S_"
+msgstr "Információ(k)"
+#: ----
+msgid "INFORMATION_SEARCH_FORM"
+msgstr "Információ keresési űrlap"
+#: ----
+msgid "INITIAL_DATE"
+msgstr "Kezdő dátum"
+#: ----
+msgid "INTERVENING_PARTIES"
+msgstr "Beavatkozó felek"
+#: ----
+msgid "INTERVENING_PARTY"
+msgstr "Beavatkozó fél"
+#: ----
+msgid "INTERVENING_PARTY_SEARCH_FORM"
+msgstr "Beavatkozó fél keresési mező"
+#: ----
+msgid "INTERVENTION"
+msgstr "Beavatkozás"
+#: ----
+msgid "INTERVENTION_S_"
+msgstr "Beavatkozás(ok)"
+#: ----
+msgid "INTERVENTION_SEARCH_FORM"
+msgstr "Beavatkozás kereső űrlap"
+#: ----
+msgid "INTERVENTIONS"
+msgstr "Beavatkozások"
+#: ----
+msgid "INVALID_EMAIL"
+msgstr "Érvénytelen email"
+#: ----
+msgid "INVALID_EMAIL_ADDRESS"
+msgstr "Érvénytelen email cím"
+#: ----
+msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
+msgstr "Érvénytelen Huricode, 12 számjegyből kell álljon."
+#: ----
+msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Érvénytelen felhasználói azonosító vagy jelszó, kérlek próbáld újra."
+#: ----
+msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Érvénytelen felhasználónév vagy jelszó! Kérlek próbáld újra."
+#: ----
+msgid "INVOLVED_IN"
+msgstr "bevonva"
+#: ----
+msgid "INVOLVEMENT"
+msgstr "Bevonás"
+#: ----
+msgid "INVOLVEMENT_DETAILS"
+msgstr "Bevonás részletei"
+#: ----
+msgid "INVOLVEMENT_S_"
+msgstr "Bevonás(ok)"
+#: ----
+msgid "INVOLVEMENT_SEARCH_FORM"
+msgstr "Bevonás keresési űrlap"
+#: ----
+msgid "INVOLVEMENTS"
+msgstr "Bevonások"
+#: ----
+msgid "IS_A_SUB_ELEMENT_OF"
+msgstr "aleleme ennek:"
+#: ----
+msgid "IS_EMPTY"
+msgstr "üres"
+#: ----
+msgid "IS_REQUIRED"
+msgstr "Kötelező"
+#: ----
+msgid "KILLING"
+msgstr "Gyilkosság"
+#: ----
+msgid "LABEL"
+msgstr "Címke"
+#: ----
+msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
+msgstr "A címke nem lehet üres. Írj be valamit."
+#: ----
+msgid "LABEL_IN_"
+msgstr "Címke"
+#: ----
+msgid "LABEL_S_"
+msgstr "Címke(k)"
+#: ----
+msgid "LABELS"
+msgstr "Címkék"
+#: ----
+msgid "LANGUAGE"
+msgstr "Nyelv"
+#: ----
+msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
+msgstr "A nyelvi könyvtár nem írható."
+#: ----
+msgid "LANGUAGE_REMOVED"
+msgstr "Nyelv eltávolítva"
+#: ----
+msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
+msgstr "A nyelvet sikersen hozzáadtuk."
+#: ----
+msgid "LAST_NAME"
+msgstr "Vezetéknév"
+#: ----
+msgid "LIKE"
+msgstr "mint"
+#: ----
+msgid "LINKED_WHEN"
+msgstr "Kapcsolódik, ha"
+#: ----
+msgid "LINKS"
+msgstr "Kapcsolódók"
+#: ----
+msgid "LOCALIZATION"
+msgstr "Honosítás"
+#: ----
+msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
+msgstr "Log adatok nem elérhetőek ezzel a Személlyel kapcsolatban"
+#: ----
+msgid "MANAGE_LANGUAGES"
+msgstr "Nyelvek kezelése"
+#: ----
+msgid "MESSAGES_SAVED_SUCCESSFULLY_"
+msgstr "Az üzeneteket sikeresen mentettük"
+#: ----
+msgid "MICRO_THESAURI"
+msgstr "Micro-thesauri"
+#: ----
+msgid "MICRO_THESAURI_CUSTOMIZATION"
+msgstr "Micro-thesauri testreszabása"
+#: ----
+msgid "MICRO_THESAURI_TERMS"
+msgstr "Micro-thesauri kifejezések"
+#: ----
+msgid "MISSING_A_TEMPORARY_FOLDER_"
+msgstr "Egy ideiglenes mappa hiányzik"
+#: ----
+msgid "MODIFIED_VALUE"
+msgstr "Módosított érték"
+#: ----
+msgid "MODULE"
+msgstr "Modul"
+#: ----
+msgid "MODULES"
+msgstr "Modulok"
+#: ----
+msgid "MONITORING_STATUS"
+msgstr "Monitoring állapot"
+#: ----
+msgid "MORE_ABOUT_THIS_EVENT"
+msgstr "Esemény részletei"
+#: ----
+msgid "MORE_ABOUT_THIS_PERSON"
+msgstr "Személy részletei"
+#: ----
+msgid "MY_PREFERENCES"
+msgstr "Beállításaim"
+#: ----
+msgid "MYSQL_DATA_TYPE"
+msgstr "MYSQL adattípus"
+#: ----
+msgid "NAME"
+msgstr "Név"
+#: ----
+msgid "NEW"
+msgstr "Új"
+#: ----
+msgid "NEW_DOCUMENT"
+msgstr "Új dokumentum"
+#: ----
+msgid "NEW_EVENT"
+msgstr "Új esemény"
+#: ----
+msgid "NEW_PASSWORD"
+msgstr "Új jelszó"
+#: ----
+msgid "NEW_PERSON"
+msgstr "Új személy"
+#: ----
+msgid "NEW_ROLE_NAME"
+msgstr "Új szerep név"
+#: ----
+msgid "NEXT"
+msgstr "Következő"
+#: ----
+msgid "NO"
+msgstr "Nem"
+#: ----
+msgid "NO_QUERIES_SAVED_YET_"
+msgstr "Nincsenek mentett lekérdezések."
+#: ----
+msgid "NO_RECORDS_WERE_FOUND_"
+msgstr "Nincs adat."
+#: ----
+msgid "NO_RECORDS_WERE_SELECTED_"
+msgstr "Nincs kiválasztott adat."
+#: ----
+msgid "NOT_="
+msgstr "nem ="
+#: ----
+msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
+msgstr "Érvénytelen fájltípus. Próbáld újra."
+#: ----
+msgid "NOT_CONTAINS"
+msgstr "nem tartalmazza"
+#: ----
+msgid "NOT_IN_BETWEEN"
+msgstr "nem közte"
+#: ----
+msgid "NOT_LIKE"
+msgstr "nem úgy, mint"
+#: ----
+msgid "NOT_ON"
+msgstr "nem"
+#: ----
+msgid "NUMBER_REQUIRED__INVALID_NUMBER"
+msgstr "Szám kötelező, érvénytelen szám"
+#: ----
+msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
+msgstr "OpenEvSys sikeresen importálta az adatot."
+#: ----
+msgid "OR"
+msgstr "OR"
+#: ----
+msgid "ORDER"
+msgstr "Sorrend"
+#: ----
+msgid "ORGANIZATION"
+msgstr "Szervezet"
+#: ----
+msgid "ORIGINAL_SEARCH_RESULTS"
+msgstr "Eredeti keresési eredmények"
+#: ----
+msgid "PAGE__"
+msgstr "Oldal:"
+#: ----
+msgid "PAGINATE_RESULTS"
+msgstr "Oldalszámozási eredmények"
+#: ----
+msgid "PASSWORD"
+msgstr "Jelszó"
+#: ----
+msgid "PASSWORD_INVALID"
+msgstr "A jelszó érvénytelen"
+#: ----
+msgid "PASSWORD_MISMATCH"
+msgstr "A jelszó nem egyezik"
+#: ----
+msgid "PASSWORD_REQUIRED"
+msgstr "Jelszó kötelező"
+#: ----
+msgid "PERMISSION_DENIED"
+msgstr "Hozzáférés megtagadva"
+#: ----
+msgid "PERMISSIONS"
+msgstr "Engedélyek"
+#: ----
+msgid "PERMISSIONS_OF_"
+msgstr "Engedélyei"
+#: ----
+msgid "PERMISSONS"
+msgstr "Engedélyek"
+#: ----
+msgid "PERPETRATOR"
+msgstr "Elkövető szerkesztése"
+#: ----
+msgid "PERPETRATOR_NAME_S_"
+msgstr "Elkövető(k) neve"
+#: ----
+msgid "PERPETRATOR_SEARCH_FORM"
+msgstr "Elkövető kereső"
+#: ----
+msgid "PERPETRATORS"
+msgstr "Elkövetők"
+#: ----
+msgid "PERSON"
+msgstr "Személy"
+#: ----
+msgid "PERSON_ADDRESS_ES_"
+msgstr "Személy cím(ei)"
+#: ----
+msgid "PERSON_DETAIL_S_"
+msgstr "Személy adata(i)"
+#: ----
+msgid "PERSON_DOES_NOT_EXIST_"
+msgstr "Személy nem létezik."
+#: ----
+msgid "PERSON_NAME"
+msgstr "Személy neve"
+#: ----
+msgid "PERSON_RECORD_S_"
+msgstr "Személy adata(i)"
+#: ----
+msgid "PERSON_RECORDS_S_"
+msgstr "Személy adata(i)"
+#: ----
+msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
+msgstr "A személy születési időpontja nincs beírva"
+#: ----
+msgid "PERSON_SEARCH_FORM"
+msgstr "Személy keresési űrlap"
+#: ----
+msgid "PERSONS"
+msgstr "Személyek"
+#: ----
+msgid "PHONE"
+msgstr "Telefon"
+#: ----
+msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
+msgstr "Telefonszám kötelező, érvénytelen telefonszám"
+#: ----
+msgid "PICTURE"
+msgstr "Kép"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
+msgstr "Határozz meg egy feltételt keresés előtt!"
+#: ----
+msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
+msgstr "Határozz meg egy feltételt a számláló dobozban a számoláshoz!"
+#: ----
+msgid "PLEASE_SELECT_A_USER_TO_DELETE"
+msgstr "Válaszd ki a törlendő felhazsnálót!"
+#: ----
+msgid "PLEASE_SELECT_A_VALID_USER_"
+msgstr "Válassz érvényes felhasználót!"
+#: ----
+msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
+msgstr "Érvényes OpenEcSys XML fájlt tölts fel."
+#: ----
+msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
+msgstr "Használd a Tulajdonságaim opciót a jobb felső sarokban az adataid szerkesztéséhez."
+#: ----
+msgid "PREVIOUS"
+msgstr "Előző"
+#: ----
+msgid "PRINT_THIS_EVENT"
+msgstr "Esemény nyomtatása"
+#: ----
+msgid "PRINT_THIS_PAGE"
+msgstr "Oldal nyomtatása"
+#: ----
+msgid "PRINT_THIS_PERSON"
+msgstr "Személy nyomtatása"
+#: ----
+msgid "PRINTABLE_VIEW"
+msgstr "Nyomtatási nézet"
+#: ----
+msgid "QUERIES_DELETED_SUCCESSFULLY_"
+msgstr "A lekérdezések törölve."
+#: ----
+msgid "QUERY_ID"
+msgstr "Lekérdezés azonosító"
+#: ----
+msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
+msgstr "A lekérdezést mentettük."
+#: ----
+msgid "REC_NO"
+msgstr "Adat-szám"
+#: ----
+msgid "RECORD_NO"
+msgstr "Adatszám"
+#: ----
+msgid "RECORD_NUMBER"
+msgstr "Adatszám"
+#: ----
+msgid "RECORD_TYPE"
+msgstr "Adattípus"
+#: ----
+msgid "RECORDS_PER_PAGE"
+msgstr "Adat oldalanként"
+#: ----
+msgid "REGEX"
+msgstr "regex"
+#: ----
+msgid "RELATED_EVENT"
+msgstr "Kapcsolódó esemény"
+#: ----
+msgid "RELATED_EVENT_TITLE"
+msgstr "Kapcsolódó esemény címe"
+#: ----
+msgid "RELATED_PERSON"
+msgstr "Kapcsolódó személy"
+#: ----
+msgid "REMARKS"
+msgstr "Megjegyzések"
+#: ----
+msgid "REMOVE"
+msgstr "Eltávolítás"
+#: ----
+msgid "REMOVE_CLARIFY"
+msgstr "Magyarázat eltávolítása"
+#: ----
+msgid "REMOVE_CONDITION"
+msgstr "Feltétel eltávolítása"
+#: ----
+msgid "REMOVE_LANGUAGE"
+msgstr "Nyelv eltávolítása"
+#: ----
+msgid "REMOVE_SELECTION"
+msgstr "Kiválasztás törlése"
+#: ----
+msgid "REPORT"
+msgstr "Jelentés"
+#: ----
+msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
+msgstr "A keresett cselekmény nem létezik."
+#: ----
+msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
+msgstr "A keresett információ nem létezik."
+#: ----
+msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
+msgstr "A keresett beavatkozás nem létezik."
+#: ----
+msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
+msgstr "A keresett bevonás nem létezik."
+#: ----
+msgid "RESET"
+msgstr "Visszaállítás"
+#: ----
+msgid "RESET_ALL"
+msgstr "Minden visszaállítása"
+#: ----
+msgid "RESTRICT_FOR_THE_ROLE"
+msgstr "Rang alapján korlátozás"
+#: ----
+msgid "RESTRICT_FOR_THE_USER"
+msgstr "Felhasználó korlátozása"
+#: ----
+msgid "ROLE"
+msgstr "Rang"
+#: ----
+msgid "ROLE_LIST"
+msgstr "Rang lista"
+#: ----
+msgid "ROLES"
+msgstr "Rangok"
+#: ----
+msgid "ROLES___MODULE_ACCESS_CONTROL"
+msgstr "Rang / Modul hozzáférési beállítások"
+#: ----
+msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
+msgstr "Rang és modul hozzáférési beállítások"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Rangok melyekkel megtekinthető az esemény"
+#: ----
+msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Rangok melyekkel megtekinthető a személy"
+#: ----
+msgid "SAVE"
+msgstr "Mentés"
+#: ----
+msgid "SAVE_ADDRESS"
+msgstr "Cím mentése"
+#: ----
+msgid "SAVE_DOCUMENT"
+msgstr "Dokumentum mentése"
+#: ----
+msgid "SAVE_HELP_TEXT"
+msgstr "Súgó szöveg mentése"
+#: ----
+msgid "SAVE_NEW_FIELDS"
+msgstr "Új mezők mentése"
+#: ----
+msgid "SAVE_QUERY"
+msgstr "Lekérdezés mentése"
+#: ----
+msgid "SAVE_THIS_QUERY"
+msgstr "Lekérdezés mentése"
+#: ----
+msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
+msgstr "Lekérdezés mentése keveréssel"
+#: ----
+msgid "SAVED_QUERIES"
+msgstr "Mentett lekérdezések"
+#: ----
+msgid "SEARCH"
+msgstr "Keresés"
+#: ----
+msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
+msgstr "Bizonyos cselekményekhez kapcsolódó informácókban keresés"
+#: ----
+msgid "SEARCH_CONDITIONS"
+msgstr "Feltétel keresése"
+#: ----
+msgid "SEARCH_FORM"
+msgstr "Űrlap keresése"
+#: ----
+msgid "SEARCH_IN_DATABASE"
+msgstr "Keresés az adatbázisban"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
+msgstr "Információ keresése eseményekről"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
+msgstr "Információ keresése személyről, aki elkövető volt áldozat ellen elkövetett cselekmény során"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
+msgstr "Információ keresése személyről, aki beavatkozott eseményekbe"
+#: ----
+msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
+msgstr "Információ keresése személyről, aki információt szolgáltatott"
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
+msgstr "Információ keresése személyekről, akár egyén, csoport vagy szervezet"
+#: ----
+msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
+msgstr "Információ keresése személyekről akik áldozatok voltak"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
+msgstr "Információ keresése a cselekményekben melyeket áldozatok ellen követtek el"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
+msgstr "Információ keresése azokban az adatokban melyet források szolgáltattak"
+#: ----
+msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
+msgstr "Információ keresése az alapján ahogyan elkövetők részt vettek bizonyos cselekményekben"
+#: ----
+msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
+msgstr "Információ keresése személyekről akik beavatkoztak akár az áldozat oldalán"
+#: ----
+msgid "SEARCH_REPORT"
+msgstr "Jelentés keresése"
+#: ----
+msgid "SEARCH_RESULTS"
+msgstr "Találatok"
+#: ----
+msgid "SEARCHABLE"
+msgstr "Kereshető"
+#: ----
+msgid "SECTION"
+msgstr "Szekció"
+#: ----
+msgid "SEE_FULL_SIZE_IMAGE"
+msgstr "Teljes méretű kép megtekintése"
+#: ----
+msgid "SELECT"
+msgstr "Kiválasztás"
+#: ----
+msgid "SELECT_A_FORMAT"
+msgstr "Formátum választás"
+#: ----
+msgid "SELECT_A_MICRO_THESAURUS"
+msgstr "Válassz agy Micro-thesarust"
+#: ----
+msgid "SELECT_ENTITY"
+msgstr "Entitás választás"
+#: ----
+msgid "SELECT_FIELD"
+msgstr "Mező választás"
+#: ----
+msgid "SELECT_FIELDS_FROM_"
+msgstr "Mező választása"
+#: ----
+msgid "SELECT_ROLE"
+msgstr "Szerep választása"
+#: ----
+msgid "SELECT_SECONDARY_ENTITY"
+msgstr "Másodlagos entitás választása"
+#: ----
+msgid "SELECT_TREE_OPTION"
+msgstr "Fa opció választása"
+#: ----
+msgid "SET"
+msgstr "Beállítás"
+#: ----
+msgid "SET_ACL_MODE"
+msgstr "ACL mode beállítása"
+#: ----
+msgid "SET_LANGUAGE"
+msgstr "Nyelv beállítása"
+#: ----
+msgid "SET_SYSTEM_LANGUAGE"
+msgstr "Rendszernyelv beállítása"
+#: ----
+msgid "SHARE"
+msgstr "Megosztás"
+#: ----
+msgid "SHOW_ADDRESS_FORM"
+msgstr "Cím űrlap mutatása"
+#: ----
+msgid "SHOW_ALL"
+msgstr "Összes mutatása"
+#: ----
+msgid "SHOW_SEARCH_FORM"
+msgstr "Keresési űrlap mutatása"
+#: ----
+msgid "SHOW_SUPPORTING_DOCUMENT_S_"
+msgstr "Támogató dokumentum(ok) mutatása"
+#: ----
+msgid "SIGN_IN"
+msgstr "Bejelentkezés"
+#: ----
+msgid "SIGN_IN_TO_OPENEVSYS"
+msgstr "Bejelentkezés az OpenEvSysbe"
+#: ----
+msgid "SIGN_OUT"
+msgstr "Kijelentkezés"
+#: ----
+msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
+msgstr "Hiba lépett fel az adat importálása közben:"
+#: ----
+msgid "SOUND_LIKE"
+msgstr "hangzik"
+#: ----
+msgid "SOURCE"
+msgstr "Forrás"
+#: ----
+msgid "SOURCE_NAME"
+msgstr "Forrás neve"
+#: ----
+msgid "SOURCE_SEARCH_FORM"
+msgstr "Forrás keresési űrlap"
+#: ----
+msgid "SOURCES"
+msgstr "Források"
+#: ----
+msgid "SPREADSHEET"
+msgstr "Táblázat"
+#: ----
+msgid "START_DATE"
+msgstr "Kezdő időpont"
+#: ----
+msgid "STATUS"
+msgstr "Állapot"
+#: ----
+msgid "SUBMIT"
+msgstr "Beküldés"
+#: ----
+msgid "SUPPORTING_DOCUMENTS"
+msgstr "Támogató dokumentum(ok)"
+#: ----
+msgid "SYSTEM_CONFIGURATION"
+msgstr "Rendszer beállítása"
+#: ----
+msgid "SYSTEM_ERROR"
+msgstr "Rendzserhiba"
+#: ----
+msgid "TERM_IN"
+msgstr "Kifejezés"
+#: ----
+msgid "TERM_IN_"
+msgstr "Kifejezés"
+#: ----
+msgid "TEXT"
+msgstr "Szöveg"
+#: ----
+msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
+msgstr "Szövegmező 200 karakteres limittel"
+#: ----
+msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
+msgstr "Szövegmező limit nélkül"
+#: ----
+msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
+msgstr "A feltöltött dokumentum nem volt érvényes XML formátumú"
+#: ----
+msgid "THE_EVENT_IS_LINKED"
+msgstr "Az esemény kapcsolódik"
+#: ----
+msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
+msgstr "A régi csatolmányt az újra frissítettük."
+#: ----
+msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
+msgstr "A személynek nincs semmilyen rangja!"
+#: ----
+msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
+msgstr "A két jelszó különböző"
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
+msgstr "A feltöltött fájl mérete meghaladja a MAX_FILE_SIZE előírást a HTML fájlban."
+#: ----
+msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
+msgstr "A feltöltött fájl mérete meghaladja az upload_max_filesize méretet a php.ini-ben."
+#: ----
+msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
+msgstr "A fájl csak részben töltődött fel."
+#: ----
+msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincsenek még dokumentumok. Adj hozzá néhányat!"
+#: ----
+msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincsenek még támogató dokumentumok. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincs még cím megadva ehhez a személyhez. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincsenek életrajzi adatok erről a személyről még. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Nincs információ az eseményről még. Adj hozzá! Kattints az \"Esemény hozzáadása\" gombra új esemény hozzáadásához."
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincs információ az eseménysorozatról még. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincs információ a beavatkozó félről és a beavatkozásról még. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincs információ a forrásról és az információról még. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
+msgstr "Nincs információ az áldozatról és az elkövetőről még. Adj hozzá!"
+#: ----
+msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
+msgstr "Nincs személy információ még. Adj hozzá!"
+#: ----
+msgid "TIMESTAMP"
+msgstr "Időbélyegző"
+#: ----
+msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
+msgstr "Dokumentum megtekintéséhez ki kell azt választanod a dokumentumok listájából."
+#: ----
+msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
+msgstr "Egy személy megtekintéséhez ki kell azt választanod a személyek listájából."
+#: ----
+msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
+msgstr "Egy esemény megtekintéséhez ki kell azt választanod az események listájából."
+#: ----
+msgid "TORTURE"
+msgstr "Kínzás"
+#: ----
+msgid "TRANSLATE"
+msgstr "Fordítás"
+#: ----
+msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
+msgstr "A fordítás nem frissült! Kérlek adj megfelelő engedélyt az érintett fájloknak és mappáknak!"
+#: ----
+msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
+msgstr "A fordítás frissítve."
+#: ----
+msgid "TRUE"
+msgstr "igaz"
+#: ----
+msgid "TYPE"
+msgstr "Típus"
+#: ----
+msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "A születés napja csak szám lehet!"
+#: ----
+msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "A születési hónap csak szám lehet!"
+#: ----
+msgid "TYPE_OF_ACT"
+msgstr "Cselekmény típusa"
+#: ----
+msgid "TYPE_OF_CHAIN_OF_EVENTS"
+msgstr "Cselekménysorozat típusa"
+#: ----
+msgid "TYPE_OF_INTERVENTION"
+msgstr "Beavatkozás típusa"
+#: ----
+msgid "TYPE_OF_RELATIONSHIP"
+msgstr "Kapcsolat típusa"
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Gépeld a felhasználói azonosítót a szövegdobozba és kattints a megosztásra, hogy az esenényt elérhetővé tedd a kívánt felhasználó számára."
+#: ----
+msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
+msgstr "Gépeld a felhasználói azonosítót a szövegdobozba és kattints a megosztásra, hogy az személyt elérhetővé tedd a kívánt felhasználó számára."
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
+msgstr "A születési év csak szám lehet!"
+#: ----
+msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
+msgstr "A születési évet teljesen írd ki!"
+#: ----
+msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
+msgstr "Nem lehet eltávolítani a Micr-thesarus kifejezéseket mert használatban vannak a bejegyzésekben."
+#: ----
+msgid "UNABLE_TO_RESET_FIELD_"
+msgstr "Nem lehet visszaállítani a mezőt."
+#: ----
+msgid "UNABLE_TO_RESET_FIELDS_"
+msgstr "Nem lehet visszaállítani a mezőket."
+#: ----
+msgid "UNKNOWN_UPLOAD_ERROR_"
+msgstr "Ismeretlen feltöltési hiba."
+#: ----
+msgid "UNTITLED_QUERY"
+msgstr "Cím nélküli lekérdezés"
+#: ----
+msgid "UPDATE"
+msgstr "Frissítés"
+#: ----
+msgid "UPDATE_ACCESS_CONTROL_LIST"
+msgstr "Hozzáférési lista frissítése"
+#: ----
+msgid "UPDATE_FORM"
+msgstr "Űrlap frissítése"
+#: ----
+msgid "UPDATE_PERMISSIONS"
+msgstr "Engedélyek frissítése"
+#: ----
+msgid "UPLOAD"
+msgstr "Feltöltés"
+#: ----
+msgid "UPLOAD_FILE"
+msgstr "Fájl feltöltése"
+#: ----
+msgid "USER"
+msgstr "Felhasználó"
+#: ----
+msgid "USER_MANAGEMENT"
+msgstr "Felhasználó kezelése"
+#: ----
+msgid "USER_NAME"
+msgstr "Felhasználónév"
+#: ----
+msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
+msgstr "Felhasználó nem található! Érvénytelen felhasználónév vagy jelszó! Próbáld újra!"
+#: ----
+msgid "USERID_DOES_NOT_EXISTS_"
+msgstr "Felhazsnálói azonosító nem létezik."
+#: ----
+msgid "USERNAME"
+msgstr "Felhasználónév"
+#: ----
+msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
+msgstr "A felhasználónév foglalt, válassz másikat"
+#: ----
+msgid "USERNAME_CANNOT_BE_EMPTY"
+msgstr "A felhasználónév nem lehet üres"
+#: ----
+msgid "USERS"
+msgstr "Felhasználók"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
+msgstr "Felhasználók akiknek engedélyezett a hozzáférés ehhez az eseményhez"
+#: ----
+msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
+msgstr "Felhasználók akiknek engedélyezett a hozzáférés ehhez a személyhez"
+#: ----
+msgid "USERS_WITH_PERMISSIONS"
+msgstr "Engedéllyel rendelkező felhasználók"
+#: ----
+msgid "VALIDATION"
+msgstr "Érvényesítés"
+#: ----
+msgid "VALIDATION_TYPE"
+msgstr "Érvényesítés típusa"
+#: ----
+msgid "VERSION"
+msgstr "Verzió"
+#: ----
+msgid "VICTIM"
+msgstr "Áldozat"
+#: ----
+msgid "VICTIM_NAME"
+msgstr "Áldozat neve"
+#: ----
+msgid "VICTIM_SEARCH_FORM"
+msgstr "Áldozat keresési űrlap"
+#: ----
+msgid "VICTIMS"
+msgstr "Áldozatok"
+#: ----
+msgid "VICTIMS_AND_PERPETRATORS"
+msgstr "Áldozatok és elkövetők"
+#: ----
+msgid "VIEW_ACT_RECORD"
+msgstr "Cselekmény bejegyzések megtekintése"
+#: ----
+msgid "VIEW_ADDRESS"
+msgstr "Cím megtekintése"
+#: ----
+msgid "VIEW_BIOGRAPHIC_DETAILS"
+msgstr "Életrajzi adatok megtekintése"
+#: ----
+msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
+msgstr "Eseménysorozat megtekintése"
+#: ----
+msgid "VIEW_DOCUMENT"
+msgstr "Dokumentum megtekintése"
+#: ----
+msgid "VIEW_EVENT"
+msgstr "Esemény megtekintése"
+#: ----
+msgid "VIEW_EVENT_RECORD"
+msgstr "Esemény bejegyzések megtekintése"
+#: ----
+msgid "VIEW_INFORMATION_RECORD"
+msgstr "Információ bejegyzések megtekintése"
+#: ----
+msgid "VIEW_INTERVENTION_PARTY_RECORD"
+msgstr "Beavatkozó felek bejegyzések megtekintése"
+#: ----
+msgid "VIEW_INTERVENTION_RECORD"
+msgstr "Beavatkozás bejegyzések megtekintése"
+#: ----
+msgid "VIEW_INVOLVEMENT_RECORD"
+msgstr "Bevonás bejegyzések megtekintése"
+#: ----
+msgid "VIEW_PERPETRATOR_RECORD"
+msgstr "Elkövető bejegyzések megtekintése"
+#: ----
+msgid "VIEW_PERSON"
+msgstr "Személy megtekintése"
+#: ----
+msgid "VIEW_RELATED_PERSON"
+msgstr "Kapcsolódó személyek megtekintése"
+#: ----
+msgid "VIEW_SOURCE_RECORD"
+msgstr "Forrás bejegyzések megtekintése"
+#: ----
+msgid "VIEW_VICTIM_RECORD"
+msgstr "Áldozat bejegyzések megtekintése"
+#: ----
+msgid "VISIBILITY"
+msgstr "Láthatóság"
+#: ----
+msgid "VISIBLE"
+msgstr "Látható"
+#: ----
+msgid "VISIBLE_IN_BROWSE"
+msgstr "Látható a böngészés során"
+#: ----
+msgid "VISIBLE_IN_FORM"
+msgstr "Látható az űrlapon"
+#: ----
+msgid "VISIBLE_IN_VIEW"
+msgstr "Látható a nézetben"
+#: ----
+msgid "WEB"
+msgstr "Web"
+#: ----
+msgid "WEBSITE"
+msgstr "Weboldal"
+#: ----
+msgid "WHAT_HAPPENED_TO"
+msgstr "Mi történt vele"
+#: ----
+msgid "WHAT_IS_THE_INTERVENTION_"
+msgstr "Mi a bevatkozás?"
+#: ----
+msgid "WHO_IS_RESPONSIBLE_FOR_THE"
+msgstr "Ki felelős ezért:"
+#: ----
+msgid "WHO_IS_THE_INTERVENING_PARTY_"
+msgstr "Ki a beavatkozó fél?"
+#: ----
+msgid "WHO_IS_THE_SOURCE_"
+msgstr "Ki a forrás?"
+#: ----
+msgid "WHO_IS_THE_VICTIM__"
+msgstr "Ki az áldozat?"
+#: ----
+msgid "YEAR_S__"
+msgstr "Év(ek)."
+#: ----
+msgid "YES"
+msgstr "Igen"
+#: ----
+msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
+msgstr "Esemény törlésére készülsz. Ez azt jelenti az alábbi bejegyzések is törlődnek. Folytatod?"
+#: ----
+msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
+msgstr "Nem változtathatod meg az adminisztrátor engedélyeit."
+#: ----
+msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
+msgstr "Nem törölhetsz admin felhasználókat."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
+msgstr "Nem törölhetsz adminisztrátori fókokat."
+#: ----
+msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
+msgstr "Nem törölheted az alapértelmezett nyelvet."
+#: ----
+msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
+msgstr "Nem törölheted magad a felhasználók közül."
+#: ----
+msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
+msgstr "Nincs jogosultságod más admin felhasználó adatait szerkeszteni."
+#: ----
+msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
+msgstr "Néhány szülő kifejezést is kiválasztottál ha folytatod a gyermekeik is törlésre kerülnek."
+#: ----
+msgid "YOU_MUST_FILL_IN_THIS_FIELD"
+msgstr "Ki kell töltened ezt a mezőt"
+#: ----
+msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
+msgstr "Ki kell választanod egy entitást a folytatás előtt"
+#: ----
+msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
+msgstr "A böngésződben ki van kapcsolva a cookie-k fogadása! Kapcsold be kérlek!"
+#: ----
+msgid "EXTENSIONS"
+msgstr "Kiegészítők"
+#: ----
+msgid "ABOUT_OE"
+msgstr "Az OpenEvSys-ről"
+#: ----
+msgid "AGPL"
+msgstr "AGPL v3 licensz"
+#: ----
+msgid "REQUIRED"
+msgstr "Kötelező"
+#: ----
+msgid "YES_CONFIDENTIALITY"
+msgstr "Igen (bizalmas kezelésre)"
+#: ----
+msgid "NO_CONFIDENTIALITY"
+msgstr "Nem (bizalmas kezelésre)"
+#: ----
+msgid "ERROR_SERVER"
+msgstr "Hibát jelzett a szerver, lépj kapcsolatba a rendszeradminisztrátorral!"
+#: ----
+msgid "NULL_ROWS"
+msgstr "Sorok ürítése"
+#: ----
+msgid "PHONE_NO"
+msgstr "Telefonszám"
+#: ----
+msgid "NUMERICAL"
+msgstr "Számszerű"
+#: ----
+msgid "ANALYST"
+msgstr "Elemző"
+#: ----
+msgid "DATA_ENTRY"
+msgstr "Adatbevitel"
+#: ----
+msgid "ENTITY_GROUPS"
+msgstr "Entitás csoportok"
+#: ----
+msgid "CREATE"
+msgstr "Létrehozás"
+#: ----
+msgid "READ"
+msgstr "olvasás"
+#: ----
+msgid "LINKING"
+msgstr "Kapcsolódás"
+#: ----
+msgid "PRIMARY"
+msgstr "Elsődleges"
+#: ----
+msgid "SELECT_LANGUAGE"
+msgstr "Nyelv választása"
+#: ----
+msgid "NO_ATTACHMENT"
+msgstr "Nincsenek csatolmányok ehhez a dokumentumhoz"
+#: ----
+msgid "BROWSE"
+msgstr "Böngészés"
+#: ----
+msgid "ROWS"
+msgstr "Sor(ok)"
+#: ----
+msgid "ADVANCED_SEARCH_REPORT"
+msgstr "Részletes keresési jelentés"
+#: ----
+msgid "Address"
+msgstr "Cím"
+#: ----
+msgid "latitude"
+msgstr "szélesség"
+#: ----
+msgid "longitude"
+msgstr "hosszúság"
+#: ----
+msgid "View"
+msgstr "Nézet"
+#: ----
+msgid "Micro-thesauri created successfully"
+msgstr "Micro-thesarus sikeresen létrehozva"
+#: ----
+msgid "Radio field"
+msgstr "Rádió gomb"
+#: ----
+msgid "Geolocation"
+msgstr "Helymeghatározás"
+#: ----
+msgid "User Select"
+msgstr "Felhasználó választás"
+#: ----
+msgid "Multivalue User Select"
+msgstr "Többszempontú felhasználóválasztás"
+#: ----
+msgid "Tree"
+msgstr "Fa"
+#: ----
+msgid "Multivalue Tree"
+msgstr "Többszempontú fa"
+#: ----
+msgid "Multivalue Select"
+msgstr "Többszempontú választás"
+#: ----
+msgid "Please select items to perform action"
+msgstr "Válassz tételeket az akció végrehajtásához"
+#: ----
+msgid "Dashboard"
+msgstr "Műszerfal"
+#: ----
+msgid "Micro-thesauri cannot be empty"
+msgstr "A Micro-thesauri nem lehet üres"
+#: ----
+msgid "Micro-thesauri name already exists"
+msgstr "A Micro-thesauri már létezik"
+#: ----
+msgid "Login Information"
+msgstr "Bejelentkezési információ"
+#: ----
+msgid "Profile Information"
+msgstr "Profil információ"
+#: ----
+msgid "Print configuration"
+msgstr "Nyomtatási információ"
+#: ----
+msgid "Header for report print view"
+msgstr "Fejléc jelentés nyomtatási nézetéhez"
+#: ----
+msgid "Header for event print view"
+msgstr "Fejléc esemény nyomtatási nézetéhez"
+#: ----
+msgid "Sidebar for event print view"
+msgstr "Oldalsávesemény nyomtatási nézetéhez"
+#: ----
+msgid "Header for person print view"
+msgstr "Fejléc személy nyomtatási nézetéhez"
+#: ----
+msgid "Sidebar for person print view"
+msgstr "Oldalsáv személy nyomtatási nézetéhez"
+#: ----
+msgid "Details"
+msgstr "Részletek"
+#: ----
+msgid "Add new term"
+msgstr "Új kifejezés hozzáadása"
+#: ----
+msgid "Searchable in Analysis"
+msgstr "Elemzéskor kereshető"
+#: ----
+msgid "Visible in Analysis"
+msgstr "Elemzéskor látható"
+#: ----
+msgid "Add new Micro-thesauri"
+msgstr "Új Micro-thesauri hozzáadása"
+#: ----
+msgid "Select language"
+msgstr "Nyelv választása"
+#: ----
+msgid "Header for login page"
+msgstr "Bejelentkezési oldal fejléce"
+#: ----
+msgid "Multivalue"
+msgstr "Többértékű"
+#: ----
+msgid "Enabled"
+msgstr "Engedélyezett"
+#: ----
+msgid "Hide in case of"
+msgstr "Elrejtés"
+#: ----
+msgid "Set visible"
+msgstr "Láthatóvá tétel"
+#: ----
+msgid "Disable"
+msgstr "Kikapcsol"
+#: ----
+msgid "Apply"
+msgstr "Alkalmazás"
+#: ----
+msgid "Vocab number"
+msgstr "Vocab szám"
+#: ----
+msgid "disabled"
+msgstr "kikapcsolt"
+#: ----
+msgid "Undefined"
+msgstr "Meghatározatlan"
+#: ----
+msgid "Load"
+msgstr "Töltés"
+#: ----
+msgid "Select facets"
+msgstr "Oldalak választása"
+#: ----
+msgid "Date range"
+msgstr "Dátum időszak"
+#: ----
+msgid "Timeline type"
+msgstr "Idővonal típusa"
+#: ----
+msgid "DAY"
+msgstr "NAP"
+#: ----
+msgid "MONTH"
+msgstr "HÓNAP"
+#: ----
+msgid "YEAR"
+msgstr "ÉV"
+#: ----
+msgid "Total Count"
+msgstr "Összes"
+#: ----
+msgid "Added in last 30 days"
+msgstr "Az elmúlt 30 napban hozzáadott"
+#: ----
+msgid "Most active users (new items)"
+msgstr "Legaktívabb felhasználók (új tételek)"
+#: ----
+msgid "User activity (edited items)"
+msgstr "Felhazsnálói aktivitás (szerkesztett tételek)"
+#: ----
+msgid "Recently deleted"
+msgstr "Nemrég törölt"
+#: ----
+msgid "No data available"
+msgstr "Nincs elérhető adat"
+#: ----
+msgid "Add Perpetrator later"
+msgstr "Elkövetőt késöbb adom hozzá"
+#: ----
+msgid "Save and Add More Perpetrators"
+msgstr "Mentés és több elkövető hozzáadása"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Nincs még információ a cselekményről, adj hozzá! Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
+#: ----
+msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Nincs még információ a beavatkozásról, adj hozzá! Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
+#: ----
+msgid "View person's roles"
+msgstr "Személy szerepeinek megtekintése"
+#: ----
+msgid "Duplicate"
+msgstr "Duplikálás"
+#: ----
+msgid "Insert folder name:"
+msgstr "Mappa neve:"
+#: ----
+msgid "Return to files list"
+msgstr "Vissza a fájlok listájához"
+#: ----
+msgid "Preview"
+msgstr "Előnézet"
+#: ----
+msgid "Erase"
+msgstr "Törlés"
+#: ----
+msgid "Charts and map"
+msgstr "Diagramok és térképek"
+#: ----
+msgid "Clear this selections"
+msgstr "Kiválasztás eltávolítása"
+#: ----
+msgid "of"
+msgstr "nak/nek"
+#: ----
+msgid "Not found"
+msgstr "Nem található"
+#: ----
+msgid "Map"
+msgstr "Térkép"
+#: ----
+msgid "Charts"
+msgstr "Diagramok"
+#: ----
+msgid "Results"
+msgstr "Eredmények"
+#: ----
+msgid "Filters"
+msgstr "Szűrők"
+#: ----
+msgid "Security"
+msgstr "Biztonság"
+#: ----
+msgid "Top menu"
+msgstr "Felső menü"
+#: ----
+msgid "Top right menu"
+msgstr "Jobb felső menü"
+#: ----
+msgid "Event menu"
+msgstr "Esemény menü"
+#: ----
+msgid "Person menu"
+msgstr "Személy menü"
+#: ----
+msgid "Document menu"
+msgstr "Dokumentum menü"
+#: ----
+msgid "Analysis menu"
+msgstr "Elemzés menü"
+#: ----
+msgid "Preferences menu"
+msgstr "Tulajdonságok menü"
+#: ----
+msgid "The reCAPTCHA wasn't entered correctly."
+msgstr "A reCAPTCHA nem helyesen lett megadva."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Rossz igazoló kód. Próbáld újra."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "A menü sikeresen mentve."
+#: ----
+msgid "Google Authenticator"
+msgstr "Google hitelesítő"
+#: ----
+msgid "Enabled successfully."
+msgstr "Sikeresen engedélyezve"
+#: ----
+msgid "Code"
+msgstr "Kód"
+#: ----
+msgid "Menu"
+msgstr "Menü"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Kattints új menü hozzásadásához"
+#: ----
+msgid "Number"
+msgstr "Szám"
+#: ----
+msgid "Term"
+msgstr "Kifejezés"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Micro-thesauri hozzáadása"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Micro-thesauri fordítása"
+#: ----
+msgid "Language"
+msgstr "Nyelv"
+#: ----
+msgid "Event"
+msgstr "Esemény"
+#: ----
+msgid "Select Event"
+msgstr "Esemény választása"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Nincs még információ a cslekméynről, adj hozzá. Kattints az \"Új esemény hozzáadása\" gombra új esemény hozzáadásához"
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Válassz ki jelölőnégyzeteket, hogy végrehajtható legyen egy akció"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Telepítsd a Google hitelesítő alkalmazást a telefonodra"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Nyiss web böngészőt a telefonodon."
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Navigálj ide: m.google.com/authenticator"
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Töltsd le és telepítsd a Google hitelesítő alkalmazást."
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Nyisd meg és állítsd be a Google hitelesítőt."
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Szkenneld be ezt a vonalkódot, hogy automatikusan regisztráld az alkalmazást:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Használd a következő titkos kulcsot, hogy manuálisan regisztráld az alkalmazást:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Amikor manuálisan beírtad a kulcsot és elmentetted, írd be a 6jegyű igazoló kódot amit a hitelesítő alkalmazás generált."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "A kód nem megfeleleő, próbáld újra!"
