@@ -23,7 +23,7 @@
                 <div class="help-inline">
                     <span class="label label-important"><?php echo _t('IS_REQUIRED') ?></span>  
                     <?php if ($wrongcode) { ?> 
-                        <span class="help-inline">The code is incorrect. Try again</span>
+                        <span class="help-inline"><?php echo _t($wrongcode) ?></span>
                     <?php } ?>
                 </div>
             </div>

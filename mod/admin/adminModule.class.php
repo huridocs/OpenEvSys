@@ -343,16 +343,17 @@ class adminModule extends shnModule {
 
         if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
             if(isset($_POST['YubiKeyCode'])) {
+                $verifyCode = $this->getYubiClient()->verify($_POST['YubiKeyCode']);
+
+                if(PEAR::isError($verifyCode)) {
+                    $this->wrongcode = $verifyCode->message;
+                    return false;
+                }
+
                 $parsedCode = $this->parseYubicoCode($_POST['YubiKeyCode']);
-
-                if($parsedCode && !PEAR::isError($this->getYubiClient()->verify($_POST['YubiKeyCode']))) {
-                    $user->TSVSaveYubiKey($parsedCode['prefix']);
-                    return true;
-                }                
+                $user->TSVSaveYubiKey($parsedCode['prefix']);
+                return true;
             }
-
-            $this->wrongcode = true;
-            return false;
         }
     }
 
@@ -363,8 +364,7 @@ class adminModule extends shnModule {
     }
 
     protected function parseYubicoCode($code) {
-        $yubi = new Auth_Yubico();
-        $result = $yubi->parsePasswordOTP($code);
+        $result = $this->getYubiClient()->parsePasswordOTP($code);
 
         return $result;
     }
