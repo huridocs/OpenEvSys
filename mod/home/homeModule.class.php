@@ -201,6 +201,7 @@ class homeModule extends shnModule {
         $this->url = $result['url'];
         $this->secret = $result['secret'];
         $this->isYubikeyAPIConfigured = $this->isYubikeyAPIConfigured();
+        $this->wrongcode = false;
 
         if($_POST['desiredMethod'] == "none") {
             $user->disableTSV();
@@ -219,16 +220,17 @@ class homeModule extends shnModule {
 
         if($_POST['desiredMethod'] == "yubikey" && $this->isYubikeyAPIConfigured()) {
             if(isset($_POST['YubiKeyCode'])) {
+                $verifyCode = $this->getYubiClient()->verify($_POST['YubiKeyCode']);
+
+                if(PEAR::isError($verifyCode)) {
+                    $this->wrongcode = $verifyCode->message;
+                    return false;
+                }
+
                 $parsedCode = $this->parseYubicoCode($_POST['YubiKeyCode']);
-
-                if($parsedCode && !PEAR::isError($this->getYubiClient()->verify($_POST['YubiKeyCode']))) {
-                    $user->TSVSaveYubiKey($parsedCode['prefix']);
-                    return true;
-                }                
+                $user->TSVSaveYubiKey($parsedCode['prefix']);
+                return true;
             }
-
-            $this->wrongcode = true;
-            return false;
         }
     }
 
