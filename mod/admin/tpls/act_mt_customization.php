@@ -29,7 +29,7 @@
         global $mt_select;
         if ($mod == "a") {
             ?>
-            href="<?php get_url('admin', 'mt_customization', null, array('sub_act' => $act, 'mt_select' => $request_mt_select)) ?>";
+            href="<?php get_url('admin', 'mt_customization', null, array('sub_act' => $act, 'mt_select' => Reform::HtmlEncode($_REQUEST['mt_select']))) ?>";
             <?php
         } else {
             if ($act == $request_sub_act)
