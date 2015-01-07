@@ -2598,7 +2598,7 @@ class GoogleMapAPI {
     function geoGetCoordsFull($address,$depth=0) {
         switch($this->lookup_service) {
             case 'GOOGLE':
-                $_url = sprintf('http://%s/maps/api/geocode/json?sensor=%s&address=%s',$this->lookup_server['GOOGLE'], $this->mobile==true?"true":"false", rawurlencode($address));
+                $_url = sprintf('http://%s/maps/api/geocode/json?sensor=%s&address=%s',$this->resolve_name($this->lookup_server['GOOGLE']), $this->mobile==true?"true":"false", rawurlencode($address));
                 $_result = false;
                 if($_result = $this->fetchURL($_url)) {
                     return json_decode($_result);
@@ -2607,7 +2607,7 @@ class GoogleMapAPI {
             case 'YAHOO':
             default:        
                 $_url = 'http://%s/MapsService/V1/geocode';
-                $_url .= sprintf('?appid=%s&location=%s',$this->lookup_server['YAHOO'],$this->app_id,rawurlencode($address));
+                $_url .= sprintf('?appid=%s&location=%s',$this->resolve_name($this->lookup_server['YAHOO']),$this->app_id,rawurlencode($address));
                 $_result = false;
                 if($_result = $this->fetchURL($_url)) {
                     return $_match;
@@ -2616,16 +2616,33 @@ class GoogleMapAPI {
         }         
     }    
 
+    function curl_get_contents($url) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_URL, $url);
+	$data = curl_exec($ch);
+	if(curl_errno($ch)){
+	    error_log("CURL ERORR: ". curl_error($ch));
+	}
+	curl_close($ch);
+	return $data;
+    }
+
+    function resolve_name($name){
+	return dns_get_record($name,DNS_A)[0]['ip'];
+    }
+
     /**
      * fetch a URL. Override this method to change the way URLs are fetched.
      * 
      * @param string $url
      */
     function fetchURL($url) {
-
-        return file_get_contents($url);
-
+        return $this->curl_get_contents($url);
     }
+
+
 
     /**
      * get distance between to geocoords using great circle distance formula
