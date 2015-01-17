@@ -329,15 +329,9 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['list_code'] = (int) $_POST['list_code'];
             break;
         case 'user_select' :
-             $fieldValues['visible_browse'] = 'n';
-            $fieldValues['visible_adv_search'] = 'n';
-            $fieldValues['visible_adv_search_display'] = 'n';
             $field_mysql_type = "VARCHAR(14)";
             break;
         case 'user_select_multi':
-             $fieldValues['visible_browse'] = 'n';
-            $fieldValues['visible_adv_search'] = 'n';
-            $fieldValues['visible_adv_search_display'] = 'n';
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'user_select';
             break;
