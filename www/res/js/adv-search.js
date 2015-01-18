@@ -317,6 +317,7 @@ function openevsysDomain()
         switch(fieldType){
             case 'hidden':
             case 'textarea':
+            case 'user_select':
             case 'text':
                 var o = [
                 {

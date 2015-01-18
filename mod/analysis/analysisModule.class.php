@@ -24,6 +24,7 @@ class analysisModule extends shnModule {
     }
 
     function __construct() {
+
         $this->main_entity = (isset($_POST['main_entity'])) ? $_POST['main_entity'] : $_GET['main_entity'];
 
         $this->search_entity = (isset($_GET['shuffle_results']) && $_GET['shuffle_results'] != 'all') ? $_GET['shuffle_results'] : $this->main_entity;
@@ -84,7 +85,6 @@ class analysisModule extends shnModule {
 
     public function entity_search_form($entity_type) {
         include_once APPROOT . 'inc/lib_form_util.inc';
-
         if ($entity_type != null) {
             switch ($entity_type) {
                 case 'event':
@@ -1224,13 +1224,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
         }
 
-//var_dump('fields_array',$fields_array);
+        //var_dump('fields_array',$fields_array);
         if (!$sidx)
             $sidx = 1;
 
 
         $searchSql = new SearchResultGenerator();
         $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
+
         //var_dump($_GET['query'],$sqlArray['result']);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
@@ -1400,13 +1401,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         //add the entity list
         $entities = analysis_get_advance_search_entities();
-
+        
         foreach ($entities as $key => $entity) {
             $domain->$key->value = $entity['type'];
             $domain->$key->label = $entity['title'];
             $domain->$key->desc = $entity['desc'];
             $domain->$key->ac_type = $entity['ac_type'];
         }
+
         return $domain;
     }
 
@@ -1453,7 +1455,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $searchparams = $_GET['searchparams'];
         $searchparams = json_decode($searchparams);
         $resp = array();
-
         if ($searchparams) {
             $domaindata = $this->getEntityFields();
 
