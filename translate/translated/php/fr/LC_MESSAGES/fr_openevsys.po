@@ -935,9 +935,6 @@ msgstr "est vide"
 msgid "IS_REQUIRED"
 msgstr "Obligatoire"
 #: ----
-msgid "KEY"
-msgstr "FR"
-#: ----
 msgid "KILLING"
 msgstr "Assassinat"
 #: ----
@@ -1254,7 +1251,7 @@ msgid "REMARKS"
 msgstr "Remarques"
 #: ----
 msgid "REMOVE"
-msgstr "ENLEVER"
+msgstr "Enlever"
 #: ----
 msgid "REMOVE_CLARIFY"
 msgstr "Enlever Clarifier"
@@ -1524,7 +1521,7 @@ msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
 msgstr "Le document téléchargé n'est pas un document XML valide."
 #: ----
 msgid "THE_EVENT_IS_LINKED"
-msgstr "Cet Evénement est lié"
+msgstr "the ov"
 #: ----
 msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
 msgstr "L'ancien fichier joint a été mis à jour avec le nouveau fichier en pièce jointe."
@@ -1952,9 +1949,6 @@ msgstr "Arbre"
 msgid "Multivalue Tree"
 msgstr "Arbre à valeurs multiples"
 #: ----
-msgid ""
-msgstr "fr"
-#: ----
 msgid "Multivalue Select"
 msgstr "Sélectionner multiples valeurs"
 #: ----
@@ -2024,7 +2018,7 @@ msgstr "Permis"
 msgid "Hide in case of"
 msgstr "Cacher en cas de"
 #: ----
-msgid "Set visible "
+msgid "Set visible"
 msgstr "Rendre visible"
 #: ----
 msgid "Disable"
@@ -2087,7 +2081,7 @@ msgstr "Ajouter Auteur plus tard"
 msgid "Save and Add More Perpetrators"
 msgstr "Sauvegarder et ajouter d'autres Auteurs"
 #: ----
-msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
 msgstr "Il n'existe pas encore d'information sur l'Acte. Vous devriez en ajouter ! Cliquez sur le bouton «Ajouter un nouvel événement» pour ajouter un  événement."
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
@@ -2134,3 +2128,105 @@ msgstr "Résultats"
 #: ----
 msgid "Filters"
 msgstr "Filtres"
+#: ----
+msgid "Security"
+msgstr "Securité"
+#: ----
+msgid "Top menu"
+msgstr "Menu supérieur"
+#: ----
+msgid "Top right menu"
+msgstr "Menu supérieur de droite"
+#: ----
+msgid "Event menu"
+msgstr "Menu d'Evénement"
+#: ----
+msgid "Person menu"
+msgstr "Menu de Personne"
+#: ----
+msgid "Document menu"
+msgstr "Menu de Document"
+#: ----
+msgid "Analysis menu"
+msgstr "Menu d'Analyse"
+#: ----
+msgid "Preferences menu"
+msgstr "Menu de Préférences"
+#: ----
+msgid "The reCAPTCHA wasn\'t entered correctly."
+msgstr "Le reCAPTCHA n'a pas été entré correctement."
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Le code de vérification est fautif. S'il vous plaît essayer de nouveau."
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Le Menu a bien été enregistré."
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+#: ----
+msgid "Enabled successfully."
+msgstr "Activée avec succès"
+#: ----
+msgid "Code"
+msgstr "Code"
+#: ----
+msgid "Menu"
+msgstr "Menu"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Cliquez sur pour ajouter un élément à un menu"
+#: ----
+msgid "Number"
+msgstr "Numéro"
+#: ----
+msgid "Term"
+msgstr "Terme"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Ajouter Micro-thesaurus"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Traduire les Micro-thesaurus"
+#: ----
+msgid "Language"
+msgstr "Langue"
+#: ----
+msgid "Event"
+msgstr "Evénement"
+#: ----
+msgid "Select Event"
+msgstr "Sélectionnez Evénement"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "Il n'existe pas encore d'information sur l'Acte. Vous devriez en ajouter ! Cliquez sur le bouton «Ajouter un nouvel événement» pour ajouter un  événement."
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "S'il vous plaît sélectionner un certain case pour exécuter l'action"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Installez l'application Google Authenticator pour votre téléphone"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "Sur votre téléphone, ouvrez un navigateur Web."
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Aller à m.google.com/authenticator."
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Télécharger et installer l'application Google Authenticator."
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Maintenant, ouvrez et configurer Google Authenticator."
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Scannez le code à barres ci-dessous pour enregistrer l'application automatiquement :"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "Ou utiliser la clé secrète suivante pour enregistrer l'application manuellement:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Une fois que vous avez entré manuellement et enregistré votre clé, entrez le code de vérification à 6 chiffres généré par l'application Authenticator."
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "Le code est incorrect. Essayez de nouveau"

@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 $scanned_strings = array();
 define('APPROOT', realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR);
 
-$languages = array(2 => "en", 3 => "fr", 4 => "es", 5 => "ind", 6 => "km", 7 => "ar", 8 => "tr");
+$languages = array(2 => "en", 3 => "fr", 4 => "es", 5 => "ind", 6 => "km", 7 => "ar", 8 => "tr",15=>"zh");
 $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.txt";
 /*
  * ////find missing
@@ -23,8 +23,8 @@ $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.
 
   } */
 
-//generate_translations();
-get_newstrings();
+generate_translations();
+//get_newstrings();
 
 function get_newstrings(){
 global $scanned_strings;
@@ -45,12 +45,13 @@ global $scanned_strings;
 
 function generate_translations() {
     global $languages;
-    $msgids = get_existing_msgids();
+    //$msgids = get_existing_msgids();
     $translations = get_translations_array();
     require(APPROOT . "translate" . DIRECTORY_SEPARATOR . 'php-mo.php');
     foreach ($languages as $lkey => $language) {
         $path = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated\php\\" . $language . "\LC_MESSAGES" . DIRECTORY_SEPARATOR;
         $pofile = $path . $language . "_openevsys.po";
+		mkdir($path ,0777 ,true);
         $fh = fopen($pofile, 'w+');
         
         $jsfile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated\js".DIRECTORY_SEPARATOR.$language.".json";

@@ -1,2232 +1,2232 @@
 #: ----
 msgid "_CONTROLER_NOT_FOUND_"
-msgstr "Controler not found."
+msgstr "找不到指令"
 #: ----
 msgid "_DAY_S__"
-msgstr "Day(s):"
+msgstr "天"
 #: ----
 msgid "_MONTH_S__"
-msgstr "Month(s):"
+msgstr "月"
 #: ----
 msgid "1ST_LEVEL"
-msgstr "1st Level"
+msgstr "第一级"
 #: ----
 msgid "2ND_LEVEL"
-msgstr "2nd Level"
+msgstr "第二级"
 #: ----
 msgid "3RD_LEVEL"
-msgstr "3rd Level"
+msgstr "第三级"
 #: ----
 msgid "404_ERROR___PAGE_NOT_FOUND"
-msgstr "404 Error : Page Not Found"
+msgstr "404错误：找不到网页"
 #: ----
 msgid "4TH_LEVEL"
-msgstr "4th Level"
+msgstr "第四级"
 #: ----
 msgid "5TH_LEVEL"
-msgstr "5th Level"
+msgstr "第五级"
 #: ----
 msgid "6TH_LEVEL"
-msgstr "6th Level"
+msgstr "第六级"
 #: ----
 msgid "ACL_MODE"
-msgstr "ACL Mode"
+msgstr "ACL 模式"
 #: ----
 msgid "ACT"
-msgstr "Act"
+msgstr "案件"
 #: ----
 msgid "ACT_"
-msgstr "Act"
+msgstr "案件"
 #: ----
 msgid "ACT_DETAILS"
-msgstr "Act details"
+msgstr "案件信息"
 #: ----
 msgid "ACT_S_"
-msgstr "Act(s)"
+msgstr "案件（多项）"
 #: ----
 msgid "ACT_SEARCH_FORM"
-msgstr "Act Search Form"
+msgstr "案件搜索表"
 #: ----
 msgid "ACTION"
-msgstr "Action"
+msgstr "行动"
 #: ----
 msgid "ACTIONS"
-msgstr "Actions"
+msgstr "行动（多项）"
 #: ----
 msgid "ACTIVATED"
-msgstr "Activated"
+msgstr "已启动"
 #: ----
 msgid "ACTS"
-msgstr "Acts"
+msgstr "侵权案件"
 #: ----
 msgid "ADD_ACT"
-msgstr "Add Act"
+msgstr "添加侵权案件"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS"
-msgstr "Add Additional Details"
+msgstr "添加更多详情"
 #: ----
 msgid "ADD_ADDITIONAL_DETAILS_FOR"
-msgstr "Add Additional Details for"
+msgstr "给这个添加其他信息"
 #: ----
 msgid "ADD_ADDRESS"
-msgstr "Add Address"
+msgstr "添加地址"
 #: ----
 msgid "ADD_BIOGRAPHIC_DETAILS"
-msgstr "Add Biographic Details"
+msgstr "添加出身背景信息"
 #: ----
 msgid "ADD_CHAIN_OF_EVENTS"
-msgstr "Add Chain of Events"
+msgstr "添加事件链"
 #: ----
 msgid "ADD_EVENT_INFORMATION"
-msgstr "Add Event Information"
+msgstr "添加事件信息"
 #: ----
 msgid "ADD_FIELD"
-msgstr "Add field"
+msgstr "添加选项"
 #: ----
 msgid "ADD_FIELD_TO"
-msgstr "Add field to"
+msgstr "添加选项到"
 #: ----
 msgid "ADD_FIELDS_TO_SEARCH_RESULTS"
-msgstr "Add fields to search results"
+msgstr "在搜索结果里添加选项"
 #: ----
 msgid "ADD_INFORMATION"
-msgstr "Add Information"
+msgstr "添加信息"
 #: ----
 msgid "ADD_INTERVENING_PARTY"
-msgstr "Add Intervening Party"
+msgstr "添加第三方介入"
 #: ----
 msgid "ADD_INTERVENTION"
-msgstr "Add Intervention"
+msgstr "添加案件介入"
 #: ----
 msgid "ADD_INTERVENTIONS"
-msgstr "Add Interventions"
+msgstr "添加多项案件介入"
 #: ----
 msgid "ADD_INVOLVEMENT"
-msgstr "Add Involvement"
+msgstr "添加案件参与"
 #: ----
 msgid "ADD_LANGUAGE"
-msgstr "Add language"
+msgstr "添加语言"
 #: ----
 msgid "ADD_MORE_PERPETRATORS"
-msgstr "Add More Perpetrators"
+msgstr "添加更多侵权者"
 #: ----
 msgid "ADD_NEW"
-msgstr "Add new"
+msgstr "添加新的"
 #: ----
 msgid "ADD_NEW_DOCUMENT"
-msgstr "Add New Document"
+msgstr "添加新文件"
 #: ----
 msgid "ADD_NEW_EVENT"
-msgstr "Add new Event"
+msgstr "添加新事件"
 #: ----
 msgid "ADD_NEW_FIELD"
-msgstr "Add new field"
+msgstr "添加新选项"
 #: ----
 msgid "ADD_NEW_PERSON"
-msgstr "Add New Person"
+msgstr "添加新人士"
 #: ----
 msgid "ADD_NEW_USER"
-msgstr "Add New User"
+msgstr "添加新用户"
 #: ----
 msgid "ADD_PERPETRATOR"
-msgstr "Add Perpetrator"
+msgstr "添加侵权者"
 #: ----
 msgid "ADD_PERPETRATOR_S_"
-msgstr "Add Perpetrator(s)"
+msgstr "添加多个侵权者"
 #: ----
 msgid "ADD_ROLE"
-msgstr "Add Role"
+msgstr "添加角色"
 #: ----
 msgid "ADD_SOURCE"
-msgstr "Add Source"
+msgstr "添加来源"
 #: ----
 msgid "ADD_SUPPORTING_DOCUMENT_S_"
-msgstr "Add Supporting Document(s)"
+msgstr "添加支持文件"
 #: ----
 msgid "ADD_VICTIM"
-msgstr "Add Victim"
+msgstr "添加受害者"
 #: ----
 msgid "ADD_VICTIMS_AND_PERPETRATORS_TO_THIS_EVENT"
-msgstr "Add Victims and Perpetrators to this Event"
+msgstr "添加多个受害者跟侵权者到此事件中"
 #: ----
 msgid "ADDING_ADDRESS___"
-msgstr "Adding Address..."
+msgstr "添加地址中。。。"
 #: ----
 msgid "ADDING_EVENT_INFORMATION"
-msgstr "Adding Event Information"
+msgstr "添加事件信息中"
 #: ----
 msgid "ADDING_PERSON_ADDRESS____"
-msgstr "Adding Person Address ..."
+msgstr "添加人士地址中。。。"
 #: ----
 msgid "ADDING_PERSON_INFORMATION____"
-msgstr "Adding Person information ..."
+msgstr "添加人士信息中。。。"
 #: ----
 msgid "ADDITIONAL_DETAIL_TYPE"
-msgstr "Additional Detail Type"
+msgstr "更多详情类型"
 #: ----
 msgid "ADDITIONAL_DETAILS"
-msgstr "Additional Details"
+msgstr "更多详细信息"
 #: ----
 msgid "ADDRESS"
-msgstr "Address"
+msgstr "地址"
 #: ----
 msgid "ADDRESS_OF_A_PERSON_"
-msgstr "Address of a person"
+msgstr "个人地址"
 #: ----
 msgid "ADDRESS_TYPE"
-msgstr "Address Type"
+msgstr "地址类型"
 #: ----
 msgid "ADMIN"
-msgstr "Admin"
+msgstr "管理员"
 #: ----
 msgid "ADVANCED"
-msgstr "Advanced"
+msgstr "高级"
 #: ----
 msgid "ADVANCED_SEARCH"
-msgstr "Advanced search"
+msgstr "高级搜索"
 #: ----
 msgid "AFTER"
-msgstr "after"
+msgstr "之后"
 #: ----
 msgid "AGAINST"
-msgstr "against"
+msgstr "针对"
 #: ----
 msgid "ALL_COLUMNS_HAVE_BEEN_RESET_TO_THEIR_ORIGINAL_VALUES_"
-msgstr "All columns have been reset to their original values."
+msgstr "所有栏重置回到初始内容"
 #: ----
 msgid "ANALYSIS"
-msgstr "Analysis"
+msgstr "分析"
 #: ----
 msgid "AND"
-msgstr "AND"
+msgstr "和"
 #: ----
 msgid "APPLY_CHANGES_PERMANENTLY"
-msgstr "Apply changes permanently"
+msgstr "把更改变成永久性"
 #: ----
 msgid "ARREST"
-msgstr "Arrest"
+msgstr "逮捕"
 #: ----
 msgid "AT"
-msgstr "at"
+msgstr "在"
 #: ----
 msgid "AT_OR_AFTER"
-msgstr "at or after"
+msgstr "在或之后"
 #: ----
 msgid "AT_OR_BEFORE"
-msgstr "at or before"
+msgstr "在或之前"
 #: ----
 msgid "AUDIT"
-msgstr "Audit"
+msgstr "审计"
 #: ----
 msgid "AUDIT_LOG"
-msgstr "Audit log"
+msgstr "审计日记"
 #: ----
 msgid "AUDIT_LOG_DETAILS_ARE_NOT_AVAILABLE_FOR_THIS_EVENT"
-msgstr "Audit log details are not available for this Event"
+msgstr "该事件没有审计日记信息"
 #: ----
 msgid "BACK"
-msgstr "Back"
+msgstr "返回"
 #: ----
 msgid "BACK_TO_EVENT_VIEW"
-msgstr "Back to Event view"
+msgstr "返回到事件显示模式"
 #: ----
 msgid "BACK_TO_PERSON_VIEW"
-msgstr "Back to Person view"
+msgstr "返回到人士显示模式"
 #: ----
 msgid "BASIC"
-msgstr "Basic"
+msgstr "基本"
 #: ----
 msgid "BASIC_SEARCH"
-msgstr "Basic search"
+msgstr "基本搜索"
 #: ----
 msgid "BEFORE"
-msgstr "before"
+msgstr "之前"
 #: ----
 msgid "BIOGRAPHIC_DETAIL_S_"
-msgstr "Biographic Details"
+msgstr "出身背景信息"
 #: ----
 msgid "BIOGRAPHIC_DETAILS"
-msgstr "Biographic Details"
+msgstr "出身背景信息"
 #: ----
 msgid "BIOGRAPHIC_DETAILS__"
-msgstr "Biographic Details."
+msgstr "出身背景信息"
 #: ----
 msgid "BIOGRAPHY_DETAIL_S_"
-msgstr "Biography Details"
+msgstr "出身背景信息"
 #: ----
 msgid "BROWSE_DOCUMENTS"
-msgstr "Browse Documents"
+msgstr "游览文件"
 #: ----
 msgid "BROWSE_EVENT"
-msgstr "Browse Event"
+msgstr "游览事件"
 #: ----
 msgid "BROWSE_EVENTS"
-msgstr "Browse Events"
+msgstr "游览多项事件"
 #: ----
 msgid "BROWSE_PERSONS"
-msgstr "Browse Persons"
+msgstr "游览多名人士"
 #: ----
 msgid "BY_WHOM"
-msgstr "By whom"
+msgstr "由谁"
 #: ----
 msgid "CANCEL"
-msgstr "Cancel"
+msgstr "取消"
 #: ----
 msgid "CELLULAR"
-msgstr "Cellular"
+msgstr "格状"
 #: ----
 msgid "CHAIN_OF_EVENT"
-msgstr "Chain of Events"
+msgstr "事件链"
 #: ----
 msgid "CHAIN_OF_EVENT_S_"
-msgstr "Chain of Events"
+msgstr "事件链"
 #: ----
 msgid "CHAIN_OF_EVENTS"
-msgstr "Chain of Events"
+msgstr "事件链"
 #: ----
 msgid "CHAIN_OF_EVENTS_DOES_NOT_EXIST"
-msgstr "Chain of Events does not exist"
+msgstr "事件链不存在"
 #: ----
 msgid "CHANE_OF_EVENTS"
-msgstr "Chain of Events"
+msgstr "事件链"
 #: ----
 msgid "CHANE_OF_EVENTS_"
-msgstr "Chain of Events"
+msgstr "事件链"
 #: ----
 msgid "CHANGE"
-msgstr "Change"
+msgstr "更改"
 #: ----
 msgid "CHANGE_ADDITIONAL_DETAIL_TYPE"
-msgstr "Change Additional Detail type"
+msgstr "更改“更多详情”类型"
 #: ----
 msgid "CHANGE_PASSWORD"
-msgstr "Change password"
+msgstr "更改密码"
 #: ----
 msgid "CHANGE_VIEW__"
-msgstr "Change View:"
+msgstr "更改显示模式"
 #: ----
 msgid "CHOOSE_AN_ACTION"
-msgstr "Choose an action"
+msgstr "选择一项操作"
 #: ----
 msgid "CHOOSE_FILE_UPLOAD"
-msgstr "Choose File Upload"
+msgstr "选择文档上传"
 #: ----
 msgid "CHOSE_STARTING_POINT"
-msgstr "Chose starting point"
+msgstr "选择起点"
 #: ----
 msgid "CLARIFY"
-msgstr "Clarify"
+msgstr "说明"
 #: ----
 msgid "CLARIFYING_NOTE"
-msgstr "Clarifying Note"
+msgstr "注解说明"
 #: ----
 msgid "CLARIFYING_NOTES"
-msgstr "Clarifying Notes"
+msgstr "更多注解说明"
 #: ----
 msgid "CLEAR"
-msgstr "Clear"
+msgstr "清除"
 #: ----
 msgid "CLICK_TO_DOWNLOAD_EVENTS_XML_FILE_OF_ALL_RECORDS_IN_THIS_OPENEVSYS_"
-msgstr "Click to download Events XML file of all records in this OpenEvSys."
+msgstr "点击下载OpenEvSys里所有事件纪录的XML文件"
 #: ----
 msgid "CLICK_TO_SELECT_AN_OPTION"
-msgstr "Click to select an option"
+msgstr "点击选择一个选项"
 #: ----
 msgid "CLOSE"
-msgstr "Close"
+msgstr "关闭"
 #: ----
 msgid "COLUMN_RESET_BACK_TO_ORIGINAL_VALUES_"
-msgstr "Column reset back to original values."
+msgstr "栏重置回到初始内容"
 #: ----
 msgid "COMBINED_SEARCH_FORMS"
-msgstr "Combined search forms"
+msgstr "合并索搜表格"
 #: ----
 msgid "COMPILE"
-msgstr "Compile"
+msgstr "汇集"
 #: ----
 msgid "CONFIG_VARIABLE"
-msgstr "Config Variable"
+msgstr "配置变数"
 #: ----
 msgid "CONFIRM_NEW_PASSWORD"
-msgstr "Confirm new password"
+msgstr "确认新密码"
 #: ----
 msgid "CONFIRM_PASSWORD"
-msgstr "Confirm password"
+msgstr "确认密码"
 #: ----
 msgid "CONTAINS"
-msgstr "contains"
+msgstr "包含"
 #: ----
 msgid "CONTEXTUAL_INFORMATION"
-msgstr "Contextual Information"
+msgstr "上下文信息"
 #: ----
 msgid "CONTINUE"
-msgstr "Continue"
+msgstr "继续"
 #: ----
 msgid "CONTINUE_EDITING_THE_DETAILS_OF_THIS_DOCUMENT"
-msgstr "Continue editing the details of this Document"
+msgstr "继续编辑此文件信息"
 #: ----
 msgid "CONTINUE_EDITING_THIS_CHAIN_OF_EVENTS_RECORD"
-msgstr "Continue editing this Chain of Events record"
+msgstr "继续编辑此事件链纪录"
 #: ----
 msgid "CONTINUE_EDITING_THIS_EVENT_RECORD"
-msgstr "Continue editing this Event record"
+msgstr "继续编辑此事件纪录"
 #: ----
 msgid "COUNT"
-msgstr "Count"
+msgstr "统计"
 #: ----
 msgid "COUNTRY"
-msgstr "Country"
+msgstr "国家"
 #: ----
 msgid "CREATE_REPORT_FROM_THESE_RESULTS"
-msgstr "Create report from these results"
+msgstr "从这些结果创建报告"
 #: ----
 msgid "CREATED_BY"
-msgstr "Created by"
+msgstr "创建由"
 #: ----
 msgid "CREATED_DATE"
-msgstr "Created date"
+msgstr "创建日期"
 #: ----
 msgid "CREATOR"
-msgstr "Creator"
+msgstr "创建者"
 #: ----
 msgid "CSV"
 msgstr "CSV"
 #: ----
 msgid "CURRENT_PASSWORD"
-msgstr "Current Password"
+msgstr "当前密码"
 #: ----
 msgid "CURRENT_SETTING"
-msgstr "Current setting"
+msgstr "当前设置"
 #: ----
 msgid "CURRENT_VALUE"
-msgstr "Current value"
+msgstr "当前内容"
 #: ----
 msgid "DATA_EXCHANGE"
-msgstr "Data exchange"
+msgstr "数据交换"
 #: ----
 msgid "DATABASE_ERROR"
-msgstr "Database Error"
+msgstr "数据库错误"
 #: ----
 msgid "DATE"
-msgstr "Date"
+msgstr "日期"
 #: ----
 msgid "DATE_CREATED"
-msgstr "Date Created"
+msgstr "创建日期"
 #: ----
 msgid "DATE_FIELD_"
-msgstr "Date field"
+msgstr "日期栏目"
 #: ----
 msgid "DATE_OF_INTERVENTION"
-msgstr "Date of Intervention"
+msgstr "案件介入日期"
 #: ----
 msgid "DATE_OF_SOURCE_MATERIAL"
-msgstr "Date of Source Material"
+msgstr "来源资料日期"
 #: ----
 msgid "DATE_REQUIRED__INVALID_DATE"
-msgstr "Date required, Invalid Date"
+msgstr "需要日期，日期无效"
 #: ----
 msgid "DATE_SUBMITTED"
-msgstr "Date of Entry"
+msgstr "输入日期"
 #: ----
 msgid "DEFINITION"
-msgstr "Definition"
+msgstr "定义"
 #: ----
 msgid "DEGREE_OF_INVOLVEMENT"
-msgstr "Degree of Involvement"
+msgstr "参与度"
 #: ----
 msgid "DELETE"
-msgstr "Delete"
+msgstr "删除"
 #: ----
 msgid "DELETE_ADDITIONAL_DETAILS"
-msgstr "Delete Additional Details"
+msgstr "删除更多详细信息"
 #: ----
 msgid "DELETE_DOCUMENT"
-msgstr "Delete Document"
+msgstr "删除文件"
 #: ----
 msgid "DELETE_THIS_EVENT"
-msgstr "Delete this Event"
+msgstr "删除此事件"
 #: ----
 msgid "DELETE_THIS_PERSON"
-msgstr "Delete this Person"
+msgstr "删除此人"
 #: ----
 msgid "DESCRIPTION"
-msgstr "Description"
+msgstr "说明"
 #: ----
 msgid "DESIGNATION"
-msgstr "Designation"
+msgstr "指定"
 #: ----
 msgid "DESTRUCTION"
-msgstr "Destruction"
+msgstr "毁坏"
 #: ----
 msgid "DISABLE_HELP"
-msgstr "Disable Help"
+msgstr "关闭协助"
 #: ----
 msgid "DISABLE_INTERACTIVE_TRANSLATION"
-msgstr "Disable interactive translation"
+msgstr "关闭交互式翻译"
 #: ----
 msgid "DISABLED"
-msgstr "Disabled"
+msgstr "已关闭"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_ADDITIONAL_DETAILS__"
-msgstr "Do you want to delete Additional details ?"
+msgstr "是否要删除更多信息？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_ADDRESS_ES__"
-msgstr "Do you want to delete the selected address(es)?"
+msgstr "是否要删除选定的地址？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_BIOGRAPHIC_DETAILS_"
-msgstr "Do you want to delete the selected Biographic Details?"
+msgstr "是否要删除选定的出身背景信息？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_CHAIN_OF_EVENTS_S__"
-msgstr "Do you want to delete the selected Chain of Events(s)?"
+msgstr "是否要删除选定的事件链？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INFORMATION_S__"
-msgstr "Do you want to delete the selected Information(s)?"
+msgstr "是否要删除选定的信息？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_INTERVENTION_S__"
-msgstr "Do you want to delete the selected Intervention(s)?"
+msgstr "是否要删除选定的案件介入？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_MICRO_THESAURUS_TERM_S___"
-msgstr "Do you want to delete the selected Micro-thesaurus term(s) ?"
+msgstr "是否要删除选定的微词库词语？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_QUERIES__"
-msgstr "Do you want to delete the selected Queries ?"
+msgstr "是否要删除选定的询查？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_RECORD_S___"
-msgstr "Do you want to delete the selected record(s) ?"
+msgstr "是否要删除选定的纪录？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THE_SELECTED_USER_S___"
-msgstr "Do you want to delete the selected user(s) ?"
+msgstr "是否要删除选定的用户？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_DOCUMENT_"
-msgstr "Do you want to delete this Document?"
+msgstr "是否要删除此文件？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_EVENT_"
-msgstr "Do you want to delete this event?"
+msgstr "是否要删除此事件？"
 #: ----
 msgid "DO_YOU_WANT_TO_DELETE_THIS_PERSON_"
-msgstr "Do you want to delete this Person?"
+msgstr "是否要删除此人？"
 #: ----
 msgid "DO_YOU_WANT_TO_REMOVE_THE_EXISTING_FILE_ATTACHMENT_FOR_THIS_DOCUMENT_"
-msgstr "Do you want to remove the existing file attachment for this Document?"
+msgstr "是否要除去此文件现有的附件？"
 #: ----
 msgid "DOCUMENT"
-msgstr "Document"
+msgstr "文件"
 #: ----
 msgid "DOCUMENT_DETAILS"
-msgstr "Document Details"
+msgstr "文件信息"
 #: ----
 msgid "DOCUMENT_DOES_NOT_EXIST_"
-msgstr "Document does not exist."
+msgstr "文件不存在"
 #: ----
 msgid "DOCUMENT_SEARCH_FORM"
-msgstr "Document Search Form"
+msgstr "文件搜索表"
 #: ----
 msgid "DOCUMENT_TITLE"
-msgstr "Document Title"
+msgstr "文件名称"
 #: ----
 msgid "DOCUMENTS"
-msgstr "Documents"
+msgstr "多个文件"
 #: ----
 msgid "DOWNLOAD"
-msgstr "Download"
+msgstr "下载"
 #: ----
 msgid "DOWNLOAD_DOCUMENT"
-msgstr "Download Document"
+msgstr "下载文件"
 #: ----
 msgid "DOWNLOAD_ERROR_REPORT"
-msgstr "Download Error report"
+msgstr "下载错误报告"
 #: ----
 msgid "E_MAIL"
-msgstr "E Mail"
+msgstr "电邮"
 #: ----
 msgid "EDIT"
-msgstr "Edit"
+msgstr "编辑"
 #: ----
 msgid "EDIT_ADDITIONAL_DETAILS"
-msgstr "Edit Additional Details"
+msgstr "编辑更多信息"
 #: ----
 msgid "EDIT_BIOGRAPHIC_DETAILS"
-msgstr "Edit Biographic Details"
+msgstr "编辑出身背景信息"
 #: ----
 msgid "EDIT_DETAILS"
-msgstr "Edit details"
+msgstr "编辑详情"
 #: ----
 msgid "EDIT_EVENT_SUMMARY"
-msgstr "Edit Event Summary"
+msgstr "编辑事件摘要"
 #: ----
 msgid "EDIT_PROFILE"
-msgstr "Edit profile"
+msgstr "编辑个人资料"
 #: ----
 msgid "EDIT_THIS_ACT"
-msgstr "Edit this Act"
+msgstr "编辑此案件"
 #: ----
 msgid "EDIT_THIS_ADDRESS"
-msgstr "Edit this Address"
+msgstr "编辑此地址"
 #: ----
 msgid "EDIT_THIS_BIOGRAPHIC_DETAILS"
-msgstr "Edit this Biographic Details"
+msgstr "编辑此出身背景详情"
 #: ----
 msgid "EDIT_THIS_CHAIN_OF_EVENT"
-msgstr "Edit this Chain of Event"
+msgstr "编辑此事件链"
 #: ----
 msgid "EDIT_THIS_EVENT"
-msgstr "Edit this Event"
+msgstr "编辑此事件"
 #: ----
 msgid "EDIT_THIS_INFORMATION"
-msgstr "Edit this Information"
+msgstr "编辑此信息"
 #: ----
 msgid "EDIT_THIS_INTERVENING_PARTY"
-msgstr "Edit this Intervening Party"
+msgstr "编辑此第三方介入"
 #: ----
 msgid "EDIT_THIS_INTERVENTION"
-msgstr "Edit this Intervention"
+msgstr "编辑此案件介入"
 #: ----
 msgid "EDIT_THIS_INVOLVEMENT"
-msgstr "Edit this Involvement"
+msgstr "编辑此案件参与"
 #: ----
 msgid "EDIT_THIS_PERPETRATOR"
-msgstr "Edit this Perpetrator"
+msgstr "编辑此侵权者"
 #: ----
 msgid "EDIT_THIS_PERSON"
-msgstr "Edit this Person"
+msgstr "编辑此人"
 #: ----
 msgid "EDIT_THIS_VICTIM"
-msgstr "Edit this Victim"
+msgstr "编辑此受害者"
 #: ----
 msgid "EDIT_USER"
-msgstr "Edit user"
+msgstr "编辑用户"
 #: ----
 msgid "EDITING_PERSON_ADDRESS____"
-msgstr "Edit the Person's address ..."
+msgstr "编辑此人的地址"
 #: ----
 msgid "EMAIL"
-msgstr "Email"
+msgstr "邮件"
 #: ----
 msgid "EMAIL_ADDRESS_REQUIRED__INVAILD_EMAIL"
-msgstr "Email address required, Invalid Email"
+msgstr "需要邮件地址，电邮无效"
 #: ----
 msgid "ENABLE_HELP"
-msgstr "Enable Help"
+msgstr "开启协助"
 #: ----
 msgid "ENABLE_INTERACTIVE_TRANSLATION"
-msgstr "Enable interactive translation"
+msgstr "开启交互式翻译"
 #: ----
 msgid "END_DATE"
-msgstr "End Date"
+msgstr "结束日期"
 #: ----
 msgid "ENTITY"
-msgstr "Entity"
+msgstr "单元"
 #: ----
 msgid "ENTITY_PERMISSIONS"
-msgstr "Entity permissions"
+msgstr "单元许可"
 #: ----
 msgid "ENTRY"
-msgstr "Entry"
+msgstr "条目"
 #: ----
 msgid "ERROR_OCCORED_WHILE_UPDATING_SERVER_"
-msgstr "Error occurred while updating server."
+msgstr "在更新服务器时发生错误"
 #: ----
 msgid "ERROR_OCCURRED_WHILE_CREATING_HURITERM_"
-msgstr "Error occurred while creating huriterm."
+msgstr "在创造 huriterm 时发生错误"
 #: ----
 msgid "ERROR_ON_FILE_SAVE__UNABLE_TO_SAVE_FILE_"
-msgstr "Error on file save. Unable to save file."
+msgstr "保存文件错误。无法保存文件。"
 #: ----
 msgid "ERROR_WHILE_CREATING_FIELD_"
-msgstr "Error while creating field."
+msgstr "在创造栏目时错误"
 #: ----
 msgid "EVENT"
-msgstr "Event"
+msgstr "事件"
 #: ----
 msgid "EVENT_DESCRIPTION"
-msgstr "Event Description"
+msgstr "事件说明"
 #: ----
 msgid "EVENT_DOES_NOT_EXIST_"
-msgstr "Event does not exist."
+msgstr "事件不存在"
 #: ----
 msgid "EVENT_SEARCH_FORM"
-msgstr "Event Search Form"
+msgstr "事件搜索表"
 #: ----
 msgid "EVENT_STANDARD_FORMAT_XML"
-msgstr "Event Standard Format XML"
+msgstr "事件标准格式XML"
 #: ----
 msgid "EVENT_TITLE"
-msgstr "Event Title"
+msgstr "事件名称"
 #: ----
 msgid "EVENTS"
-msgstr "Events"
+msgstr "多件事件"
 #: ----
 msgid "EXAMPLE"
-msgstr "Example"
+msgstr "例子"
 #: ----
 msgid "EXAMPLES"
-msgstr "Examples"
+msgstr "多项例子"
 #: ----
 msgid "EXISTING_FIELDS"
-msgstr "Existing fields"
+msgstr "现有栏目（多项）"
 #: ----
 msgid "EXPORT"
-msgstr "Export"
+msgstr "输出"
 #: ----
 msgid "EXPORT__"
-msgstr "Export :"
+msgstr "输出 ："
 #: ----
 msgid "EXPORT_DATE"
-msgstr "Export Date"
+msgstr "输出日期"
 #: ----
 msgid "EXPORT_EVENTS"
-msgstr "Export Events"
+msgstr "输出事件"
 #: ----
 msgid "EXPORT_INSTANCE"
-msgstr "Export Instance"
+msgstr "输出事例"
 #: ----
 msgid "EXPORT_THIS_TABLE_TO_A_SPREADSHEET"
-msgstr "Export this table to a spreadsheet"
+msgstr "把此表格输出到电子数据表"
 #: ----
 msgid "EXPORT_TIME"
-msgstr "Export Time"
+msgstr "输出时间"
 #: ----
 msgid "FAILED_TO_WRITE_FILE_TO_DISK_"
-msgstr "Failed to write file to disk."
+msgstr "无法把文件写入硬盘"
 #: ----
 msgid "FALSE"
-msgstr "false"
+msgstr "错误"
 #: ----
 msgid "FAX"
-msgstr "Fax"
+msgstr "传真"
 #: ----
 msgid "FIELD_CREATED_SUCCESSFULLY_"
-msgstr "Field created successfully."
+msgstr "创造栏目成功"
 #: ----
 msgid "FIELD_LABEL"
-msgstr "Field Label"
+msgstr "栏目标签"
 #: ----
 msgid "FIELD_NAME"
-msgstr "Field name"
+msgstr "栏目名称"
 #: ----
 msgid "FIELD_NAME___FIELD_NUMBER_AND_FIELD_LABEL_CANNOT_BE_EMPTY_PLEASE_ENTER_SOME_VALUES"
-msgstr "Field name , field number and field label cannot be empty. Please enter some values"
+msgstr "栏目名称，栏目号码跟栏目标签一定要填。请输入内容。"
 #: ----
 msgid "FIELD_NAME_ALREADY_EXISTS__PLEASE_GIVE_IT_ANOTHER_NAME"
-msgstr "Field name already exists. Please give it another name"
+msgstr "栏目名称已存在。请另给名称。"
 #: ----
 msgid "FIELD_NUMBER"
-msgstr "Field number"
+msgstr "栏目号码"
 #: ----
 msgid "FIELD_NUMBER_ALREADY_EXISTS__PLEASE_CHOOSE_A_DIFFERENT_NUMBER"
-msgstr "Field number already exists. Please choose a different number"
+msgstr "栏目号码已存在。请另选号码。"
 #: ----
 msgid "FIELD_NUMBERS_ENDING_WITH_60_TO_80_ARE_RESERVED_FOR_MANAGEMENT_FIELDS__PLEASE_USE_A_NUMBER_WHICH_DO_NOT_FALLS_IN_THIS_RANGE_"
-msgstr "Field numbers ending with 60 to 80 are reserved for management fields. Please use a number which do not falls in this range."
+msgstr "栏目号码结尾在60到80之间是保留给管理栏目。请选一个不在这范围内的号码。"
 #: ----
 msgid "FIELD_RESET"
-msgstr "Field Reset"
+msgstr "栏目重设"
 #: ----
 msgid "FIELD_S_"
-msgstr "Field(s)"
+msgstr "栏目（多项）"
 #: ----
 msgid "FIELD_TYPE"
-msgstr "Field type"
+msgstr "栏目的类型"
 #: ----
 msgid "FILE_IS_NOT_WRITABLE_"
-msgstr "File is not writable."
+msgstr "文件不可被改写"
 #: ----
 msgid "FILE_UPLOAD_STOPPED_BY_EXTENSION_"
-msgstr "File upload stopped by extension."
+msgstr "文件上传被附加软件停止。"
 #: ----
 msgid "FILTER"
-msgstr "Filter"
+msgstr "过滤选项"
 #: ----
 msgid "FILTER_OPTIONS_AND_RESULTS"
-msgstr "filter options and results"
+msgstr "过滤选项跟结果"
 #: ----
 msgid "FINAL_DATE"
-msgstr "Final Date"
+msgstr "最终日期"
 #: ----
 msgid "FIND_DOCUMENTS_WHICH_HAVE_BEEN_UPLOADED_TO_OPENEVSYS__AND_SEE_HOW_THEY_HAVE_BEEN_LINKED_IN_SUPPORT_OF_OTHER_FORMATS"
-msgstr "Find documents which have been uploaded to OpenEvsys, and see how they have been linked in support of other formats"
+msgstr "查找已上传到OpenEvsys的文件，查看它们是如何支持被链接的其他格式"
 #: ----
 msgid "FINISH"
-msgstr "Finish"
+msgstr "完成"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING"
-msgstr "Finished! You can do the following"
+msgstr "完成了！可以进行以下"
 #: ----
 msgid "FINISHED__YOU_CAN_DO_THE_FOLLOWING_"
-msgstr "Finished! You can do the following:"
+msgstr "完成了！可以进行以下："
 #: ----
 msgid "FIRST_NAME"
-msgstr "First Name"
+msgstr "名字"
 #: ----
 msgid "FOLDER_ALREADY_EXISTS__GIVE_IT_A_DIFFERENT_NAME_"
-msgstr "Folder already exists! Give it a different name."
+msgstr "文件夹已存在！另给一个不同的名字。"
 #: ----
 msgid "FOLDER_NAME"
-msgstr "Folder name"
+msgstr "文件夹名字"
 #: ----
 msgid "FOLLOWING_FIELDS_CAN_NOT_BE_EMPTY"
-msgstr "The following fields can not be empty"
+msgstr "以下的栏目一定要填"
 #: ----
 msgid "FOLLOWING_HURITERM_ALREADY_EXIST_"
-msgstr "The following huriterm already exist."
+msgstr "以下 huriterm 已存在。"
 #: ----
 msgid "FORCE_DELETE"
-msgstr "Force Delete"
+msgstr "强制删除"
 #: ----
 msgid "FORM"
-msgstr "Form"
+msgstr "表格"
 #: ----
 msgid "FORM_CUSTOMIZATION"
-msgstr "Form customization"
+msgstr "表格定制"
 #: ----
 msgid "FURTHER_INFORMATION"
-msgstr "Further Information"
+msgstr "更多信息"
 #: ----
 msgid "GO_TO_PARENT_LEVEL"
-msgstr "Go to parent level"
+msgstr "去到父母级"
 #: ----
 msgid "GROUP_BY_DAY"
-msgstr "Group by Day"
+msgstr "用日子进行分组"
 #: ----
 msgid "GROUP_BY_MONTHLY"
-msgstr "Group by month"
+msgstr "用月份进行分组"
 #: ----
 msgid "GROUP_BY_YEARLY"
-msgstr "Group by year"
+msgstr "用年分进行分组"
 #: ----
 msgid "GUIDELINES"
-msgstr "Guidelines"
+msgstr "方针"
 #: ----
 msgid "HELP_TEXT"
-msgstr "Help Text"
+msgstr "协助文本"
 #: ----
 msgid "HIDE_ADDRESS_FORM"
-msgstr "Hide Address form"
+msgstr "隐藏地址表格"
 #: ----
 msgid "HIDE_SEARCH_FORM"
-msgstr "Hide search form"
+msgstr "隐藏搜索表"
 #: ----
 msgid "HIDE_SUPPORTING_DOCUMENT_S_"
-msgstr "Hide Supporting Document(s)"
+msgstr "隐藏支持文件（多项）"
 #: ----
 msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgstr "隐藏树"
 #: ----
 msgid "HOW_WAS_"
-msgstr "How was"
+msgstr "如何"
 #: ----
 msgid "HURICODE"
-msgstr "Huricode"
+msgstr "huri码"
 #: ----
 msgid "HURITERM_CAN_NOT_BE_EMPTY_"
-msgstr "Huriterm can not be empty."
+msgstr "Huriterm不可以是空的。"
 #: ----
 msgid "IF_AN_EVENT_PERSON_IS_CONFIDENTIAL__"
-msgstr "If an Event/Person is Confidential?"
+msgstr "事件或人士是否保密？"
 #: ----
 msgid "IF_YOU_REACH_THIS_PAGE_IT_MEANS_YOU_DO_NOT_HAVE_ACCESS_TO_ANY_OF_THE_MODULES_IN_OPENEVSYS__PLEASE_CONTACT_THE_SYSTEM_ADMINISTRATOR_FOR_MORE_DETAILS_"
-msgstr "If you reach this page it means you do not have access to any of the modules in OpenEvsys. Please contact the system administrator for more details."
+msgstr "如果看到这个页面就意味着你没有权进入OpenEvsys的任何模块。请与系统管理员联系了解更多详情。"
 #: ----
 msgid "IMPACT"
-msgstr "Impact"
+msgstr "影响"
 #: ----
 msgid "IMPORT"
-msgstr "Import"
+msgstr "导入"
 #: ----
 msgid "IMPORT_DATE"
-msgstr "Import Date"
+msgstr "导入日期"
 #: ----
 msgid "IMPORT_EVENTS"
-msgstr "Import Events"
+msgstr "导入事件"
 #: ----
 msgid "IMPORT_LOG"
-msgstr "Import log"
+msgstr "导入纪录"
 #: ----
 msgid "IMPORT_LOG_DETAILS_ARE_NOT_AVAILABLE"
-msgstr "Import log details are not available"
+msgstr "没有导入纪录信息"
 #: ----
 msgid "IMPORT_TIME"
-msgstr "Import Time"
+msgstr "导入时间"
 #: ----
 msgid "IN_BETWEEN"
-msgstr "in between"
+msgstr "两者之间"
 #: ----
 msgid "IN_SEARCH_RESULTS"
-msgstr "In search results"
+msgstr "在搜索结果中"
 #: ----
 msgid "INCIDENT_TABLE"
-msgstr "Incident Table"
+msgstr "事件表"
 #: ----
 msgid "INFORMATION"
-msgstr "Information"
+msgstr "信息"
 #: ----
 msgid "INFORMATION_ABOUT"
-msgstr "Information about"
+msgstr "信息关于"
 #: ----
 msgid "INFORMATION_S_"
-msgstr "Information(s)"
+msgstr "信息（多项）"
 #: ----
 msgid "INFORMATION_SEARCH_FORM"
-msgstr "Information Search Form"
+msgstr "信息搜索表"
 #: ----
 msgid "INITIAL_DATE"
-msgstr "Initial date"
+msgstr "最初日期"
 #: ----
 msgid "INTERVENING_PARTIES"
-msgstr "Intervening Parties"
+msgstr "第三方介入（多名）"
 #: ----
 msgid "INTERVENING_PARTY"
-msgstr "Intervening Party"
+msgstr "第三方介入"
 #: ----
 msgid "INTERVENING_PARTY_SEARCH_FORM"
-msgstr "Intervening Party Search Form"
+msgstr "第三方介入搜索表"
 #: ----
 msgid "INTERVENTION"
-msgstr "Intervention"
+msgstr "案件介入"
 #: ----
 msgid "INTERVENTION_S_"
-msgstr "Intervention(s)"
+msgstr "案件介入（多项）"
 #: ----
 msgid "INTERVENTION_SEARCH_FORM"
-msgstr "Intervention Search Form"
+msgstr "案件介入搜索表"
 #: ----
 msgid "INTERVENTIONS"
-msgstr "Interventions"
+msgstr "案件介入（多项）"
 #: ----
 msgid "INVALID_EMAIL"
-msgstr "Invalid Email"
+msgstr "无效邮件"
 #: ----
 msgid "INVALID_EMAIL_ADDRESS"
-msgstr "Invalid email address"
+msgstr "无效邮件地址"
 #: ----
 msgid "INVALID_HURICODE__IT_SHOULD_BE_A_12_DIGIT_NUMBER_"
-msgstr "Invalid Huricode, it should be a 12 digit number."
+msgstr "huri码无效，应该是12位数字。"
 #: ----
 msgid "INVALID_USER_ID_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Invalid user id or password, please try again."
+msgstr "用户ID或密码无效，请重试。"
 #: ----
 msgid "INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "Invalid username or password! Please try again."
+msgstr "用户名或密码无效！请重试。"
 #: ----
 msgid "INVOLVED_IN"
-msgstr "involved in"
+msgstr "参与到"
 #: ----
 msgid "INVOLVEMENT"
-msgstr "Involvement"
+msgstr "案件参与"
 #: ----
 msgid "INVOLVEMENT_DETAILS"
-msgstr "Involvement details"
+msgstr "案件参与详情"
 #: ----
 msgid "INVOLVEMENT_S_"
-msgstr "Involvement(s)"
+msgstr "案件参与（多项）"
 #: ----
 msgid "INVOLVEMENT_SEARCH_FORM"
-msgstr "Involvement Search Form"
+msgstr "案件参与搜索表"
 #: ----
 msgid "INVOLVEMENTS"
-msgstr "Involvements"
+msgstr "案件参与"
 #: ----
 msgid "IS_A_SUB_ELEMENT_OF"
-msgstr "is a sub element of"
+msgstr "是一个次元件"
 #: ----
 msgid "IS_EMPTY"
-msgstr "is empty"
+msgstr "空的"
 #: ----
 msgid "IS_REQUIRED"
-msgstr "Is required"
+msgstr "必要的"
 #: ----
 msgid "KILLING"
-msgstr "Killing"
+msgstr "杀害"
 #: ----
 msgid "LABEL"
-msgstr "Label"
+msgstr "标签"
 #: ----
 msgid "LABEL_CANNOT_BE_EMPTY__ENTER_A_VALUE_"
-msgstr "Label cannot be empty. Enter a value."
+msgstr "标签一定要填。输入内容。"
 #: ----
 msgid "LABEL_IN_"
-msgstr "Label in"
+msgstr "标签在"
 #: ----
 msgid "LABEL_S_"
-msgstr "Label(s)"
+msgstr "标签（多项）"
 #: ----
 msgid "LABELS"
-msgstr "Labels"
+msgstr "标签（多项）"
 #: ----
 msgid "LANGUAGE"
-msgstr "Language"
+msgstr "语言"
 #: ----
 msgid "LANGUAGE_DIRECTORY_IS_NOT_WRITABLE_"
-msgstr "Language directory is not writable."
+msgstr "语言目录不可改写"
 #: ----
 msgid "LANGUAGE_REMOVED"
-msgstr "Language removed"
+msgstr "语言已除去"
 #: ----
 msgid "LANGUAGE_WAS_CREATED_SUCCESSFULLY_"
-msgstr "Language was created successfully."
+msgstr "语言创建成功"
 #: ----
 msgid "LAST_NAME"
-msgstr "Last Name"
+msgstr "姓氏"
 #: ----
 msgid "LIKE"
-msgstr "like"
+msgstr "像"
 #: ----
 msgid "LINKED_WHEN"
-msgstr "Linked when"
+msgstr "在什么时候已链接"
 #: ----
 msgid "LINKS"
-msgstr "Links"
+msgstr "链接"
 #: ----
 msgid "LOCALIZATION"
-msgstr "Localization"
+msgstr "本地化"
 #: ----
 msgid "LOG_DETAILS_UNAVAILABLE_FOR_THIS_PERSON"
-msgstr "Log details unavailable for this Person"
+msgstr "此人无纪录详情"
 #: ----
 msgid "MANAGE_LANGUAGES"
-msgstr "Manage languages"
+msgstr "管理多种语言"
 #: ----
 msgid "MESSAGES_SAVED_SUCCESSFULLY_"
-msgstr "Messages saved successfully."
+msgstr "信息保存成功。"
 #: ----
 msgid "MICRO_THESAURI"
-msgstr "Micro-thesauri"
+msgstr "微词库"
 #: ----
 msgid "MICRO_THESAURI_CUSTOMIZATION"
-msgstr "Micro-thesauri customization"
+msgstr "微词库定制"
 #: ----
 msgid "MICRO_THESAURI_TERMS"
-msgstr "Micro-thesauri terms"
+msgstr "微词库词语"
 #: ----
 msgid "MISSING_A_TEMPORARY_FOLDER_"
-msgstr "Missing a temporary folder."
+msgstr "缺少临时文件夹"
 #: ----
 msgid "MODIFIED_VALUE"
-msgstr "Modified Value"
+msgstr "已修改的内容"
 #: ----
 msgid "MODULE"
-msgstr "Module"
+msgstr "模块"
 #: ----
 msgid "MODULES"
-msgstr "Modules"
+msgstr "模块（多项）"
 #: ----
 msgid "MONITORING_STATUS"
-msgstr "Monitoring Status"
+msgstr "关注情况"
 #: ----
 msgid "MORE_ABOUT_THIS_EVENT"
-msgstr "More about this Event"
+msgstr "更多关于此事件"
 #: ----
 msgid "MORE_ABOUT_THIS_PERSON"
-msgstr "More about this Person"
+msgstr "更多关于此人士"
 #: ----
 msgid "MY_PREFERENCES"
-msgstr "My Preferences"
+msgstr "我的设置"
 #: ----
 msgid "MYSQL_DATA_TYPE"
-msgstr "Mysql data type"
+msgstr "Mysql 数据类型"
 #: ----
 msgid "NAME"
-msgstr "Name"
+msgstr "名字"
 #: ----
 msgid "NEW"
-msgstr "New"
+msgstr "新的"
 #: ----
 msgid "NEW_DOCUMENT"
-msgstr "New Document"
+msgstr "新文件"
 #: ----
 msgid "NEW_EVENT"
-msgstr "New Event"
+msgstr "新事件"
 #: ----
 msgid "NEW_PASSWORD"
-msgstr "New Password"
+msgstr "新密码"
 #: ----
 msgid "NEW_PERSON"
-msgstr "New Person"
+msgstr "新人士"
 #: ----
 msgid "NEW_ROLE_NAME"
-msgstr "New Role Name"
+msgstr "新角色名字"
 #: ----
 msgid "NEXT"
-msgstr "Next"
+msgstr "下一个"
 #: ----
 msgid "NO"
-msgstr "No"
+msgstr "不是"
 #: ----
 msgid "NO_QUERIES_SAVED_YET_"
-msgstr "No queries saved yet."
+msgstr "还没有查询纪录被保存"
 #: ----
 msgid "NO_RECORDS_WERE_FOUND_"
-msgstr "No records were found."
+msgstr "没有纪录。"
 #: ----
 msgid "NO_RECORDS_WERE_SELECTED_"
-msgstr "No records were selected."
+msgstr "没有记录被选中。"
 #: ----
 msgid "NOT_="
-msgstr "not ="
+msgstr "不是＝"
 #: ----
 msgid "NOT_A_VALID_FIELD_TYPE__TRY_AGAIN"
-msgstr "Not a valid field type. Try again"
+msgstr "没有此栏目类型。重试"
 #: ----
 msgid "NOT_CONTAINS"
-msgstr "not contains"
+msgstr "不要包含"
 #: ----
 msgid "NOT_IN_BETWEEN"
-msgstr "not in between"
+msgstr "不要在两者之间"
 #: ----
 msgid "NOT_LIKE"
-msgstr "not like"
+msgstr "不要像"
 #: ----
 msgid "NOT_ON"
-msgstr "not on"
+msgstr "不要在"
 #: ----
 msgid "NUMBER_REQUIRED__INVALID_NUMBER"
-msgstr "Number required, Invalid Number"
+msgstr "号码无效，需要号码"
 #: ----
 msgid "OPENEVSYS_HAS_SUCCESSFULLY_IMPORTED_THE_DATA_"
-msgstr "OpenEvSys has successfully imported the data."
+msgstr "OpenEvSys 已成功导入数据。"
 #: ----
 msgid "OR"
-msgstr "OR"
+msgstr "或"
 #: ----
 msgid "ORDER"
-msgstr "Order"
+msgstr "顺序"
 #: ----
 msgid "ORGANIZATION"
-msgstr "Organization"
+msgstr "结构／组织"
 #: ----
 msgid "ORIGINAL_SEARCH_RESULTS"
-msgstr "Original Search Results"
+msgstr "原始搜索结果"
 #: ----
 msgid "PAGE__"
-msgstr "Page :"
+msgstr "页："
 #: ----
 msgid "PAGINATE_RESULTS"
-msgstr "Paginate results"
+msgstr "把结果页数化"
 #: ----
 msgid "PASSWORD"
-msgstr "Password"
+msgstr "密码"
 #: ----
 msgid "PASSWORD_INVALID"
-msgstr "Password invalid"
+msgstr "密码不符"
 #: ----
 msgid "PASSWORD_MISMATCH"
-msgstr "Password mismatch"
+msgstr "密码不匹配"
 #: ----
 msgid "PASSWORD_REQUIRED"
-msgstr "Password Required"
+msgstr "需要密码"
 #: ----
 msgid "PERMISSION_DENIED"
-msgstr "Permission Denied"
+msgstr "密码被否认"
 #: ----
 msgid "PERMISSIONS"
-msgstr "Permissions"
+msgstr "准许 （许可）"
 #: ----
 msgid "PERMISSIONS_OF_"
-msgstr "Permissions of"
+msgstr "准许于"
 #: ----
 msgid "PERMISSONS"
-msgstr "Permissions"
+msgstr "准许 （许可）"
 #: ----
 msgid "PERPETRATOR"
-msgstr "Perpetrator"
+msgstr "侵权者"
 #: ----
 msgid "PERPETRATOR_NAME_S_"
-msgstr "Perpetrator name(s)"
+msgstr "侵权者名字"
 #: ----
 msgid "PERPETRATOR_SEARCH_FORM"
-msgstr "Perpetrator Search Form"
+msgstr "侵权者搜索表"
 #: ----
 msgid "PERPETRATORS"
-msgstr "Perpetrators"
+msgstr "侵权者（多名）"
 #: ----
 msgid "PERSON"
-msgstr "Person"
+msgstr "人士"
 #: ----
 msgid "PERSON_ADDRESS_ES_"
-msgstr "Person Address(es)"
+msgstr "人士的地址"
 #: ----
 msgid "PERSON_DETAIL_S_"
-msgstr "Person Detail(s)"
+msgstr "人士的信息"
 #: ----
 msgid "PERSON_DOES_NOT_EXIST_"
-msgstr "Person does not exist."
+msgstr "人士不存在"
 #: ----
 msgid "PERSON_NAME"
-msgstr "Person Name"
+msgstr "人士名字"
 #: ----
 msgid "PERSON_RECORD_S_"
-msgstr "Person record(s)"
+msgstr "人士纪录"
 #: ----
 msgid "PERSON_RECORDS_S_"
-msgstr "Person records(s)"
+msgstr "人士纪录（多项）"
 #: ----
 msgid "PERSON_S_DATE_OF_BIRTH_IS_NOT_ENTERED_"
-msgstr "Person's date of birth is not entered"
+msgstr "此人的出生年月日还没输入"
 #: ----
 msgid "PERSON_SEARCH_FORM"
-msgstr "Person Search Form"
+msgstr "人士搜索表"
 #: ----
 msgid "PERSONS"
-msgstr "Persons"
+msgstr "人士（多名）"
 #: ----
 msgid "PHONE"
-msgstr "Phone"
+msgstr "电话"
 #: ----
 msgid "PHONE_NUMBER_REQUIRED__INVAILD_PHONE_NUMBER"
-msgstr "Phone number required, invalid phone number"
+msgstr "需要电话号码，号码无效"
 #: ----
 msgid "PICTURE"
-msgstr "Picture"
+msgstr "图片"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_BEFORE_SEARCH_"
-msgstr "Please add a condition before search."
+msgstr "请在索搜前添加一项条件"
 #: ----
 msgid "PLEASE_ADD_A_CONDITION_INSIDE_THE_COUNT_BOX_TO_COUNT_"
-msgstr "Please add a condition inside the count box to count."
+msgstr "统计时请在统计单元内添加一项条件"
 #: ----
 msgid "PLEASE_SELECT_A_USER_TO_DELETE"
-msgstr "Please select a user to delete"
+msgstr "请选择删除一个用户"
 #: ----
 msgid "PLEASE_SELECT_A_VALID_USER_"
-msgstr "Please select a valid user."
+msgstr "请选择一个有效的用户"
 #: ----
 msgid "PLEASE_UPLOAD_A_VALID_OPENEVSYS_XML_FILE_"
-msgstr "Please upload a valid OpenEvSys XML file."
+msgstr "请上传一个有效的 OpenEvSys XML 文件"
 #: ----
 msgid "PLEASE_USE_MY_PREFERENCE_OPTION_AT_TOP_RIGHT_CORNER_TO_EDIT_YOUR_DETAILS_"
-msgstr "Please use My Preference option at top right corner to edit your details."
+msgstr "请在上右角“我的设置”选项里编辑你的信息"
 #: ----
 msgid "PREVIOUS"
-msgstr "Previous"
+msgstr "前"
 #: ----
 msgid "PRINT_THIS_EVENT"
-msgstr "Print this Event"
+msgstr "打印此事件"
 #: ----
 msgid "PRINT_THIS_PAGE"
-msgstr "Print this page"
+msgstr "打印此页"
 #: ----
 msgid "PRINT_THIS_PERSON"
-msgstr "Print this Person"
+msgstr "打印此人士"
 #: ----
 msgid "PRINTABLE_VIEW"
-msgstr "Printable view"
+msgstr "可列印的显示模式"
 #: ----
 msgid "QUERIES_DELETED_SUCCESSFULLY_"
-msgstr "Queries deleted successfully."
+msgstr "查询删除成功。"
 #: ----
 msgid "QUERY_ID"
-msgstr "Query ID"
+msgstr "查询ID"
 #: ----
 msgid "QUERY_WAS_SAVED_SUCCESSFULLY_"
-msgstr "Query was saved successfully."
+msgstr "查询已保存成功。"
 #: ----
 msgid "REC_NO"
-msgstr "Rec-No"
+msgstr "记录号码"
 #: ----
 msgid "RECORD_NO"
-msgstr "Record No"
+msgstr "记录号码"
 #: ----
 msgid "RECORD_NUMBER"
-msgstr "Record number"
+msgstr "记录号码"
 #: ----
 msgid "RECORD_TYPE"
-msgstr "Record type"
+msgstr "纪录类型"
 #: ----
 msgid "RECORDS_PER_PAGE"
-msgstr "Records per page"
+msgstr "每页的纪录数目"
 #: ----
 msgid "REGEX"
-msgstr "regex"
+msgstr "正则表达式"
 #: ----
 msgid "RELATED_EVENT"
-msgstr "Related Event"
+msgstr "相关事件"
 #: ----
 msgid "RELATED_EVENT_TITLE"
-msgstr "Related Event title"
+msgstr "相关事件标题"
 #: ----
 msgid "RELATED_PERSON"
-msgstr "Related Person"
+msgstr "相关人士"
 #: ----
 msgid "REMARKS"
-msgstr "Remarks"
+msgstr "备注"
 #: ----
 msgid "REMOVE"
-msgstr "Remove"
+msgstr "除去"
 #: ----
 msgid "REMOVE_CLARIFY"
-msgstr "Remove Clarify"
+msgstr "除去说明"
 #: ----
 msgid "REMOVE_CONDITION"
-msgstr "Remove Condition"
+msgstr "除去条件"
 #: ----
 msgid "REMOVE_LANGUAGE"
-msgstr "Remove language"
+msgstr "除去语言"
 #: ----
 msgid "REMOVE_SELECTION"
-msgstr "Remove Selection"
+msgstr "除去选项"
 #: ----
 msgid "REPORT"
-msgstr "Report"
+msgstr "报告"
 #: ----
 msgid "REQUESTED_ACT_RECORD_DOES_NOT_EXIST_"
-msgstr "Requested Act record does not exist."
+msgstr "想查看的侵权案件不存在。"
 #: ----
 msgid "REQUESTED_INFORMATION_DOES_NOT_EXIST"
-msgstr "Requested Information does not exist"
+msgstr "想查看的信息不存在。"
 #: ----
 msgid "REQUESTED_INTERVENTION_DOES_NOT_EXIST"
-msgstr "Requested Intervention does not exist"
+msgstr "想查看的案件介入不存在。"
 #: ----
 msgid "REQUESTED_INVOLVEMENT_DOES_NOT_EXIST"
-msgstr "Requested Involvement does not exist"
+msgstr "想查看的案件参与不存在。"
 #: ----
 msgid "RESET"
-msgstr "Reset"
+msgstr "重设"
 #: ----
 msgid "RESET_ALL"
-msgstr "Reset All"
+msgstr "重设全部"
 #: ----
 msgid "RESTRICT_FOR_THE_ROLE"
-msgstr "Restrict for the role"
+msgstr "对角色限制"
 #: ----
 msgid "RESTRICT_FOR_THE_USER"
-msgstr "Restrict for the user"
+msgstr "对用户限制"
 #: ----
 msgid "ROLE"
-msgstr "Role"
+msgstr "角色"
 #: ----
 msgid "ROLE_LIST"
-msgstr "Role list"
+msgstr "角色名单"
 #: ----
 msgid "ROLES"
-msgstr "Roles"
+msgstr "角色（多个）"
 #: ----
 msgid "ROLES___MODULE_ACCESS_CONTROL"
-msgstr "Roles / Module Access Control"
+msgstr "角色／模块存取控制"
 #: ----
 msgid "ROLES__AMP__MODULE_ACCESS_CONTROL"
-msgstr "Roles &amp; Module Access Control"
+msgstr "角色与放大器；模块存取控制"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Roles with permission to access this Event"
+msgstr "角色准许改写该事件"
 #: ----
 msgid "ROLES_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Roles with permission to access this Person"
+msgstr "角色准许改写该人士"
 #: ----
 msgid "SAVE"
-msgstr "Save"
+msgstr "保存"
 #: ----
 msgid "SAVE_ADDRESS"
-msgstr "Save Address"
+msgstr "保存地址"
 #: ----
 msgid "SAVE_DOCUMENT"
-msgstr "Save Document"
+msgstr "保存文件"
 #: ----
 msgid "SAVE_HELP_TEXT"
-msgstr "Save Help Text"
+msgstr "保存协助文本"
 #: ----
 msgid "SAVE_NEW_FIELDS"
-msgstr "Save new fields"
+msgstr "保存新栏目"
 #: ----
 msgid "SAVE_QUERY"
-msgstr "Save query"
+msgstr "保存查询"
 #: ----
 msgid "SAVE_THIS_QUERY"
-msgstr "Save this query"
+msgstr "保存此查询"
 #: ----
 msgid "SAVE_THIS_QUERY_WITH_THIS_SHUFFLE"
-msgstr "Save this query with this shuffle"
+msgstr "保存此查询跟此随机组合"
 #: ----
 msgid "SAVED_QUERIES"
-msgstr "Saved queries"
+msgstr "已保存的查询"
 #: ----
 msgid "SEARCH"
-msgstr "Search"
+msgstr "索搜"
 #: ----
 msgid "SEARCH_ADDITIONAL_INFORMATION_RELEVANT_TO_SPECIFIC_TYPES_OF_ACTS_"
-msgstr "Search additional information relevant to specific types of acts."
+msgstr "搜索具体侵权案件类型的其他相关信息。"
 #: ----
 msgid "SEARCH_CONDITIONS"
-msgstr "Search Conditions"
+msgstr "搜索条件（多项）"
 #: ----
 msgid "SEARCH_FORM"
-msgstr "Search form"
+msgstr "搜索表"
 #: ----
 msgid "SEARCH_IN_DATABASE"
-msgstr "Search in database"
+msgstr "搜索数据库"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_EVENTS_"
-msgstr "Search information about Events."
+msgstr "搜索事件信息"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_BEEN_PERPETRATORS_OF_ACTS_AGAINST_VICTIMS_"
-msgstr "Search information about Persons who have been Perpetrators of Acts against Victims."
+msgstr "搜索那些对受害者进行侵权行为的人士的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_INTERVENED_IN_EVENTS_IN_SOME_WAY_"
-msgstr "Search information about Persons who have intervened in Events in some way."
+msgstr "搜索那些有介入案件行为的人士的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ABOUT_PERSONS_WHO_HAVE_PROVIDED_INFORMATION_"
-msgstr "Search information about Persons who have provided information."
+msgstr "搜索那些提供情报的人士的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS__WHETHER_THEY_ARE_INDIVIDUALS__GROUPS_OR_ORGANISATIONS_"
-msgstr "Search information on Persons, whether they are individuals, groups or organisations."
+msgstr "搜索人士信息，无论是个人，团体或组织。"
 #: ----
 msgid "SEARCH_INFORMATION_ON_PERSONS_WHO_HAVE_BEEN_VICTIMS_"
-msgstr "Search information on Persons who have been Victims."
+msgstr "搜索作为受害者的人士的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_ACTS_COMMITTED_AGAINST_VICTIMS_"
-msgstr "Search information on the Acts committed against Victims."
+msgstr "搜索对受害者进行的侵权行为的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_DATA_PROVIDED_BY_SOURCES_"
-msgstr "Search information on the data provided by Sources."
+msgstr "搜索由情报人士提供的信息。"
 #: ----
 msgid "SEARCH_INFORMATION_ON_THE_WAYS_IN_WHICH_PERPETRATORS_HAVE_BEEN_INVOLVED_IN_SPECIFIC_ACTS_"
-msgstr "Search information on the ways in which Perpetrators have been involved in specific Acts."
+msgstr "搜索有关侵权者具体侵权方式的信息。"
 #: ----
 msgid "SEARCH_RECORDS_ABOUT_HOW_PERSONS_HAVE_INTERVENED_IN_EVENTS_OR_ON_BEHALF_OF_VICTIMS_"
-msgstr "Search records about how Persons have intervened in Events or on behalf of Victims."
+msgstr "搜索有关人士介入或代表受害者介入事件的记录。"
 #: ----
 msgid "SEARCH_REPORT"
-msgstr "Search report"
+msgstr "搜索报告"
 #: ----
 msgid "SEARCH_RESULTS"
-msgstr "Search results"
+msgstr "搜索结果"
 #: ----
 msgid "SEARCHABLE"
-msgstr "Searchable"
+msgstr "可搜索"
 #: ----
 msgid "SECTION"
-msgstr "Section"
+msgstr "段落"
 #: ----
 msgid "SEE_FULL_SIZE_IMAGE"
-msgstr "See full size image"
+msgstr "看原图"
 #: ----
 msgid "SELECT"
-msgstr "Select"
+msgstr "选择"
 #: ----
 msgid "SELECT_A_FORMAT"
-msgstr "Select a format"
+msgstr "选择一个格式"
 #: ----
 msgid "SELECT_A_MICRO_THESAURUS"
-msgstr "Select a Micro-thesaurus"
+msgstr "选择一个微词语"
 #: ----
 msgid "SELECT_ENTITY"
-msgstr "Select Entity"
+msgstr "选择单元"
 #: ----
 msgid "SELECT_FIELD"
-msgstr "Select Field"
+msgstr "选择栏目"
 #: ----
 msgid "SELECT_FIELDS_FROM_"
-msgstr "Select fields from"
+msgstr "选栏目从"
 #: ----
 msgid "SELECT_ROLE"
-msgstr "Select role"
+msgstr "选择角色"
 #: ----
 msgid "SELECT_SECONDARY_ENTITY"
-msgstr "Select secondary entity"
+msgstr "选择次要单元"
 #: ----
 msgid "SELECT_TREE_OPTION"
-msgstr "Select Tree Option"
+msgstr "选择树选项"
 #: ----
 msgid "SET"
-msgstr "Set"
+msgstr "设置"
 #: ----
 msgid "SET_ACL_MODE"
-msgstr "Set ACL mode"
+msgstr "设ACL模式"
 #: ----
 msgid "SET_LANGUAGE"
-msgstr "Set language"
+msgstr "设置语言"
 #: ----
 msgid "SET_SYSTEM_LANGUAGE"
-msgstr "Set system language"
+msgstr "设置系统语言"
 #: ----
 msgid "SHARE"
-msgstr "Share"
+msgstr "分享"
 #: ----
 msgid "SHOW_ADDRESS_FORM"
-msgstr "Show Address form"
+msgstr "显示地址表格"
 #: ----
 msgid "SHOW_ALL"
-msgstr "Show all"
+msgstr "显示全部"
 #: ----
 msgid "SHOW_SEARCH_FORM"
-msgstr "Show search form"
+msgstr "显示搜索表"
 #: ----
 msgid "SHOW_SUPPORTING_DOCUMENT_S_"
-msgstr "Show Supporting Document(s)"
+msgstr "显示支持文件"
 #: ----
 msgid "SIGN_IN"
-msgstr "Sign in"
+msgstr "登入"
 #: ----
 msgid "SIGN_IN_TO_OPENEVSYS"
-msgstr "Sign in to OpenEvSys"
+msgstr "登入到 OpenEvSys"
 #: ----
 msgid "SIGN_OUT"
-msgstr "Sign out"
+msgstr "登出"
 #: ----
 msgid "SOME_ERRORS_OCCURED_WHILE_IMPORTING_DATA_"
-msgstr "Some errors occurred while importing data:"
+msgstr "在导入数据时出现的一些错误"
 #: ----
 msgid "SOUND_LIKE"
-msgstr "sound like"
+msgstr "听起来像"
 #: ----
 msgid "SOURCE"
-msgstr "Source"
+msgstr "来源"
 #: ----
 msgid "SOURCE_NAME"
-msgstr "Source name"
+msgstr "来源名称"
 #: ----
 msgid "SOURCE_SEARCH_FORM"
-msgstr "Source Search Form"
+msgstr "来源搜索表"
 #: ----
 msgid "SOURCES"
-msgstr "Sources"
+msgstr "来源（多个）"
 #: ----
 msgid "SPREADSHEET"
-msgstr "Spreadsheet"
+msgstr "电子数据表"
 #: ----
 msgid "START_DATE"
-msgstr "Start Date"
+msgstr "开始日期"
 #: ----
 msgid "STATUS"
-msgstr "Status"
+msgstr "状态"
 #: ----
 msgid "SUBMIT"
-msgstr "Submit"
+msgstr "提交"
 #: ----
 msgid "SUPPORTING_DOCUMENTS"
-msgstr "Supporting Documents"
+msgstr "支持文件"
 #: ----
 msgid "SYSTEM_CONFIGURATION"
-msgstr "System configuration"
+msgstr "系统配置"
 #: ----
 msgid "SYSTEM_ERROR"
-msgstr "System Error"
+msgstr "系统错误"
 #: ----
 msgid "TERM_IN"
-msgstr "Term in"
+msgstr "词语在"
 #: ----
 msgid "TERM_IN_"
-msgstr "Term in"
+msgstr "词语在"
 #: ----
 msgid "TEXT"
-msgstr "Text"
+msgstr "文本"
 #: ----
 msgid "TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT"
-msgstr "Text field with a 200 character limit"
+msgstr "文本字段需要在200字内"
 #: ----
 msgid "TEXTAREA_WITH_UNLIMITED_TEXT"
-msgstr "Text area with unlimited text"
+msgstr "无限制文本字段"
 #: ----
 msgid "THE_DOCUMENT_UPLOADED_WAS_NOT_A_VALID_XML_DOCUMENT_"
-msgstr "The document uploaded was not a valid XML document."
+msgstr "上传的文件是个无效的XML文件"
 #: ----
 msgid "THE_EVENT_IS_LINKED"
-msgstr "The event is linked"
+msgstr "此事件有链接"
 #: ----
 msgid "THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_"
-msgstr "The old file attachment was updated with the new file attachment."
+msgstr "旧文档附件已被新文档附件取代"
 #: ----
 msgid "THE_PERSON_DOES_NOT_YET_HAVE_ANY_ROLES_"
-msgstr "The Person does not yet have any roles!"
+msgstr "此人没有担任任何角色！"
 #: ----
 msgid "THE_TWO_PASSWORDS_ARE_DIFFERENT"
-msgstr "The two passwords are different"
+msgstr "两个密码不同"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_"
-msgstr "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
+msgstr "上传文件超过了HTML表单中指定的最大文件容量指令。"
 #: ----
 msgid "THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_"
-msgstr "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr "上传文件超过了php.ini指定的最大文件容量指令。"
 #: ----
 msgid "THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_"
-msgstr "The uploaded file was only partially uploaded."
+msgstr "上传的文件只有部分被上传。"
 #: ----
 msgid "THERE_ARE_NO_DOCUMENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There are no Documents yet. You should add some!"
+msgstr "还没有文件。你应该添加一些！"
 #: ----
 msgid "THERE_ARE_NO_SUPPORTING_DOCUMENTS_ABOUT_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There are no Supporting documents about Events yet. You should add some!"
+msgstr "事件档案还没有支持文件。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no address added to this Person yet. You should add some!"
+msgstr "此人还没有地址信息。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_BIOGRAPHIC_DETAILS_ABOUT_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no biographic Details about this Person yet. You should add some!"
+msgstr "此人还没有出生背景信息。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_EVENT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "There is no Event information yet. You should add some! Click the \"Add new Event\" button to add a new Event."
+msgstr "还没有事件档案信息，你应该添加一些。点击“添加新事件”按键。"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_CHAIN_OF_EVENTS_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no information about Chain of Events yet. You should add some!"
+msgstr "还没有事件链信息。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_INTERVENING_PARTY_AND_INTERVENTION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no information about Intervening Party and Intervention yet. You should add some!"
+msgstr "还没有案件介入跟第三方介入信息。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_SOURCE_AND_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no information about Source and Information yet. You should add some."
+msgstr "还没有来源与信息的细节。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_INFORMATION_ABOUT_VICTIMS_AND_PERPETRATORS_YET__YOU_SHOULD_ADD_SOME"
-msgstr "There is no information about Victims and Perpetrators yet. You should add some"
+msgstr "还没有受害者跟侵权者信息。你应该添加一些！"
 #: ----
 msgid "THERE_IS_NO_PERSON_INFORMATION_YET__YOU_SHOULD_ADD_SOME_"
-msgstr "There is no Person information yet. You should add some!"
+msgstr "还没有人士信息。你应该添加一些！"
 #: ----
 msgid "TIMESTAMP"
-msgstr "Timestamp"
+msgstr "电子时戳"
 #: ----
 msgid "TO_VIEW_A_DOCUMENT_YOU_HAVE_TO_FIRST_SELECT_A_DOCUMENT_FROM_THE_DOCUMENT_LIST_"
-msgstr "To view a Document you have to first select a Document from the Document list."
+msgstr "要查看文件，必须先从文件列表中选择一个文件。"
 #: ----
 msgid "TO_VIEW_A_PERSON_YOU_HAVE_TO_FIRST_SELECT_A_PERSON_FROM_THE_PERSON_LIST_"
-msgstr "To view a Person you have to first select a Person from the Person list."
+msgstr "要查看人士，必须先从人士列表中选择一位人士。"
 #: ----
 msgid "TO_VIEW_AN_EVENT_YOU_HAVE_TO_FIRST_SELECT_AN_EVENT_FROM_THE_EVENT_LIST_"
-msgstr "To view an Event you have to first select an Event from the Event list."
+msgstr "要查看事件，必须先从事件列表中选择一个事件。"
 #: ----
 msgid "TORTURE"
-msgstr "Torture"
+msgstr "酷刑"
 #: ----
 msgid "TRANSLATE"
-msgstr "Translate"
+msgstr "翻译"
 #: ----
 msgid "TRANSLATION_NOT_UPDATED__PLEASE_GIVE_DIRECTORY_AND_FILE_PERMISSION_TO_RES_LOCALE_FOLDER_"
-msgstr "Translation not updated! Please give directory and file permission to res/locale folder."
+msgstr "翻译没有更新！请提供电脑目录跟文件权限给res／区域设置文件夹。"
 #: ----
 msgid "TRANSLATION_UPDATED_SUCCESSFULLY_"
-msgstr "Translation updated successfully."
+msgstr "翻译更新成功"
 #: ----
 msgid "TRUE"
-msgstr "true"
+msgstr "对"
 #: ----
 msgid "TYPE"
-msgstr "Type"
+msgstr "类型／写"
 #: ----
 msgid "TYPE_DATE_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Type Date of birth in digits only!"
+msgstr "只可以用数字输入出生年月日！"
 #: ----
 msgid "TYPE_MONTH_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Type Month of birth in digits only!"
+msgstr "只可以用数字输入出生月份！"
 #: ----
 msgid "TYPE_OF_ACT"
-msgstr "Type of Act"
+msgstr "案件类型"
 #: ----
 msgid "TYPE_OF_CHAIN_OF_EVENTS"
-msgstr "Type of Chain of Events"
+msgstr "事件链类型"
 #: ----
 msgid "TYPE_OF_INTERVENTION"
-msgstr "Type of Intervention"
+msgstr "案件介入类型"
 #: ----
 msgid "TYPE_OF_RELATIONSHIP"
-msgstr "Type of Relationship"
+msgstr "关系类型"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_EVENT_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Type the userid in the text box and click share to make this event accessible to a desired user."
+msgstr "在文字框中输入用户ID，然后点击分享，让指定的用户可以改写该事件。"
 #: ----
 msgid "TYPE_THE_USERID_IN_THE_TEXT_BOX_AND_CLICK_SHARE_TO_MAKE_THIS_PERSON_ACCESSIBLE_TO_A_DESIRED_USER_"
-msgstr "Type the userid in the text box and click share to make this person accessible to a desired user."
+msgstr "在文字框中输入用户ID，然后点击分享，让指定的用户可以改写该人士。"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_DIGITS_ONLY_"
-msgstr "Type Year of birth in digits only!"
+msgstr "仅用数字输入出生年份！"
 #: ----
 msgid "TYPE_YEAR_OF_BIRTH_IN_FULL_"
-msgstr "Type Year of birth in full!"
+msgstr "输入完整的出生年份！"
 #: ----
 msgid "UNABLE_TO_REMOVE_SOME_MICRO_THESAURUS_TERMS_BECAUSE_THEY_ARE_ALREADY_USED_IN_RECORDS_"
-msgstr "Unable to remove some Micro-thesaurus terms because they are already used in records."
+msgstr "无法删除一些微词语，因为它们已用于记录。"
 #: ----
 msgid "UNABLE_TO_RESET_FIELD_"
-msgstr "Unable to reset field."
+msgstr "重设栏目失败"
 #: ----
 msgid "UNABLE_TO_RESET_FIELDS_"
-msgstr "Unable to reset fields."
+msgstr "重设多项栏目失败"
 #: ----
 msgid "UNKNOWN_UPLOAD_ERROR_"
-msgstr "Unknown upload error."
+msgstr "不明的上传错误"
 #: ----
 msgid "UNTITLED_QUERY"
-msgstr "Untitled Query"
+msgstr "无标题查询"
 #: ----
 msgid "UPDATE"
-msgstr "Update"
+msgstr "更新"
 #: ----
 msgid "UPDATE_ACCESS_CONTROL_LIST"
-msgstr "Update Access Control List"
+msgstr "更新存取控制名单"
 #: ----
 msgid "UPDATE_FORM"
-msgstr "Update Form"
+msgstr "更新表格"
 #: ----
 msgid "UPDATE_PERMISSIONS"
-msgstr "Update permissions"
+msgstr "更新许可"
 #: ----
 msgid "UPLOAD"
-msgstr "Upload"
+msgstr "上传"
 #: ----
 msgid "UPLOAD_FILE"
-msgstr "Upload file"
+msgstr "上传文档"
 #: ----
 msgid "USER"
-msgstr "User"
+msgstr "用户"
 #: ----
 msgid "USER_MANAGEMENT"
-msgstr "User management"
+msgstr "用户管理"
 #: ----
 msgid "USER_NAME"
-msgstr "User Name"
+msgstr "用户名字"
 #: ----
 msgid "USER_NOT_FOUND__INVALID_USERNAME_OR_PASSWORD__PLEASE_TRY_AGAIN_"
-msgstr "User not found! Invalid username or password! Please try again."
+msgstr "找不到用户！用户名或密码无效！请重试。"
 #: ----
 msgid "USERID_DOES_NOT_EXISTS_"
-msgstr "Userid does not exists."
+msgstr "用户身份不存在"
 #: ----
 msgid "USERNAME"
-msgstr "Username"
+msgstr "用户名"
 #: ----
 msgid "USERNAME_ALREADY_EXISTS__USE_A_DIFFERENT_USERNAME"
-msgstr "Username already exists, Use a different username"
+msgstr "用户名已存在，采用不同名字。"
 #: ----
 msgid "USERNAME_CANNOT_BE_EMPTY"
-msgstr "Username cannot be empty"
+msgstr "用户名不能空白"
 #: ----
 msgid "USERS"
-msgstr "Users"
+msgstr "用户（多名）"
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_EVENT"
-msgstr "Users with permission to access this Event"
+msgstr "允许存取此事件的用户"
 #: ----
 msgid "USERS_WITH_PERMISSION_TO_ACCESS_THIS_PERSON"
-msgstr "Users with permission to access this Person"
+msgstr "允许存取此人士的用户"
 #: ----
 msgid "USERS_WITH_PERMISSIONS"
-msgstr "Users with permissions"
+msgstr "有许可的用户"
 #: ----
 msgid "VALIDATION"
-msgstr "Validation"
+msgstr "验证"
 #: ----
 msgid "VALIDATION_TYPE"
-msgstr "Validation type"
+msgstr "验证类型"
 #: ----
 msgid "VERSION"
-msgstr "Version"
+msgstr "版本"
 #: ----
 msgid "VICTIM"
-msgstr "Victim"
+msgstr "受害者"
 #: ----
 msgid "VICTIM_NAME"
-msgstr "Victim name"
+msgstr "受害者名字"
 #: ----
 msgid "VICTIM_SEARCH_FORM"
-msgstr "Victim Search Form"
+msgstr "受害者搜索表"
 #: ----
 msgid "VICTIMS"
-msgstr "Victims"
+msgstr "受害者（多名）"
 #: ----
 msgid "VICTIMS_AND_PERPETRATORS"
-msgstr "Victims and Perpetrators"
+msgstr "受害者跟侵权者（多名）"
 #: ----
 msgid "VIEW_ACT_RECORD"
-msgstr "View Act record"
+msgstr "查看案件纪录"
 #: ----
 msgid "VIEW_ADDRESS"
-msgstr "View Address"
+msgstr "查看地址"
 #: ----
 msgid "VIEW_BIOGRAPHIC_DETAILS"
-msgstr "View Biographic Details"
+msgstr "查看出生背景信息"
 #: ----
 msgid "VIEW_CHAIN_OF_EVENTS_RECORD"
-msgstr "View Chain of Events record"
+msgstr "查看事件链纪录"
 #: ----
 msgid "VIEW_DOCUMENT"
-msgstr "View Document"
+msgstr "查看文件"
 #: ----
 msgid "VIEW_EVENT"
-msgstr "View Event"
+msgstr "查看事件"
 #: ----
 msgid "VIEW_EVENT_RECORD"
-msgstr "View Event record"
+msgstr "查看事件纪录"
 #: ----
 msgid "VIEW_INFORMATION_RECORD"
-msgstr "View Information record"
+msgstr "查看信息纪录"
 #: ----
 msgid "VIEW_INTERVENTION_PARTY_RECORD"
-msgstr "View Intervention Party record"
+msgstr "查看第三方介入纪录"
 #: ----
 msgid "VIEW_INTERVENTION_RECORD"
-msgstr "View Intervention record"
+msgstr "查看案件介入纪录"
 #: ----
 msgid "VIEW_INVOLVEMENT_RECORD"
-msgstr "View Involvement record"
+msgstr "查看案件参与纪录"
 #: ----
 msgid "VIEW_PERPETRATOR_RECORD"
-msgstr "View Perpetrator record"
+msgstr "查看侵权者纪录"
 #: ----
 msgid "VIEW_PERSON"
-msgstr "View Person"
+msgstr "查看人士"
 #: ----
 msgid "VIEW_RELATED_PERSON"
-msgstr "View Related Person"
+msgstr "查看相关人士"
 #: ----
 msgid "VIEW_SOURCE_RECORD"
-msgstr "View Source record"
+msgstr "查看来源纪录"
 #: ----
 msgid "VIEW_VICTIM_RECORD"
-msgstr "View Victim record"
+msgstr "查看受害者纪录"
 #: ----
 msgid "VISIBILITY"
-msgstr "Visibility"
+msgstr "能见度"
 #: ----
 msgid "VISIBLE"
-msgstr "Visible"
+msgstr "显示"
 #: ----
 msgid "VISIBLE_IN_BROWSE"
-msgstr "Visible in browse"
+msgstr "游览里显示"
 #: ----
 msgid "VISIBLE_IN_FORM"
-msgstr "Visible in form"
+msgstr "表格中显示"
 #: ----
 msgid "VISIBLE_IN_VIEW"
-msgstr "Visible in view"
+msgstr "视图里显示"
 #: ----
 msgid "WEB"
-msgstr "Web"
+msgstr "网"
 #: ----
 msgid "WEBSITE"
-msgstr "Website"
+msgstr "网站"
 #: ----
 msgid "WHAT_HAPPENED_TO"
-msgstr "What happened to"
+msgstr "发生什么"
 #: ----
 msgid "WHAT_IS_THE_INTERVENTION_"
-msgstr "What is the intervention?"
+msgstr "什么样的案件介入？"
 #: ----
 msgid "WHO_IS_RESPONSIBLE_FOR_THE"
-msgstr "Who is responsible for the"
+msgstr "谁负责"
 #: ----
 msgid "WHO_IS_THE_INTERVENING_PARTY_"
-msgstr "Who is the intervening party?"
+msgstr "谁是第三方介入？"
 #: ----
 msgid "WHO_IS_THE_SOURCE_"
-msgstr "Who is the source?"
+msgstr "谁是来源？"
 #: ----
 msgid "WHO_IS_THE_VICTIM__"
-msgstr "Who is the victim ?"
+msgstr "谁是受害者？"
 #: ----
 msgid "YEAR_S__"
-msgstr "Year(s):"
+msgstr "年"
 #: ----
 msgid "YES"
-msgstr "Yes"
+msgstr "是"
 #: ----
 msgid "YOU_ARE_ABOUT_TO_DELETE_AN_EVENT__THIS_MEANS_YOU_WILL_DELETE_THE_RECORDS_LISTED_BELOW__DO_YOU_WANT_TO_CONTINUE_"
-msgstr "You are about to delete an Event. This means you will delete the records listed below. Do you want to continue?"
+msgstr "你将要删除此事件。这意味着你将删除以下列出的记录。你要继续吗？"
 #: ----
 msgid "YOU_CANNOT_CHANGE_THE_ADMINISTRATOR_PERMISSIONS_"
-msgstr "You cannot change the administrator permissions."
+msgstr "你不能改变管理员权限。"
 #: ----
 msgid "YOU_CANNOT_DELETE_OTHER_ADMIN_USERS_"
-msgstr "You cannot delete other admin users."
+msgstr "你不能删除其他管理员用户。"
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_ADMINISTRATOR_ACCOUNT_"
-msgstr "You cannot delete the administrator account."
+msgstr "你不能删除管理员帐户。"
 #: ----
 msgid "YOU_CANNOT_DELETE_THE_DEFAULT_LANGUAGE"
-msgstr "You cannot delete the default language"
+msgstr "你不能删除内定语言"
 #: ----
 msgid "YOU_CANNOT_DELETE_YOURSELF_FROM_THE_LIST_OF_USERS_"
-msgstr "You cannot delete yourself from the list of users."
+msgstr "你不能从用户列表中删除自己。"
 #: ----
 msgid "YOU_DO_NOT_HAVE_PERMISSION_TO_EDIT_OTHER_ADMIN_USERS_DETAILS_"
-msgstr "You do not have permission to edit other admin users details."
+msgstr "你没有编辑其他管理员用户的详细信息的许可。"
 #: ----
 msgid "YOU_HAVE_ALSO_SELECTED_SOME_PARENT_TERM_S___IF_YOU_PROCEED_THE_CHILDRENS_OF_THOSE_TERMS_WILL_ALSO_BE_DELETED_"
-msgstr "You have also selected some parent term(s), if you proceed the children's of those terms will also be deleted."
+msgstr "你还选了一些父母级的词汇，如果继续，它们的子级词汇也将被删除。"
 #: ----
 msgid "YOU_MUST_FILL_IN_THIS_FIELD"
-msgstr "You must fill in this field"
+msgstr "你必须填写此栏目"
 #: ----
 msgid "YOU_NEED_TO_SELECT_AN_ENTITY_BEFORE_COUNTING"
-msgstr "You need to select an entity before counting"
+msgstr "你需要在计算前选一项单元"
 #: ----
 msgid "YOUR_BROWSER_S_COOKIE_FUNCTIONALITY_IS_TURNED_OFF__PLEASE_TURN_IT_ON"
-msgstr "Your browser's cookie functionality is turned off! Please turn it on"
+msgstr "你的浏览器的Cookie功能已关闭！请打开它"
 #: ----
 msgid "EXTENSIONS"
-msgstr "Extensions"
+msgstr "附加软体／文件格式"
 #: ----
 msgid "ABOUT_OE"
-msgstr "About OpenEvsys"
+msgstr "关于 OpenEvsys"
 #: ----
 msgid "AGPL"
-msgstr "AGPL v3 licensed"
+msgstr "AGPL v3许可"
 #: ----
 msgid "REQUIRED"
-msgstr "Required"
+msgstr "必要"
 #: ----
 msgid "YES_CONFIDENTIALITY"
-msgstr "Yes (for Confidentiality)"
+msgstr "要（对于保密）"
 #: ----
 msgid "NO_CONFIDENTIALITY"
-msgstr "No (for Confidentiality)"
+msgstr "不要（对于保密）"
 #: ----
 msgid "ERROR_SERVER"
-msgstr "An error was returned by the server, please contact system administrator"
+msgstr "服务器发回错误，请与系统管理员联系"
 #: ----
 msgid "NULL_ROWS"
-msgstr "Null Rows"
+msgstr "空行"
 #: ----
 msgid "PHONE_NO"
-msgstr "Phone Number"
+msgstr "电话号码"
 #: ----
 msgid "NUMERICAL"
-msgstr "Numerical"
+msgstr "数值"
 #: ----
 msgid "ANALYST"
-msgstr "Analyst"
+msgstr "分析员"
 #: ----
 msgid "DATA_ENTRY"
-msgstr "Data Entry"
+msgstr "数据输入"
 #: ----
 msgid "ENTITY_GROUPS"
-msgstr "Entity Groups"
+msgstr "单元组合（多项）"
 #: ----
 msgid "CREATE"
-msgstr "Create"
+msgstr "创造"
 #: ----
 msgid "READ"
-msgstr "read"
+msgstr "读"
 #: ----
 msgid "LINKING"
-msgstr "Linking"
+msgstr "链接"
 #: ----
 msgid "PRIMARY"
-msgstr "Primary"
+msgstr "主要的"
 #: ----
 msgid "SELECT_LANGUAGE"
-msgstr "Select language"
+msgstr "选择语言"
 #: ----
 msgid "NO_ATTACHMENT"
-msgstr "No attachment found to this document"
+msgstr "此文件没有附件"
 #: ----
 msgid "BROWSE"
-msgstr "Browse"
+msgstr "游览"
 #: ----
 msgid "ROWS"
-msgstr "Row(s)"
+msgstr "行（多个）"
 #: ----
 msgid "ADVANCED_SEARCH_REPORT"
-msgstr "Advanced Search Report"
+msgstr "高级索搜报告"
 #: ----
 msgid "Address"
-msgstr "Address"
+msgstr "地址"
 #: ----
 msgid "latitude"
-msgstr "latitude"
+msgstr "纬度"
 #: ----
 msgid "longitude"
-msgstr "longitude"
+msgstr "经度"
 #: ----
 msgid "View"
-msgstr "View"
+msgstr "查看"
 #: ----
 msgid "Micro-thesauri created successfully"
-msgstr "Micro-thesaurus created successfully"
+msgstr "微辞典创造成功"
 #: ----
 msgid "Radio field"
-msgstr "Radio field"
+msgstr "按键栏目"
 #: ----
 msgid "Geolocation"
-msgstr "Geolocation"
+msgstr "地理定位"
 #: ----
 msgid "User Select"
-msgstr "User Select"
+msgstr "用户选项"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Multivalue User Select"
+msgstr "多面内容用户选项"
 #: ----
 msgid "Tree"
-msgstr "Tree"
+msgstr "树"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Multivalue Tree"
+msgstr "多面内容树"
 #: ----
 msgid "Multivalue Select"
-msgstr "Multivalue Select"
+msgstr "多面内容选项"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Please select items to perform action"
+msgstr "请选择要执行的操作项目"
 #: ----
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "仪表板"
 #: ----
 msgid "Micro-thesauri cannot be empty"
-msgstr "Micro-thesauri cannot be empty"
+msgstr "微词典不可以空"
 #: ----
 msgid "Micro-thesauri name already exists"
-msgstr "Micro-thesauri name already exists"
+msgstr "微词库名已存在"
 #: ----
 msgid "Login Information"
-msgstr "Login Information"
+msgstr "登入信息"
 #: ----
 msgid "Profile Information"
-msgstr "Profile Information"
+msgstr "档案信息"
 #: ----
 msgid "Print configuration"
-msgstr "Printer configuration"
+msgstr "打印机配置"
 #: ----
 msgid "Header for report print view"
-msgstr "Header for report print view"
+msgstr "“报告”打印图示的页眉"
 #: ----
 msgid "Header for event print view"
-msgstr "Header for event print view"
+msgstr "“事件”打印图示的页眉"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Sidebar for event print view"
+msgstr "“事件”打印图示的侧边栏"
 #: ----
 msgid "Header for person print view"
-msgstr "Header for person print view"
+msgstr "“人士”打印图示的页眉"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Sidebar for person print view"
+msgstr "“人士”打印图示的侧边栏"
 #: ----
 msgid "Details"
-msgstr "Details"
+msgstr "详情"
 #: ----
 msgid "Add new term"
-msgstr "Add new term"
+msgstr "添加新词语"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Searchable in Analysis"
+msgstr "在分析里可搜索"
 #: ----
 msgid "Visible in Analysis"
-msgstr "Visible in Analysis"
+msgstr "在分析里能见到"
 #: ----
 msgid "Add new Micro-thesauri"
-msgstr "Add new Micro-thesauri"
+msgstr "添加新微词语"
 #: ----
 msgid "Select language"
-msgstr "Select language"
+msgstr "选择语言"
 #: ----
 msgid "Header for login page"
-msgstr "Header for login page"
+msgstr "登入页的页眉"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "多面内容"
 #: ----
 msgid "Enabled"
-msgstr "Enabled"
+msgstr "已启用"
 #: ----
 msgid "Hide in case of"
-msgstr "Hide in case of"
+msgstr "隐藏如果"
 #: ----
 msgid "Set visible"
-msgstr "Set visible"
+msgstr "选择显示"
 #: ----
 msgid "Disable"
-msgstr "Disable"
+msgstr "关闭"
 #: ----
 msgid "Apply"
-msgstr "Apply"
+msgstr "应用"
 #: ----
 msgid "Vocab number"
-msgstr "Vocab number"
+msgstr "单词号码"
 #: ----
 msgid "disabled"
-msgstr "disabled"
+msgstr "已关闭"
 #: ----
 msgid "Undefined"
-msgstr "Undefined"
+msgstr "未定义"
 #: ----
 msgid "Load"
-msgstr "Load"
+msgstr "装载"
 #: ----
 msgid "Select facets"
-msgstr "Select facets"
+msgstr "选择多面搜素"
 #: ----
 msgid "Date range"
-msgstr "Date range"
+msgstr "日期范围"
 #: ----
 msgid "Timeline type"
-msgstr "Timeline type"
+msgstr "时间表类型"
 #: ----
 msgid "DAY"
-msgstr "DAY"
+msgstr "日"
 #: ----
 msgid "MONTH"
-msgstr "MONTH"
+msgstr "月份"
 #: ----
 msgid "YEAR"
-msgstr "YEAR"
+msgstr "年份"
 #: ----
 msgid "Total Count"
-msgstr "Total Count"
+msgstr "总数"
 #: ----
 msgid "Added in last 30 days"
-msgstr "Added in last 30 days"
+msgstr "最近30天添加的"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Most active users (new items)"
+msgstr "最活跃用户（新项目）"
 #: ----
 msgid "User activity (edited items)"
-msgstr "User activity (edited items)"
+msgstr "用户活动（项目已编辑）"
 #: ----
 msgid "Recently deleted"
-msgstr "Recently deleted"
+msgstr "最近删除的"
 #: ----
 msgid "No data available"
-msgstr "No data available"
+msgstr "没有数据"
 #: ----
 msgid "Add Perpetrator later"
-msgstr "Add Perpetrator later"
+msgstr "以后再添加侵权者"
 #: ----
 msgid "Save and Add More Perpetrators"
-msgstr "Save and add more Perpetrators"
+msgstr "保存并添加更多侵权者"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "There is no Act information yet, you should add some. Click the Add new Event button to add a new Event"
+msgstr "还没有案件信息，你应该添加一些。点击“添加新事件”按键。"
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "There is no Intervention information yet, you should add some. Click the Add new Event button to add a new Event"
+msgstr "还没有案件介入信息，你应该添加一些。点击“添加新事件”按键。"
 #: ----
 msgid "View person\'s roles"
-msgstr "View person's roles"
+msgstr "查看此人的角色"
 #: ----
 msgid "Duplicate"
-msgstr "Duplicate"
+msgstr "重复"
 #: ----
 msgid "Insert folder name:"
-msgstr "Insert folder name:"
+msgstr "插入文件夹名字"
 #: ----
 msgid "Return to files list"
-msgstr "Return to files list"
+msgstr "返回到文档名单"
 #: ----
 msgid "Preview"
-msgstr "Preview"
+msgstr "预览"
 #: ----
 msgid "Erase"
-msgstr "Erase"
+msgstr "抹去"
 #: ----
 msgid "Charts and map"
-msgstr "Charts and map"
+msgstr "图表跟地图"
 #: ----
 msgid "Clear this selections"
-msgstr "Clear this selection"
+msgstr "清除此选项"
 #: ----
 msgid "of"
-msgstr "of"
+msgstr "的／于"
 #: ----
 msgid "Not found"
-msgstr "Not found"
+msgstr "未找到"
 #: ----
 msgid "Map"
-msgstr "Map"
+msgstr "地图"
 #: ----
 msgid "Charts"
-msgstr "Charts"
+msgstr "图表"
 #: ----
 msgid "Results"
-msgstr "Results"
+msgstr "结果"
 #: ----
 msgid "Filters"
-msgstr "Filters"
+msgstr "过滤选项（多个）"
 #: ----
 msgid "Security"
-msgstr "Security"
+msgstr "安全"
 #: ----
 msgid "Top menu"
-msgstr "Top menu"
+msgstr "顶部选项单"
 #: ----
 msgid "Top right menu"
-msgstr "Top right menu"
+msgstr "右上角选项单"
 #: ----
 msgid "Event menu"
-msgstr "Event menu"
+msgstr "事件选项单"
 #: ----
 msgid "Person menu"
-msgstr "Person menu"
+msgstr "人士选项单"
 #: ----
 msgid "Document menu"
-msgstr "Document menu"
+msgstr "文件选项单"
 #: ----
 msgid "Analysis menu"
-msgstr "Analysis menu"
+msgstr "分析选项单"
 #: ----
 msgid "Preferences menu"
-msgstr "Preferences menu"
+msgstr "设置选项单"
 #: ----
 msgid "The reCAPTCHA wasn\'t entered correctly."
-msgstr "The reCAPTCHA wasn't entered correctly."
+msgstr "该验证码输入不正确。"
 #: ----
 msgid "Wrong verification code. Please try again."
-msgstr "Wrong verification code. Please try again."
+msgstr "错误的验证码。请重试。"
 #: ----
 msgid "Menu was saved successfully."
-msgstr "Menu was saved successfully."
+msgstr "选项单保存成功。"
 #: ----
 msgid "Google Authenticator"
-msgstr "Google Authenticator"
+msgstr "谷歌身份验证器"
 #: ----
 msgid "Enabled successfully."
-msgstr "Enabled successfully."
+msgstr "成功启用。"
 #: ----
 msgid "Code"
-msgstr "Code"
+msgstr "代码"
 #: ----
 msgid "Menu"
-msgstr "Menu"
+msgstr "选项单"
 #: ----
 msgid "Click to add an item to a menu"
-msgstr "Click to add an item to a menu"
+msgstr "点击一项目添加到选项单"
 #: ----
 msgid "Number"
-msgstr "Number"
+msgstr "号码"
 #: ----
 msgid "Term"
-msgstr "Term"
+msgstr "词语"
 #: ----
 msgid "Add Micro-thesauri"
-msgstr "Add Micro-thesauri"
+msgstr "添加微词语"
 #: ----
 msgid "Translate Micro-thesauri"
-msgstr "Translate Micro-thesauri"
+msgstr "翻译微词语"
 #: ----
 msgid "Language"
-msgstr "Language"
+msgstr "语言"
 #: ----
 msgid "Event"
-msgstr "Event"
+msgstr "事件"
 #: ----
 msgid "Select Event"
-msgstr "Select Event"
+msgstr "选择事件"
 #: ----
 msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "There is no Act information yet, you should add some. Click the Add new Event button to add a new Event."
+msgstr "还没有案件信息，你应该添加一些。点击“添加新事件”按键。"
 #: ----
 msgid "Please select some checkbox to perform action."
-msgstr "Please select some checkbox to perform action."
+msgstr "请选择一些复选框以便执行操作。"
 #: ----
 msgid "Install the Google Authenticator app for your phone"
-msgstr "Install the Google Authenticator app for your phone"
+msgstr "在你的手机安装谷歌身份验证器应用程序"
 #: ----
 msgid "On your phone, open a web browser."
-msgstr "On your phone, open a web browser."
+msgstr "在你的手机上打开一个游览器。"
 #: ----
 msgid "Go to m.google.com/authenticator."
-msgstr "Go to m.google.com/authenticator."
+msgstr "打开 m.google.com/authenticator."
 #: ----
 msgid "Download and install the Google Authenticator application."
-msgstr "Download and install the Google Authenticator application."
+msgstr "下载并安装谷歌身份验证的应用程序。"
 #: ----
 msgid "Now open and configure Google Authenticator."
-msgstr "Now open and configure Google Authenticator."
+msgstr "现在打开并配置谷歌身份验证。"
 #: ----
 msgid "Scan following Barcode to register the application automaticly:"
-msgstr "Scan the following Barcode to register the application automatically:"
+msgstr "扫描以下条码自动注册应用程序："
 #: ----
 msgid "Or use the following secret key to register the application manually:"
-msgstr "Or use the following secret key to register the application manually:"
+msgstr "或者使用以下的密钥，以手动方式注册应用程序："
 #: ----
 msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
-msgstr "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "当你把密钥输入并保存之后，输入由身份验证器产生的6位验证码。"
 #: ----
 msgid "The code is incorrect. Try again"
-msgstr "The code is incorrect. Try again"
+msgstr "代码不正确。请重试。"

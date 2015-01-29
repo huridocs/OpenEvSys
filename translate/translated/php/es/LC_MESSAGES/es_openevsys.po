@@ -186,7 +186,7 @@ msgid "ADVANCED_SEARCH"
 msgstr "Búsqueda avanzada"
 #: ----
 msgid "AFTER"
-msgstr "after"
+msgstr "después de"
 #: ----
 msgid "AGAINST"
 msgstr "en contra de"
@@ -210,7 +210,7 @@ msgid "AT"
 msgstr "a"
 #: ----
 msgid "AT_OR_AFTER"
-msgstr "at or after"
+msgstr "a o después de"
 #: ----
 msgid "AT_OR_BEFORE"
 msgstr "a o antes de"
@@ -810,7 +810,7 @@ msgid "HIDE_SUPPORTING_DOCUMENT_S_"
 msgstr "Ocultar los documentos de apoyo"
 #: ----
 msgid "HIDE_TREE"
-msgstr "Hide Tree"
+msgstr "Ocultar Arbol"
 #: ----
 msgid "HOW_WAS_"
 msgstr "¿cómo se"
@@ -934,9 +934,6 @@ msgstr "es vacío"
 #: ----
 msgid "IS_REQUIRED"
 msgstr "Es obligatorio"
-#: ----
-msgid "KEY"
-msgstr "ES"
 #: ----
 msgid "KILLING"
 msgstr "Muertes y asesinatos"
@@ -1254,7 +1251,7 @@ msgid "REMARKS"
 msgstr "Observaciones"
 #: ----
 msgid "REMOVE"
-msgstr "ELIMINAR"
+msgstr "Borrar"
 #: ----
 msgid "REMOVE_CLARIFY"
 msgstr "Eliminar Explicar"
@@ -1299,7 +1296,7 @@ msgid "ROLE"
 msgstr "Actividad"
 #: ----
 msgid "ROLE_LIST"
-msgstr "Lista de roles"
+msgstr "Lista de actividades"
 #: ----
 msgid "ROLES"
 msgstr "Actividades"
@@ -1944,25 +1941,22 @@ msgid "User Select"
 msgstr "Seleccionar usuario"
 #: ----
 msgid "Multivalue User Select"
-msgstr "Multivalue User Select"
+msgstr "Seleccionar usuario de varios valores"
 #: ----
 msgid "Tree"
 msgstr "Árbol"
 #: ----
 msgid "Multivalue Tree"
-msgstr "Multivalue Tree"
-#: ----
-msgid ""
-msgstr "es"
+msgstr "Árbol de varios valores"
 #: ----
 msgid "Multivalue Select"
 msgstr "Seleccionar varios valores"
 #: ----
 msgid "Please select items to perform action"
-msgstr "Please select items to perform action"
+msgstr "Favor seleccionar campos para realizar la acción"
 #: ----
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Panel"
 #: ----
 msgid "Micro-thesauri cannot be empty"
 msgstr "Micro-tesauro no puede estar vacío"
@@ -1971,7 +1965,7 @@ msgid "Micro-thesauri name already exists"
 msgstr "Nombre del Micro-tesauro ya existe"
 #: ----
 msgid "Login Information"
-msgstr "Login Information"
+msgstr "Información sobre inicio de sesión"
 #: ----
 msgid "Profile Information"
 msgstr "Información sobre el perfil"
@@ -1986,13 +1980,13 @@ msgid "Header for event print view"
 msgstr "Cabecera de vista preliminar del evento"
 #: ----
 msgid "Sidebar for event print view"
-msgstr "Sidebar for event print view"
+msgstr "Barra lateral de vista preliminar de evento"
 #: ----
 msgid "Header for person print view"
 msgstr "Cabecera de vista preliminar de la persona"
 #: ----
 msgid "Sidebar for person print view"
-msgstr "Sidebar for person print view"
+msgstr "Barra lateral de vista preliminar de la persona"
 #: ----
 msgid "Details"
 msgstr "Detalles"
@@ -2001,7 +1995,7 @@ msgid "Add new term"
 msgstr "Añadir nuevo término"
 #: ----
 msgid "Searchable in Analysis"
-msgstr "Searchable in Analysis"
+msgstr "Buscable en Análisis"
 #: ----
 msgid "Visible in Analysis"
 msgstr "Visible en el Análisis"
@@ -2016,7 +2010,7 @@ msgid "Header for login page"
 msgstr "Encabezado de la página de inicio de sesión"
 #: ----
 msgid "Multivalue"
-msgstr "Multivalue"
+msgstr "De varios valores"
 #: ----
 msgid "Enabled"
 msgstr "Activado"
@@ -2024,8 +2018,8 @@ msgstr "Activado"
 msgid "Hide in case of"
 msgstr "Escóndete en caso de"
 #: ----
-msgid "Set visible "
-msgstr "Set visible "
+msgid "Set visible"
+msgstr "Visibilizar"
 #: ----
 msgid "Disable"
 msgstr "Inhabilitar"
@@ -2037,7 +2031,7 @@ msgid "Vocab number"
 msgstr "Número vocab"
 #: ----
 msgid "disabled"
-msgstr "disabled"
+msgstr "inhabilitado"
 #: ----
 msgid "Undefined"
 msgstr "Indefinido"
@@ -2070,7 +2064,7 @@ msgid "Added in last 30 days"
 msgstr "Alta en los últimos 30 días"
 #: ----
 msgid "Most active users (new items)"
-msgstr "Usarios más activos (nuevos registros) "
+msgstr "Usarios más activos (nuevos registros)"
 #: ----
 msgid "User activity (edited items)"
 msgstr "Actividad de usarios (registros editados)"
@@ -2087,11 +2081,11 @@ msgstr "Añadir autor más tarde"
 msgid "Save and Add More Perpetrators"
 msgstr "Guardar y agregar más autores"
 #: ----
-msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
-msgstr "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ "
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "No hay información de actos todavía. Usted debe agregar algo! Haga clic en la opción \"Agregar un nuevo evento\" para añadir un nuevo evento."
 #: ----
 msgid "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
-msgstr "THERE_IS_NO_INTERVENTION_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "No hay información de intervención todavía. Usted debe agregar algo! Haga clic en la opción \"Agregar un nuevo evento\" para añadir un nuevo evento."
 #: ----
 msgid "View person\'s roles"
 msgstr "Ver las actividades de la persona"
@@ -2133,4 +2127,106 @@ msgid "Results"
 msgstr "Resultados"
 #: ----
 msgid "Filters"
-msgstr "Filters"
+msgstr "Filtros"
+#: ----
+msgid "Security"
+msgstr "Seguridad"
+#: ----
+msgid "Top menu"
+msgstr "Menú superior"
+#: ----
+msgid "Top right menu"
+msgstr "Menú superior derecha"
+#: ----
+msgid "Event menu"
+msgstr "Menú de eventos"
+#: ----
+msgid "Person menu"
+msgstr "Menú de personas"
+#: ----
+msgid "Document menu"
+msgstr "Menú de documentos"
+#: ----
+msgid "Analysis menu"
+msgstr "Menú de análisis"
+#: ----
+msgid "Preferences menu"
+msgstr "Menú de preferencias"
+#: ----
+msgid "The reCAPTCHA wasn\'t entered correctly."
+msgstr "No se ingresó correctamente el reCAPTCHA"
+#: ----
+msgid "Wrong verification code. Please try again."
+msgstr "Código de verificación incorrecta. Favor intentar de nuevo"
+#: ----
+msgid "Menu was saved successfully."
+msgstr "Menú guardado con éxito"
+#: ----
+msgid "Google Authenticator"
+msgstr "Google Authenticator (Autentificador de Google)"
+#: ----
+msgid "Enabled successfully."
+msgstr "Activado con éxito"
+#: ----
+msgid "Code"
+msgstr "Código"
+#: ----
+msgid "Menu"
+msgstr "Menú"
+#: ----
+msgid "Click to add an item to a menu"
+msgstr "Haga clic para añadir al menú"
+#: ----
+msgid "Number"
+msgstr "Número"
+#: ----
+msgid "Term"
+msgstr "Término"
+#: ----
+msgid "Add Micro-thesauri"
+msgstr "Agregar micro-tesauros"
+#: ----
+msgid "Translate Micro-thesauri"
+msgstr "Traducir micro-tesauros"
+#: ----
+msgid "Language"
+msgstr "Idioma"
+#: ----
+msgid "Event"
+msgstr "Evento"
+#: ----
+msgid "Select Event"
+msgstr "Seleccionar evento"
+#: ----
+msgid "THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_ THERE_IS_NO_ACT_INFORMATION_YET__YOU_SHOULD_ADD_SOME___CLICK_THE__ADD_NEW_EVENT__BUTTON_TO_ADD_A_NEW_EVENT_"
+msgstr "No hay información de actos todavía. Usted debe agregar algo! Haga clic en la opción \"Agregar un nuevo evento\" para añadir un nuevo evento."
+#: ----
+msgid "Please select some checkbox to perform action."
+msgstr "Favor seleccionar una casilla para realizar la acción"
+#: ----
+msgid "Install the Google Authenticator app for your phone"
+msgstr "Instalar la aplicación de Google Authenticator (Autentificador de Google) en su celular"
+#: ----
+msgid "On your phone, open a web browser."
+msgstr "En su celular, abrir un navegador de internet"
+#: ----
+msgid "Go to m.google.com/authenticator."
+msgstr "Ir a m.google.com/authenticator"
+#: ----
+msgid "Download and install the Google Authenticator application."
+msgstr "Descargar e instalar la aplicación de Google Authenticator (Autentificador de Google)"
+#: ----
+msgid "Now open and configure Google Authenticator."
+msgstr "Ahora abre y configure Google Authenticator (Autentificador de Google)"
+#: ----
+msgid "Scan following Barcode to register the application automaticly:"
+msgstr "Escanea el siguiente código de barra para registrar la aplicación automáticamente:"
+#: ----
+msgid "Or use the following secret key to register the application manually:"
+msgstr "O, utilice la siguente clave secreta para registrar la aplicación manualmente:"
+#: ----
+msgid "Once you manually entered and saved your key, enter the 6-digit verification code generated by the Authenticator app."
+msgstr "Una vez ingresada y guardada manualmente su clave ingrese el código de verificación de 6 dígitos generado por la aplicación Authenticator (Autentificador)"
+#: ----
+msgid "The code is incorrect. Try again"
+msgstr "El código es incorrecto. Intente de nuevo."
