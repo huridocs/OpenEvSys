@@ -37,7 +37,7 @@
  */
 define("RECAPTCHA_API_SERVER", "http://www.google.com/recaptcha/api");
 define("RECAPTCHA_API_SECURE_SERVER", "https://www.google.com/recaptcha/api");
-define("RECAPTCHA_VERIFY_SERVER", "www.google.com");
+define("RECAPTCHA_VERIFY_SERVER", resolve_name("www.google.com"));
 
 /**
  * Encodes the given data into a query string format
@@ -54,6 +54,10 @@ function _recaptcha_qsencode ($data) {
         return $req;
 }
 
+
+function resolve_name($name){
+    return dns_get_record($name,DNS_A)[0]['ip'];
+}
 
 
 /**
