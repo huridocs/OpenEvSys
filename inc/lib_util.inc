@@ -24,13 +24,13 @@
  *
  * @auther  H J P Fonseka <jo@respere.com>
  * @package Framework
- * 
+ *
  */
 
 /**
- * __autoload function will be 
- * 
- * @param mixed $class_name 
+ * __autoload function will be
+ *
+ * @param mixed $class_name
  * @access protected
  * @return void
  */
@@ -59,14 +59,14 @@ class AutoLoadClass {
 spl_autoload_register(array('AutoLoadClass', '__autoload'));
 
 /**
- * get_uri 
- * 
- * @param string $module 
- * @param string $action 
- * @param mixed $args 
- * @param string $stream 
- * @param mixed $id 
- * @param mixed $return 
+ * get_uri
+ *
+ * @param string $module
+ * @param string $action
+ * @param mixed $args
+ * @param string $stream
+ * @param mixed $id
+ * @param mixed $return
  * @access public
  * @return void
  */
@@ -412,7 +412,7 @@ function set_links_in_recordset($recordset, $entity, $additionalurlfields = arra
         }
         $recordArray[] = $record;
 
-        //var_dump( $entity , $record); 
+        //var_dump( $entity , $record);
     }
 
 
@@ -526,7 +526,7 @@ function is_management_field($formField) {
                 $fld_name == 'date_of_entry' ||
                 $fld_name == 'entered_by' ||
                 $fld_name == 'project_title' ||
-                $fld_name == 'comments' || 
+                $fld_name == 'comments' ||
                 $fld_name == 'record_grouping' ||
                 $fld_name == 'date_updated' ||
                 $fld_name == 'updated_by' ||
@@ -652,7 +652,7 @@ function getDefaultMenuItems() {
         "event_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
             "url" => get_url('events', 'permissions', null, array('eid' => $eid), null, true), "module" => "events", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $event;
-                
+
 if ($event->confidentiality == "y") {
 return true;
 }
@@ -693,7 +693,7 @@ return false;')),
         "person_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "person", "parent" => "personsbrowse",
             "url" => get_url('person', 'permissions', null, array('pid' => $pid), null, true), "module" => "person", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $person;
-                
+
 if ($person->confidentiality == "y") {
 return true;
 }
@@ -711,7 +711,7 @@ return false;')),
         "document_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "docu", "parent" => "documentsbrowse",
             "url" => get_url('docu', 'audit', null, array('doc_id' => $doc_id), null, true), "module" => "docu", "action" => "audit",
             "aliases" => array()),
-        "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true), 
+        "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true),
             "module" => "person", "action" => "browse_biography",'check'=>create_function('$menu','
                global $conf;
 if ($conf["menus"]["biography_list"]) {
@@ -764,6 +764,7 @@ return false;
         "edit_security" => array("level" => 0, "title" => _t('Security'), "aclmod" => "",
             "url" => get_url('home', 'edit_security', null, null, null, true), "module" => "home", "action" => "edit_security",
             "aliases" => array()),
+        "subformats" => array("level" => 0, "url" => get_url('subformats', 'browse', null, null, null, true), "title" => _t('SUBFORMATS')),
     );
     return $defaultMenuItems;
 }
@@ -805,6 +806,7 @@ function getMenus() {
                 "personsbrowse" => $defaultMenuItems["personsbrowse"],
                 "documentsbrowse" => $defaultMenuItems["documentsbrowse"],
                 "biographybrowse" => $defaultMenuItems["biographybrowse"],
+                "subformats" => $defaultMenuItems["subformats"],
                 "addnew" => $defaultMenuItems["addnew"],
                 "new_event" => $defaultMenuItems["new_event"],
                 "add_act_full"=> $defaultMenuItems["add_act_full"],
