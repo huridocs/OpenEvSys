@@ -88,7 +88,7 @@ class personModule extends shnModule {
             'request_page', 'rpp', 'person_record_number', 'counting_unit',
             'person_name', 'date_of_birth', 'sex', 'filter', 'sort', 'sortorder'
         );
-        
+
         $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
@@ -106,8 +106,8 @@ class personModule extends shnModule {
     }
 
     /**
-     * act_new_person will generate ui to add a new person 
-     * 
+     * act_new_person will generate ui to add a new person
+     *
      * @access public
      * @return void
      */
@@ -140,8 +140,8 @@ class personModule extends shnModule {
     }
 
     /**
-     * act_person_address_list will generate ui for person address 
-     * 
+     * act_person_address_list will generate ui for person address
+     *
      * @access public
      * @return void
      */
@@ -273,7 +273,7 @@ class personModule extends shnModule {
     }
 
     function act_person() {
-        $this->biographics = Browse::getRelativeInfo($_GET['pid']); //loaded for contextual info			
+        $this->biographics = Browse::getRelativeInfo($_GET['pid']); //loaded for contextual info
         $this->biographics_reverse = Browse::getRelativeInfoReverse($_GET['pid']);
     }
 
@@ -313,6 +313,7 @@ class personModule extends shnModule {
         }
         
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+
         $this->result_pager->setArgumentEncoder($this->argumentEncoder);
 
         $this->columnValues = $this->result_pager->get_page_data();
@@ -324,6 +325,7 @@ class personModule extends shnModule {
         //rendering the view
         $this->columnNames = $field_list;
         $this->htmlFields = $htmlFields;
+
     }
 
     function act_delete_person() {
@@ -659,7 +661,7 @@ class personModule extends shnModule {
             $this->columnNames = $field_list;
             $this->htmlFields = $htmlFields;
             $this->biographics = $this->columnValues;
-           
+
         } else {
             $this->biographics = Browse::getBiographyList($person_id);
             $this->biographics_reverse = Browse::getBiographyListReverse($person_id);

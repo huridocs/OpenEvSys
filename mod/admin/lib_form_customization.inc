@@ -49,51 +49,7 @@ function form_customization_reset_all($entity) {
 }
 
 function form_customization_get_field_table($entity) {
-    switch ($entity) {
-        case 'person':
-            $res = Browse::getFields('person');
-            break;
-        case 'event':
-            $res = Browse::getFields('event');
-            break;
-        case 'act':
-            $res = Browse::getFields('act');
-            break;
-        case 'arrest':
-            $res = Browse::getFields('arrest');
-            break;
-        case 'killing':
-            $res = Browse::getFields('killing');
-            break;
-        case 'destruction':
-            $res = Browse::getFields('destruction');
-            break;
-        case 'torture':
-            $res = Browse::getFields('torture');
-            break;
-        case 'chain_of_events':
-            $res = Browse::getFields('chain_of_events');
-            break;
-        case 'involvement':
-            $res = Browse::getFields('involvement');
-            break;
-        case 'information':
-            $res = Browse::getFields('information');
-            break;
-        case 'intervention':
-            $res = Browse::getFields('intervention');
-            break;
-        case 'biographic_details':
-            $res = Browse::getFields('biographic_details');
-            break;
-        case 'supporting_docs_meta':
-            $res = Browse::getFields('supporting_docs_meta');
-            break;
-        case 'address':
-            $res = Browse::getFields('address');
-            break;
-    }
-    return $res;
+    return Browse::getFields($entity);
 }
 
 function form_customization_reset_field($entity, $field) {
@@ -120,7 +76,6 @@ function form_customization_process_entity_form($entity) {
     //var_dump($records);
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
     $locales = l10n_get_locals();
-
 
     foreach ($records as $record) {
         $fieldValues = array();
@@ -338,7 +293,16 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'user_select';
             break;
-         case 'line' :
+        case 'subformat':
+            $field_mysql_type = "VARCHAR(14)";
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'y';
+            $fieldValues['visible_adv_search_display'] = 'y';
+            $fieldValues['is_repeat'] = 'y';
+            $fieldValues['required'] = 'n';
+            $fieldValues['field_type'] = 'subformat';
+            break;
+        case 'line' :
             $fieldValues['visible_browse'] = 'n';
             $fieldValues['visible_adv_search'] = 'n';
             $fieldValues['visible_adv_search_display'] = 'n';
@@ -384,7 +348,34 @@ function form_customization_add_field($field_type_options) {
         if ($fieldValues['field_type'] == "location") {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
-        }if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
+        }
+        if($fieldValues['field_type'] == "subformat"){
+          $create_entity_table = "CREATE  TABLE IF NOT EXISTS  `" . $fieldValues['field_name'] . "` (
+                  `vocab_number` varchar(14) NOT NULL,
+                  PRIMARY KEY (`vocab_number`)
+                  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+          $dbQuery->ExecuteNonQuery($create_entity_table);
+
+          $create_relation_table = "CREATE  TABLE IF NOT EXISTS  `mlt_" . $fieldValues['entity'] . "_" . $fieldValues['field_name'] . "` (
+              `vocab_number` VARCHAR(14) NOT NULL ,
+              `record_number` VARCHAR(45) NOT NULL ,
+              PRIMARY KEY (`vocab_number`, `record_number`) ,
+                FOREIGN KEY (`vocab_number` )
+                REFERENCES  `" . $fieldValues['field_name'] . "` (`vocab_number` )
+                ON DELETE RESTRICT
+                ON UPDATE CASCADE,
+                FOREIGN KEY (`record_number` )
+                REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
+                ON DELETE CASCADE
+                ON UPDATE CASCADE)ENGINE = InnoDB;";
+          $dbQuery->ExecuteNonQuery($create_relation_table);
+
+          $create_entity = "INSERT INTO `gacl_axo` (`section_value`, `value`, `order_value`, `name`, `hidden`) VALUES('entities', '". $fieldValues['field_name'] . "', 15, '". $fieldValues['field_label'] . "', 0)";
+          $dbQuery->ExecuteNonQuery($create_entity);
+          $permisions = "INSERT INTO  `OpenEvSys`.`gacl_axo_map` (`acl_id` ,`section_value` ,`value`) VALUES ('19',  'entities', '". $fieldValues['field_name'] . "')";
+          $dbQuery->ExecuteNonQuery($permisions);
+        }
+        if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
             $mtIndex = new MtIndex();
             $mt_term = $mtIndex->getTermforCode($fieldValues['list_code']);
 

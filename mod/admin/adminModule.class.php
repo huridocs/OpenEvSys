@@ -1,6 +1,7 @@
 <?php
 
 include_once APPROOT . 'inc/lib_form.inc';
+include_once APPROOT . 'mod/admin/entities.php';
 include_once APPROOT . 'inc/lib_form_util.inc';
 require_once APPROOT . '3rd/yubico/Yubico.php';
 
@@ -59,7 +60,7 @@ class adminModule extends shnModule {
         }
 
         include_once APPROOT . 'mod/admin/customization_form.inc';
-        //include select entity form        
+        //include select entity form
         $this->customization_form = $customization_form;
         //if the locale is changed need to display extra column in label customization
         //if(is_locale_changed())
@@ -151,23 +152,9 @@ class adminModule extends shnModule {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
 
-        $entity_select_options = array(
-            '' => '',
-            'person' => _t('PERSON'),
-            'event' => _t('EVENT'),
-            'act' => _t('ACT'),
-            'arrest' => _t('ARREST'),
-            'destruction' => _t('DESTRUCTION'),
-            'killing' => _t('KILLING'),
-            'torture' => _t('TORTURE'),
-            'chain_of_events' => _t('CHAIN_OF_EVENT'),
-            'involvement' => _t('INVOLVEMENT'),
-            'information' => _t('INFORMATION'),
-            'intervention' => _t('INTERVENTION'),
-            'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
-            'address' => _t('ADDRESS'),
-            'supporting_docs_meta' => _t('DOCUMENT')
-        );
+        $entities = new Entities();
+        $entity_select_options = $entities->select_options();
+
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),
@@ -180,6 +167,7 @@ class adminModule extends shnModule {
             'mt_tree_multi' => _t('Multivalue Tree'),
             'mt_select' => _t('SELECT'),
             'mt_select_multi' => _t('Multivalue Select'),
+            'subformat' => _t('Subformat'),
             'line' => _t('Line'),
         );
 
@@ -230,7 +218,7 @@ class adminModule extends shnModule {
 
         include_once APPROOT . 'inc/lib_validate.inc';
         include_once APPROOT . 'inc//security/lib_auth.inc';
-        
+
         if (isset($_POST['save'])) {
 
             $valide = true;
@@ -264,7 +252,7 @@ class adminModule extends shnModule {
                 }
                 $cfg['locale'] = $locale;
                 $user->config = json_encode($cfg);
-                
+
                 $user->Save();
                 $userProfile->username = $username;
                 $userProfile->first_name = $firstName;
@@ -273,7 +261,7 @@ class adminModule extends shnModule {
                 $userProfile->designation = $designation;
                 $userProfile->email = $email;
                 $userProfile->address = $address;
-                
+
                 $userProfile->Save();
                 set_redirect_header('admin', 'user_management');
             }
@@ -329,7 +317,7 @@ class adminModule extends shnModule {
             $user->disableTSV();
 
             return true;
-        } 
+        }
 
         if($_POST['desiredMethod'] == "MGA" && isset($_POST['GACode'])) {
             $resp = $user->TSVSaveMGA($_POST['GACode']);
@@ -472,8 +460,8 @@ class adminModule extends shnModule {
                 //$userProfile->Save();
                 $userConfig = array();
                 $userConfig['locale'] = $locale;
-                
-                
+
+
                 shn_auth_add_user($username, $password1, $role, $userProfile, $status,$userConfig);
                 set_redirect_header('admin', 'user_management');
             }
@@ -525,7 +513,7 @@ class adminModule extends shnModule {
             return;
         }
 
-        //if there are multiple evets show table 
+        //if there are multiple evets show table
         $this->users = Browse::getUserListArray($_POST['users']);
     }
 
@@ -564,7 +552,7 @@ class adminModule extends shnModule {
         $_REQUEST['sub_act'] = $this->sub_act;
 
 
-        //include select entity form        
+        //include select entity form
         include_once 'lib_mt_customization.inc';
         $this->customization_form = $customization_form;
 
@@ -892,8 +880,8 @@ class adminModule extends shnModule {
         global $conf,$global;
         include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
         $this->locales = l10n_get_locals();
-        
-	
+
+
         if($results = $global['db']->GetOne("SELECT value FROM config WHERE confkey = 'locale'")) {
             $this->current_locale = $results;
         }else{
@@ -986,7 +974,7 @@ class adminModule extends shnModule {
         global $conf;
         global $global;
         global $errors;
-        //if a file is uploadded process that file 
+        //if a file is uploadded process that file
         if (is_uploaded_file($_FILES['xml']['tmp_name'])) {
             //move upload file to a temporary location
             $error = include_once('import_xml.inc');
@@ -1088,7 +1076,7 @@ class adminModule extends shnModule {
     }
 
     public function act_export_ui() {
-        
+
     }
 
     public function act_export() {
