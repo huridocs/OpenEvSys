@@ -49,11 +49,11 @@
                     <?php } ?>
                     <td align="center">
                         <?php $name = 'visible_adv_search_' . $record['field_number']; ?>
-                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if ($record['visible_adv_search'] == 'y') echo "checked='checked'"; ?> <?php if($record['field_type'] == 'user_select' || $record['field_type'] == 'line'|| $record['field_type'] == 'location')echo ' disabled="disabled"'; ?> />
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if ($record['visible_adv_search'] == 'y') echo "checked='checked'"; ?> <?php if($record['field_type'] == 'line'|| $record['field_type'] == 'location')echo ' disabled="disabled"'; ?> />
                     </td>
                     <td align="center">
                         <?php $name = 'visible_adv_search_display_' . $record['field_number']; ?>
-                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if ($record['visible_adv_search_display'] == 'y') echo "checked='checked'"; ?> <?php if($record['field_type'] == 'user_select'|| $record['field_type'] == 'line' || $record['field_type'] == 'location')echo ' disabled="disabled"'; ?> />
+                        <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if ($record['visible_adv_search_display'] == 'y') echo "checked='checked'"; ?> <?php if($record['field_type'] == 'line' || $record['field_type'] == 'location')echo ' disabled="disabled"'; ?> />
                     </td>
                     <td align="center">
                         <?php $name = 'visibility_field_' . $record['field_number']; ?>
