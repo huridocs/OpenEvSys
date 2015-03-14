@@ -32,6 +32,7 @@ include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_files.inc';
 require_once APPROOT . 'inc/ArgumentEncoder.php';
+require_once(APPROOT . 'data/Subformat.php');
 
 include_once 'messages.inc';
 
@@ -736,12 +737,20 @@ class personModule extends shnModule {
     }
 
     public function act_subformat_list() {
-      $this->subformat_entity = $_GET['subformat'];
+      $this->subformat_name = $_GET['subformat'];
     }
 
     public function act_subformat_new() {
-      $this->subformat_entity = $_GET['subformat'];
-      $this->fields = generate_formarray($_GET['subformat'], 'new', false, true);
+      $this->subformat_name = $_GET['subformat'];
+      $this->fields = generate_formarray($this->subformat_name, 'new', false, true);
+      $subformat = new Subformat($this->subformat_name, $_GET['mod']);
+      
+      if(isset($_POST['save'])){
+        $subformat->fill_from_post();
+        $subformat->save_to_entity($_GET['pid']);
+        
+        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
+      }
     }
 
     public function act_browse_biography() {

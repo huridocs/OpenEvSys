@@ -298,7 +298,7 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['visible_browse'] = 'y';
             $fieldValues['visible_adv_search'] = 'y';
             $fieldValues['visible_adv_search_display'] = 'y';
-            $fieldValues['is_repeat'] = 'y';
+            $fieldValues['is_repeat'] = 'n';
             $fieldValues['required'] = 'n';
             $fieldValues['field_type'] = 'subformat';
             break;

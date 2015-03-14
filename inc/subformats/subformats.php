@@ -10,28 +10,18 @@ class Subformats {
 
   public function create($entity_name, $subformat_name, $subformat_label){
 
-    $create_entity_table = "CREATE  TABLE IF NOT EXISTS  `" . $subformat_name . "` (
+    $create_entity_table = "CREATE  TABLE `" . $subformat_name . "` (
                             `vocab_number` MEDIUMINT NOT NULL AUTO_INCREMENT,
-                            PRIMARY KEY (`vocab_number`)
+                            `record_number` VARCHAR(45) NOT NULL ,
+                            PRIMARY KEY (`vocab_number`),
+                            FOREIGN KEY (`record_number` )
+                            REFERENCES  `" . $entity_name . "` (`" . get_primary_key($entity_name) . "` )
+                            ON DELETE CASCADE
+                            ON UPDATE CASCADE
                             ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
     $this->db->Execute($create_entity_table);
-
-    $create_relation_table = "CREATE  TABLE IF NOT EXISTS  `mlt_" . $entity_name . "_" . $subformat_name . "` (
-                    `vocab_number` MEDIUMINT NOT NULL ,
-                    `record_number` VARCHAR(45) NOT NULL ,
-                    PRIMARY KEY (`vocab_number`, `record_number`) ,
-                    FOREIGN KEY (`vocab_number` )
-                    REFERENCES  `" . $subformat_name . "` (`vocab_number` )
-                    ON DELETE RESTRICT
-                    ON UPDATE CASCADE,
-                    FOREIGN KEY (`record_number` )
-                    REFERENCES  `" . $entity_name . "` (`" . get_primary_key($entity_name) . "` )
-                    ON DELETE CASCADE
-                    ON UPDATE CASCADE)ENGINE = InnoDB;";
-    $this->db->Execute($create_relation_table);
-
+    
     $id = $this->get_last_subformat_id();
-
     $create_entity = "INSERT INTO `gacl_axo` (`id`, `section_value`, `value`, `order_value`, `name`, `hidden`)
                                                                             VALUES('". $id ."', 'subformat', '". $subformat_name . "', 15, '". $subformat_label . "', 0)";
     $this->db->Execute($create_entity);

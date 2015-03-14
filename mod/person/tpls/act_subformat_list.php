@@ -5,7 +5,7 @@
     draw_card_list('pa',$pid);
 ?>
 <div class="panel">
-<a class="btn btn-primary" href="<?php echo get_url('person','subformat_new', null, array('subformat' => $subformat_entity)) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('person','subformat_new', null, array('subformat' => $subformat_name)) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD')?></a>
 <br />
 <br />
 <?php
