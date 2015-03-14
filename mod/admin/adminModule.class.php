@@ -153,8 +153,8 @@ class adminModule extends shnModule {
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
 
         $entities = new Entities();
-        $entity_select_options = $entities->select_options();
-
+        $entity_select_options = $entities->select_options(true);
+        
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),

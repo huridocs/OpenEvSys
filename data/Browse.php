@@ -25,7 +25,7 @@
  * @author	Kethees S <ks@respere.com>
  * @author	Nilushan Silva <nilushan@respere.com>
  * @author	Mahesh K K S <jo@respere.com>>
- * 
+ *
  * @package	OpenEvsys
  * @subpackage	DataModel
  *
@@ -46,8 +46,12 @@ class Browse implements BrowseStrategy {
         $this->pager = $pager;
     }
 
-    function ExecuteQuery($qry) {
+    function ExecuteQuery($qry, $debug = false) {
         $db = $this->db;
+        if($debug) {
+          echo $qry;
+          var_dump($db);
+        }
         if (!$db)
             return false;
         $save = $db->SetFetchMode(ADODB_FETCH_ASSOC);
@@ -125,13 +129,13 @@ class Browse implements BrowseStrategy {
 
     public static function getPersonVictimRoleList($person_id) {
         global $conf;
-        $sql = "SELECT  a.act_record_number as record_number, 
-                        IFNULL(l.msgstr , v.english) as 'further_infor', 
-						a.event, 
-						e.event_title, 
-						e.initial_date, 
-						e.final_date 
-				FROM person p 
+        $sql = "SELECT  a.act_record_number as record_number,
+                        IFNULL(l.msgstr , v.english) as 'further_infor',
+						a.event,
+						e.event_title,
+						e.initial_date,
+						e.final_date
+				FROM person p
 				INNER JOIN act a ON p.person_record_number = a.victim
 				INNER JOIN event e ON e.event_record_number = a.event
 				INNER JOIN mt_vocab v ON a.type_of_act = v.vocab_number
@@ -147,12 +151,12 @@ class Browse implements BrowseStrategy {
 
     public static function getPersonSourceRoleList($person_id) {
         global $conf;
-        $sql = "SELECT  i.information_record_number as record_number, 
-                        IFNULL(l.msgstr , v.english) as 'further_infor', 
-						i.event, 
+        $sql = "SELECT  i.information_record_number as record_number,
+                        IFNULL(l.msgstr , v.english) as 'further_infor',
+						i.event,
 						e.event_title,
 						e.initial_date,
-						e.final_date 
+						e.final_date
 				FROM person p
 				INNER JOIN information i ON p.person_record_number = i.source
 				INNER JOIN event e ON e.event_record_number = i.event
@@ -169,12 +173,12 @@ class Browse implements BrowseStrategy {
 
     public static function getPersonPerpetratorRoleList($person_id) {
         global $conf;
-        $sql = "SELECT 	i.involvement_record_number as record_number, 
-                        IFNULL(l.msgstr , v.english) as 'further_infor', 
-						i.event, 
-						e.event_title, 
-						e.initial_date, 
-						e.final_date 
+        $sql = "SELECT 	i.involvement_record_number as record_number,
+                        IFNULL(l.msgstr , v.english) as 'further_infor',
+						i.event,
+						e.event_title,
+						e.initial_date,
+						e.final_date
 				FROM person p
 				INNER JOIN involvement i ON p.person_record_number = i.perpetrator
 				INNER JOIN event e ON e.event_record_number = i.event
@@ -191,16 +195,16 @@ class Browse implements BrowseStrategy {
 
     public static function getPersonInterveningPartyRoleList($person_id) {
         global $conf;
-        $sql = "SELECT 	i.intervention_record_number as record_number, 
-                        IFNULL(l.msgstr , v.english) as 'further_infor', 
-						i.event, 
-						e.event_title, 
-						e.initial_date, 
-						e.final_date 
+        $sql = "SELECT 	i.intervention_record_number as record_number,
+                        IFNULL(l.msgstr , v.english) as 'further_infor',
+						i.event,
+						e.event_title,
+						e.initial_date,
+						e.final_date
 				FROM person p
 				INNER JOIN intervention i ON p.person_record_number = i.intervening_party
 				INNER JOIN event e ON e.event_record_number = i.event
-				INNER JOIN mlt_intervention_type_of_intervention  mlt 
+				INNER JOIN mlt_intervention_type_of_intervention  mlt
 				ON mlt.record_number=i.intervention_record_number
 				INNER JOIN mt_vocab v ON mlt.vocab_number = v.vocab_number
                 LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = v.vocab_number AND l.locale = '{$conf['locale']}' )";
@@ -215,18 +219,18 @@ class Browse implements BrowseStrategy {
 
     public static function getBiographyList($person_id) {
         global $conf;
-        $sql = "SELECT 
-                    bd.biographic_details_record_number, 
-                    bd.related_person, 
-                    rp.person_name, 
-                    IFNULL(l.msgstr , mt.english) as 'relationship_type', 
-                    bd.initial_date, 
-                    bd.final_date 
+        $sql = "SELECT
+                    bd.biographic_details_record_number,
+                    bd.related_person,
+                    rp.person_name,
+                    IFNULL(l.msgstr , mt.english) as 'relationship_type',
+                    bd.initial_date,
+                    bd.final_date
 				FROM biographic_details AS bd
 				INNER JOIN person p ON bd.person = p.person_record_number
 				LEFT JOIN person rp ON bd.related_person = rp.person_record_number
 				LEFT JOIN mt_vocab mt ON bd.type_of_relationship = mt.vocab_number
-                LEFT JOIN mt_vocab_l10n l ON ( l.msgid = mt.vocab_number AND l.locale = '{$conf['locale']}' ) 
+                LEFT JOIN mt_vocab_l10n l ON ( l.msgid = mt.vocab_number AND l.locale = '{$conf['locale']}' )
 				WHERE person = '$person_id'";
 
         $browse = new Browse();
@@ -236,13 +240,13 @@ class Browse implements BrowseStrategy {
 
     public static function getBiographyListReverse($person_id) {
         global $conf;
-        $sql = "SELECT 
-                    bd.biographic_details_record_number, 
-                    bd.related_person, 
-                    rp.person_name, 
-                    bd.type_of_relationship as relationship_type, 
-                    bd.initial_date, 
-                    bd.final_date 
+        $sql = "SELECT
+                    bd.biographic_details_record_number,
+                    bd.related_person,
+                    rp.person_name,
+                    bd.type_of_relationship as relationship_type,
+                    bd.initial_date,
+                    bd.final_date
 				FROM biographic_details AS bd
 				INNER JOIN person p ON bd.related_person = p.person_record_number
 				LEFT JOIN person rp ON bd.person = rp.person_record_number
@@ -255,19 +259,19 @@ class Browse implements BrowseStrategy {
 
     public static function getRelativeInfo($person_id) {
         global $conf;
-        $sql = "SELECT 
-                    bd.biographic_details_record_number, 
-                    bd.related_person, 
-                    p.person_name, 
-                    IFNULL(l.msgstr , mt.english) AS 'relationship_type', 
-                    bd.initial_date, 
+        $sql = "SELECT
+                    bd.biographic_details_record_number,
+                    bd.related_person,
+                    p.person_name,
+                    IFNULL(l.msgstr , mt.english) AS 'relationship_type',
+                    bd.initial_date,
                     bd.final_date ,
                     bd.person
 				FROM biographic_details AS bd
 				INNER JOIN person p ON bd.person = p.person_record_number
 				LEFT JOIN person rp ON bd.related_person = rp.person_record_number
 				LEFT JOIN mt_vocab mt ON bd.type_of_relationship = mt.vocab_number
-                LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = mt.vocab_number AND l.locale = '{$conf['locale']}' ) 
+                LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = mt.vocab_number AND l.locale = '{$conf['locale']}' )
 				WHERE bd.related_person = '$person_id'";
 
         $browse = new Browse();
@@ -277,12 +281,12 @@ class Browse implements BrowseStrategy {
 
     public static function getRelativeInfoReverse($person_id) {
         global $conf;
-        $sql = "SELECT 
-                    bd.biographic_details_record_number, 
-                    bd.related_person, 
-                    p.person_name, 
-                    bd.type_of_relationship AS 'relationship_type', 
-                    bd.initial_date, 
+        $sql = "SELECT
+                    bd.biographic_details_record_number,
+                    bd.related_person,
+                    p.person_name,
+                    bd.type_of_relationship AS 'relationship_type',
+                    bd.initial_date,
                     bd.final_date ,
                     bd.person
 				FROM biographic_details AS bd
@@ -297,13 +301,13 @@ class Browse implements BrowseStrategy {
 
     public static function getBiographyListArray($biographics) {
         global $conf;
-        $sql = "SELECT 
-                    bd.biographic_details_record_number, 
-                    bd.related_person, 
-                    rp.person_name, 
-                    IFNULL(l.msgstr , mt.english) AS 'relationship_type', 
-                    bd.initial_date, 
-                    bd.final_date 
+        $sql = "SELECT
+                    bd.biographic_details_record_number,
+                    bd.related_person,
+                    rp.person_name,
+                    IFNULL(l.msgstr , mt.english) AS 'relationship_type',
+                    bd.initial_date,
+                    bd.final_date
 				FROM biographic_details AS bd
 				INNER JOIN person p ON bd.person = p.person_record_number
 				LEFT JOIN person rp ON bd.related_person = rp.person_record_number
@@ -328,18 +332,18 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getPersonVictimList($data) {
-        $sql = "SELECT DISTINCT  p.* 
-				FROM person AS p 
+        $sql = "SELECT DISTINCT  p.*
+				FROM person AS p
 				INNER JOIN act AS a ON p.person_record_number = a.victim
-				INNER JOIN involvement as i ON a.act_record_number = i.act 
-				INNER JOIN person AS p2 ON i.perpetrator = p2.person_record_number 
+				INNER JOIN involvement as i ON a.act_record_number = i.act
+				INNER JOIN person AS p2 ON i.perpetrator = p2.person_record_number
 				WHERE a.event='{$data['event_id']}'";
         $pager = new shnPager($sql);
         return $pager;
     }
 
     public static function getImportErrorLogList() {
-        $sql = "SELECT  i.* 
+        $sql = "SELECT  i.*
 				FROM import_log_report AS i ";
         $pager = new shnPager($sql);
         return $pager;
@@ -347,7 +351,7 @@ class Browse implements BrowseStrategy {
 
     public static function getUserListArray($users) {
 
-        $sql = "SELECT * , u.username as username FROM user AS u 
+        $sql = "SELECT * , u.username as username FROM user AS u
                 LEFT JOIN user_profile AS up ON u.username=up.username";
 
         $where = ' WHERE u.username IN (';
@@ -362,19 +366,19 @@ class Browse implements BrowseStrategy {
     public static function getSourceListforEvent($event = null, $person = null) {
         global $conf;
         $browse = new Browse();
-        $sql = "SELECT  i.source, 
-                        i.related_person, 
-                        i.related_event, 
-                        i.event, 
-                        i.information_record_number, 
-                        i.date_of_source_material, 
-                        p.person_name, 
+        $sql = "SELECT  i.source,
+                        i.related_person,
+                        i.related_event,
+                        i.event,
+                        i.information_record_number,
+                        i.date_of_source_material,
+                        p.person_name,
                         p.reliability_as_source,
-                        IFNULL(l.msgstr , v.english) AS 'connection' 
-                FROM event e 
-                INNER JOIN information i ON e.event_record_number = i.event 
-                INNER JOIN person p ON i.source = p.person_record_number 
-                INNER JOIN mt_vocab v ON i.source_connection_to_information = v.vocab_number 
+                        IFNULL(l.msgstr , v.english) AS 'connection'
+                FROM event e
+                INNER JOIN information i ON e.event_record_number = i.event
+                INNER JOIN person p ON i.source = p.person_record_number
+                INNER JOIN mt_vocab v ON i.source_connection_to_information = v.vocab_number
                 LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = v.vocab_number AND l.locale = '{$conf['locale']}' ) ";
 
         if ($event != null && $person != null) {
@@ -391,19 +395,19 @@ class Browse implements BrowseStrategy {
 
     public static function getSourceListArray($informations = null) {
         global $conf;
-        $sql = "SELECT  i.source, 
-                        i.related_person, 
-                        i.related_event, 
-                        i.event, 
-                        i.information_record_number, 
-                        i.date_of_source_material, 
-                        p.person_name, 
-                        p. reliability_as_source, 
-                        IFNULL(l.msgstr , v.english) AS 'connection' 
-                FROM event e 
-                INNER JOIN information i ON e.event_record_number = i.event 
-                INNER JOIN person p ON i.source = p.person_record_number 
-                INNER JOIN mt_vocab v ON i.source_connection_to_information = v.vocab_number 
+        $sql = "SELECT  i.source,
+                        i.related_person,
+                        i.related_event,
+                        i.event,
+                        i.information_record_number,
+                        i.date_of_source_material,
+                        p.person_name,
+                        p. reliability_as_source,
+                        IFNULL(l.msgstr , v.english) AS 'connection'
+                FROM event e
+                INNER JOIN information i ON e.event_record_number = i.event
+                INNER JOIN person p ON i.source = p.person_record_number
+                INNER JOIN mt_vocab v ON i.source_connection_to_information = v.vocab_number
                 LEFT  JOIN mt_vocab_l10n l ON ( l.msgid = v.vocab_number AND l.locale = '{$conf['locale']}' ) ";
 
         $where = ' WHERE i.information_record_number IN (';
@@ -426,40 +430,40 @@ class Browse implements BrowseStrategy {
     public static function getVpList($event) {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("
-        SELECT  
+        SELECT
                 (SELECT count(*) FROM involvement WHERE act = act_record_number) AS inv_count,
-                initial_date , 
+                initial_date ,
                 p.person_name AS vname ,
-                p.person_record_number AS victim_record_number, 
+                p.person_record_number AS victim_record_number,
                 a.victim ,
-                type_of_act, 
-                act_record_number, 
+                type_of_act,
+                act_record_number,
                 i.perpetrator,
-                p2.person_name AS pname, 
+                p2.person_name AS pname,
                 p2.person_record_number AS perpetrator_record_number,
                 i.involvement_record_number,
-                i.degree_of_involvement 
-        FROM act AS a 
-        INNER JOIN person AS p ON a.victim = p.person_record_number 
-        LEFT JOIN involvement as i ON a.act_record_number = i.act 
+                i.degree_of_involvement
+        FROM act AS a
+        INNER JOIN person AS p ON a.victim = p.person_record_number
+        LEFT JOIN involvement as i ON a.act_record_number = i.act
         LEFT JOIN person AS p2 ON i.perpetrator = p2.person_record_number
         WHERE a.event='$event' ORDER BY act_record_number");
         return $res;
     }
 
     public static function getVpListArray($acts) {
-        $sql = "SELECT  initial_date , 
+        $sql = "SELECT  initial_date ,
                 		p.person_name AS vname ,
                 		a.victim ,
-                		type_of_act, 
-                		act_record_number, 
+                		type_of_act,
+                		act_record_number,
                 		i.perpetrator,
-                		p2.person_name AS pname, 
+                		p2.person_name AS pname,
                 		i.involvement_record_number,
-                		i.degree_of_involvement 
-        		FROM act AS a 
-        		INNER JOIN person AS p ON a.victim = p.person_record_number 
-        		LEFT JOIN involvement as i ON a.act_record_number = i.act 
+                		i.degree_of_involvement
+        		FROM act AS a
+        		INNER JOIN person AS p ON a.victim = p.person_record_number
+        		LEFT JOIN involvement as i ON a.act_record_number = i.act
         		LEFT JOIN person AS p2 ON i.perpetrator = p2.person_record_number";
 
         $where = ' WHERE a.act_record_number IN (';
@@ -480,18 +484,18 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getVpListInvArray($invs) {
-        $sql = "SELECT  initial_date , 
+        $sql = "SELECT  initial_date ,
                 		p.person_name AS vname ,
                 		a.victim ,
-                		type_of_act, 
-                		act_record_number, 
+                		type_of_act,
+                		act_record_number,
                 		i.perpetrator,
-                		p2.person_name AS pname, 
+                		p2.person_name AS pname,
                 		i.involvement_record_number,
-                		i.degree_of_involvement 
-        		FROM act AS a 
-        		INNER JOIN person AS p ON a.victim = p.person_record_number 
-        		LEFT JOIN involvement as i ON a.act_record_number = i.act 
+                		i.degree_of_involvement
+        		FROM act AS a
+        		INNER JOIN person AS p ON a.victim = p.person_record_number
+        		LEFT JOIN involvement as i ON a.act_record_number = i.act
         		LEFT JOIN person AS p2 ON i.perpetrator = p2.person_record_number";
 
         $where = ' WHERE i.involvement_record_number IN (';
@@ -514,11 +518,11 @@ class Browse implements BrowseStrategy {
     public static function getIntvList($event) {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("
-        Select  i.date_of_intervention, 
-				ip.person_name,  
-				i.intervening_party, 
-				i.intervention_record_number 
-		From intervention  AS i 
+        Select  i.date_of_intervention,
+				ip.person_name,
+				i.intervening_party,
+				i.intervention_record_number
+		From intervention  AS i
 		LEFT JOIN person AS ip ON i.intervening_party=ip.person_record_number
         WHERE i.event='$event'");
         return $res;
@@ -527,24 +531,24 @@ class Browse implements BrowseStrategy {
     public static function getIntvTypes($intervention) {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("
-        Select  
-			    mlt.vocab_number AS type_of_intervention 
-		From intervention  AS i 
-		LEFT JOIN mlt_intervention_type_of_intervention AS mlt 
+        Select
+			    mlt.vocab_number AS type_of_intervention
+		From intervention  AS i
+		LEFT JOIN mlt_intervention_type_of_intervention AS mlt
 		ON mlt.record_number=i.intervention_record_number
         WHERE i.intervention_record_number='$intervention'");
         return $res;
     }
 
     public static function getIntvListArray($interventions) {
-        $sql = "Select  i.date_of_intervention, 
-						ip.person_name,  
-						mlt.vocab_number AS type_of_intervention, 
-						i.intervening_party, 
-						i.intervention_record_number 
-				From intervention  AS i 
+        $sql = "Select  i.date_of_intervention,
+						ip.person_name,
+						mlt.vocab_number AS type_of_intervention,
+						i.intervening_party,
+						i.intervention_record_number
+				From intervention  AS i
 				LEFT JOIN person AS ip ON i.intervening_party=ip.person_record_number
-				LEFT JOIN mlt_intervention_type_of_intervention AS mlt 
+				LEFT JOIN mlt_intervention_type_of_intervention AS mlt
 				ON mlt.record_number=i.intervention_record_number";
 
         $where = ' WHERE i.intervention_record_number IN (';
@@ -573,15 +577,15 @@ class Browse implements BrowseStrategy {
     }
        public static function getUserListAll() {
         $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,status, config FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username";
-        
+
         $browse = new Browse();
         $res = $browse->ExecuteQuery($sql);
-        return $res; 
+        return $res;
     }
      public static function getUserFullName($username) {
         $sql = "SELECT U.username, first_name, last_name, organization, designation, email, address , role ,
             status FROM user_profile AS UP RIGHT JOIN user AS U ON U.username = UP.username where U.username='".$username."'";
-        
+
         $browse = new Browse();
         $res = $browse->ExecuteQuery($sql);
         $fullname = "";
@@ -593,8 +597,8 @@ class Browse implements BrowseStrategy {
             }
             break;
         }
-        
-        return $fullname; 
+
+        return $fullname;
     }
 
     public static function getPerpetrator($id) {
@@ -606,10 +610,10 @@ class Browse implements BrowseStrategy {
     public static function getEntityFields($entity) {
         global $conf;
         $browse = new Browse();
-        $sql = "Select d.* , 
-                    IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n' 
+        $sql = "Select d.* ,
+                    IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n'
                 FROM data_dict d
-                LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' ) 
+                LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' )
                 WHERE entity = '$entity' and enabled='y' ORDER BY CAST(label_number as UNSIGNED)";
         $res = $browse->ExecuteQuery($sql);
         return $res;
@@ -618,10 +622,10 @@ class Browse implements BrowseStrategy {
     public static function getEntityLocationFields($entity) {
         global $conf;
         $browse = new Browse();
-        $sql = "Select d.* , 
-                    IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n' 
+        $sql = "Select d.* ,
+                    IFNULL(l.msgstr , d.field_label) AS 'field_label_l10n'
                 FROM data_dict d
-                LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' ) 
+                LEFT  JOIN data_dict_l10n l ON ( l.msgid = d.field_number AND l.locale = '{$conf['locale']}' )
                 WHERE entity = '$entity' and field_type='location' and enabled='y' ORDER BY field_number";
         $res = $browse->ExecuteQuery($sql);
         return $res;
@@ -629,13 +633,13 @@ class Browse implements BrowseStrategy {
 
     public static function getSecondaryEntityFields($entity, $secondary_entity) {
         global $conf;
-        $sql = " SELECT 
-                    d.*, 
-                    ss.field_option AS shuffel_search, 
-                    sr.field_option AS shuffel_search_view 
-                FROM data_dict AS d 
-                INNER JOIN sec_entity_entities AS se ON (d.entity=se.entity ) 
-                LEFT JOIN sec_entity_fields AS ss ON ( se.entity_key = ss.entity_key AND ss.field_name = d.field_name AND ss.field_option='search') 
+        $sql = " SELECT
+                    d.*,
+                    ss.field_option AS shuffel_search,
+                    sr.field_option AS shuffel_search_view
+                FROM data_dict AS d
+                INNER JOIN sec_entity_entities AS se ON (d.entity=se.entity )
+                LEFT JOIN sec_entity_fields AS ss ON ( se.entity_key = ss.entity_key AND ss.field_name = d.field_name AND ss.field_option='search')
                 LEFT JOIN sec_entity_fields AS sr ON ( se.entity_key = sr.entity_key AND sr.field_name = d.field_name AND sr.field_option='search_view')
                 WHERE d.entity='$entity' and d.enabled='y' AND se.sec_entity='$secondary_entity' ORDER BY CAST(label_number as UNSIGNED)";
         $browse = new Browse();
@@ -647,8 +651,8 @@ class Browse implements BrowseStrategy {
         $sql = "SELECT  coe.chain_of_events_record_number as coe_id,
 						coe.related_event,
 						coe.type_of_chain_of_events,
-						e.initial_date, 
-						e.event_title	
+						e.initial_date,
+						e.event_title
 				FROM chain_of_events as coe
 				INNER JOIN event as e ON e.event_record_number = coe.related_event";
 
@@ -667,8 +671,8 @@ class Browse implements BrowseStrategy {
 						coe.related_event,
                                                 coe.event,
 						coe.type_of_chain_of_events,
-						e.initial_date, 
-						e.event_title	
+						e.initial_date,
+						e.event_title
 				FROM chain_of_events as coe
 				INNER JOIN event as e ON e.event_record_number = coe.event";
 
@@ -683,7 +687,7 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getActsOfEvents($eid) {
-        $sql = "SELECT act_record_number, event, initial_date, final_date, type_of_act, exact_location 
+        $sql = "SELECT act_record_number, event, initial_date, final_date, type_of_act, exact_location
 				FROM act ";
 
         $where = " WHERE event = '$eid'";
@@ -697,7 +701,7 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getInvolvementsOfEvents($eid) {
-        $sql = "SELECT involvement_record_number, act, event, degree_of_involvement, latest_status_as_perpetrator_in_the_act, remarks 
+        $sql = "SELECT involvement_record_number, act, event, degree_of_involvement, latest_status_as_perpetrator_in_the_act, remarks
 				FROM involvement";
 
         $where = " WHERE event = '$eid'";
@@ -711,7 +715,7 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getInformationsOfEvents($eid) {
-        $sql = "SELECT information_record_number, source_connection_to_information, date_of_source_material, remarks, reliability_of_information 
+        $sql = "SELECT information_record_number, source_connection_to_information, date_of_source_material, remarks, reliability_of_information
 				FROM information";
 
         $where = " WHERE event = '$eid'";
@@ -725,7 +729,7 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getInterventionsOfEvents($eid) {
-        $sql = "SELECT intervention_record_number,impact_on_the_situation, date_of_intervention, remarks, intervention_status 
+        $sql = "SELECT intervention_record_number,impact_on_the_situation, date_of_intervention, remarks, intervention_status
 				FROM intervention";
 
         $where = " WHERE event = '$eid'";
@@ -739,9 +743,9 @@ class Browse implements BrowseStrategy {
     }
 
     public static function getEventCOE($eid) {
-        $sql = "SELECT coe.chain_of_events_record_number as coe_id, coe.event, 
-				coe.type_of_chain_of_events, e.initial_date, e.event_title 
-				FROM chain_of_events as coe 
+        $sql = "SELECT coe.chain_of_events_record_number as coe_id, coe.event,
+				coe.type_of_chain_of_events, e.initial_date, e.event_title
+				FROM chain_of_events as coe
 				INNER JOIN event as e ON e.event_record_number = coe.event";
 
         $where = " WHERE coe.related_event = '$eid'";
@@ -758,8 +762,8 @@ class Browse implements BrowseStrategy {
         $sql = "SELECT  coe.chain_of_events_record_number as coe_id,
 						coe.related_event,
 						coe.type_of_chain_of_events,
-						e.initial_date, 
-						e.event_title	
+						e.initial_date,
+						e.event_title
 				FROM chain_of_events as coe
 				INNER JOIN event as e ON e.event_record_number = coe.related_event";
 
@@ -789,30 +793,30 @@ class Browse implements BrowseStrategy {
     public static function getFields($entity) {
         global $conf;
         $browse = new Browse();
-        $sql = "SELECT 
-                    field_number, 
-                    field_label, 
-                    field_name, 
-                    field_type, 
-                    label_number, 
-                    clar_note, 
-                    enabled , 
-                    visible_new , 
-                    visible_edit , 
-                    visible_view, 
-                    visible_browse, 
-                    visible_browse_editable , 
-                    visible_search , 
-                    visible_search_display, 
+        $sql = "SELECT
+                    field_number,
+                    field_label,
+                    field_name,
+                    field_type,
+                    label_number,
+                    clar_note,
+                    enabled ,
+                    visible_new ,
+                    visible_edit ,
+                    visible_view,
+                    visible_browse,
+                    visible_browse_editable ,
+                    visible_search ,
+                    visible_search_display,
                     visible_adv_search,
                     visible_adv_search_display,
-                    required , 
-                    validation , 
+                    required ,
+                    validation ,
                     essential,
                     is_repeat,
                     l.msgstr AS field_label_l10n
-                FROM data_dict 
-                LEFT JOIN data_dict_l10n as l ON ( l.msgid = field_number AND l.locale = '{$conf['locale']}' ) 
+                FROM data_dict
+                LEFT JOIN data_dict_l10n as l ON ( l.msgid = field_number AND l.locale = '{$conf['locale']}' )
                 WHERE entity='$entity' ORDER BY CAST(label_number as UNSIGNED)";
         $res = $browse->ExecuteQuery($sql);
         return $res;
@@ -821,28 +825,28 @@ class Browse implements BrowseStrategy {
     public static function getFieldsTranslations($entity, $langorder = null) {
         global $conf;
         $browse = new Browse();
-        $sql = "SELECT 
-                    field_number, 
-                    field_label as label_en, 
-                    field_name, 
-                    field_type, 
-                    label_number, 
-                    clar_note, 
-                    enabled , 
-                    visible_new , 
-                    visible_edit , 
-                    visible_view, 
-                    visible_browse, 
-                    visible_browse_editable , 
-                    visible_search , 
-                    visible_search_display, 
-                    required , 
-                    validation , 
+        $sql = "SELECT
+                    field_number,
+                    field_label as label_en,
+                    field_name,
+                    field_type,
+                    label_number,
+                    clar_note,
+                    enabled ,
+                    visible_new ,
+                    visible_edit ,
+                    visible_view,
+                    visible_browse,
+                    visible_browse_editable ,
+                    visible_search ,
+                    visible_search_display,
+                    required ,
+                    validation ,
                     essential,
                     l.msgstr ,
                     l.locale
-                FROM data_dict 
-                LEFT JOIN data_dict_l10n as l ON  l.msgid = field_number  
+                FROM data_dict
+                LEFT JOIN data_dict_l10n as l ON  l.msgid = field_number
                 WHERE entity='$entity' ORDER BY CAST(label_number as UNSIGNED)";
         if ($langorder && is_array($langorder)) {
             $sql .= ",FIELD(l.locale,'" . implode("','", $langorder) . "')";
@@ -877,10 +881,10 @@ class Browse implements BrowseStrategy {
 
     public static function getAuditLogForEvent($event_record_number) {
         $browse = new Browse();
-        $sql = "select * from (SELECT audit_log.* FROM audit_log WHERE module='events' AND module_record_number='$event_record_number'  
-		UNION 
+        $sql = "select * from (SELECT audit_log.* FROM audit_log WHERE module='events' AND module_record_number='$event_record_number'
+		UNION
 		SELECT audit_log.* FROM audit_log
-        inner JOIN (SELECT distinct(`record_number`) FROM audit_log WHERE module='events' AND module_record_number='$event_record_number' and `entity`='person') as p 
+        inner JOIN (SELECT distinct(`record_number`) FROM audit_log WHERE module='events' AND module_record_number='$event_record_number' and `entity`='person') as p
         ON p.record_number = audit_log.record_number) t
 		ORDER BY timestamp desc";
 
@@ -901,8 +905,8 @@ class Browse implements BrowseStrategy {
     public static function getAuditLogForDocument($document_record_number) {
         $browse = new Browse();
 
-        $sql = "select * from (SELECT * FROM audit_log WHERE module='docu' AND module_record_number='$document_record_number' 
-		UNION 
+        $sql = "select * from (SELECT * FROM audit_log WHERE module='docu' AND module_record_number='$document_record_number'
+		UNION
 		SELECT * FROM audit_log WHERE (entity LIKE '%_doc' OR entity ='supporting_docs_meta') AND record_number='$document_record_number' )
                     t ORDER BY timestamp desc";
         $res = $browse->ExecuteQuery($sql);
@@ -915,12 +919,12 @@ class Browse implements BrowseStrategy {
         $browse = new Browse();
         $id = $global['db']->qstr($id);
 //        $sql = "SELECT * FROM help WHERE field_number = $id ";
-        $sql = "SELECT 
+        $sql = "SELECT
                     d.field_number ,
-                    IFNULL(dl.msgstr , d.field_label) as 'field_label', 
-                    IFNULL(hl.definition , h.definition) as 'definition', 
-                    IFNULL(hl.guidelines , h.guidelines) as 'guidelines', 
-                    IFNULL(hl.entry , h.entry) as 'entry', 
+                    IFNULL(dl.msgstr , d.field_label) as 'field_label',
+                    IFNULL(hl.definition , h.definition) as 'definition',
+                    IFNULL(hl.guidelines , h.guidelines) as 'guidelines',
+                    IFNULL(hl.entry , h.entry) as 'entry',
                     IFNULL(hl.examples , h.examples) as 'examples'
                 FROM data_dict AS d
                 LEFT JOIN help AS h ON h.field_number = d.field_number
@@ -962,9 +966,9 @@ class Browse implements BrowseStrategy {
         global $conf;
         $entity = $global['db']->qstr($entity);
         $browse = new Browse();
-        $sql = "SELECT 
-                    
-                    IFNULL(dl.msgstr , d.field_label) as 'field_label', 
+        $sql = "SELECT
+
+                    IFNULL(dl.msgstr , d.field_label) as 'field_label',
                     d.field_number,
                     h.definition as definition_en,
                     h.guidelines as guidelines_en,
@@ -977,7 +981,7 @@ class Browse implements BrowseStrategy {
                     l.locale
                 FROM data_dict AS d
                 LEFT JOIN help AS h ON d.field_number = h.field_number
-                LEFT JOIN help_l10n AS l ON d.field_number = l.field_number 
+                LEFT JOIN help_l10n AS l ON d.field_number = l.field_number
                 LEFT JOIN data_dict_l10n AS dl ON (d.field_number = dl.msgid AND dl.locale = '{$conf['locale']}' )
                 WHERE entity=$entity ORDER BY CAST(d.label_number as UNSIGNED)";
         if ($langorder && is_array($langorder)) {
@@ -1004,18 +1008,18 @@ class Browse implements BrowseStrategy {
         return $results;
     }
 
-    
+
     public static function getHuriTermsTranslations($fieldName, $langorder = null) {
         global $global,$conf;
-        
+
         if (is_numeric($fieldName)) {
             $listCode = (int) $fieldName;
         }
 
         $browse = new Browse();
-        $sql = "SELECT 
-                    vocab_number , 
-                    english AS label_en , 
+        $sql = "SELECT
+                    vocab_number ,
+                    english AS label_en ,
                     list_code ,
                     l.msgstr  ,
                     visible,
@@ -1023,8 +1027,8 @@ class Browse implements BrowseStrategy {
                     parent_vocab_number,
                     term_order,
                     term_level
-                FROM mt_vocab 
-                LEFT JOIN mt_vocab_l10n as l ON l.msgid = vocab_number  
+                FROM mt_vocab
+                LEFT JOIN mt_vocab_l10n as l ON l.msgid = vocab_number
                 WHERE TRIM(list_code)='$listCode'  ORDER BY term_order";
 
         if ($langorder && is_array($langorder)) {
@@ -1039,14 +1043,14 @@ class Browse implements BrowseStrategy {
             if ($record["locale"] != "en") {
                 $results[$record["vocab_number"]]["label_" . $record["locale"]] = $record["msgstr"];
             }
-            
+
         }
-        
+
         return $results;
     }
 
-   
-    
+
+
     public static function getHuriTermsForListArray($vocab_numbers) {
         $sql = "select * from mt_vocab";
 
@@ -1088,16 +1092,16 @@ class Browse implements BrowseStrategy {
     public static function getAllEntityFields() {
         global $conf;
         $browse = new Browse();
-        $sql = "SELECT 
+        $sql = "SELECT
                     field_number ,
                     field_name ,
-                    IFNULL(dl.msgstr , d.field_label) as 'field_label',                      
+                    IFNULL(dl.msgstr , d.field_label) as 'field_label',
                     LOWER(entity) as entity ,
                     field_type ,
                     visible_adv_search_display as in_results,
                     list_code 	,
                     d.validation
-                FROM data_dict as d 
+                FROM data_dict as d
                 LEFT JOIN data_dict_l10n AS dl ON (d.field_number = dl.msgid AND dl.locale = '{$conf['locale']}' )
                 WHERE  d.entity IS NOT NULL AND visible_adv_search = 'y' and enabled='y'  ORDER BY entity, field_number";
         $res = $browse->ExecuteQuery($sql);
@@ -1115,8 +1119,8 @@ class Browse implements BrowseStrategy {
     public static function getActs($event) {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("
-        SELECT act_record_number 
-        FROM act AS a 
+        SELECT act_record_number
+        FROM act AS a
         WHERE a.event='$event' ORDER BY act_record_number");
         return $res;
     }
@@ -1132,7 +1136,7 @@ class Browse implements BrowseStrategy {
         $browse = new Browse();
         $res = $browse->ExecuteQuery("
         SELECT chain_of_events_record_number
-        FROM chain_of_events AS c 
+        FROM chain_of_events AS c
         WHERE c.event='$event'");
         return $res;
     }

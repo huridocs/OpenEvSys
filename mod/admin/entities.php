@@ -1,25 +1,36 @@
 <?php
 
 class Entities extends ADODB_Active_Record {
-	function __construct(){
-		parent::__construct('gacl_axo');
-	}
+  function __construct(){
+    parent::__construct('gacl_axo');
+  }
 
-	public function get(){
-		$sql = "SELECT * FROM `gacl_axo` WHERE `section_value` = 'entities' AND `value` != 'document'";
-		return $this->Find("`section_value` = 'entities' AND `value` != 'document'");
-	}
+  public function get(){
+    $sql = "SELECT * FROM `gacl_axo` WHERE `section_value` = 'entities' AND `value` != 'document'";
+    return $this->Find("`section_value` = 'entities' AND `value` != 'document'");
+  }
 
-	public function select_options(){
-		$entity_select_options = array(
-			'' => ''
-		);
+  public function get_subformats(){
+    $sql = "SELECT * FROM `gacl_axo` WHERE `section_value` = 'subformat' AND `value` != 'document'";
+    return $this->Find("`section_value` = 'subformat' AND `value` != 'document'");
+  }
 
-		foreach($this->get() as $entity) {
-			$entity_name = $entity->value;
-			$entity_select_options[$entity_name] = _t(strtoupper($entity_name));
-		}
+  public function select_options($subformats = false){
+    $entities = $this->get();
 
-		return $entity_select_options;
-	}
+    if($subformats){
+      $entities = array_merge($entities, $this->get_subformats());
+    }
+
+    $entity_select_options = array(
+      '' => ''
+    );
+
+    foreach($entities as $entity) {
+      $entity_name = $entity->value;
+      $entity_select_options[$entity_name] = _t(strtoupper($entity_name));
+    }
+
+    return $entity_select_options;
+  }
 }

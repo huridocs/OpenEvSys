@@ -763,8 +763,7 @@ return false;
             "aliases" => array()),
         "edit_security" => array("level" => 0, "title" => _t('Security'), "aclmod" => "",
             "url" => get_url('home', 'edit_security', null, null, null, true), "module" => "home", "action" => "edit_security",
-            "aliases" => array()),
-        "subformats" => array("level" => 0, "url" => get_url('subformats', 'browse', null, null, null, true), "title" => _t('SUBFORMATS')),
+            "aliases" => array())
     );
     return $defaultMenuItems;
 }
@@ -806,7 +805,6 @@ function getMenus() {
                 "personsbrowse" => $defaultMenuItems["personsbrowse"],
                 "documentsbrowse" => $defaultMenuItems["documentsbrowse"],
                 "biographybrowse" => $defaultMenuItems["biographybrowse"],
-                "subformats" => $defaultMenuItems["subformats"],
                 "addnew" => $defaultMenuItems["addnew"],
                 "new_event" => $defaultMenuItems["new_event"],
                 "add_act_full"=> $defaultMenuItems["add_act_full"],
@@ -883,6 +881,7 @@ function getMenu($menu) {
     foreach ($activeMenuOrdered as $key => $menu) {
         $menuItemsNew[] = $menu;
     }
+
     $activeMenuOrdered = $menuItemsNew;
     return $activeMenuOrdered;
 }

@@ -311,7 +311,7 @@ class personModule extends shnModule {
             // Generates the view's Label list
             $htmlFields[$field_name] = $entity_fields_html[$field_name];
         }
-        
+
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
 
         $this->result_pager->setArgumentEncoder($this->argumentEncoder);
@@ -733,6 +733,15 @@ class personModule extends shnModule {
             if ($person['confidentiality'] == 'y')
                 acl_set_person_permissions($person['person_record_number']);
         }
+    }
+
+    public function act_subformat_list() {
+      $this->subformat_entity = $_GET['subformat'];
+    }
+
+    public function act_subformat_new() {
+      $this->subformat_entity = $_GET['subformat'];
+      $this->fields = generate_formarray($_GET['subformat'], 'new', false, true);
     }
 
     public function act_browse_biography() {

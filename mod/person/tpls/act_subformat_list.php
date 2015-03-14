@@ -5,11 +5,11 @@
     draw_card_list('pa',$pid);
 ?>
 <div class="panel">
-<a class="btn btn-primary" href="<?php echo get_url('person','new_address',null, null) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD_ADDRESS')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('person','subformat_new', null, array('subformat' => $subformat_entity)) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD')?></a>
 <br />
 <br />
 <?php
-	if((is_array($addresses) && count($addresses) != 0)){
+	if((is_array($list) && count($list) != 0)){
 ?>
 		<form class="form-horizontal"  action="<?php get_url('person','delete_address')?>" method="post">
 		<table class="table table-bordered table-striped table-hover">
@@ -61,33 +61,10 @@
 		</table>
 		</form>
 	<?php
-	}
-	else{
-		echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
-    	echo _t('THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_');
+	}else{
+			echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
+    	echo _t('NO_RESULTS_FOUND');
     	echo "</div>";
 	}
-	if(isset($_GET['address_id'])){
 	?>
-		<div class="form-container">
-		<br />
-		<br />
-		<?php
-			echo "<h3>" ._t('VIEW_ADDRESS') . "</h3>";
-			echo "<br />";
-		?>
-		<a class="btn" href="<?php echo get_url('person','edit_address',null,array('address_id'=>$_GET['address_id'])) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_ADDRESS')?></a>
-		<br />
-	    <br />
-	    <form class="form-horizontal"  action='<?php echo get_url('person','edit_address')?>' method='post' enctype='multipart/form-data'>
-		<?php
-	    shn_form_get_html_labels($address_form , false );
-		$fields['save'] = null;
-		?>
-		</form>
-		</div>
-	<?php
-	}
-	?>
-
 </div>

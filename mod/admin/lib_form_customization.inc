@@ -295,7 +295,7 @@ function form_customization_add_field($field_type_options) {
             break;
         case 'subformat':
             $field_mysql_type = "VARCHAR(14)";
-            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_browse'] = 'y';
             $fieldValues['visible_adv_search'] = 'y';
             $fieldValues['visible_adv_search_display'] = 'y';
             $fieldValues['is_repeat'] = 'y';
@@ -350,30 +350,9 @@ function form_customization_add_field($field_type_options) {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
         }
         if($fieldValues['field_type'] == "subformat"){
-          $create_entity_table = "CREATE  TABLE IF NOT EXISTS  `" . $fieldValues['field_name'] . "` (
-                  `vocab_number` varchar(14) NOT NULL,
-                  PRIMARY KEY (`vocab_number`)
-                  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
-          $dbQuery->ExecuteNonQuery($create_entity_table);
-
-          $create_relation_table = "CREATE  TABLE IF NOT EXISTS  `mlt_" . $fieldValues['entity'] . "_" . $fieldValues['field_name'] . "` (
-              `vocab_number` VARCHAR(14) NOT NULL ,
-              `record_number` VARCHAR(45) NOT NULL ,
-              PRIMARY KEY (`vocab_number`, `record_number`) ,
-                FOREIGN KEY (`vocab_number` )
-                REFERENCES  `" . $fieldValues['field_name'] . "` (`vocab_number` )
-                ON DELETE RESTRICT
-                ON UPDATE CASCADE,
-                FOREIGN KEY (`record_number` )
-                REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
-                ON DELETE CASCADE
-                ON UPDATE CASCADE)ENGINE = InnoDB;";
-          $dbQuery->ExecuteNonQuery($create_relation_table);
-
-          $create_entity = "INSERT INTO `gacl_axo` (`section_value`, `value`, `order_value`, `name`, `hidden`) VALUES('entities', '". $fieldValues['field_name'] . "', 15, '". $fieldValues['field_label'] . "', 0)";
-          $dbQuery->ExecuteNonQuery($create_entity);
-          $permisions = "INSERT INTO  `OpenEvSys`.`gacl_axo_map` (`acl_id` ,`section_value` ,`value`) VALUES ('19',  'entities', '". $fieldValues['field_name'] . "')";
-          $dbQuery->ExecuteNonQuery($permisions);
+          include_once(APPROOT . 'inc/subformats/subformats.php');
+          $subformats = new Subformats($dbQuery);
+          $subformats->create($fieldValues['entity'], $fieldValues['field_name'], $fieldValues['field_label']);
         }
         if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
             $mtIndex = new MtIndex();
@@ -413,7 +392,6 @@ function form_customization_add_field($field_type_options) {
         }
 
         add_field_to_data_dict($fieldValues);
-
     } catch (Exception $e) {
         var_dump($e,$sql);
         exit;
