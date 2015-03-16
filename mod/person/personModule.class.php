@@ -738,16 +738,23 @@ class personModule extends shnModule {
 
     public function act_subformat_list() {
       $this->subformat_name = $_GET['subformat'];
+      $subformat = new SubformatsModel($this->subformat_name);
+      
+      $entity_id = $_GET['pid'];
+      $this->subformats_list = $subformat->get($entity_id);
+      print_r($this->subformats_list);
     }
 
     public function act_subformat_new() {
       $this->subformat_name = $_GET['subformat'];
       $this->fields = generate_formarray($this->subformat_name, 'new', false, true);
-      $subformat = new Subformat($this->subformat_name, $_GET['mod']);
+      $subformats_model = new SubformatsModel($this->subformat_name);
       
       if(isset($_POST['save'])){
-        $subformat->fill_from_post();
-        $subformat->save_to_entity($_GET['pid']);
+        
+        $subformat = $subformats_model->fill_from_post();
+        $subformat->record_number = $_GET['pid'];
+        $subformat->save();
         
         set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
       }
