@@ -36,9 +36,13 @@ class SubformatsModel {
   }
 
 
-  public function delete($id) {
+  public function delete($ids) {
+    if(!is_array($ids)) {
+      $ids = array($ids);
+    }
+    
     $browse = new Browse();
-    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` = '$id'";
+    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` in (".implode(", ", $ids).")";
     $browse->ExecuteNonQuery($sql);
   }
 }

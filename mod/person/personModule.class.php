@@ -765,14 +765,10 @@ class personModule extends shnModule {
       $subformats_model = new SubformatsModel($this->subformat_name);
       
       if(isset($_POST['yes'])) {
-        foreach ($_POST['delete_subformats'] as $subformat_id){
-          $subformats_model->delete($subformat_id);
-        }
-        
+        $subformats_model->delete($_POST['delete_subformats']);
         set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
       }
       
-      $entity_id = $_GET['pid'];
       $this->subformats_list = $subformats_model->get_by_id($_POST['delete_subformats']);
     }
 
