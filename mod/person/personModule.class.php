@@ -32,7 +32,7 @@ include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_files.inc';
 require_once APPROOT . 'inc/ArgumentEncoder.php';
-require_once(APPROOT . 'data/Subformat.php');
+require_once(APPROOT . 'inc/subformats/SubformatsModel.php');
 
 include_once 'messages.inc';
 
@@ -737,12 +737,12 @@ class personModule extends shnModule {
     }
 
     public function act_subformat_list() {
+      
       $this->subformat_name = $_GET['subformat'];
       $subformat = new SubformatsModel($this->subformat_name);
       
       $entity_id = $_GET['pid'];
       $this->subformats_list = $subformat->get($entity_id);
-      print_r($this->subformats_list);
     }
 
     public function act_subformat_new() {
@@ -758,6 +758,22 @@ class personModule extends shnModule {
         
         set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
       }
+    }
+    
+    public function act_subformat_delete(){
+      $this->subformat_name = $_GET['subformat'];
+      $subformats_model = new SubformatsModel($this->subformat_name);
+      
+      if(isset($_POST['yes'])) {
+        foreach ($_POST['delete_subformats'] as $subformat_id){
+          $subformats_model->delete($subformat_id);
+        }
+        
+        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
+      }
+      
+      $entity_id = $_GET['pid'];
+      $this->subformats_list = $subformats_model->get_by_id($_POST['delete_subformats']);
     }
 
     public function act_browse_biography() {

@@ -1,13 +1,10 @@
 <?php
 
-class SubformatsModel extends ADODB_Active_Record{
+class SubformatsModel {
 
   private $subformat_name;
 
   public function __construct($subformat_name) {
-    global $global;
-    $this->db = $global['db'];
-    
     $this->subformat_name = $subformat_name;
   }
  
@@ -23,9 +20,26 @@ class SubformatsModel extends ADODB_Active_Record{
   }
   
   public function get($entity_id){
-    $sql = "SELECT * FROM $this->subformat_name WHERE `record_number` = '$entity_id'";
     $browse = new Browse();
+    $sql = "SELECT * FROM $this->subformat_name WHERE `record_number` = '$entity_id'";
     return $browse->ExecuteQuery($sql);
+  }
+  
+  public function get_by_id($ids) {
+    if(!is_array($ids)) {
+      $ids = array($ids);
+    }
+    
+    $browse = new Browse();
+    $sql = "SELECT * FROM $this->subformat_name WHERE `vocab_number` in (".implode(", ", $ids).")";
+    return $browse->ExecuteQuery($sql);
+  }
+
+
+  public function delete($id) {
+    $browse = new Browse();
+    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` = '$id'";
+    $browse->ExecuteNonQuery($sql);
   }
 }
 

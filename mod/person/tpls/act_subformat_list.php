@@ -8,12 +8,12 @@
 <?php
   if((is_array($subformats_list) && count($subformats_list) != 0)){
 ?>
-    <form class="form-horizontal"  action="<?php get_url('person','delete_address')?>" method="post">
+    <form class="form-horizontal"  action="<?php get_url('person','subformat_delete', null, array('subformat' => $subformat_name))?>" method="post">
     <table class="table table-bordered table-striped table-hover">
       <thead>
         <tr>
           <th width='16px'>
-            <input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' />
+            <input type='checkbox' onchange='$("input.delete").attr("checked", this.checked)' />
           </th>
           <?php
               $count = 0;
@@ -36,7 +36,7 @@
         ?>
             <tr class="<?php echo $odd ?>">
               <td width='16px'>
-              <input type='checkbox' onchange='$("input.delete").attr("checked",this.checked)' />
+                <input name="delete_subformats[]" type='checkbox' value='<?php echo $subformat['vocab_number'] ?>' class='delete'/>
               </td>
               <?php
               foreach($subformat as $property => $value){
@@ -62,9 +62,9 @@
         </form>
 	<?php
 	}else{
-			echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
-    	echo _t('NO_RESULTS_FOUND');
-    	echo "</div>";
+          echo '<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>';
+            echo _t('NO_RESULTS_FOUND');
+          echo "</div>";
 	}
 	?>
 </div>
