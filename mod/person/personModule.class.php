@@ -737,10 +737,10 @@ class personModule extends shnModule {
     }
 
     public function act_subformat_list() {
-      
+
       $this->subformat_name = $_GET['subformat'];
       $subformat = new SubformatsModel($this->subformat_name);
-      
+
       $entity_id = $_GET['pid'];
       $this->subformats_list = $subformat->get($entity_id);
     }
@@ -749,26 +749,52 @@ class personModule extends shnModule {
       $this->subformat_name = $_GET['subformat'];
       $this->fields = generate_formarray($this->subformat_name, 'new', false, true);
       $subformats_model = new SubformatsModel($this->subformat_name);
-      
+
       if(isset($_POST['save'])){
-        
+
         $subformat = $subformats_model->fill_from_post();
         $subformat->record_number = $_GET['pid'];
         $subformat->save();
-        
+
         set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
       }
     }
-    
+
+    public function act_subformat_edit() {
+      $this->subformat_name = $_GET['subformat'];
+      $this->subid = $_GET['subid'];
+
+      $subformats_model = new SubformatsModel($this->subformat_name);
+
+      if(isset($_POST['save'])){
+
+        $subformat = $subformats_model->fill_from_post();
+        $subformat->record_number = $_GET['pid'];
+        $subformat->vocab_number = $_GET['subid'];
+
+        $subformat->Update();
+
+        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
+      }
+
+
+      $this->fields = generate_formarray($this->subformat_name, 'edit', false, true);
+      $data = $subformats_model->get_by_id($_GET['subid'])[0];
+
+      foreach($data as $key => $value){
+        $this->fields[$key]['extra_opts']['value'] = $value;
+      }
+    }
+
     public function act_subformat_delete(){
       $this->subformat_name = $_GET['subformat'];
       $subformats_model = new SubformatsModel($this->subformat_name);
-      
+
       if(isset($_POST['yes'])) {
         $subformats_model->delete($_POST['delete_subformats']);
         set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
       }
-      
+
       $this->subformats_list = $subformats_model->get_by_id($_POST['delete_subformats']);
     }
 
