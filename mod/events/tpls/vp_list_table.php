@@ -88,7 +88,7 @@
         $('#add_perp_btn').click(function(){
             var count = $('.delete_act:checked').length;
             if(count > 0){
-                $('#acts_form').attr('action','<?php echo get_url('events', 'add_perpetrator', null, array('eid' => $event_id)) ?>');
+                $('#acts_form').attr('action','<?php echo str_replace("&amp;","&",get_url('events', 'add_perpetrator', null, array('eid' => $event_id),null ,true)) ?>');
                 $('#acts_form').submit();
             }else{
                 $('#errordiv').show();
