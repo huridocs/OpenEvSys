@@ -2,6 +2,7 @@
 
 include_once APPROOT . 'inc/lib_entity_forms.inc';
 require_once APPROOT . 'inc/ArgumentEncoder.php';
+require_once APPROOT . 'inc/subformats/subformats.php';
 include_once 'lib_analysis.inc';
 
 /**
@@ -35,10 +36,10 @@ class analysisModule extends shnModule {
     public function createArgumentEncoder() {
         $whiteList = Array(
             'request_page', 'rpp', 'save_query_record_number', 'name',
-            'description', 'created_date', 'created_by', 'query_type', 'sq', 
+            'description', 'created_date', 'created_by', 'query_type', 'sq',
             'filter', 'sort', 'sortorder'
         );
-        
+
         $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
@@ -78,7 +79,7 @@ class analysisModule extends shnModule {
         if ($fields[$address_index] != null) {
             $this->address_form = address_form('search');
             formArrayRefine($this->address_form);
-            $this->address_form['person_addresses'] = array('type' => 'hidden', 'extra_opts' => array('value' => 'enabled')); //added to be used when creating sql to inform that there is address in search	
+            $this->address_form['person_addresses'] = array('type' => 'hidden', 'extra_opts' => array('value' => 'enabled')); //added to be used when creating sql to inform that there is address in search
             $this->address_fields = shn_form_get_html_fields($this->address_form);
         }
     }
@@ -658,7 +659,7 @@ class analysisModule extends shnModule {
         $dataArray = array_map('addslashes_deep', $dataArray);
 
         $sqlArray = array('select' => array(), 'from' => null,
-            'join' => array(), //array('table'=>null , 'jointype'=>null , 'field1'=>null, 'field2' =>null  , 'as'=>null )  
+            'join' => array(), //array('table'=>null , 'jointype'=>null , 'field1'=>null, 'field2' =>null  , 'as'=>null )
             'where' => array(), 'orderby' => array(), 'groupby' => array());
 
         $sqlStatement = "SELECT * FROM $entity_type";
@@ -750,7 +751,7 @@ class analysisModule extends shnModule {
             }
 
             if ($field['map']['mlt'] == true && $field['type'] != "user_select") {
-                $isMLTpresent = true;   // this is only mlt present in VIEW, could have been searched too 
+                $isMLTpresent = true;   // this is only mlt present in VIEW, could have been searched too
                 $mtJoinArray = $this->generateMtJoin($field, $dataArray, $field_name, $sqlArray);
                 $mtJoins['select'] .= " , " . $mtJoinArray['select'];
                 if ($this->isInSearchArray($entity_type_form, $field_name) == false || is_array($dataArray[$field_name]) == false) {
@@ -780,7 +781,7 @@ class analysisModule extends shnModule {
         $sqlStatement = substr_replace($sqlStatement, $mtJoins['select'], 9, 0);
         //var_dump($sqlStatement);
         //echo $sqlStatement;
-        // GROUP BY 
+        // GROUP BY
         //if($isMLTpresent == true){
         $pkField = get_primary_key($this->tableOfEntity($entity_type));
 
@@ -826,7 +827,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         //var_dump($sqlArray);
         $sqlStatement = $this->sqlArrayToSql($entity_type, $sqlArray);
-        //echo $sqlStatement;	
+        //echo $sqlStatement;
         return $sqlStatement;
     }
 
@@ -884,7 +885,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $this->relatedEventOrPersonSearch($dataArray, $sqlArray);
 
         $sqlArray['join'][] = array('table' => 'management', 'jointype' => 'LEFT', 'field1' => 'entity_id', 'field2' => get_primary_key($entity_type), 'as' => null, 'condition' => " AND entity_type ='$entity_type' ");
-        $managementJoin = ' LEFT JOIN management on entity_id=' . get_primary_key($entity_type) . " AND entity_type ='$entity_type' "; //$entity_type . '_record_number ';     	
+        $managementJoin = ' LEFT JOIN management on entity_id=' . get_primary_key($entity_type) . " AND entity_type ='$entity_type' "; //$entity_type . '_record_number ';
 
         if ($where != null || $mtJoins['where'] != null) {
             $sqlStatement = $managementJoin . $mtJoins['join'] . $shuffleJoin . ' WHERE ' . $where . ($mtJoins['where'] != null && trim($mtJoins['where'] && $where != null) != '' ? 'AND' : null ) . $mtJoins['where'];
@@ -1033,8 +1034,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 foreach ($mtValues as $value) {
 //var_dump('mt_mlt' , $mtValues);
                     $dataArray['__temp_mt'] = null;                     // THIS IS A HACK.THIS is a manupilation of data so taht teh function can generate results.
-                    $dataArray['__temp_mt'] = $value;                   //    
-                    $field['map']['field'] = $mltTable . '.vocab_number'; // SHOULD be FIXED 
+                    $dataArray['__temp_mt'] = $value;                   //
+                    $field['map']['field'] = $mltTable . '.vocab_number'; // SHOULD be FIXED
                     $this->generateCondition($field, $dataArray, '__temp_mt', $sqlArray);
 
 
@@ -1076,7 +1077,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             $joinSql .= " INNER JOIN $join[2] ON $join[0].$join[1]=$join[2].$join[3] ";
         }
-        //$sqlArray['select'][] = $this->tableOfEntity($final_entity).'.* ' ; // change to handle sec entities 
+        //$sqlArray['select'][] = $this->tableOfEntity($final_entity).'.* ' ; // change to handle sec entities
         return $joinSql;
     }
 
@@ -1201,7 +1202,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
 
-        //convert json query to an object 
+        //convert json query to an object
         $query = json_decode($_GET['query']);
 
         //build the select field array
@@ -1436,17 +1437,70 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             'killing' => array('involvement', 'victim', 'perpetrator'),
             'destruction' => array('involvement', 'victim', 'perpetrator'));
 
-
-        /* $entities = array('event', 'act' ,'victim' ,'involvement' ,'perpetrator','information',
-          'source' ,'intervention','intervening_party' ,'supporting_docs_meta',
-          'person', 'biographic_details','address', 'chain_of_events', 'arrest','torture','killing',
-          'destruction'); */
         $entities = array('event', 'act', 'person', 'victim', 'perpetrator',
             'source', 'intervention');
         $this->entities = $entities;
         $this->entities_map = $entities_map;
 
         $this->domaindata = $this->getEntityFields();
+    }
+
+    public function act_entity_relations(){
+      $entity_relations = [
+        'event'=> ['act','victim','perpetrator','involvement','intervention','information','source','chain_of_events'],
+        'act'  => ['involvement','victim','perpetrator', 'arrest','torture','killing','destruction'],
+        'victim' => ['involvement','perpetrator'],
+        'involvement'  => ['perpetrator'],
+        'perpetrator'=> [],
+        'information'=> ['source'],
+        'source' => [],
+        'intervention'=> ['intervening_party','victim'],
+        'intervening_party' => [],
+        'supporting_docs_meta'=>[],
+        'person'=>['address','biographic_details'],
+        'biographic_details'=>[],
+        'address'=> [],
+        'chain_of_events'=>[],
+        'arrest'=>['involvement','victim','perpetrator'],
+        'torture'=>['involvement','victim','perpetrator'],
+        'killing'=>['involvement','victim','perpetrator'],
+        'destruction'=> ['involvement','victim','perpetrator']
+      ];
+
+
+      $subformats_array = [];
+      foreach((new Subformats())->get_all() as $subformat){
+        $subformats_array[] = $subformat['value'];
+      };
+
+      global $global;
+      $db = $global['db'];
+
+      $dbname = $db->database;
+      $subformats = "('" . implode("', '", $subformats_array) . "')";
+
+      $sql = "SELECT
+              `TABLE_NAME`,
+              `COLUMN_NAME`,
+              `REFERENCED_TABLE_NAME`,
+              `REFERENCED_COLUMN_NAME`
+              FROM `information_schema`.`KEY_COLUMN_USAGE`
+              WHERE `CONSTRAINT_SCHEMA` = '$dbname' AND
+              `REFERENCED_TABLE_SCHEMA` IS NOT NULL AND
+              `REFERENCED_TABLE_NAME` IS NOT NULL AND
+              `REFERENCED_COLUMN_NAME` IS NOT NULL AND
+              `TABLE_NAME` IN $subformats";
+
+      $browse = new Browse();
+      $subformat_relations = $browse->ExecuteQuery($sql);
+
+      foreach($subformat_relations as $relation){
+        $entity_relations[$relation['REFERENCED_TABLE_NAME']][] = $relation['TABLE_NAME'];
+        $entity_relations[$relation['TABLE_NAME']] = [];
+      }
+
+      echo json_encode($entity_relations);
+      exit();
     }
 
     public function act_facetsearchresults() {
@@ -1631,7 +1685,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $records[0] = $fieldTitles;
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
-            
+
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
             try {
@@ -1805,7 +1859,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         $f = $entity . "_" . $fieldArray['map']['field'];
 
                         $sqlchart = "SELECT IFNULL(l.msgstr , english) as val, COUNT(d.{$selEntityOriginal}_$recField) AS count,m.vocab_number as vocab_number
-                            FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$entity}_$recFieldEnt and t.entity_type='$entity' 
+                            FROM ({$sqlArray['result']}) d LEFT JOIN management t  on t.entity_id=d.{$entity}_$recFieldEnt and t.entity_type='$entity'
                             left join  mt_vocab m on m.vocab_number=t.{$fieldArray['map']['field']}
                             LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )  GROUP BY $f
                             ";

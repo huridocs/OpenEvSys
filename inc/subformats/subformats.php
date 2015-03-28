@@ -20,7 +20,7 @@ class Subformats {
                             ON UPDATE CASCADE
                             ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
     $this->db->Execute($create_entity_table);
-    
+
     $id = $this->get_last_subformat_id();
     $create_entity = "INSERT INTO `gacl_axo` (`id`, `section_value`, `value`, `order_value`, `name`, `hidden`)
                                                                             VALUES('". $id ."', 'subformat', '". $subformat_name . "', 15, '". $subformat_label . "', 0)";
@@ -28,6 +28,12 @@ class Subformats {
 
     $permisions = "INSERT INTO `gacl_axo_map` (`acl_id` ,`section_value` ,`value`) VALUES ('19',  'subformat', '". $subformat_name . "')";
     $this->db->Execute($permisions);
+  }
+
+  public function get_all(){
+    $sql = "SELECT * FROM `gacl_axo` WHERE `section_value` = 'subformat'";
+    $browse = new Browse();
+    return $browse->ExecuteQuery($sql);
   }
 
 

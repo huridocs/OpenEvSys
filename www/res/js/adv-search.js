@@ -39,8 +39,8 @@ $.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
 
 /* Bootstrap style pagination control */
 $.extend( $.fn.dataTableExt.oPagination, {
-    "bootstrap": {
-        "fnInit": function( oSettings, nPaging, fnDraw ) {
+    bootstrap: {
+        fnInit: function( oSettings, nPaging, fnDraw ) {
             var oLang = oSettings.oLanguage.oPaginate;
             var fnClickHandler = function ( e ) {
                 e.preventDefault();
@@ -57,14 +57,14 @@ $.extend( $.fn.dataTableExt.oPagination, {
                 );
             var els = $('a', nPaging);
             $(els[0]).bind( 'click.DT', {
-                action: "previous"
+                action: 'previous'
             }, fnClickHandler );
             $(els[1]).bind( 'click.DT', {
-                action: "next"
+                action: 'next'
             }, fnClickHandler );
         },
 
-        "fnUpdate": function ( oSettings, fnDraw ) {
+        fnUpdate: function ( oSettings, fnDraw ) {
             var iListLength = 5;
             var oPaging = oSettings.oInstance.fnPagingInfo();
             var an = oSettings.aanFeatures.p;
@@ -189,6 +189,10 @@ function openevsysDomain()
         'destruction':['involvement','victim','perpetrator']
     }
 
+    $.getJSON("index.php?mod=analysis&act=entity_relations",function(relations){
+      this.er = relations;
+    }.bind(this));
+
     this.setSelectField = function(entity, field){
         try{
             if(this.data[entity].ac_type != null)
@@ -301,14 +305,18 @@ function openevsysDomain()
             if(this.data[entity].ac_type != null)
                 entity = this.data[entity].ac_type;
         }catch(e){}
-        var fields = this.data[entity].fields;
+
+
         if(this.data[entity].select != null)
             return this.data[entity].select;
+
         var arr = new Array();
+        var fields = this.data[entity].fields;
         for(var i in fields){
             if(fields[i].select == 'y')
                 arr.push(fields[i].value);
         }
+
         this.data[entity].select = arr;
         return arr;
     }
@@ -493,7 +501,7 @@ function openevsysDomain()
         }
         return o;
     }
-}/*}}}*/
+}
 
 /*{{{ Group by class */
 groupBy.getInstance = function(){
@@ -1492,65 +1500,6 @@ function advSearch(){
             backLink: false,
             callerOnState: ''
         });
-    /*
-        *  //console.log(this.query.select[0].entity);
-        var select = $("<select id=\"\" name=\"\" class=\"addfieldselect\" multiple=\"multiple\"  />");
-        /*$("<option />", {
-            value:  "",
-            text: ""
-        }).appendTo(select);*/
-
-    /*for(var count=0;entities.length > count;count++)
-        {
-            var fields = obj.getEntityFields(entities[count]);
-            var optGroup  = $("<optGroup />", {
-                label:  obj.getEntityLabel(entities[count])
-            });
-            for(var key in fields)
-            {
-                //console.log(key);
-                for(countIn = 0;this.query.select.length > countIn; countIn++)
-                {
-
-                    if(this.query.select[countIn].entity == entities[count] && this.query.select[countIn].field ==fields[key].value)
-                    {
-
-                        fieldSet = 1;
-                        break;
-                    }
-                    else
-                    {
-
-                        fieldSet = 0;
-                    }
-                }
-                if(fieldSet != 1)
-                {
-                    var option =  $("<option />", {
-                        value:  key,
-                        text: fields[key].label
-                    })
-                    option.data('field',key);
-                    option.data('entity',entities[count]);
-                    option.appendTo(optGroup);
-                    //list += "<li><a href='#' data-field='"+key+"' data-entity='"+entities[count]+"'>"+fields[key].label+"</a></li>";
-                    fieldSet = 0;
-                }
-
-            }
-            optGroup.appendTo(select);
-
-
-        }
-
-        $("#addfieldselectbox").append(select);
-        select.select2({
-            width: 'resolve',
-            closeOnSelect:false,
-            placeholder: _('ADD_FIELDS_TO_SEARCH_RESULTS'),
-            allowClear:false
-        });*/
-
     }
 
 
@@ -1705,6 +1654,7 @@ function advSearch(){
             var domain = openevsysDomain.getInstance();
             domain.fetchDomainData(advSearch.initObjects);
         });
+
         this.query_builder = queryBuilder.getInstance();
         this.group_by = groupBy.getInstance();
         this.group_by.init();
@@ -1759,7 +1709,7 @@ function advSearch(){
 
 
 }
-/*}}}*/
+
 
 var registerDate = null;
 var namenumber = 0;
