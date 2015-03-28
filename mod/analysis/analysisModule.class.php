@@ -818,7 +818,6 @@ class analysisModule extends shnModule {
         //} SORT END
         //NotIn
         if (is_array($notIn)) {
-
             $sqlArray['where'][] = " $pkOfEntity NOT IN( '" . implode("','", $notIn) . "')";
         }if ($notIn == 'allowed_records') {
             $sqlArray['where'][] = " $pkOfEntity NOT IN( SELECT id FROM (SELECT * from allowed_records GROUP BY id

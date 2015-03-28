@@ -104,7 +104,7 @@ class EntityRelations{
 		if($currentEntity == null && $end!=true){ // if not found,  try the other way around
 			$end = true;
 			$pathArray = $this->getEntitiesForPath($entityDestination , $entitySource);
-//var_dump('pathArray' , $pathArray);
+
 			$reverse = true;
 			if(count($pathArray) > 0){
 				return array_reverse( $pathArray) ;
@@ -113,7 +113,6 @@ class EntityRelations{
 			}
 
 		}else{
-			//$pathArray[] = $entitySource;
 			while( $currentEntity != null ){
 				foreach($currentEntity as $pathEntity){
 					if($pathEntity['to'] == $entityDestination ){
@@ -124,7 +123,6 @@ class EntityRelations{
 					}
 				}
 			}
-//var_dump('pathArray' , $pathArray);
 			if(count($pathArray) > 0){
 				return $pathArray;
 			}else{
