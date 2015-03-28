@@ -304,27 +304,51 @@ function get_table_for_entity($entity) {
 }
 
 function get_primary_key($entity) {
+  switch ($entity) {
+        case 'event':
+            return "event_record_number";
+        case 'person':
+            return "person_record_number";
+        case 'act':
+            return "act_record_number";
+        case 'victim':
+            return "person_record_number";
+        case 'perpetrator':
+            return "person_record_number";
+        case 'source':
+            return "person_record_number";
+        case 'intervening_party':
+            return "person_record_number";
+        case 'supporting_docs_meta':
+        case 'supporting_docs':
+            return "doc_id";
+        default:
+            return search_primary_key();
+        }
 
-    $browse = new Browse();
-    $sql = "SELECT KU.table_name as tablename,column_name as primary_key
-            FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC
-            INNER JOIN
-            INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU
-            ON TC.CONSTRAINT_TYPE = 'PRIMARY KEY' AND
-            TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME
-            GROUP BY KU.TABLE_NAME";
+}
 
-    $primary_keys = $browse->ExecuteQuery($sql);
+function search_primary_key(){
+  $browse = new Browse();
+  $sql = "SELECT KU.table_name as tablename,column_name as primary_key
+          FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC
+          INNER JOIN
+          INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU
+          ON TC.CONSTRAINT_TYPE = 'PRIMARY KEY' AND
+          TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME
+          GROUP BY KU.TABLE_NAME";
 
-    $primary_key = $entity . "_record_number";
+  $primary_keys = $browse->ExecuteQuery($sql);
 
-    foreach($primary_keys as $table){
-      if($entity == $table['tablename']){
-        $primary_key = $table['primary_key'];
-      }
+  $primary_key = $entity . "_record_number";
+
+  foreach($primary_keys as $table){
+    if($entity == $table['tablename']){
+      $primary_key = $table['primary_key'];
     }
-    
-    return $primary_key;
+  }
+
+  return $primary_key;
 }
 
 function get_mod_label($entity, $type = "single") {
