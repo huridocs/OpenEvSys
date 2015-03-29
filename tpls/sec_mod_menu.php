@@ -198,11 +198,23 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     }
 
     global $global;
+    global $conf;
+    $locale = $conf['locale'];
     $sql = "SELECT * FROM data_dict WHERE field_type = 'subformat' AND entity = '" . $module . "'";
-    global $global;
-    $db = $global['db'];
-    $subformats = $db->GetAll($sql);
+    $browse = new Browse();
+
+    $subformats = $browse->ExecuteQuery($sql);
     foreach($subformats as $subformat) {
+
+      $field_number = $subformat['field_number'];
+      $sql = "SELECT msgstr FROM data_dict_l10n WHERE msgid = $field_number AND locale = '$locale'";
+      $l10n = $browse->ExecuteQuery($sql);
+      $title = $subformat['field_label'];
+
+      if(!is_null($l10n)){
+        $title = $l10n[0]['msgstr'];
+      }
+
       $urlParams = array_merge(array(), $_GET);
       unset($urlParams['mod']);
       unset($urlParams['act']);
@@ -210,7 +222,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
       $menuItem  = array(
                             'id' => $subformat['field_number'],
                             'url' => get_url($module, 'subformat_list', null, $urlParams, null, true),
-                            'title' => $subformat['field_label'],
+                            'title' => $title,
                             'module' => $module,
                             'action' => 'subformat',
                             'aclmod' => $module,
@@ -277,37 +289,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
         <?php
     }
 }
-/*
-  if ($module != "admin" && $action != "browse" && !in_array($action, array("browse_act", "browse_intervention", "browse_biography"))) {
-  ?>
-  <ul class="nav nav-tabs tabnav">
-  <?php
-  foreach ($menus[$module] as $menuSec => $menu) {
 
-  $active = false;
-  $title = $menu["title"];
-  $url = $menu["url"];
-  if ($action == $menuSec || (isset($menus[$module][$action]) && isset($menus[$module][$action]["alias"]) && $menus[$module][$action]["alias"] == $menuSec)) {
-  if ($url) {
-  $active = true;
-  } else {
-  continue;
-  }
-  }
-  if (!$url) {
-  continue;
-  }
-  ?>
-  <li class="<?php if ($active) echo "active" ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
-  </li>
-  <?php
-  }
-  ?>
-
-  </ul>
-  <?php
-  }
- */
 ?>
 
 
