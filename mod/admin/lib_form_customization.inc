@@ -295,9 +295,12 @@ function form_customization_add_field($field_type_options) {
             break;
         case 'subformat':
             $field_mysql_type = "VARCHAR(14)";
-            $fieldValues['visible_browse'] = 'y';
-            $fieldValues['visible_adv_search'] = 'y';
-            $fieldValues['visible_adv_search_display'] = 'y';
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_browse_display'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            $fieldvalues['visible_edit'] = 'n';
+            $fieldvalues['visible_new'] = 'n';
             $fieldValues['is_repeat'] = 'n';
             $fieldValues['required'] = 'n';
             $fieldValues['field_type'] = 'subformat';
