@@ -36,6 +36,29 @@ class Subformats {
     return $browse->ExecuteQuery($sql);
   }
 
+  public function l10n($subformat){
+    global $conf;
+    $locale = $conf['locale'];
+
+    $sql = "SELECT field_label, field_number FROM data_dict WHERE field_name = '$subformat'";
+    $browse = new Browse();
+    $field = $browse->ExecuteQuery($sql)[0];
+
+    $result = $field['field_label'];
+
+    if($locale != 'en'){
+      $field_number = $field['field_number'];
+      $sql = "SELECT msgstr FROM data_dict_l10n WHERE msgid = $field_number AND locale = '$locale'";
+      $l10n = $browse->ExecuteQuery($sql);
+
+      if(!is_null($l10n)){
+        $result = $l10n[0]['msgstr'];
+      }
+    }
+
+    return $result;
+  }
+
 
   protected function get_last_subformat_id(){
     $id = 0;

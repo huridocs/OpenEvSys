@@ -99,7 +99,7 @@ function analysis_get_search_entities()
           'desc'=>_t(strtoupper($name))
       );
     }
-    
+
     return $search_entities;
 }
 
@@ -142,13 +142,18 @@ function analysis_get_advance_search_entities(){
         'desc'=>_t('CHAIN_OF_EVENTS')
     );
 
-    $subformats = (new Subformats())->get_all();
-    foreach($subformats as $subformat){
+
+    $subformats = new Subformats();
+    foreach($subformats->get_all() as $subformat){
+
+
       $name = $subformat['value'];
+      $title = $subformats->l10n($name);
+
       $entities[$name]= array(
           'type'=>$name,
-          'title'=>_t(strtoupper($name)),
-          'desc'=>_t(strtoupper($name))
+          'title'=>$title,
+          'desc'=>$title
       );
     }
 
