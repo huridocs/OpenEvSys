@@ -21,11 +21,11 @@ class homeModule extends shnModule {
     }
 
     function act_save() {
-        
+
     }
 
     function act_my_pref() {
-        
+
     }
 
     public function act_edit_user() {
@@ -81,7 +81,7 @@ class homeModule extends shnModule {
 
                 $user= new User();
                 $user = UserHelper::loadFromUsername($username) ;
-                //$user->loadUserProfile(); 
+                //$user->loadUserProfile();
                 //$user->role = $role;
                 //$user->status =  $status;
                 $cfg = array();
@@ -90,7 +90,7 @@ class homeModule extends shnModule {
                 }
                 $cfg['locale'] = $locale;
                 $user->config = json_encode($cfg);
-                
+
                 $user->Save();
 
                 $userProfile = UserProfileHelper::loadFromUsername($username);
@@ -207,7 +207,7 @@ class homeModule extends shnModule {
             $user->disableTSV();
 
             return true;
-        } 
+        }
 
         if($_POST['desiredMethod'] == "MGA" && isset($_POST['GACode'])) {
             $resp = $user->TSVSaveMGA($_POST['GACode']);
@@ -343,7 +343,7 @@ class homeModule extends shnModule {
         $gacl_api->add_object('entities', 'Chain Of Events', 'chain_of_events', 8, 0, 'AXO');
         $gacl_api->add_object('entities', 'Biographic Details', 'biographic_details', 9, 0, 'AXO');
 
-        // Add Groups 
+        // Add Groups
 
         $gacl_api->add_group_object($g_entities_primary, 'entities', 'event', 'AXO');
         $gacl_api->add_group_object($g_entities_primary, 'entities', 'person', 'AXO');
@@ -402,7 +402,14 @@ class homeModule extends shnModule {
     }
 
     function act_mt_select() {
-        $micro_thesauri = new MicroThesauri($_GET['list_code']);
+        $list_code = $_GET['list_code'];
+        if($list_code == '0'){
+          $sql = "SELECT username as label, username as vocab_number FROM user";
+          $this->terms = (new Browse())->ExecuteQuery($sql);
+          return;
+        }
+
+        $micro_thesauri = new MicroThesauri($list_code);
         $this->terms = $micro_thesauri->getTerms();
     }
 
