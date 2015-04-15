@@ -27,8 +27,8 @@
  * @subpackage	DataModel
  *
  */
-include_once(APPROOT.'3rd/php-google-map-api/GoogleMap.php');
-include_once(APPROOT.'3rd/php-google-map-api/JSMin.php');
+include_once(APPROOT . '3rd/php-google-map-api/GoogleMap.php');
+include_once(APPROOT . '3rd/php-google-map-api/JSMin.php');
 
 class Map {
 
@@ -38,13 +38,23 @@ class Map {
 
     public static function geocode($address = NULL) {
         if ($address) {
- 
+            $coordinates = self::checkAndGetCoordinates($address);
+            if ($coordinates) {
+                $geocodes = array(
+                    'country' => '',
+                    'location_name' => '',
+                    'latitude' => $coordinates['lat'],
+                    'longitude' => $coordinates['lng']
+                );
+
+                return $geocodes;
+            }
             $map_object = new GoogleMapAPI();
             $map_object->setLookupService("GOOGLE");
-            $geocodes_full  = $map_object->geoGetCoordsFull($address);
+            $geocodes_full = $map_object->geoGetCoordsFull($address);
 
             // Verify that the request succeeded
-            if (!isset($geocodes_full ->status))
+            if (!isset($geocodes_full->status))
                 return FALSE;
             if ($geocodes_full->status != 'OK')
                 return FALSE;
@@ -79,6 +89,16 @@ class Map {
         } else {
             return FALSE;
         }
+    }
+
+    function checkAndGetCoordinates($address) {
+
+        preg_match_all("/-?\d+[\.]\d+/", $address, $coordinates, PREG_SET_ORDER);
+
+        if (isset($coordinates[0][0]) && isset($coordinates[1][0])) {
+            return array('lat' => $coordinates[0][0], 'lng' => $coordinates[1][0]);
+        }
+        return false;
     }
 
 }

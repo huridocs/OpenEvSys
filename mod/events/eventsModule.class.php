@@ -175,13 +175,12 @@ class eventsModule extends shnModule {
         $this->columnValues = set_links_in_recordset($this->columnValues, 'event');
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
 
-        $sanitizedValues = [];
+        /*$sanitizedValues = [];
         foreach($this->columnValues[0] as $columnName => $columnValue) {
           $sanitizedValues[$columnName] = Reform::HtmlEncode($columnValue);
         }
 
-        $this->columnValues[0] = $sanitizedValues;
-
+        $this->columnValues[0] = $sanitizedValues;*/
         //rendering the view
         $this->columnNames = $field_list;
         $this->htmlFields = $htmlFields;
@@ -773,7 +772,6 @@ class eventsModule extends shnModule {
             $acts = $_SESSION['acts'];
         }
         $_SESSION['acts'] = $acts;
-
         if (!$acts) {
             set_redirect_header('events', 'vp_list');
         }

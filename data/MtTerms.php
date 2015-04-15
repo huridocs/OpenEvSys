@@ -122,12 +122,13 @@ class MtTerms extends ADODB_Active_Record{
     }
 
     public function LoadfromVocabNumber($vocab_number){
+        $vocab_number = mysql_real_escape_string($value);
         $this->Load("vocab_number = '$vocab_number'");
         $db = $this->DB(); if (!$db) return false;
         global $conf;
         $sql = "SELECT IFNULL(l.msgstr , m.english) as 'label' FROM mt_vocab m 
                 LEFT JOIN mt_vocab_l10n l ON ( l.msgid = m.vocab_number AND l.locale = '{$conf['locale']}' )
-                WHERE m.vocab_number = '{$this->vocab_number}'";
+                WHERE m.vocab_number = '".mysql_real_escape_string($this->vocab_number)."'";
         $this->label = $db->GetOne($sql);
     }
 }
