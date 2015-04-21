@@ -323,12 +323,12 @@ function get_primary_key($entity) {
         case 'supporting_docs':
             return "doc_id";
         default:
-            return search_primary_key();
+            return search_primary_key($entity);
         }
 
 }
 
-function search_primary_key(){
+function search_primary_key($entity){
   $browse = new Browse();
   $sql = "SELECT KU.table_name as tablename,column_name as primary_key
           FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC
