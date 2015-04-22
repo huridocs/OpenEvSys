@@ -219,7 +219,7 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
                 }
             }
         }
-        if (in_array($viewType, array("new", "edit", "all"))) {
+        if (in_array($viewType, array("new", "edit", "all","view"))) {
             $browse = new Browse();
             $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
             $visibility_fields = $browse->ExecuteQuery($sql);
@@ -872,6 +872,7 @@ function shn_form_get_html_labels($form, $return = true) {
             if ($options['map']['link_table'] != null) {
                 $options['extra_opts']['value'] .= '<b>' . '  :  ' . loadLinkName($options['map']['link_table'], $options['map']['link_field'], $options['extra_opts']['value']) . '</b>';
             }
+            $options['extra_opts']['field_number'] = $options['field_number'];
 
             $controler = $options['type'];
             $controler = 'shn_view_' . $controler;
