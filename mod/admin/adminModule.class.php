@@ -111,7 +111,7 @@ class adminModule extends shnModule {
                 $fields_form = generate_formarray($this->entity_select, "new");
                 $fields_form2 = array();
                 foreach ($fields_form as $k => $f) {
-                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select') {
+                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select'  || $f['type'] == 'radio') {
                         $fields_form2[$k] = $f;
                     }
                 }
@@ -123,7 +123,7 @@ class adminModule extends shnModule {
                 $field_numbers = array();
                 foreach ($res as $record) {
                     if ($record['enabled'] == 'y' && $record['visible_new'] == 'y' &&
-                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select')) {
+                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select' || $record['field_type'] == 'radio')) {
                         $fields[$record['field_number']] = $record;
                     }
                     $field_numbers[] = $record['field_number'];

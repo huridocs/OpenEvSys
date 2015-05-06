@@ -658,6 +658,54 @@ function shn_form_radio($label, $name, $extra_opts) {
             shn_form_clari($name, $clari_value);
         }
         shn_form_extra_opts($extra_opts);
+        if ($extra_opts['visibility_field']) {
+            $visibility_field = $extra_opts['visibility_field'];var_dump($visibility_field);exit;
+            $values = $value;
+            if (!is_array($value)) {
+                $values = array($value);
+            }
+            ?>
+            <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    <?php
+                    foreach ($visibility_field as $v => $f) {
+
+                        if (in_array($v, $values)) {
+                            foreach ($f as $field) {
+                                echo "$('#" . $field . "_group').hide();";
+                            }
+                        }
+                    }
+                    ?>
+                    $("#<?php echo $name ?>").on("change", function(event) {
+                        var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                        val = $(this).val()
+                        values = val;
+                        if(!$.isArray(val)){
+                            values = new Array(val);
+                        }
+                        for(val2 in visibility_fields){
+
+                            if($.inArray(val2,values)<0){
+                                for(i in visibility_fields[val2]){
+                                    $("#"+visibility_fields[val2][i]+"_group").show();
+                                }
+                            }
+                        }
+                        for(j in values){
+                            val = values[j]
+
+                            if(visibility_fields.hasOwnProperty(val)){
+                                for(i in visibility_fields[val]){
+                                    $("#"+visibility_fields[val][i]+"_group").hide();
+                                }
+                            }
+                        }
+                    });
+                });
+            </script>
+        <?php }
+
         ?>
     </div>
     <?php
