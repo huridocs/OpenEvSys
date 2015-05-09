@@ -659,7 +659,7 @@ function shn_form_radio($label, $name, $extra_opts) {
         }
         shn_form_extra_opts($extra_opts);
         if ($extra_opts['visibility_field']) {
-            $visibility_field = $extra_opts['visibility_field'];var_dump($visibility_field);exit;
+            $visibility_field = $extra_opts['visibility_field'];
             $values = $value;
             if (!is_array($value)) {
                 $values = array($value);
@@ -677,7 +677,7 @@ function shn_form_radio($label, $name, $extra_opts) {
                         }
                     }
                     ?>
-                    $("#<?php echo $name ?>").on("change", function(event) {
+                    $("input[type=radio][name=<?php echo $name ?>]").on("change", function(event) {
                         var visibility_fields = <?php echo json_encode($visibility_field) ?>;
                         val = $(this).val()
                         values = val;

@@ -333,6 +333,29 @@ function shn_view_radio($label,$value,$extra_opts)
     </tr>
 
 <?php
+    if ($extra_opts['visibility_field']) {
+        $visibility_field = $extra_opts['visibility_field'];
+        $values = $extra_opts['value'];
+        if (!is_array($values)) {
+            $values = array($values);
+        }
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                <?php
+                foreach ($visibility_field as $v => $f) {
+
+                    if (in_array($v, $values)) {
+                        foreach ($f as $field) {
+                            echo "$('#" . $field . "_group').hide();";
+                        }
+                    }
+                }
+                ?>
+            });
+        </script>
+    <?php
+    }
 }
 
 function shn_view_checkbox($label,$value,$extra_opts)
