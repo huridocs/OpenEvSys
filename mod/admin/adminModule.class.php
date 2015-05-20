@@ -129,7 +129,6 @@ class adminModule extends shnModule {
                     $field_numbers[] = $record['field_number'];
                 }
                 $this->fields_for_hide = $fields;
-
                 $browse = new Browse();
                 $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
