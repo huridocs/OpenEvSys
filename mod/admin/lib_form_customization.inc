@@ -325,6 +325,7 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['list_code'] = (int) $_POST['list_code'];
             break;
         case 'mt_select_multi':
+            $field_mysql_type = "VARCHAR(14)";
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'mt_select';
             $fieldValues['list_code'] = (int) $_POST['list_code'];
@@ -333,6 +334,7 @@ function form_customization_add_field($field_type_options) {
             $field_mysql_type = "VARCHAR(14)";
             break;
         case 'user_select_multi':
+            $field_mysql_type = "VARCHAR(14)";
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'user_select';
             break;
