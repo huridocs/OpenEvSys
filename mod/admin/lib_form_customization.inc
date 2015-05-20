@@ -372,13 +372,11 @@ function form_customization_add_field($field_type_options) {
     if (!$validated) {
         return false;
     }
-    $sql = "INSERT INTO data_dict (`" . implode("`,`", array_keys($fieldValues)) . "`) values('" . implode("','", $fieldValues) . "')";
+    
 
-
-    //add field to Data Dict
+    
     $dbQuery = new Browse();
     try {
-        $dbQuery->ExecuteNonQuery($sql);
 
         if ($fieldValues['field_type'] == "location") {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
@@ -419,11 +417,19 @@ function form_customization_add_field($field_type_options) {
         } elseif($fieldValues['field_type'] != "line") {
             $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "` $field_mysql_type ");
         }
+
+        add_field_to_data_dict($fieldValues);
     } catch (Exception $e) {
         var_dump($e,$sql);exit;
         return false;
     }
     return true;
+}
+
+function add_field_to_data_dict($fieldValues){
+    $dbQuery = new Browse();
+    $sql = "INSERT INTO data_dict (`" . implode("`,`", array_keys($fieldValues)) . "`) values('" . implode("','", $fieldValues) . "')";
+    $dbQuery->ExecuteNonQuery($sql);
 }
 
 function form_customization_field_name_exists($field_name, $entity) {
