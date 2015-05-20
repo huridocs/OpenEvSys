@@ -46,7 +46,7 @@ class MtIndex extends ADODB_Active_Record{
         if(!$ok )
             return null;
         else
-            return $this->term;
+            return trim($this->term);
     }
     public function getCodeforTerm($term){
         $ok = $this->Load("term='$term'");
