@@ -742,7 +742,12 @@ class ADODB_Active_Record {
 
 		foreach($table->flds as $name=>$fld) {
 			$val = $this->$name;
-			if(!is_array($val) || !is_null($val) || !array_key_exists($name, $table->keys)) {
+
+			if(is_array($val)) {
+				continue;
+			}
+
+			if(!is_null($val) || !array_key_exists($name, $table->keys)) {
 				$valarr[] = $val;
 				$names[] = $this->_QName($name,$db);
 				$valstr[] = $db->Param($cnt);
