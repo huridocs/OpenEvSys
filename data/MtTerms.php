@@ -122,7 +122,7 @@ class MtTerms extends ADODB_Active_Record{
     }
 
     public function LoadfromVocabNumber($vocab_number){
-        $vocab_number = mysql_real_escape_string($value);
+        $vocab_number = mysql_real_escape_string($vocab_number);
         $this->Load("vocab_number = '$vocab_number'");
         $db = $this->DB(); if (!$db) return false;
         global $conf;
