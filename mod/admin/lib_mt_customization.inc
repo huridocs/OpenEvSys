@@ -235,6 +235,7 @@ function mt_customization_add_new_taxonomy() {
         $dbQuery->ExecuteNonQuery($list_sql);
 
     } catch (Exception $e) {
+        print_r($e);
         error_log("----------------------------",0);
         error_log("                            ",0);
         error_log("MSG:".$e->getMessage(), 0);
