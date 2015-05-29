@@ -122,14 +122,11 @@ function form_customization_process_entity_form($entity) {
     $locales = l10n_get_locals();
 
 
-
     foreach ($records as $record) {
         $fieldValues = array();
         $l10nValues = array();
         $recordNumber = $record['field_number'];
-
-        if (isset($_POST['label'])) {
-
+        if (isset($_POST['label_' . $recordNumber])) {
             //dont let the lable be empty
             if (isset($_POST['label_' . $recordNumber]) && is_array($_POST['label_' . $recordNumber])) {
                 $labels = $_POST['label_' . $recordNumber];
@@ -137,9 +134,12 @@ function form_customization_process_entity_form($entity) {
                     if (!trim($labels[$code])) {
                         continue;
                     }
+
                     if ($code == "en" && isset($labels["en"])) {
                         $fieldValues['field_label'] = $labels["en"];
-                    } elseif (isset($labels[$code])) {
+                    }
+
+                    if (isset($labels[$code])) {
                         $l10nValues['msgstr'] = $global['db']->qstr($labels[$code]);
                         $l10nValues['msgid'] = "'{$recordNumber}'";
                         $l10nValues['locale'] = "'{$code}'";

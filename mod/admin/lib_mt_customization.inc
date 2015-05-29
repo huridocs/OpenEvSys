@@ -29,6 +29,8 @@ function mt_customization_update() {
             }
 
             if (is_array($labels)) {
+                
+
                 $vocab_number = $global['db']->qstr($vocab_number);
                 foreach ($locales as $code => $loc) {
                     if (!trim($labels[$code])) {
@@ -39,7 +41,9 @@ function mt_customization_update() {
                     if ($code == "en" && isset($labels["en"])) {
                         $sql = "UPDATE mt_vocab SET english=$msgstr WHERE vocab_number = $vocab_number ";
                         $res = $global['db']->Execute($sql);
-                    } elseif (isset($labels[$code])) {
+                    }
+
+                    if (isset($labels[$code])) {
                         $l10nValues = array();
                         $l10nValues['msgid'] = $vocab_number;
                         $l10nValues['msgstr'] = $msgstr;
