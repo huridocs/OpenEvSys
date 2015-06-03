@@ -296,7 +296,6 @@ function form_customization_add_field($field_type_options) {
         case 'subformat':
             $field_mysql_type = "VARCHAR(14)";
             $fieldValues['visible_browse'] = 'n';
-            $fieldValues['visible_browse_display'] = 'n';
             $fieldValues['visible_adv_search'] = 'n';
             $fieldValues['visible_adv_search_display'] = 'n';
             $fieldvalues['visible_edit'] = 'n';
