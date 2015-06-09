@@ -43,7 +43,7 @@ function shn_view_text($label,$value,$extra_opts)
     <tr <?php echo $class ?> id="<?php echo $extra_opts['field_number'] ?>_group">
         <td class='title' align='right'><?php echo $label ?></td>
         <td class='text'>
-            <span><?php echo htmlspecialchars($value); ?></span>
+            <span><?php echo makeLinksClickable(htmlspecialchars($value)); ?></span>
             <?php if(isset($clari)){ ?>
             <p class='clarify_note'><em><?php echo _t('CLARIFYING_NOTE')?><span><?php echo ' : '.$clari  ?></span></em><p>
             <?php } ?>
@@ -85,9 +85,9 @@ function shn_view_text($label,$value,$extra_opts)
         <td class='title' align='right'><?php echo $label ?></td>
         <td class='text'>
             <?php 
-                $p = explode("\n",htmlspecialchars($value)); 
+                $p = explode("\n",makeLinksClickable(htmlspecialchars($value)));
                 foreach( $p as $para)
-                    echo "<p>$para</p>"; 
+                    echo "<p>$para</p>";
             ?>
             <?php if(isset($clari)){ ?>
             <p class='clarify_note'><em><?php echo _t('CLARIFYING_NOTE')?><span><?php echo ' : '.$clari  ?></span></em><p>

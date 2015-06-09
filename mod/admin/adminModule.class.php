@@ -151,24 +151,8 @@ class adminModule extends shnModule {
     public function act_new_field() {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
+        $entity_select_options = array_merge(array('' => ''),getActiveFormats());
 
-        $entity_select_options = array(
-            '' => '',
-            'person' => _t('PERSON'),
-            'event' => _t('EVENT'),
-            'act' => _t('ACT'),
-            'arrest' => _t('ARREST'),
-            'destruction' => _t('DESTRUCTION'),
-            'killing' => _t('KILLING'),
-            'torture' => _t('TORTURE'),
-            'chain_of_events' => _t('CHAIN_OF_EVENT'),
-            'involvement' => _t('INVOLVEMENT'),
-            'information' => _t('INFORMATION'),
-            'intervention' => _t('INTERVENTION'),
-            'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
-            'address' => _t('ADDRESS'),
-            'supporting_docs_meta' => _t('DOCUMENT')
-        );
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),

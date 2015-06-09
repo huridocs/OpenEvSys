@@ -78,25 +78,35 @@
                     <?php if ($record['essential'] != 'y') { ?>
 
                         <?php $name = 'visibility_field_' . $record['field_number']; ?>
-                        <select name="<?php echo $name ?>" id="<?php echo $name ?>"
-                                data-fieldnumber="<?php echo $record['field_number'] ?>" class="select fieldforhide">
-                            <option value=""></option>
-                            <?php
-                            $i = 0;
+                        <div id="<?php echo $name ?>_container">
+                            <div id="<?php echo $name ?>_field_container">
+                                <select name="<?php echo $name ?>" id="<?php echo $name ?>"
+                                        data-fieldnumber="<?php echo $record['field_number'] ?>"
+                                        class="select fieldforhide">
+                                    <option value=""></option>
+                                    <?php
+                                    $i = 0;
 
-                            foreach ($fields_for_hide as $field) {
-                                if($record['field_name'] == $field['field_name']){
-                                    continue;
-                                }
-                                ?>
-                                <option data-fieldname="<?php echo $field['field_name'] ?>"
-                                        value="<?php echo $field['field_number'] ?>"><?php echo $field['field_label'] ?></option>
-                                <?php
-                                $i++;
-                            }
-                            ?>
-                        </select>
-                        <div id="<?php echo $name ?>_box"></div>
+                                    foreach ($fields_for_hide as $field) {
+                                        if ($record['field_name'] == $field['field_name']) {
+                                            continue;
+                                        }
+                                        ?>
+                                        <option data-fieldname="<?php echo $field['field_name'] ?>"
+                                                value="<?php echo $field['field_number'] ?>"><?php echo $field['field_label'] ?></option>
+                                        <?php
+                                        $i++;
+                                    }
+                                    ?>
+                                </select>
+
+                                <div class="fbox"></div>
+                            </div>
+
+                        </div>
+                        <!--<button type="button" class="btn visibility_field_add_condition"><i
+                                class="icon-plus icon-white"></i> Add New Condition
+                        </button>-->
                     <?php } ?>
                 </td>
             </tr>
@@ -120,28 +130,38 @@
 
 <script type="text/javascript">
     <?php
+    $fieldsArray = array();
+    foreach ($fields_for_hide as $field) {
+        $fieldsArray[ $field['field_number']] = $field['field_name'];
+    }
+
     $php_array = array();
     foreach($visibility_fields as $vfield){
-            $php_array[$vfield['field_number']][$vfield['field_number2']][] = $vfield['value'];
+        $php_array[$vfield['field_number']][$vfield['field_number2']][] = $vfield['value'];
         
     }
     ?>
+
+    var fields_names = <?php echo json_encode($fieldsArray) ?>;
+
     var visibility_fields = <?php echo json_encode($php_array) ?>;
     //console.log(visibility_fields);
     jQuery(document).ready(function ($) {
 
         $(".fieldforhide").on("change", function (event) {
-            var field_number = $('#' + event.target.id).data('fieldnumber')
-            var field_number2 = $('#' + event.target.id + ' option:selected').val();
+
+            var field_number = $(event.target).data('fieldnumber')
+            var field_number2 = $(event.target).val();
             var fieldname = event.target.name;
-
-            var sel = $('select[name="' + $('#' + event.target.id + ' option:selected').data('fieldname') + '"]');
-            $('#' + fieldname + '_box').html('')
+            var fieldname2 = fields_names[field_number2];
+            var sel = $('select[name="' + fieldname2 + '"]');
+            var box = $(event.target).siblings('div.fbox');
+            console.log(box)
+            box.html('');
             if (sel.length) {
-                var clone = $('select[name="' + $('#' + event.target.id + ' option:selected').data('fieldname') + '"]').clone();
+                var clone = $('select[name="' +fieldname2 + '"]').clone();
             } else {
-                var clone = $('select[name="' + $('#' + event.target.id + ' option:selected').data('fieldname') + '[]"]').clone();
-
+                var clone = $('select[name="' + fieldname2 + '[]"]').clone();
             }
             clone.attr('multiple', 'multiple');
             clone.attr('name', fieldname + "_vals[]");
@@ -152,8 +172,7 @@
                 var vals = visibility_fields[field_number][field_number2];
                 clone.val(vals);
             }
-            clone.appendTo('#' + fieldname + '_box');
-
+            clone.appendTo(box);
             clone.select2({
                 width: 'resolve',
                 allowClear: true,
@@ -165,7 +184,6 @@
         foreach($php_array as $field_number=>$v){
             foreach($v as $field_number2=>$val){
             $n = "visibility_field_".$field_number;
-            //echo "$('#".$n."').val('$field_number2')";
             echo "$('#".$n."').val( '$field_number2' ).attr('selected',true);";
             echo "$('#".$n."').val( '$field_number2' ).change();";
             
