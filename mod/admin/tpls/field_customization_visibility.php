@@ -4,13 +4,35 @@
         <?php
         $fields = shn_form_get_html_fields($fields_form);
         foreach ($fields_form as $fieldName => $field) {
-            if ($field["type"] == "mt_tree" || $field["type"] == "mt_select") {
-                echo $fields[$fieldName];
-            } elseif ($field["type"] == "radio") {
-                $options = (isset($field['extra_opts']['options'])) ? $field['extra_opts']['options'] : array('y' => 'Yes', 'n' => 'No');
+            if ($field["type"] == "mt_select" || $field["type"] == "mt_tree") {
+
+                $data_array = MtFieldWrapper::getMTList($field['map']['mt']);
+                $size = count($data_array);
+                $options = array();
+                for ($i = 0; $i < $size; $i++) {
+                    $options[$data_array[$i]['vocab_number']] = $data_array[$i]['label'];
+                }
+
                 ?>
-                <select class="mt_select input-large" title="<?php echo $fieldName ?>" name="<?php echo $fieldName ?>"
-                        id="<?php echo $fieldName ?>">
+                <select class="mt_select input-large" name=""
+                        id="fieldOptionsTemplate_<?php echo $field['field_number'] ?>"
+                        multiple="multiple">
+                    <?php
+                    foreach ($options as $opt_value => $desc) { ?>
+                        <option value="<?php echo $opt_value ?>"><?php echo $desc ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            <?php
+            } elseif ($field["type"] == "radio") {
+                $options = (isset($field['extra_opts']['options'])) ? $field['extra_opts']['options'] : array(
+                    'y' => 'Yes',
+                    'n' => 'No'
+                );
+                ?>
+                <select class="mt_select input-large" name=""
+                        id="fieldOptionsTemplate_<?php echo $field['field_number'] ?>">
                     <?php
                     foreach ($options as $opt_value => $desc) {
                         ?>
@@ -23,6 +45,24 @@
             }
         }
         ?>
+        <select name="" id="fieldSelectorTemplate"
+                data-fieldnumber=""
+                class="select fieldforhide">
+            <option value=""></option>
+            <?php
+            $i = 0;
+
+            foreach ($fields_for_hide as $field) {
+                ?>
+                <option value="<?php echo $field['field_number'] ?>"><?php echo $field['field_label'] ?></option>
+                <?php
+                $i++;
+            }
+            ?>
+        </select>
+        <button id="removeButtonTemplate" type='button' class='btn btn-grey removeCondition '><i
+                class="icon-trash"></i> <?php echo _t('REMOVE') ?></button>
+
     </div>
     <table class='table table-bordered table-striped table-hover'>
         <thead>
@@ -49,64 +89,62 @@
                 <td align="center">
                     <?php $name = 'visible_new_' . $record['field_number']; ?>
                     <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>"
-                           value='y' <?php if ($record['visible_new'] == 'y') echo "checked='checked'"; ?> <?php echo($record['essential'] == 'y' ? ' disabled="disabled"' : null) ?> />
+                           value='y' <?php if ($record['visible_new'] == 'y') {
+                        echo "checked='checked'";
+                    } ?> <?php echo($record['essential'] == 'y' ? ' disabled="disabled"' : null) ?> />
                 </td>
                 <td align="center">
                     <?php $name = 'visible_view_' . $record['field_number']; ?>
                     <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>"
-                           value='y' <?php if ($record['visible_view'] == 'y') echo "checked='checked'"; ?> />
+                           value='y' <?php if ($record['visible_view'] == 'y') {
+                        echo "checked='checked'";
+                    } ?> />
                 </td>
 
                 <?php if ($browse_needed) { ?>
                     <td align="center">
                         <?php $name = 'visible_browse_' . $record['field_number']; ?>
                         <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>"
-                               value='y' <?php if ($record['visible_browse'] == 'y' || $record['visible_browse'] == 'Y') echo "checked='checked'"; ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') echo ' disabled="disabled"'; ?> />
+                               value='y' <?php if ($record['visible_browse'] == 'y' || $record['visible_browse'] == 'Y') {
+                            echo "checked='checked'";
+                        } ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') {
+                            echo ' disabled="disabled"';
+                        } ?> />
                     </td>
                 <?php } ?>
                 <td align="center">
                     <?php $name = 'visible_adv_search_' . $record['field_number']; ?>
                     <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>"
-                           value='y' <?php if ($record['visible_adv_search'] == 'y') echo "checked='checked'"; ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') echo ' disabled="disabled"'; ?> />
+                           value='y' <?php if ($record['visible_adv_search'] == 'y') {
+                        echo "checked='checked'";
+                    } ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') {
+                        echo ' disabled="disabled"';
+                    } ?> />
                 </td>
                 <td align="center">
                     <?php $name = 'visible_adv_search_display_' . $record['field_number']; ?>
                     <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>"
-                           value='y' <?php if ($record['visible_adv_search_display'] == 'y') echo "checked='checked'"; ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') echo ' disabled="disabled"'; ?> />
+                           value='y' <?php if ($record['visible_adv_search_display'] == 'y') {
+                        echo "checked='checked'";
+                    } ?> <?php if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') {
+                        echo ' disabled="disabled"';
+                    } ?> />
                 </td>
                 <td align="center">
                     <?php if ($record['essential'] != 'y') { ?>
 
                         <?php $name = 'visibility_field_' . $record['field_number']; ?>
-                        <div id="<?php echo $name ?>_container">
-                            <div id="<?php echo $name ?>_field_container">
-                                <select name="<?php echo $name ?>" id="<?php echo $name ?>"
-                                        data-fieldnumber="<?php echo $record['field_number'] ?>"
-                                        class="select fieldforhide">
-                                    <option value=""></option>
-                                    <?php
-                                    $i = 0;
+                        <div>
+                            <button class="btn addnewcondition" type="button" id="addnewcondition_btn_<?php echo $record['field_number'] ?>"
+                                    data-fieldnumber="<?php echo $record['field_number'] ?>">
+                                <i class="icon-plus"></i> <?php echo _t('Add new Condition') ?></button>
+                            <br/>
 
-                                    foreach ($fields_for_hide as $field) {
-                                        if ($record['field_name'] == $field['field_name']) {
-                                            continue;
-                                        }
-                                        ?>
-                                        <option data-fieldname="<?php echo $field['field_name'] ?>"
-                                                value="<?php echo $field['field_number'] ?>"><?php echo $field['field_label'] ?></option>
-                                        <?php
-                                        $i++;
-                                    }
-                                    ?>
-                                </select>
+                            <div id="<?php echo $name ?>_fields_container">
 
-                                <div class="fbox"></div>
                             </div>
-
                         </div>
-                        <!--<button type="button" class="btn visibility_field_add_condition"><i
-                                class="icon-plus icon-white"></i> Add New Condition
-                        </button>-->
+
                     <?php } ?>
                 </td>
             </tr>
@@ -130,64 +168,102 @@
 
 <script type="text/javascript">
     <?php
-    $fieldsArray = array();
-    foreach ($fields_for_hide as $field) {
-        $fieldsArray[ $field['field_number']] = $field['field_name'];
-    }
 
     $php_array = array();
     foreach($visibility_fields as $vfield){
         $php_array[$vfield['field_number']][$vfield['field_number2']][] = $vfield['value'];
-        
     }
     ?>
-
-    var fields_names = <?php echo json_encode($fieldsArray) ?>;
+    var conditionIndex = 0;
 
     var visibility_fields = <?php echo json_encode($php_array) ?>;
     //console.log(visibility_fields);
     jQuery(document).ready(function ($) {
+        $(".removeCondition").on("click", removeCondition);
+        function removeCondition(event) {
+            var field_container = $(event.target).closest("div.field_container");
+            field_container.remove();
+        }
 
-        $(".fieldforhide").on("change", function (event) {
+        $(".addnewcondition").on("click", function (event) {
+            var fieldSelector = $('select#fieldSelectorTemplate').clone();
+            var fieldNumber = $(event.target).data('fieldnumber');
+            fieldSelector.attr('data-fieldnumber', fieldNumber);
+            conditionIndex++;
+            fieldSelector.attr('data-condition-index', conditionIndex);
+            fieldSelector.attr('name', "visibility_field_" + fieldNumber + "["+conditionIndex+"]");
+            fieldSelector.attr('id',"visibility_field_" + fieldNumber + "_"+conditionIndex);
+            fieldSelector.show();
+            var fields_container = $('#visibility_field_' + fieldNumber + '_fields_container');
+            var field_container = $(document.createElement('div'));
+            field_container.addClass('field_container');
+            field_container.appendTo(fields_container);
+            fieldSelector.appendTo(field_container);
 
-            var field_number = $(event.target).data('fieldnumber')
-            var field_number2 = $(event.target).val();
-            var fieldname = event.target.name;
-            var fieldname2 = fields_names[field_number2];
-            var sel = $('select[name="' + fieldname2 + '"]');
-            var box = $(event.target).siblings('div.fbox');
-            console.log(box)
+            var field_box = $(document.createElement('div'));
+            field_box.addClass('field_box');
+            field_box.appendTo(field_container);
+
+            var remove_btn = $('#removeButtonTemplate').clone();
+            remove_btn.attr('id','');
+            remove_btn.appendTo(field_container);
+
+            fieldSelector.select2({
+                width: 'resolve',
+                allowClear: true,
+                closeOnSelect: false,
+                placeholder: _("SELECT")
+            });
+
+            $(".fieldforhide").on("change", fieldForHideChange);
+            $(".removeCondition").on("click", removeCondition);
+        });
+
+        function fieldForHideChange(event) {
+            var fieldNumber = $(event.target).data('fieldnumber');
+            var conditionIndex = $(event.target).data('condition-index');
+            var optionsFieldNumber = $(event.target).val();
+            var fieldName = event.target.name;
+            var box = $(event.target).siblings('div.field_box');
             box.html('');
-            if (sel.length) {
-                var clone = $('select[name="' +fieldname2 + '"]').clone();
-            } else {
-                var clone = $('select[name="' + fieldname2 + '[]"]').clone();
+            var optionsSelect = $('select#fieldOptionsTemplate_' + optionsFieldNumber).clone();
+            optionsSelect.attr('multiple', 'multiple');
+            optionsSelect.attr('name',"visibility_field_"+fieldNumber+"_vals["+conditionIndex+"][]");
+            optionsSelect.attr('id',"visibility_field_"+fieldNumber+"_vals_"+conditionIndex);
+            optionsSelect.show();
+            optionsSelect.val([]);
+
+            if (visibility_fields.hasOwnProperty(fieldNumber) && visibility_fields[fieldNumber].hasOwnProperty(optionsFieldNumber)) {
+                var vals = visibility_fields[fieldNumber][optionsFieldNumber];
+                optionsSelect.val(vals);
             }
-            clone.attr('multiple', 'multiple');
-            clone.attr('name', fieldname + "_vals[]");
-            clone.attr('id', fieldname + "_vals");
-            clone.show();
-            clone.val([]);
-            if (visibility_fields.hasOwnProperty(field_number) && visibility_fields[field_number].hasOwnProperty(field_number2)) {
-                var vals = visibility_fields[field_number][field_number2];
-                clone.val(vals);
-            }
-            clone.appendTo(box);
-            clone.select2({
+            optionsSelect.appendTo(box);
+            optionsSelect.select2({
                 width: 'resolve',
                 allowClear: true,
                 closeOnSelect: false,
                 placeholder: "Select when to hide"
             });
-        });
+        }
+
+        $(".fieldforhide").on("change", fieldForHideChange);
         <?php
         foreach($php_array as $field_number=>$v){
-            foreach($v as $field_number2=>$val){
-            $n = "visibility_field_".$field_number;
-            echo "$('#".$n."').val( '$field_number2' ).attr('selected',true);";
-            echo "$('#".$n."').val( '$field_number2' ).change();";
-            
-            //echo "$('#".$n."').select2('val','$field_number2');";
+            foreach($v as $optionsFieldNumber=>$vals){
+            echo "$('#addnewcondition_btn_".$field_number."').click();\n";
+            $fieldSelector = "visibility_field_".$field_number."_";
+
+            echo "$('#".$fieldSelector."'+conditionIndex).val( '$optionsFieldNumber' ).attr('selected',true);\n";
+            echo "$('#".$fieldSelector."'+conditionIndex).val( '$optionsFieldNumber' ).change();\n";
+
+            $fieldSelector = "visibility_field_".$field_number."_vals_";
+            echo "$('#".$fieldSelector."'+conditionIndex).val( ['".implode("','",$vals)."'] ).trigger('change');\n";
+
+            //echo "$('#".$fieldSelector."'+conditionIndex).change();";
+
+
+
+            //echo "$('#".$n."').select2('val','$optionsFieldNumber');";
             }
         
     }

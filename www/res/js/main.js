@@ -421,7 +421,7 @@ window.onload = function(){
     $(".datepicker").datepicker({
         format:'yyyy-mm-dd'
     });	
-    $('.select').each(function() {
+    $('select.select').each(function() {
         var dropdownCss = new Object;
         if ($(this).attr('data-width')) {
             dropdownCss.width = $(this).attr('data-width');
@@ -440,7 +440,7 @@ window.onload = function(){
      
     });
     
-    $('.mt_select').each(function() {
+    $('select.mt_select').each(function() {
         var dropdownCss = new Object;
         if ($(this).attr('data-width')) {
             dropdownCss.width = $(this).attr('data-width');
@@ -458,7 +458,7 @@ window.onload = function(){
       
      
     });
-    $('.mt_select_mlt').each(function() {
+    $('select.mt_select_mlt').each(function() {
         var dropdownCss = new Object;
         if ($(this).attr('data-width')) {
             dropdownCss.width = $(this).attr('data-width');
@@ -478,7 +478,7 @@ window.onload = function(){
      
     });
    
-    $('.mt-tree').each(function() {
+    $('select.mt-tree').each(function() {
         var dropdownCss = new Object;
         if ($(this).attr('data-width')) {
             dropdownCss.width = $(this).attr('data-width');
