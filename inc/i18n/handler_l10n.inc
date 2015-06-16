@@ -37,5 +37,9 @@ function _t($string)
 	/*
 	 * standard translation
 	 */
-    return T_($string);
+    $translation =  T_($string);
+    if(isset($conf['string-replace-list'])){
+        return str_replace ( array_keys($conf['string-replace-list']) , array_values($conf['string-replace-list']) ,$translation);
+    }
+    return $translation;
 }
