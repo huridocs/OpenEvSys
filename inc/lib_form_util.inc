@@ -600,6 +600,7 @@ function shn_form_get_html_fields($form, $field_div = true) {
         if (function_exists($controler)) {
             $options['extra_opts']['mt'] = $options['map']['mt'];
             ob_start();
+
             $controler($options['label'], $field_id, $options['extra_opts']);
             $html = ob_get_clean();
 

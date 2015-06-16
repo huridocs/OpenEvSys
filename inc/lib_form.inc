@@ -46,7 +46,63 @@ function shn_form_extra_opts($extra_opts) {
     </div>
     <?php
 }
+function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
+    if ($extra_opts['visibility_field']) {
+        $visibility_field = $extra_opts['visibility_field'];
+        $values = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
+        if (!is_array($values)) {
+            $values = array($values);
+        }
+        if($type == 'radio'){
+            $selector = "input[type=radio][name=".$name."]";
+        }else{
+            $selector = "#".$name;
+        }
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                <?php
+                foreach ($visibility_field as $v => $f) {
 
+                    if (in_array($v, $values)) {
+                        foreach ($f as $field) {
+                            echo "$('#" . $field . "_group').hide();";
+                        }
+                    }
+                }
+                ?>
+                $("<?php echo $selector ?>").on("change", function(event) {
+                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                    val = $(this).val()
+                    values = val;
+                    if(!$.isArray(val)){
+                        values = new Array(val);
+                    }
+                    for(val2 in visibility_fields){
+
+                        if($.inArray(val2,values)<0){
+                            for(i in visibility_fields[val2]){
+                                $("#"+visibility_fields[val2][i]+"_group").show();
+                            }
+                        }
+                    }
+
+                    for(j in values){
+                        val = values[j];
+
+                        if(visibility_fields.hasOwnProperty(val)){
+                            for(i in visibility_fields[val]){
+                                var field_name = visibility_fields[val][i];
+                                $("#"+field_name+"_group").hide();
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    <?php }
+
+}
 function shn_form_link($mod, $act, $tpl, $label, $extra_opts) {
     ?>
     <a class="btn" href="<?php echo get_url($mod, $act, $tpl, $extra_opts) ?>" ><?php echo _($label); ?></a>
@@ -333,53 +389,7 @@ function shn_form_mt_select($label, $name, $extra_opts) {
         }
 
         shn_form_extra_opts($extra_opts);
-        if ($extra_opts['visibility_field']) {
-            $visibility_field = $extra_opts['visibility_field'];
-            $values = $value;
-            if (!is_array($value)) {
-                $values = array($value);
-            }
-            ?>
-            <script type="text/javascript">
-                jQuery(document).ready(function($) {
-        <?php
-        foreach ($visibility_field as $v => $f) {
-
-            if (in_array($v, $values)) {
-                foreach ($f as $field) {
-                    echo "$('#" . $field . "_group').hide();";
-                }
-            }
-        }
-        ?>
-                $("#<?php echo $name ?>").on("change", function(event) { 
-                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                    val = $(this).val()
-                    values = val;
-                    if(!$.isArray(val)){
-                        values = new Array(val);
-                    }
-                    for(val2 in visibility_fields){
-                                            
-                        if($.inArray(val2,values)<0){
-                            for(i in visibility_fields[val2]){
-                                $("#"+visibility_fields[val2][i]+"_group").show();
-                            }
-                        }
-                    }
-                    for(j in values){
-                        val = values[j]
-                                            
-                        if(visibility_fields.hasOwnProperty(val)){
-                            for(i in visibility_fields[val]){
-                                $("#"+visibility_fields[val][i]+"_group").hide();
-                            }
-                        }
-                    }
-                });
-            });
-            </script>
-            <?php }
+        shn_form_visibility_field($name,$extra_opts);
         ?>
     </div>
     <?php
@@ -568,53 +578,7 @@ function shn_form_mt_select_mlt($label, $name, $extra_opts) {
 
         <?php
         shn_form_extra_opts($extra_opts);
-        if ($extra_opts['visibility_field']) {
-            $visibility_field = $extra_opts['visibility_field'];
-            $values = $value;
-            if (!is_array($value)) {
-                $values = array($value);
-            }
-            ?>
-            <script type="text/javascript">
-                jQuery(document).ready(function($) {
-        <?php
-        foreach ($visibility_field as $v => $f) {
-
-            if (in_array($v, $values)) {
-                foreach ($f as $field) {
-                    echo "$('#" . $field . "_group').hide();";
-                }
-            }
-        }
-        ?>
-                $("#<?php echo $name ?>").on("change", function(event) { 
-                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                    val = $(this).val()
-                    values = val;
-                    if(!$.isArray(val)){
-                        values = new Array(val);
-                    }
-                    for(val2 in visibility_fields){
-                                            
-                        if($.inArray(val2,values)<0){
-                            for(i in visibility_fields[val2]){
-                                $("#"+visibility_fields[val2][i]+"_group").show();
-                            }
-                        }
-                    }
-                    for(j in values){
-                        val = values[j]
-                                            
-                        if(visibility_fields.hasOwnProperty(val)){
-                            for(i in visibility_fields[val]){
-                                $("#"+visibility_fields[val][i]+"_group").hide();
-                            }
-                        }
-                    }
-                });
-            });
-            </script>
-            <?php }
+        shn_form_visibility_field($name,$extra_opts);
         ?>
     </div>
     <?php
@@ -658,54 +622,7 @@ function shn_form_radio($label, $name, $extra_opts) {
             shn_form_clari($name, $clari_value);
         }
         shn_form_extra_opts($extra_opts);
-        if ($extra_opts['visibility_field']) {
-            $visibility_field = $extra_opts['visibility_field'];
-            $values = $value;
-            if (!is_array($value)) {
-                $values = array($value);
-            }
-            ?>
-            <script type="text/javascript">
-                jQuery(document).ready(function($) {
-                    <?php
-                    foreach ($visibility_field as $v => $f) {
-
-                        if (in_array($v, $values)) {
-                            foreach ($f as $field) {
-                                echo "$('#" . $field . "_group').hide();";
-                            }
-                        }
-                    }
-                    ?>
-                    $("input[type=radio][name=<?php echo $name ?>]").on("change", function(event) {
-                        var visibility_fields = <?php echo json_encode($visibility_field) ?>;
-                        val = $(this).val()
-                        values = val;
-                        if(!$.isArray(val)){
-                            values = new Array(val);
-                        }
-                        for(val2 in visibility_fields){
-
-                            if($.inArray(val2,values)<0){
-                                for(i in visibility_fields[val2]){
-                                    $("#"+visibility_fields[val2][i]+"_group").show();
-                                }
-                            }
-                        }
-                        for(j in values){
-                            val = values[j]
-
-                            if(visibility_fields.hasOwnProperty(val)){
-                                for(i in visibility_fields[val]){
-                                    $("#"+visibility_fields[val][i]+"_group").hide();
-                                }
-                            }
-                        }
-                    });
-                });
-            </script>
-        <?php }
-
+        shn_form_visibility_field($name,$extra_opts,'radio');
         ?>
     </div>
     <?php
