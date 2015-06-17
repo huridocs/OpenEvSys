@@ -48,7 +48,7 @@ function shn_form_extra_opts($extra_opts) {
 }
 function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
     if ($extra_opts['visibility_field']) {
-        $visibility_field = $extra_opts['visibility_field'];
+        $visibility_field = $extra_opts['visibility_field'];var_dump($visibility_field);
         $values = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
         if (!is_array($values)) {
             $values = array($values);
@@ -66,7 +66,8 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
 
                     if (in_array($v, $values)) {
                         foreach ($f as $field) {
-                            echo "$('#" . $field . "_group').hide();";
+                            echo "$('#" . $field . "_group').hide();\n";
+                            echo "hide_fields_conditions['".$field."'']['".$name."'] = true;";
                         }
                     }
                 }
@@ -78,14 +79,7 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
                     if(!$.isArray(val)){
                         values = new Array(val);
                     }
-                    for(val2 in visibility_fields){
-
-                        if($.inArray(val2,values)<0){
-                            for(i in visibility_fields[val2]){
-                                $("#"+visibility_fields[val2][i]+"_group").show();
-                            }
-                        }
-                    }
+                    var changedField = event.target.name;
 
                     for(j in values){
                         val = values[j];
@@ -94,6 +88,42 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
                             for(i in visibility_fields[val]){
                                 var field_name = visibility_fields[val][i];
                                 $("#"+field_name+"_group").hide();
+                                if(!hide_fields_conditions.hasOwnProperty(field_name)){
+                                    hide_fields_conditions[field_name] = {};
+                                }
+                                if(!hide_fields_conditions[field_name].hasOwnProperty(changedField)){
+                                    hide_fields_conditions[field_name][changedField] = {};
+                                }
+                                hide_fields_conditions[field_name][changedField][val] = true;
+                            }
+                        }
+                    }
+                    for(val2 in visibility_fields){
+
+                        if($.inArray(val2,values)<0){
+                            for(i in visibility_fields[val2]){
+                                var field_name = visibility_fields[val2][i];
+                                if (!hide_fields_conditions.hasOwnProperty(field_name) ||
+                                    Object.keys(hide_fields_conditions[field_name]).length == 0) {
+                                    $("#"+field_name+"_group").show();
+                                    return;
+                                }
+                                if (!hide_fields_conditions[field_name].hasOwnProperty(changedField) ||
+                                    Object.keys(hide_fields_conditions[field_name][changedField]).length == 0) {
+                                    return;
+                                }
+                                //$("#"+field_name+"_group").show();
+                               if(hide_fields_conditions[field_name][changedField].hasOwnProperty(val2)){
+                                    delete hide_fields_conditions[field_name][changedField][val2];
+                                }
+
+                                if(Object.keys(hide_fields_conditions[field_name][changedField]).length == 0){
+                                    delete hide_fields_conditions[field_name][changedField];
+                                }
+                                if (!hide_fields_conditions.hasOwnProperty(field_name) ||
+                                 Object.keys(hide_fields_conditions[field_name]).length == 0) {
+                                    $("#"+field_name+"_group").show();
+                                }
                             }
                         }
                     }

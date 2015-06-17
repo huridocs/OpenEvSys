@@ -1,6 +1,6 @@
 
 var hurimap = new Object(); 
-
+var hide_fields_conditions = {};
 $(document).ready(function() {
 
 	
@@ -32,7 +32,7 @@ function getAge(formname) {
     }
 	
     year = date_of_birth.substring(0,4);
-    month = date_of_birth.substring(5,7) - 1;	
+    month = date_of_birth.substring(5,7) - 1;
     date = date_of_birth.substring(8,10);
 	
     yearStr = initial_date.substring(0,4);
