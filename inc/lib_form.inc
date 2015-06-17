@@ -48,7 +48,7 @@ function shn_form_extra_opts($extra_opts) {
 }
 function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
     if ($extra_opts['visibility_field']) {
-        $visibility_field = $extra_opts['visibility_field'];var_dump($visibility_field);
+        $visibility_field = $extra_opts['visibility_field'];
         $values = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
         if (!is_array($values)) {
             $values = array($values);
@@ -66,8 +66,16 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
 
                     if (in_array($v, $values)) {
                         foreach ($f as $field) {
-                            echo "$('#" . $field . "_group').hide();\n";
-                            echo "hide_fields_conditions['".$field."'']['".$name."'] = true;";
+                            ?>
+                $('#<?php echo $field ?>_group').hide();
+                if(!hide_fields_conditions.hasOwnProperty('<?php echo $field ?>')){
+                    hide_fields_conditions['<?php echo $field ?>'] = {};
+                }
+                if(!hide_fields_conditions['<?php echo $field ?>'].hasOwnProperty('<?php echo $name ?>')){
+                    hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>'] = {};
+                }
+                hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>']['<?php echo $v ?>'] = true;
+                <?php
                         }
                     }
                 }
