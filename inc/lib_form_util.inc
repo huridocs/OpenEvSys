@@ -593,12 +593,24 @@ function validate_field($validationType, $vals, &$errorMsg) {
 function shn_form_get_html_fields($form, $field_div = true) {
     $i = 0;
     $fields = array();
+    //field js listeners
+    $listenerHtml = "";
+    foreach ($form as $field_id => $options) {
+
+        $options['extra_opts']['field_number'] = $options['field_number'];
+        $options['extra_opts']['mt'] = $options['map']['mt'];
+        ob_start();
+        shn_form_visibility_field_listeners($field_id,$options['extra_opts'],$options['type']);
+        $listenerHtml .= ob_get_clean();
+    }
+    $listenersAdded = false;
     foreach ($form as $field_id => $options) {
         $controler = $options['type'];
         $controler = 'shn_form_' . $controler;
         $controler .= (isset($options['map']['mlt']) && $options['map']['mlt'] == true) ? '_mlt' : '';
         if (function_exists($controler)) {
             $options['extra_opts']['mt'] = $options['map']['mt'];
+            $options['extra_opts']['field_number'] = $options['field_number'];
             ob_start();
 
             $controler($options['label'], $field_id, $options['extra_opts']);
@@ -614,14 +626,15 @@ function shn_form_get_html_fields($form, $field_div = true) {
 
 
                 $html = $html2;
+                if(!$listenersAdded){
+                    $html = $listenerHtml.$html;
+                    $listenersAdded = true;
+                }
             }
 
             $fields[$field_id] = $html;
             $fields[$i++] = $html;
         }
-        else
-            ;
-// echo $controler._t('_CONTROLER_NOT_FOUND_');
     }
 
     return $fields;
@@ -867,6 +880,18 @@ function shn_form_get_html_labels($form, $return = true) {
     foreach ($compForm as $form) {
 
         echo "<table class=' table table-bordered table-hover view$classNumber'>";
+
+        //field js listeners
+        foreach ($form as $field_id => $options) {
+
+            if ($options['map']['link_table'] != null) {
+                $options['extra_opts']['value'] .= '<b>' . '  :  ' . loadLinkName($options['map']['link_table'], $options['map']['link_field'], $options['extra_opts']['value']) . '</b>';
+            }
+            $options['extra_opts']['field_number'] = $options['field_number'];
+            $options['extra_opts']['mt'] = $options['map']['mt'];
+            shn_view_visibility_field_listeners($options['extra_opts']);
+
+        }
         $classNumber++;
         foreach ($form as $field_id => $options) {
 
@@ -884,6 +909,8 @@ function shn_form_get_html_labels($form, $return = true) {
                 $controler($options['label'], $options['extra_opts']['value'], $options['extra_opts']);
             }
         }
+
+
         echo "</table>";
     }
     echo "<div style='clear:both' ></div>";

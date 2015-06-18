@@ -46,7 +46,43 @@ function shn_form_extra_opts($extra_opts) {
     </div>
     <?php
 }
-function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
+function shn_form_visibility_field($name,$extra_opts) {
+    if ($extra_opts['visibility_field']) {
+        $visibility_field = $extra_opts['visibility_field'];
+        $values = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
+        if (!is_array($values)) {
+            $values = array($values);
+        }
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                <?php
+                foreach ($visibility_field as $v => $f) {
+
+                    if (in_array($v, $values)) {
+                        foreach ($f as $field) {
+                            ?>
+                $("[data-field-number='<?php echo $field ?>']").trigger('hideField',['hide']);
+                $('#<?php echo $field ?>_group').hide();
+                if(!hide_fields_conditions.hasOwnProperty('<?php echo $field ?>')){
+                    hide_fields_conditions['<?php echo $field ?>'] = {};
+                }
+                if(!hide_fields_conditions['<?php echo $field ?>'].hasOwnProperty('<?php echo $name ?>')){
+                    hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>'] = {};
+                }
+                hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>']['<?php echo $v ?>'] = true;
+                <?php
+                        }
+                    }
+                }
+                ?>
+
+            });
+        </script>
+    <?php }
+
+}
+function shn_form_visibility_field_listeners($name,$extra_opts,$type = 'select') {
     if ($extra_opts['visibility_field']) {
         $visibility_field = $extra_opts['visibility_field'];
         $values = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
@@ -61,26 +97,23 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
         ?>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                <?php
-                foreach ($visibility_field as $v => $f) {
 
-                    if (in_array($v, $values)) {
-                        foreach ($f as $field) {
-                            ?>
-                $('#<?php echo $field ?>_group').hide();
-                if(!hide_fields_conditions.hasOwnProperty('<?php echo $field ?>')){
-                    hide_fields_conditions['<?php echo $field ?>'] = {};
-                }
-                if(!hide_fields_conditions['<?php echo $field ?>'].hasOwnProperty('<?php echo $name ?>')){
-                    hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>'] = {};
-                }
-                hide_fields_conditions['<?php echo $field ?>']['<?php echo $name ?>']['<?php echo $v ?>'] = true;
-                <?php
+                $("#<?php echo $name ?>").on("hideField", function(event,type) {
+                    var target_field_number = $(event.target).data('field-number');
+                    var visibility_fields = <?php echo json_encode($visibility_field) ?>;
+                    for(i in visibility_fields){
+                        var field_number = visibility_fields[i];
+                        $("[data-field-number='"+field_number+"']").trigger('hideField',[ type ]);
+                        if(type == "hide"){
+                            $("#"+field_number+"_group").hide();
+                        }else{
+                            $("#"+field_number+"_group").show();
+                            $("[data-field-number='"+target_field_number+"']").trigger('change');
                         }
                     }
-                }
-                ?>
+                });
                 $("<?php echo $selector ?>").on("change", function(event) {
+
                     var visibility_fields = <?php echo json_encode($visibility_field) ?>;
                     val = $(this).val()
                     values = val;
@@ -88,14 +121,15 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
                         values = new Array(val);
                     }
                     var changedField = event.target.name;
-
                     for(j in values){
                         val = values[j];
 
                         if(visibility_fields.hasOwnProperty(val)){
                             for(i in visibility_fields[val]){
                                 var field_name = visibility_fields[val][i];
+                                $("[data-field-number='"+field_name+"']").trigger('hideField',['hide']);
                                 $("#"+field_name+"_group").hide();
+
                                 if(!hide_fields_conditions.hasOwnProperty(field_name)){
                                     hide_fields_conditions[field_name] = {};
                                 }
@@ -114,6 +148,7 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
                                 if (!hide_fields_conditions.hasOwnProperty(field_name) ||
                                     Object.keys(hide_fields_conditions[field_name]).length == 0) {
                                     $("#"+field_name+"_group").show();
+                                    $("[data-field-number='"+field_name+"']").trigger('hideField',['show']);
                                     return;
                                 }
                                 if (!hide_fields_conditions[field_name].hasOwnProperty(changedField) ||
@@ -131,6 +166,7 @@ function shn_form_visibility_field($name,$extra_opts,$type = 'select') {
                                 if (!hide_fields_conditions.hasOwnProperty(field_name) ||
                                  Object.keys(hide_fields_conditions[field_name]).length == 0) {
                                     $("#"+field_name+"_group").show();
+                                    $("[data-field-number='"+field_name+"']").trigger('hideField',['show']);
                                 }
                             }
                         }
@@ -352,13 +388,15 @@ function shn_form_select($label, $name, $extra_opts) {
     $value = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
     //to prevent warnings set $options to array() if it is null
     $options = ($options == null) ? array() : $options;
-
+    $field_number = $extra_opts['field_number'];
     if (isset($label)) {
         ?>
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
     <?php } ?>
     <div class="controls">
-        <select class="select input-large" title="<?php echo $name ?>" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>">
+        <select class="select input-large" title="<?php echo $name ?>" name="<?php echo $name ?>" id="<?php echo $name ?>"
+                data-field-number="<?php echo $field_number?>"
+            <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>">
             <?php
             foreach ($options as $opt_value => $desc) {
                 if (is_array($value))
@@ -400,13 +438,15 @@ function shn_form_mt_select($label, $name, $extra_opts) {
     $value = (isset($_POST[$name]) ? $_POST[$name] : $extra_opts['value']);
     //to prevent warnings set $options to array() if it is null
     $options = ($options == null) ? array() : $options;
-
+    $field_number = $extra_opts['field_number'];
     if (isset($label)) {
         ?>
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
     <?php } ?>
     <div class="controls">
-        <select class="mt_select input-large" title="<?php echo $name ?>" onchange="<?php echo $extra_opts['onchange'] ?>" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>">
+        <select class="mt_select input-large" title="<?php echo $name ?>" onchange="<?php echo $extra_opts['onchange'] ?>"
+                name="<?php echo $name ?>" id="<?php echo $name ?>"
+                data-field-number="<?php echo $field_number?>" <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>">
             <?php
             foreach ($options as $opt_value => $desc) {
                 if (is_array($value))
@@ -641,6 +681,7 @@ function shn_form_radio($label, $name, $extra_opts) {
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
         <?php
     }
+    $field_number = $extra_opts['field_number'];
     ?>
     <div class="controls">
         <?php
@@ -651,7 +692,8 @@ function shn_form_radio($label, $name, $extra_opts) {
         foreach ($options as $val => $option) {
             $selected = ($val == $value) ? 'checked="true"' : '';
             ?>
-            <input type="radio" value="<?php echo $val ?>" name="<?php echo $name ?>" tabindex="<?php echo $shn_tabindex++; ?>" <?php echo $selected ?> /><span>&nbsp;<?php echo $option ?></span>
+            <input type="radio" value="<?php echo $val ?>" name="<?php echo $name ?>"
+                   data-field-number="<?php echo $field_number?>" tabindex="<?php echo $shn_tabindex++; ?>" <?php echo $selected ?> /><span>&nbsp;<?php echo $option ?></span>
             <?php
         }
         if ($extra_opts['clari']) {
@@ -660,7 +702,7 @@ function shn_form_radio($label, $name, $extra_opts) {
             shn_form_clari($name, $clari_value);
         }
         shn_form_extra_opts($extra_opts);
-        shn_form_visibility_field($name,$extra_opts,'radio');
+        shn_form_visibility_field($name,$extra_opts);
         ?>
     </div>
     <?php
