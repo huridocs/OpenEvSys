@@ -763,6 +763,7 @@ class ADODB_Active_Record {
 				$cnt += 1;
 			}
 		}
+		
 		$sql = 'INSERT INTO '.$this->_table."(".implode(',',$names).') VALUES ('.implode(',',$valstr).')';
 		$ok = $db->Execute($sql,$valarr);
 		

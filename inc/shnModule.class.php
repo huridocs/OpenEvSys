@@ -54,13 +54,20 @@ class shnModule
     function act_access_deny(){ }
     function act_unknown_error(){ $this->title = _t('SYSTEM_ERROR'); change_tpl('act_error');}
 
+    public function get_entity_id(){
+      if($_GET['doc_id']) return $_GET['doc_id'];
+      if($_GET['pid']) return $_GET['pid'];
+      if($_GET['eid']) return $_GET['eid'];
+    }
+
     public function act_subformat_list() {
 
       $this->subformat_name = $_GET['subformat'];
       $subformat = new SubformatsModel($this->subformat_name);
+      $this->subformats_list = $subformat->get_by_entity($this->get_entity_id());
 
-      $entity_id = $_GET['pid'];
-      $this->subformats_list = $subformat->get($entity_id);
+      $this->field_list = array();
+      $this->fields = generate_formarray($this->subformat_name, 'all', false, true);
     }
 
     public function act_subformat_new() {
@@ -70,11 +77,12 @@ class shnModule
 
       if(isset($_POST['save'])){
 
-        $subformat = $subformats_model->fill_from_post();
-        $subformat->record_number = $_GET['pid'];
-        $subformat->save();
-
-        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
+        $subformat = $subformats_model->fill_from_post('new');
+        $subformat->record_number = $this->get_entity_id();
+        $subformat->_saved = false;
+        $subformat->SaveAll();  
+        
+        set_redirect_header($_GET['mod'], 'subformat_list',null , array(subformat => $this->subformat_name));
       }
     }
 
@@ -85,19 +93,17 @@ class shnModule
       $subformats_model = new SubformatsModel($this->subformat_name);
 
       if(isset($_POST['save'])){
+        $subformat = $subformats_model->fill_from_post('edit');
+        $subformat->record_number = $this->get_entity_id();
+        $subformat->_saved = true;
+        $subformat->SaveAll();
 
-        $subformat = $subformats_model->fill_from_post();
-        $subformat->record_number = $_GET['pid'];
-        $subformat->vocab_number = $_GET['subid'];
-
-        $subformat->Update();
-
-        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
+        set_redirect_header($_GET['mod'], 'subformat_list',null , array(subformat => $this->subformat_name));
       }
 
-
       $this->fields = generate_formarray($this->subformat_name, 'edit', false, true);
-      $data = $subformats_model->get_by_id($_GET['subid'])[0];
+      $subformat = $subformats_model->get_one($_GET['subid']);
+      popuate_formArray($this->fields, $subformat);
 
       foreach($data as $key => $value){
         $this->fields[$key]['extra_opts']['value'] = $value;
@@ -108,10 +114,8 @@ class shnModule
       $this->subformat_name = $_GET['subformat'];
       $subformats_model = new SubformatsModel($this->subformat_name);
 
-      if(isset($_POST['yes'])) {
-        $subformats_model->delete($_POST['delete_subformats']);
-        set_redirect_header('person', 'subformat_list',null , array(subformat => $this->subformat_name));
-      }
+      $subformats_model->delete($_GET['subid']);
+      set_redirect_header($_GET['mod'], 'subformat_list',null , array(subformat => $this->subformat_name));
 
       $this->subformats_list = $subformats_model->get_by_id($_POST['delete_subformats']);
     }

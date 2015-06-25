@@ -1,5 +1,7 @@
 <?php
 
+include_once APPROOT . 'inc/lib_form_util.inc';
+
 class SubformatsModel {
 
   private $subformat_name;
@@ -8,21 +10,74 @@ class SubformatsModel {
     $this->subformat_name = $subformat_name;
   }
 
-  public function fill_from_post(){
-    $subformat_properties = Browse::getEntityFields($this->subformat_name);
-    $subformat = new ADODB_Active_Record($this->subformat_name);
-    foreach ($subformat_properties as $property) {
-      $name = $property['field_name'];
-      $subformat->$name = $_POST[$name];
+  public function fill_from_post($view){
+    $subformat = new DomainEntity($this->subformat_name);
+    $subformat->vocab_number = $_GET['subid'];
+
+    $form = generate_formarray($this->subformat_name, $view);
+    form_objects($form, $subformat);
+
+    return $subformat;
+  }
+
+  public function get_by_entity($entity_id){
+     $browse = new Browse();
+     $sql = "SELECT vocab_number FROM $this->subformat_name WHERE `record_number` = '$entity_id'";
+     $ids = $browse->ExecuteQuery($sql);
+     $subformats = array();
+     
+     $fields = generate_formarray($this->subformat_name, 'all', false, true);
+     
+     foreach ($ids as $id) {
+       $subformat =  $this->get_one($id["vocab_number"]);
+       $subformat = $this->fill_relations($subformat, $fields);
+       array_push($subformats, $subformat);
+     }
+
+     return $subformats;
+  }
+
+  public function fill_relations($subformat, $fields) {
+    foreach ($fields as $field) {
+      if(!empty($field['map']['mt'])){
+
+        $value = $subformat->$field['map']['field'];
+        $subformat->$field['map']['field'] = $this->get_mt_value($value, $field['map']['mt']);
+      }
     }
 
     return $subformat;
   }
 
-  public function get($entity_id){
+  protected function get_mt_value($values, $mt_index){
+    global $conf;
+    $locale = $conf['locale'];
+
+    if(!is_array($values)){
+      $object = new stdClass();
+      $object->vocab_number = $values;
+      $values = array($object);
+    }
+
     $browse = new Browse();
-    $sql = "SELECT * FROM $this->subformat_name WHERE `record_number` = '$entity_id'";
-    return $browse->ExecuteQuery($sql);
+    $results = [];
+
+    $table = 'mt_vocab';
+    $property = 'english';
+    $index_name = 'vocab_number';
+    if($locale !== 'en'){
+      $table = 'mt_vocab_l10n';
+      $property = $locale;
+      $index_name = 'msgid';
+    }
+
+    foreach ($values as $mtObject) {
+      $sql = "SELECT * FROM `$table` WHERE `$index_name` LIKE '".$mtObject->vocab_number."'";
+      $result = $browse->ExecuteQuery($sql);
+      array_push($results, $result[0][$property]);
+    }
+    
+    return $results;
   }
 
   public function get_by_id($ids) {
@@ -30,11 +85,22 @@ class SubformatsModel {
       $ids = array($ids);
     }
 
-    $browse = new Browse();
-    $sql = "SELECT * FROM $this->subformat_name WHERE `vocab_number` in (".implode(", ", $ids).")";
-    return $browse->ExecuteQuery($sql);
+    $results = array();
+
+    foreach ($ids as $id) {
+      array_push($results, $this->get_one($id));
+    }
+
+    return $results;
   }
 
+  public function get_one($id){
+    $subformat = new DomainEntity($this->subformat_name);
+    $subformat->subformat_name = $this->subformat_name;
+    $subformat->LoadfromRecordNumber($id);
+    $subformat->LoadRelationships();
+    return $subformat;
+  }
 
   public function delete($ids) {
     if(!is_array($ids)) {
@@ -42,7 +108,7 @@ class SubformatsModel {
     }
 
     $browse = new Browse();
-    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` in (".implode(", ", $ids).")";
+    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` in ('".implode("', '", $ids)."')";
     $browse->ExecuteNonQuery($sql);
   }
 }

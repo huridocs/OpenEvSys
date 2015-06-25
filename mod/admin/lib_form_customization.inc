@@ -371,7 +371,7 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
             $dbQuery->ExecuteNonQuery($sql);
         }if ($fieldValues['field_type'] == "user_select" && $fieldValues['is_repeat'] == 'y') {
 
@@ -386,7 +386,7 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
            $dbQuery->ExecuteNonQuery($sql);
 
         } elseif($fieldValues['field_type'] != "line") {
