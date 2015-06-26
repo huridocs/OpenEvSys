@@ -200,7 +200,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     global $global;
     global $conf;
     $locale = $conf['locale'];
-    $sql = "SELECT * FROM data_dict WHERE field_type = 'subformat' AND entity = '" . $module . "'";
+    $sql = "SELECT * FROM data_dict WHERE field_type = 'subformat' AND entity = '" . $module . "' AND visible_view = 'y'";
     $browse = new Browse();
 
     $subformats = $browse->ExecuteQuery($sql);
