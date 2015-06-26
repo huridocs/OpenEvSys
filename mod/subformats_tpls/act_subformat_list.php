@@ -40,7 +40,12 @@
                     if(is_array($subformat->$field['map']['field'])){
                       echo "<ul>";
                       foreach ($subformat->$field['map']['field'] as $value) {
-                        echo "<li>$value</li>";
+                        if($value instanceof UserField){
+                          echo "<li>$value->username</li>";
+                        }
+                        else {
+                          echo "<li>$value</li>";  
+                        }
                       }
                       echo "</ul>";
                     }

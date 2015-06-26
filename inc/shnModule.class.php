@@ -65,9 +65,8 @@ class shnModule
       $this->subformat_name = $_GET['subformat'];
       $subformat = new SubformatsModel($this->subformat_name);
       $this->subformats_list = $subformat->get_by_entity($this->get_entity_id());
-
       $this->field_list = array();
-      $this->fields = generate_formarray($this->subformat_name, 'all', false, true);
+      $this->fields = generate_formarray($this->subformat_name, 'view', false, true);
     }
 
     public function act_subformat_new() {

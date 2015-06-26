@@ -99,6 +99,7 @@ class SubformatsModel {
     $subformat->subformat_name = $this->subformat_name;
     $subformat->LoadfromRecordNumber($id);
     $subformat->LoadRelationships();
+    
     return $subformat;
   }
 
