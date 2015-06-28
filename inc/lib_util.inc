@@ -889,9 +889,7 @@ function getMenu($menu) {
 function makeLinksClickable($text){
     return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1" target="_blank">$1</a>', $text);
 }
-
-function getActiveFormats(){
-    global $conf;
+function getAllFormats(){
     $formats = array(
         'person' => _t('PERSON'),
         'event' => _t('EVENT'),
@@ -908,6 +906,12 @@ function getActiveFormats(){
         'address' => _t('ADDRESS'),
         'supporting_docs_meta' => _t('DOCUMENT')
     );
+
+    return $formats;
+}
+function getActiveFormats(){
+    global $conf;
+    $formats = getAllFormats();
     foreach($formats as $key=>$value){
         if($conf['hide_'.$key.'_format'] == 'true'){
             unset($formats[$key]);

@@ -1104,6 +1104,41 @@ class adminModule extends shnModule {
             }
         }
     }
+    public function act_dashboard_configuration() {
+        global  $conf;
+
+
+        if (isset($_POST["submit"])) {
+
+            $this->conf = $conf;
+            unset($_POST["submit"]);
+            $formats = getActiveFormats();
+
+            foreach ($formats as $format => $value) {
+
+                if (!isset($_POST['dashboard_format_counts_'.$format])) {
+                    $_POST['dashboard_format_counts_'.$format] = false;
+                }
+            }
+            if (!isset($_POST['dashboard_select_counts'])) {
+                $_POST['dashboard_select_counts'] = array();
+            }
+            if (!isset($_POST['dashboard_date_counts'])) {
+                $_POST['dashboard_date_counts'] = array();
+            }
+            foreach ($_POST as $key => $value) {
+                if($key == 'dashboard_select_counts'){
+                    $value = json_encode($value);
+                }
+                if($key == 'dashboard_date_counts'){
+                    $value = json_encode($value);
+                }
+                $conf[$key] = $value;
+
+                shn_config_database_update($key, $value);
+            }
+        }
+    }
 
     public function act_Extensions() {
         global $conf;
