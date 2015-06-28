@@ -348,8 +348,10 @@ function form_customization_add_field($field_type_options) {
     try {
 
         if ($fieldValues['field_type'] == "location") {
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
+            $latitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ";
+            $longitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ";
+            $dbQuery->ExecuteNonQuery($latitude_field);
+            $dbQuery->ExecuteNonQuery($longitude_field);
         }
         if($fieldValues['field_type'] == "subformat"){
           include_once(APPROOT . 'inc/subformats/subformats.php');
@@ -389,7 +391,7 @@ function form_customization_add_field($field_type_options) {
                   ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
            $dbQuery->ExecuteNonQuery($sql);
 
-        } elseif($fieldValues['field_type'] != "line") {
+        } elseif(!is_null($field_mysql_type)) {
           add_field_to_entity($fieldValues['entity'], $fieldValues['field_name'], $field_mysql_type);
         }
 
