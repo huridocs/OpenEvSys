@@ -14,7 +14,7 @@
           <?php
               $count = 0;
               foreach($fields as $field){
-                if($field['type'] == 'location'){
+                if($field['type'] == 'hidden'){
                   continue;
                 }
             ?>
@@ -37,12 +37,30 @@
               <?php
               $first_field = true;
               foreach($fields as $field){
-                if($field['type'] == 'location'){
+                if($field['type'] == 'hidden'){
                   continue;
                 }
               ?>
                 <td>
                   <?php
+                    if($field['type'] == 'location'){
+                      $id = $field['field_number'];
+                      $title = $field['label'];
+                      $latitude_property = $field['map']['field'].'_latitude';
+                      $longitude_property = $field['map']['field'].'_longitude';
+                      unset($field['label']);
+                      $field['extra_opts']['value'] = array('latitude' => $subformat->$latitude_property, 'longitude' => $subformat->$longitude_property);
+                      $content = shn_form_get_html_fields(array($field), false)[0];
+                      ?>
+                      <a href="" class="" data-toggle="modal" data-target="#<?=$field['field_number']?>">
+                        <?=$subformat->$latitude_property?>
+                         / 
+                        <?=$subformat->$longitude_property?>
+                      </a>
+                      <?php
+                      include 'modal.php';
+                    }
+
                     if(is_array($subformat->$field['map']['field'])){
                       echo "<ul>";
                       foreach ($subformat->$field['map']['field'] as $value) {
