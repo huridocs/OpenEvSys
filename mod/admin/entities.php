@@ -28,7 +28,7 @@ class Entities extends ADODB_Active_Record {
 
     foreach($entities as $entity) {
       $entity_name = $entity->value;
-      $entity_select_options[$entity_name] = _t(strtoupper($entity_name));
+      $entity_select_options[$entity_name] = $entity_name;
     }
 
     return $entity_select_options;
