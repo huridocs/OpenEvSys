@@ -58,7 +58,7 @@ echo get_url('admin', 'System_configuration')
                     <td >
                         <input
                             <?php if (isset($alt_conf_check[$key])) { ?>
-                                type='checkbox' name='<?php echo $key; ?>'  
+                                type='checkbox' name='<?php echo $key; ?>'
                                 <?php
                                 echo "value='true'";
                                 $checked = ($conf[$key] == _t('TRUE')) ? 'checked="true"' : '';

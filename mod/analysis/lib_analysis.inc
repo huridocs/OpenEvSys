@@ -135,6 +135,12 @@ function analysis_get_advance_search_entities(){
         'title'=>_t('CHAIN_OF_EVENTS'),
         'desc'=>_t('CHAIN_OF_EVENTS')
     );
+    $activeEntities = getActiveFormats();
+    foreach($entities as $key=>$value){
+        if(!isset($activeEntities[$key])){
+            unset($entities[$key]);
+        }
+    }
     return $entities;
 }
 

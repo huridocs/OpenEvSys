@@ -392,7 +392,9 @@ function set_links_in_recordset($recordset, $entity, $additionalurlfields = arra
         } else {
             $primary_entity_record_number = null;
         }
-
+        foreach($record as &$val){
+            $val = makeLinksClickable($val);
+        }
         $record['record_url'] = get_record_url($record[$pk], $entity, $primary_entity_record_number);
         $record['record_edit_url'] = get_record_url($record[$pk], $entity, "edit");
         $record['record_delete_url'] = get_record_url($record[$pk], $entity, "delete");
@@ -883,4 +885,45 @@ function getMenu($menu) {
     }
     $activeMenuOrdered = $menuItemsNew;
     return $activeMenuOrdered;
+}
+function makeLinksClickable($text){
+    return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1" target="_blank">$1</a>', $text);
+}
+function getAllFormats(){
+    $formats = array(
+        'person' => _t('PERSON'),
+        'event' => _t('EVENT'),
+        'act' => _t('ACT'),
+        'arrest' => _t('ARREST'),
+        'destruction' => _t('DESTRUCTION'),
+        'killing' => _t('KILLING'),
+        'torture' => _t('TORTURE'),
+        'chain_of_events' => _t('CHAIN_OF_EVENT'),
+        'involvement' => _t('INVOLVEMENT'),
+        'information' => _t('INFORMATION'),
+        'intervention' => _t('INTERVENTION'),
+        'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
+        'address' => _t('ADDRESS'),
+        'supporting_docs_meta' => _t('DOCUMENT')
+    );
+
+    return $formats;
+}
+function getActiveFormats(){
+    global $conf;
+    $formats = getAllFormats();
+    foreach($formats as $key=>$value){
+        if($conf['hide_'.$key.'_format'] == 'true'){
+            unset($formats[$key]);
+        }
+    }
+
+    return $formats;
+}
+function isFormatActive($format){
+    global $conf;
+    if(isset($conf['hide_'.$format.'_format']) && $conf['hide_'.$format.'_format'] == 'true'){
+        return false;
+    }
+    return true;
 }

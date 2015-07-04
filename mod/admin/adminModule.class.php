@@ -111,7 +111,7 @@ class adminModule extends shnModule {
                 $fields_form = generate_formarray($this->entity_select, "new");
                 $fields_form2 = array();
                 foreach ($fields_form as $k => $f) {
-                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select') {
+                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select'  || $f['type'] == 'radio') {
                         $fields_form2[$k] = $f;
                     }
                 }
@@ -123,14 +123,14 @@ class adminModule extends shnModule {
                 $field_numbers = array();
                 foreach ($res as $record) {
                     if ($record['enabled'] == 'y' && $record['visible_new'] == 'y' &&
-                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select')) {
+                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select' || $record['field_type'] == 'radio')) {
                         $fields[$record['field_number']] = $record;
                     }
                     $field_numbers[] = $record['field_number'];
                 }
                 $this->fields_for_hide = $fields;
                 $browse = new Browse();
-                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
+                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
             }
         }
@@ -150,24 +150,8 @@ class adminModule extends shnModule {
     public function act_new_field() {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
+        $entity_select_options = array_merge(array('' => ''),getActiveFormats());
 
-        $entity_select_options = array(
-            '' => '',
-            'person' => _t('PERSON'),
-            'event' => _t('EVENT'),
-            'act' => _t('ACT'),
-            'arrest' => _t('ARREST'),
-            'destruction' => _t('DESTRUCTION'),
-            'killing' => _t('KILLING'),
-            'torture' => _t('TORTURE'),
-            'chain_of_events' => _t('CHAIN_OF_EVENT'),
-            'involvement' => _t('INVOLVEMENT'),
-            'information' => _t('INFORMATION'),
-            'intervention' => _t('INTERVENTION'),
-            'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
-            'address' => _t('ADDRESS'),
-            'supporting_docs_meta' => _t('DOCUMENT')
-        );
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),
@@ -1115,6 +1099,41 @@ class adminModule extends shnModule {
 
             foreach ($_POST as $key => $value) {
                 $conf[$key] = $value;
+                shn_config_database_update($key, $value);
+            }
+        }
+    }
+    public function act_dashboard_configuration() {
+        global  $conf;
+
+
+        if (isset($_POST["submit"])) {
+
+            $this->conf = $conf;
+            unset($_POST["submit"]);
+            $formats = getActiveFormats();
+
+            foreach ($formats as $format => $value) {
+
+                if (!isset($_POST['dashboard_format_counts_'.$format])) {
+                    $_POST['dashboard_format_counts_'.$format] = false;
+                }
+            }
+            if (!isset($_POST['dashboard_select_counts'])) {
+                $_POST['dashboard_select_counts'] = array();
+            }
+            if (!isset($_POST['dashboard_date_counts'])) {
+                $_POST['dashboard_date_counts'] = array();
+            }
+            foreach ($_POST as $key => $value) {
+                if($key == 'dashboard_select_counts'){
+                    $value = json_encode($value);
+                }
+                if($key == 'dashboard_date_counts'){
+                    $value = json_encode($value);
+                }
+                $conf[$key] = $value;
+
                 shn_config_database_update($key, $value);
             }
         }

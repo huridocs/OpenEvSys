@@ -1365,7 +1365,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         $array_values[$field_name] = $val[$field_name];
                     }
                 } else {
-                    $array_values[$field_name] = $val[$field_name];
+                    $array_values[$field_name] = makeLinksClickable($val[$field_name]);
                 }
             }
             $response->aaData[$i] = $array_values;
@@ -1382,9 +1382,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
     private function getEntityFields() {
         $res = Browse::getAllEntityFields();
+        $activeFormats = getActiveFormats();
+
         $domain = new Domain();
         foreach ($res as $record) {
             $entity = $record['entity'];
+            if(!isset($activeFormats[$entity])){
+                continue;
+            }
             if (isset($entity) && !isset($domain->$entity)) {
                 $domain->$entity = new domain();
                 $domain->$entity->fields = new domain();

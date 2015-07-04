@@ -200,27 +200,43 @@ function form_customization_process_entity_form($entity) {
         }
 
         if (isset($_POST['visibility_field_' . $recordNumber]) && isset($_POST['visibility_field_' . $recordNumber . '_vals'])) {
-            $field_number2 = $_POST['visibility_field_' . $recordNumber];
-            $field_number2 = $global['db']->qstr($field_number2);
 
-            $vals = $_POST['visibility_field_' . $recordNumber . '_vals'];
-            if(!is_array($vals)){
-                $vals = array($vals);
-            }
+            $fieldToHide = $_POST['visibility_field_' . $recordNumber];
+            if(is_array($fieldToHide)) {
+                $hideValues = array();
+                foreach($fieldToHide as $conditionIndex=>$field_number2){
+                    if(!$_POST['visibility_field_' . $recordNumber.'_vals'][$conditionIndex]){
+                        continue;
+                    }
+                    $options  = (array)$_POST['visibility_field_' . $recordNumber . '_vals'][$conditionIndex];
+                    if(!$hideValues[$field_number2]) {
+                        $hideValues[$field_number2] = $options;
+                    }else{
+                        $hideValues[$field_number2] = array_merge($hideValues[$field_number2],$options);
+                    }
+                }
+                $sql2 = array();
 
-            $sql = "INSERT INTO data_dict_visibility (`field_number`,`field_number2`,`value`) values ";
-            $sql2 = array();
-            foreach($vals as $val){
-                $val = $global['db']->qstr($val);
-                $sql2[] = " ('$recordNumber', $field_number2,$val)";
-            }
-            $sql .= implode(",",$sql2);
+                foreach($hideValues as $field_number2 => $vals){
+                    $vals = array_unique($vals);
+                    $field_number2 = $global['db']->qstr($field_number2);
+                    foreach ($vals as $val) {
 
-            $dbQuery = new Browse();
-            try {
-                $dbQuery->ExecuteNonQuery($sql);
-            } catch (Exception $e) {
-                //var_dump($e,$sql);
+                        $val = $global['db']->qstr($val);
+                        $sql2[] = " ('$recordNumber', $field_number2,$val)";
+                    }
+                }
+                if($sql2) {
+                    $sql = "INSERT INTO data_dict_visibility (`field_number`,`field_number2`,`value`) values ";
+                    $sql .= implode(",", $sql2);
+
+                    $dbQuery = new Browse();
+                    try {
+                        $dbQuery->ExecuteNonQuery($sql);
+                    } catch (Exception $e) {
+                        //var_dump($e,$sql);
+                    }
+                }
             }
         }
         if($fieldValues){
