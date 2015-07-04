@@ -29,6 +29,8 @@ function mt_customization_update() {
             }
 
             if (is_array($labels)) {
+                
+
                 $vocab_number = $global['db']->qstr($vocab_number);
                 foreach ($locales as $code => $loc) {
                     if (!trim($labels[$code])) {
@@ -39,7 +41,9 @@ function mt_customization_update() {
                     if ($code == "en" && isset($labels["en"])) {
                         $sql = "UPDATE mt_vocab SET english=$msgstr WHERE vocab_number = $vocab_number ";
                         $res = $global['db']->Execute($sql);
-                    } elseif (isset($labels[$code])) {
+                    }
+
+                    if (isset($labels[$code])) {
                         $l10nValues = array();
                         $l10nValues['msgid'] = $vocab_number;
                         $l10nValues['msgstr'] = $msgstr;
@@ -167,7 +171,6 @@ function mt_customization_add_terms($mt_term) {
                 $global['db']->AutoExecute('mt_vocab', $fieldValues, 'INSERT');
                 $global['db']->AutoExecute($mt_table, $fieldValues, 'INSERT');
 
-
                 foreach ($locales as $code => $loc) {
                     if ($code != "en" && trim($_POST['new_term_label'][$code][$index])) {
                         $msgstr = $global['db']->qstr(trim($_POST['new_term_label'][$code][$index]));
@@ -221,9 +224,7 @@ function mt_customization_add_new_taxonomy() {
     $dbQuery = new Browse();
     try {
 
-        $dbQuery->ExecuteNonQuery("insert into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')");
-
-        $sql = "CREATE TABLE IF NOT EXISTS mt_" . $code . "_" . $term . "(
+        $table_sql = "CREATE TABLE IF NOT EXISTS mt_" . $code . "_" . $term . "(
             vocab_number VARCHAR(14) NOT NULL ,
             PRIMARY KEY ( vocab_number ) ,
             FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
@@ -231,8 +232,25 @@ function mt_customization_add_new_taxonomy() {
             ON UPDATE CASCADE
 
         ) ENGINE = InnoDB;";
-        $dbQuery->ExecuteNonQuery($sql);
+        
+        $dbQuery->ExecuteNonQuery($table_sql);
+
+        $list_sql = "INSERT into mt_index(`no`,`term`) values(" . $code . ",'" . $term . "')";
+        $dbQuery->ExecuteNonQuery($list_sql);
+
     } catch (Exception $e) {
+        print_r($e);
+        error_log("----------------------------",0);
+        error_log("                            ",0);
+        error_log("MSG:".$e->getMessage(), 0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("TRC:".$e->getTraceAsString(), 0);
+        error_log("                            ",0);
+        error_log("                            ",0);
+        error_log("SQL:".$e->sql, 0);
+        error_log("                            ",0);
+        error_log("----------------------------",0);
         return false;
     }
     return true;

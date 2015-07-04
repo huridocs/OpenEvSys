@@ -104,9 +104,6 @@ class SearchResultGenerator {
     }
 
     private function generateCondition($condition, $entityForm) {
-        //var_dump('fieldArray type ' , $fieldArray );
-        //var_dump('$$entityForm ' , $entityForm );
-        //var_dump('$condition ' , $condition );
         $fieldName = $condition['field'];
         $fieldValue = $condition['value'];
         $fieldArray = $entityForm[$fieldName];
@@ -116,7 +113,7 @@ class SearchResultGenerator {
             //*** IMPLEMENT management join
         }
 
-        //var_dump('fieldArray' , $fieldArray );
+        //var_dump('fieldArray' , $fieldArray['type'] );
 
         switch ($fieldArray['type']) {
             case 'hidden' :
@@ -156,6 +153,9 @@ class SearchResultGenerator {
             case 'address' :
                 $conditionString = null;
                 break;
+            case 'user_select' :
+                $conditionString = $this->generateComparison('text', $condition, $fieldArray);
+                break;
         }
         //var_dump('$conditionString' , $conditionString); 
         if (!($conditionString == null || trim($conditionString)) == '') {
@@ -175,7 +175,6 @@ class SearchResultGenerator {
         $value = $condition['value'];
         $value = addslashes($value);
         $fieldAlias = $this->getFieldAlias($fieldArray, 'query', $condition['entity']);
-        //var_dump('fieldAlias' , $fieldAlias);
         switch ($type) {
             case 'text':
                 switch (trim($condition['operator'])) {
@@ -586,7 +585,6 @@ class SearchResultGenerator {
     private function mtJoin($formField, $type) {
         $entity_type = $formField['map']['entity'];
         $fieldName = $formField['map']['field'];
-        //var_dump('mlt' ,$entity_type , $fieldName);
 
         $mltTable = 'mlt_' . $this->tableOfEntity($entity_type) . '_' . $fieldName;
         $as = trim($entity_type) . '_' . $mltTable;
@@ -599,23 +597,22 @@ class SearchResultGenerator {
             }
         }
 
+        $columnName = 'vocab_number';
+        if($formField['type'] == 'user_select'){
+            $columnName = 'username';
+        }
+
         if ($sameMltPresent == false) {
-            //$sqlArray['select'][] = " GROUP_CONCAT(DISTINCT $mltTable.vocab_number ORDER BY $mltTable.vocab_number ASC SEPARATOR ' , ')  as $fieldName ";
             $this->sqlArray['join'][] = array('table' => $mltTable, 'jointype' => 'LEFT', 'field1' => 'record_number', 'field2' => $entity_type . '.' . get_primary_key($entity_type), 'entity1' => $as, 'as' => $as);
         }
         $fieldSqlName = array();
 
         if ($type == 'view') {
-            $fieldSqlName = array('field' => "GROUP_CONCAT(DISTINCT $as.vocab_number ORDER BY $as.vocab_number ASC SEPARATOR ' , ') ", 'as' => " AS {$entity_type}_{$fieldName}");
+            $fieldSqlName = array('field' => "GROUP_CONCAT(DISTINCT $as.$columnName ORDER BY $as.$columnName ASC SEPARATOR ' , ') ", 'as' => " AS {$entity_type}_{$fieldName}");
             return $fieldSqlName;
-            //return "GROUP_CONCAT(DISTINCT $as.vocab_number ORDER BY $as.vocab_number ASC SEPARATOR ' , ')  as {$entity_type}_{$fieldName}"; 
-            /* }else if($type == 'field'){
-              return "{$as}.vocab_number AS {$entity_type}_{$fieldName}";
-              } */
         } else {
-            $fieldSqlName = array('field' => $as . '.vocab_number', 'as' => " AS {$entity_type}_{$fieldName}");
+            $fieldSqlName = array('field' => $as .'.'. $columnName, 'as' => " AS {$entity_type}_{$fieldName}");
             return $fieldSqlName;
-            //return $as.'.vocab_number';
         }
     }
 

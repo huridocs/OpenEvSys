@@ -1,7 +1,7 @@
 <?php
 
 /**
- * DataObject implementing the common functionalities of all Entities. 
+ * DataObject implementing the common functionalities of all Entities.
  *
  * This file is part of OpenEvsys.
  *
@@ -23,7 +23,7 @@
  *
 
  * @author	Nilushan Silva <nilushan@respere.com>
- * 
+ *
  * @package	OpenEvsys
  * @subpackage	DataModel
  *
@@ -93,10 +93,10 @@ class DomainEntity extends ADODB_Active_Record {
 
         $this->Save();
         $this->SaveManagementData();
-      
+
         foreach ($this->mt as $mtField) {
             if (sizeof($this->$mtField) > 0) {
-               
+
                 MtFieldWrapper::setMTTermsforEntity($mtField, $this->entity, $this->{$this->keyName}, $this->$mtField);
             }
         }
@@ -226,13 +226,15 @@ class DomainEntity extends ADODB_Active_Record {
             return false;
         $table = $this->TableInfo();
 
-        $where = "$field='" . $value . "'";
-        $sql = 'DELETE FROM ' . $this->_table . ' WHERE ' . $where;
-        $ok = $db->Execute($sql);
+        $ok = true;
+        if(!is_null($field)){
+          $where = "$field='" . $value . "'";
+          $sql = 'DELETE FROM ' . $this->_table . ' WHERE ' . $where;
+          $ok = $db->Execute($sql);
+        }
 
         $sql2 = "DELETE FROM management WHERE entity_type = '" . $this->_table . "' AND entity_id = '" . $this->{$this->keyName} . "'";
-        $ok2 = $db->Execute($sql2);
-
+        $ok = $db->Execute($sql2);
         if (!$ok || !$ok2) {
             $err = $this->ErrorMsg();
             //throw new DbException($err);
