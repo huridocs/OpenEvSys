@@ -8,17 +8,23 @@ require_once(APPROOT . 'mod/analysis/lib_analysis.inc');
  * @author ks
  *
  */
-class dashboardModule extends shnModule {
+class dashboardModule extends shnModule
+{
 
-     function act_default() {
+    function act_default()
+    {
         set_redirect_header('dashboard', 'dashboard');
     }
-    function __construct() {
+
+    function __construct()
+    {
         $this->main_entity = (isset($_POST['main_entity'])) ? $_POST['main_entity'] : $_GET['main_entity'];
 
         $this->search_entity = (isset($_GET['shuffle_results']) && $_GET['shuffle_results'] != 'all') ? $_GET['shuffle_results'] : $this->main_entity;
     }
-    private function getEntityFields() {
+
+    private function getEntityFields()
+    {
         $res = Browse::getAllEntityFields();
         $domain = new Domain();
         foreach ($res as $record) {
@@ -46,17 +52,19 @@ class dashboardModule extends shnModule {
             $domain->$key->desc = $entity['desc'];
             $domain->$key->ac_type = $entity['ac_type'];
         }
+
         return $domain;
     }
 
-    public function act_dashboard() {
+    public function act_dashboard()
+    {
         global $global, $conf;
 
         $activeFormats = getActiveFormats();
         $entityFields = Browse::getAllEntityFields();
         $response = array();
-        foreach ($activeFormats as $format=>$formatTitle) {
-            if($conf['dashboard_format_counts_'.$format] != 'true'){
+        foreach ($activeFormats as $format => $formatTitle) {
+            if ($conf['dashboard_format_counts_' . $format] != 'true') {
                 continue;
             }
             $count_query = "SELECT COUNT(*) as count FROM {$format} ";
@@ -64,10 +72,10 @@ class dashboardModule extends shnModule {
             try {
                 $res_count = $global['db']->Execute($count_query);
                 foreach ($res_count as $row) {
-                    $response["counts"][$format] = array((int) $row["count"],$formatTitle);
+                    $response["counts"][$format] = array((int)$row["count"], $formatTitle);
                 }
             } catch (Exception $e) {
-                
+
             }
         }
         $timelineType = "day";
@@ -125,12 +133,23 @@ class dashboardModule extends shnModule {
             $selVal = $entity . "|||" . $field;
             if (in_array($selVal, $dashboard_date_counts)) {
                 $primary_key = get_primary_key($entity);
-                $sql = "SELECT  DATE_FORMAT(e.$field ,'$dateFormat') as val , COUNT(e.$primary_key) AS count
-                FROM  $entity e  ";
-                if ($datestart && $dateend) {
-                    $sql .= " where e.$field  BETWEEN '$datestart' AND '$dateend' ";
+                if (in_array($field,array('date_received','date_of_entry','date_updated'))) {
+                    $sql = "SELECT  DATE_FORMAT(m.$field,'$dateFormat') as val , COUNT(e.$primary_key) AS count
+                      FROM  $entity e join management m on m.entity_id=e.$primary_key and m.entity_type='$entity' ";
+                    if ($datestart && $dateend) {
+                        $sql .= " where m.$field BETWEEN '$datestart' AND '$dateend' ";
+                    }
+                    $sql .= "GROUP BY val order by m.$field ";
+
+                } else {
+                    $sql = "SELECT  DATE_FORMAT(e.$field ,'$dateFormat') as val , COUNT(e.$primary_key) AS count
+                      FROM  $entity e  ";
+                    if ($datestart && $dateend) {
+                        $sql .= " where e.$field  BETWEEN '$datestart' AND '$dateend' ";
+                    }
+                    $sql .= "GROUP BY val order by e.$field  ";
                 }
-                $sql .= "GROUP BY val order by e.$field  ";
+
                 $response["timeline"][$selVal]['entity'] = $entity;
                 $response["timeline"][$selVal]['entity_label'] = $activeFormats[$entity];
                 $response["timeline"][$selVal]['field_name'] = $field;
@@ -140,13 +159,13 @@ class dashboardModule extends shnModule {
 
                     foreach ($res_count as $row) {
                         $response["timeline"][$selVal]['data'][0] = array(ucfirst($timelineType), "Count");
-                        if (!$row["val"] && !(int) $row["count"]) {
+                        if (!$row["val"] && !(int)$row["count"]) {
                             continue;
                         }
                         if (!$row["val"]) {
                             $row["val"] = "Undefined";
                         }
-                        $response["timeline"][$selVal]['data'][] = array($row["val"], (int) $row["count"]);
+                        $response["timeline"][$selVal]['data'][] = array($row["val"], (int)$row["count"]);
                     }
                 } catch (Exception $e) {
 
@@ -170,7 +189,7 @@ class dashboardModule extends shnModule {
         }
 
         require_once(APPROOT . 'mod/analysis/searchSql.php');
-        
+
 
         $searchSql = new SearchResultGenerator();
 
@@ -241,15 +260,15 @@ class dashboardModule extends shnModule {
                             } else {
                                 $vall = $val[0];
                             }
-                        } elseif (!(int) $val[1]) {
+                        } elseif (!(int)$val[1]) {
                             continue;
                         }
                         $chart["data"][0][] = $vall;
-                        $chart["data"][1][] = (int) $val[1];
+                        $chart["data"][1][] = (int)$val[1];
 
                         $chart2["data"][0] = array($chart["title"], _t("COUNT"));
-                        $chart2["data"][] = array($vall, (int) $val[1]);
-                        $total +=(int) $val[1];
+                        $chart2["data"][] = array($vall, (int)$val[1]);
+                        $total += (int)$val[1];
                     }
                     $chart2["total"] = $total;
 
@@ -272,10 +291,10 @@ class dashboardModule extends shnModule {
             try {
                 $res_count = $global['db']->Execute($count_query);
                 foreach ($res_count as $row) {
-                    $response["counts30"][$entity] = array((int) $row["count"],$activeFormats[$entity]);
+                    $response["counts30"][$entity] = array((int)$row["count"], $activeFormats[$entity]);
                 }
             } catch (Exception $e) {
-                
+
             }
         }
 
@@ -285,10 +304,10 @@ class dashboardModule extends shnModule {
         try {
             $res_count = $global['db']->Execute($sql);
             foreach ($res_count as $row) {
-                $response["activeusers"][] = array($row["val"], (int) $row["count"]);
+                $response["activeusers"][] = array($row["val"], (int)$row["count"]);
             }
         } catch (Exception $e) {
-            
+
         }
         $sql = "SELECT al.username as val,COUNT(al.`action`) AS count
                 FROM  audit_log al where al.action='update'
@@ -296,10 +315,10 @@ class dashboardModule extends shnModule {
         try {
             $res_count = $global['db']->Execute($sql);
             foreach ($res_count as $row) {
-                $response["editusers"][] = array($row["val"], (int) $row["count"]);
+                $response["editusers"][] = array($row["val"], (int)$row["count"]);
             }
         } catch (Exception $e) {
-            
+
         }
 
         $sql = "SELECT al.username as username,entity,record_number
@@ -311,11 +330,11 @@ class dashboardModule extends shnModule {
                 $response["deleteusers"][] = array($row["entity"], $row["record_number"], $row["username"]);
             }
         } catch (Exception $e) {
-            
+
         }
         // var_dump($response);exit;
         $this->response = $response;
     }
 
- 
+
 }

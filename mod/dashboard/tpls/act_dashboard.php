@@ -104,7 +104,7 @@ global $conf;
                 <div class="stats">
                     <div class="row-fluid">
                         <div class="span12">
-                            <div id="<?php echo $timeline['entity']?>timeline"></div>
+                            <div id="<?php echo $timeline['entity']."_".$timeline['field_name']?>timeline"></div>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@ global $conf;
                 if($timeline['data']){?>
             var data1 = google.visualization.arrayToDataTable(<?php echo json_encode($timeline['data']) ?>);
 
-            new google.visualization.ColumnChart(document.getElementById("<?php echo $timeline['entity']?>timeline")).draw(data1, {
+            new google.visualization.ColumnChart(document.getElementById("<?php echo $timeline['entity']."_".$timeline['field_name']?>timeline")).draw(data1, {
                 titleTextStyle: {
                     fontSize: 14
                 },
@@ -257,7 +257,7 @@ global $conf;
                 colors: ['#ea494a']
             });
             <?php }else{?>
-            $("#<?php echo $timeline['entity']?>timeline").html("<?php echo _t("No data available")?>");
+            $("#<?php echo $timeline['entity']."_".$timeline['field_name']?>timeline").html("<?php echo _t("No data available")?>");
             <?php }
                 }?>
 
