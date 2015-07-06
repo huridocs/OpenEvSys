@@ -44,15 +44,16 @@
                 <td>
                   <?php
                     if($field['type'] == 'location'){
-                      $id = $field['field_number'];
+                      $id = $field['field_number'] + $count;
                       $title = $field['label'];
                       $latitude_property = $field['map']['field'].'_latitude';
                       $longitude_property = $field['map']['field'].'_longitude';
                       unset($field['label']);
                       $field['extra_opts']['value'] = array('latitude' => $subformat->$latitude_property, 'longitude' => $subformat->$longitude_property);
-                      $content = shn_form_get_html_fields(array($field), false)[0];
+                      $field['extra_opts']['value']['name'] = $id;
+                      $content = shn_form_get_html_fields(array($id => $field), false)[0];
                       ?>
-                      <a href="" class="" data-toggle="modal" data-target="#<?=$field['field_number']?>">
+                      <a href="" class="" data-toggle="modal" data-target="#<?=$id?>">
                         <?=$subformat->$latitude_property?>
                          / 
                         <?=$subformat->$longitude_property?>
