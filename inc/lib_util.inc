@@ -24,13 +24,13 @@
  *
  * @auther  H J P Fonseka <jo@respere.com>
  * @package Framework
- * 
+ *
  */
 
 /**
- * __autoload function will be 
- * 
- * @param mixed $class_name 
+ * __autoload function will be
+ *
+ * @param mixed $class_name
  * @access protected
  * @return void
  */
@@ -59,14 +59,14 @@ class AutoLoadClass {
 spl_autoload_register(array('AutoLoadClass', '__autoload'));
 
 /**
- * get_uri 
- * 
- * @param string $module 
- * @param string $action 
- * @param mixed $args 
- * @param string $stream 
- * @param mixed $id 
- * @param mixed $return 
+ * get_uri
+ *
+ * @param string $module
+ * @param string $action
+ * @param mixed $args
+ * @param string $stream
+ * @param mixed $id
+ * @param mixed $return
  * @access public
  * @return void
  */
@@ -304,8 +304,7 @@ function get_table_for_entity($entity) {
 }
 
 function get_primary_key($entity) {
-
-    switch ($entity) {
+  switch ($entity) {
         case 'event':
             return "event_record_number";
         case 'person':
@@ -324,8 +323,32 @@ function get_primary_key($entity) {
         case 'supporting_docs':
             return "doc_id";
         default:
-            return $entity . "_record_number";
+            return search_primary_key($entity);
+        }
+
+}
+
+function search_primary_key($entity){
+  $browse = new Browse();
+  $sql = "SELECT KU.table_name as tablename,column_name as primary_key
+          FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS AS TC
+          INNER JOIN
+          INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KU
+          ON TC.CONSTRAINT_TYPE = 'PRIMARY KEY' AND
+          TC.CONSTRAINT_NAME = KU.CONSTRAINT_NAME
+          GROUP BY KU.TABLE_NAME";
+
+  $primary_keys = $browse->ExecuteQuery($sql);
+
+  $primary_key = $entity . "_record_number";
+
+  foreach($primary_keys as $table){
+    if($entity == $table['tablename']){
+      $primary_key = $table['primary_key'];
     }
+  }
+
+  return $primary_key;
 }
 
 function get_mod_label($entity, $type = "single") {
@@ -414,7 +437,7 @@ function set_links_in_recordset($recordset, $entity, $additionalurlfields = arra
         }
         $recordArray[] = $record;
 
-        //var_dump( $entity , $record); 
+        //var_dump( $entity , $record);
     }
 
 
@@ -528,7 +551,7 @@ function is_management_field($formField) {
                 $fld_name == 'date_of_entry' ||
                 $fld_name == 'entered_by' ||
                 $fld_name == 'project_title' ||
-                $fld_name == 'comments' || 
+                $fld_name == 'comments' ||
                 $fld_name == 'record_grouping' ||
                 $fld_name == 'date_updated' ||
                 $fld_name == 'updated_by' ||
@@ -654,7 +677,7 @@ function getDefaultMenuItems() {
         "event_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "events", "parent" => "eventsbrowse",
             "url" => get_url('events', 'permissions', null, array('eid' => $eid), null, true), "module" => "events", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $event;
-                
+
 if ($event->confidentiality == "y") {
 return true;
 }
@@ -695,7 +718,7 @@ return false;')),
         "person_permissions" => array("level" => 1, "title" => _t('PERMISSIONS'), "aclmod" => "person", "parent" => "personsbrowse",
             "url" => get_url('person', 'permissions', null, array('pid' => $pid), null, true), "module" => "person", "action" => "permissions",
             "aliases" => array(), "check" => create_function("", 'global $person;
-                
+
 if ($person->confidentiality == "y") {
 return true;
 }
@@ -713,7 +736,7 @@ return false;')),
         "document_audit" => array("level" => 1, "title" => _t('AUDIT_LOG'), "aclmod" => "docu", "parent" => "documentsbrowse",
             "url" => get_url('docu', 'audit', null, array('doc_id' => $doc_id), null, true), "module" => "docu", "action" => "audit",
             "aliases" => array()),
-        "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true), 
+        "biographybrowse" => array("level" => 0, "title" => _t('BIOGRAPHIC_DETAILS'), "aclmod" => "person", "url" => get_url('person', 'browse_biography', null, null, null, true),
             "module" => "person", "action" => "browse_biography",'check'=>create_function('$menu','
                global $conf;
 if ($conf["menus"]["biography_list"]) {
@@ -765,7 +788,7 @@ return false;
             "aliases" => array()),
         "edit_security" => array("level" => 0, "title" => _t('Security'), "aclmod" => "",
             "url" => get_url('home', 'edit_security', null, null, null, true), "module" => "home", "action" => "edit_security",
-            "aliases" => array()),
+            "aliases" => array())
     );
     return $defaultMenuItems;
 }
@@ -883,32 +906,21 @@ function getMenu($menu) {
     foreach ($activeMenuOrdered as $key => $menu) {
         $menuItemsNew[] = $menu;
     }
+
     $activeMenuOrdered = $menuItemsNew;
     return $activeMenuOrdered;
 }
+
 function makeLinksClickable($text){
     return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1" target="_blank">$1</a>', $text);
 }
-function getAllFormats(){
-    $formats = array(
-        'person' => _t('PERSON'),
-        'event' => _t('EVENT'),
-        'act' => _t('ACT'),
-        'arrest' => _t('ARREST'),
-        'destruction' => _t('DESTRUCTION'),
-        'killing' => _t('KILLING'),
-        'torture' => _t('TORTURE'),
-        'chain_of_events' => _t('CHAIN_OF_EVENT'),
-        'involvement' => _t('INVOLVEMENT'),
-        'information' => _t('INFORMATION'),
-        'intervention' => _t('INTERVENTION'),
-        'biographic_details' => _t('BIOGRAPHIC_DETAILS'),
-        'address' => _t('ADDRESS'),
-        'supporting_docs_meta' => _t('DOCUMENT')
-    );
 
-    return $formats;
+function getAllFormats(){
+    include_once APPROOT . 'mod/admin/entities.php';
+    $entities = new Entities();
+    return $entities->select_options();
 }
+
 function getActiveFormats(){
     global $conf;
     $formats = getAllFormats();
@@ -920,6 +932,7 @@ function getActiveFormats(){
 
     return $formats;
 }
+
 function isFormatActive($format){
     global $conf;
     if(isset($conf['hide_'.$format.'_format']) && $conf['hide_'.$format.'_format'] == 'true'){
@@ -927,3 +940,4 @@ function isFormatActive($format){
     }
     return true;
 }
+

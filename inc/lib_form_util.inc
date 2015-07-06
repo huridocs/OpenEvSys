@@ -43,7 +43,7 @@ function place_form_elements($entity_form, $fields) {
         }
 
         if ($counter == $divide_index) {
-            
+
         }
         $counter++;
     }
@@ -96,7 +96,7 @@ function get_form_element_length($formType) {
     }
 }
 
-function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
+function generate_formarray($entity, $viewType = 'new', $allVisible = false, $isSubformat = false) {
 //$viewType can be 'new' , 'edit' or 'view'
 //var_dump($entity , $viewType);
     global $global, $conf;
@@ -125,11 +125,15 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false) {
         switch ($viewType) {
             case 'new':
                 $visible_field = 'visible_new';
-                acl_is_entity_allowed($entity, 'create', $record_number);
+                if(!$isSubformat){
+                  acl_is_entity_allowed($entity, 'create', $record_number);
+                }
                 break;
             case 'edit' :
                 $visible_field = 'visible_new';  // change to  visible_edit when edit has different forms
-                acl_is_entity_allowed($entity, 'update', $record_number);
+                if(!$isSubformat){
+                  acl_is_entity_allowed($entity, 'update', $record_number);
+                }
                 break;
             case 'view':
                 $visible_field = 'visible_view';
@@ -332,11 +336,9 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     if ($valuesArray == null) {                // testing
         $valuesArray = $_POST;
     }
-//$formArrayEntry = current($formArray);
-//reset($formArray);
     $recordkeyName = get_primary_key($entity->_table);
-//$entity_key_value = $entity->$recordkeyName;
-    
+
+
     if ($entity->$recordkeyName == null && ($valuesArray[$recordkeyName] == null || $valuesArray[$recordkeyName] == '' )) {
         $entity_key_value = $entity->$recordkeyName = shn_create_uuid($entity->_table);
     } else if ($entity->$recordkeyName != null) {
@@ -349,7 +351,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     }
 
     $entity->clari_notes = array();
-
     foreach ($formArray as $fieldName => $formField) {
 
         $recordkeyName = get_primary_key($entity->_table);
@@ -358,30 +359,21 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 $entity->LoadFromRecordNumber($valuesArray[$fieldName]);
                 $entity->LoadManagementData();
                 $entity_key_value = $valuesArray[$fieldName];
-//var_dump('values array field name ' , $valuesArray[ $fieldName]);
             }
             break;
         }
     }
-
+    
     foreach ($formArray as $fieldName => $formField) {
-       
+
         if ($formField['map']['entity'] == $entity->_table) {
-
-
-
-
-//var_dump($formField['map']);
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
-//$name = $formField['map']['field'];
-                if ($formField['map']['mt'] || $formField['type'] == 'user_select') {   // micro thesauri terms
-                    //if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
+                if ($formField['map']['mt'] || $formField['type'] == 'user_select') {   // 
                     if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                         $entity->$formField['map']['field'] = $valuesArray[$fieldName];
                     } else {
                         $entity->$formField['map']['field'] = null;
                     }
-                    //}
                 } else {
                     if ($fieldName != $recordkeyName) {
 
@@ -420,7 +412,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                             }
                         }
                     }
-//var_dump($termArray);
                     if (sizeof($userArray) > 0) {
                         $entity->$formField['map']['field'] = $userArray;
                     }
@@ -446,7 +437,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                             }
                         }
                     }
-//var_dump($termArray);
                     if (sizeof($termArray) > 0) {
                         $entity->$formField['map']['field'] = $termArray;
                     }
@@ -455,12 +445,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
 
             if ($formField['extra_opts']['clari'] == 'true') {  // Clarifying Notes
                 if ($formField['map']['mlt'] != 'true') {              //NON multi value
-                    /*
-                      $clari_note_object = new ClariNotes();
-                      $clari_note_object->entity = $entity->_table ;
-                      $clari_note_object->record_number = $entity_key_value;
-                      $clari_note_object->field_name = $formField['map']['field'];
-                      $clari_note_object->value = $valuesArray[$fieldName.'_clarify']; */
                     if (is_array($valuesArray[$fieldName])) {
                         $v = $valuesArray[$fieldName];
                         $va = array_shift($v);
@@ -477,15 +461,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 } else {
                     if (is_array($valuesArray[$fieldName]))
                         foreach ($valuesArray[$fieldName] as $mtvalue) {
-                            /*
-                              $clari_note_object = new ClariNotes();
-                              $clari_note_object->entity = $entity->_table ;
-                              $clari_note_object->record_number = $entity_key_value;
-                              $clari_note_object->field_name = $formField['map']['field'];
-                              $clari_note_object->vocab_number = $mtvalue; //iterate this array to get clari notes for each multi value
-                              $clari_note_object->value = $valuesArray[$fieldName.'_clarify_' . $mtvalue ]; */
-
-//$clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
                             $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_clarify']);
 
 
@@ -498,7 +473,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
             }
         }
     }
-//var_dump($entity);
 
     return $entity;
 }
@@ -698,7 +672,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
 
     function shn_form_get_html_filter_table(
         $columnNames = null, $columnValues = null, $htmlFilterFields = null, $argumentEncoder = null) {
-        
+
         $requestObj = new shnRequest();
         $mod = $requestObj->getRequestModule();
         $action = $requestObj->getRequestAction();
@@ -714,7 +688,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
             <thead>
 
 
-                <tr> 
+                <tr>
                     <?php
                     foreach ($columnNames as $field => $value) {
                         $url = get_sort_heading($field, $argumentEncoder);
@@ -744,7 +718,6 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                     foreach ($columnNames as $field => $value) {
                         $label = ucwords(str_replace('_', ' ', $field));
                         echo "<td id='td_" . $field . "'>" . $htmlFilterFields[$field] . "</td>";
-                        //echo "<th id='td_" . $field . "'><span id='span_" . $field . "' class='inactive'>" . $value . "</span>" . $htmlFilterFields[$field] . "</th>";
                     }
                     ?>
                     <td class="table_actions" >
@@ -752,7 +725,7 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                             <i class="icon-filter"></i><?php echo _t('FILTER') ?>
                         </button>
                         <a class="btn btn-mini" href="<?php get_url($mod, $action, null, array('reset' => 'true')); ?>">
-                            <i class="icon-remove"></i>  
+                            <i class="icon-remove"></i>
                             <?php echo _t('RESET') ?></a>
                     </td>
 
@@ -794,12 +767,12 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                         ?>
                         <td>
                             <a class="btn btn-success btn-mini" href="<?php echo $columnvalue['record_url'] ?>" rel="tooltip" title="View">
-                                <i class="icon-zoom-in icon-white"></i>  
-                                <?php echo _t('View') ?>                       
+                                <i class="icon-zoom-in icon-white"></i>
+                                <?php echo _t('View') ?>
                             </a>
                             <a class="btn btn-info btn-mini" href="<?php echo $columnvalue['record_edit_url'] ?>" rel="tooltip" title="Edit">
-                                <i class="icon-edit icon-white"></i>  
-                                <?php echo _t('EDIT') ?>                                          
+                                <i class="icon-edit icon-white"></i>
+                                <?php echo _t('EDIT') ?>
                             </a>
                             <?php
                             $entity = $mod;
@@ -809,8 +782,8 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                             if ($mod == "docu" || acl_is_entity_allowed_boolean($entity, 'delete')) {
                                 ?>
                                 <a class="btn btn-grey btn-mini" href="<?php echo $columnvalue['record_delete_url'] ?>" rel="tooltip" title="Delete">
-                                    <i class="icon-trash"></i> 
-                                    <?php echo _t('DELETE') ?>                                
+                                    <i class="icon-trash"></i>
+                                    <?php echo _t('DELETE') ?>
                                 </a>
                             <?php } ?>
                         </td>
@@ -1094,4 +1067,3 @@ function shn_form_get_html_event_search_ctrl($columnNames = null, $columnValues 
     </table>
     <?php
 }
-

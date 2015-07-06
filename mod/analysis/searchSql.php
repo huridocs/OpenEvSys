@@ -8,8 +8,8 @@ class SearchResultGenerator {
 
     public function __construct() {
 
-        //create the form object for the entity so that the meta data of the fields are know 
-        //to create the SQL statement as required				
+        //create the form object for the entity so that the meta data of the fields are know
+        //to create the SQL statement as required
     }
 
     public function sqlForJsonQuery($json) {
@@ -37,6 +37,7 @@ class SearchResultGenerator {
 
         foreach ($this->searchQuery['conditions'] as $condition) {
 
+
             $nowEntity = $condition['entity'];
             if ($lastEntity == null) {
                 $this->sqlArray['from'] = $this->tableOfEntity($nowEntity);
@@ -45,14 +46,15 @@ class SearchResultGenerator {
                 $this->entityJoin($lastEntity, $nowEntity);
                 $this->addGroupBy($nowEntity);
             } else {
-                
+
             }
+
             $entityForm = $this->getFormArrayForEntity($nowEntity);
             $this->generateCondition($condition, $entityForm);
             $lastEntity = $nowEntity;
         }
 
-        //if the entity is same as before 
+        //if the entity is same as before
         //  continue adding the condition for the field.
         //if the entity is different,
         //  add the needed join
@@ -65,7 +67,6 @@ class SearchResultGenerator {
 
         //iterate through the view results
         foreach ($this->searchQuery['select'] as $viewValue) {
-            //var_dump('viewValue' , $viewValue);
             $this->createResult($viewValue['entity'], $viewValue['field'], 'view');
         }
 
@@ -157,7 +158,7 @@ class SearchResultGenerator {
                 $conditionString = $this->generateComparison('text', $condition, $fieldArray);
                 break;
         }
-        //var_dump('$conditionString' , $conditionString); 
+        //var_dump('$conditionString' , $conditionString);
         if (!($conditionString == null || trim($conditionString)) == '') {
             $condArray = array();
             $condArray['condition'] = $conditionString;
@@ -170,7 +171,7 @@ class SearchResultGenerator {
 
     private function generateComparison($type, $condition, $fieldArray) {
         global $global;
-        //$type can be 'text' , date, mt ,  
+        //$type can be 'text' , date, mt ,
         //based on the operator of search and datatype, the where criteria has to be developed here
         $value = $condition['value'];
         $value = addslashes($value);
@@ -422,17 +423,17 @@ class SearchResultGenerator {
                     case 'monthly':
                         $conditionString = " (CONCAT( LPAD( MONTH($fieldAlias),2,'0' ) , '-' , YEAR($fieldAlias))) ";
                         $this->sqlArray['select'][] = $conditionString . "  $fieldAliasView";
-                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count "; 
+                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count ";
                         break;
                     case 'yearly':
                         $conditionString = "  YEAR($fieldAlias) ";
                         $this->sqlArray['select'][] = $conditionString . " $fieldAliasView";
-                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count ";     		            
+                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count ";
                         break;
                     default :
                         $conditionString = " (CONCAT( LPAD( DAY($fieldAlias),2,'0' ) , '-' ,  LPAD( MONTH($fieldAlias),2,'0' ) , '-' , YEAR($fieldAlias))) ";
                         $this->sqlArray['select'][] = $conditionString . "  $fieldAliasView";
-                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count "; 
+                        //$this->sqlArray['select'][] = " COUNT( $conditionString )  {$fieldAliasView}_count ";
                         break;
                 }
                 //return $condition;
@@ -444,7 +445,7 @@ class SearchResultGenerator {
                 break;
         }
         //var_dump('sqlArray' , $this->sqlArray['select'] );
-        //var_dump('conditionString' , $conditionString ); 
+        //var_dump('conditionString' , $conditionString );
 
         $this->sqlArray['groupby'][] = $conditionString;
         //return  $condition;
@@ -515,7 +516,7 @@ class SearchResultGenerator {
             $this->managementJoin($formField['map']['entity'], $formField['map']['field']);
             //if($type == 'view'){
             //	$as = ' AS ' . $formField['map']['entity'].'_'. $formField['map']['field'];
-            //}   		
+            //}
             //$formField['map']['entity'] = $formField['map']['entity'] . '_management' ;
             $entityField = $formField['map']['entity'] . '_management';
 
@@ -525,13 +526,13 @@ class SearchResultGenerator {
         }
 
         if ($this->isPersonExtention($entityType) == true) {
-            //var_dump('came to personExtension');	
+            //var_dump('came to personExtension');
             $entityField = $this->setPersonSecondaryEntity($entityType);
             //var_dump('personAs' , $asReturn);
 //    		if($type == 'view' ){
 //    			$as = ' AS ' . $asReturn.'_'. $formField['map']['field'];
 //    		}
-//    		return $asReturn . '.' . $formField['map']['field'] . $as; 
+//    		return $asReturn . '.' . $formField['map']['field'] . $as;
         }
 
         if ($formField['map']['entity'] == 'person' && $formField['map']['field'] == 'person_addresses') {
@@ -541,7 +542,7 @@ class SearchResultGenerator {
         }
 
         if ($this->tableOfEntity($formField['map']['entity']) == 'person' && $this->tableOfEntity($formField['map']['field']) == 'addresses') {
-            
+
         }
 
         if ($formField['type'] == 'document') {
@@ -557,8 +558,7 @@ class SearchResultGenerator {
         } else if ($type == 'field') {  // called only when the field is a mt_tree.
             $as = ' AS ' . $formField['map']['entity'] . '_' . $formField['map']['field'];
         }
-        if ($onlyAlias == false) {
-            //var_dump('whole' , $type , $formField['map']['entity'].'.'. $formField['map']['field'] . $as );
+        if ($onlyAlias == false && !is_null($entityField)) {
             return $entityField . '.' . $formField['map']['field'] . $as;
         } else {
             //var_dump('onlyAlias' , $type , $as );
@@ -579,7 +579,11 @@ class SearchResultGenerator {
     private function addGroupBy($entity) {
         $entityArray = $this->getEntityArray($entity);
         $pkField = get_primary_key($this->tableOfEntity($entity));
-        $this->sqlArray['groupby'][] = $this->getFieldAlias($entityArray[$pkField], 'query', $entity);
+        $groupBy = $this->getFieldAlias($entityArray[$pkField], 'query', $entity);
+
+        if(!is_null($groupBy)){
+          $this->sqlArray['groupby'][] = $groupBy;
+        }
     }
 
     private function mtJoin($formField, $type) {
@@ -822,7 +826,11 @@ class SearchResultGenerator {
         }
 
         $entityForm = $this->tableOfEntity($entity) . '_form';
-        return $entityForm('all');
+        if(function_exists($entityForm)){
+          return $entityForm('all');
+        }
+
+        return default_form($entity, 'all');
     }
 
     public function tableOfEntity($entity_type) {

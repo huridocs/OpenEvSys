@@ -2,13 +2,13 @@
 <?php include_once('person_name.php')?>
 <?php
     include_once('view_card_list.php');
-    draw_card_list('pa',$pid);	
+    draw_card_list('pa',$pid);
 ?>
 <div class="panel">
 <a class="btn btn-primary" href="<?php echo get_url('person','new_address',null, null) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD_ADDRESS')?></a>
 <br />
-<br />    
-<?php	
+<br />
+<?php
 	if((is_array($addresses) && count($addresses) != 0)){
 ?>
 		<form class="form-horizontal"  action="<?php get_url('person','delete_address')?>" method="post">
@@ -25,13 +25,13 @@
 				<th><?php echo _t('EMAIL')?></th>
 				<th><?php echo _t('WEBSITE')?></th>
 				<th><?php echo _t('START_DATE')?></th>
-				<th><?php echo _t('END_DATE')?></th>				
+				<th><?php echo _t('END_DATE')?></th>
 			</tr>
 		</thead>
 		<tbody>
 		<?php
-		$count = 0;		
-		foreach($addresses as $add){				
+		$count = 0;
+		foreach($addresses as $add){
 			$address->LoadfromRecordNumber($add);
 			$odd = ($i++%2==1) ? "odd " : '' ;
 		?>
@@ -46,9 +46,9 @@
 			<td><?php echo $address->email; ?></td>
 			<td><?php echo $address->web; ?></td>
 			<td><?php echo $address->start_date; ?></td>
-			<td><?php echo $address->end_date; ?></td>				
+			<td><?php echo $address->end_date; ?></td>
 			</tr>
-		<?php	
+		<?php
 			$count++;
 		}
 		?>
@@ -67,8 +67,8 @@
     	echo _t('THERE_IS_NO_ADDRESS_ADDED_TO_THIS_PERSON_YET__YOU_SHOULD_ADD_SOME_');
     	echo "</div>";
 	}
-	if(isset($_GET['address_id'])){ 
-	?>			
+	if(isset($_GET['address_id'])){
+	?>
 		<div class="form-container">
 		<br />
 		<br />
@@ -80,14 +80,14 @@
 		<br />
 	    <br />
 	    <form class="form-horizontal"  action='<?php echo get_url('person','edit_address')?>' method='post' enctype='multipart/form-data'>
-		<?php		
-	    shn_form_get_html_labels($address_form , false );	
+		<?php
+	    shn_form_get_html_labels($address_form , false );
 		$fields['save'] = null;
 		?>
 		</form>
 		</div>
 	<?php
-	} 
+	}
 	?>
-		
+
 </div>

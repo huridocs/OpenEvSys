@@ -32,6 +32,7 @@ include_once APPROOT . 'inc/lib_form_util.inc';
 include_once APPROOT . 'inc/lib_uuid.inc';
 include_once APPROOT . 'inc/lib_files.inc';
 require_once APPROOT . 'inc/ArgumentEncoder.php';
+require_once(APPROOT . 'inc/subformats/SubformatsModel.php');
 
 include_once 'messages.inc';
 
@@ -88,7 +89,7 @@ class personModule extends shnModule {
             'request_page', 'rpp', 'person_record_number', 'counting_unit',
             'person_name', 'date_of_birth', 'sex', 'filter', 'sort', 'sortorder'
         );
-        
+
         $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
@@ -106,8 +107,8 @@ class personModule extends shnModule {
     }
 
     /**
-     * act_new_person will generate ui to add a new person 
-     * 
+     * act_new_person will generate ui to add a new person
+     *
      * @access public
      * @return void
      */
@@ -140,8 +141,8 @@ class personModule extends shnModule {
     }
 
     /**
-     * act_person_address_list will generate ui for person address 
-     * 
+     * act_person_address_list will generate ui for person address
+     *
      * @access public
      * @return void
      */
@@ -273,7 +274,7 @@ class personModule extends shnModule {
     }
 
     function act_person() {
-        $this->biographics = Browse::getRelativeInfo($_GET['pid']); //loaded for contextual info			
+        $this->biographics = Browse::getRelativeInfo($_GET['pid']); //loaded for contextual info
         $this->biographics_reverse = Browse::getRelativeInfoReverse($_GET['pid']);
     }
 
@@ -311,12 +312,12 @@ class personModule extends shnModule {
             // Generates the view's Label list
             $htmlFields[$field_name] = $entity_fields_html[$field_name];
         }
-        
+
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
+
         $this->result_pager->setArgumentEncoder($this->argumentEncoder);
 
         $this->columnValues = $this->result_pager->get_page_data();
-
         $this->columnValues = set_links_in_recordset($this->columnValues, 'person');
 
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);
@@ -324,6 +325,7 @@ class personModule extends shnModule {
         //rendering the view
         $this->columnNames = $field_list;
         $this->htmlFields = $htmlFields;
+
     }
 
     function act_delete_person() {
@@ -659,7 +661,7 @@ class personModule extends shnModule {
             $this->columnNames = $field_list;
             $this->htmlFields = $htmlFields;
             $this->biographics = $this->columnValues;
-           
+
         } else {
             $this->biographics = Browse::getBiographyList($person_id);
             $this->biographics_reverse = Browse::getBiographyListReverse($person_id);

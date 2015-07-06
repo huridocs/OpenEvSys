@@ -49,51 +49,7 @@ function form_customization_reset_all($entity) {
 }
 
 function form_customization_get_field_table($entity) {
-    switch ($entity) {
-        case 'person':
-            $res = Browse::getFields('person');
-            break;
-        case 'event':
-            $res = Browse::getFields('event');
-            break;
-        case 'act':
-            $res = Browse::getFields('act');
-            break;
-        case 'arrest':
-            $res = Browse::getFields('arrest');
-            break;
-        case 'killing':
-            $res = Browse::getFields('killing');
-            break;
-        case 'destruction':
-            $res = Browse::getFields('destruction');
-            break;
-        case 'torture':
-            $res = Browse::getFields('torture');
-            break;
-        case 'chain_of_events':
-            $res = Browse::getFields('chain_of_events');
-            break;
-        case 'involvement':
-            $res = Browse::getFields('involvement');
-            break;
-        case 'information':
-            $res = Browse::getFields('information');
-            break;
-        case 'intervention':
-            $res = Browse::getFields('intervention');
-            break;
-        case 'biographic_details':
-            $res = Browse::getFields('biographic_details');
-            break;
-        case 'supporting_docs_meta':
-            $res = Browse::getFields('supporting_docs_meta');
-            break;
-        case 'address':
-            $res = Browse::getFields('address');
-            break;
-    }
-    return $res;
+    return Browse::getFields($entity);
 }
 
 function form_customization_reset_field($entity, $field) {
@@ -120,7 +76,6 @@ function form_customization_process_entity_form($entity) {
     //var_dump($records);
     include_once(APPROOT . 'inc/i18n/lib_l10n.inc');
     $locales = l10n_get_locals();
-
 
     foreach ($records as $record) {
         $fieldValues = array();
@@ -354,7 +309,18 @@ function form_customization_add_field($field_type_options) {
             $fieldValues['is_repeat'] = 'y';
             $fieldValues['field_type'] = 'user_select';
             break;
-         case 'line' :
+        case 'subformat':
+            $field_mysql_type = "VARCHAR(14)";
+            $fieldValues['visible_browse'] = 'n';
+            $fieldValues['visible_adv_search'] = 'n';
+            $fieldValues['visible_adv_search_display'] = 'n';
+            $fieldvalues['visible_edit'] = 'n';
+            $fieldvalues['visible_new'] = 'n';
+            $fieldValues['is_repeat'] = 'n';
+            $fieldValues['required'] = 'n';
+            $fieldValues['field_type'] = 'subformat';
+            break;
+        case 'line' :
             $fieldValues['visible_browse'] = 'n';
             $fieldValues['visible_adv_search'] = 'n';
             $fieldValues['visible_adv_search_display'] = 'n';
@@ -398,9 +364,17 @@ function form_customization_add_field($field_type_options) {
     try {
 
         if ($fieldValues['field_type'] == "location") {
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
-        }if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
+            $latitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ";
+            $longitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ";
+            $dbQuery->ExecuteNonQuery($latitude_field);
+            $dbQuery->ExecuteNonQuery($longitude_field);
+        }
+        if($fieldValues['field_type'] == "subformat"){
+          include_once(APPROOT . 'inc/subformats/subformats.php');
+          $subformats = new Subformats($dbQuery);
+          $subformats->create($fieldValues['entity'], $fieldValues['field_name'], $fieldValues['field_label']);
+        }
+        if (($fieldValues['field_type'] == "mt_tree" || $fieldValues['field_type'] == "mt_select") && $fieldValues['is_repeat'] == 'y') {
             $mtIndex = new MtIndex();
             $mt_term = $mtIndex->getTermforCode($fieldValues['list_code']);
 
@@ -415,7 +389,7 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
             $dbQuery->ExecuteNonQuery($sql);
         }if ($fieldValues['field_type'] == "user_select" && $fieldValues['is_repeat'] == 'y') {
 
@@ -430,15 +404,14 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
            $dbQuery->ExecuteNonQuery($sql);
 
-        } elseif($fieldValues['field_type'] != "line") {
+        } elseif(!is_null($field_mysql_type)) {
           add_field_to_entity($fieldValues['entity'], $fieldValues['field_name'], $field_mysql_type);
         }
 
         add_field_to_data_dict($fieldValues);
-
     } catch (Exception $e) {
         var_dump($e,$sql);
         exit;
