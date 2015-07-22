@@ -22,12 +22,12 @@ class SubformatsModel {
 
   public function get_by_entity($entity_id){
      $browse = new Browse();
-     $sql = "SELECT vocab_number FROM $this->subformat_name WHERE `record_number` = '$entity_id'";
+     $sql = "SELECT vocab_number FROM `$this->subformat_name` WHERE `record_number` = '$entity_id'";
      $ids = $browse->ExecuteQuery($sql);
      $subformats = array();
-     
+
      $fields = generate_formarray($this->subformat_name, 'all', false, true);
-     
+
      foreach ($ids as $id) {
        $subformat =  $this->get_one($id["vocab_number"]);
        $subformat = $this->fill_relations($subformat, $fields);
@@ -76,7 +76,7 @@ class SubformatsModel {
       $result = $browse->ExecuteQuery($sql);
       array_push($results, $result[0][$property]);
     }
-    
+
     return $results;
   }
 
@@ -99,7 +99,7 @@ class SubformatsModel {
     $subformat->subformat_name = $this->subformat_name;
     $subformat->LoadfromRecordNumber($id);
     $subformat->LoadRelationships();
-    
+
     return $subformat;
   }
 
@@ -109,7 +109,7 @@ class SubformatsModel {
     }
 
     $browse = new Browse();
-    $sql = "DELETE FROM $this->subformat_name WHERE `vocab_number` in ('".implode("', '", $ids)."')";
+    $sql = "DELETE FROM `$this->subformat_name` WHERE `vocab_number` in ('".implode("', '", $ids)."')";
     $browse->ExecuteNonQuery($sql);
   }
 }
