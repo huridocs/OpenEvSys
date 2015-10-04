@@ -193,7 +193,14 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     if ($conf[$activemenu]) {
         $acMenu = @unserialize($conf[$activemenu]);
         if ($acMenu) {
-            $topMenuItems = $acMenu;
+            $acMenu['url'] = $defaultMenuItems[$menu['slug']]['url'];
+            $acMenu['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
+            $acMenu['mod'] = $defaultMenuItems[$menu['slug']]['module'];
+            $acMenu['act'] = $defaultMenuItems[$menu['slug']]['action'];
+            $acMenu['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
+            $acMenu['check'] = $defaultMenuItems[$menu['slug']]['check'];
+            $acMenu['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
+            $topMenuItems[] = $acMenu;
         }
     }
 
@@ -242,6 +249,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
                 $element1 = $menu;
                 $element2 = $menuItems[$key + 1];
                 //$level = $element1['level'];
+
                 $url = $menu['url'];
                 $title = $menu['title'];
                 $prefix = '';

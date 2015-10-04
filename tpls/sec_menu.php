@@ -20,6 +20,7 @@
 
                 $menuItems = $topMenuItems;
                 $level = 0;
+
                 foreach ($menuItems as $key => $menu) {
                     $id = $menu['id'];
                     $element1 = $menu;
@@ -92,7 +93,7 @@
                         }
                     }
                     echo str_repeat("</ul></li>", $level);
-                    
+
                     /*?>
 
                     <?php if (acl_is_mod_allowed('events')) { ?>
@@ -173,7 +174,7 @@
                       <li class="<?php echo $active ?>"><a href="<?php get_url('events', 'browse_intervention') ?>"><?php echo _t('INTERVENTIONS') ?></a>
 
                       </li>
-                      <?php } */ 
+                      <?php } */
                     /*
                     $active = '';
                     $new_actions_array = array("new_event", "new_person", "new_document", "add_user");
@@ -245,6 +246,7 @@
                     if ($defaultMenuItems[$menu['slug']]['prefix']) {
                         $prefix = $defaultMenuItems[$menu['slug']]['prefix'];
                     }
+                    
                     $mod = $defaultMenuItems[$menu['slug']]['module'];
                     $act = $defaultMenuItems[$menu['slug']]['action'];
                     $aclmod = $defaultMenuItems[$menu['slug']]['aclmod'];
@@ -306,7 +308,7 @@
                         }
                     }
                     echo str_repeat("</ul></li>", $level);
-                    
+
                     /*if (acl_is_mod_allowed('dashboard')) { ?>
                         <?php
                         $active = '';
@@ -342,13 +344,13 @@
                         <li class="<?php echo $active ?>">
                             <a href="<?php get_url('admin', 'user_management') ?>">
                                 <?php echo _t('ADMIN') ?></a></li>
-               
+
             <?php } ?>
 
 
 
             </ul>
 
-        </div>	
+        </div>
     </div>
 </div>
