@@ -79,27 +79,10 @@ class adminModule extends shnModule {
             } elseif ($this->sub_act == 'order' && isset($_POST['itemsorder'])) {
                 form_customization_update_fields_order($this->entity_select);
             } else {
-                //if update is sent save data
-                //OES-28. By pressing enter forms submited. if there no reset nor update - entered data will be lost.
-                //so better to save changes. update by default
-                //if($_POST['update']){
                 if ('POST' == $_SERVER['REQUEST_METHOD']) {
                     form_customization_process_entity_form($this->entity_select);
                 }
-
-                /* if (isset($_POST['reset'])) {
-                  form_customization_reset_all($this->entity_select);
-                  } */
-
-                // OES-28
-                /* $reset_fields = form_customization_get_reset_fields();
-                  foreach ($reset_fields as $post_value => $table_field) {
-                  if (isset($_POST[$post_value])) {
-                  form_customization_reset_field($this->entity_select, $table_field);
-                  }
-                  } */
             }
-            //include field form
             include_once APPROOT . 'mod/admin/entity_form.inc';
 
             $this->entity_form = $entity_form;
@@ -133,6 +116,11 @@ class adminModule extends shnModule {
                 $browse = new Browse();
                 $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
+            }
+
+            if($this->sub_act == 'delete') {
+                form_customization_delete_field($_GET['field_number']);
+                set_redirect_header('admin', 'field_customization', null, array(sub_act => 'cnotes', entity_select => $this->entity_select));
             }
         }
     }

@@ -231,6 +231,97 @@ function form_customization_update_fields_order($entity) {
     }
 }
 
+function form_customization_delete_field($field_number) {
+  $db = new Browse();
+  
+  $sql = "SELECT * FROM `data_dict` WHERE `field_number` LIKE '$field_number'";
+
+  $result = $db->ExecuteQuery($sql);
+  
+  $field_type = $result[0]['field_type'];
+  $field_name = $result[0]['field_name'];
+  $entity = $result[0]['entity'];
+
+  switch ($field_type) {
+    case 'subformat':
+      delete_subformat($field_number, $entity, $field_name);
+      break;
+    case 'location':
+      delete_location($field_number, $entity, $field_name);
+      break;
+    case 'mt_tree':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'mt_select':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'user_select':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'line':
+      delete_from_data_dict($field_number);
+      break;   
+    default:
+      delete_normal_field($field_number, $entity, $field_name);
+      break;
+  }
+}
+
+function delete_subformat($field_number, $entity, $field_name){
+  $db = new Browse();
+
+  $db->ExecuteNonQuery("DELETE FROM `gacl_axo` WHERE `value` = '$field_name'");
+  $db->ExecuteNonQuery("DELETE FROM `gacl_axo_map` WHERE `value` = '$field_name'");
+
+  $get_subformat_fields = "SELECT * FROM `data_dict` WHERE `entity` = '$field_name'";
+  $subformat_fields = $db->ExecuteQuery($get_subformat_fields);
+  
+  foreach ($subformat_fields as $field) {
+    form_customization_delete_field($field['field_number']);
+  }
+
+  delete_normal_field($field_number, $entity, $field_name);
+
+  $delete_subformat_table = "DROP TABLE IF EXISTS `$field_name`";
+  $db->ExecuteNonQuery($delete_subformat_table);
+}
+
+function delete_location($field_number, $entity, $field_name){
+  $db = new Browse();
+  
+  $delete_latitude = "ALTER TABLE `$entity` DROP `".$field_name."_latitude`";
+  $delete_longitude = "ALTER TABLE `$entity` DROP `".$field_name."_longitude`";
+  $db->ExecuteNonQuery($delete_latitude);
+  $db->ExecuteNonQuery($delete_longitude);
+  
+  delete_from_data_dict($field_number);
+}
+
+function delete_mt_field($field_number, $entity, $field_name){
+  $db = new Browse();
+  $delete_mt_table = "DROP TABLE IF EXISTS mlt_".$entity."_".$field_name;
+  $db->ExecuteNonQuery($delete_mt_table);
+  delete_normal_field($field_number, $entity, $field_name);
+}
+
+function delete_normal_field($field_number, $entity, $field_name){
+  delete_from_entity($entity, $field_name);
+  delete_from_data_dict($field_number);
+}
+
+function delete_from_data_dict($field_number){
+  $db = new Browse();
+  
+  $db->ExecuteNonQuery("DELETE FROM `data_dict_l10n` WHERE `msgid` = '$field_number'");
+  $db->ExecuteNonQuery("DELETE FROM `data_dict` WHERE `field_number` = '$field_number'");
+}
+
+function delete_from_entity($entity, $field_name){
+  $db = new Browse();
+  $delete_from_entity = "ALTER TABLE `$entity` DROP `$field_name`";
+  $db->ExecuteNonQuery($delete_from_entity);
+}
+
 function form_customization_add_field($field_type_options) {
 
     $fieldValues = array();
