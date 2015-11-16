@@ -231,7 +231,7 @@ function mt_customization_add_new_taxonomy() {
             ON DELETE CASCADE
             ON UPDATE CASCADE
 
-        ) ENGINE = InnoDB;";
+        ) ENGINE = InnoDB DEFAULT CHARSET=utf8;";
         
         $dbQuery->ExecuteNonQuery($table_sql);
 
