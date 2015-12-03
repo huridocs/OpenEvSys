@@ -740,6 +740,7 @@ function groupBy(){
         var g = new Array();
 
         var arr = $('#query_builder_count').find('.row-fluid');
+
         $.each(arr ,function(){
             if($(this).attr('data-status')=='new')return true;
             var c = new Object();
@@ -1077,10 +1078,12 @@ function queryBuilder(){
         }).appendTo(select);
 
         for(var option in options){
-            $("<option />", {
-                value:  options[option].value,
-                text: options[option].label
-            }).appendTo(select);
+            if(options[option]) {
+                $("<option />", {
+                    value: options[option].value,
+                    text: options[option].label,
+                }).appendTo(select);
+            }
 
         }
         var div = $("<div class='row-fluid show-grid'></div>");
@@ -1658,6 +1661,7 @@ function advSearch(){
         this.query_builder = queryBuilder.getInstance();
         this.group_by = groupBy.getInstance();
         this.group_by.init();
+
         $('#collapseCount').on('show', function () {
             $('#qb-search-but').data('type','count')
             $('#qb-search-but').html('<i class="icon-ok"></i> '+_('COUNT'))
