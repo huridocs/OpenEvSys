@@ -155,14 +155,19 @@ function analysis_get_advance_search_entities(){
           'desc'=>$title
       );
     }
-
-    $activeEntities = getActiveFormats();
+    global $conf;
+    foreach($entities as $key=>$value) {
+        if ($conf['hide_' . $key . '_format'] == 'true') {
+            unset($entities[$key]);
+        }
+    }
+  /*  $activeEntities = getActiveFormats();
     foreach($entities as $key=>$value){
         if(!isset($activeEntities[$key])){
             unset($entities[$key]);
         }
     }
-
+*/
     return $entities;
 }
 
