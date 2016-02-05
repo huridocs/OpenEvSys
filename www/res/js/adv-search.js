@@ -1595,15 +1595,26 @@ function advSearch(){
             '</select> records'
             },
             "bAutoWidth": false,
-            //"bDestroy": true,
-            //"bProcessing": true,
+            
+            "bDestroy": true,
+            "bProcessing": true,
             //"bServerSide": true,
             //"sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
             //"sServerMethod": "POST",
+            //"ajax":{
+            //    "url": 'index.php?mod=analysis&act=load_grid',
+            //    "type": 'POST',
+            //    "data": {
+            //        "mod":'analysis',
+            //        "act":"load_grid",
+            //        "query":encodeURI($.toJSON(this.query))
+            //    }
+
+            //},
             "aoColumns":columns,
         };
 
-        //this.oTable = $('#datatable').DataTable( settings);
+       // this.oTable = $('#datatable').DataTable( settings);
         
         var postData = {
             mod:'analysis',
@@ -1611,20 +1622,21 @@ function advSearch(){
             query : $.toJSON(this.query),
         }
         var pare = this;
+        var primeraTaulaDisplayStart=0;
+        var primeraTaulaDisplayLengh=0;
         $.post('index.php?mod=analysis&act=load_grid',postData,
-            function(jsondata){ 
+            function(jsondata){                 
                 var dades = JSON.parse(jsondata);                
-                var s2 ={ 
-                    "data":dades.aaData,
-                    "aaData":dades.aaData,
-                    "columns": columns,
-                    "aoColumns":columns,
-                }       
-                pare.oTable = $('#datatable').DataTable( s2);                
+                settings.aaData = dades.aaData;
+                settings._iTotalRecords = dades.iTotalRecords;
+                settings._iTotalDisplayRecords = dades.iTotalDisplayRecords;
+                settings.page = dades.page;
+
+                pare.oTable = $('#datatable').DataTable( settings); 
                 $("div.toolbar").html($("#toolbar2").html());
                 $("#toolbar2").hide();
                 pare.initAdditionalFieldsList();
-                //pare.updateToolBar();
+                pare.updateToolBar();
 
                 //oTable.fnAdjustColumnSizing();
 

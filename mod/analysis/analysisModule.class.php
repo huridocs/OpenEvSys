@@ -1194,7 +1194,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         include_once 'searchSql.php';
 //Vicent
 
-        if (isset($_GET['iDisplayStart']))
+/*        if (isset($_GET['iDisplayStart']))
             $start = (int) $_GET['iDisplayStart'];
         else
             $start = (int) $_POST['iDisplayStart'];
@@ -1203,9 +1203,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         else
             $limit = (int) $_POST['iDisplayLength'];
         if (!$limit) {
-            $limit = 10;
+            $limit = 100;
         }        
-
+*/
+        $start = 0;
+        $limit = -1;
         //convert json query to an object
         $query = json_decode($_GET['query']);
 
@@ -1215,7 +1217,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $queryOriginal = json_encode($query);
         //Vicent
         
-
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
