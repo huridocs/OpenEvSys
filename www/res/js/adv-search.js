@@ -1640,8 +1640,8 @@ function advSearch(){
 
                 //oTable.fnAdjustColumnSizing();
 
-                $('#datatable th').each( function (i) {
-                    $(pare).html($(pare).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
+                $('#datatable th').each( function (i) {                    
+                    $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
                 } );
                 $('#qb-qs-save').click(function(){
 
