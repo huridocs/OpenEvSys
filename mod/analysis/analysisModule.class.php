@@ -1192,18 +1192,31 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         global $global;
         include_once 'searchSql.php';
+//Vicent
 
-        $start = (int) $_GET['iDisplayStart'];
-        $limit = (int) $_GET['iDisplayLength'];
+/*        if (isset($_GET['iDisplayStart']))
+            $start = (int) $_GET['iDisplayStart'];
+        else
+            $start = (int) $_POST['iDisplayStart'];
+        if (isset($_GET['iDisplayLength']))
+            $limit = (int) $_GET['iDisplayLength'];
+        else
+            $limit = (int) $_POST['iDisplayLength'];
         if (!$limit) {
-            $limit = 10;
-        }
-
-
-
+            $limit = 100;
+        }        
+*/
+        $start = 0;
+        $limit = -1;
         //convert json query to an object
         $query = json_decode($_GET['query']);
 
+        //Vicent
+        if (!isset($query))
+            $query = json_decode($_POST["query"]);
+        $queryOriginal = json_encode($query);
+        //Vicent
+        
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
@@ -1230,12 +1243,15 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
         $searchSql = new SearchResultGenerator();
-        $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
 
+        //$sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
+        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);
+        
         //var_dump($_GET['query'],$sqlArray['result']);exit;
         //$count_query = $sqlArray['count'];
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
         //var_dump($sqlArray['result']);exit;
+
         try {
             $res_count = $global['db']->Execute($count_query);
         } catch (Exception $e) {
@@ -1265,6 +1281,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $start = 0;
 
         $sql = $sqlArray['result'];
+
         //print $sql;
         if ($limit != -1) {
             $sql .= " LIMIT $start , $limit";
@@ -1282,6 +1299,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $response->page = (int) $page; // current page
         $response->iTotalRecords = (int) $count; // total pages
         $response->iTotalDisplayRecords = (int) $count; // total records
+
         //$response->aaSorting = array(array(1=>"desc"));
 
         $i = 0;
@@ -1291,10 +1309,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         $number_of_fields = count($fields_array);
         $response->aaData = array();
+
         foreach ($res as $key => $val) {
             //$response->aaData[$i]['id'] = $val[$fields_array[0]];
             $array_values = array();
-            $array_values['id'] = $val[$fields_array[0]];
+            $array_values['id'] = utf8_encode($val[$fields_array[0]]);
 
 
             for ($count = 0; $number_of_fields > $count; $count++) {
@@ -1371,9 +1390,10 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $response->aaData[$i] = $array_values;
             $i++;
         }
-
-
+       
         $response->aoColumns = $aoColumns;
+
+        
 
         echo json_encode($response);
 

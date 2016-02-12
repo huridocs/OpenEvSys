@@ -1579,6 +1579,7 @@ function advSearch(){
         if(this.oTable){
             this.oTable.fnDestroy();
         }
+       
         $('#datatable').html("")
         var settings =  {
             "sDom": "<'row'<'span6'<'toolbar'>><'span6'l>r>t<'row'<'span6'i><'span6'p>>",
@@ -1594,44 +1595,78 @@ function advSearch(){
             '</select> records'
             },
             "bAutoWidth": false,
+            
             "bDestroy": true,
             "bProcessing": true,
-            "bServerSide": true,
-            "sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
-            "aoColumns":columns
+            //"bServerSide": true,
+            //"sAjaxSource": "index.php?mod=analysis&act=load_grid&query="+encodeURI($.toJSON(this.query)),
+            //"sServerMethod": "POST",
+            //"ajax":{
+            //    "url": 'index.php?mod=analysis&act=load_grid',
+            //    "type": 'POST',
+            //    "data": {
+            //        "mod":'analysis',
+            //        "act":"load_grid",
+            //        "query":encodeURI($.toJSON(this.query))
+            //    }
+
+            //},
+            "aoColumns":columns,
         };
 
-        this.oTable = $('#datatable').dataTable( settings);
+       // this.oTable = $('#datatable').DataTable( settings);
+        
+        var postData = {
+            mod:'analysis',
+            act:'load_grid',
+            query : $.toJSON(this.query),
+        }
+        var pare = this;
+        var primeraTaulaDisplayStart=0;
+        var primeraTaulaDisplayLengh=0;
+        $.post('index.php?mod=analysis&act=load_grid',postData,
+            function(jsondata){                 
+                var dades = JSON.parse(jsondata);                
+                settings.aaData = dades.aaData;
+                settings._iTotalRecords = dades.iTotalRecords;
+                settings._iTotalDisplayRecords = dades.iTotalDisplayRecords;
+                settings.page = dades.page;
 
-        $("div.toolbar").html($("#toolbar2").html());
-        $("#toolbar2").hide();
-        this.initAdditionalFieldsList();
-        this.updateToolBar();
+                pare.oTable = $('#datatable').DataTable( settings); 
+                $("div.toolbar").html($("#toolbar2").html());
+                $("#toolbar2").hide();
+                pare.initAdditionalFieldsList();
+                pare.updateToolBar();
 
-        //oTable.fnAdjustColumnSizing();
+                //oTable.fnAdjustColumnSizing();
 
-        $('#datatable th').each( function (i) {
-            $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
-        } );
-        $('#qb-qs-save').click(function(){
+                $('#datatable th').each( function (i) {                    
+                    $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
+                } );
+                $('#qb-qs-save').click(function(){
 
-            $('#query-name').text($('#query_name').val());
-            var q = queryBuilder.getInstance().getQuery()
-            q.group_by = groupBy.getInstance().getGroupBy();
+                    $('#query-name').text($('#query_name').val());
+                    var q = queryBuilder.getInstance().getQuery()
+                    q.group_by = groupBy.getInstance().getGroupBy();
 
-            $.get($('#qb-save-query').attr('action')+'&stream=text', {
-                'query':$.toJSON(q),
-                'query_desc':$('#query_desc').val(),
-                'query_name':$('#query_name').val(),
-                'query_save':true
-            }, function(data){
-                $('#query_desc').val('');
-                $('#query_name').val('');
-                $('#saveModal').modal('hide')
-            });
-        });
-        var result_panel = $('.resultPanel');
-        result_panel.show();
+                    $.get($('#qb-save-query').attr('action')+'&stream=text', {
+                        'query':$.toJSON(q),
+                        'query_desc':$('#query_desc').val(),
+                        'query_name':$('#query_name').val(),
+                        'query_save':true
+                    }, function(data){
+                        $('#query_desc').val('');
+                        $('#query_name').val('');
+                        $('#saveModal').modal('hide')
+                    });
+                });
+                var result_panel = $('.resultPanel');
+                result_panel.show();                
+                    }
+            );
+        
+        
+
     }
 
     this.Count = function(){
