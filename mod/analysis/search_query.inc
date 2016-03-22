@@ -15,8 +15,7 @@ class SearchQuery {
 
     public function initFromJson($queryJsonString) {
 
-        $queryArray = json_decode($queryJsonString, true);
-
+        $queryArray = json_decode($queryJsonString, true);        
         if($queryArray === NULL) {
             throw new Exception("Error Processing Request", 1);
         }
