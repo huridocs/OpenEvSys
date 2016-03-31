@@ -972,8 +972,7 @@ function queryBuilder(){
                     }
                     d.replaceWith(o)
                 });
-            }
-
+            }            
             switch(field_type){
                 case "date":
                     if( e.operator == 'between' || e.operator == 'not_between'){
@@ -1075,8 +1074,7 @@ function queryBuilder(){
         $("<option />", {
             value:  "",
             text: ""
-        }).appendTo(select);
-
+        }).appendTo(select);        
         for(var option in options){
             if(options[option]) {
                 $("<option />", {
@@ -1085,7 +1083,7 @@ function queryBuilder(){
                 }).appendTo(select);
             }
 
-        }
+        }        
         var div = $("<div class='row-fluid show-grid'></div>");
         div.append(select);
         $('#query_builder').append(div);
@@ -1134,12 +1132,15 @@ function queryBuilder(){
             value:  "",
             text: ""
         }).appendTo(select);
-
+        
         for(var option in options){
-            $("<option />", {
-                value:  options[option].value,
-                text: options[option].label
-            }).appendTo(select);
+            //location is not searchable, hardcoded
+            if (options[option].field_type!='location'){
+                $("<option />", {
+                    value:  options[option].value,
+                    text: options[option].label
+                }).appendTo(select);
+            }
 
         }
         var div = $(entselect).closest("div");

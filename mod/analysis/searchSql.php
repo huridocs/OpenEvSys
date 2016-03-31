@@ -19,11 +19,11 @@ class SearchResultGenerator {
         $searchQueryO->initFromJson($json);
         $queryArray = $searchQueryO->getQueryArray();
         $this->searchQuery = $queryArray;
+
         //var_dump('searchQuery',$queryArray);
 
         $this->generateSqlArray();
-        $sql = $this->getSql();
-
+        $sql = $this->getSql();        
         return $sql;
     }
 
@@ -486,7 +486,6 @@ class SearchResultGenerator {
 
         $entityField = null; // field name used for entity
 
-
         if ($this->isPersonExtention($entityType) == true) {
             $formField['map']['entity'] = $entityType;
         }
@@ -552,6 +551,14 @@ class SearchResultGenerator {
             return null;
         }
 
+        $entity = $formField["map"]["entity"];
+        $field = $formField["map"]["field"];
+
+        
+        if (is_location_field($entity,$field)){                
+            return "concat($entity.{$field}_longitude,',',$entity.{$field}_latitude) AS $entity"."_"."$field";
+        }
+
 
         if ($type == 'view') {
             $as = ' AS ' . $formField['map']['entity'] . '_' . $formField['map']['field'];
@@ -570,7 +577,11 @@ class SearchResultGenerator {
         $entityArray = $this->getEntityArray($entity);
 
         $selectField = $this->getFieldAlias($entityArray[$field], $type, $entity);
-        //var_dump('selectField' , $entityArray[$field]);
+        //var_dump('selectField' , $entityArray[$field]);        
+        if (($selectField == null || $selectField == '' )) {
+             error_log(var_export($field,true));             
+        }   
+
         if (!($selectField == null || $selectField == '' )) {
             $this->sqlArray['select'][$selectField] = $selectField;
         }

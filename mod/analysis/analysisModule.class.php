@@ -238,6 +238,7 @@ class analysisModule extends shnModule {
         define('ADODB_FETCH_BOTH', 3);
         $global['db']->SetFetchMode(ADODB_FETCH_BOTH);
         $res = $global['db']->Execute($sqlStatement);
+        error_log(var_export( $res ,true));
 
         $entity_type_form_results = generate_formarray($this->search_entity, 'search_view');
 
@@ -1214,12 +1215,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //Vicent
         if (!isset($query))
             $query = json_decode($_POST["query"]);
-        $queryOriginal = json_encode($query);
+        
         //Vicent
         
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
+    
+       $queryOriginal = json_encode($query);
         if ($query->group_by != NULL) {
             //if the query is a count put group by field to the array
             foreach ($query->group_by as $field) {
@@ -1236,21 +1239,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
             }
         }
-
-        //var_dump('fields_array',$fields_array);
         if (!$sidx)
             $sidx = 1;
 
 
         $searchSql = new SearchResultGenerator();
-
-        //$sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);
         
-        //var_dump($_GET['query'],$sqlArray['result']);exit;
-        //$count_query = $sqlArray['count'];
+        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);         
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
-        //var_dump($sqlArray['result']);exit;
 
         try {
             $res_count = $global['db']->Execute($count_query);

@@ -575,6 +575,15 @@ function is_management_field($formField) {
       } */
 }
 
+function is_location_field($entity, $field) {
+    global $global;
+    $entity = $global['db']->qstr($entity);
+    $field = $global['db']->qstr($field);
+    $sql = "SELECT count(*) as counts FROM data_dict WHERE field_name = $field AND entity = $entity and field_type='location'";
+    $counts = $global['db']->GetOne($sql); 
+    return $counts!=0;
+}
+
 function is_mt_field($entity, $field) {
     global $global;
     $entity = $global['db']->qstr($entity);
