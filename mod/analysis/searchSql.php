@@ -556,7 +556,7 @@ class SearchResultGenerator {
 
         
         if (is_location_field($entity,$field)){                
-            return "concat($entity.{$field}_longitude,'--',$entity.{$field}_latitude) AS $entity"."_"."$field";
+            return "concat($entity.{$field}_longitude,',',$entity.{$field}_latitude) AS $entity"."_"."$field";
         }
 
 
