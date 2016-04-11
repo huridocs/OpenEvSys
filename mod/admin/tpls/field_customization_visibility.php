@@ -118,7 +118,8 @@
                            value='y' <?php if ($record['visible_adv_search'] == 'y') {
                         echo "checked='checked'";
                     } ?> <?php //if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') {
-                        if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line') {
+                        //if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line') {
+                        if ( $record['field_type'] == 'line') {
                         echo ' disabled="disabled"';
                     } ?> />
                 </td>
@@ -128,7 +129,8 @@
                            value='y' <?php if ($record['visible_adv_search_display'] == 'y') {
                         echo "checked='checked'";
                     } ?> <?php //if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' || $record['field_type'] == 'location') {
-                        if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' ) {
+                        //if ($record['field_type'] == 'user_select' || $record['field_type'] == 'line' ) {
+                        if ( $record['field_type'] == 'line') {
                         echo ' disabled="disabled"';
                     } ?> />
                 </td>
