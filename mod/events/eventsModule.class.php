@@ -505,6 +505,7 @@ class eventsModule extends shnModule {
         $this->vp_list = Browse::getVpList($this->event_id);
         $_SESSION['vp'] = null;
         $_SESSION["acts"] = null;
+        var_export($_SESSION);
         //if an involvement is requested
         if (isset($_GET['inv_id']))
             $this->set_inv();
