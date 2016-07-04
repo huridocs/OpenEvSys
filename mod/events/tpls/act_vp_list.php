@@ -1,7 +1,7 @@
 
 <?php include_once('event_title.php') ?>
 
-<?php unset ($_SESSION["acts"])?>
+<!--?php unset ($_SESSION["acts"])?-->
 
 <div class="panel">
     <?php include_once('vp_list_table.php'); ?>
