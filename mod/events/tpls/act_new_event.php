@@ -15,7 +15,7 @@
 
     <br />
     <h3><?php echo _t('ADDING_EVENT_INFORMATION') . ' ...' ?></h3>
-    <div class="form-container"> 
+    <div class="form-container">
         <form class="form-horizontal"  action='<?php echo get_url('events', 'new_event') ?>' id="event_form" name="event_form" method='post' enctype='multipart/form-data'>
             <div class="control-group">
                 <div >
