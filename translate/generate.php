@@ -49,7 +49,7 @@ function generate_translations() {
     $translations = get_translations_array();
     require(APPROOT . "translate" . DIRECTORY_SEPARATOR . 'php-mo.php');
     foreach ($languages as $lkey => $language) {
-        $path = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated/php/" . $language . "/LC_MESSAGES" . DIRECTORY_SEPARATOR;
+        $path = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated/php/" . $language . "\LC_MESSAGES" . DIRECTORY_SEPARATOR;
         $pofile = $path . $language . "_openevsys.po";
 		mkdir($path ,0777 ,true);
         $fh = fopen($pofile, 'w+');
