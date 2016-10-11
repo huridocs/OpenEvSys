@@ -8,17 +8,23 @@ require_once(APPROOT . 'mod/analysis/lib_analysis.inc');
  * @author ks
  *
  */
-class dashboardModule extends shnModule {
+class dashboardModule extends shnModule
+{
 
-     function act_default() {
+    function act_default()
+    {
         set_redirect_header('dashboard', 'dashboard');
     }
-    function __construct() {
+
+    function __construct()
+    {
         $this->main_entity = (isset($_POST['main_entity'])) ? $_POST['main_entity'] : $_GET['main_entity'];
 
         $this->search_entity = (isset($_GET['shuffle_results']) && $_GET['shuffle_results'] != 'all') ? $_GET['shuffle_results'] : $this->main_entity;
     }
-    private function getEntityFields() {
+
+    private function getEntityFields()
+    {
         $res = Browse::getAllEntityFields();
         $domain = new Domain();
         foreach ($res as $record) {
@@ -46,25 +52,30 @@ class dashboardModule extends shnModule {
             $domain->$key->desc = $entity['desc'];
             $domain->$key->ac_type = $entity['ac_type'];
         }
+
         return $domain;
     }
 
-    public function act_dashboard() {
+    public function act_dashboard()
+    {
         global $global, $conf;
-        $domaindata = $this->getEntityFields();
 
-        $entities = array("event", "person", "act", "intervention");
+        $activeFormats = getActiveFormats();
+        $entityFields = Browse::getAllEntityFields();
         $response = array();
-        foreach ($entities as $entity) {
-            $count_query = "SELECT COUNT(*) as count FROM {$entity} ";
+        foreach ($activeFormats as $format => $formatTitle) {
+            if ($conf['dashboard_format_counts_' . $format] != 'true') {
+                continue;
+            }
+            $count_query = "SELECT COUNT(*) as count FROM {$format} ";
 
             try {
                 $res_count = $global['db']->Execute($count_query);
                 foreach ($res_count as $row) {
-                    $response["counts"][$entity] = (int) $row["count"];
+                    $response["counts"][$format] = array((int)$row["count"], $formatTitle);
                 }
             } catch (Exception $e) {
-                
+
             }
         }
         $timelineType = "day";
@@ -109,83 +120,76 @@ class dashboardModule extends shnModule {
             $sql .= " where m.date_of_entry BETWEEN '$datestart' AND '$dateend' ";
         }
         $sql .= "GROUP BY val order by m.date_of_entry ";*/
-        $sql = "SELECT  DATE_FORMAT(e.initial_date ,'$dateFormat') as val , COUNT(e.event_record_number) AS count
-                FROM  event e  ";
-        if ($datestart && $dateend) {
-            $sql .= " where e.initial_date  BETWEEN '$datestart' AND '$dateend' ";
-        }
-        $sql .= "GROUP BY val order by e.initial_date  ";
-        try {
-            $res_count = $global['db']->Execute($sql);
 
-            foreach ($res_count as $row) {
-                $response["timeline"]["event"][0] = array(ucfirst($timelineType), "Count");
-                if (!$row["val"] && !(int) $row["count"]) {
-                    continue;
-                }
-                if (!$row["val"]) {
-                    $row["val"] = "Undefined";
-                }
-                $response["timeline"]["event"][] = array($row["val"], (int) $row["count"]);
-            }
-        } catch (Exception $e) {
-            
+        $dashboard_date_counts = array();
+        if ($conf['dashboard_date_counts']) {
+            $dashboard_date_counts = @json_decode($conf['dashboard_date_counts']);
+            $dashboard_date_counts = (array)$dashboard_date_counts;
         }
+        $response["timeline"] = array();
+        foreach ($entityFields as $record) {
+            $entity = $record['entity'];
+            $field = $record['field_name'];
+            $selVal = $entity . "|||" . $field;
+            if (in_array($selVal, $dashboard_date_counts)) {
+                $primary_key = get_primary_key($entity);
+                if (in_array($field,array('date_received','date_of_entry','date_updated'))) {
+                    $sql = "SELECT  DATE_FORMAT(m.$field,'$dateFormat') as val , COUNT(e.$primary_key) AS count
+                      FROM  $entity e join management m on m.entity_id=e.$primary_key and m.entity_type='$entity' ";
+                    if ($datestart && $dateend) {
+                        $sql .= " where m.$field BETWEEN '$datestart' AND '$dateend' ";
+                    }
+                    $sql .= "GROUP BY val order by m.$field ";
 
-
-       /* $sql = "SELECT  DATE_FORMAT(m.date_of_entry,'$dateFormat') as val , COUNT(a.act_record_number) AS count
-                FROM  act a join management m on m.entity_id=a.act_record_number and m.entity_type='act' ";
-        if ($datestart && $dateend) {
-            $sql .= " where m.date_of_entry BETWEEN '$datestart' AND '$dateend' ";
-        }
-        $sql .= "GROUP BY val order by m.date_of_entry "; //where e.event_date<>'0000-00-00'
-        * */
-        $sql = "SELECT  DATE_FORMAT(a.initial_date,'$dateFormat') as val , COUNT(a.act_record_number) AS count
-                FROM  act a   ";
-        if ($datestart && $dateend) {
-            $sql .= " where a.initial_date BETWEEN '$datestart' AND '$dateend' ";
-        }
-        $sql .= "GROUP BY val order by a.initial_date "; 
-        
-        
-        try {
-            $res_count = $global['db']->Execute($sql);
-            foreach ($res_count as $row) {
-                $response["timeline"]["act"][0] = array(ucfirst($timelineType), "Count");
-                if (!$row["val"] && !(int) $row["count"]) {
-                    continue;
+                } else {
+                    $sql = "SELECT  DATE_FORMAT(e.$field ,'$dateFormat') as val , COUNT(e.$primary_key) AS count
+                      FROM  $entity e  ";
+                    if ($datestart && $dateend) {
+                        $sql .= " where e.$field  BETWEEN '$datestart' AND '$dateend' ";
+                    }
+                    $sql .= "GROUP BY val order by e.$field  ";
                 }
 
-                if (!$row["val"]) {
-                    $row["val"] = "Undefined";
+                $response["timeline"][$selVal]['entity'] = $entity;
+                $response["timeline"][$selVal]['entity_label'] = $activeFormats[$entity];
+                $response["timeline"][$selVal]['field_name'] = $field;
+                $response["timeline"][$selVal]['field_label'] = $record['field_label'];
+                try {
+                    $res_count = $global['db']->Execute($sql);
+
+                    foreach ($res_count as $row) {
+                        $response["timeline"][$selVal]['data'][0] = array(ucfirst($timelineType), "Count");
+                        if (!$row["val"] && !(int)$row["count"]) {
+                            continue;
+                        }
+                        if (!$row["val"]) {
+                            $row["val"] = "Undefined";
+                        }
+                        $response["timeline"][$selVal]['data'][] = array($row["val"], (int)$row["count"]);
+                    }
+                } catch (Exception $e) {
+
                 }
-                $response["timeline"]["act"][] = array($row["val"], (int) $row["count"]);
-            }
-        } catch (Exception $e) {
-            
+            };
         }
-        /* $barcharts = array();
-          if (isset($domaindata->act->fields->type_of_act)) {
-          $barcharts[] = $domaindata->act->fields->type_of_act;
-          }
-          if (isset($domaindata->person->fields->sex)) {
-          $barcharts[] = $domaindata->person->fields->sex;
-          }
-          if (isset($domaindata->event->fields->geographical_term)) {
-          $barcharts[] = $domaindata->event->fields->geographical_term;
-          }
-          if (isset($domaindata->involvement->fields->type_of_perpetrator)) {
-          $barcharts[] = $domaindata->involvement->fields->type_of_perpetrator;
-          } */
 
         $barcharts = array();
-        $barcharts[] = array("entity" => "act", "field" => "type_of_act");
-        $barcharts[] = array("entity" => "person", "field" => "sex");
-        $barcharts[] = array("entity" => "event", "field" => "geographical_term");
-        $barcharts[] = array("entity" => "involvement", "field" => "type_of_perpetrator");
+
+        $dashboard_select_counts = array();
+        if ($conf['dashboard_select_counts']) {
+            $dashboard_select_counts = @json_decode($conf['dashboard_select_counts']);
+            $dashboard_select_counts = (array)$dashboard_select_counts;
+        }
+        foreach ($entityFields as $record) {
+            $entity = $record['entity'];
+            $selVal = $entity . "|||" . $record['field_name'];
+            if (in_array($selVal, $dashboard_select_counts)) {
+                $barcharts[] = array("entity" => $entity, "field" => $record['field_name']);
+            }
+        }
 
         require_once(APPROOT . 'mod/analysis/searchSql.php');
-        
+
 
         $searchSql = new SearchResultGenerator();
 
@@ -256,15 +260,15 @@ class dashboardModule extends shnModule {
                             } else {
                                 $vall = $val[0];
                             }
-                        } elseif (!(int) $val[1]) {
+                        } elseif (!(int)$val[1]) {
                             continue;
                         }
                         $chart["data"][0][] = $vall;
-                        $chart["data"][1][] = (int) $val[1];
+                        $chart["data"][1][] = (int)$val[1];
 
                         $chart2["data"][0] = array($chart["title"], _t("COUNT"));
-                        $chart2["data"][] = array($vall, (int) $val[1]);
-                        $total +=(int) $val[1];
+                        $chart2["data"][] = array($vall, (int)$val[1]);
+                        $total += (int)$val[1];
                     }
                     $chart2["total"] = $total;
 
@@ -275,7 +279,7 @@ class dashboardModule extends shnModule {
             }
         }
 
-        $entities = array("event", "person", "act", "intervention");
+        $entities = array_keys($activeFormats);
 
         foreach ($entities as $entity) {
             $recField = get_primary_key($entity);
@@ -287,10 +291,10 @@ class dashboardModule extends shnModule {
             try {
                 $res_count = $global['db']->Execute($count_query);
                 foreach ($res_count as $row) {
-                    $response["counts30"][$entity] = (int) $row["count"];
+                    $response["counts30"][$entity] = array((int)$row["count"], $activeFormats[$entity]);
                 }
             } catch (Exception $e) {
-                
+
             }
         }
 
@@ -300,10 +304,10 @@ class dashboardModule extends shnModule {
         try {
             $res_count = $global['db']->Execute($sql);
             foreach ($res_count as $row) {
-                $response["activeusers"][] = array($row["val"], (int) $row["count"]);
+                $response["activeusers"][] = array($row["val"], (int)$row["count"]);
             }
         } catch (Exception $e) {
-            
+
         }
         $sql = "SELECT al.username as val,COUNT(al.`action`) AS count
                 FROM  audit_log al where al.action='update'
@@ -311,10 +315,10 @@ class dashboardModule extends shnModule {
         try {
             $res_count = $global['db']->Execute($sql);
             foreach ($res_count as $row) {
-                $response["editusers"][] = array($row["val"], (int) $row["count"]);
+                $response["editusers"][] = array($row["val"], (int)$row["count"]);
             }
         } catch (Exception $e) {
-            
+
         }
 
         $sql = "SELECT al.username as username,entity,record_number
@@ -326,11 +330,11 @@ class dashboardModule extends shnModule {
                 $response["deleteusers"][] = array($row["entity"], $row["record_number"], $row["username"]);
             }
         } catch (Exception $e) {
-            
+
         }
         // var_dump($response);exit;
         $this->response = $response;
     }
 
- 
+
 }

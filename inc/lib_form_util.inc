@@ -223,7 +223,7 @@ function generate_formarray($entity, $viewType = 'new', $allVisible = false, $is
                 }
             }
         }
-        if (in_array($viewType, array("new", "edit", "all"))) {
+        if (in_array($viewType, array("new", "edit", "all","view"))) {
             $browse = new Browse();
             $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
             $visibility_fields = $browse->ExecuteQuery($sql);
@@ -336,10 +336,8 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     if ($valuesArray == null) {                // testing
         $valuesArray = $_POST;
     }
-//$formArrayEntry = current($formArray);
-//reset($formArray);
     $recordkeyName = get_primary_key($entity->_table);
-//$entity_key_value = $entity->$recordkeyName;
+
 
     if ($entity->$recordkeyName == null && ($valuesArray[$recordkeyName] == null || $valuesArray[$recordkeyName] == '' )) {
         $entity_key_value = $entity->$recordkeyName = shn_create_uuid($entity->_table);
@@ -353,7 +351,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
     }
 
     $entity->clari_notes = array();
-
     foreach ($formArray as $fieldName => $formField) {
 
         $recordkeyName = get_primary_key($entity->_table);
@@ -362,30 +359,21 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 $entity->LoadFromRecordNumber($valuesArray[$fieldName]);
                 $entity->LoadManagementData();
                 $entity_key_value = $valuesArray[$fieldName];
-//var_dump('values array field name ' , $valuesArray[ $fieldName]);
             }
             break;
         }
     }
-
+    
     foreach ($formArray as $fieldName => $formField) {
 
         if ($formField['map']['entity'] == $entity->_table) {
-
-
-
-
-//var_dump($formField['map']);
             if ($formField['map']['mlt'] != 'true') {  // non multivalue terms
-//$name = $formField['map']['field'];
-                if ($formField['map']['mt'] || $formField['type'] == 'user_select') {   // micro thesauri terms
-                    //if (trim($valuesArray[$fieldName]) != '') {       // blank selections should be ignored
+                if ($formField['map']['mt'] || $formField['type'] == 'user_select') {   // 
                     if (!($valuesArray[$fieldName] == null || trim($valuesArray[$fieldName]) == '')) {
                         $entity->$formField['map']['field'] = $valuesArray[$fieldName];
                     } else {
                         $entity->$formField['map']['field'] = null;
                     }
-                    //}
                 } else {
                     if ($fieldName != $recordkeyName) {
 
@@ -424,7 +412,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                             }
                         }
                     }
-//var_dump($termArray);
                     if (sizeof($userArray) > 0) {
                         $entity->$formField['map']['field'] = $userArray;
                     }
@@ -450,7 +437,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                             }
                         }
                     }
-//var_dump($termArray);
                     if (sizeof($termArray) > 0) {
                         $entity->$formField['map']['field'] = $termArray;
                     }
@@ -459,12 +445,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
 
             if ($formField['extra_opts']['clari'] == 'true') {  // Clarifying Notes
                 if ($formField['map']['mlt'] != 'true') {              //NON multi value
-                    /*
-                      $clari_note_object = new ClariNotes();
-                      $clari_note_object->entity = $entity->_table ;
-                      $clari_note_object->record_number = $entity_key_value;
-                      $clari_note_object->field_name = $formField['map']['field'];
-                      $clari_note_object->value = $valuesArray[$fieldName.'_clarify']; */
                     if (is_array($valuesArray[$fieldName])) {
                         $v = $valuesArray[$fieldName];
                         $va = array_shift($v);
@@ -481,15 +461,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
                 } else {
                     if (is_array($valuesArray[$fieldName]))
                         foreach ($valuesArray[$fieldName] as $mtvalue) {
-                            /*
-                              $clari_note_object = new ClariNotes();
-                              $clari_note_object->entity = $entity->_table ;
-                              $clari_note_object->record_number = $entity_key_value;
-                              $clari_note_object->field_name = $formField['map']['field'];
-                              $clari_note_object->vocab_number = $mtvalue; //iterate this array to get clari notes for each multi value
-                              $clari_note_object->value = $valuesArray[$fieldName.'_clarify_' . $mtvalue ]; */
-
-//$clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_' . $mtvalue . '_clarify']);
                             $clariNote = ClariNotes::getClariNoteObject($entity->_table, $entity_key_value, $formField['map']['field'], $mtvalue, $valuesArray[$fieldName . '_clarify']);
 
 
@@ -502,7 +473,6 @@ function form_objects($formArray, &$entity, $valuesArray = null) {
             }
         }
     }
-//var_dump($entity);
 
     return $entity;
 }
@@ -597,13 +567,26 @@ function validate_field($validationType, $vals, &$errorMsg) {
 function shn_form_get_html_fields($form, $field_div = true) {
     $i = 0;
     $fields = array();
+    //field js listeners
+    $listenerHtml = "";
+    foreach ($form as $field_id => $options) {
+
+        $options['extra_opts']['field_number'] = $options['field_number'];
+        $options['extra_opts']['mt'] = $options['map']['mt'];
+        ob_start();
+        shn_form_visibility_field_listeners($field_id,$options['extra_opts'],$options['type']);
+        $listenerHtml .= ob_get_clean();
+    }
+    $listenersAdded = false;
     foreach ($form as $field_id => $options) {
         $controler = $options['type'];
         $controler = 'shn_form_' . $controler;
         $controler .= (isset($options['map']['mlt']) && $options['map']['mlt'] == true) ? '_mlt' : '';
         if (function_exists($controler)) {
             $options['extra_opts']['mt'] = $options['map']['mt'];
+            $options['extra_opts']['field_number'] = $options['field_number'];
             ob_start();
+
             $controler($options['label'], $field_id, $options['extra_opts']);
             $html = ob_get_clean();
 
@@ -617,14 +600,15 @@ function shn_form_get_html_fields($form, $field_div = true) {
 
 
                 $html = $html2;
+                if(!$listenersAdded){
+                    $html = $listenerHtml.$html;
+                    $listenersAdded = true;
+                }
             }
 
             $fields[$field_id] = $html;
             $fields[$i++] = $html;
         }
-        else
-            ;
-// echo $controler._t('_CONTROLER_NOT_FOUND_');
     }
 
     return $fields;
@@ -734,7 +718,6 @@ function shn_form_get_html_table($columnNames = null, $columnValues = null, $sor
                     foreach ($columnNames as $field => $value) {
                         $label = ucwords(str_replace('_', ' ', $field));
                         echo "<td id='td_" . $field . "'>" . $htmlFilterFields[$field] . "</td>";
-                        //echo "<th id='td_" . $field . "'><span id='span_" . $field . "' class='inactive'>" . $value . "</span>" . $htmlFilterFields[$field] . "</th>";
                     }
                     ?>
                     <td class="table_actions" >
@@ -870,12 +853,25 @@ function shn_form_get_html_labels($form, $return = true) {
     foreach ($compForm as $form) {
 
         echo "<table class=' table table-bordered table-hover view$classNumber'>";
+
+        //field js listeners
+        foreach ($form as $field_id => $options) {
+
+            if ($options['map']['link_table'] != null) {
+                $options['extra_opts']['value'] .= '<b>' . '  :  ' . loadLinkName($options['map']['link_table'], $options['map']['link_field'], $options['extra_opts']['value']) . '</b>';
+            }
+            $options['extra_opts']['field_number'] = $options['field_number'];
+            $options['extra_opts']['mt'] = $options['map']['mt'];
+            shn_view_visibility_field_listeners($options['extra_opts']);
+
+        }
         $classNumber++;
         foreach ($form as $field_id => $options) {
 
             if ($options['map']['link_table'] != null) {
                 $options['extra_opts']['value'] .= '<b>' . '  :  ' . loadLinkName($options['map']['link_table'], $options['map']['link_field'], $options['extra_opts']['value']) . '</b>';
             }
+            $options['extra_opts']['field_number'] = $options['field_number'];
 
             $controler = $options['type'];
             $controler = 'shn_view_' . $controler;
@@ -886,6 +882,8 @@ function shn_form_get_html_labels($form, $return = true) {
                 $controler($options['label'], $options['extra_opts']['value'], $options['extra_opts']);
             }
         }
+
+
         echo "</table>";
     }
     echo "<div style='clear:both' ></div>";

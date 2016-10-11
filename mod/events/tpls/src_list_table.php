@@ -1,5 +1,5 @@
 <?php if( acl_i3_entity_add_is_allowed('information') ){ ?> 
-<a class="btn btn-primary" href="<?php echo get_url('events','add_source',null,array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i><?php echo _t('ADD_SOURCE')?></a>
+<a class="btn btn-primary" href="<?php echo get_url('events','add_source',null,array('eid'=>$event_id)) ?>"><i class="icon-plus icon-white"></i> <?php echo _t('ADD_SOURCE')?></a>
 <?php } ?>
 <br />
 <br />

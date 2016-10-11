@@ -142,7 +142,6 @@ function analysis_get_advance_search_entities(){
         'desc'=>_t('CHAIN_OF_EVENTS')
     );
 
-
     $subformats = new Subformats();
     foreach($subformats->get_all() as $subformat){
 
@@ -156,7 +155,19 @@ function analysis_get_advance_search_entities(){
           'desc'=>$title
       );
     }
-
+    global $conf;
+    foreach($entities as $key=>$value) {
+        if ($conf['hide_' . $key . '_format'] == 'true') {
+            unset($entities[$key]);
+        }
+    }
+  /*  $activeEntities = getActiveFormats();
+    foreach($entities as $key=>$value){
+        if(!isset($activeEntities[$key])){
+            unset($entities[$key]);
+        }
+    }
+*/
     return $entities;
 }
 

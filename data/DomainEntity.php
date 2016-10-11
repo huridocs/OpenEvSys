@@ -88,23 +88,24 @@ class DomainEntity extends ADODB_Active_Record {
     public function SaveAll() {
 
         $saveType = $this->getSaveType();
-
-        acl_is_entity_allowed($this->entity, $saveType, $this->{$this->keyName});
+        acl_is_entity_allowed($this->entity, $saveType, $this->{$this->keyName});    
 
         $this->Save();
+        
         $this->SaveManagementData();
 
         foreach ($this->mt as $mtField) {
             if (sizeof($this->$mtField) > 0) {
-
                 MtFieldWrapper::setMTTermsforEntity($mtField, $this->entity, $this->{$this->keyName}, $this->$mtField);
             }
         }
+
         foreach ($this->uf as $userField) {
             if (sizeof($this->$userField) > 0) {
                 UserFieldWrapper::setUserTermsforEntity($userField, $this->entity, $this->{$this->keyName}, $this->$userField);
             }
         }
+
         $this->saveClarifyingNotes();
         $this->SaveDocs();
         $this->SaveGeometries();
@@ -116,11 +117,10 @@ class DomainEntity extends ADODB_Active_Record {
         global $global;
         if ($record_number != null) {
             acl_is_entity_allowed($this->entity, 'read', $record_number);
-            $record_number = $global['db']->qstr($record_number);
-            $this->Load("$this->keyName=$record_number");
-            $this->LoadManagementData();
         }
-        //var_dump($this);
+        $record_number = $global['db']->qstr($record_number);
+        $this->Load("$this->keyName=$record_number");
+        $this->LoadManagementData();
     }
 
     public function LoadRelationships() {

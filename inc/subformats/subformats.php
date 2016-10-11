@@ -11,7 +11,7 @@ class Subformats {
   public function create($entity_name, $subformat_name, $subformat_label){
 
     $create_entity_table = "CREATE  TABLE `" . $subformat_name . "` (
-                            `vocab_number` MEDIUMINT NOT NULL AUTO_INCREMENT,
+                            `vocab_number` VARCHAR(45) NOT NULL,
                             `record_number` VARCHAR(45) NOT NULL ,
                             PRIMARY KEY (`vocab_number`),
                             FOREIGN KEY (`record_number` )

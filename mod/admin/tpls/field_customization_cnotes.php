@@ -8,7 +8,7 @@
                 <th><?php echo(_t('Enabled')); ?></th> 
                 <th><?php echo(_t('IS_REQUIRED')); ?></th> 
                 <th><?php echo(_t('CLARIFY')); ?></th> 
-
+                <th><?php echo(_t('DELETE')); ?></th> 
             </tr>
         </thead>
         <tbody>
@@ -37,7 +37,16 @@
                         <?php $name = 'clari_' . $record['field_number']; ?>
                         <input type="checkbox" name="<?php echo $name; ?>" id="<?php echo $name; ?>" value='y' <?php if (strtolower($record['clar_note']) == 'y') echo "checked='true'"; ?> <?php if($record['field_type'] == 'line'){ echo ' disabled="disables"';} ?>/>
                     </td>
-
+                    <td align="center">
+                        <?php 
+                            $number = $record['field_number'];
+                            $url = get_url('admin', 'field_customization', null, array('sub_act' => 'delete', 'entity_select' => $_REQUEST['entity_select'], 'field_number' => $number), null, true);
+                        ?>
+                        <a class="btn btn-danger btn-mini" href="<?php echo $url;?>" onclick="return confirm('Are you sure?')" >
+                            <i class="icon-trash icon-white"></i>
+                            <?=_t('DELETE')?>
+                        </a>
+                    </td>
 
                 </tr>
 

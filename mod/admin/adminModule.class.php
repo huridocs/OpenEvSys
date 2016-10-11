@@ -79,27 +79,10 @@ class adminModule extends shnModule {
             } elseif ($this->sub_act == 'order' && isset($_POST['itemsorder'])) {
                 form_customization_update_fields_order($this->entity_select);
             } else {
-                //if update is sent save data
-                //OES-28. By pressing enter forms submited. if there no reset nor update - entered data will be lost.
-                //so better to save changes. update by default
-                //if($_POST['update']){
                 if ('POST' == $_SERVER['REQUEST_METHOD']) {
                     form_customization_process_entity_form($this->entity_select);
                 }
-
-                /* if (isset($_POST['reset'])) {
-                  form_customization_reset_all($this->entity_select);
-                  } */
-
-                // OES-28
-                /* $reset_fields = form_customization_get_reset_fields();
-                  foreach ($reset_fields as $post_value => $table_field) {
-                  if (isset($_POST[$post_value])) {
-                  form_customization_reset_field($this->entity_select, $table_field);
-                  }
-                  } */
             }
-            //include field form
             include_once APPROOT . 'mod/admin/entity_form.inc';
 
             $this->entity_form = $entity_form;
@@ -112,7 +95,7 @@ class adminModule extends shnModule {
                 $fields_form = generate_formarray($this->entity_select, "new");
                 $fields_form2 = array();
                 foreach ($fields_form as $k => $f) {
-                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select') {
+                    if ($f["type"] == 'mt_tree' || $f['type'] == 'mt_select'  || $f['type'] == 'radio') {
                         $fields_form2[$k] = $f;
                     }
                 }
@@ -124,15 +107,21 @@ class adminModule extends shnModule {
                 $field_numbers = array();
                 foreach ($res as $record) {
                     if ($record['enabled'] == 'y' && $record['visible_new'] == 'y' &&
-                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select')) {
+                            ( $record['field_type'] == 'mt_tree' || $record['field_type'] == 'mt_select' || $record['field_type'] == 'radio')) {
                         $fields[$record['field_number']] = $record;
                     }
                     $field_numbers[] = $record['field_number'];
                 }
                 $this->fields_for_hide = $fields;
                 $browse = new Browse();
-                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "')";
+                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";                
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
+
+            }
+
+            if($this->sub_act == 'delete') {
+                form_customization_delete_field($_GET['field_number']);
+                set_redirect_header('admin', 'field_customization', null, array(sub_act => 'cnotes', entity_select => $this->entity_select));
             }
         }
     }
@@ -151,9 +140,7 @@ class adminModule extends shnModule {
     public function act_new_field() {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
-
-        $entities = new Entities();
-        $entity_select_options = $entities->select_options(true);
+        $entity_select_options = array_merge(array('' => ''),getActiveFormats());
         
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
@@ -1103,6 +1090,41 @@ class adminModule extends shnModule {
 
             foreach ($_POST as $key => $value) {
                 $conf[$key] = $value;
+                shn_config_database_update($key, $value);
+            }
+        }
+    }
+    public function act_dashboard_configuration() {
+        global  $conf;
+
+
+        if (isset($_POST["submit"])) {
+
+            $this->conf = $conf;
+            unset($_POST["submit"]);
+            $formats = getActiveFormats();
+
+            foreach ($formats as $format => $value) {
+
+                if (!isset($_POST['dashboard_format_counts_'.$format])) {
+                    $_POST['dashboard_format_counts_'.$format] = false;
+                }
+            }
+            if (!isset($_POST['dashboard_select_counts'])) {
+                $_POST['dashboard_select_counts'] = array();
+            }
+            if (!isset($_POST['dashboard_date_counts'])) {
+                $_POST['dashboard_date_counts'] = array();
+            }
+            foreach ($_POST as $key => $value) {
+                if($key == 'dashboard_select_counts'){
+                    $value = json_encode($value);
+                }
+                if($key == 'dashboard_date_counts'){
+                    $value = json_encode($value);
+                }
+                $conf[$key] = $value;
+
                 shn_config_database_update($key, $value);
             }
         }

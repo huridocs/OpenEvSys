@@ -15,20 +15,13 @@ class Entities extends ADODB_Active_Record {
     return $this->Find("`section_value` = 'subformat' AND `value` != 'document'");
   }
 
-  public function select_options($subformats = false){
+  public function select_options(){
     $entities = $this->get();
-
-    if($subformats){
-      $entities = array_merge($entities, $this->get_subformats());
-    }
-
-    $entity_select_options = array(
-      '' => ''
-    );
+    $entities = array_merge($entities, $this->get_subformats());
 
     foreach($entities as $entity) {
       $entity_name = $entity->value;
-      $entity_select_options[$entity_name] = _t(strtoupper($entity_name));
+      $entity_select_options[$entity_name] = _t($entity_name);
     }
 
     return $entity_select_options;

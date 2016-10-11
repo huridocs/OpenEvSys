@@ -238,6 +238,7 @@ class analysisModule extends shnModule {
         define('ADODB_FETCH_BOTH', 3);
         $global['db']->SetFetchMode(ADODB_FETCH_BOTH);
         $res = $global['db']->Execute($sqlStatement);
+        error_log(var_export( $res ,true));
 
         $entity_type_form_results = generate_formarray($this->search_entity, 'search_view');
 
@@ -1192,21 +1193,36 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
         global $global;
         include_once 'searchSql.php';
+//Vicent
 
-        $start = (int) $_GET['iDisplayStart'];
-        $limit = (int) $_GET['iDisplayLength'];
+/*        if (isset($_GET['iDisplayStart']))
+            $start = (int) $_GET['iDisplayStart'];
+        else
+            $start = (int) $_POST['iDisplayStart'];
+        if (isset($_GET['iDisplayLength']))
+            $limit = (int) $_GET['iDisplayLength'];
+        else
+            $limit = (int) $_POST['iDisplayLength'];
         if (!$limit) {
-            $limit = 10;
-        }
-
-
-
+            $limit = 100;
+        }        
+*/
+        $start = 0;
+        $limit = -1;
         //convert json query to an object
         $query = json_decode($_GET['query']);
 
+        //Vicent
+        if (!isset($query))
+            $query = json_decode($_POST["query"]);
+        
+        //Vicent
+        
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
+    
+       $queryOriginal = json_encode($query);
         if ($query->group_by != NULL) {
             //if the query is a count put group by field to the array
             foreach ($query->group_by as $field) {
@@ -1223,19 +1239,15 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
             }
         }
-
-        //var_dump('fields_array',$fields_array);
         if (!$sidx)
             $sidx = 1;
 
 
         $searchSql = new SearchResultGenerator();
-        $sqlArray = $searchSql->sqlForJsonQuery($_GET['query']);
-
-        //var_dump($_GET['query'],$sqlArray['result']);exit;
-        //$count_query = $sqlArray['count'];
+        
+        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);         
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
-        //var_dump($sqlArray['result']);exit;
+
         try {
             $res_count = $global['db']->Execute($count_query);
         } catch (Exception $e) {
@@ -1265,6 +1277,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $start = 0;
 
         $sql = $sqlArray['result'];
+
         //print $sql;
         if ($limit != -1) {
             $sql .= " LIMIT $start , $limit";
@@ -1282,6 +1295,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         $response->page = (int) $page; // current page
         $response->iTotalRecords = (int) $count; // total pages
         $response->iTotalDisplayRecords = (int) $count; // total records
+
         //$response->aaSorting = array(array(1=>"desc"));
 
         $i = 0;
@@ -1291,10 +1305,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         $number_of_fields = count($fields_array);
         $response->aaData = array();
+
         foreach ($res as $key => $val) {
             //$response->aaData[$i]['id'] = $val[$fields_array[0]];
             $array_values = array();
-            $array_values['id'] = $val[$fields_array[0]];
+            $array_values['id'] = utf8_encode($val[$fields_array[0]]);
 
 
             for ($count = 0; $number_of_fields > $count; $count++) {
@@ -1365,15 +1380,16 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         $array_values[$field_name] = $val[$field_name];
                     }
                 } else {
-                    $array_values[$field_name] = $val[$field_name];
+                    $array_values[$field_name] = makeLinksClickable($val[$field_name]);
                 }
             }
             $response->aaData[$i] = $array_values;
             $i++;
         }
-
-
+       
         $response->aoColumns = $aoColumns;
+
+        
 
         echo json_encode($response);
 
@@ -1382,9 +1398,14 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
     private function getEntityFields() {
         $res = Browse::getAllEntityFields();
+        $activeFormats = getActiveFormats();
+
         $domain = new Domain();
         foreach ($res as $record) {
             $entity = $record['entity'];
+            if(!isset($activeFormats[$entity])){
+                continue;
+            }
             if (isset($entity) && !isset($domain->$entity)) {
                 $domain->$entity = new domain();
                 $domain->$entity->fields = new domain();
