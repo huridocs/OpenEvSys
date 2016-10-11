@@ -1,5 +1,5 @@
 
--- CREATE SCHEMA IF NOT EXISTS `openevsys` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+-- CREATE SCHEMA IF NOT EXISTS `openevsys` DEFAULT CHARACTER SET latin1 COLLATE utf8;
 -- USE `openevsys`;
 
 -- -----------------------------------------------------
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS  `mt_vocab` (
   `parent_vocab_number` varchar(14) NOT NULL,
   `term_level` int(11) NOT NULL,
   PRIMARY KEY (`vocab_number`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `mt_vocab_l10n` (
    `locale` VARCHAR( 20 ) NOT NULL ,
    `msgstr` TEXT CHARACTER SET utf8 NOT NULL,
    PRIMARY KEY (`msgid`,`locale`)
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS mt_1_index_term(
     ON DELETE CASCADE
     ON UPDATE CASCADE
 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_2_violation_typology_terms 
 (
@@ -250,7 +250,7 @@ CREATE TABLE IF NOT EXISTS mt_2_violation_typology_terms
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS mt_3_rights_typology (
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS mt_3_rights_typology (
     ON DELETE CASCADE
     ON UPDATE CASCADE  
 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_4_types_of_acts 
 (
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS mt_4_types_of_acts
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_5_methods_of_violence 
 (
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS mt_5_methods_of_violence
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_6_international_instruments 
 (
@@ -287,7 +287,7 @@ CREATE TABLE IF NOT EXISTS mt_6_international_instruments
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_7_counting_units 
 (
@@ -296,7 +296,7 @@ CREATE TABLE IF NOT EXISTS mt_7_counting_units
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_8_civil_status
 (
@@ -305,7 +305,7 @@ CREATE TABLE IF NOT EXISTS mt_8_civil_status
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_9_education
 (
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS mt_9_education
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_10_occupation
 (
@@ -323,7 +323,7 @@ CREATE TABLE IF NOT EXISTS mt_10_occupation
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_11_physical_descriptors
 (
@@ -332,7 +332,7 @@ CREATE TABLE IF NOT EXISTS mt_11_physical_descriptors
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_12_religions
 (
@@ -341,7 +341,7 @@ CREATE TABLE IF NOT EXISTS mt_12_religions
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_13_ethnic_groups
 (
@@ -350,7 +350,7 @@ CREATE TABLE IF NOT EXISTS mt_13_ethnic_groups
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_14_languages
 (
@@ -359,7 +359,7 @@ CREATE TABLE IF NOT EXISTS mt_14_languages
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_15_geographical_terms 
 (
@@ -368,7 +368,7 @@ CREATE TABLE IF NOT EXISTS mt_15_geographical_terms
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE  
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_16_types_of_source_material
 (
@@ -377,7 +377,7 @@ CREATE TABLE IF NOT EXISTS mt_16_types_of_source_material
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_17_types_of_locations 
 (
@@ -386,7 +386,7 @@ CREATE TABLE IF NOT EXISTS mt_17_types_of_locations
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_18_degrees_of_involvement
 (
@@ -395,7 +395,7 @@ CREATE TABLE IF NOT EXISTS mt_18_degrees_of_involvement
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_19_source_connection_to_information
 (
@@ -404,7 +404,7 @@ CREATE TABLE IF NOT EXISTS mt_19_source_connection_to_information
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_20_types_of_intervention
 (
@@ -413,7 +413,7 @@ CREATE TABLE IF NOT EXISTS mt_20_types_of_intervention
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_21_types_of_relationships
 (
@@ -422,7 +422,7 @@ CREATE TABLE IF NOT EXISTS mt_21_types_of_relationships
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_22_types_of_chain_of_events
 (
@@ -431,7 +431,7 @@ CREATE TABLE IF NOT EXISTS mt_22_types_of_chain_of_events
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_23_relavant_characteristics
 (
@@ -440,7 +440,7 @@ CREATE TABLE IF NOT EXISTS mt_23_relavant_characteristics
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_24_types_of_perpetrators
 (
@@ -449,7 +449,7 @@ CREATE TABLE IF NOT EXISTS mt_24_types_of_perpetrators
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_25_status_as_victim
 (
@@ -458,7 +458,7 @@ CREATE TABLE IF NOT EXISTS mt_25_status_as_victim
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_26_status_as_perpetrator
 (
@@ -467,7 +467,7 @@ CREATE TABLE IF NOT EXISTS mt_26_status_as_perpetrator
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_27_types_of_responses
 (
@@ -476,7 +476,7 @@ CREATE TABLE IF NOT EXISTS mt_27_types_of_responses
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_28_attribution
 (
@@ -485,7 +485,7 @@ CREATE TABLE IF NOT EXISTS mt_28_attribution
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_29_types_of_detention
 (
@@ -494,7 +494,7 @@ CREATE TABLE IF NOT EXISTS mt_29_types_of_detention
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_30_whereabouts
 (
@@ -503,7 +503,7 @@ CREATE TABLE IF NOT EXISTS mt_30_whereabouts
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_31_legal_counsel 
 (
@@ -512,7 +512,7 @@ CREATE TABLE IF NOT EXISTS mt_31_legal_counsel
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_32_types_of_courts
 (
@@ -521,7 +521,7 @@ CREATE TABLE IF NOT EXISTS mt_32_types_of_courts
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_33_types_of_language_used_in_court
 (
@@ -530,7 +530,7 @@ CREATE TABLE IF NOT EXISTS mt_33_types_of_language_used_in_court
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_34_autopsy_results 
 (
@@ -539,7 +539,7 @@ CREATE TABLE IF NOT EXISTS mt_34_autopsy_results
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_35_death_certificate
 (
@@ -548,7 +548,7 @@ CREATE TABLE IF NOT EXISTS mt_35_death_certificate
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_36_statements_signed
 (
@@ -557,7 +557,7 @@ CREATE TABLE IF NOT EXISTS mt_36_statements_signed
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_37_medical_attention
 (
@@ -566,7 +566,7 @@ CREATE TABLE IF NOT EXISTS mt_37_medical_attention
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_38_intent
 (
@@ -575,7 +575,7 @@ CREATE TABLE IF NOT EXISTS mt_38_intent
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_39_sex
 (
@@ -584,7 +584,7 @@ CREATE TABLE IF NOT EXISTS mt_39_sex
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_40_types_of_addresses
 (
@@ -593,7 +593,7 @@ CREATE TABLE IF NOT EXISTS mt_40_types_of_addresses
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_41_violation_status 
 (
@@ -602,7 +602,7 @@ CREATE TABLE IF NOT EXISTS mt_41_violation_status
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_42_reliability
 (
@@ -611,7 +611,7 @@ CREATE TABLE IF NOT EXISTS mt_42_reliability
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_43_monitoring_status
 (
@@ -620,7 +620,7 @@ CREATE TABLE IF NOT EXISTS mt_43_monitoring_status
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_44_impact_on_the_situation
 (
@@ -629,7 +629,7 @@ CREATE TABLE IF NOT EXISTS mt_44_impact_on_the_situation
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_45_intervention_status
 (
@@ -638,7 +638,7 @@ CREATE TABLE IF NOT EXISTS mt_45_intervention_status
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_46_priority
 (
@@ -647,7 +647,7 @@ CREATE TABLE IF NOT EXISTS mt_46_priority
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_47_compensation
 (
@@ -656,7 +656,7 @@ CREATE TABLE IF NOT EXISTS mt_47_compensation
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_48_types_of_dates 
 (
@@ -665,7 +665,7 @@ CREATE TABLE IF NOT EXISTS mt_48_types_of_dates
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -676,7 +676,7 @@ CREATE TABLE IF NOT EXISTS mt_61_local_index
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_62_national_legislation
 (
@@ -685,7 +685,7 @@ CREATE TABLE IF NOT EXISTS mt_62_national_legislation
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_63_local_geographical_area
 (
@@ -694,7 +694,7 @@ CREATE TABLE IF NOT EXISTS mt_63_local_geographical_area
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_64_local_terms_for_occupations
 (
@@ -703,7 +703,7 @@ CREATE TABLE IF NOT EXISTS mt_64_local_terms_for_occupations
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_65_origins
 (
@@ -712,7 +712,7 @@ CREATE TABLE IF NOT EXISTS mt_65_origins
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_66_local_languages
 (
@@ -721,7 +721,7 @@ CREATE TABLE IF NOT EXISTS mt_66_local_languages
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_67_sexual_orientation
 (
@@ -730,7 +730,7 @@ CREATE TABLE IF NOT EXISTS mt_67_sexual_orientation
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mt_68_other_thesaurus
 (
@@ -739,7 +739,7 @@ CREATE TABLE IF NOT EXISTS mt_68_other_thesaurus
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS mt_69_judicial_districts
@@ -749,7 +749,7 @@ CREATE TABLE IF NOT EXISTS mt_69_judicial_districts
     FOREIGN KEY ( vocab_number ) REFERENCES  `mt_vocab` (`vocab_number` )  
     ON DELETE CASCADE
     ON UPDATE CASCADE 
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -804,7 +804,7 @@ CREATE  TABLE IF NOT EXISTS  `event` (
     REFERENCES  `mt_41_violation_status` (`vocab_number` )
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `mlt_geometry` (
   `geometry_record_number` varchar(45) NOT NULL,
@@ -813,7 +813,7 @@ CREATE TABLE IF NOT EXISTS `mlt_geometry` (
   `geometry` geometry NOT NULL,
   `field_name` varchar(100) NOT NULL,
   PRIMARY KEY (`geometry_record_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT CHARSET=utf8;
 
 
 
@@ -882,7 +882,7 @@ CREATE  TABLE IF NOT EXISTS  `person` (
   FOREIGN KEY (`reliability_as_intervening_party`)   REFERENCES mt_42_reliability (vocab_number)   -- 42: Reliability.
   
   )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -920,7 +920,7 @@ CREATE  TABLE IF NOT EXISTS  `biographic_details` (
     FOREIGN KEY (education_and_training) REFERENCES mt_9_education(vocab_number)
     
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE  TABLE IF NOT EXISTS  `address` (
@@ -941,7 +941,7 @@ CREATE  TABLE IF NOT EXISTS  `address` (
     ON UPDATE CASCADE,
     FOREIGN KEY (address_type) REFERENCES mt_40_types_of_addresses(vocab_number)
     )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -997,7 +997,7 @@ CREATE  TABLE IF NOT EXISTS  `act` (
     )
     
     
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 -- -----------------------------------------------------
 -- Table  `arrest`
@@ -1025,7 +1025,7 @@ CREATE  TABLE IF NOT EXISTS  `arrest` (
   FOREIGN KEY (`judicial_district`) REFERENCES mt_69_judicial_districts(vocab_number)  -- 69_judicial_districts
     
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1044,7 +1044,7 @@ CREATE  TABLE IF NOT EXISTS  `killing` (
   FOREIGN KEY (autopsy_results) REFERENCES mt_34_autopsy_results(vocab_number),
   FOREIGN KEY (death_certificate) REFERENCES mt_35_death_certificate(vocab_number)
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 -- -----------------------------------------------------
 -- Table  `torture`
@@ -1061,7 +1061,7 @@ CREATE  TABLE IF NOT EXISTS  `torture` (
   ON DELETE CASCADE
   ON UPDATE CASCADE
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 -- -----------------------------------------------------
 -- Table  `destruction`
@@ -1079,7 +1079,7 @@ CREATE  TABLE IF NOT EXISTS  `destruction` (
   ON UPDATE CASCADE,
   FOREIGN KEY (compensation) REFERENCES mt_47_compensation(vocab_number)
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1108,7 +1108,7 @@ CREATE  TABLE IF NOT EXISTS  `chain_of_events` (
   FOREIGN KEY (type_of_chain_of_events) REFERENCES mt_22_types_of_chain_of_events(vocab_number)
     
     )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1147,7 +1147,7 @@ CREATE  TABLE IF NOT EXISTS  `involvement` (
     FOREIGN KEY (latest_status_as_perpetrator_in_the_act) REFERENCES mt_26_status_as_perpetrator(vocab_number)
     )
     
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1189,7 +1189,7 @@ CREATE  TABLE IF NOT EXISTS  `information` (
     FOREIGN KEY (source_connection_to_information) REFERENCES mt_19_source_connection_to_information(vocab_number),
     FOREIGN KEY (reliability_of_information) REFERENCES mt_42_reliability(vocab_number)
 )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1231,7 +1231,7 @@ CREATE  TABLE IF NOT EXISTS  `intervention` (
     FOREIGN KEY (priority) REFERENCES mt_46_priority(vocab_number)
     
     )
-ENGINE = InnoDB;
+ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1254,14 +1254,14 @@ CREATE TABLE IF NOT EXISTS  `management` (
   PRIMARY KEY (`entity_type`, `entity_id`),
   FOREIGN KEY (monitoring_status) REFERENCES mt_43_monitoring_status(vocab_number) 
   
-  )ENGINE = InnoDB;
+  )ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS supporting_docs(
     doc_id varchar(45) NOT NULL,
     uri varchar(255) NOT NULL,    
     PRIMARY KEY(doc_id)
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS supporting_docs_meta(
     doc_id varchar(45) NOT NULL,
@@ -1279,13 +1279,13 @@ CREATE TABLE IF NOT EXISTS supporting_docs_meta(
     ON DELETE CASCADE
     ON UPDATE CASCADE,
     FOREIGN KEY (type) REFERENCES mt_16_types_of_source_material(vocab_number)
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS supporting_docs_links(
     doc_id varchar(45) NOT NULL,
     entity_id VARCHAR(45) NOT NULL,
     PRIMARY KEY (doc_id, entity_id)
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS event_doc(
     doc_id varchar(45),
@@ -1300,7 +1300,7 @@ CREATE TABLE IF NOT EXISTS event_doc(
     ON DELETE CASCADE
     ON UPDATE CASCADE
 
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS picture_doc(
     doc_id varchar(45),
@@ -1314,7 +1314,7 @@ CREATE TABLE IF NOT EXISTS picture_doc(
     FOREIGN KEY (record_number) REFERENCES person( person_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS person_doc(
     doc_id varchar(45),
@@ -1328,7 +1328,7 @@ CREATE TABLE IF NOT EXISTS person_doc(
     FOREIGN KEY (record_number) REFERENCES person( person_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS act_doc(
     doc_id varchar(45),
@@ -1342,7 +1342,7 @@ CREATE TABLE IF NOT EXISTS act_doc(
     FOREIGN KEY (record_number) REFERENCES act( act_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS information_doc(
     doc_id varchar(45),
@@ -1356,7 +1356,7 @@ CREATE TABLE IF NOT EXISTS information_doc(
     FOREIGN KEY (record_number) REFERENCES information( information_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS involvement_doc(
     doc_id varchar(45),
@@ -1370,7 +1370,7 @@ CREATE TABLE IF NOT EXISTS involvement_doc(
     FOREIGN KEY (record_number) REFERENCES involvement( involvement_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS intervention_doc(
     doc_id varchar(45),
@@ -1384,7 +1384,7 @@ CREATE TABLE IF NOT EXISTS intervention_doc(
     FOREIGN KEY (record_number) REFERENCES intervention( intervention_record_number)
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ---------------------------------------
@@ -1403,7 +1403,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_act_method_of_violence` (
     REFERENCES  `act` (`act_record_number` )
     ON DELETE CASCADE
     ON UPDATE CASCADE
-)ENGINE = InnoDB;
+)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1418,7 +1418,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_act_attribution` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `act` (`act_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1433,7 +1433,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_act_victim_characteristics` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `act` (`act_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1451,7 +1451,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_act_international_instruments` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `act` (`act_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 CREATE  TABLE IF NOT EXISTS  `mlt_act_national_legislation` (
   `vocab_number` VARCHAR(14) NOT NULL ,
@@ -1464,7 +1464,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_act_national_legislation` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `act` (`act_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1491,7 +1491,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_geographical_term` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1513,7 +1513,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_violation_index` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1536,7 +1536,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_rights_affected` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1558,7 +1558,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_huridocs_index_terms` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1582,7 +1582,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_local_index` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1600,7 +1600,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_supporting_documents` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1617,7 +1617,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_files` (
     FOREIGN KEY (`record_number` )
     REFERENCES  `event` (`event_record_number` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1639,7 +1639,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_local_geographical_area` (
     FOREIGN KEY (`vocab_number` )
     REFERENCES  `mt_63_local_geographical_area` (`vocab_number` )
     ON DELETE RESTRICT
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------------------------
@@ -1661,7 +1661,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_event_other_thesaurus` (
     FOREIGN KEY (`vocab_number` )
     REFERENCES  `mt_68_other_thesaurus` (`vocab_number`)
     ON DELETE RESTRICT
-    ON UPDATE CASCADE)ENGINE = InnoDB;
+    ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1682,7 +1682,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_occupation`  (
   FOREIGN KEY (`record_number` ) REFERENCES  `person` (`person_record_number` ) 
   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1694,7 +1694,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_local_term_for_occupation`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1707,7 +1707,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_physical_description`  (
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )  ON DELETE CASCADE
   ON UPDATE CASCADE 
   
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1720,7 +1720,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_citizenship`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1733,7 +1733,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_ethnic_background`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )  ON DELETE CASCADE
   ON UPDATE CASCADE 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1745,7 +1745,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_other_background`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )  ON DELETE CASCADE
   ON UPDATE CASCADE 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1757,7 +1757,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_general_characteristics`  (
   ON UPDATE CASCADE,
  FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1769,7 +1769,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_language`  (
   ON UPDATE CASCADE,
  FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1783,7 +1783,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_local_language`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1796,7 +1796,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_person_national_origin`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (`record_number`)  REFERENCES  `person` (`person_record_number` )   ON DELETE CASCADE
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- -----------------------------------
@@ -1814,7 +1814,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_arrest_whereabouts`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_30_whereabouts` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
   
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1827,7 +1827,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_arrest_legal_counsel`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_31_legal_counsel` (`vocab_number` )      ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE  TABLE IF NOT EXISTS  `mlt_arrest_type_of_court`  (
@@ -1838,7 +1838,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_arrest_type_of_court`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (vocab_number) REFERENCES  `mt_32_types_of_courts` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE   
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1850,7 +1850,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_arrest_type_of_language`  (
   ON UPDATE CASCADE,
   FOREIGN KEY (vocab_number)  REFERENCES  `mt_33_types_of_language_used_in_court` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- -----------------------------------
 
@@ -1865,7 +1865,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_torture_statements_signed`  (
   ON UPDATE CASCADE ,
   FOREIGN KEY (vocab_number)  REFERENCES  `mt_36_statements_signed` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1878,7 +1878,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_torture_medical_attention`  (
   FOREIGN KEY (vocab_number)  REFERENCES  `mt_37_medical_attention` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1891,7 +1891,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_torture_intent`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_38_intent` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------------------------
 
@@ -1907,7 +1907,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_involvement_type_of_perpetrator`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_24_types_of_perpetrators` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ----------------------------------------------
@@ -1926,7 +1926,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_information_language_of_source_material`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_14_languages` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1939,7 +1939,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_information_type_of_source_material`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_16_types_of_source_material` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -1954,7 +1954,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_information_local_language_of_source_material`
   FOREIGN KEY (vocab_number) REFERENCES  `mt_66_local_languages` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ----------------------------------------------
@@ -1973,7 +1973,7 @@ CREATE  TABLE IF NOT EXISTS  `mlt_intervention_type_of_intervention`  (
   FOREIGN KEY (vocab_number) REFERENCES  `mt_20_types_of_intervention` (`vocab_number` )  ON DELETE RESTRICT
   ON UPDATE CASCADE
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 DROP TABLE IF EXISTS audit_log;
@@ -2002,7 +2002,7 @@ CREATE TABLE IF NOT EXISTS clari_notes(
     value TEXT,
     PRIMARY KEY (entity , record_number, field_name , vocab_number )
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS save_query(
     save_query_record_number VARCHAR(45),
@@ -2013,13 +2013,13 @@ CREATE TABLE IF NOT EXISTS save_query(
     created_by VARCHAR(60),
     query TEXT,
     PRIMARY KEY (save_query_record_number)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS sec_entity(
     entity VARCHAR(20),
     PRIMARY KEY ( entity)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS sec_entity_entities(
     entity_key INT NOT NULL AUTO_INCREMENT,
@@ -2029,7 +2029,7 @@ CREATE TABLE IF NOT EXISTS sec_entity_entities(
     FOREIGN KEY (sec_entity) REFERENCES  `sec_entity` (`entity` )  ON DELETE CASCADE,
     UNIQUE KEY  (`sec_entity`,`entity`)
 
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS sec_entity_fields(
     entity_key INT NOT NULL,
@@ -2040,7 +2040,7 @@ CREATE TABLE IF NOT EXISTS sec_entity_fields(
     FOREIGN KEY (entity_key) REFERENCES  `sec_entity_entities` (`entity_key` )  ON DELETE CASCADE
     
     
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS import_log_report (
 `file_name` VARCHAR( 255 ) ,
@@ -2052,7 +2052,7 @@ CREATE TABLE IF NOT EXISTS import_log_report (
 `export_date` date NOT NULL,
 `export_time` time NOT NULL,
 PRIMARY KEY (`time`)
-) ENGINE = InnoDB;
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 
 INSERT INTO `sec_entity` (`entity`) VALUES

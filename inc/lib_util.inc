@@ -415,7 +415,9 @@ function set_links_in_recordset($recordset, $entity, $additionalurlfields = arra
         } else {
             $primary_entity_record_number = null;
         }
-
+        foreach($record as &$val){
+            $val = makeLinksClickable($val);
+        }
         $record['record_url'] = get_record_url($record[$pk], $entity, $primary_entity_record_number);
         $record['record_edit_url'] = get_record_url($record[$pk], $entity, "edit");
         $record['record_delete_url'] = get_record_url($record[$pk], $entity, "delete");
@@ -571,6 +573,15 @@ function is_management_field($formField) {
       }else{
       return false;
       } */
+}
+
+function is_location_field($entity, $field) {
+    global $global;
+    $entity = $global['db']->qstr($entity);
+    $field = $global['db']->qstr($field);
+    $sql = "SELECT count(*) as counts FROM data_dict WHERE field_name = $field AND entity = $entity and field_type='location'";
+    $counts = $global['db']->GetOne($sql); 
+    return $counts!=0;
 }
 
 function is_mt_field($entity, $field) {
@@ -908,3 +919,34 @@ function getMenu($menu) {
     $activeMenuOrdered = $menuItemsNew;
     return $activeMenuOrdered;
 }
+
+function makeLinksClickable($text){
+    return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1" target="_blank">$1</a>', $text);
+}
+
+function getAllFormats(){
+    include_once APPROOT . 'mod/admin/entities.php';
+    $entities = new Entities();
+    return $entities->select_options();
+}
+
+function getActiveFormats(){
+    global $conf;
+    $formats = getAllFormats();
+    foreach($formats as $key=>$value){
+        if($conf['hide_'.$key.'_format'] == 'true'){
+            unset($formats[$key]);
+        }
+    }
+
+    return $formats;
+}
+
+function isFormatActive($format){
+    global $conf;
+    if(isset($conf['hide_'.$format.'_format']) && $conf['hide_'.$format.'_format'] == 'true'){
+        return false;
+    }
+    return true;
+}
+

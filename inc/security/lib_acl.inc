@@ -27,15 +27,17 @@ function acl_mod_allowed($module){
 function acl_is_entity_allowed($entity , $crud , $record_number = null ){
 	global $global;
 
-//var_dump($entity, $crud );
-//var_dump('record_number' , $record_number );
+    $browse = new Browse();
+    $sql = "SELECT * FROM `gacl_axo` WHERE `value` = '$entity'";
+    $result = $browse->ExecuteQuery($sql);
+
+    if($result[0] && $result[0]["section_value"] == "subformat"){
+        return;
+    }
 
 	$entity_allow = $global['gacl']->acl_check('crud', $crud , 'users' , $_SESSION['username'], 'entities' , $entity );
-//var_dump('entity_allow' , $entity_allow);
 
 	if( $entity=='event' && $record_number != null ){
-//		$event_allow = $global['gacl']->acl_check('crud', $crud , 'users' , $_SESSION['username'], 'events' , $record_number );
-//var_dump('event_allow' , $event_allow);
 		$event_allow = $global['gacl']->acl_check('access', 'access', 'users' , $_SESSION['username'], 'events' , $record_number );
 		if( !$event_allow ){
 				throw new shnAccessDeny();

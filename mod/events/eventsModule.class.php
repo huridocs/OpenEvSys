@@ -84,10 +84,10 @@ class eventsModule extends shnModule {
     public function createArgumentEncoder() {
         $whiteList = Array(
             'request_page', 'rpp', 'event_record_number', 'event_title',
-            'initial_date', 'final_date', 'impact_of_event', 'project_title', 'filter', 
+            'initial_date', 'final_date', 'impact_of_event', 'project_title', 'filter',
             'sort', 'sortorder'
         );
-        
+
         $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
@@ -297,8 +297,8 @@ class eventsModule extends shnModule {
     /* {{{ Event actions */
 
     /**
-     * act_new_event will generate ui to add an new event 
-     * 
+     * act_new_event will generate ui to add an new event
+     *
      * @access public
      * @return void
      */
@@ -497,13 +497,19 @@ class eventsModule extends shnModule {
 
     /**
      * act_vp_list will list victim and perpetrator related to a perticuler event
-     * 
+     *
      * @access public
      * @return void
      */
     public function act_vp_list() {
         $this->vp_list = Browse::getVpList($this->event_id);
         $_SESSION['vp'] = null;
+        if (!isset($_GET["act"])){
+          if(($_GET["act"]!="add_perpetrator") | ($_GET["view"]!="new_perpetrator")){
+            $_SESSION["acts"]=null;
+          }
+        }
+        $_SESSION['acts'] = null;
         //if an involvement is requested
         if (isset($_GET['inv_id']))
             $this->set_inv();
@@ -585,13 +591,13 @@ class eventsModule extends shnModule {
     /* {{{2 victim action */
 
     /**
-     * act_add_victim Allow you to select or add a victim 
-     * 
+     * act_add_victim Allow you to select or add a victim
+     *
      * @access public
      * @return void
      */
     public function act_add_victim() {
-        //if a new person save 
+        //if a new person save
         if (isset($_POST['save'])) {
             $this->victim = $this->save_person();
             $_SESSION['vp']['victim'] = $this->victim->person_record_number;
@@ -627,7 +633,7 @@ class eventsModule extends shnModule {
     }
 
     public function act_add_act() {
-       
+
         if (isset($_REQUEST['acts'])) {
             $_SESSION['eid'] = $_GET['eid'];
             $acts = $_REQUEST['acts'];
@@ -638,7 +644,7 @@ class eventsModule extends shnModule {
             $act->LoadRelationships();
             $victim = $act->victim;
             $_SESSION['vp']['victim'] = $victim;
-            
+
         } else {
             $victim = $_REQUEST['victim'];
         }
@@ -739,7 +745,7 @@ class eventsModule extends shnModule {
             $ad->SaveAll();
             set_redirect_header('events', 'vp_list', null, array('act_id' => $this->act->act_record_number, 'type' => 'act'));
         }
-        //check if ad exists 
+        //check if ad exists
     }
 
     public function act_delete_ad() {
@@ -776,7 +782,7 @@ class eventsModule extends shnModule {
             set_redirect_header('events', 'vp_list');
         }
 
-        //if a new person save 
+        //if a new person save
         if (isset($_POST['save'])) {
             $this->perpetrator = $this->save_person();
             $_SESSION['vp']['perpetrator'] = $this->perpetrator->person_record_number;
@@ -1059,8 +1065,8 @@ class eventsModule extends shnModule {
     /* {{{ Source actions */
 
     /**
-     * act_src_list Will display a list of source 
-     * 
+     * act_src_list Will display a list of source
+     *
      * @access public
      * @return void
      */
@@ -1113,7 +1119,7 @@ class eventsModule extends shnModule {
             $status = shn_form_validate($this->information_form);
             if ($status) {
                 $this->save_information();
-                //unset($_POST);			
+                //unset($_POST);
                 set_redirect_header('events', 'src_list');
             }
         }
@@ -1599,4 +1605,3 @@ class eventsModule extends shnModule {
     }
 
 }
-

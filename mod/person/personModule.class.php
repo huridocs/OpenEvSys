@@ -318,7 +318,6 @@ class personModule extends shnModule {
         $this->result_pager->setArgumentEncoder($this->argumentEncoder);
 
         $this->columnValues = $this->result_pager->get_page_data();
-
         $this->columnValues = set_links_in_recordset($this->columnValues, 'person');
 
         set_huriterms_in_record_array($entity_type_form_results, $this->columnValues);

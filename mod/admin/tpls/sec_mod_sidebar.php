@@ -60,6 +60,8 @@
                 <li class="<?php if ($action == "change_print") echo "active" ?>">
                     <a href="<?php get_url('admin', 'change_print') ?>"><?php echo _t('Print configuration') ?></a>
                 </li>
+                <li class="<?php if ($action == "dashboard_configuration") echo "active" ?>"><a href="<?php get_url('admin', 'dashboard_configuration') ?>"><?php echo _t('Dashboard Configuration') ?></a></li>
+
                 <?php
                 global $conf;
                 if (isset($conf['extension'])) {

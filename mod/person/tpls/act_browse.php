@@ -1,15 +1,16 @@
 
 <?php
-	if(isset($_GET['filter']) || count($columnValues)){
+	
 ?>
 <div id="browse">
     <?php if (acl_is_mod_allowed('person')) { ?>
-                        <a  href="<?php get_url('person', 'new_person', null,  null) ?>" class="btn btn-primary">
-                                  <i class="icon-plus icon-white"></i>  <?php echo _t('ADD_NEW_PERSON') ?></a>
+      <a  href="<?php get_url('person', 'new_person', null,  null) ?>" class="btn btn-primary">
+      <i class="icon-plus icon-white"></i>  <?php echo _t('ADD_NEW_PERSON') ?></a>
 <br/><br/>
                         <?php } ?>
-<?php 
-	if($columnValues != null && count($columnValues) ){		
+<?php
+if(isset($_GET['filter']) || count($columnValues)){
+	if($columnValues != null && count($columnValues)){		
 		$result_pager->render_pages();
 	}
 

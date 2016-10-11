@@ -1,10 +1,6 @@
 <?php
 global $conf;
-
-include_once APPROOT . 'mod/admin/entities.php';
-
-$entities = new Entities();
-$entity_select_options = $entities->select_options();
+$entity_select_options = array_merge(array('' => ''),getActiveFormats());
 
 $customization_form = array(
     'entity_select'=>array(

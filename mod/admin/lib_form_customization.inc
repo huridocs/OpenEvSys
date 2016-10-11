@@ -155,27 +155,43 @@ function form_customization_process_entity_form($entity) {
         }
 
         if (isset($_POST['visibility_field_' . $recordNumber]) && isset($_POST['visibility_field_' . $recordNumber . '_vals'])) {
-            $field_number2 = $_POST['visibility_field_' . $recordNumber];
-            $field_number2 = $global['db']->qstr($field_number2);
 
-            $vals = $_POST['visibility_field_' . $recordNumber . '_vals'];
-            if(!is_array($vals)){
-                $vals = array($vals);
-            }
+            $fieldToHide = $_POST['visibility_field_' . $recordNumber];
+            if(is_array($fieldToHide)) {
+                $hideValues = array();
+                foreach($fieldToHide as $conditionIndex=>$field_number2){
+                    if(!$_POST['visibility_field_' . $recordNumber.'_vals'][$conditionIndex]){
+                        continue;
+                    }
+                    $options  = (array)$_POST['visibility_field_' . $recordNumber . '_vals'][$conditionIndex];
+                    if(!$hideValues[$field_number2]) {
+                        $hideValues[$field_number2] = $options;
+                    }else{
+                        $hideValues[$field_number2] = array_merge($hideValues[$field_number2],$options);
+                    }
+                }
+                $sql2 = array();
 
-            $sql = "INSERT INTO data_dict_visibility (`field_number`,`field_number2`,`value`) values ";
-            $sql2 = array();
-            foreach($vals as $val){
-                $val = $global['db']->qstr($val);
-                $sql2[] = " ('$recordNumber', $field_number2,$val)";
-            }
-            $sql .= implode(",",$sql2);
+                foreach($hideValues as $field_number2 => $vals){
+                    $vals = array_unique($vals);
+                    $field_number2 = $global['db']->qstr($field_number2);
+                    foreach ($vals as $val) {
 
-            $dbQuery = new Browse();
-            try {
-                $dbQuery->ExecuteNonQuery($sql);
-            } catch (Exception $e) {
-                //var_dump($e,$sql);
+                        $val = $global['db']->qstr($val);
+                        $sql2[] = " ('$recordNumber', $field_number2,$val)";
+                    }
+                }
+                if($sql2) {
+                    $sql = "INSERT INTO data_dict_visibility (`field_number`,`field_number2`,`value`) values ";
+                    $sql .= implode(",", $sql2);
+
+                    $dbQuery = new Browse();
+                    try {
+                        $dbQuery->ExecuteNonQuery($sql);
+                    } catch (Exception $e) {
+                        //var_dump($e,$sql);
+                    }
+                }
             }
         }
         if($fieldValues){
@@ -213,6 +229,97 @@ function form_customization_update_fields_order($entity) {
         $global['db']->AutoExecute('data_dict', $fieldValues, 'UPDATE', "field_number = '" . $itemorder['id'] . "'");
         $i++;
     }
+}
+
+function form_customization_delete_field($field_number) {
+  $db = new Browse();
+  
+  $sql = "SELECT * FROM `data_dict` WHERE `field_number` LIKE '$field_number'";
+
+  $result = $db->ExecuteQuery($sql);
+  
+  $field_type = $result[0]['field_type'];
+  $field_name = $result[0]['field_name'];
+  $entity = $result[0]['entity'];
+
+  switch ($field_type) {
+    case 'subformat':
+      delete_subformat($field_number, $entity, $field_name);
+      break;
+    case 'location':
+      delete_location($field_number, $entity, $field_name);
+      break;
+    case 'mt_tree':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'mt_select':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'user_select':
+      delete_mt_field($field_number, $entity, $field_name);
+      break;
+    case 'line':
+      delete_from_data_dict($field_number);
+      break;   
+    default:
+      delete_normal_field($field_number, $entity, $field_name);
+      break;
+  }
+}
+
+function delete_subformat($field_number, $entity, $field_name){
+  $db = new Browse();
+
+  $db->ExecuteNonQuery("DELETE FROM `gacl_axo` WHERE `value` = '$field_name'");
+  $db->ExecuteNonQuery("DELETE FROM `gacl_axo_map` WHERE `value` = '$field_name'");
+
+  $get_subformat_fields = "SELECT * FROM `data_dict` WHERE `entity` = '$field_name'";
+  $subformat_fields = $db->ExecuteQuery($get_subformat_fields);
+  
+  foreach ($subformat_fields as $field) {
+    form_customization_delete_field($field['field_number']);
+  }
+
+  delete_normal_field($field_number, $entity, $field_name);
+
+  $delete_subformat_table = "DROP TABLE IF EXISTS `$field_name`";
+  $db->ExecuteNonQuery($delete_subformat_table);
+}
+
+function delete_location($field_number, $entity, $field_name){
+  $db = new Browse();
+  
+  $delete_latitude = "ALTER TABLE `$entity` DROP `".$field_name."_latitude`";
+  $delete_longitude = "ALTER TABLE `$entity` DROP `".$field_name."_longitude`";
+  $db->ExecuteNonQuery($delete_latitude);
+  $db->ExecuteNonQuery($delete_longitude);
+  
+  delete_from_data_dict($field_number);
+}
+
+function delete_mt_field($field_number, $entity, $field_name){
+  $db = new Browse();
+  $delete_mt_table = "DROP TABLE IF EXISTS mlt_".$entity."_".$field_name;
+  $db->ExecuteNonQuery($delete_mt_table);
+  delete_normal_field($field_number, $entity, $field_name);
+}
+
+function delete_normal_field($field_number, $entity, $field_name){
+  delete_from_entity($entity, $field_name);
+  delete_from_data_dict($field_number);
+}
+
+function delete_from_data_dict($field_number){
+  $db = new Browse();
+  
+  $db->ExecuteNonQuery("DELETE FROM `data_dict_l10n` WHERE `msgid` = '$field_number'");
+  $db->ExecuteNonQuery("DELETE FROM `data_dict` WHERE `field_number` = '$field_number'");
+}
+
+function delete_from_entity($entity, $field_name){
+  $db = new Browse();
+  $delete_from_entity = "ALTER TABLE `$entity` DROP `$field_name`";
+  $db->ExecuteNonQuery($delete_from_entity);
 }
 
 function form_customization_add_field($field_type_options) {
@@ -348,8 +455,10 @@ function form_customization_add_field($field_type_options) {
     try {
 
         if ($fieldValues['field_type'] == "location") {
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ");
-            $dbQuery->ExecuteNonQuery("ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ");
+            $latitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_latitude` double NULL ";
+            $longitude_field = "ALTER TABLE `" . $fieldValues['entity'] . "` ADD `" . $fieldValues['field_name'] . "_longitude` double NULL ";
+            $dbQuery->ExecuteNonQuery($latitude_field);
+            $dbQuery->ExecuteNonQuery($longitude_field);
         }
         if($fieldValues['field_type'] == "subformat"){
           include_once(APPROOT . 'inc/subformats/subformats.php');
@@ -371,7 +480,7 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
             $dbQuery->ExecuteNonQuery($sql);
         }if ($fieldValues['field_type'] == "user_select" && $fieldValues['is_repeat'] == 'y') {
 
@@ -386,10 +495,10 @@ function form_customization_add_field($field_type_options) {
                   FOREIGN KEY (`record_number` )
                   REFERENCES  `" . $fieldValues['entity'] . "` (`" . get_primary_key($fieldValues['entity']) . "` )
                   ON DELETE CASCADE
-                  ON UPDATE CASCADE)ENGINE = InnoDB;";
+                  ON UPDATE CASCADE)ENGINE = InnoDB DEFAULT CHARSET=utf8;";
            $dbQuery->ExecuteNonQuery($sql);
 
-        } elseif($fieldValues['field_type'] != "line") {
+        } elseif(!is_null($field_mysql_type)) {
           add_field_to_entity($fieldValues['entity'], $fieldValues['field_name'], $field_mysql_type);
         }
 

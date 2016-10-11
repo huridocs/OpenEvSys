@@ -1,7 +1,9 @@
 
 <?php include_once('event_title.php') ?>
 
-<div class="panel">    
+<!--?php unset ($_SESSION["acts"])?-->
+
+<div class="panel">
     <?php include_once('vp_list_table.php'); ?>
     <?php if (isset($_GET['type'])) { ?>
         <br />
@@ -27,7 +29,7 @@
                     ?>
                     <a class="btn" href="<?php echo get_url('events', 'edit_perpetrator', null, array('inv_id' => $_GET['inv_id'], 'pid' => $perpetrator->person_record_number)) ?>"><i class="icon-edit"></i> <?php echo _t('EDIT_THIS_PERSON') ?></a>
                     <a class="btn" href="<?php echo get_url('person', 'person', null, array('pid' => $perpetrator->person_record_number)) ?>"><i class="icon-zoom-in"></i> <?php echo _t('MORE_ABOUT_THIS_PERSON') ?></a>
-                   
+
                 <a class="btn"  href="<?php get_url('person', 'role_list', null, array('eid'=>null,'pid' => $perpetrator->person_record_number)) ?>"><i class="icon-zoom-in"></i> <?php echo _t("View person's roles")?></a>
                         <?php
             echo "<br />";

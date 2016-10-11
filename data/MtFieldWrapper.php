@@ -29,24 +29,7 @@
  *
  */
 
-class MtFieldWrapper {//extends MtField{
-    
-   
-
-    
-/*    public function __construct($entity_name,  $field_name){
-        parent::__construct('mlt_' . $entity_name . '_' . $field_name); 
-
-
-        $this->entity_name = trim($entity_name);
-        $this->field_name = trim($field_name);
-        $this->Table_name = 'mlt_' . $this->entity_name . '_' . $this->field_name ;
-        //$mtField = new MtField($this->table_name);        
-        //$this->mtField = $mtField;
-        //return $mtField;        
-        var_dump($this);
-    }*/
-    
+class MtFieldWrapper {
     
     
     public static function getObject($entity_name,  $field_name){
@@ -75,7 +58,6 @@ class MtFieldWrapper {//extends MtField{
             $term->Save();
         }
     }
-    
     
     public static function getMTList($fieldName){
         $mt_terms = new MtTerms();

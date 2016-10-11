@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 $scanned_strings = array();
 define('APPROOT', realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR);
 
-$languages = array(2 => "en", 3 => "fr", 4 => "es", 5 => "ind", 6 => "km", 7 => "ar", 8 => "tr",15=>"zh");
+$languages = array(2 => "en", 3 => "fr", 4 => "es", 5 => "ind", 6 => "km", 7 => "ar", 8 => "tr", 15=>"zh", 16=>"de");
 $translationsFile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translations.txt";
 /*
  * ////find missing
@@ -49,12 +49,12 @@ function generate_translations() {
     $translations = get_translations_array();
     require(APPROOT . "translate" . DIRECTORY_SEPARATOR . 'php-mo.php');
     foreach ($languages as $lkey => $language) {
-        $path = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated\php\\" . $language . "\LC_MESSAGES" . DIRECTORY_SEPARATOR;
+        $path = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated/php/" . $language . "\LC_MESSAGES" . DIRECTORY_SEPARATOR;
         $pofile = $path . $language . "_openevsys.po";
 		mkdir($path ,0777 ,true);
         $fh = fopen($pofile, 'w+');
         
-        $jsfile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated\js".DIRECTORY_SEPARATOR.$language.".json";
+        $jsfile = APPROOT . "translate" . DIRECTORY_SEPARATOR . "translated/js".DIRECTORY_SEPARATOR.$language.".json";
         $jsfh = fopen($jsfile, 'w+');
         fwrite($jsfh,"{\n");
         $jsonArray = array();
