@@ -23,7 +23,7 @@ class SearchResultGenerator {
         //var_dump('searchQuery',$queryArray);
 
         $this->generateSqlArray();
-        $sql = $this->getSql();        
+        $sql = $this->getSql();
         return $sql;
     }
 
@@ -554,8 +554,8 @@ class SearchResultGenerator {
         $entity = $formField["map"]["entity"];
         $field = $formField["map"]["field"];
 
-        
-        if (is_location_field($entity,$field)){                
+
+        if (is_location_field($entity,$field)){
             return "concat($entity.{$field}_longitude,',',$entity.{$field}_latitude) AS $entity"."_"."$field";
         }
 
@@ -577,10 +577,10 @@ class SearchResultGenerator {
         $entityArray = $this->getEntityArray($entity);
 
         $selectField = $this->getFieldAlias($entityArray[$field], $type, $entity);
-        //var_dump('selectField' , $entityArray[$field]);        
+        //var_dump('selectField' , $entityArray[$field]);
         if (($selectField == null || $selectField == '' )) {
-             error_log(var_export($field,true));             
-        }   
+             error_log(var_export($field,true));
+        }
 
         if (!($selectField == null || $selectField == '' )) {
             $this->sqlArray['select'][$selectField] = $selectField;
@@ -641,7 +641,7 @@ class SearchResultGenerator {
             }
         }
         if ($join) {
-            $this->sqlArray['join'][] = array('table' => 'management', 'jointype' => 'LEFT', 'field1' => 'entity_id', 'field2' => get_primary_key($entity), 'as' => $as, 'condition' => " AND entity_type ='$entity' ");
+            $this->sqlArray['join'][] = array('table' => 'management', 'jointype' => 'LEFT', 'field1' => $as.'.entity_id', 'field2' => get_primary_key($entity), 'as' => $as, 'condition' => " AND $as.entity_type ='$entity' ");
         }
     }
 
