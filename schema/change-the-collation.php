@@ -1,9 +1,9 @@
 <?php
 // Stolen from: http://www.holisticsystems.co.uk/blog/?p=931
 $server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'openevsys_aae';
+$username = 'user';
+$password = 'password';
+$database = 'database';
 $new_charset = 'utf8';
 $new_collation = 'utf8_general_ci';
 // Connect to database
