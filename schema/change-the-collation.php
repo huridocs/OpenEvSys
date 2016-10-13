@@ -1,5 +1,5 @@
 <?php
-// Stolen from: http://www.holisticsystems.co.uk/blog/?p=931
+// Source: http://www.holisticsystems.co.uk/blog/?p=931
 $server = 'localhost';
 $username = 'user';
 $password = 'password';
