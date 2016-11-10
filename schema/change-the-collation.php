@@ -1,10 +1,17 @@
 <?php
-// Source: http://www.holisticsystems.co.uk/blog/?p=931
+/*
+Usage: php change-the-collation.php HOST USERNAME PASS DBA
+Source: http://www.holisticsystems.co.uk/blog/?p=931
+*/
 
-$server = 'localhost';
-$username = 'user';
-$password = 'password';
-$database = 'database';
+if($argc != 5)
+    print_usage($argv);
+
+$server = $argv[1];
+$username = $argv[2];
+$password = $argv[3];
+$database = $argv[4];
+
 $new_charset = 'utf8';
 $new_collation = 'utf8_general_ci';
 
@@ -34,3 +41,9 @@ while($tables = mysql_fetch_array($result)) {
     print "changed collation of $table to $new_collation\n";
 }
 print "\n\nThe collation of your database has been successfully changed!";
+
+function print_usage($argv)
+{
+    echo "Usage: php " . $argv[0] . " HOST USERNAME PASS DBA\n";
+    exit;
+}
