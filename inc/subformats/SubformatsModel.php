@@ -65,16 +65,31 @@ class SubformatsModel {
     $table = 'mt_vocab';
     $property = 'english';
     $index_name = 'vocab_number';
+    $has_locale = false;
+
     if($locale !== 'en'){
-      $table = 'mt_vocab_l10n';
-      $property = $locale;
-      $index_name = 'msgid';
+      $has_locale = true;
+
+      $table_locale = 'mt_vocab_l10n';
+      $property_locale = $locale;
+      $index_name_locale = 'msgid';
     }
 
     foreach ($values as $mtObject) {
-      $sql = "SELECT * FROM `$table` WHERE `$index_name` LIKE '".$mtObject->vocab_number."' AND `locale` LIKE '$property'";
+      if($has_locale) {
+          $sql = "SELECT * FROM `$table_locale` WHERE `$index_name_locale` LIKE '".$mtObject->vocab_number."' AND `locale` LIKE '$property_locale'";
+          $result = $browse->ExecuteQuery($sql);
+
+          if(!is_null($result)){
+            array_push($results, $result[0]['msgstr']);
+            continue;
+          }
+      }
+
+      $sql = "SELECT * FROM `$table` WHERE `$index_name` LIKE '".$mtObject->vocab_number . "'";
       $result = $browse->ExecuteQuery($sql);
-      array_push($results, $result[0]['msgstr']);
+
+      array_push($results, $result[0][$property]);
     }
 
     return $results;
