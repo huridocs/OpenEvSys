@@ -72,9 +72,9 @@ class SubformatsModel {
     }
 
     foreach ($values as $mtObject) {
-      $sql = "SELECT * FROM `$table` WHERE `$index_name` LIKE '".$mtObject->vocab_number."'";
+      $sql = "SELECT * FROM `$table` WHERE `$index_name` LIKE '".$mtObject->vocab_number."' AND `locale` LIKE '$property'";
       $result = $browse->ExecuteQuery($sql);
-      array_push($results, $result[0][$property]);
+      array_push($results, $result[0]['msgstr']);
     }
 
     return $results;
