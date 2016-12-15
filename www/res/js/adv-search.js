@@ -473,7 +473,7 @@ function openevsysDomain()
 
                 {
                     'value':'not_=',
-                    'label':'not ='
+                    'label':_('NOT_=')
                 },
 
                 {
@@ -490,7 +490,7 @@ function openevsysDomain()
                 },
                 {
                     'value':'not_=',
-                    'label':'not ='
+                    'label':_('NOT_=')
                 },
 
                 {
