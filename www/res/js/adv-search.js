@@ -430,12 +430,12 @@ function openevsysDomain()
 
                 {
                     'value':'after',
-                    'label': 'after'
+                    'label': _('AFTER')
                 },
 
                 {
                     'value':'at_or_after',
-                    'label': 'at or after'
+                    'label': _('AT_OR_AFTER')
                 },
 
                 {
@@ -499,6 +499,7 @@ function openevsysDomain()
                 }
                 ];
         }
+        console.log('o', o);
         return o;
     }
 }
@@ -972,7 +973,7 @@ function queryBuilder(){
                     }
                     d.replaceWith(o)
                 });
-            }            
+            }
             switch(field_type){
                 case "date":
                     if( e.operator == 'between' || e.operator == 'not_between'){
@@ -1074,7 +1075,7 @@ function queryBuilder(){
         $("<option />", {
             value:  "",
             text: ""
-        }).appendTo(select);        
+        }).appendTo(select);
         for(var option in options){
             if(options[option]) {
                 $("<option />", {
@@ -1083,7 +1084,7 @@ function queryBuilder(){
                 }).appendTo(select);
             }
 
-        }        
+        }
         var div = $("<div class='row-fluid show-grid'></div>");
         div.append(select);
         $('#query_builder').append(div);
@@ -1132,7 +1133,7 @@ function queryBuilder(){
             value:  "",
             text: ""
         }).appendTo(select);
-        
+
         for(var option in options){
             //location is not searchable, hardcoded
             if (options[option].field_type!='location'){
@@ -1580,7 +1581,7 @@ function advSearch(){
         if(this.oTable){
             this.oTable.fnDestroy();
         }
-       
+
         $('#datatable').html("")
         var settings =  {
             "sDom": "<'row'<'span6'<'toolbar'>><'span6'l>r>t<'row'<'span6'i><'span6'p>>",
@@ -1596,7 +1597,7 @@ function advSearch(){
             '</select> records'
             },
             "bAutoWidth": false,
-            
+
             "bDestroy": true,
             "bProcessing": true,
             //"bServerSide": true,
@@ -1616,7 +1617,7 @@ function advSearch(){
         };
 
        // this.oTable = $('#datatable').DataTable( settings);
-        
+
         var postData = {
             mod:'analysis',
             act:'load_grid',
@@ -1626,14 +1627,14 @@ function advSearch(){
         var primeraTaulaDisplayStart=0;
         var primeraTaulaDisplayLengh=0;
         $.post('index.php?mod=analysis&act=load_grid',postData,
-            function(jsondata){                 
-                var dades = JSON.parse(jsondata);                
+            function(jsondata){
+                var dades = JSON.parse(jsondata);
                 settings.aaData = dades.aaData;
                 settings._iTotalRecords = dades.iTotalRecords;
                 settings._iTotalDisplayRecords = dades.iTotalDisplayRecords;
                 settings.page = dades.page;
 
-                pare.oTable = $('#datatable').DataTable( settings); 
+                pare.oTable = $('#datatable').DataTable( settings);
                 $("div.toolbar").html($("#toolbar2").html());
                 $("#toolbar2").hide();
                 pare.initAdditionalFieldsList();
@@ -1641,7 +1642,7 @@ function advSearch(){
 
                 //oTable.fnAdjustColumnSizing();
 
-                $('#datatable th').each( function (i) {                    
+                $('#datatable th').each( function (i) {
                     $(this).html($(this).html()+" <a href='' title='remove column'  onclick='return removeField(\""+columns[i].field+"\",\""+columns[i].entity+"\")'>x</a>");
                 } );
                 $('#qb-qs-save').click(function(){
@@ -1662,11 +1663,11 @@ function advSearch(){
                     });
                 });
                 var result_panel = $('.resultPanel');
-                result_panel.show();                
+                result_panel.show();
                     }
             );
-        
-        
+
+
 
     }
 
