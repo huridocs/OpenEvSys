@@ -44,6 +44,7 @@
 "REMOVE_CLARIFY": "Eliminar Explicar",
 "REMOVE_CONDITION": "Eliminar Condición",
 "REMOVE_SELECTION": "Eliminar Selección",
+"SELECT": "Seleccionar",
 "SELECT_ENTITY": "Seleccionar una entidad",
 "SELECT_FIELD": "Seleccionar un campo",
 "SELECT_TREE_OPTION": "Seleccionar Opción árbol",
@@ -61,5 +62,5 @@
 "Map": "Mapa",
 "Charts": "Gráficos",
 "Results": "Resultados",
-"Filters": "Filtros",
+"Filters": "Filtros"
 }
