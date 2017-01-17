@@ -8,10 +8,10 @@
  * LICENSE: This source file is subject to LGPL license
  * that is available through the world-wide-web at the following URI:
  * http://www.gnu.org/copyleft/lesser.html
- * 
+ *
  *
  * @package    moduleAPI
- * @subpackage form 
+ * @subpackage form
  * @author     Chamindra de Silva (chamindra@opensource.lk>
  * @author     Janaka Wickramasinghe <janaka@opensource.lk>
  * @author     Ravindra De Silva <ravindra@opensource.lk><http://r4vi.org>
@@ -223,11 +223,11 @@ function shn_form_text($label, $name, $extra_opts) {
     if (get_magic_quotes_gpc())
         $value = stripslashes($value);
     if ($extra_opts['no_label'] !== true && isset($label)) {
-        ?>	
+        ?>
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
         <?php
     }
-    ?>	
+    ?>
     <div class="controls">
         <input title="<?php echo $name ?>" type="text" name="<?php echo $name ?>" id="<?php echo $name ?>" <?php echo $readonly ?> value="<?php echo htmlentities($value,ENT_QUOTES, "UTF-8") ?>" tabindex="<?php echo++$shn_tabindex ?>" <?php echo $text_options ?>  />
         <?php
@@ -533,7 +533,7 @@ function shn_form_user_select_mlt($label, $name, $extra_opts) {
 
     $data_array = Browse::getUserListAll();
     $size = count($data_array);
-    
+
     for ($i = 0; $i < $size; $i++) {
         $fullname = $data_array[$i]['first_name'] . " " . $data_array[$i]['last_name'];
         $fullname = trim($fullname);
@@ -663,11 +663,11 @@ function shn_form_mt_select_mlt($label, $name, $extra_opts) {
 }
 
 /**
- * shn_form_radio print out radio options 
- * 
- * @param mixed $label 
- * @param mixed $name 
- * @param mixed $extra_opts 
+ * shn_form_radio print out radio options
+ *
+ * @param mixed $label
+ * @param mixed $name
+ * @param mixed $extra_opts
  * @access public
  * @return void
  */
@@ -749,8 +749,8 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
         $width = 400;
     }
     ?>
-        <select class="mt-tree input-large" title="<?php echo $name ?>" <?php if ($width) echo 'data-width="' . $width . '"'; ?> 
-                onchange="<?php echo $extra_opts['onchange'] ?>" 
+        <select class="mt-tree input-large" title="<?php echo $name ?>" <?php if ($width) echo 'data-width="' . $width . '"'; ?>
+                onchange="<?php echo $extra_opts['onchange'] ?>"
                 name="<?php echo $name ?><?php if ($multiple) echo'[]'; ?>" id="<?php echo $name ?>"
                 <?php echo $select_opts ?> tabindex="<?php echo++$shn_tabindex ?>"
             <?php if ($multiple) echo ' multiple="multiple"'; ?> >
@@ -799,7 +799,7 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
             }
         }
         ?>
-                $("#<?php echo $name ?>").on("change", function(event) { 
+                $("#<?php echo $name ?>").on("change", function(event) {
                     var visibility_fields = <?php echo json_encode($visibility_field) ?>;
                     val = $(this).val()
                     values = val;
@@ -807,7 +807,7 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
                         values = new Array(val);
                     }
                     for(val2 in visibility_fields){
-                                            
+
                         if($.inArray(val2,values)<0){
                             for(i in visibility_fields[val2]){
                                 $("#"+visibility_fields[val2][i]+"_group").show();
@@ -816,7 +816,7 @@ function _shn_form_mt_tree($label, $name, $extra_opts, $multiple = false) {
                     }
                     for(j in values){
                         val = values[j]
-                                            
+
                         if(visibility_fields.hasOwnProperty(val)){
                             for(i in visibility_fields[val]){
                                 $("#"+visibility_fields[val][i]+"_group").hide();
@@ -1004,11 +1004,11 @@ function shn_form_related_victim($label, $name, $extra_opts) {
     if (get_magic_quotes_gpc())
         $value = stripslashes($value);
     if ($extra_opts['no_label'] !== true && isset($label)) {
-        ?>	
+        ?>
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
         <?php
     }
-    ?>    
+    ?>
     <div class="controls">
         <input type="text" readonly="readonly" value="<?php echo $person_name ?>"/>
         <input type="hidden" name="<?php echo $name ?>" id="<?php echo $name ?>" readonly="true" value="<?php echo $value ?>"/>
@@ -1073,9 +1073,9 @@ function shn_form_related_event($label, $name, $extra_opts) {
     if (get_magic_quotes_gpc()) {
         $value = stripslashes($value);
     }
-    ?>	
-    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>  
-    <div class="controls">    
+    ?>
+    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
+    <div class="controls">
         <input type="text" readonly="readonly" value="<?php echo $event_name ?>"/>
         <input type="hidden" name="<?php echo $name ?>" id="<?php echo $name ?>" readonly="true" value="<?php echo $value ?>"/>
 
@@ -1150,11 +1150,11 @@ function shn_form_password($label, $name, $extra_opts) {
         $text_options .= " class='$class'";
 
     if ($extra_opts['no_label'] !== true && isset($label)) {
-        ?>	
+        ?>
         <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
         <?php
     }
-    ?>	
+    ?>
     <div class="controls">
         <input type="password" name="<?php echo $name ?>" id="<?php echo $name ?>" tabindex="<?php echo++$shn_tabindex ?>" <?php echo $text_options ?>  />
         <?php
@@ -1216,9 +1216,9 @@ function shn_form_document($label, $name, $extra_opts) {
             }
         }
     }
-    ?>	
+    ?>
     <a name='document_field'></a>
-    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>	
+    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
     <div class="controls">
         <?php
         if (isset($_POST['search']) || $_GET['request_page'] != null || isset($_POST['new_doc'])) {
@@ -1283,13 +1283,13 @@ function shn_form_document($label, $name, $extra_opts) {
 
 function shn_form_address($label, $name, $extra_opts) {
     ?>
-    <a name='address_field'></a>	
-    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>	
+    <a name='address_field'></a>
+    <label  class="control-label" for="<?php echo $name ?>"><?php echo $label ?></label>
     <div class="controls">
         <a id="show_address_frm" href="#address_field"><?php echo _t('SHOW_ADDRESS_FORM'); ?></a>
         <a id="hide_address_frm" href="#address_field"><?php echo _t('HIDE_ADDRESS_FORM'); ?></a>
         <br />
-        <br />	
+        <br />
         <fieldset id='address_frm' >
             <div class="box" style="margin-top:10px">
                 <h4 class="box-header round-top"><?php echo _t('ADDRESS') ?> </h4>
@@ -1321,7 +1321,7 @@ function shn_form_address($label, $name, $extra_opts) {
                                         <th><?php echo _t('WEBSITE') ?></th>
                                         <th><?php echo _t('START_DATE') ?></th>
                                         <th><?php echo _t('END_DATE') ?></th>
-                                        <th><?php echo _t('ACTION') ?></th>				
+                                        <th><?php echo _t('ACTION') ?></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1376,7 +1376,7 @@ function shn_form_address($label, $name, $extra_opts) {
                                         }
                                         unset($_POST['person_address']);
                                     }
-                                    ?>		
+                                    ?>
                                 </tbody>
                             </table>
                         </div></div></div></fieldset>
@@ -1401,7 +1401,7 @@ function shn_form_address($label, $name, $extra_opts) {
                                         <th><?php echo _t('WEB') ?></th>
                                         <th><?php echo _t('START_DATE') ?></th>
                                         <th><?php echo _t('END_DATE') ?></th>
-                                        <th><?php echo _t('ACTION') ?></th>				
+                                        <th><?php echo _t('ACTION') ?></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1438,7 +1438,7 @@ function shn_form_location($label, $name, $extra_opts) {
             <input type="hidden" name="<?php echo $name ?>_latitude" id="<?php echo $name ?>_latitude" value="<?php if ($value['latitude']) echo $value['latitude'] ?>">
             <input type="hidden" name="<?php echo $name ?>_longitude" id="<?php echo $name ?>_longitude" value="<?php if ($value['longitude']) echo $value['longitude'] ?>">
             <input type="hidden" name="<?php echo $name ?>_country_name" id="<?php echo $name ?>_country_name" value="Armenia" />
-            <input type="hidden" name="<?php echo $name ?>_incident_zoom" id="<?php echo $name ?>_incident_zoom" value="" />
+            <input type="hidden" name="<?php echo $name ?>_location_name" id="<?php echo $name ?>_location_name" value="" />
 
             <div id="<?php echo $name ?>_mapContainer" class="mapContainer"></div>
             <div class="findLocation">
@@ -1451,7 +1451,7 @@ function shn_form_location($label, $name, $extra_opts) {
                     </ul>
                 </div>
                 <div style="clear:both;"></div>
-                <input type="text" id="<?php echo $name ?>_locationFind" name="<?php echo $name ?>_location_find" value=""  title="City, State and/or Country" class="findtext" />						
+                <input type="text" id="<?php echo $name ?>_locationFind" name="<?php echo $name ?>_location_find" value=""  title="City, State and/or Country" class="findtext" />
                 <div style="float:left;margin:9px 0 0 5px;">
                     <input type="button" name="button" id="button" value="Find Location" class="<?php echo $name ?>_buttonFind" />
                 </div>
