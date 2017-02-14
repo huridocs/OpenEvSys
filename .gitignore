@@ -3,3 +3,5 @@
 /media/filemanager/*
 /conf/sysconf.php
 /www/images/uploads
+/usr
+/etc
