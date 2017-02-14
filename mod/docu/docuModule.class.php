@@ -80,10 +80,10 @@ class docuModule extends shnModule {
     public function createArgumentEncoder() {
         $whiteList = Array(
             'request_page', 'rpp', 'doc_id', 'title',
-            'datecreated', 'datesubmitted', 'type', 'format', 
+            'datecreated', 'datesubmitted', 'type', 'format',
             'filter', 'sort', 'sortorder'
         );
-        
+
         $this->argumentEncoder = new ArgumentEncoder($whiteList);
     }
 
@@ -132,7 +132,7 @@ class docuModule extends shnModule {
 
         $this->result_pager = Browse::getExecuteSql($sqlStatement);
         $this->result_pager->setArgumentEncoder($this->argumentEncoder);
-        
+
         $this->columnValues = $this->result_pager->get_page_data();
 
         $this->columnValues = set_links_in_recordset($this->columnValues, 'supporting_docs_meta');
@@ -194,7 +194,7 @@ class docuModule extends shnModule {
         $this->supporting_docs_meta = new SupportingDocsMeta();
         $this->supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
         $this->supporting_docs_meta->LoadRelationships();
-        
+
         $this->supporting_docs = new SupportingDocs();
         $this->supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
 
@@ -204,8 +204,8 @@ class docuModule extends shnModule {
     }
 
     /**
-     * act_edit_document Action to edit document details  
-     * 
+     * act_edit_document Action to edit document details
+     *
      * @access public
      * @return void
      */
@@ -231,14 +231,14 @@ class docuModule extends shnModule {
                 $this->supporting_docs->Save();
                 shnMessageQueue::addInformation(_t('THE_OLD_FILE_ATTACHMENT_WAS_UPDATED_WITH_THE_NEW_FILE_ATTACHMENT_'));
             } else if (isset($_POST['no'])) {
-                
+
             } else if ($this->supporting_docs->uri != null && $uri != '') {
                 $this->fileExist = true;
                 $_SESSION['uri'] = $uri;
                 $_SESSION['type'] = $type;
                 return;
             } else if ($this->supporting_docs->uri != null && $uri == '') {
-                
+
             } else {
                 $this->supporting_docs->uri = $uri;
                 $this->supporting_docs->Save();
@@ -262,7 +262,7 @@ class docuModule extends shnModule {
             set_redirect_header('docu', 'view_document', null);
         }
         if (isset($_POST['delete'])) {
-            $this->supporting_docs_meta->Delete();
+            $this->supporting_docs_meta->DeleteFromRecordNumber($this->supporting_docs_meta->doc_id);
 
             unlink($this->supporting_docs->uri);
             $this->supporting_docs->Delete();
@@ -275,8 +275,8 @@ class docuModule extends shnModule {
     }
 
     /**
-     * act_link 
-     * 
+     * act_link
+     *
      * @access public
      * @return void
      */
@@ -290,8 +290,8 @@ class docuModule extends shnModule {
     }
 
     /**
-     * act_audit 
-     * 
+     * act_audit
+     *
      * @access public
      * @return void
      */
@@ -316,7 +316,7 @@ class docuModule extends shnModule {
         $supporting_docs_meta = new SupportingDocsMeta();
         $supporting_docs_meta->LoadfromRecordNumber($_GET['doc_id']);
         $supporting_docs_meta->LoadRelationships();
-        
+
         $supporting_docs = new SupportingDocs();
         $supporting_docs->LoadfromRecordNumber($_GET['doc_id']);
         //set headers
