@@ -323,6 +323,7 @@ INSERT INTO `data_dict` (`field_number`, `field_label`, `field_type`, `datatype`
 ('9008', 'Language', 'text', NULL, '9008', '0', 'n', 'n', 'language', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'supporting_docs_meta', NULL, 'n', 'y', 'y', 'y', 'y', 'y', 'y', '', 'y', '', 'n', 'y', 'n'),
 ('9009', 'Choose File Upload', 'upload', NULL, '9009', '0', 'n', 'n', 'choose_file_upload', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'supporting_docs_meta', NULL, 'n', 'y', 'y', 'y', 'y', 'N', 'N', 'n', 'n', '', 'n', 'n', 'n'),
 ('9010', 'Format', 'hidden', NULL, '9010', '0', 'n', 'n', 'format', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'supporting_docs_meta', NULL, 'n', 'y', 'y', 'y', 'y', 'y', 'y', 'y', 'y', '', 'n', 'y', 'n'),
+('9011', 'URL', 'text', NULL, '9011', '0', 'n', 'n', 'url', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'supporting_docs_meta', NULL, 'n', 'y', 'y', 'y', 'y', 'y', 'y', '', 'y', '', 'n', 'y', 'n'),
 ('911_1', 'Date of Birth Type', 'mt_select', NULL, '911_1', '48', 'N', 'n', 'date_of_birth_type', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'person', NULL, 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n'),
 ('928_1', 'Date Deceased Type', 'mt_select', NULL, '928_1', '48', 'N', 'n', 'date_deceased_type', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'person', NULL, 'n', 'y', 'y', '', 'y', 'n', 'n', '', 'y', '', 'n', 'y', 'n');
 
