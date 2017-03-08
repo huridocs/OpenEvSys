@@ -1274,6 +1274,7 @@ CREATE TABLE IF NOT EXISTS supporting_docs_meta(
     type varchar(14),	
     language varchar(64),
     subject varchar(64),
+    url varchar(255),
     PRIMARY KEY (doc_id),
     FOREIGN KEY (doc_id) REFERENCES supporting_docs(doc_id)
     ON DELETE CASCADE

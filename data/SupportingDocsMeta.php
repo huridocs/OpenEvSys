@@ -41,6 +41,7 @@ public $format;
 public $type;
 public $language;
 public $subject;
+public $url;
   
     
 
