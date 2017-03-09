@@ -2,9 +2,6 @@
 $version = $version[1]; ?>
 <script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="res/js/adv-search.js?v=<?php echo $version?>"></script>
-<script type="text/javascript" src="res/js/spinner.js?v=<?php echo $version?>"></script>
-
-<div class="loading">Loading&#8230;</div>
 
 <div class="searchPanel">
 
