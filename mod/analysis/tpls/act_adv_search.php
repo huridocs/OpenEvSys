@@ -1,16 +1,20 @@
-<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));$version = $version[1]; ?><script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
+<?php $version = explode( '=', file_get_contents(WWWWROOT.'VERSION'));
+$version = $version[1]; ?>
+<script type="text/javascript" src="res/jquery/datatables/jquery.dataTables.js"></script>
 <script type="text/javascript" src="res/js/adv-search.js?v=<?php echo $version?>"></script>
+
 <div class="searchPanel">
+
     <div class="panel" >
         <?php if (isset($query)) { ?>
             <strong id="query-name"><?php echo $query->name ?></strong>
         <?php } else { ?>
             <strong id="query-name"><?php echo _t('UNTITLED_QUERY') ?></strong>
         <?php } ?>
-        
+
 
         <form class="form-horizontal"  onsubmit="return false">
-            
+
             <fieldset id="qb-conditions" >
               <!--  <legend><?php echo _t('SEARCH_CONDITIONS') ?></legend> -->
                 <div id="query_builder"></div>
@@ -25,14 +29,14 @@
                 <div id="collapseCount" class="accordion-body collapse">
                     <div class="accordion-inner">
                        <div id="query_builder_count"></div>
-                
+
                     </div>
                 </div>
             </div>
         </div>
             <div class="clearfix" ></div>
             <button    id="qb-search-but" class="qb-but btn" data-type="search" ><i class="icon-ok"></i> <?php echo _t('SEARCH') ?></button>
-            <button   id="qb-clear-but" class="qb-but btn" ><i class="icon-remove"></i> <?php echo _t('CLEAR') ?></button> 
+            <button   id="qb-clear-but" class="qb-but btn" ><i class="icon-remove"></i> <?php echo _t('CLEAR') ?></button>
         </form>
     </div>
 </div>
@@ -42,8 +46,8 @@
         <div id="fg-menu" style="float: left;" class="span5">
             <a tabindex="0" href="#news-items" class="btn" id="hierarchy"><?php echo _t('ADD_FIELDS_TO_SEARCH_RESULTS') ?> <i class="icon-chevron-down"></i></a>
             <div id="news-items" class="hidden">
-                <ul></ul>	
-            </div>	
+                <ul></ul>
+            </div>
         </div>
         <div class="span7">
             <a id="tb-save" href="#saveModal" data-toggle="modal" role="button" title="<?php echo _t('SAVE') ?>"><?php echo _t('SAVE') ?></a>
@@ -57,12 +61,12 @@
     <div class='clecrfix'></div>
     <div class="row-fluid">
         <table style="width:100%" id="datatable" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
-        </table> 
-        <div id="pager" class="scroll" style="text-align:center;"></div> 
+        </table>
+        <div id="pager" class="scroll" style="text-align:center;"></div>
     </div>
 
-    <table id="list1234" class="scroll"></table> 
-    <div id="pager1" class="scroll" style="text-align:center;"></div> 
+    <table id="list1234" class="scroll"></table>
+    <div id="pager1" class="scroll" style="text-align:center;"></div>
 </div>
 <div style="display:none" id="saveModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <form class="form-horizontal"  id="qb-save-query" action="<?php echo get_url('analysis', 'save_query', null) ?>" onsubmit="return false;">
@@ -89,7 +93,7 @@
 </div>
 <script language="javascript">
     var query = '<?php echo $query->query ?>';
-        
+
     var as = advSearch.getInstance();
     as.init();
 
