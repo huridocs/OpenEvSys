@@ -264,7 +264,7 @@ class docuModule extends shnModule {
         if (isset($_POST['delete'])) {
             $this->supporting_docs_meta->DeleteFromRecordNumber($this->supporting_docs_meta->doc_id);
 
-            unlink($this->supporting_docs->uri);
+            unlink(APPROOT . 'media/' . basename($this->supporting_docs->uri));
             $this->supporting_docs->Delete();
 
             global $global;
