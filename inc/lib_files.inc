@@ -51,12 +51,9 @@ function shn_files_store($name , $dir= 'documents' , &$file_type,$uploaddir = ""
 
                 $file_path = $uploaddir . $dir . str_replace('/', '_', $file_id)."_". $file_name;
 
-                // var_dump($file_path);
-                // echo '<pre>';die(var_dump(is_writable($file_path)));echo '</pre>';
                 if (move_uploaded_file($_FILES[$name]['tmp_name'], $file_path)) {
                     return $file_path;
                 }
-                echo '<pre>';die(var_dump($_FILES));echo '</pre>';
             }
             break;
         case UPLOAD_ERR_INI_SIZE:
