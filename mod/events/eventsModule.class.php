@@ -407,20 +407,42 @@ class eventsModule extends shnModule {
             return;
         }
 
-        $this->del_confirm = true;
-        if ($this->event->event_record_number != null && isset($_POST['yes'])) {
-            $this->event->DeleteFromRecordNumber($this->event->event_record_number);
-
-            set_redirect_header('events', 'browse');
-            return;
-        }
-
         $this->events = Browse::getChainOfEvents($this->event->event_record_number);
         $this->events_reverse = Browse::getChainOfEventsReverse($this->event->event_record_number);
         $this->acts = Browse::getActsOfEvents($this->event->event_record_number);
         $this->involvements = Browse::getInvolvementsOfEvents($this->event->event_record_number);
         $this->informations = Browse::getInformationsOfEvents($this->event->event_record_number);
         $this->interventions = Browse::getInterventionsOfEvents($this->event->event_record_number);
+
+        $this->del_confirm = true;
+        if ($this->event->event_record_number != null && isset($_POST['yes'])) {
+            $this->event->DeleteFromRecordNumber($this->event->event_record_number);
+
+            foreach ($this->acts as $act)
+            {
+                $class = new Act();
+
+                $class->DeleteFromRecordNumber($act['act_record_number']);
+            }
+
+            foreach ($this->involvements as $involvement)
+            {
+                $class = new Involvement();
+
+                $class->DeleteFromRecordNumber($involvement['involvement_record_number']);
+            }
+
+
+            foreach ($this->interventions as $intervention)
+            {
+                $class = new Intervention();
+
+                $class->DeleteFromRecordNumber($intervention['intervention_record_number']);
+            }
+
+            set_redirect_header('events', 'browse');
+            return;
+        }
     }
 
     /* }}} */
