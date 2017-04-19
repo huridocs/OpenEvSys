@@ -29,7 +29,7 @@ function checkFileExtension($filename){
 function shn_files_store($name , $dir= 'documents' , &$file_type,$uploaddir = ""){
     global $global;
     global $conf;
-    
+
     switch ($_FILES[$name]['error']) {
         case UPLOAD_ERR_OK:
             include_once APPROOT.'inc/lib_uuid.inc';
@@ -55,28 +55,28 @@ function shn_files_store($name , $dir= 'documents' , &$file_type,$uploaddir = ""
                     return $file_path;
                 }
             }
-            break; 
+            break;
         case UPLOAD_ERR_INI_SIZE:
             $error = _t('THE_UPLOADED_FILE_EXCEEDS_THE_UPLOAD_MAX_FILESIZE_DIRECTIVE_IN_PHP_INI_');
-            break; 
+            break;
         case UPLOAD_ERR_FORM_SIZE:
             $error = _t('THE_UPLOADED_FILE_EXCEEDS_THE_MAX_FILE_SIZE_DIRECTIVE_THAT_WAS_SPECIFIED_IN_THE_HTML_FORM_');
-            break; 
+            break;
         case UPLOAD_ERR_PARTIAL:
             $error = _t('THE_UPLOADED_FILE_WAS_ONLY_PARTIALLY_UPLOADED_');
-            break; 
+            break;
         case UPLOAD_ERR_NO_FILE:
             return null;
-            break; 
+            break;
         case UPLOAD_ERR_NO_TMP_DIR:
             $error = _t('MISSING_A_TEMPORARY_FOLDER_');
-            break; 
+            break;
         case UPLOAD_ERR_CANT_WRITE:
             $error = _t('FAILED_TO_WRITE_FILE_TO_DISK_');
-            break; 
+            break;
         case UPLOAD_ERR_EXTENSION:
             $error = _t('FILE_UPLOAD_STOPPED_BY_EXTENSION_');
-            break; 
+            break;
         default:
             $error = _t('UNKNOWN_UPLOAD_ERROR_');
     }

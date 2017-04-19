@@ -279,7 +279,7 @@ function shn_view_upload($label, $value, $extra_opts)
     $doc = new SupportingDocs();
     $doc->LoadFromRecordNumber($value);
 
-    if ($doc->uri != null && file_exists($doc->uri)) {
+    if ($doc->uri != null && file_exists(APPROOT . 'media/' . basename($doc->uri))) {
         $class = "class='{$extra_opts['class']}'";
         ?>
         <tr <?php echo $class ?>>
