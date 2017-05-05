@@ -672,7 +672,6 @@ class SearchResultGenerator {
 
         $as = $entityType;
 
-
         switch ($entityType) {
             case 'victim':
                 $joinArray = array('table' => 'act', 'jointype' => null, 'field1' => 'act.victim', 'field2' => 'victim.person_record_number', 'as' => 'act');
@@ -689,6 +688,10 @@ class SearchResultGenerator {
             case 'intervening_party':
                 $joinArray = array('table' => 'intervention', 'jointype' => null, 'field1' => 'intervention.intervening_party', 'field2' => 'intervening_party.person_record_number', 'as' => 'intervention');
                 $joinArrayPerson = array('table' => 'person', 'jointype' => null, 'field1' => 'intervention.intervening_party', 'field2' => 'intervening_party.person_record_number', 'as' => 'intervening_party');
+                break;
+            case 'person':
+                $joinArray = array('table' => 'biographic_details', 'jointype' => null, 'field1' => 'biographic_details.person', 'field2' => 'person.person_record_number', 'as' => 'biographic_details');
+                $joinArrayPerson = array('table' => 'person', 'jointype' => null, 'field1' => 'biographic_details.person', 'field2' => 'person.person_record_number', 'as' => 'person');
                 break;
         }
 
@@ -856,11 +859,15 @@ class SearchResultGenerator {
     }
 
     public function isPersonExtention($entity_type) {
-        if ($entity_type == 'victim' || $entity_type == 'perpetrator' || $entity_type == 'source' || $entity_type == 'intervening_party') {
-            return true;
-        } else {
-            return false;
-        }
+        $entities_array = array(
+            'victim',
+            'perpetrator',
+            'source',
+            'intervening_party',
+            'person'
+        );
+
+        return in_array($entity_type, $entities_array);
     }
 
 }

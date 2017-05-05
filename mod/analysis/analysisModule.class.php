@@ -1573,7 +1573,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
 
 
-
             $selectFields = array();
             foreach ($query->conditions as $cond) {
                 $sel = new stdClass;
@@ -1581,21 +1580,22 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 $sel->field = $cond->field;
                 $selectFields[] = $sel;
             }
-            if ($searchparams->facets) {
-                foreach ($searchparams->facets as $facet) {
-
-                    $sel = new stdClass;
-                    $sel->entity = $facet->entity;
-                    $sel->field = $facet->field;
-                    $selectFields[] = $sel;
-                }
-            }
 
             foreach ($domaindata->$selEntity->fields as $field) {
                 if ($field->select == "y") {
                     $sel = new stdClass;
                     $sel->entity = $selEntityOriginal;
                     $sel->field = $field->value;
+                    $selectFields[] = $sel;
+                }
+            }
+
+            if ($searchparams->facets) {
+                foreach ($searchparams->facets as $facet) {
+
+                    $sel = new stdClass;
+                    $sel->entity = $facet->entity;
+                    $sel->field = $facet->field;
                     $selectFields[] = $sel;
                 }
             }
@@ -1641,8 +1641,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
 
             $selectFields = array_unique($selectFields, SORT_REGULAR);
-
-
 
             $query->select = $selectFields;
 
@@ -1706,6 +1704,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
 
+            // die(var_dump($query));
+            die(var_dump($sqlArray['result']));
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
             try {
