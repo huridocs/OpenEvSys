@@ -42,10 +42,10 @@ class EntityRelations{
 						array('to'=>'perpetrator' , 'via' => null)
 						),
 	'person' => array(
-							array('to'=>'address' , 'via'=>null),
-							array('to'=>'credit_card' , 'via'=>null),
-            	array('to'=>'biographic_details' , 'via'=>null  ),
-            	array('to'=>'related_person' , 'via'=>'biographic_details' )
+						array('to'=>'address' , 'via'=>null),
+						array('to'=>'credit_card' , 'via'=>null),
+						array('to'=>'biographic_details' , 'via'=>null  ),
+						array('to'=>'related_person' , 'via'=>'biographic_details' )
 						),
 	'victim' => array(
 						array('to'=>'involvement' , 'via'=>'act') ,
@@ -73,7 +73,7 @@ class EntityRelations{
 		                'torture' =>array('act' , 'act_record_number' , 'torture' , 'torture_record_number')
 
 		),
-		'information' => array (
+		'information' => array(
 						'event'=>array('information' , 'event' , 'event' , 'event_record_number') ,
 						'source'=>array('information' , 'source' , 'person' , 'person_record_number') ,
 						'victim'=>null // to be filled
@@ -90,7 +90,7 @@ class EntityRelations{
 		'person' => array(
 						'address'=> array( 'person' , 'person_record_number' ,'address' , 'person'),
 						'credit_card'=> array( 'person' , 'person_record_number' ,'credit_card' , 'record_number'),
-            'biographic_details' => array('person','person_record_number' , 'biographic_details','person' )
+            			'biographic_details' => array('person','person_record_number' , 'biographic_details','person' )
 		)
 	);
 
