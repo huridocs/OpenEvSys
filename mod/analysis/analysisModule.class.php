@@ -1205,7 +1205,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $limit = (int) $_POST['iDisplayLength'];
         if (!$limit) {
             $limit = 100;
-        }        
+        }
 */
         $start = 0;
         $limit = -1;
@@ -1215,13 +1215,13 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //Vicent
         if (!isset($query))
             $query = json_decode($_POST["query"]);
-        
+
         //Vicent
-        
+
         //build the select field array
         $fields_array = array();
         $entities = analysis_get_search_entities();
-    
+
        $queryOriginal = json_encode($query);
         if ($query->group_by != NULL) {
             //if the query is a count put group by field to the array
@@ -1244,8 +1244,8 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
 
         $searchSql = new SearchResultGenerator();
-        
-        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);         
+
+        $sqlArray = $searchSql->sqlForJsonQuery($queryOriginal);
         $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
         try {
@@ -1386,10 +1386,10 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $response->aaData[$i] = $array_values;
             $i++;
         }
-       
+
         $response->aoColumns = $aoColumns;
 
-        
+
 
         echo json_encode($response);
 
@@ -1422,7 +1422,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         //add the entity list
         $entities = analysis_get_advance_search_entities();
-        
+
         foreach ($entities as $key => $entity) {
             $domain->$key->value = $entity['type'];
             $domain->$key->label = $entity['title'];
@@ -1527,11 +1527,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         global $global, $conf;
 
         $searchparams = $_GET['searchparams'];
+
         $searchparams = json_decode($searchparams);
         $resp = array();
         if ($searchparams) {
             $domaindata = $this->getEntityFields();
-
 
             $query = new stdClass;
             $ents = array();
@@ -1573,22 +1573,12 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             }
 
 
-
             $selectFields = array();
             foreach ($query->conditions as $cond) {
                 $sel = new stdClass;
                 $sel->entity = $cond->entity;
                 $sel->field = $cond->field;
                 $selectFields[] = $sel;
-            }
-            if ($searchparams->facets) {
-                foreach ($searchparams->facets as $facet) {
-
-                    $sel = new stdClass;
-                    $sel->entity = $facet->entity;
-                    $sel->field = $facet->field;
-                    $selectFields[] = $sel;
-                }
             }
 
             foreach ($domaindata->$selEntity->fields as $field) {
@@ -1600,7 +1590,18 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 }
             }
 
+            if ($searchparams->facets) {
+                foreach ($searchparams->facets as $facet) {
+
+                    $sel = new stdClass;
+                    $sel->entity = $facet->entity;
+                    $sel->field = $facet->field;
+                    $selectFields[] = $sel;
+                }
+            }
+
             $selectFields = array_unique($selectFields, SORT_REGULAR);
+
             foreach ($selectFields as $sfield) {
                 if (!in_array($sfield->entity, $ents)) {
                     $ents[] = $sfield->entity;
@@ -1641,8 +1642,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             $selectFields = array_unique($selectFields, SORT_REGULAR);
 
-
-
             $query->select = $selectFields;
 
             function entitySort($a, $b) {
@@ -1656,7 +1655,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
 
             usort($query->select, "entitySort");
             usort($query->conditions, "entitySort");
-
 
             $from = (int) $searchparams->paging->from;
             $size = (int) $searchparams->paging->size;
