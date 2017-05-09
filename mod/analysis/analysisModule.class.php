@@ -1704,8 +1704,6 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
             $searchSql = new SearchResultGenerator();
             $sqlArray = $searchSql->sqlForJsonQuery(json_encode($query));
 
-            // die(var_dump($query));
-            die(var_dump($sqlArray['result']));
             $count_query = "SELECT COUNT(*) FROM ({$sqlArray['result']}) as results";
 
             try {

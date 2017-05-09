@@ -53,24 +53,22 @@ class EntityRelations{
 						array('to'=>'event' , 'via' => 'act'),
 						array('to'=>'act' , 'via' => null)
 						)
-
-
 	);
 
 	private $entityJoinFields = array(
 		'event'=>array( 'act'=> array('event' , 'event_record_number' , 'act' , 'event'),
 						'information' => array ('event' , 'event_record_number' , 'information' , 'event' ),
 						'intervention'=> array ('event' , 'event_record_number' , 'intervention' , 'event' ) ,
-	 					'chain_of_events'=> array ('event' , 'event_record_number' , 'chain_of_events' , 'event' )
+						'chain_of_events'=> array ('event' , 'event_record_number' , 'chain_of_events' , 'event' )
 		),
 		'act' => array(
 						'event'=>array('act' , 'event' , 'event' , 'event_record_number'),
 						'involvement'=>array('act' , 'act_record_number' , 'involvement' , 'act') ,
 						'victim'=>array('act' , 'victim' , 'person' , 'person_record_number') ,
-		                'killing' =>array('act' , 'act_record_number' , 'killing' , 'killing_record_number') ,
+						'killing' =>array('act' , 'act_record_number' , 'killing' , 'killing_record_number') ,
 						'destruction' =>array('act' , 'act_record_number' , 'destruction' , 'destruction_record_number') ,
-		                'arrest' =>array('act' , 'act_record_number' , 'arrest' , 'arrest_record_number') ,
-		                'torture' =>array('act' , 'act_record_number' , 'torture' , 'torture_record_number')
+						'arrest' =>array('act' , 'act_record_number' , 'arrest' , 'arrest_record_number') ,
+						'torture' =>array('act' , 'act_record_number' , 'torture' , 'torture_record_number')
 
 		),
 		'information' => array(
@@ -90,7 +88,13 @@ class EntityRelations{
 		'person' => array(
 						'address'=> array( 'person' , 'person_record_number' ,'address' , 'person'),
 						'credit_card'=> array( 'person' , 'person_record_number' ,'credit_card' , 'record_number'),
-            			'biographic_details' => array('person','person_record_number' , 'biographic_details','person' )
+						'biographic_details' => array('person','person_record_number' , 'biographic_details','person' )
+		),
+		'biographic_details' => array(
+						'person' => array('biographic_details', 'person', 'person', 'person_record_number')
+		),
+		'chain_of_events' => array(
+						'event' => array('chain_of_events', 'event', 'event', 'event_record_number')
 		)
 	);
 

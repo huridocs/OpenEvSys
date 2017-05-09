@@ -44,7 +44,6 @@ class SearchResultGenerator {
                 $this->sqlArray['from'] = $this->tableOfEntity($nowEntity);
                 $this->addGroupBy($nowEntity);
             } else if ($lastEntity != $condition['entity']) {
-                // $this->sqlArray['from'] .= ',' . $this->tableOfEntity($nowEntity);
                 $this->entityJoin($lastEntity, $nowEntity);
                 $this->addGroupBy($nowEntity);
             } else {
@@ -652,6 +651,7 @@ class SearchResultGenerator {
 
         $eRelations = new EntityRelations();
         $joinArray = $eRelations->getJoins($entity1, $entity2);
+
         //var_dump('joinEntities' , $entity1 , $entity2);
         //var_dump('joinArray' , $joinArray);
         foreach ($joinArray as $join) {
