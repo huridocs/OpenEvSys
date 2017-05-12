@@ -35,15 +35,15 @@ class SearchResultGenerator {
         $lastEntity = null;
         $entityForm = null;
 
-
         foreach ($this->searchQuery['conditions'] as $condition) {
 
 
             $nowEntity = $condition['entity'];
+
             if ($lastEntity == null) {
                 $this->sqlArray['from'] = $this->tableOfEntity($nowEntity);
                 $this->addGroupBy($nowEntity);
-            } else if ($lastEntity != $condition['entity']) {
+            } else if ($lastEntity != $condition['entity'] AND isset($this->sqlArray['from'])) {
                 $this->entityJoin($lastEntity, $nowEntity);
                 $this->addGroupBy($nowEntity);
             } else {
@@ -649,6 +649,7 @@ class SearchResultGenerator {
     public function entityJoin($entity1, $entity2) {
         include_once 'EntityRelations.php';
 
+
         $eRelations = new EntityRelations();
         $joinArray = $eRelations->getJoins($entity1, $entity2);
 
@@ -863,8 +864,7 @@ class SearchResultGenerator {
             'victim',
             'perpetrator',
             'source',
-            'intervening_party',
-            'person'
+            'intervening_party'
         );
 
         return in_array($entity_type, $entities_array);
