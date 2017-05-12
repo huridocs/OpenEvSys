@@ -770,10 +770,33 @@ class SearchResultGenerator {
 //var_dump('SELECT' , $selectSql );
         //SELECT END
         //WHERE
-        //var_dump('where',$sqlArray['where'] );
-        foreach ($sqlArray['where'] as $whereElement) {
+        // var_dump('where',$sqlArray['where'] );
+
+        $concatWhereCount = 0;
+        $concatWhereFirstCharacter = $concatWhereLastCharacter = '';
+
+        foreach ($sqlArray['where'] as $key => $whereElement) {
             //$whereLink = ( ( $whereLastLink == null || trim($whereLastLink)== '') ? ' AND ' : " $whereLastLink " );
-            $whereSql .= ($whereSql == null ? '' : $whereLastLink) . $whereElement['condition'];
+
+            if($this->checkNextWhere($key, $sqlArray['where']) AND $concatWhereCount == 0)
+            {
+                $concatWhereCount ++;
+                $concatWhereFirstCharacter = '(';
+            }
+
+            if(!$this->checkNextWhere($key, $sqlArray['where']) AND $concatWhereCount > 0)
+            {
+                $concatWhereCount = 0;
+                $concatWhereLastCharacter = ')';
+            }
+
+            // echo $key . ' -> ' . $concatWhereCount . ' -> ';
+            // var_dump($this->checkNextWhere($key, $sqlArray['where']));
+
+            $whereSql .= ($whereSql == null ? '' : $whereLastLink) . $concatWhereFirstCharacter . $whereElement['condition'] . $concatWhereLastCharacter;
+
+            $concatWhereFirstCharacter = $concatWhereLastCharacter = '';
+
             //$whereLastLink = $whereElement['operator'];
 
             switch (trim($whereElement['operator'])) {
@@ -868,6 +891,21 @@ class SearchResultGenerator {
         );
 
         return in_array($entity_type, $entities_array);
+    }
+
+    private function checkNextWhere($key, $whereArray)
+    {
+        $textArray = explode(' ', trim($whereArray[$key]['condition']));
+
+        $currentCondition = $textArray[0];
+
+        $key ++;
+        $textArray = explode(' ', trim($whereArray[$key]['condition']));
+        $nextCondition = $textArray[0];
+
+        // var_dump($currentCondition);
+
+        return strcmp($currentCondition, $nextCondition) === 0;
     }
 
 }
