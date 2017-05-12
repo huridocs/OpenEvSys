@@ -43,7 +43,7 @@ class SearchResultGenerator {
             if ($lastEntity == null) {
                 $this->sqlArray['from'] = $this->tableOfEntity($nowEntity);
                 $this->addGroupBy($nowEntity);
-            } else if ($lastEntity != $condition['entity'] AND !$this->checkJoinExists($nowEntity)) {
+            } else if ($lastEntity != $condition['entity'] AND isset($this->sqlArray['from'])) {
                 $this->entityJoin($lastEntity, $nowEntity);
                 $this->addGroupBy($nowEntity);
             } else {
@@ -103,17 +103,6 @@ class SearchResultGenerator {
         //print $sqlStatementResult;
         //print $sqlStatementCount;
         return $sql;
-    }
-
-    private function checkJoinExists($entity)
-    {
-        foreach($this->sqlArray['join'] AS $join)
-        {
-            if($join['table'] == $entity)
-                return true;
-        }
-
-        return false;
     }
 
     private function generateCondition($condition, $entityForm) {
@@ -875,8 +864,7 @@ class SearchResultGenerator {
             'victim',
             'perpetrator',
             'source',
-            'intervening_party',
-            'person'
+            'intervening_party'
         );
 
         return in_array($entity_type, $entities_array);
