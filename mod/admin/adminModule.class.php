@@ -114,7 +114,7 @@ class adminModule extends shnModule {
                 }
                 $this->fields_for_hide = $fields;
                 $browse = new Browse();
-                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";                
+                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
 
             }
@@ -141,7 +141,7 @@ class adminModule extends shnModule {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
         $entity_select_options = array_merge(array('' => ''),getActiveFormats());
-        
+
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),
@@ -701,6 +701,29 @@ class adminModule extends shnModule {
         }
         $this->defaultMenuItems = $defaultMenuItems;
         $this->defaulMenuItemsOrdered = $defaulMenuItemsOrdered;
+
+        $this->normalizeActiveMenuItems();
+    }
+
+    public function normalizeActiveMenuItems()
+    {
+        $lastId = 0;
+        foreach($this->activeMenuItems as $key => $item)
+        {
+            $nextId = $lastId + 1;
+            $lastId = $key;
+
+            if($key != $nextId)
+            {
+                $this->activeMenuItems[$key]['id'] = $nextId;
+                $this->activeMenuItems[$nextId] = $this->activeMenuItems[$key];
+
+                unset($this->activeMenuItems[$key]);
+                $lastId = $nextId;
+            }
+        }
+
+        ksort($this->activeMenuItems);
     }
 
     /* }}} */
