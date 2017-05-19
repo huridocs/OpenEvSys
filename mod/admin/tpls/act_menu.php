@@ -51,11 +51,20 @@
                     <?php $menuItems = $activeMenuItems;
                     $count = count($menuItems);
                     $levelsarray = array(-1 => 0);
-                    $maxid = 0;
+                    $last_id = $maxid = 0;
 
                     foreach ($menuItems as $key => $menu):
+                        if($key != ($last_id + 1))
+                            $menu['id'] = $key = $last_id + 1;
+
+                        $last_id = $key;
+
                         $id = $menu['id'];
-                        $maxid = max($maxid,$id);
+
+                        // var_dump($id, $menu['id']);
+                        // var_dump($menu);
+
+                        $maxid = max($maxid, $id);
                         $element1 = $menu;
                         $element2 = $menuItems[$key + 1];
 
