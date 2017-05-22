@@ -5,7 +5,10 @@ include_once APPROOT . 'mod/admin/entities.php';
 include_once APPROOT . 'inc/lib_form_util.inc';
 require_once APPROOT . '3rd/yubico/Yubico.php';
 
-class adminModule extends shnModule {
+class adminModule extends shnModule
+{
+    private $term_order;
+    private $newresult;
 
     public function section_modwrap_open() {
         return $data;
@@ -632,24 +635,26 @@ class adminModule extends shnModule {
         $this->translations = StringTranslations::getMtTranslations();
     }
 
-    private function normalise_menu_order($itemorders, &$newresult, $parent = 0, $term_level = 0, &$term_order = 0) {
+    private function normalizeMenuOrder($itemorders, $parent = 0, $term_level = 0) {
+        // echo '<pre>'; var_dump(func_get_args()); echo '</pre>';
         if (is_array($itemorders)) {
             foreach ($itemorders as &$itemorder) {
-                $id = $itemorder['id'];
+                $id = $this->term_order;
                 $slug = $itemorder['slug'];
                 $title = $itemorder['title'];
                 $itemorder['title'] = $_POST['menu-item-title'][$id];
 
-                $term_order++;
-                $itemorder['order'] = (int) $term_order;
+                $itemorder['order'] = (int) $this->term_order;
                 $itemorder['level'] = (int) $term_level;
                 $itemorder['parent'] = $parent;
                 $children = $itemorder["children"];
                 unset($itemorder["children"]);
-                $newresult[$id] = $itemorder;
+                $this->newresult[$id] = $itemorder;
                 if (is_array($children)) {
-                    $term_order = $this->normalise_menu_order($children, $newresult, $itemorder['id'], $term_level + 1, $term_order);
+                    $this->term_order = $this->normalizeMenuOrder($children, $this->term_order, $term_level + 1);
                 }
+
+                $this->term_order++;
             }
         }
     }
@@ -683,12 +688,15 @@ class adminModule extends shnModule {
         if (isset($_POST["save"])) {
             $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
             if (is_array($itemorders)) {
-                $newresult = array();
-                $this->normalise_menu_order($itemorders, $newresult);
-                //var_dump($newresult,'<br/><br/><br/><br/><br/>',$itemorders);exit;
+                $this->newresult = array();
+                $this->term_order = 1;
 
-                shn_config_database_update($activemenu, serialize($newresult));
-                $conf[$activemenu] = serialize($newresult);
+                $this->normalizeMenuOrder($itemorders);
+                echo '<pre>'; die(var_dump($this->newresult)); echo '</pre>';
+                //var_dump($this->newresult,'<br/><br/><br/><br/><br/>',$itemorders);exit;
+
+                shn_config_database_update($activemenu, serialize($this->newresult));
+                $conf[$activemenu] = serialize($this->newresult);
                 shnMessageQueue::addInformation(_t('Menu was saved successfully.'));
             }
         }
