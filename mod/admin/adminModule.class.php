@@ -5,7 +5,10 @@ include_once APPROOT . 'mod/admin/entities.php';
 include_once APPROOT . 'inc/lib_form_util.inc';
 require_once APPROOT . '3rd/yubico/Yubico.php';
 
-class adminModule extends shnModule {
+class adminModule extends shnModule
+{
+    private $term_order;
+    private $newresult;
 
     public function section_modwrap_open() {
         return $data;
@@ -114,7 +117,7 @@ class adminModule extends shnModule {
                 }
                 $this->fields_for_hide = $fields;
                 $browse = new Browse();
-                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";                
+                $sql = "SELECT * from data_dict_visibility where field_number in ('" . implode("','", $field_numbers) . "') order by field_number,field_number2";
                 $this->visibility_fields = $browse->ExecuteQuery($sql);
 
             }
@@ -141,7 +144,7 @@ class adminModule extends shnModule {
         global $conf;
         include_once APPROOT . 'mod/admin/lib_form_customization.inc';
         $entity_select_options = array_merge(array('' => ''),getActiveFormats());
-        
+
         $field_type_options = array(
             'text' => _t('TEXT_FIELD_WITH_A_200_CHARACTER_LIMIT'),
             'textarea' => _t('TEXTAREA_WITH_UNLIMITED_TEXT'),
@@ -632,23 +635,25 @@ class adminModule extends shnModule {
         $this->translations = StringTranslations::getMtTranslations();
     }
 
-    private function normalise_menu_order($itemorders, &$newresult, $parent = 0, $term_level = 0, &$term_order = 0) {
+    private function normalizeMenuOrder($itemorders, $parent = 0, $term_level = 0) {
         if (is_array($itemorders)) {
-            foreach ($itemorders as &$itemorder) {
-                $id = $itemorder['id'];
+            foreach ($itemorders as $id => $itemorder) {
                 $slug = $itemorder['slug'];
                 $title = $itemorder['title'];
-                $itemorder['title'] = $_POST['menu-item-title'][$id];
+                $itemorder['title'] = $_POST['menu-item-title'][$itemorder['id']];
 
-                $term_order++;
-                $itemorder['order'] = (int) $term_order;
+                $itemorder['id'] = (int) $this->term_order;
+                $itemorder['order'] = (int) $this->term_order;
                 $itemorder['level'] = (int) $term_level;
                 $itemorder['parent'] = $parent;
                 $children = $itemorder["children"];
                 unset($itemorder["children"]);
-                $newresult[$id] = $itemorder;
+                $this->newresult[$this->term_order] = $itemorder;
+
+                $this->term_order++;
+
                 if (is_array($children)) {
-                    $term_order = $this->normalise_menu_order($children, $newresult, $itemorder['id'], $term_level + 1, $term_order);
+                    $this->normalizeMenuOrder($children, $this->term_order - 1, $term_level + 1);
                 }
             }
         }
@@ -667,8 +672,6 @@ class adminModule extends shnModule {
         $this->activemenu = $activemenu;
         $this->menuNames = $menuNames;
 
-
-
         $defaulMenuItemsOrdered = array();
         $order = 0;
         $slugToID = array();
@@ -683,12 +686,13 @@ class adminModule extends shnModule {
         if (isset($_POST["save"])) {
             $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
             if (is_array($itemorders)) {
-                $newresult = array();
-                $this->normalise_menu_order($itemorders, $newresult);
-                //var_dump($newresult,'<br/><br/><br/><br/><br/>',$itemorders);exit;
+                $this->newresult = array();
+                $this->term_order = 1;
 
-                shn_config_database_update($activemenu, serialize($newresult));
-                $conf[$activemenu] = serialize($newresult);
+                $this->normalizeMenuOrder($itemorders);
+
+                shn_config_database_update($activemenu, serialize($this->newresult));
+                $conf[$activemenu] = serialize($this->newresult);
                 shnMessageQueue::addInformation(_t('Menu was saved successfully.'));
             }
         }
@@ -701,6 +705,29 @@ class adminModule extends shnModule {
         }
         $this->defaultMenuItems = $defaultMenuItems;
         $this->defaulMenuItemsOrdered = $defaulMenuItemsOrdered;
+
+        $this->normalizeActiveMenuItems();
+    }
+
+    public function normalizeActiveMenuItems()
+    {
+        $lastId = 0;
+        foreach($this->activeMenuItems as $key => $item)
+        {
+            $nextId = $lastId + 1;
+            $lastId = $key;
+
+            if($key != $nextId)
+            {
+                $this->activeMenuItems[$key]['id'] = $nextId;
+                $this->activeMenuItems[$nextId] = $this->activeMenuItems[$key];
+
+                unset($this->activeMenuItems[$key]);
+                $lastId = $nextId;
+            }
+        }
+
+        ksort($this->activeMenuItems);
     }
 
     /* }}} */

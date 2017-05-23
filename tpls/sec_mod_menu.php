@@ -200,7 +200,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
             $acMenu['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
             $acMenu['check'] = $defaultMenuItems[$menu['slug']]['check'];
             $acMenu['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
-            $topMenuItems[] = $acMenu;
+            $topMenuItems = $acMenu;
         }
     }
 
@@ -236,7 +236,6 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
                           );
       $topMenuItems[] = $menuItem;
     }
-
 
     $menuItems = $topMenuItems;
     $level = 0;
