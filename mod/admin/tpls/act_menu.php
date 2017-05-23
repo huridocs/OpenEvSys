@@ -56,9 +56,6 @@
                     foreach ($menuItems as $key => $menu):
                         $id = $menu['id'];
 
-                        // var_dump($id, $menu['id']);
-                        // var_dump($menu);
-
                         $maxid = max($maxid, $id);
                         $element1 = $menu;
                         $element2 = $menuItems[$key + 1];
