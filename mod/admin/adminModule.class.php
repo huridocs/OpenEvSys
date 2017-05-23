@@ -636,25 +636,25 @@ class adminModule extends shnModule
     }
 
     private function normalizeMenuOrder($itemorders, $parent = 0, $term_level = 0) {
-        // echo '<pre>'; var_dump(func_get_args()); echo '</pre>';
         if (is_array($itemorders)) {
-            foreach ($itemorders as &$itemorder) {
-                $id = $this->term_order;
+            foreach ($itemorders as $id => $itemorder) {
                 $slug = $itemorder['slug'];
                 $title = $itemorder['title'];
-                $itemorder['title'] = $_POST['menu-item-title'][$id];
+                $itemorder['title'] = $_POST['menu-item-title'][$itemorder['id']];
 
+                $itemorder['id'] = (int) $this->term_order;
                 $itemorder['order'] = (int) $this->term_order;
                 $itemorder['level'] = (int) $term_level;
                 $itemorder['parent'] = $parent;
                 $children = $itemorder["children"];
                 unset($itemorder["children"]);
-                $this->newresult[$id] = $itemorder;
-                if (is_array($children)) {
-                    $this->term_order = $this->normalizeMenuOrder($children, $this->term_order, $term_level + 1);
-                }
+                $this->newresult[$this->term_order] = $itemorder;
 
                 $this->term_order++;
+
+                if (is_array($children)) {
+                    $this->normalizeMenuOrder($children, $this->term_order - 1, $term_level + 1);
+                }
             }
         }
     }
@@ -671,8 +671,6 @@ class adminModule extends shnModule
         }
         $this->activemenu = $activemenu;
         $this->menuNames = $menuNames;
-
-
 
         $defaulMenuItemsOrdered = array();
         $order = 0;
@@ -692,8 +690,6 @@ class adminModule extends shnModule
                 $this->term_order = 1;
 
                 $this->normalizeMenuOrder($itemorders);
-                echo '<pre>'; die(var_dump($this->newresult)); echo '</pre>';
-                //var_dump($this->newresult,'<br/><br/><br/><br/><br/>',$itemorders);exit;
 
                 shn_config_database_update($activemenu, serialize($this->newresult));
                 $conf[$activemenu] = serialize($this->newresult);
