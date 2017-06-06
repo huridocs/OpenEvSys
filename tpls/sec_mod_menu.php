@@ -119,7 +119,6 @@ $menus["person"]["audit_log"] = array(
     "title" => _t('AUDIT_LOG'),
     "url" => get_url('person', 'audit_log', null, array('pid' => $id), null, true));
 
-
 global $person;
 if ($person->confidentiality == 'y') {
     $menus["person"]["permissions"] = array(
@@ -188,19 +187,34 @@ $menus["home"]["edit_security"] = array(
 if (in_array($module, array("events", "person", "docu", "analysis", "home"))
         &&  !in_array($action, array("browse", "browse_act", "browse_intervention", "browse_biography","add_act_full"))) {
     $defaultMenuItems = getDefaultMenuItems();
+    
     $activemenu = $module . "_menu";
     $topMenuItems = getMenu($activemenu);
+    
     if ($conf[$activemenu]) {
         $acMenu = @unserialize($conf[$activemenu]);
+        $acMenu = array_values($acMenu);
+        
         if ($acMenu) {
-            $acMenu['url'] = $defaultMenuItems[$menu['slug']]['url'];
-            $acMenu['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
-            $acMenu['mod'] = $defaultMenuItems[$menu['slug']]['module'];
-            $acMenu['act'] = $defaultMenuItems[$menu['slug']]['action'];
-            $acMenu['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
-            $acMenu['check'] = $defaultMenuItems[$menu['slug']]['check'];
-            $acMenu['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
-            $topMenuItems = $acMenu;
+            $i=0;
+            foreach ($acMenu as $acMenu_value) {
+                if(in_array($acMenu_value['slug'], $topMenuItems[$i])){
+
+                    $acMenu_value['url'] = $topMenuItems[$i]['url'];
+                    $acMenu_value['prefix'] = $topMenuItems[$i]['prefix'];
+                    $acMenu_value['mod'] = $topMenuItems[$i]['module'];
+                    $acMenu_value['act'] = $topMenuItems[$i]['action'];
+                    $acMenu_value['aclmod'] = $topMenuItems[$i]['aclmod'];
+                    // $acMenu_value['check'] = $topMenuItems[$i]['check']; //user role permission flag?
+                    $acMenu_value['aliases'] = $topMenuItems[$i]['aliases'];
+
+                    $new_acMenu[] = $acMenu_value;
+                }
+
+                $i++;
+            }
+
+            $topMenuItems = $new_acMenu;
         }
     }
 
@@ -286,7 +300,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
                     $active = 'active';
                 }
                 ?>
-                <li class="<?php if ($active) echo $active ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
+                <li class="<?php if ($active) echo $active ?>"><a href="<?php echo $url ?>"><?php echo $title ?></a>
                 </li>
                 <?php
             }
