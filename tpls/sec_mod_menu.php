@@ -192,14 +192,16 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     $topMenuItems = getMenu($activemenu);
     if ($conf[$activemenu]) {
         $acMenu = @unserialize($conf[$activemenu]);
-        if ($acMenu) {
-            $acMenu['url'] = $defaultMenuItems[$menu['slug']]['url'];
-            $acMenu['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
-            $acMenu['mod'] = $defaultMenuItems[$menu['slug']]['module'];
-            $acMenu['act'] = $defaultMenuItems[$menu['slug']]['action'];
-            $acMenu['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
-            $acMenu['check'] = $defaultMenuItems[$menu['slug']]['check'];
-            $acMenu['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
+        if (!empty($acMenu)) {
+            foreach ($acMenu as $key => $menu) {
+                $acMenu[$key]['url'] = $defaultMenuItems[$menu['slug']]['url'];
+                $acMenu[$key]['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
+                $acMenu[$key]['mod'] = $defaultMenuItems[$menu['slug']]['module'];
+                $acMenu[$key]['act'] = $defaultMenuItems[$menu['slug']]['action'];
+                $acMenu[$key]['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
+                $acMenu[$key]['check'] = $defaultMenuItems[$menu['slug']]['check'];
+                $acMenu[$key]['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
+            }
             $topMenuItems = $acMenu;
         }
     }
