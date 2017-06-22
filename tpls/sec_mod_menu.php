@@ -192,14 +192,16 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     $topMenuItems = getMenu($activemenu);
     if ($conf[$activemenu]) {
         $acMenu = @unserialize($conf[$activemenu]);
-        if ($acMenu) {
-            $acMenu['url'] = $defaultMenuItems[$menu['slug']]['url'];
-            $acMenu['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
-            $acMenu['mod'] = $defaultMenuItems[$menu['slug']]['module'];
-            $acMenu['act'] = $defaultMenuItems[$menu['slug']]['action'];
-            $acMenu['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
-            $acMenu['check'] = $defaultMenuItems[$menu['slug']]['check'];
-            $acMenu['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
+        if (!empty($acMenu)) {
+            foreach ($acMenu as $key => $menu) {
+                $acMenu[$key]['url'] = $defaultMenuItems[$menu['slug']]['url'];
+                $acMenu[$key]['prefix'] = $defaultMenuItems[$menu['slug']]['prefix'];
+                $acMenu[$key]['mod'] = $defaultMenuItems[$menu['slug']]['module'];
+                $acMenu[$key]['act'] = $defaultMenuItems[$menu['slug']]['action'];
+                $acMenu[$key]['aclmod'] = $defaultMenuItems[$menu['slug']]['aclmod'];
+                $acMenu[$key]['check'] = $defaultMenuItems[$menu['slug']]['check'];
+                $acMenu[$key]['aliases'] = $defaultMenuItems[$menu['slug']]['aliases'];
+            }
             $topMenuItems = $acMenu;
         }
     }
@@ -213,34 +215,33 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
     $subformats = $browse->ExecuteQuery($sql);
     foreach($subformats as $subformat) {
 
-      $field_number = $subformat['field_number'];
-      $sql = "SELECT msgstr FROM data_dict_l10n WHERE msgid = $field_number AND locale = '$locale'";
-      $l10n = $browse->ExecuteQuery($sql);
-      $title = $subformat['field_label'];
+        $field_number = $subformat['field_number'];
+        $sql = "SELECT msgstr FROM data_dict_l10n WHERE msgid = $field_number AND locale = '$locale'";
+        $l10n = $browse->ExecuteQuery($sql);
+        $title = $subformat['field_label'];
 
-      if(!is_null($l10n)){
-        $title = $l10n[0]['msgstr'];
-      }
+        if(!is_null($l10n)){
+            $title = $l10n[0]['msgstr'];
+        }
 
-      $urlParams = array_merge(array(), $_GET);
-      unset($urlParams['mod']);
-      unset($urlParams['act']);
-      $urlParams['subformat'] = $subformat['field_name'];
-      $menuItem  = array(
-                            'id' => $subformat['field_number'],
-                            'url' => get_url($module, 'subformat_list', null, $urlParams, null, true),
-                            'title' => $title,
-                            'module' => $module,
-                            'action' => 'subformat',
-                            'aclmod' => $module,
-                          );
-      $topMenuItems[] = $menuItem;
+        $urlParams = array_merge(array(), $_GET);
+        unset($urlParams['mod']);
+        unset($urlParams['act']);
+        $urlParams['subformat'] = $subformat['field_name'];
+        $menuItem  = array(
+            'id' => $subformat['field_number'],
+            'url' => get_url($module, 'subformat_list', null, $urlParams, null, true),
+            'title' => $title,
+            'module' => $module,
+            'action' => 'subformat',
+            'aclmod' => $module,
+        );
+        $topMenuItems[] = $menuItem;
     }
 
     $menuItems = $topMenuItems;
     $level = 0;
-    if ($menuItems) {
-        ?>
+    if ($menuItems) { ?>
         <ul class="nav nav-tabs tabnav">
             <?php
             foreach ($menuItems as $key => $menu) {
@@ -289,15 +290,8 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
                 <li class="<?php if ($active) echo $active ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
                 </li>
                 <?php
-            }
-            ?>
-
+            }?>
         </ul>
-        <?php
-    }
-}
-
-?>
-
-
+    <?php }
+    }?>
 </ul>

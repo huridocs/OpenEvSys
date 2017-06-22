@@ -685,6 +685,7 @@ class adminModule extends shnModule
 
         if (isset($_POST["save"])) {
             $itemorders = @json_decode(stripslashes($_POST['itemsorder']), true);
+
             if (is_array($itemorders)) {
                 $this->newresult = array();
                 $this->term_order = 1;
