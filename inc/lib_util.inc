@@ -580,7 +580,7 @@ function is_location_field($entity, $field) {
     $entity = $global['db']->qstr($entity);
     $field = $global['db']->qstr($field);
     $sql = "SELECT count(*) as counts FROM data_dict WHERE field_name = $field AND entity = $entity and field_type='location'";
-    $counts = $global['db']->GetOne($sql); 
+    $counts = $global['db']->GetOne($sql);
     return $counts!=0;
 }
 
@@ -834,7 +834,8 @@ function checkMenuActiveModule($menu) {
 }
 function getMenus() {
     $defaultMenuItems = getDefaultMenuItems();
-    $menuNames = array("top_menu" => array("title" => _t("Top menu"), "depth" => 2,
+    $menuNames = array(
+        "top_menu" => array("title" => _t("Top menu"), "depth" => 2,
             "items" => array("eventsbrowse" => $defaultMenuItems["eventsbrowse"],
                 "personsbrowse" => $defaultMenuItems["personsbrowse"],
                 "documentsbrowse" => $defaultMenuItems["documentsbrowse"],
@@ -911,13 +912,8 @@ function getMenu($menu) {
         $order++;
         $id++;
     }
-    $menuItemsNew = array();
-    foreach ($activeMenuOrdered as $key => $menu) {
-        $menuItemsNew[] = $menu;
-    }
 
-    $activeMenuOrdered = $menuItemsNew;
-    return $activeMenuOrdered;
+    return array_values($activeMenuOrdered);
 }
 
 function makeLinksClickable($text){
