@@ -119,7 +119,6 @@ $menus["person"]["audit_log"] = array(
     "title" => _t('AUDIT_LOG'),
     "url" => get_url('person', 'audit_log', null, array('pid' => $id), null, true));
 
-
 global $person;
 if ($person->confidentiality == 'y') {
     $menus["person"]["permissions"] = array(
@@ -188,8 +187,10 @@ $menus["home"]["edit_security"] = array(
 if (in_array($module, array("events", "person", "docu", "analysis", "home"))
         &&  !in_array($action, array("browse", "browse_act", "browse_intervention", "browse_biography","add_act_full"))) {
     $defaultMenuItems = getDefaultMenuItems();
+    
     $activemenu = $module . "_menu";
     $topMenuItems = getMenu($activemenu);
+    
     if ($conf[$activemenu]) {
         $acMenu = @unserialize($conf[$activemenu]);
         if (!empty($acMenu)) {
@@ -287,7 +288,7 @@ if (in_array($module, array("events", "person", "docu", "analysis", "home"))
                     $active = 'active';
                 }
                 ?>
-                <li class="<?php if ($active) echo $active ?>"><a  href="<?php echo $url ?>"><?php echo $title ?></a>
+                <li class="<?php if ($active) echo $active ?>"><a href="<?php echo $url ?>"><?php echo $title ?></a>
                 </li>
                 <?php
             }?>
