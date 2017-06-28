@@ -45,7 +45,8 @@ class EntityRelations{
 						array('to'=>'address' , 'via'=>null),
 						array('to'=>'credit_card' , 'via'=>null),
 						array('to'=>'biographic_details' , 'via'=>null  ),
-						array('to'=>'related_person' , 'via'=>'biographic_details' )
+						array('to'=>'related_person' , 'via'=>'biographic_details' ),
+						array('to'=>'update_info' , 'via'=>null )
 						),
 	'victim' => array(
 						array('to'=>'involvement' , 'via'=>'act') ,
@@ -88,7 +89,8 @@ class EntityRelations{
 		'person' => array(
 						'address'=> array( 'person' , 'person_record_number' ,'address' , 'person'),
 						'credit_card'=> array( 'person' , 'person_record_number' ,'credit_card' , 'record_number'),
-						'biographic_details' => array('person','person_record_number' , 'biographic_details','person' )
+						'biographic_details' => array('person','person_record_number' , 'biographic_details','person' ),
+						'update_info' => array('person','person_record_number' , 'update_info','record_number' )
 		),
 		'biographic_details' => array(
 						'person' => array('biographic_details', 'person', 'person', 'person_record_number')
