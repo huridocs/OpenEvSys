@@ -256,6 +256,7 @@ class analysisModule extends shnModule {
         header("Pragma: public");
         header("Content-Type: application");
         header("Content-Disposition: attachment; filename=$filename;");
+        echo "\xEF\xBB\xBF"; // UTF-8 BOM
 
 
         if ($res) {
@@ -330,6 +331,7 @@ class analysisModule extends shnModule {
         header("Pragma: public");
         header("Content-Type: application/x-msexcel");
         header("Content-Disposition: attachment; filename=$filename;");
+        echo "\xEF\xBB\xBF"; // UTF-8 BOM
 
         if ($res) {
             $count = 1;
@@ -393,6 +395,7 @@ class analysisModule extends shnModule {
             header("Pragma: public");
             header("Content-Type: text/csv; charset=UTF-8");
             header("Content-Disposition: attachment; filename=$filename;");
+            echo "\xEF\xBB\xBF"; // UTF-8 BOM
 
             $count = 1;
             foreach ($recordset as $records) {
@@ -478,6 +481,7 @@ class analysisModule extends shnModule {
             header("Pragma: public");
             header("Content-Type: application/x-msexcel; charset=UTF-8");
             header("Content-Disposition: attachment; filename=$filename;");
+            echo "\xEF\xBB\xBF"; // UTF-8 BOM
 
             $count = 1;
 
