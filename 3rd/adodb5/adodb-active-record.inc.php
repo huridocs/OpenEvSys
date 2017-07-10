@@ -910,7 +910,7 @@ class ADODB_Active_Record {
         continue;
       }
       $valarr[] = $val;
-      $pairs[] = $this->_QName($name,$db).'='.$db->Param($cnt);
+      $pairs[] = '`' . $this->_QName($name,$db) . '`=' . $db->Param($cnt);
       $cnt += 1;
     }
 
