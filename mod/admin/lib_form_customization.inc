@@ -233,14 +233,14 @@ function form_customization_update_fields_order($entity) {
 
 function form_customization_delete_field($field_number) {
   $db = new Browse();
-  
+
   $sql = "SELECT * FROM `data_dict` WHERE `field_number` LIKE '$field_number'";
 
   $result = $db->ExecuteQuery($sql);
-  
+
   $field_type = $result[0]['field_type'];
   $field_name = $result[0]['field_name'];
-  $entity = $result[0]['entity'];
+  $entity = strtolower($result[0]['entity']);
 
   switch ($field_type) {
     case 'subformat':
@@ -260,7 +260,7 @@ function form_customization_delete_field($field_number) {
       break;
     case 'line':
       delete_from_data_dict($field_number);
-      break;   
+      break;
     default:
       delete_normal_field($field_number, $entity, $field_name);
       break;
@@ -275,7 +275,7 @@ function delete_subformat($field_number, $entity, $field_name){
 
   $get_subformat_fields = "SELECT * FROM `data_dict` WHERE `entity` = '$field_name'";
   $subformat_fields = $db->ExecuteQuery($get_subformat_fields);
-  
+
   foreach ($subformat_fields as $field) {
     form_customization_delete_field($field['field_number']);
   }
@@ -288,12 +288,12 @@ function delete_subformat($field_number, $entity, $field_name){
 
 function delete_location($field_number, $entity, $field_name){
   $db = new Browse();
-  
+
   $delete_latitude = "ALTER TABLE `$entity` DROP `".$field_name."_latitude`";
   $delete_longitude = "ALTER TABLE `$entity` DROP `".$field_name."_longitude`";
   $db->ExecuteNonQuery($delete_latitude);
   $db->ExecuteNonQuery($delete_longitude);
-  
+
   delete_from_data_dict($field_number);
 }
 
@@ -311,13 +311,16 @@ function delete_normal_field($field_number, $entity, $field_name){
 
 function delete_from_data_dict($field_number){
   $db = new Browse();
-  
+
   $db->ExecuteNonQuery("DELETE FROM `data_dict_l10n` WHERE `msgid` = '$field_number'");
   $db->ExecuteNonQuery("DELETE FROM `data_dict` WHERE `field_number` = '$field_number'");
 }
 
 function delete_from_entity($entity, $field_name){
   $db = new Browse();
+
+  $entity = strtolower($entity);
+
   $delete_from_entity = "ALTER TABLE `$entity` DROP `$field_name`";
   $db->ExecuteNonQuery($delete_from_entity);
 }
@@ -325,7 +328,7 @@ function delete_from_entity($entity, $field_name){
 function form_customization_add_field($field_type_options) {
 
     $fieldValues = array();
-    $fieldValues['entity'] = $_POST['entity_select'];
+    $fieldValues['entity'] = strtolower($_POST['entity_select']);
     $fieldValues['field_name'] = str_replace(" ", "", strtolower($_POST['field_name']));
     $fieldValues['field_number'] = $_POST['field_number'];
     $fieldValues['field_type'] = $_POST['field_type'];
