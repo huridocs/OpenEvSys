@@ -240,7 +240,7 @@ function form_customization_delete_field($field_number) {
   
   $field_type = $result[0]['field_type'];
   $field_name = $result[0]['field_name'];
-  $entity = $result[0]['entity'];
+  $entity = strtolower( $result[0]['entity'] );
 
   switch ($field_type) {
     case 'subformat':
