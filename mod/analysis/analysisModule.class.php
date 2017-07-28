@@ -1223,26 +1223,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //Vicent
 
         //build the select field array
-        $fields_array = array();
+        $queryOriginal = json_encode($query);
+
+        $fields_array = $this->fix_selects($query);
         $entities = analysis_get_search_entities();
 
-       $queryOriginal = json_encode($query);
-        if ($query->group_by != NULL) {
-            //if the query is a count put group by field to the array
-            foreach ($query->group_by as $field) {
-                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-                $mt = is_mt_field($entity, $field->field);
-                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
-            }
-            array_push($fields_array, array('name' => 'count'));
-        } else {
-            //if the query is a search put select fields to the array
-            foreach ($query->select as $field) {
-                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-                $mt = is_mt_field($entity, $field->field);
-                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
-            }
-        }
         if (!$sidx)
             $sidx = 1;
 
@@ -1398,6 +1383,30 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         echo json_encode($response);
 
         exit(0);
+    }
+
+    private function fix_selects($query)
+    {
+        $fields_array = array();
+
+        if ($query->group_by != NULL) {
+            //if the query is a count put group by field to the array
+            foreach ($query->group_by as $field) {
+                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
+                $mt = is_mt_field($entity, $field->field);
+                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+            }
+            array_push($fields_array, array('name' => 'count'));
+        } else {
+            //if the query is a search put select fields to the array
+            foreach ($query->select as $field) {
+                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
+                $mt = is_mt_field($entity, $field->field);
+                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+            }
+        }
+
+        return $fields_array;
     }
 
     private function getEntityFields() {
