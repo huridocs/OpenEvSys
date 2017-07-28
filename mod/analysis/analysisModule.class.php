@@ -403,15 +403,15 @@ class analysisModule extends shnModule {
             echo "\n";
 
             foreach ($recordset as $records) {
-                $cont = 0;
+                $count = 0;
                 foreach ($records as $key => $record) {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    $field_name = $fields_array[$cont]['name'];
+                    $field_name = $fields_array[$count]['name'];
                     $string = null;
 
-                    if ($fields_array[$cont]['mt'] == 'true') {
+                    if ($fields_array[$count]['mt'] == 'true') {
                         $list = explode(',', $records[$field_name]);
                         foreach ($list as $term) {
                             $string .= ", " . get_mt_term(trim($term));
@@ -434,7 +434,7 @@ class analysisModule extends shnModule {
                         echo '"' . $record . '"' . ',';
                     }
 
-                    $cont++;
+                    $count++;
                 }
                 echo "\n";
             }
@@ -460,16 +460,8 @@ class analysisModule extends shnModule {
 
             $entities = analysis_get_search_entities();
 
-            if ($query->select != NULL) {
-                foreach ($query->select as $field) {
-                    $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-
-                    $mt = is_mt_field($entity, $field->field);
-                    if ($mt) {
-                        $fields_array[] = $field->field;
-                    }
-                }
-            }
+            if ($query->select != NULL)
+                $fields_array = $this->fix_selects($query);
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.xls';
             header("Pragma: public");
