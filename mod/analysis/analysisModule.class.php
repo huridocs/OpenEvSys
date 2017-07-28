@@ -380,16 +380,8 @@ class analysisModule extends shnModule {
 
             $entities = analysis_get_search_entities();
 
-            if ($query->select != NULL) {
-                foreach ($query->select as $field) {
-                    $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-
-                    $mt = is_mt_field($entity, $field->field);
-                    if ($mt) {
-                        $fields_array[] = $field->field;
-                    }
-                }
-            }
+            if ($query->select != NULL)
+                $fields_array = $this->fix_selects($query);
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.csv';
             header("Pragma: public");
@@ -411,18 +403,18 @@ class analysisModule extends shnModule {
             echo "\n";
 
             foreach ($recordset as $records) {
+                $cont = 0;
                 foreach ($records as $key => $record) {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    if (in_array($key, $fields_array)) {
-                        $list = explode(',', $record);
-                        $string = "";
+                    $field_name = $fields_array[$cont]['name'];
+                    $string = null;
+
+                    if ($fields_array[$cont]['mt'] == 'true') {
+                        $list = explode(',', $records[$field_name]);
                         foreach ($list as $term) {
-                            $term_val = get_mt_term(trim($term));
-                            if ($term_val) {
-                                $string .= ", " . $term_val;
-                            }
+                            $string .= ", " . get_mt_term(trim($term));
                         }
 
                         echo '"' . ltrim($string, ',') . '"' . ',';
@@ -441,6 +433,8 @@ class analysisModule extends shnModule {
                     } else {
                         echo '"' . $record . '"' . ',';
                     }
+
+                    $cont++;
                 }
                 echo "\n";
             }
@@ -1330,7 +1324,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                 if ($fields_array[$count]['mt']) {
                     $list = explode(',', $val[$field_name]);
                     foreach ($list as $term) {
-                        $string = $string . ", " . get_mt_term(trim($term));
+                        $string .= ", " . get_mt_term(trim($term));
                     }
                     $array_values[$field_name] = ltrim($string, ',');
                 } else if ($record_number_field == 'record_number' || $doc_field == 'doc_id') {
