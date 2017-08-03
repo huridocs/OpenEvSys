@@ -494,22 +494,21 @@ class analysisModule extends shnModule {
             echo "\r\n";
 
             foreach ($recordset as $records) {
+                $count = 0;
                 foreach ($records as $key => $record) {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    if (in_array($key, $fields_array)) {
-                        //echo '"' . get_mt_term(trim($record)) . '"' . ',';
-                        $list = explode(',', $record);
-                        $string = "";
+                    $field_name = $fields_array[$count]['name'];
+                    $string = null;
+
+                    if ($fields_array[$count]['mt'] == 'true') {
+                        $list = explode(',', $records[$field_name]);
                         foreach ($list as $term) {
-                            $term_val = get_mt_term(trim($term));
-                            if ($term_val) {
-                                $string .= ", " . $term_val;
-                            }
+                            $string .= ", " . get_mt_term(trim($term));
                         }
 
-                        $data = ltrim($string, ',');
+                        echo '"' . ltrim($string, ',') . '"' . ',';
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
                             // echo '"' . _t('YES') . '"' . ',';
@@ -532,6 +531,8 @@ class analysisModule extends shnModule {
                     }
                     cleanData($data);
                     echo $data . "\t";
+
+                    $count++;
                 }
                 echo "\r\n";
                 ;
