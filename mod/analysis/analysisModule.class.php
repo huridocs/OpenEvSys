@@ -409,7 +409,7 @@ class analysisModule extends shnModule {
                     $key = substr($key, 1);
 
                     $field_name = $fields_array[$count]['name'];
-                    $string = null;
+                    $string = $data = "";
 
                     if ($fields_array[$count]['mt'] == 'true') {
                         $list = explode(',', $records[$field_name]);
@@ -469,8 +469,6 @@ class analysisModule extends shnModule {
             header("Content-Disposition: attachment; filename=$filename;");
             echo "\xEF\xBB\xBF"; // UTF-8 BOM
 
-            $count = 1;
-
             function cleanData(&$str) {
                 $str = preg_replace("/\t/", "\\t", $str);
                 $str = preg_replace("/\r?\n/", "\\n", $str);
@@ -478,12 +476,13 @@ class analysisModule extends shnModule {
                     $str = '"' . str_replace('"', '""', $str) . '"';
             }
 
+            $count = 1;
             foreach ($recordset as $records) {
                 foreach ($records as $key => $record) {
                     if ($count == 1) {
                         $key = strstr($key, "_");
                         $key = substr($key, 1);
-                        //echo '"' . ucwords(str_replace('_', ' ', $key)) . '"' . ',';
+                        // echo '"' . ucwords(str_replace('_', ' ', $key)) . '"' . ',';
                         $data = ucwords(str_replace('_', ' ', $key));
                         cleanData($data);
                         echo $data . "\t";
@@ -500,7 +499,7 @@ class analysisModule extends shnModule {
                     $key = substr($key, 1);
 
                     $field_name = $fields_array[$count]['name'];
-                    $string = null;
+                    $string = $data = "";
 
                     if ($fields_array[$count]['mt'] == 'true') {
                         $list = explode(',', $records[$field_name]);
@@ -508,7 +507,7 @@ class analysisModule extends shnModule {
                             $string .= ", " . get_mt_term(trim($term));
                         }
 
-                        echo '"' . ltrim($string, ',') . '"' . ',';
+                        $data = ltrim($string, ',');
                     } else if ($key == 'confidentiality') {
                         if ($record == 'y') {
                             // echo '"' . _t('YES') . '"' . ',';
@@ -535,7 +534,6 @@ class analysisModule extends shnModule {
                     $count++;
                 }
                 echo "\r\n";
-                ;
             }
             exit();
         }
@@ -1313,7 +1311,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     }
                 }
 
-                $string = null;
+                $string = $data = "";
                 if ($fields_array[$count]['mt']) {
                     $list = explode(',', $val[$field_name]);
                     foreach ($list as $term) {
@@ -1766,7 +1764,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         }
                     }
 
-                    $string = null;
+                    $string = $data = "";
                     if ($fields_array[$count]['mt']) {
                         $list = explode(',', $val[$field_name]);
                         //var_dump($val);exit;
