@@ -380,16 +380,8 @@ class analysisModule extends shnModule {
 
             $entities = analysis_get_search_entities();
 
-            if ($query->select != NULL) {
-                foreach ($query->select as $field) {
-                    $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-
-                    $mt = is_mt_field($entity, $field->field);
-                    if ($mt) {
-                        $fields_array[] = $field->field;
-                    }
-                }
-            }
+            if ($query->select != NULL)
+                $fields_array = $this->fix_selects($query);
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.csv';
             header("Pragma: public");
@@ -411,18 +403,18 @@ class analysisModule extends shnModule {
             echo "\n";
 
             foreach ($recordset as $records) {
+                $count = 0;
                 foreach ($records as $key => $record) {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    if (in_array($key, $fields_array)) {
-                        $list = explode(',', $record);
-                        $string = "";
+                    $field_name = $fields_array[$count]['name'];
+                    $string = $data = "";
+
+                    if ($fields_array[$count]['mt'] == 'true') {
+                        $list = explode(',', $records[$field_name]);
                         foreach ($list as $term) {
-                            $term_val = get_mt_term(trim($term));
-                            if ($term_val) {
-                                $string .= ", " . $term_val;
-                            }
+                            $string .= ", " . get_mt_term(trim($term));
                         }
 
                         echo '"' . ltrim($string, ',') . '"' . ',';
@@ -441,6 +433,8 @@ class analysisModule extends shnModule {
                     } else {
                         echo '"' . $record . '"' . ',';
                     }
+
+                    $count++;
                 }
                 echo "\n";
             }
@@ -466,24 +460,14 @@ class analysisModule extends shnModule {
 
             $entities = analysis_get_search_entities();
 
-            if ($query->select != NULL) {
-                foreach ($query->select as $field) {
-                    $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-
-                    $mt = is_mt_field($entity, $field->field);
-                    if ($mt) {
-                        $fields_array[] = $field->field;
-                    }
-                }
-            }
+            if ($query->select != NULL)
+                $fields_array = $this->fix_selects($query);
 
             $filename = 'openevsys_adv_search_results_' . date('Ymd-His') . '.xls';
             header("Pragma: public");
             header("Content-Type: application/x-msexcel; charset=UTF-8");
             header("Content-Disposition: attachment; filename=$filename;");
             echo "\xEF\xBB\xBF"; // UTF-8 BOM
-
-            $count = 1;
 
             function cleanData(&$str) {
                 $str = preg_replace("/\t/", "\\t", $str);
@@ -492,12 +476,13 @@ class analysisModule extends shnModule {
                     $str = '"' . str_replace('"', '""', $str) . '"';
             }
 
+            $count = 1;
             foreach ($recordset as $records) {
                 foreach ($records as $key => $record) {
                     if ($count == 1) {
                         $key = strstr($key, "_");
                         $key = substr($key, 1);
-                        //echo '"' . ucwords(str_replace('_', ' ', $key)) . '"' . ',';
+                        // echo '"' . ucwords(str_replace('_', ' ', $key)) . '"' . ',';
                         $data = ucwords(str_replace('_', ' ', $key));
                         cleanData($data);
                         echo $data . "\t";
@@ -508,19 +493,18 @@ class analysisModule extends shnModule {
             echo "\r\n";
 
             foreach ($recordset as $records) {
+                $count = 0;
                 foreach ($records as $key => $record) {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    if (in_array($key, $fields_array)) {
-                        //echo '"' . get_mt_term(trim($record)) . '"' . ',';
-                        $list = explode(',', $record);
-                        $string = "";
+                    $field_name = $fields_array[$count]['name'];
+                    $string = $data = "";
+
+                    if ($fields_array[$count]['mt'] == 'true') {
+                        $list = explode(',', $records[$field_name]);
                         foreach ($list as $term) {
-                            $term_val = get_mt_term(trim($term));
-                            if ($term_val) {
-                                $string .= ", " . $term_val;
-                            }
+                            $string .= ", " . get_mt_term(trim($term));
                         }
 
                         $data = ltrim($string, ',');
@@ -546,9 +530,10 @@ class analysisModule extends shnModule {
                     }
                     cleanData($data);
                     echo $data . "\t";
+
+                    $count++;
                 }
                 echo "\r\n";
-                ;
             }
             exit();
         }
@@ -1223,26 +1208,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         //Vicent
 
         //build the select field array
-        $fields_array = array();
+        $queryOriginal = json_encode($query);
+
+        $fields_array = $this->fix_selects($query);
         $entities = analysis_get_search_entities();
 
-       $queryOriginal = json_encode($query);
-        if ($query->group_by != NULL) {
-            //if the query is a count put group by field to the array
-            foreach ($query->group_by as $field) {
-                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-                $mt = is_mt_field($entity, $field->field);
-                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
-            }
-            array_push($fields_array, array('name' => 'count'));
-        } else {
-            //if the query is a search put select fields to the array
-            foreach ($query->select as $field) {
-                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
-                $mt = is_mt_field($entity, $field->field);
-                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
-            }
-        }
         if (!$sidx)
             $sidx = 1;
 
@@ -1341,11 +1311,11 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                     }
                 }
 
-                $string = null;
+                $string = $data = "";
                 if ($fields_array[$count]['mt']) {
                     $list = explode(',', $val[$field_name]);
                     foreach ($list as $term) {
-                        $string = $string . ", " . get_mt_term(trim($term));
+                        $string .= ", " . get_mt_term(trim($term));
                     }
                     $array_values[$field_name] = ltrim($string, ',');
                 } else if ($record_number_field == 'record_number' || $doc_field == 'doc_id') {
@@ -1398,6 +1368,30 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         echo json_encode($response);
 
         exit(0);
+    }
+
+    private function fix_selects($query)
+    {
+        $fields_array = array();
+
+        if ($query->group_by != NULL) {
+            //if the query is a count put group by field to the array
+            foreach ($query->group_by as $field) {
+                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
+                $mt = is_mt_field($entity, $field->field);
+                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+            }
+            array_push($fields_array, array('name' => 'count'));
+        } else {
+            //if the query is a search put select fields to the array
+            foreach ($query->select as $field) {
+                $entity = (isset($entities[$field->entity]['ac_type'])) ? $entities[$field->entity]['ac_type'] : $field->entity;
+                $mt = is_mt_field($entity, $field->field);
+                array_push($fields_array, array('name' => $field->entity . '_' . $field->field, 'mt' => $mt));
+            }
+        }
+
+        return $fields_array;
     }
 
     private function getEntityFields() {
@@ -1770,7 +1764,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
                         }
                     }
 
-                    $string = null;
+                    $string = $data = "";
                     if ($fields_array[$count]['mt']) {
                         $list = explode(',', $val[$field_name]);
                         //var_dump($val);exit;
