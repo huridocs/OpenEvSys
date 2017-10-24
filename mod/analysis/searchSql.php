@@ -623,7 +623,7 @@ class SearchResultGenerator {
         }
         $fieldSqlName = array();
 
-        if ($type == 'view') {
+        if ($type == 'view' and $formField['map']['entity'] != 'update_info') {
             $fieldSqlName = array('field' => "GROUP_CONCAT(DISTINCT $as.$columnName ORDER BY $as.$columnName ASC SEPARATOR ' , ') ", 'as' => " AS {$entity_type}_{$fieldName}");
             return $fieldSqlName;
         } else {
