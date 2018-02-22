@@ -1279,7 +1279,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
         }
         $number_of_fields = count($fields_array);
         $response->aaData = array();
-
+        
         foreach ($res as $key => $val) {
             //$response->aaData[$i]['id'] = $val[$fields_array[0]];
             $array_values = array();
@@ -1373,6 +1373,7 @@ HAVING order_id = min( order_id ) ) as ori WHERE allowed = 0 )";
     private function fix_selects($query)
     {
         $fields_array = array();
+        $entities = analysis_get_search_entities();
 
         if ($query->group_by != NULL) {
             //if the query is a count put group by field to the array
