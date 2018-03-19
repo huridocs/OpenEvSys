@@ -1,0 +1,1 @@
+<h2><?php echo _t('DATABASE_RESTORE') ?></h2>

@@ -63,7 +63,7 @@
                 <li class="<?php if ($action == "dashboard_configuration") echo "active" ?>"><a href="<?php get_url('admin', 'dashboard_configuration') ?>"><?php echo _t('Dashboard Configuration') ?></a></li>
 
 
-                <li><a href="<?php get_url('admin', 'database_backup') ?>"><?php echo _t('Database Backup') ?></a></li>
+                <li><a href="<?php get_url('admin', 'database_backup') ?>"><?php echo _t('Backup and Restore') ?></a></li>
                 <li class="subnav <?php if ($action == "database_backup") echo "active" ?>"><a href="<?php get_url('admin', 'database_backup') ?>"><?php echo _t('Database Backup') ?></a></li>
                 <li class="subnav <?php if ($action == "database_restore") echo "active" ?>"><a href="<?php get_url('admin', 'database_restore') ?>"><?php echo _t('Database Restore') ?></a></li>
 

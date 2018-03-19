@@ -1166,4 +1166,18 @@ class adminModule extends shnModule
         }
     }
 
+    public function act_database_backup () {
+        include_once 'lib_database_export.inc';
+        if (isset($_POST['export'])) {
+            $result = export_database();
+            if ($result === false) {
+                shnMessageQueue::addError(_t('Database export failed.'));
+            }
+        }
+    }
+
+    public function act_database_restore () {
+
+    }
+
 }
