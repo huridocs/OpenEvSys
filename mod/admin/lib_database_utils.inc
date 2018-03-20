@@ -19,3 +19,14 @@ function export_database () {
     echo $contents;
     return true;
 }
+
+function import_database () {
+    global $conf;
+    $destination = APPROOT . 'db_restore/backup.sql';
+    $tmpname = $_FILES['file']['tmpname'];
+    if (move_uploaded_file($tmpname, $destination)) {
+        return true;
+    }
+    return false;
+}
+

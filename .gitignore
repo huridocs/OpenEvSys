@@ -5,3 +5,5 @@
 /www/images/uploads
 /usr/
 /etc/
+db_restore/backup.sql
+db_restore/LOCK
