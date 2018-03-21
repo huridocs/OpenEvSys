@@ -1179,7 +1179,7 @@ class adminModule extends shnModule
     public function act_database_restore () {
         include_once 'lib_database_utils.inc';
         if (isset($_POST['upload'])) {
-            $result = import_database();
+            $result = upload_database();
             if ($result === false) {
                 shnMessageQueue::addError(_t('Database import failed.'));
             }
