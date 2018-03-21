@@ -22,6 +22,9 @@ function export_database () {
 
 function upload_database () {
     global $conf;
+    if (lock_file_exists()) {
+        return false;
+    }
     $destination = get_backup_file_path();
     if (file_exists($destination)) {
         unlink($destination);
