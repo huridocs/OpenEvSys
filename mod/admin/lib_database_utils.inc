@@ -47,20 +47,10 @@ function create_restore_lock_file () {
     return file_put_contents($path, $contents);
 }
 
-function lock_file_exists () {
-    $path = get_lock_file_path();
-    return file_exists($path);
-}
-
-function delete_lock_file () {
-    $path = get_lock_file_path();
-    unlink($path);
-}
-
 function import_database () {
     global $conf;
     create_restore_lock_file();
-    $filename = get_lock_file_path();
+    $filename = get_backup_file_path();
     if (file_exists($filename)) {
         $dbname = $conf['db_name'];
         $user = $conf['db_user'];
@@ -77,4 +67,19 @@ function get_lock_file_path () {
 
 function get_backup_file_path () {
     return APPROOT . 'db_restore/backup.sql';
+}
+
+function lock_file_exists () {
+    $path = get_lock_file_path();
+    return file_exists($path);
+}
+
+function delete_lock_file () {
+    $path = get_lock_file_path();
+    unlink($path);
+}
+
+function delete_backup_file () {
+    $path = get_backup_file_path();
+    unlink($path);
 }

@@ -28,13 +28,5 @@ require_once(APPROOT.'inc/handler_filter.inc');
 //this contain autoload to string manipulation
 require_once(APPROOT.'inc/lib_util.inc');
 
-//load session handler
-require_once(APPROOT.'inc/session/handler_session.inc');
-
 //load l10n library
 require_once(APPROOT.'inc/i18n/handler_l10n.inc');
-
-//load authentication handler
-require_once(APPROOT.'inc/security/handler_auth.inc');
-//load acl 
-require_once(APPROOT.'inc/security/handler_acl.inc');
