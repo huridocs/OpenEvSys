@@ -8,3 +8,4 @@
 db_restore/backup.sql
 db_restore/LOCK
 db_restore/*.log
+db_restore/tmp*
