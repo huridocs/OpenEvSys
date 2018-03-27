@@ -5,9 +5,10 @@ function export_database () {
     $dbname = $conf['db_name'];
     $user = $conf['db_user'];
     $pass = $conf['db_pass'];
-    $filename = tempnam('/tmp', 'oedb');
+    $filename = tempnam(APPROOT."db_restore", 'oedb');
     shell_exec("mysqldump {$dbname} --ignore-table={$dbname}.sessions2 --user={$user} --password={$pass} > {$filename}");
     $contents = file_get_contents($filename);
+    unlink($filename);
     if (!$contents) {
         return false;
     }
