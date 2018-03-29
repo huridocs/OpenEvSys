@@ -53,6 +53,11 @@ class EntityRelations{
 						array('to'=>'perpetrator' , 'via' => 'act'),
 						array('to'=>'event' , 'via' => 'act'),
 						array('to'=>'act' , 'via' => null)
+						),
+	'arrest' => array(
+						array('to'=>'perpetrator', 'via'=>'involvement'),
+						array('to'=>'victims', 'via'=>'act'),
+						array('to'=>'involvement', 'via'=>null)
 						)
 	);
 
@@ -97,6 +102,10 @@ class EntityRelations{
 		),
 		'chain_of_events' => array(
 						'event' => array('chain_of_events', 'event', 'event', 'event_record_number')
+		),
+		'arrest' => array(
+						'involvement' => array('arrest', 'arrest_record_number', 'involvement', 'act'),
+						'act' => array('arrest', 'arrest_record_number', 'act', 'act_record_number')
 		)
 	);
 
