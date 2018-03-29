@@ -56,7 +56,7 @@ class EntityRelations{
 						),
 	'arrest' => array(
 						array('to'=>'perpetrator', 'via'=>'involvement'),
-						array('to'=>'victims', 'via'=>'act'),
+						array('to'=>'victim', 'via'=>'act'),
 						array('to'=>'involvement', 'via'=>null)
 						)
 	);
