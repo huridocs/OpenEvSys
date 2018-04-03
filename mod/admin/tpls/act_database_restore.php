@@ -13,7 +13,7 @@
             <div class="controls">
                 <button type="submit" class="btn btn-primary" name="upload">
                     <i class="icon-upload icon-white"></i>
-                    <?php echo _t('Upload database backup') ?>
+                    <?php echo _t('Database restore') ?>
                 </button>
             </div>
         </div>

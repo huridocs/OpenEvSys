@@ -2,6 +2,6 @@
 <div class="form-container">
     <a href="<?php echo get_url('admin', 'database_backup') ?>&download=true" 
         class="btn btn-primary">
-        <i class="icon-download icon-white"></i> <?php echo _t('Export database') ?>
+        <i class="icon-download icon-white"></i> <?php echo _t('Database backup') ?>
     </a>
 </div>
