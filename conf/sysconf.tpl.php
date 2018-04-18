@@ -136,3 +136,7 @@ $conf['session_timeout']= 60;
 # YubiKey API
 $conf["YubiKeyClientKey"] = "";
 $conf["YubiKeyClientId"] = "";
+
+# mysql bin utilities required for DB Backup and Restore
+$conf["mysql_bin_path"] = "mysql";
+$conf["mysqldump_bin_path"] = "mysqldump";
