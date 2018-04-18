@@ -1169,9 +1169,12 @@ class adminModule extends shnModule
     public function act_database_backup () {
         include_once 'lib_database_utils.inc';
         if (isset($_GET['download'])) {
+            try {
             $result = export_database();
-            if ($result === false) {
+            }
+            catch (Exception $e) {
                 shnMessageQueue::addError(_t('Database export failed.'));
+                shnMessageQueue::addError($e->getMessage());
             }
         }
     }
@@ -1180,11 +1183,12 @@ class adminModule extends shnModule
         include_once 'lib_database_utils.inc';
         if (isset($_POST['upload'])) {
             $result = upload_database();
-            if ($result === false) {
-                shnMessageQueue::addError(_t('Database import failed.'));
-            }
-            else {
+            try {
                 shnMessageQueue::addInformation(_t('Database restore scheduled successfully.'));
+            }
+            catch (Exception $e) {
+                shnMessageQueue::addError(_t('Database import failed.'));
+                shnMessageQueue::addError($e->getMessage());
             }
         }
     }

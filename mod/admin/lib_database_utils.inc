@@ -5,12 +5,17 @@ function export_database () {
     $dbname = $conf['db_name'];
     $user = $conf['db_user'];
     $pass = $conf['db_pass'];
+    $mysqldump_script = isset($conf['mysqldump_bin_path'])? $conf['mysqldump_bin_path']: 'mysqldump';
     $filename = tempnam(APPROOT."db_restore", 'tmp');
-    shell_exec("mysqldump {$dbname} --ignore-table={$dbname}.sessions2 --user={$user} --password={$pass} > {$filename}");
+    $exitCode = 0;
+    $output = [];
+    exec("$mysqldump_script {$dbname} --ignore-table={$dbname}.sessions2 --user={$user} --password={$pass} > {$filename}", $output, $exitCode);
     $contents = file_get_contents($filename);
     unlink($filename);
     if (!$contents) {
-        return false;
+        $output_str = implode("\n", $output);
+        $output_str = $output_str? "Output: $output_str": "";
+        throw new Exception("Error exporting database. Exit code: ".$exitCode." $output_str");
     }
     $outname = "oe_{$dbname}-".date('Y-m-d').".sql";
     header("Content-Description: File Transfer");
@@ -34,7 +39,7 @@ function upload_database () {
     if (move_uploaded_file($tmpname, $destination)) {
         return true;
     }
-    return false;
+    throw new Exception("Error uploading database. Upload error code: ".$_FILES['file']['error']);
 }
 
 function create_restore_lock_file () {
@@ -59,9 +64,13 @@ function import_database () {
         $dbname = $conf['db_name'];
         $user = $conf['db_user'];
         $pass = $conf['db_pass'];
-        
-        shell_exec("mysql --user={$user} --password={$pass} {$dbname} < {$filename}");
+        $mysql_script = isset($conf['mysql_bin_path'])? $conf['mysql_bin_path']: 'mysql';
+        $output = [];
+        $exitCode = 0;
+        exec("$mysql_script --user={$user} --password={$pass} {$dbname} < {$filename}", $output, $exitCode);
         delete_backup_file();
+        $log = "Exit code: $exitCode. Output: ".implode(" ", $output);
+        write_import_log($log);
     }
     delete_lock_file();
 }
@@ -72,6 +81,10 @@ function get_lock_file_path () {
 
 function get_backup_file_path () {
     return APPROOT . 'db_restore/backup.sql';
+}
+
+function get_log_path () {
+    return APPROOT . 'db_restore/import.log';
 }
 
 function lock_file_exists () {
@@ -87,4 +100,11 @@ function delete_lock_file () {
 function delete_backup_file () {
     $path = get_backup_file_path();
     unlink($path);
+}
+
+function write_import_log ($entry) {
+    $entry = date('Y-m-d').": $entry\n";
+    $f = fopen(get_log_path(), 'a');
+    fwrite($f, $entry);
+    fclose($f);
 }
