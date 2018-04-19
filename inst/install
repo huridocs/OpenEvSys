@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Usage : install USER PASS DATABASE HOST PORT";
+echo "Usage : install USER PASS DATABASE HOST PORT INST_ID";
 echo "";
 if [ -f ../conf/sysconf.php ]
 then
@@ -16,17 +16,26 @@ REPASS='';
 HOST='localhost'
 DATABASE='openevsys'
 VAR_PORT='3306'
+UUID='HURI'
 
-if [ $# -eq 5 ] 
+if [ $# -eq 6 ] 
 then
     USER=$1
     PASS=$2
     DATABASE=$3
     HOST=$4
     VAR_PORT=$5
+    UUID=$6
 else       
 
     ISTRUE='TRUE'
+    echo "Enter Instance ID (default = HURI):"
+    read UUID
+    if [ "$UUID" = '' ]; then
+        UUID='HURI'
+    fi
+    echo ""
+
     echo "Enter Hostname (default = localhost):"
     read HOST
     if [ "$HOST" = '' ]; then
@@ -59,6 +68,7 @@ else
 
 cat<<end333
 You Entered:
+  Instance ID: $UUID
   Hostname: $HOST
   Database: $DATABASE
   Username: $USER
@@ -81,6 +91,7 @@ cat  $TEMPLATE | sed -e s/VAR_HOSTNAME/$HOST/g \
                       -e s/VAR_DATABASE/$DATABASE/g \
                       -e s/VAR_USER/$USER/g \
                       -e s/VAR_PASSWORD/$PASS/g \
+                      -e s/HURI/$UUID/g \
                 | tee ../conf/sysconf.php > ../conf/sysconf.php
 
 function loadsql() {
@@ -93,7 +104,7 @@ function loadsql() {
 }
 
 
-if  [ $# -ne 5 ] 
+if  [ $# -ne 6 ] 
 then
     #skip database create
     echo "Creating database $DATABASE"
@@ -110,15 +121,17 @@ loadsql ../schema/mysql-dbcreate.sql;
 
 loadsql ../schema/mysql-dbcreate-system.sql;
 
+loadsql ../schema/mysql-dbcreate-gacl.sql;
+
 loadsql ../schema/mysql-dbpopulate-datadict.sql;
 
 loadsql ../schema/mysql-dbpopulate-mt.sql;
 
-loadsql ../schema/mysql-dbpopulate-help.sql;
-
-loadsql ../schema/mysql-dbcreate-gacl.sql;
+loadsql ../schema/mysql-dbpopulate-mt2.sql;
 
 loadsql ../schema/mysql-dbpopulate-gacl.sql;
+
+loadsql ../schema/mysql-dbpopulate-help.sql;
 
 for l in ../res/locale/*
 do
