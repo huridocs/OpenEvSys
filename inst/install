@@ -31,7 +31,7 @@ else
     ISTRUE='TRUE'
     echo "Enter Instance ID (default = HURI):"
     read UUID
-    if ["$UUID" = '']; then
+    if [ "$UUID" = '' ]; then
         UUID='HURI'
     fi
     echo ""
