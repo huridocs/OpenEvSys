@@ -80,6 +80,23 @@ of sysconf.php file in conf directory to read only. This will make sure the conf
 file cannot be change by accessing through web server.
 
 
+BACKUP / RESTORE feature
+-------------------------
+
+The backup and restore feature allows you to either export your OpenEvSys database
+as an sql file, or to import an sql file into your database. Restoring the database
+from a backup this way is a destructive operation that replaces your existing data
+with the imported one, this is intended to be used for syncing to instances to have
+the same data.
+
+To enable these features set the $conf['enable_backup_restore'] setting to true in 
+the config file. They also require access to your `mysql` and `mysqldump` commands,
+if they're not in your system PATH environment variable, then specify their
+locations in the `$conf['mysql_bin_path']` and `$conf['mysqldump_bin_path]` settings.
+
+Furthermore, you will need to make the `db_restore` directory writable. That's where
+the backup.sql file, migration log and temp files are stored.
+
 
 OPENEVSYS ADMINISTRATION
 ---------------------

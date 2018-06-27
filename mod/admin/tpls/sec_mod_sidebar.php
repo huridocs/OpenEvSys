@@ -64,6 +64,13 @@
 
                 <?php
                 global $conf;
+                if (isset($conf['enable_backup_restore']) && $conf['enable_backup_restore']) { ?>
+                <li><a href="<?php get_url('admin', 'database_backup') ?>"><?php echo _t('Backup and Restore') ?></a></li>
+                <li class="subnav <?php if ($action == "database_backup") echo "active" ?>"><a href="<?php get_url('admin', 'database_backup') ?>"><?php echo _t('Database Backup') ?></a></li>
+                <li class="subnav <?php if ($action == "database_restore") echo "active" ?>"><a href="<?php get_url('admin', 'database_restore') ?>"><?php echo _t('Database Restore') ?></a></li>
+                <?php } ?>
+                <?php
+                global $conf;
                 if (isset($conf['extension'])) {
                     ?>
                     <li class="<?php if ($action == "Extensions") echo "active" ?>"><a href="<?php get_url('admin', 'Extensions') ?>"><?php echo _t('EXTENSIONS') ?></a></li>
