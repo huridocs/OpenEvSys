@@ -140,3 +140,5 @@ $conf["YubiKeyClientId"] = "";
 # mysql bin utilities required for DB Backup and Restore
 $conf["mysql_bin_path"] = "mysql";
 $conf["mysqldump_bin_path"] = "mysqldump";
+# backup/restore feature. Setting to true will add them to the admin sidebar
+$conf["enable_backup_restore"] = false;
