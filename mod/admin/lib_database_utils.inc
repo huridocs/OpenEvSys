@@ -9,7 +9,7 @@ function export_database () {
     $filename = tempnam(APPROOT."db_restore", 'tmp');
     $exitCode = 0;
     $output = [];
-    exec("$mysqldump_script {$dbname} --ignore-table={$dbname}.sessions2 --user={$user} --password={$pass} > {$filename}", $output, $exitCode);
+    exec("$mysqldump_script {$dbname} --ignore-table={$dbname}.sessions2 --ignore-table={$dbname}.user --user={$user} --password={$pass} > {$filename}", $output, $exitCode);
     $contents = file_get_contents($filename);
     unlink($filename);
     if (!$contents) {
