@@ -585,7 +585,11 @@ class analysisModule extends shnModule {
                     $key = strstr($key, "_");
                     $key = substr($key, 1);
 
-                    if (in_array($key, $fields_array)) {
+                    //get only the column name as it's saved in the fields array - Eric 16/08/2018
+                    $key2 = strstr($key, "_");
+                    $key2 = substr($key2, 1);
+
+                    if (in_array($key2, $fields_array)) {
                         $list = explode(',', $record);
                         $string = "";
                         foreach ($list as $term) {
@@ -596,13 +600,13 @@ class analysisModule extends shnModule {
                         }
 
                         $this->columnValues[$rkey][$key] = ltrim($string, ',');
-                    } else if ($key == 'confidentiality') {
+                    } else if ($key2 == 'confidentiality') {
                         if ($record == 'y') {
                             $this->columnValues[$rkey][$key] = _t('YES');
                         } else {
                             $this->columnValues[$rkey][$key] = _t('NO');
                         }
-                    } else if ($key == 'deceased') {
+                    } else if ($key2 == 'deceased') {
                         if ($record == 'y') {
                             $this->columnValues[$rkey][$key] = _t('YES');
                         } else {
