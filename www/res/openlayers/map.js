@@ -10,36 +10,8 @@ var selectCtrl;
 var selectedFeatures = [];
 
 function getMapLayers() {
-    var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", {
-        type: google.maps.MapTypeId.SATELLITE,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_hybrid = new OpenLayers.Layer.Google("Google Maps Hybrid", {
-        type: google.maps.MapTypeId.HYBRID,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_normal = new OpenLayers.Layer.Google("Google Maps Normal", {
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_physical = new OpenLayers.Layer.Google("Google Maps Physical", {
-        type: google.maps.MapTypeId.TERRAIN,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
     var osm = new OpenLayers.Layer.OSM();
-
-    return [google_normal,google_satellite,google_hybrid,google_physical, osm];
+    return [osm];
 }
 
 function initEditMap(settings){
@@ -76,7 +48,6 @@ function initEditMap(settings){
     maps[settings.fieldName].addControl(new OpenLayers.Control.MousePosition());
     maps[settings.fieldName].addControl(new OpenLayers.Control.ScaleLine());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Scale('mapScale'));
-    maps[settings.fieldName].addControl(new OpenLayers.Control.LayerSwitcher());
 
     // Vector/Drawing Layer Styles
     style1 = new OpenLayers.Style({
