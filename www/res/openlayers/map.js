@@ -37,7 +37,9 @@ function getMapLayers() {
         maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
     });
 
-    return [google_normal,google_satellite,google_hybrid,google_physical];
+    var osm = new OpenLayers.Layer.OSM();
+
+    return [google_normal,google_satellite,google_hybrid,google_physical, osm];
 }
 
 function initEditMap(settings){
