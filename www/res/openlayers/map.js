@@ -648,7 +648,7 @@ function updateFeature(feature, color, strokeWidth){
     feature.layer.drawFeature(feature);
 }
 
-// Reverse GeoCoder
+// // Reverse GeoCoder
 function reverseGeocode(latitude, longitude,fieldName) {
     var latlng = new google.maps.LatLng(latitude, longitude);
     var geocoder = new google.maps.Geocoder();
