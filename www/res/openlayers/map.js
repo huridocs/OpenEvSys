@@ -8,6 +8,12 @@ var vlayers = [];
 var highlightCtrl;
 var selectCtrl;
 var selectedFeatures = [];
+
+function getMapLayers() {
+    var osm = new OpenLayers.Layer.OSM();
+    return [osm];
+}
+
 function initEditMap(settings){
 
     var defaultSettings = {
@@ -36,40 +42,12 @@ function initEditMap(settings){
     map = new OpenLayers.Map(settings.mapContainer, options);
     maps[settings.fieldName] = map;
 
-    var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", {
-        type: google.maps.MapTypeId.SATELLITE,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_hybrid = new OpenLayers.Layer.Google("Google Maps Hybrid", {
-        type: google.maps.MapTypeId.HYBRID,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_normal = new OpenLayers.Layer.Google("Google Maps Normal", {
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_physical = new OpenLayers.Layer.Google("Google Maps Physical", {
-        type: google.maps.MapTypeId.TERRAIN,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    maps[settings.fieldName].addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
+    maps[settings.fieldName].addLayers(getMapLayers());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Navigation());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Zoom());
     maps[settings.fieldName].addControl(new OpenLayers.Control.MousePosition());
     maps[settings.fieldName].addControl(new OpenLayers.Control.ScaleLine());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Scale('mapScale'));
-    maps[settings.fieldName].addControl(new OpenLayers.Control.LayerSwitcher());
 
     // Vector/Drawing Layer Styles
     style1 = new OpenLayers.Style({
@@ -340,34 +318,8 @@ function initViewMap(settings){
     // Now initialise the map
     map = new OpenLayers.Map(settings.mapContainer, options);
 			maps[settings.fieldName] = map
-    var google_satellite = new OpenLayers.Layer.Google("Google Maps Satellite", {
-        type: google.maps.MapTypeId.SATELLITE,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
 
-    var google_hybrid = new OpenLayers.Layer.Google("Google Maps Hybrid", {
-        type: google.maps.MapTypeId.HYBRID,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_normal = new OpenLayers.Layer.Google("Google Maps Normal", {
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    var google_physical = new OpenLayers.Layer.Google("Google Maps Physical", {
-        type: google.maps.MapTypeId.TERRAIN,
-        animationEnabled: true,
-        sphericalMercator: true,
-        maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
-    });
-
-    maps[settings.fieldName].addLayers([google_normal,google_satellite,google_hybrid,google_physical]);
+    maps[settings.fieldName].addLayers(getMapLayers());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Navigation());
     maps[settings.fieldName].addControl(new OpenLayers.Control.Zoom());
     maps[settings.fieldName].addControl(new OpenLayers.Control.MousePosition());
@@ -696,7 +648,7 @@ function updateFeature(feature, color, strokeWidth){
     feature.layer.drawFeature(feature);
 }
 
-// Reverse GeoCoder
+// // Reverse GeoCoder
 function reverseGeocode(latitude, longitude,fieldName) {
     var latlng = new google.maps.LatLng(latitude, longitude);
     var geocoder = new google.maps.Geocoder();

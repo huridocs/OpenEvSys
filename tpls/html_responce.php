@@ -50,7 +50,6 @@ $version = $version[1]; ?>
         <?php if(in_array("map", $global["js"])) { ?>
             <script type="text/javascript" src="res/openlayers/OpenLayers.js"></script>
             <script type="text/javascript" src="res/openlayers/map.js"></script>
-            <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.7&amp;sensor=false"></script>
         <?php } ?>
     </head>
     <?php

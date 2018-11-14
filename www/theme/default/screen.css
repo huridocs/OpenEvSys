@@ -46,6 +46,11 @@ div.olLayerDiv {
     -khtml-user-select: none;
 }
 
+.olLayerDiv {
+    width: 450px !important;
+    height: 450px !important;
+}
+
 .olLayerGoogleCopyright {
     left: 2px;
     bottom: 2px;
