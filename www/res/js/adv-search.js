@@ -1405,11 +1405,13 @@ function queryBuilder(){
             var fields = openevsysDomain.getInstance().getSelectFields(entities[i]);
 
             for(var f in fields){
-                var field = {
-                    'entity': entities[i],
-                    'field': fields[f]
+                if( fields[f] != 'entered_by' ){
+                    var field = {
+                        'entity': entities[i],
+                        'field': fields[f]
+                    }
+                    select.push(field)
                 }
-                select.push(field)
             }
         }
 
