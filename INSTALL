@@ -43,6 +43,10 @@ LINUX   : If you are a linux user please use the local package manager of your
 WINDOWS : If you are a windows user we would recommend to use XAMPP instead of
           installing the above software separately.
 
+    For newer versions of MySQL (5.7+), make sure to disable the `ONLY_FULL_GROUP_BY` SQL_MODE flag in MySQL's conf file.
+This will suppress the GROUP BY SQL error that prevents the application from functioning.
+See https://stackoverflow.com/questions/37951742/1055-expression-of-select-list-is-not-in-group-by-clause-and-contains-nonaggr on how to and for more details.
+
 
 
 1. EXTRACT APPLICATION
@@ -108,5 +112,3 @@ MORE INFORMATION
 
 - For additional documentation, see the online Openevsys wiki
   http://openevsys.org
-
-
