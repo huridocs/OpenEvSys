@@ -33,7 +33,7 @@ function shn_create_uuid($type='person')
 {
 	global $conf;
 	global $global;
-	echo $type. '...';
+
 	switch ($type){
 		case 'event':
 			// $gen_id = 'event/'._shn_gen_id('event');
