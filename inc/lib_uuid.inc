@@ -32,14 +32,23 @@
 function shn_create_uuid($type='person')
 {
 	global $conf;
-
+	global $global;
+	echo $type. '...';
 	switch ($type){
 		case 'event':
-			$gen_id = 'event/'._shn_gen_id('event');
+			// $gen_id = 'event/'._shn_gen_id('event');
+			$gen_id = 'event/'._max_id('event');
 			break;
 
 		case 'person':
-			$gen_id = 'person/'._shn_gen_id('person');
+			// $gen_id = 'person/'._shn_gen_id('person');
+			$gen_id = 'person/'._max_id('person');
+			break;
+		case 'doc':
+			$gen_id = 'doc/'._max_id('doc');
+			break;
+		case 'file':
+			$gen_id = 'doc/'._max_id('doc');
 			break;
         case 'act':
             $gen_id = 'act/'._shn_gen_id('act');
@@ -78,7 +87,11 @@ function _shn_gen_id($type='person')
 
     $global['db']->Execute("set storage_engine ='{$engine}'");
     
-    }*/
+	}*/
+	
+	/* 
+	BAD IMPLEMENTATION. AVOID. SEE http://adodb.org/dokuwiki/doku.php?id=v5:reference:connection:genid FOR MORE DETAILS
+	*/
 	$tables=$global['db']->MetaTables("TABLE",false,false);
 	$type.="_seq";
 	if(array_search($type,$tables)==false){
@@ -86,5 +99,31 @@ function _shn_gen_id($type='person')
 	}
 	 
 	return $global['db']->GenID($type);
+}
+
+/**
+ * _max_id
+ *
+ * @param string $type
+ * @access protected
+ * @return void
+ */
+function _max_id($type='person')
+{
+	global $global;
+	global $conf;
+
+	$uuid_string = $conf['base_uuid'] . '/' . $type . '/';
+	$sbstr_start = strlen($uuid_string)+1;
+	if($type == 'doc'){
+		$type_record_number = $type . '_id';
+		$type = 'supporting_docs_meta';
+	}else{
+		$type_record_number = $type . '_record_number';
+	}
+	$maxIDSQL = "SELECT MAX(CAST(SUBSTR(TRIM(%s),%s) AS UNSIGNED)) as maxID from %s;";
+	$maxID = $global['db']->Execute(sprintf($maxIDSQL,$type_record_number,$sbstr_start, $type));
+
+	return $maxID->fields['maxID']+1;
 }
 ?>
